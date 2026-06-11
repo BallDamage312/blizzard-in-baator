@@ -1,63 +1,73 @@
-# blizzard-in-baator
+# Blizzard in Baator – Planescape: Torment Enhanced Edition Mod
 
 <img width="1920" height="353" alt="obraz" src="https://github.com/user-attachments/assets/cb0be4c0-071c-4a86-84ec-bac2d60442f7" />
 
-This is a public repository to download the Act I of Blizzard in Baator modification for Planescape: Torment EE directly from the creators.
-
-Blizzard in Baator  is an unofficial, fan-made modification for Planescape: Torment. This is unofficial Fan Content permitted under the Fan Content Policy. Not approved/endorsed by Wizards of the Coast, Beamdog, or any rights holders. Portions of the materials used are property of Wizards of the Coast. ©Wizards of the Coast LLC.”
-
 The Nameless One still holds some undiscovered secrets from his past that may yet return to change his nature. One such lead to his original identity will take him on a dangerous rescue mission to a whole new region of Sigil and into the depths of the Nine Hells, all the way to the 8th layer: The Frozen Wastes of Cania, and then... beyond? The danger is not only the inhospitable winter but also getting tangled between Lords of The Nine in their everlasting cold war - Blizzard in Baator.
 
-Blizzard in Baator is the first ever unofficial DLC which adds new content on such a massive scale to the beloved classic: Planescape: Torment
+This mod (or, as we like to call it, an "expansion") features 25+ unique locations, over 100 NPCs, 100 items, and 20 original music tracks, alongside over 1,000 pages of dialogue and lore (written without AI). Currently available in both Polish and English, it delivers a non-linear story set in a previously unexplored district of the City of Doors, complete with custom cinematics and voice acting for select characters.
 
-The first act is a DEMO. Things will change in the full version, which will include all acts. Feel free to share your opinions and ideas at caniabelieveit@gmail.com
+The mod officially launched on June 12, 2026, with the release of its first act.
 
+Feel free to share your feedback and ideas at caniabelieveit@gmail.com or join the discussion <a href="https://discord.com/invite/c6Bn2Fc">with us on Discord</a>.
 
-### Installation for Windows and Linux:
+## Installation
 
-1. Download the package with the mod here: https://github.com/BallDamage312/blizzard-in-baator/archive/refs/heads/main.zip
-2. Extract the mod archive to the folder containing the game (where the chitin.key file is located).
-The file structure should look like this: a 'BlizzardInBaator' folder (not 'BlizzardInBaator/BlizzardInBaator') and a separate set of 'Setup-BlizzardInBaator.exe', 'Setup-BlizzardInBaator.command' and 'weidu' among the native files of the game.
-3. Run 'Setup-BlizzardInBaator.exe'. Id you're uisng Linux, run it through Wine. 
+<b>Windows</b>
 
-### Installation for Mac:
+1. <a href="https://github.com/BallDamage312/blizzard-in-baator/archive/refs/heads/main.zip">Download the mod's installation package</a> and extract it into your game folder. Make sure you are extracting it into the root/main game directory (this is the folder that contains the chitin.key file).
+2. Run the Setup-BlizzardInBaator.exe file.
+3. Select your preferred language for dialogues and audio, then finish the installation process.
+4. Start a new game or continue from an existing save file.
 
-1. Download the package with the mod here: https://github.com/BallDamage312/blizzard-in-baator/archive/refs/heads/main.zip
-2. Extract the mod archive to the folder containing the game (where the chitin.key file is located). 
-The file structure should look like this: a 'BlizzardInBaator' folder (not 'BlizzardInBaator/BlizzardInBaator') and a separate set of 'Setup-BlizzardInBaator.exe', 'Setup-BlizzardInBaator.command' and 'weidu' among the natives files of the game.
-4. Run 'setup-blizzardinbaator.command'.
+After extraction, the game's root folder should look like this:
 
+📁 Planescape Torment/<br/>
+├── 📁 BlizzardInBaator/<br/>
+├── Setup-BlizzardInBaator.exe<br/>
+└── (other game files)<br/>
 
-### Installation for Android:
+<b>Important Note</b>: Planescape: Torment: Enhanced Edition has a long-standing, unfixed bug (the "Modron Maze Bug"): each visit to the Modron Maze via the Modron Cube resets all containers, and sometimes areas and characters too. If you plan to visit the Maze, install the free [Generalized Biffing](https://github.com/Spellhold-Studios/Generalized-Biffing) mod from Spellhold Studios to fix it. If you skip the Modron Cube and play only the expansion, you won't need it.
 
-1.Not available at the moment. Maybe in the future.
+<b>Linux</b>
 
-Detailed information (other mods compability, preveting a serious "Modron Maze bug" in original EE, etc.) can be found in the mod folder (docs/readme.html).
+Follow the same instructions as for Windows, except run the Setup-BlizzardInBaator.exe file using Wine.
 
-------------------
+<b>Mac</b>
 
-#### How to start the modification?
+Follow the same instructions as for Windows, except run the setup-blizzardinbaator.command file instead of the .exe.
 
-There are three ways to start the modification:
-1. Play a whole new game from scratch.
-2. Play from a save file (it seems that the added content works correctly).
-3. Start a new game and use the zombie shortcut in the Mortuary, 'Zombie #000'. This shortcut instantly levels up TNO and allows you to choose companions, class, character, faction and items. However, this is not an ideal solution to craft a complete experience.
+<b>Android</b>
 
-For 1 and 2 - Once you have dealt with Trias in Curst, a messenger, who has been looking for you, will appear near the obsidian obelisk in front of the Mortuary.
+Not available right now. If you'd like to help make this happen, feel free to contact us.
 
-For 3 - After talking to the Zombie, leveling up, etc., he will give you a magical parchment. Use it to travel to the Hive, where the very same messenger is waiting.
+## How to Start the Journey
 
-This mod is intended for The Nameless One at ~16+ lvl but you can start at a slightly lower level if you feel confident enough.
+Once the mod is properly installed, there are two ways to begin:
 
-------------------
+**1. Continue from an existing save (or play the game from the start)**
 
-### About AI: 
+After you've dealt with Trias in Curst and returned to Sigil, a messenger who has been looking for you will appear near the obsidian obelisk in front of the Mortuary. Speak with him to begin a new quest that will take you to the Ditch — and far beyond.
 
-The only part where AI helped us is coding, mainly to change some UI elements coded in Lua language, and so on. The mod does not contain any generative AI in graphics, text or sound design.
+**2. Start a new game and use the shortcut**
 
+At the start of a new game, look for 'Zombie #000' standing near the slab that you awoke on in the Mortuary. This shortcut instantly levels up The Nameless One and lets you choose your class, stats, alignment, faction, companions, and items. The zombie will also hand you a magical parchment — use it to travel to the Hive where the messenger awaits you.
 
+The mod is balanced for The Nameless One at around level 16.
 
-## “Blizzard in Baator” is an unofficial, fan-made modification for Planescape: Torment. This is unofficial Fan Content permitted under the Fan Content Policy. Not approved/endorsed by Wizards of the Coast, Beamdog, or any rights holders. Portions of the materials used are property of Wizards of the Coast. ©Wizards of the Coast LLC.
+## Walkthrough
+
+A detailed walkthrough with quests, locations and map markers can be found <a href="https://grimuar.pl/en/blizzardinbaator/walkthrough/">here</a> [https://grimuar.pl/en/blizzardinbaator/walkthrough/].
+
+## A Note on AI
+
+AI was used only as a coding aid — mainly for modifying UI elements written in Lua. The mod contains no generative AI in its graphics, writing, or sound design. Everything you see, read, and hear was made by humans, fiends, and tieflings.
+
+## Copyrights
+
+“Blizzard in Baator” is an unofficial, fan-made modification for Planescape: Torment. This is unofficial Fan Content permitted under the Fan Content Policy. Not approved/endorsed by Wizards of the Coast, Beamdog, or any rights holders. Portions of the materials used are property of Wizards of the Coast. ©Wizards of the Coast LLC.
+
+For the full list of authors, see <a href=https://github.com/BallDamage312/blizzard-in-baator/blob/main/authors.md>authors.md.<a> [https://github.com/BallDamage312/blizzard-in-baator/blob/main/authors.md].
+For the full list of attributions, see <a href=https://github.com/BallDamage312/blizzard-in-baator/blob/main/attributions.md>attributions.md.<a> [https://github.com/BallDamage312/blizzard-in-baator/blob/main/attributions.md].
 
 
  
