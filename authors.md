@@ -1,4 +1,4 @@
-The initiators and main creators of the modification: THE CREATORS OF BLIZZARD IN BAATOR: CANIA BELIEVE IT WORKS
+# CANIA BELIEVE IT WORKS
 
 ### Project Lead
 
@@ -29,7 +29,6 @@ Inter: English editing and proofreading
 Aquadrizzt: English editing and proofreading
 
 Dune: English editing and proofreading
-
 
 ### Support:
 
@@ -65,7 +64,7 @@ Tydeus<br>
 
 ### Voice Actors:
 
-## Polish Dubbing<br>
+#### Polish Dubbing<br>
 Paweł Hajnos as Grotefend / Kruchy Ogon<br>
 Paskud as Czarny Ziutek<br>
 Błażej Krzyżanowski as Tergush'tekhn / Prod<br>
@@ -76,7 +75,7 @@ Adrian Waldemar Gajos as Anit'bil<br>
 Tomasz Hebel as Gemariel<br>
 Agnieszka "Eliamina" Kryszczyńska-Krauze as Mysterious Alu-Fiend<br>
 
-## English Dubbing<br>
+#### English Dubbing<br>
 Jon Boote as Prod<br>
 Vincent Rogé as Vinrogé<br>
 Alicja Wojciechowska as Word Archon<br>
@@ -88,15 +87,19 @@ MillicentOak as Tergush'tekhn<br>
 RevocerGM as Gemariel / Black Joseph<br>
 Inter as Mysterious Alu-Fiend<br>
 
-## Extraordinary Thanks to:
+### Extraordinary Thanks to:
 
-The Gibberlings 3 (Infinity Engine Modding Community)<br>
+#### The original creators at Black Isle Studios.
+
+To the designers, writers, artists, and programmers—thank you for your vision and hard work. Without your talent, Planescape: Torment would never have been created, and this project would not have been possible.
+
+#### The Gibberlings 3 (Infinity Engine Modding Community)<br>
 especially:<br>
 Argent77 - For consultation and help with bestiary, quest logic and invaluable help across all fields of expertise. This project would not be the same without you.<br>
 CamDawg <br>
 Jastey<br>
 
-## Additional Thanks to:
+### Additional Thanks to:
 
 Beamdog<br>
 Grimuar Sferowca<br>
