@@ -60,3 +60,8 @@ This mod is intended for The Nameless One at ~16+ lvl but you can start at a sli
 About AI: The only part where AI helped us is coding, mainly to change some UI elements coded in Lua language, and so on. The mod does not contain any generative AI in graphics, text or sound design.
 
 
+
+ “Blizzard in Baator” is an unofficial, fan-made modification for Planescape: Torment. This is unofficial Fan Content permitted under the Fan Content Policy. Not approved/endorsed by Wizards of the Coast, Beamdog, or any rights holders. Portions of the materials used are property of Wizards of the Coast. ©Wizards of the Coast LLC.
+
+
+ 
