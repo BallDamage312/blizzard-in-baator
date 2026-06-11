@@ -8,7 +8,7 @@ Blizzard in Baator  is an unofficial, fan-made modification for Planescape: Torm
 
 The Nameless One still holds some undiscovered secrets from his past that may yet return to change his nature. One such lead to his original identity will take him on a dangerous rescue mission to a whole new region of Sigil and into the depths of the Nine Hells, all the way to the 8th layer: The Frozen Wastes of Cania, and then... beyond? The danger is not only the inhospitable winter but also getting tangled between Lords of The Nine in their everlasting cold war - Blizzard in Baator.
 
-Blizzard in Baator is the first ever unofficial DLC which adds new content on such a massive scale to the beloved classic: Planescape: Tormen
+Blizzard in Baator is the first ever unofficial DLC which adds new content on such a massive scale to the beloved classic: Planescape: Torment
 
 
 The first act is a DEMO. Things will change in the full version, which will include all acts. Feel free to share your opinions and ideas at caniabelieveit@gmail.com
@@ -69,7 +69,7 @@ The only part where AI helped us is coding, mainly to change some UI elements co
 
 
 
-### “Blizzard in Baator” is an unofficial, fan-made modification for Planescape: Torment. This is unofficial Fan Content permitted under the Fan Content Policy. Not approved/endorsed by Wizards of the Coast, Beamdog, or any rights holders. Portions of the materials used are property of Wizards of the Coast. ©Wizards of the Coast LLC.
+## “Blizzard in Baator” is an unofficial, fan-made modification for Planescape: Torment. This is unofficial Fan Content permitted under the Fan Content Policy. Not approved/endorsed by Wizards of the Coast, Beamdog, or any rights holders. Portions of the materials used are property of Wizards of the Coast. ©Wizards of the Coast LLC.
 
 
  
