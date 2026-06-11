@@ -12,7 +12,7 @@ Installation for Windows:
 
 1. Download the package with the mod here: https://github.com/BallDamage312/Blizzard-in-Baator-act-I/archive/refs/heads/main.zip
 2. Extract the mod archive to the folder containing the game (where the chitin.key file is located). The folder is usually called 'ProjectP' if you have difficulties locating it.
-The file structure should look like this: a 'BlizzardInBaator' folder (not 'BlizzardInBaator/BlizzardInBaator') and a separate set of 'Setup-BlizzardInBaator.exe', 'Setup-BlizzardInBaator.command' and 'wiedu' among the native files of the game.
+The file structure should look like this: a 'BlizzardInBaator' folder (not 'BlizzardInBaator/BlizzardInBaator') and a separate set of 'Setup-BlizzardInBaator.exe', 'Setup-BlizzardInBaator.command' and 'weidu' among the native files of the game.
 3. Run 'Setup-BlizzardInBaator.exe'. Install Generalised Biffing if needed - similar procedure (More information about this step - biffing, can be found in the html readme inside BlizzardInBaator/docs).
 
 
@@ -21,7 +21,7 @@ Installation for Linux:
 
 1. Download the package with the mod here: https://github.com/BallDamage312/Blizzard-in-Baator-act-I/archive/refs/heads/main.zip
 2. Extract the mod archive to the folder containing the game (where the chitin.key file is located). The folder is usually called 'ProjectP' if you have difficulties locating it.
-The file structure should look like this: a 'BlizzardInBaator' folder (not 'BlizzardInBaator/BlizzardInBaator') and a separate set of 'Setup-BlizzardInBaator.exe', 'Setup-BlizzardInBaator.command' and 'wiedu' among the native files of the game.
+The file structure should look like this: a 'BlizzardInBaator' folder (not 'BlizzardInBaator/BlizzardInBaator') and a separate set of 'Setup-BlizzardInBaator.exe', 'Setup-BlizzardInBaator.command' and 'weidu' among the native files of the game.
 3. Run 'Setup-BlizzardInBaator.exe' through Wine. Install Generalised Biffing if needed - similar procedure (More information about this step - biffing, can be found in the html readme inside BlizzardInBaator/docs).
 
 
@@ -30,7 +30,7 @@ Installation for Mac:
 
 1. Download the package with the mod here: https://github.com/BallDamage312/Blizzard-in-Baator-act-I/archive/refs/heads/main.zip
 2. Extract the mod archive to the folder containing the game (where the chitin.key file is located). 
-The file structure should look like this: a 'BlizzardInBaator' folder (not 'BlizzardInBaator/BlizzardInBaator') and a separate set of 'Setup-BlizzardInBaator.exe', 'Setup-BlizzardInBaator.command' and 'wiedu' among the natives files of the game.
+The file structure should look like this: a 'BlizzardInBaator' folder (not 'BlizzardInBaator/BlizzardInBaator') and a separate set of 'Setup-BlizzardInBaator.exe', 'Setup-BlizzardInBaator.command' and 'weidu' among the natives files of the game.
 4. Run 'setup-blizzardinbaator.command'. Install Generalised Biffing if needed - similar procedure (More information about this step - biffing, can be found in the html readme inside BlizzardInBaator/docs).
 
 
