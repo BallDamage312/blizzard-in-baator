@@ -10,41 +10,29 @@ The Nameless One still holds some undiscovered secrets from his past that may ye
 
 Blizzard in Baator is the first ever unofficial DLC which adds new content on such a massive scale to the beloved classic: Planescape: Torment
 
-
 The first act is a DEMO. Things will change in the full version, which will include all acts. Feel free to share your opinions and ideas at caniabelieveit@gmail.com
 
-Detailed information (other mods compability, serious "Modron Maze bug" in EE, etc.) can be found in the mod folder (docs/readme.html).
 
-
-### Installation for Windows:
+### Installation for Windows and Linux:
 
 1. Download the package with the mod here: https://github.com/BallDamage312/blizzard-in-baator/archive/refs/heads/main.zip
-2. Extract the mod archive to the folder containing the game (where the chitin.key file is located). The folder is usually called 'ProjectP' if you have difficulties locating it.
+2. Extract the mod archive to the folder containing the game (where the chitin.key file is located).
 The file structure should look like this: a 'BlizzardInBaator' folder (not 'BlizzardInBaator/BlizzardInBaator') and a separate set of 'Setup-BlizzardInBaator.exe', 'Setup-BlizzardInBaator.command' and 'weidu' among the native files of the game.
-3. Run 'Setup-BlizzardInBaator.exe'. Install Generalised Biffing if needed - similar procedure (More information about this step - biffing, can be found in the html readme inside BlizzardInBaator/docs).
-
-
-### Installation for Linux:
-
-
-1. Download the package with the mod here: https://github.com/BallDamage312/blizzard-in-baator/archive/refs/heads/main.zip
-2. Extract the mod archive to the folder containing the game (where the chitin.key file is located). The folder is usually called 'ProjectP' if you have difficulties locating it.
-The file structure should look like this: a 'BlizzardInBaator' folder (not 'BlizzardInBaator/BlizzardInBaator') and a separate set of 'Setup-BlizzardInBaator.exe', 'Setup-BlizzardInBaator.command' and 'weidu' among the native files of the game.
-3. Run 'Setup-BlizzardInBaator.exe' through Wine. Install Generalised Biffing if needed - similar procedure (More information about this step - biffing, can be found in the html readme inside BlizzardInBaator/docs).
-
+3. Run 'Setup-BlizzardInBaator.exe'. Id you're uisng Linux, run it through Wine. 
 
 ### Installation for Mac:
-
 
 1. Download the package with the mod here: https://github.com/BallDamage312/blizzard-in-baator/archive/refs/heads/main.zip
 2. Extract the mod archive to the folder containing the game (where the chitin.key file is located). 
 The file structure should look like this: a 'BlizzardInBaator' folder (not 'BlizzardInBaator/BlizzardInBaator') and a separate set of 'Setup-BlizzardInBaator.exe', 'Setup-BlizzardInBaator.command' and 'weidu' among the natives files of the game.
-4. Run 'setup-blizzardinbaator.command'. Install Generalised Biffing if needed - similar procedure (More information about this step - biffing, can be found in the html readme inside BlizzardInBaator/docs).
+4. Run 'setup-blizzardinbaator.command'.
 
 
 ### Installation for Android:
 
 1.Not available at the moment. Maybe in the future.
+
+Detailed information (other mods compability, preveting a serious "Modron Maze bug" in original EE, etc.) can be found in the mod folder (docs/readme.html).
 
 ------------------
 
