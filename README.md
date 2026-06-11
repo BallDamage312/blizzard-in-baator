@@ -66,8 +66,9 @@ AI was used only as a coding aid — mainly for modifying UI elements written in
 
 “Blizzard in Baator” is an unofficial, fan-made modification for Planescape: Torment. This is unofficial Fan Content permitted under the Fan Content Policy. Not approved/endorsed by Wizards of the Coast, Beamdog, or any rights holders. Portions of the materials used are property of Wizards of the Coast. ©Wizards of the Coast LLC.
 
-For the full list of authors, see <a href=https://github.com/BallDamage312/blizzard-in-baator/blob/main/authors.md>authors.md.<a> [https://github.com/BallDamage312/blizzard-in-baator/blob/main/authors.md].
-For the full list of attributions, see <a href=https://github.com/BallDamage312/blizzard-in-baator/blob/main/attributions.md>attributions.md.<a> [https://github.com/BallDamage312/blizzard-in-baator/blob/main/attributions.md].
+For the full list of authors, see <a href=https://github.com/BallDamage312/blizzard-in-baator/blob/main/authors.md>authors.md.</a>
+
+For the full list of attributions, see <a href=https://github.com/BallDamage312/blizzard-in-baator/blob/main/attributions.md>attributions.md.</a>
 
 
  
