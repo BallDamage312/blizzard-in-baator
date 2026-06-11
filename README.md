@@ -32,7 +32,6 @@ Installation for Mac:
 1. Download the package with the mod here: https://github.com/BallDamage312/Blizzard-in-Baator-act-I/archive/refs/heads/main.zip
 2. Extract the mod archive to the folder containing the game (where the chitin.key file is located). The folder is usually called 'ProjectP' if you have difficulties locating it.
 The file structure should look like this: a 'BlizzardInBaator' folder (not 'BlizzardInBaator/BlizzardInBaator') and a separate 'Setup-BlizzardInBaator.exe'
-3. Find the folder called 'appleinstaller' - there will be two files inside - blizzardinbaator.tp2 and setup-blizzardinbaator.command - copy the .tp2 into the main folder level to replace the existing .tp2 there. Copy the other one to the main folder containing the game (where the chitin.key file is located).
 4. Run 'setup-blizzardinbaator.command'. Install Generalised Biffing if needed - similar procedure (More information about this step - biffing, can be found in the html readme inside BlizzardInBaator/docs).
 
 
