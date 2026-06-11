@@ -2,28 +2,28 @@ The initiators and main creators of the modification: THE CREATORS OF BLIZZARD I
 
 ### Project Lead
 
-  **Filip "FallDamage312" Marczuk**: lead developer, lead writer and story coordinator, visual design and execution, chief scriptwriter, translations and additional proofreading
+  Filip "FallDamage312" Marczuk: lead developer, lead writer and story coordinator, visual design and execution, chief scriptwriter, translations and additional proofreading
 
 ### Project developers
 
-    **Filip "FallDamage312" Marczuk**
-    **Kamil "Wrathu" Kwiatkowski**:  lead music composer and sound coordinator, writer, chief of inventory and items, translations and additional proofreading
-    **szef**: project initiator, designer of the installer, structure, and menu elements, additional scriptwriter
-    **Alicja Wojciechowska**: writer, tester, Polish and English editing and proofreading, additional translations
+    Filip "FallDamage312" Marczuk
+    Kamil "Wrathu" Kwiatkowski:  lead music composer and sound coordinator, writer, chief of inventory and items, translations and additional proofreading
+    szef: project initiator, designer of the installer, structure, and menu elements, additional scriptwriter
+    Alicja Wojciechowska: writer, tester, Polish and English editing and proofreading, additional translations
 
 ### The editing and proofreading team
 
-    **Corpselight**: editing and proofreading coordinator, Polish editing and proofreading, additional translations
-    **Brenda**: Polish editing and proofreading
-    **Alexander Hurezeanu**: English editing and proofreading
-    **Alderdash**: English editing and proofreading
-    **Inter**: English editing and proofreading
-    **Aquadrizzt**: English editing and proofreading
-    **Dune**: English editing and proofreading
+    Corpselight: editing and proofreading coordinator, Polish editing and proofreading, additional translations
+    Brenda: Polish editing and proofreading
+    Alexander Hurezeanu: English editing and proofreading
+    Alderdash: English editing and proofreading
+    Inter: English editing and proofreading
+    Aquadrizzt: English editing and proofreading
+    Dune: English editing and proofreading
 
 ### Support:
 
-    **Darnath**: organizational and merit-based support, QA
+    Darnath: organizational and merit-based support, QA
 
 ### Sound and Music:
 
