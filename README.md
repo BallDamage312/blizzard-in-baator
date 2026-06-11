@@ -1,5 +1,6 @@
 # blizzard-in-baator
 
+<img width="1920" height="353" alt="obraz" src="https://github.com/user-attachments/assets/cb0be4c0-071c-4a86-84ec-bac2d60442f7" />
 
 This is a public repository to download the Act I of Blizzard in Baator modification for Planescape: Torment EE directly from the creators.
 
@@ -8,7 +9,7 @@ Thie first act is a DEMO. Things will change in the full version, which will inc
 Detailed information (other mods compability, serious "Modron Maze bug" in EE, etc.) can be found in the mod folder (docs/readme.html).
 
 
-Installation for Windows:
+### Installation for Windows:
 
 1. Download the package with the mod here: https://github.com/BallDamage312/blizzard-in-baator/archive/refs/heads/main.zip
 2. Extract the mod archive to the folder containing the game (where the chitin.key file is located). The folder is usually called 'ProjectP' if you have difficulties locating it.
@@ -16,7 +17,7 @@ The file structure should look like this: a 'BlizzardInBaator' folder (not 'Bliz
 3. Run 'Setup-BlizzardInBaator.exe'. Install Generalised Biffing if needed - similar procedure (More information about this step - biffing, can be found in the html readme inside BlizzardInBaator/docs).
 
 
-Installation for Linux:
+### Installation for Linux:
 
 
 1. Download the package with the mod here: https://github.com/BallDamage312/blizzard-in-baator/archive/refs/heads/main.zip
@@ -25,7 +26,7 @@ The file structure should look like this: a 'BlizzardInBaator' folder (not 'Bliz
 3. Run 'Setup-BlizzardInBaator.exe' through Wine. Install Generalised Biffing if needed - similar procedure (More information about this step - biffing, can be found in the html readme inside BlizzardInBaator/docs).
 
 
-Installation for Mac:
+### Installation for Mac:
 
 
 1. Download the package with the mod here: https://github.com/BallDamage312/blizzard-in-baator/archive/refs/heads/main.zip
@@ -34,13 +35,13 @@ The file structure should look like this: a 'BlizzardInBaator' folder (not 'Bliz
 4. Run 'setup-blizzardinbaator.command'. Install Generalised Biffing if needed - similar procedure (More information about this step - biffing, can be found in the html readme inside BlizzardInBaator/docs).
 
 
-Installation for Android:
+### Installation for Android:
 
 1.Not available at the moment. Maybe in the future.
 
 ------------------
 
-How to start the modification?
+#### How to start the modification?
 
 There are three ways to start the modification:
 1. Play a whole new game from scratch.
@@ -55,11 +56,13 @@ This mod is intended for The Nameless One at ~16+ lvl but you can start at a sli
 
 ------------------
 
-About AI: The only part where AI helped us is coding, mainly to change some UI elements coded in Lua language, and so on. The mod does not contain any generative AI in graphics, text or sound design.
+### About AI: 
+
+The only part where AI helped us is coding, mainly to change some UI elements coded in Lua language, and so on. The mod does not contain any generative AI in graphics, text or sound design.
 
 
 
- “Blizzard in Baator” is an unofficial, fan-made modification for Planescape: Torment. This is unofficial Fan Content permitted under the Fan Content Policy. Not approved/endorsed by Wizards of the Coast, Beamdog, or any rights holders. Portions of the materials used are property of Wizards of the Coast. ©Wizards of the Coast LLC.
+### “Blizzard in Baator” is an unofficial, fan-made modification for Planescape: Torment. This is unofficial Fan Content permitted under the Fan Content Policy. Not approved/endorsed by Wizards of the Coast, Beamdog, or any rights holders. Portions of the materials used are property of Wizards of the Coast. ©Wizards of the Coast LLC.
 
 
  
