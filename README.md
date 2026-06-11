@@ -1,34 +1,49 @@
 # blizzard-in-baator
-A public repository to download the Act I of Blizzard in Baator modification for Planescape: Torment directly from the creators.
 
-This is a demo; things will change in the full version, which will include all acts. Feel free to share your opinions and ideas.
+
+This is a public repository to download the Act I of Blizzard in Baator modification for Planescape: Torment EE directly from the creators.
+
+Thie first act is a DEMO. Things will change in the full version, which will include all acts. Feel free to share your opinions and ideas at caniabelieveit@gmail.com
 
 Detailed information (other mods compability, serious "Modron Maze bug" in EE, etc.) can be found in the mod folder (docs/readme.html).
 
+
 Installation for Windows:
+
 
 1. Download the package with the mod here: https://github.com/BallDamage312/Blizzard-in-Baator-act-I/archive/refs/heads/main.zip
 2. Extract the mod archive to the folder containing the game (where the chitin.key file is located).
 The file structure should look like this: a 'BlizzardInBaator' folder (not 'BlizzardInBaator/BlizzardInBaator') and a separate 'Setup-BlizzardInBaator.exe'
 3. Run 'Setup-BlizzardInBaator.exe'. Install Generalised Biffing if needed - similar procedure (More information about this step - biffing, can be found in the html readme inside BlizzardInBaator/docs).
 
+
 Installation for Linux:
+
 
 1. Download the package with the mod here: https://github.com/BallDamage312/Blizzard-in-Baator-act-I/archive/refs/heads/main.zip
 2. Extract the mod archive to the folder containing the game (where the chitin.key file is located).
 The file structure should look like this: a 'BlizzardInBaator' folder (not 'BlizzardInBaator/BlizzardInBaator') and a separate 'Setup-BlizzardInBaator.exe'
 3. Run 'Setup-BlizzardInBaator.exe' through Wine. Install Generalised Biffing if needed - similar procedure (More information about this step - biffing, can be found in the html readme inside BlizzardInBaator/docs).
 
+
 Installation for Mac:
+
 
 1. Download the package with the mod here: https://github.com/BallDamage312/Blizzard-in-Baator-act-I/archive/refs/heads/main.zip
 2. Extract the mod archive to the folder containing the game (where the chitin.key file is located).
 The file structure should look like this: a 'BlizzardInBaator' folder (not 'BlizzardInBaator/BlizzardInBaator') and a separate 'Setup-BlizzardInBaator.exe'
-3. Find the folder called AppleInstaller - there will be two files inside - blizzardinbaator.tp2 and setup-blizzardinbaator.command - copy the .tp2 into the main folder level to replace the existing .tp2 there. Copy the other one to the main folder containing the game (where the chitin.key file is located).
+3. Find the folder called 'appleinstaller' - there will be two files inside - blizzardinbaator.tp2 and setup-blizzardinbaator.command - copy the .tp2 into the main folder level to replace the existing .tp2 there. Copy the other one to the main folder containing the game (where the chitin.key file is located).
 4. Run 'setup-blizzardinbaator.command'. Install Generalised Biffing if needed - similar procedure (More information about this step - biffing, can be found in the html readme inside BlizzardInBaator/docs).
+
+
+Installation for Android:
+
+1.Not available at the moment. Maybe in the future.
+
 ------------------
 
 How to start the modification?
+
 There are three ways to start the modification:
 1. Play a whole new game from scratch.
 2. Play from a save file (it seems that the added content works correctly).
