@@ -1,7 +1,7 @@
-BLIZZARD IN BAATOR<br>
+## BLIZZARD IN BAATOR<br>
 A large unofficial story-mod for Planescape:Torment by Cania Believe It Works<br>
 
-Sources:
+### Sources:
 
 Lore-accurate translations based on Sferopedia.pl https://sfery.fandom.com/wiki/Sferopedia
 
