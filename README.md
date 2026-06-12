@@ -60,19 +60,15 @@ A detailed walkthrough with quests, locations and map markers can be found <a hr
 
 ## A Note on AI
 
-AI was used only as a coding aid — mainly for modifying UI elements written in Lua. The mod contains no generative AI in its graphics, writing, or sound design. Everything you see, read, and hear was made by humans, fiends, and tieflings.
+AI was used only as a coding aid — mainly for modifying UI elements written in Lua. The mod contains no generative AI in its graphics, writing, or sound design. Everything you see, read, and hear was made by humans, fiends, aasimars and tieflings.
 
-## Other Mods
+## Compatibility with other PST:EE mods
 
-Blizzard in Baator should work correctly with all other mods for PSTEE.
-
-In the case of the Book of Torment modification, you should install BoT first (following its instructions), then Blizzard in Baator.
-
-Similarly, with the Journal Portrait Conversation alone (as the first one).
-
-DialogTags should be installed at the very end of all mods.
-
-Unfinished Business has a minor overlap and it is reccommended to finish all its quests before leaving Sigil.
+### Blizzard in Baator is compatible with the following mods for Planescape: Torment Enhanced Edition, provided you follow the correct installation order:
+Book of Torment – Must be installed first (according to its own instructions) before installing Blizzard in Baator.
+Journal Portrait Conversation – Follows the same rule as Book of Torment (install prior to our mod).
+DialogTags – This mod should be installed at the very end of your setup, after Blizzard in Baator has been installed.
+Unfinished Business (UB) – Some quests between the two mods overlap. To prevent conflicts and experience all content smoothly, it is highly recommended to complete all UB quests before leaving the City of Doors (Sigil).
 
 ## Copyrights
 
