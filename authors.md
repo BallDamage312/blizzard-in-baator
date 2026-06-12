@@ -24,11 +24,11 @@ Alexander Hurezeanu: English editing and proofreading
 
 Alderdash: English editing and proofreading
 
-Inter: English editing and proofreading
+Dune: English editing and proofreading
 
 Aquadrizzt: English editing and proofreading
 
-Dune: English editing and proofreading
+Inter: English editing and proofreading
 
 ### Support:
 
