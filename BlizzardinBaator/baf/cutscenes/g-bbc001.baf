@@ -1,0 +1,83 @@
+// cutscene in rivergate (g-bb01)
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+    PlaySound("AM_VORTX")
+    StickySinisterPoof("EF01TPRT",Myself,1)
+    Wait(2)
+    TeleportParty("arg-00",[2841.1115],14)
+    EndCutSceneMode()
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("Morte")
+    StickySinisterPoof("EF01TPRT",Myself,1)
+    Wait(2)
+    TeleportParty("arg-00",[2841.1115],14)
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("Annah")
+    StickySinisterPoof("EF01TPRT",Myself,1)
+    Wait(2)
+    TeleportParty("arg-00",[2841.1115],14)
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("Dakkon")
+    StickySinisterPoof("EF01TPRT",Myself,1)
+    Wait(2)
+    TeleportParty("arg-00",[2841.1115],14)
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("Grace")
+    StickySinisterPoof("EF01TPRT",Myself,1)
+    Wait(2)
+    TeleportParty("arg-00",[2841.1115],14)
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("Nordom")
+    StickySinisterPoof("EF01TPRT",Myself,1)
+    Wait(2)
+    TeleportParty("arg-00",[2841.1115],14)
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("Ignus")
+    StickySinisterPoof("EF01TPRT",Myself,1)
+    Wait(2)
+    TeleportParty("arg-00",[2841.1115],14)
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("Vhail")
+    StickySinisterPoof("EF01TPRT",Myself,1)
+    Wait(2)
+    TeleportParty("arg-00",[2841.1115],14)
+END

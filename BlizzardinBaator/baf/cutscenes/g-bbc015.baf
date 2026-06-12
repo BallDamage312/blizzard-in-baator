@@ -1,0 +1,35 @@
+// Bard Ambush in Cania
+
+IF
+	HarmlessEntered(Player1)
+	Global("G-Bard_Ambush_Fight","Global",0)
+THEN
+	RESPONSE #100
+		SetGlobal("G-Bard_Ambush_Fight","Global",1)
+		ClearAllActions()
+		StartCutSceneMode()
+        CutSceneId(Protagonist)
+		CreateCreatureObject("g-bb006",Player1,0,0,0) // Prod
+		DisplayString("g-bb006",@100250)
+		Wait(5)
+		CreateCreature("g-bb007",[4528.1420],3) // Aker
+		PlaySound("AM_VORTX")
+		ActionOverride("g-bb007",StickySinisterPoof("EF01TPRT",Myself,1))
+		ActionOverride("g-bb007",FaceObject(Player1))
+		Wait(2)
+		CreateCreature("g-bb140",[4313.1242],4)
+		ActionOverride("g-bb140",StickySinisterPoof("S113SMOK",Myself,1))
+		ActionOverride("g-bb140",FaceObject(Player1)) 
+		Wait(2)
+		CreateCreature("g-bb173",[4210.1389],3)
+		ActionOverride("g-bb173",StickySinisterPoof("S113SMOK",Myself,1))
+		ActionOverride("g-bb173",FaceObject(Player1)) 
+		Wait(2)
+		CreateCreature("g-bb174",[3940.952],10) // Black Abishai
+		ActionOverride("g-bb174",StickySinisterPoof("S113SMOK",Myself,1))
+		ActionOverride("g-bb174",FaceObject(Player1))
+		Wait(3)
+		EndCutSceneMode()
+		ActionOverride("g-bb007",StartDialogNoSet(Player1))
+		
+END

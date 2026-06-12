@@ -1,0 +1,61 @@
+
+///////////////
+// ========= //
+// Dialogues //
+// ========= //
+///////////////
+		
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/d~
+
+///////////////
+// ========= //
+// BAF files //
+// ========= //
+///////////////
+
+EXTEND_BOTTOM ~ar0200.bcs~ ~%MOD_FOLDER%/baf/extend/ar0200.baf~
+EXTEND_BOTTOM ~ar0202.bcs~ ~%MOD_FOLDER%/baf/extend/ar0202.baf~
+EXTEND_BOTTOM ~ar0400.bcs~ ~%MOD_FOLDER%/baf/extend/ar0400.baf~
+EXTEND_TOP ~ar0402.bcs~ ~%MOD_FOLDER%/baf/extend/ar0402.baf~
+EXTEND_BOTTOM ~ar0508.bcs~ ~%MOD_FOLDER%/baf/extend/ar0508.baf~
+EXTEND_BOTTOM ~ar0601.bcs~ ~%MOD_FOLDER%/baf/extend/ar0601.baf~
+EXTEND_BOTTOM ~0402ATHL.bcs~ ~%MOD_FOLDER%/baf/extend/0402ATHL.baf~
+EXTEND_BOTTOM ~0402TEGR.bcs~ ~%MOD_FOLDER%/baf/extend/0402TEGR.baf~
+EXTEND_TOP ~0200anna.bcs~ ~%MOD_FOLDER%/baf/extend/0200anna.baf~
+EXTEND_TOP ~0402DAKN.bcs~ ~%MOD_FOLDER%/baf/extend/0402DAKN.baf~
+EXTEND_TOP ~0402IGNS.bcs~ ~%MOD_FOLDER%/baf/extend/0402IGNS.baf~
+EXTEND_BOTTOM ~ar0605.bcs~ ~%MOD_FOLDER%/baf/extend/ar0605.baf~
+EXTEND_BOTTOM ~baldur.bcs~ ~%MOD_FOLDER%/baf/extend/baldur.baf~
+EXTEND_TOP ~0605ffg.bcs~ ~%MOD_FOLDER%/baf/extend/0605ffg.baf~
+
+/*COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/baf/areas~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/baf/creatures~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/baf/cutscenes~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/baf/various~
+*/
+
+// Define the list of subfolders to be processed
+ACTION_FOR_EACH folder IN ~areas~ ~creatures~ ~cutscenes~ ~various~ BEGIN
+
+  // Iterate through every .baf file found in the current subfolder
+  ACTION_BASH_FOR ~%MOD_FOLDER%/baf/%folder%~ ~^.*\.baf$~ BEGIN
+    
+    // %BASH_FOR_RES% is the resource name (e.g., 'myscript')
+    // %BASH_FOR_FILE% is the full filename (e.g., 'myscript.baf')
+    // %BASH_FOR_FILESPEC% is the full path to the source file
+
+    // Check if a compiled version (.bcs) already exists in the override or game biffs
+    ACTION_IF (FILE_EXISTS_IN_GAME ~%BASH_FOR_RES%.bcs~) BEGIN
+      
+      // Print a warning to the console and debug log
+      PRINT ~WARNING: %BASH_FOR_FILE% has a duplicate name and might overwrite an existing script (.baf/.bcs)!~
+      
+      // Optional: Stop the installation to force a fix in the mod's structure
+      FAIL ~Installation aborted: Detected naming conflict for %BASH_FOR_RES%~
+    END
+
+    // If the check passes (or if FAIL is commented out), compile the script
+    COMPILE EVALUATE_BUFFER ~%BASH_FOR_FILESPEC%~
+
+  END
+END

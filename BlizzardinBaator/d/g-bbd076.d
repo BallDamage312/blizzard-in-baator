@@ -1,0 +1,18 @@
+BEGIN g-bbD076
+CHAIN IF~True()~THEN g-bbD076 g-bbD076.start
+@0 /*In front of you, you see a scrawny man in a questionably clean underwear. He is obsessively hitting a wall of the nearby building with a hammer. Every now and then, he takes a short break to catch his breath and wipe the sweat from his brow, then he eagerly goes back to work. The rest of the world does not seem to exist to him. The wall is the only thing that matters.  */
+END
+IF~~THEN REPLY @2 /*"Hello. What are you doing?" */ DO~~ + g-bbD076.A1
+IF~~THEN REPLY @3 /*Leave. */ DO~~ EXIT
+CHAIN IF~~THEN g-bbD076 g-bbD076.A1
+@5 /*The man turns to you, resting the hammer on his shoulder. He is clearly exhausted, but there's a spark of passion in his eyes. "What do you mean? I'm looking for gold! I know it's here. No one believes me, but I'll show them! He who laughs last, laughs best!" */
+END
+IF~~THEN REPLY @7 /*"Then why don't you use a pickaxe instead of a hammer? It would be easier for you." */ DO~~ + g-bbD076.C1
+IF~~THEN REPLY @8 /*"There's no way you'll find any gold here. Give it up." */ DO~~ + g-bbD076.C1
+IF~~THEN REPLY @9 /*"You have a better chance of washing gold nuggets out of the nearby drain than of finding anything in this wall." */ DO~~ + g-bbD076.C1
+IF~~THEN REPLY @10 /*"Good luck then. Bye." */ DO~~ EXIT
+CHAIN IF~~THEN g-bbD076 g-bbD076.C1
+@12 /*"Ah, another so-called expert. Better pike off and stay out of my way." The man rolls his eyes and gets back to work. The dull echo of a hammer hitting the stone wall soon fills the space. There is nothing for you here.  */
+END
+IF~~THEN REPLY @14 /*"Don't say I didn't warn you. Farewell." */ DO~~ EXIT
+IF~~THEN REPLY @15 /*"Good luck then. Bye." */ DO~~ EXIT

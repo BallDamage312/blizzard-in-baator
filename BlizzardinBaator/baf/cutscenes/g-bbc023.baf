@@ -1,0 +1,15 @@
+// haer speech
+
+
+IF
+    True()
+THEN
+    RESPONSE #100
+	StartCutSceneMode()
+    CutSceneId(Player1)
+    ActionOverride("g-bb017",MoveToPoint([829.736]))
+    Wait(3)
+	ActionOverride("G-bb190",StartDialogueNoSet("G-bbd190"))
+    EndCutSceneMode()
+	
+END

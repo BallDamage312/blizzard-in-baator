@@ -1,0 +1,48 @@
+IF
+    Global("G-ropeattached","GLOBAL",0)
+	Global("G-ropeini","GLOBAL",0)
+THEN
+    RESPONSE #100
+		//SetDoorLocked("G-door1",TRUE)
+		CloseDoor("G-door1")	
+		TriggerActivation("G-ropetalk",TRUE)
+		TriggerActivation("ektoep",FALSE)
+		SetGlobal("G-ropeini","GLOBAL",1)
+END
+
+IF
+    Global("G-ropeattached","GLOBAL",1)
+	Global("G-ropeini","GLOBAL",1)
+	
+THEN
+    RESPONSE #100
+        //SetDoorLocked("G-door1",FALSE)
+		PlaySound("INT_12H1")
+		OpenDoor("G-door1")			
+		TriggerActivation("G-ropetalk",FALSE)
+		TriggerActivation("ektoep",TRUE)
+		SetGlobal("G-ropeini","GLOBAL",2)
+END
+
+IF
+    InParty("Morte")
+	Global("g-fakemrtdialogue","GLOBAL",2)
+	!StateCheck("Morte",CD_STATE_NOTVALID)
+	Global("G-morteropeoffer","GLOBAL",0) // one time trigger
+THEN
+    RESPONSE #100
+	Wait(8)
+	SetGlobal("G-morteropeoffer","GLOBAL",1) // one time trigger
+	CreateCreatureObject("g-bbMRT",Player1,0,0,0) // fake FFG creation
+	ActionOverride("g-bbMRT",StartDialog("g-bbdMRT",Player1)) // Fake FFG dialogue initiation
+END
+
+
+IF
+True()
+THEN
+    RESPONSE #100
+
+ActionOverride("g-bb237",ChangeAIScript("g-bbn006",DEFAULT))
+
+END

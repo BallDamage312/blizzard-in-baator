@@ -1,0 +1,46 @@
+@0=~Nordom is staring at his crossbows intently. They are making a variety of clicking noises, first one, then the other, as if conversing.~
+@2=~"How are you?"~
+@3=~Leave.~
+@5=~"Introspective cycle commencing." Nordom *kliks* his eyes closed and begins to *hum.*~
+@6=~"Introspective Evaluation: Perceptions have become (1) smaller and (B) louder. Wings have been replaced with arms: reason unknown. Suspicion/hypothesis: not liked wings? Speculation. Nordom was once -ONE- but is now smaller, louder -ONE! - Change has resulted in information-processing difficulties."~
+@8=~"Fine. Let's go."~
+@9=~NPC INITIATED DIALOGUE~
+@11=~Suddenly you hear the larger modron that accompanies you. "Nordom wishes to speak." ~ [NOR169]
+@13=~"Of course, Nordom. You don't have to ask my permission. Is everything alright?"~
+@14=~"I consent. What's the matter?"~
+@15=~"Not now, Nordom. Don't bother me now."~
+@16=~Keep going.~
+@18=~"Understood. Nordom will not bother you now." ~ [NOR321B]
+@20=~Keep going.~
+@22=~"Processing." Nordom changes his lens and begins to recite the definition. "Monodrone. Single-purpose modrons native to Mechanus, where they make up the majority of the population, approximately 300 million individuals. They are the lowest in the modron hierarchy. Alignment: always Lawful Neutral (excluding rogue modrons who have experienced an !ERROR!). Their primary weapons are spears, double-edged halberds, or crossbows. They have Truesight and can see through illusions. Their sense of duty is unwavering, and it is impossible to convince them to abandon the orders of a superior duodrone. They are resistant to mind magic, fear, negative and positive energy. They can also resist acid, cold, and fire. Their memory allows them to store 48 words." ~ [NOR067]
+@24=~"Ah, I assume you are telling me about this creature on the raft?"~
+@25=~Keep going.~
+@27=~"Not creature. Modron. Chances of being used for portal-related service: high. Reason for such service: UNKNOWN." He turns to interface with the monodrone.~
+@28=~"Monodrone. Are you experiencing distress?"~
+@29=~The little construct twirls around its axis once and responds. "Warning! Demi-Mechanus-demi-Limbo *other* detected. Happy waste. Infinite clockwork blessed!"~
+@30=~"The monodrone's vocabulary is programmed with names of places, limiting basic communication programming. Detecting word origin." ~ [MODRO02]
+@31=~"*Warning* and *detected* seem native to the boat-related activities.
+*Demi* and *other* possibly used to describe general cosmology.
+*Mechanus* and *Limbo* are direct short identification names of planes.
+*Happy* sourced from Happy Hunting Grounds of Beastlands.
+*Waste* sourced from The Grey Waste.
+*Infinite* sourced from either Infinite Layers of Abyss (30%) /OR Infinite Battlefield of Acheron (50%) /OR The Infinite Staircase (20%).
+*Clockwork* sourced from Clockwork Nirvana of Mechanus.
+*Blessed* sourced from The Blessed Fields of Elysium.~
+@32=~"Granted! Plane review granted."~
+@33=~"Monodrone. Are you rogue, like Nordom?"~
+@34=~The monodrone whirrs for a moment and then answers with: "No." ~ [MODRO01]
+@35=~"Well, that sounded pretty normal to me, it did."~
+@36=~Grace giggles. "Nordom, I think you have a solid rival in cuteness."~
+@37=~"It's all nice, but can you stop pestering my navigator? Are you here to buy tickets?"~
+@38=~"The monodrone's vocabulary is confusing."~
+@40=~"So is this modron a specialist in the field of the planes. What can you tell me of Cania, monodrone?"~
+@41=~"I'm sorry sir, we'll be with you in a moment." Turn to Nordom. "Come on, Nordom. You two can catch up on the boat."~
+@43=~"If you need information about Cania. You could ask Nor-"~
+@44=~"Outer Plane: Nine Hells of Baator. WARNING! Infinite *no*." ~ [MODRO02]
+@45=~"Again, *pretty* normal. Reasonable enough for me."~
+@46=~"Frozen Wastes of Cania. Layer no. 8/9 in Outer Plane: Nine Hells of Baator. Size: Infinite. Type: Cold (Extremely). Composition: Solid stone, bone and ice mountains, titanic, unnaturally fast-moving glaciers. Travel advice: Avoid at all cost. Chance of termination: High."    ~
+@48=~"In other words, would traveling to Cania be ill advised, Nordom?"~
+@49=~"That is... somehow not reassuring. Come on, Nordom. We have a boat to catch."~
+@51=~"I have no strong opinion one way or another. It is dangerous, but you, too, are dangerous. *We* are dangerous."~
+@53=~"Yes. Let's go with that. We have a boat to catch."~

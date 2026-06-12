@@ -1,0 +1,30 @@
+// Marilith
+
+
+IF
+    Global("G-styxhostile","GLOBAL",1)
+THEN
+    RESPONSE #100
+        Enemy()
+		ForceSpellRES("g-bb687",[PC])
+        RunningAttack(NearestEnemyOf(Myself))
+END
+
+
+IF
+    AttackedBy([PC],DEFAULT)
+	
+THEN
+    RESPONSE #100
+        Enemy()
+		SetGlobal("G-styxhostile","GLOBAL",1)
+		ForceSpellRES("g-bb687",[PC])
+        Attack(NearestEnemyOf(Myself))
+   END
+  
+IF
+	True()
+THEN
+	RESPONSE #100
+		RandomWalk()
+END

@@ -1,0 +1,28 @@
+// Annah Join
+ 
+IF
+  True()
+THEN
+  RESPONSE #100
+	CutSceneId(Player1)
+    StartCutSceneMode()
+	UndoExplore()
+	FadeToColor([10.0],0)
+	SmallWait(3)
+	MoveViewPoint([1160.2420],INSTANT)
+    ActionOverride("Annah",JoinParty())
+	SmallWait(2)
+	ActionOverride("Annah",AddXPObject("Annah",1455000)) 
+	ActionOverride("Annah",GiveItemCreate("SAVANT","Annah",0,0,0) 
+	ActionOverride("Annah",GiveItemCreate("JER_BR","Annah",0,0,0)
+	SetGlobal("G-AN_JOIN_000","GLOBAL",1)
+	SetGlobal("G-JOINS","GLOBAL",1) SetGlobal("G-joiningblast","GLOBAL",1)
+	GiveItemCreate("JER_BR","ANNAH",0,0,0) GiveItemCreate("SAVANT","ANNAH",0,0,0)
+	SetGlobal("Annah_Kissing","GLOBAL",1)
+	PermanentStatChange("Annah",RESISTFIRE,RAISE,5)
+	PermanentStatChange("Annah",RESISTMAGICFIRE,RAISE,5)
+	IncrementGlobal("BD_ANNAH_MORALE","GLOBAL",2)
+	SmallWait(2)
+	TeleportParty("AR0202",[1160.2420],14)
+	EndCutSceneMode()
+END

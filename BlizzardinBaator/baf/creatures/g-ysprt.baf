@@ -1,0 +1,85 @@
+//YSGARD PARTY
+
+IF
+Global("g-party_alert","GLOBAL",1)
+THEN
+	RESPONSE #100
+	Enemy()
+	Attack(NearestEnemyOf(Myself))
+END
+
+IF
+Global("g-party_alert","GLOBAL",0)
+THEN
+	RESPONSE #100
+	ChangeEnemyAlly(Myself,NEUTRAL)
+END
+
+
+
+IF
+    AttackedBy([ANYONE],DEFAULT)
+THEN
+    RESPONSE #100
+	SetGlobal("g-party_alert","GLOBAL",1)
+        Enemy()
+        Attack(NearestEnemyOf(Myself))
+		   END
+   
+ IF
+	!ActuallyInCombat()
+
+THEN
+    RESPONSE #25
+		FaceObject(NearestMyGroupOfType())
+		PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100199) 
+        WaitRandom(5,14)
+        Continue()
+	RESPONSE #25
+        FaceObject(NearestMyGroupOfType())
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100200) 
+		WaitRandom(5,15)
+        Continue()
+	RESPONSE #25
+        FaceObject(NearestMyGroupOfType())
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100201) 
+		WaitRandom(5,15)
+        Continue()
+	RESPONSE #25
+        FaceObject(NearestMyGroupOfType())
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100202) 
+		WaitRandom(5,15)
+        Continue()
+		
+	RESPONSE #25
+        FaceObject(NearestMyGroupOfType())
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100181) 
+		WaitRandom(5,15)
+        Continue()
+		
+	RESPONSE #25
+        FaceObject(NearestMyGroupOfType())
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100101) 
+		WaitRandom(5,15)
+        Continue()
+		
+	RESPONSE #25
+        FaceObject(NearestMyGroupOfType())
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100092) 
+		WaitRandom(5,15)
+        Continue()
+		
+	RESPONSE #25
+        FaceObject(NearestMyGroupOfType())
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100055) 
+		WaitRandom(5,15)
+        Continue()
+	END

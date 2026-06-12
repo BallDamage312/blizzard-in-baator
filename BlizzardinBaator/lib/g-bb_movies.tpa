@@ -1,0 +1,6 @@
+OUTER_SET g-pim = RESOLVE_STR_REF(@1000000)
+
+COPY_EXISTING ~bgee.lua~ ~override~
+REPLACE_TEXTUALLY ~movies =  {}~ ~movies =  {
+{'g-pim', 235, 465, %g-pim%, 2, 1}
+}~

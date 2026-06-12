@@ -1,0 +1,15 @@
+IF
+    HarmlessEntered(Player1)
+    Global("G-ratchest","Global",0)
+THEN
+    RESPONSE #100
+		SetGlobal("G-ratchest","Global",1)
+		SinisterPoof("S215KNOC",[684.1980],1) 
+		Unlock("G-cont03")
+        PlaySound("ICEKN06")
+		PlaySound("NAM157")
+		ActionOverride(Protagonist,FloatMessage(Myself,@100208))
+		SetGlobal("G-rattemplequest","GLOBAL",7)
+		EndCutSceneMode()
+END
+

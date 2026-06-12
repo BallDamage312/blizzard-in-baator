@@ -1,0 +1,8 @@
+IF
+	Global("G-malahaicutscene","Global",0)
+	HarmlessEntered(Player1)
+THEN
+	RESPONSE #100
+		ActionOverride("G-bb120",StartDialogueNoSet("G-bbd120"))
+		SetGlobal("G-malahaicutscene","Global",1)
+END

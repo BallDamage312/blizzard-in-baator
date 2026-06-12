@@ -1,0 +1,2935 @@
+//////////////////
+// =========== //
+// Floating Text //
+// =========== //
+//////////////////
+
+@100000 = ~"Die!"~
+@100001 = ~"I'll freeze your ass!"~
+@100002 = ~"Enter Haer'Dalis!"~
+@100003 = ~"Fate beckons us all."~
+@100004 = ~"Tis a role I am glad to play!"~
+@100005 = ~"Aye, the lifeblood of a city. *chuckle* It ebbs and flows the same on any plane."~
+@100006 = ~*Whistle*~
+@100007 = ~"I shall be glad to dance to your tune... if you but learn to play."~
+@100008 = ~"So warm. Isn't it?"~
+@100009 = ~"What a great place to be!"~
+@100010 = ~"Ahh!"~
+@100011 = ~"You know nothing of the Art!"~
+@100012 = ~"Now, you die."~
+@100013 = ~"Finish it!"~
+@100014 = ~"Die, you runt!"~
+@100015 = ~"MY WOLF!!!"~
+@100016 = ~"Be obedient!"~
+@100017 = ~"Eh. Right, then..."~
+@100018 = ~"Black Joseph... How should I put it... I've come to confiscate... your imp."~
+@100019 = ~"Yes... I think so."~
+@100020 = ~"Is that so?"~
+@100021 = ~"I think not."~
+@100022 = ~"Coooaaming right up."~
+@100023 = ~"Ooooaaalright..."~
+@100024 = ~"Rooooutterkin Rooooum's ooooup!"~
+@100025 = ~"Ditch Cooooucktail, right?"~
+@100026 = ~*Croak*~
+@100027 = ~"Gather round! Trip to the Ditch beach, coming right up!"~
+@100028 = ~"Warm yer weary bones at the hottest spot in the whole Hive!"~
+@100029 = ~"A trip to the Ditch! Just 10 coppers!"~
+@100030 = ~"Ooooh..."~
+@100031 = ~"Bring happy currents to our kin..."~
+@100032 = ~"Bring death to our enemies!"~
+@100033 = ~"Chop-chop, yes-yes... Innards go slosh-slosh!"~
+@100034 = ~"Glory to Istishia!"~
+@100035 = ~"Glory to Baluu!"~
+@100036 = ~"Glory to Dead Lady!"~
+@100037 = ~"Glory to Sir Scar!"~
+@100038 = ~*Howl*~
+@100039 = ~"You sodding lizard!"~
+@100040 = ~"This time, you're done for!"~
+@100041 = ~"Tell me, abishai, did Tiamat stint on the red dye?"~
+@100042 = ~"Grrr..."~
+@100043 = ~"You don't even know how to cheat properly!"~
+@100044 = ~"You flea-ridden mutt! Eat your words!"~
+@100045 = ~"One day I'll sing 'O jubilant flames' on your grave."~
+@100046 = ~*Nudge nudge, wink wink*~
+@100047 = ~"Hey cutter, wanna have some fun?"~
+@100048 = ~"Let's talk, handsome..."~
+@100049 = ~"Listen carefully, I won't repeat..."~
+@100050 = ~"Do you understand what I mean?"~
+@100051 = ~"Arrow paradox, I told you about that before..."~
+@100052 = ~"Oh wait, I think I get it..."~
+@100053 = ~"I don't really get it, mate..."~
+@100054 = ~"Right..."~
+@100055 = ~*Hic!*~
+@100056 = ~"Neeed an'thing, boss...?"~
+@100057 = ~"Boss! Booooss!"~
+@100058 = ~"The... The best tout in the whole bloody anthill!"~
+@100059 = ~"Boss, gimme jink, and I'll give ye some directions!"~
+@100060 = ~*Burp!*~
+@100061 = ~"Thisss is a serious acc... accusation!"~
+@100062 = ~"Oh, Sonne."~
+@100063 = ~"Do you really love me?"~
+@100064 = ~"Darling, please be honest with me."~
+@100065 = ~"Do you not love me anymore?"~
+@100066 = ~"Oh, Zack..."~
+@100067 = ~"You know I really do love you."~
+@100068 = ~"Why can't you see what I mean?"~
+@100069 = ~"Love is not what you think it is."~
+@100070 = ~"Are you ordering something? Or maybe you're interested in a bit of gambling?"~
+@100071 = ~"Pint's up!"~
+@100072 = ~"Here's your pint, berk!"~
+@100073 = ~"There you go, mate!"~
+@100074 = ~"One fresh pint for ya!"~
+@100075 = ~"Mind your head, pint's coming through!"~
+@100076 = ~"Wheat beer's up!"~
+@100077 = ~"Avner's Abyssal Ale's up!"~
+@100078 = ~"Baatezu Blood Wine's up!"~
+@100079 = ~"Cranium rat race results are... "~
+@100080 = ~"You over there, don't fight!"~
+@100081 = ~"No open fires indoors! This ain't the 'Smoldering Corpse'!"~
+@100082 = ~"Any news from the Blood War?"~
+@100083 = ~"Slimes! Where are you?"~
+@100084 = ~"One... Two..."~
+@100085 = ~"Wait, is that a single slime? Or are there two really close together?"~
+@100086 = ~"By Primus, it's so dirty here..."~
+@100087 = ~"Cassie? Is that you?"~
+@100088 = ~"Rawr!"~
+@100089 = ~"Ahem. Rawr, I say."~
+@100090 = ~"Be afraid!"~
+@100091 = ~*Mutter*~
+@100092 = ~*Mumble*~
+@100093 = ~"Six... Seven... Damn, I slipped up again..."~
+@100094 = ~"Pores... Bloody pores..."~
+@100095 = ~"No! No! NO!!!"~
+@100096 = ~"Die, perish!"~
+@100097 = ~"You won't hurt me again!"~
+@100098 = ~*Scream*~
+@100099 = ~*Sigh*~
+@100100 = ~*Heavy sigh*~
+@100101 = ~*Giggle*~
+@100102 = ~*Cackle*~
+@100103 = ~*Snicker*~
+@100104 = ~"Rats! Come to me, little rats!"~
+@100105 = ~"I've got you!"~
+@100106 = ~"No! Don't run away!"~
+@100107 = ~"Gold!"~
+@100108 = ~"Gooooold!"~
+@100109 = ~"No gold...?"~
+@100110 = ~"They're watching!"~
+@100111 = ~"They can see me!"~
+@100112 = ~"I feel your stare! I can't see it, but I can feel it!~
+@100113 = ~"Eyes... I see eyes! In my mind!"~
+@100114 = ~*Drip*~
+@100115 = ~"Enlightenment is so close..."~
+@100116 = ~"Once a drunkard from the Hive..."~
+@100117 = ~"What should be the next line...?"~
+@100118 = ~"Hive... What rhymes with Hive...?"~
+@100119 = ~"Is this even seven syllables?"~
+@100120 = ~"Alright, this might sound good..."~
+@100121 = ~*Ahem*~
+@100122 = ~"Alright, let's start over..."~
+@100123 = ~"Um, excuse me?"~
+@100124 = ~"Have you seen a girl in a red dress?"~
+@100125 = ~"Don't look at me like that..."~
+@100126 = ~"Pint's up!"~
+@100127 = ~"Here's your pint!"~
+@100128 = ~"Are you ordering something, biped?"~
+@100129 = ~"There you go!"~
+@100130 = ~"One fresh pint for ya!"~
+@100131 = ~"Mind your head, pint's coming through!"~
+@100132 = ~"Who ordered sunflower seed beer?"~
+@100133 = ~"Corn beer's up!"~
+@100134 = ~"What's the chant? Drink up and tell me."~
+@100135 = ~"Damn men-fish! Have they struck our comrades again?"~
+@100136 = ~"The Dead Nations spy? Scragged, I'm afraid."~
+@100137 = ~"Look at that canny blood."~
+@100138 = ~"Just what's the deal with that skeleton? I hope this greybeard's not from Hargrimm."~
+@100139 = ~"Wait just a moment, I'll come to you."~
+@100140 = ~"Does it hurt much?"~
+@100141 = ~"Now, doesn't that make you feel better?"~
+@100142 = ~"Easy! I'll deal with it."~
+@100143 = ~"Pain, go away!"~
+@100144 = ~"Who am I...?"~
+@100145 = ~"Hey you! Do you happen to know me?"~
+@100146 = ~"Who have I been this whole time?"~
+@100147 = ~"I'm just a... Tiefling? That I know for sure..."~
+@100148 = ~"This is Sigil, isn't it? Yeah, that's another thing I remember..."~
+@100149 = ~"Sir! Spare some jink!"~
+@100150 = ~"I need stones..."~
+@100151 = ~"Do you have any stones?"~
+@100152 = ~"I need so much more..."~
+@100153 = ~"Look at the colors!"~
+@100154 = ~"Mother!"~
+@100155 = ~*Scream*~
+@100156 = ~"Bipeds in the temple!"~
+@100157 = ~"There will be blood!"~
+@100158 = ~"Squerrik! Accept these treasures and this bloody sacrifice for your glory!"~
+@100159 = ~"Kill all the bipeds!"~
+@100160 = ~"Dear sir! Since you're already here, it wouldn't hurt to quickly sign this before the jump."~
+@100161 = ~"A quick signature, then upsy-daisy and a golden future awaits in the land of angels!"~
+@100162 = ~"Sir! Have you decided yet?"~
+@100163 = ~"I understand, I understand. It's a difficult decision. But if you decide to make it, I'll be here waiting."~
+@100164 = ~"Not good. The Takers have been sniffing around here..."~
+@100165 = ~"Boss, I'm afraid there's no time for theater practice. We need to prepare for a battle."~
+@100166 = ~"Woof!"~
+@100167 = ~"Auuu!"~
+@100168 = ~"Any news from Sigil?"~
+@100169 = ~"Eat your fill! Tomorrow we fight again!"~
+@100170 = ~"Pass me some boar meat."~
+@100171 = ~"Fated! Fated! What makes right? Might does!"~
+@100172 = ~"Prepare the bath and the sauna, I'll go there soon."~
+@100173 = ~"Heill Óðinn! Sæl Óðinn!"~
+@100174 = ~*Slurp*~
+@100175 = ~*Slorp*~
+@100176 = ~*WURR TURR*~
+@100177 = ~"I can't wait for the tomorrow's battle."~
+@100178 = ~"What a feast!"~
+@100179 = ~"Might makes right!"~
+@100180 = ~"Might! Might! Might!"~
+@100181 = ~"Heill Óðinn!"~
+@100182 = ~"Wanna trade?"~
+@100183 = ~"I don't care who you are. Trade is the meaning of everything, cutter."~
+@100184 = ~The crate seems to be magically sealed. There is a carving of a key next to the handle, but the details of it are gone due to water damage.~
+@100185 = ~With the memory of the drawing from the book-mimic, the crate is now open.~
+@100186 = ~"STEP RIGHT UP, TRY CRAB PUFFS TODAY! FUNKY LITTLE BITES THAT'LL BLOW YOU AWAY!"~
+@100187 = ~"CRAB PUFFS, CRAB PUFFS, OOZY DELIGHT! QUESTION YOUR CHOICES WITH EVERY BITE!"~
+@100188 = ~"GOT THE MUNCHIES? FEELING TOUGH? DARE YOUR TASTE BUDS, GRAB SOME CRAB PUFFS!"~
+@100189 = ~"CRAB PUFFS HERE, DON'T BE SHY! YOU MIGHT REGRET IT... BUT AT LEAST YOU'LL TRY!"~
+@100190 = ~*whew*~
+@100191 = ~"Then there came along the float goats."~
+@100192 = ~*CLAP CLAP*~
+@100193 = ~"Am I still myself in my dreams?"~
+@100194 = ~"How can I tell the difference 'tween a flame and a spark?"~
+@100195 = ~"Interesting..."~
+@100196 = ~^0xffFFFFFFJournal Updated^-~
+@100197 = ~"DEATH!"~
+@100198 = ~"The unfaithful will be punished. With DEATH!"~
+@100199 = ~"Þetta var frábardagi."~
+@100200 = ~"Ég held að ég hafi drepið að minnsta kosti tólf."~
+@100201 = ~"Það var nánast eins og á fornum dögum."~
+@100202 = ~"Það er leitt með fallna menn."~
+@100203 = ~"Gaaaah!"~
+@100204 = ~"Ouch, ouch, ouch!!!"~
+@100205 = ~"Mooooommy!!!"~
+@100206 = ~"Heeelp!!!"~
+@100207 = ~"Eeeeeek!!!"~
+@100208 = ~^0xffFFFFFFJournal Updated^-~
+@100209 = ~"It's got to be around here somewhere..."~
+@100210 = ~"Was it on this level?"~
+@100211 = ~"My city needs me!"~
+@100212 = ~"Perhaps I could..."~
+@100213 = ~"Beautiful..."~
+@100214 = ~*sniff sniff*~
+@100215 = ~"Roses, roses!"~
+@100216 = ~"Get yer flowers!"~
+@100217 = ~"Raindrops on roses!"~
+@100218 = ~"Whiskers on kittens!"~
+@100219 = ~"Cats, cute cats."~
+@100220 = ~"Ever wanted a friend that will eat you?"~
+@100221 = ~"Bright copper kettles!"~
+@100222 = ~"Stock your kitchen with me!"~
+@100223 = ~"Pots and kettles!"~
+@100224 = ~"Warm woolen mittens!"~
+@100225 = ~"Cool, loose shirts."~
+@100226 = ~"Clothes for all weather!"~
+@100227 = ~"Brown paper packages!"~
+@100228 = ~"Boxes! Only with me!"~
+@100229 = ~"All things paper!"~
+@100230 = ~"*STRIIING!*"~
+@100231 = ~"Almost ready to set sail, last few seats!"~
+@100232 = ~"Act like a sailor and make for me raft!"~
+@100233 = ~"Hive-Ditch, Ditch-Hive, all day, every day!"~
+@100234 = ~"You going back to the Smoldering Corpse?"~
+@100235 = ~"Hey! Over here! I'll lead you to the center of the Hive."~
+@100236 = ~"Hello, hello!"~
+@100237 = ~The two halves of the Jade Skull are instantly drawn together and reform into one in a flash of green energy.~
+@100238 = ~"Mighty Istishia, accept this sacrifice so that your blood ocean may spread forever. Yes-yes!"~
+@100239 = ~"No! Please! I beg you!"~
+@100240 = ~"Bloop, bloopidy, bloop-doop. Chop-chop."~
+@100241 = ~"GLORY, GLORY TO ISTISHIA!"~
+@100242 = ~"So, what should we do next?"~
+@100243 = ~"I know! Let's sneak into the Prison!"~
+@100244 = ~"How about we steal a key off Artus?"~
+@100245 = ~"I'm bored."~
+@100246 = ~"I wonder what's over the edge..."~
+@100247 = ~"Waaaaah!"~
+@100248 = ~*sniff*~
+@100249 = ~"Eeeeeeaaah!"~
+@100250 = ~^0x008000"Mister, stop. Something is wrong... Prod will..."^-~
+@100251 = ~"Oi! That's the guy who killed the boss. Animator, come on over here!"~
+@100253 = ~"Isn't this theater gorgeous?"~
+@100256 = ~"I have nothing against comedy, but jokes should serve a purpose."~
+@100257 = ~"No, I don't think it's justified to break the fourth wall here."~
+@100258 = ~"Alright, that's actually quite interesting..."~
+@100262 = ~"Shall we practice that again?"~
+@100263 = ~"Again."~
+@100264 = ~"I hope Kirinaldo is feeling better."~
+@100265 = ~"Where's that understudy? He's late again."~
+@100266 = ~"The Sigil Troupe is worthy of your attention and coin. I promise!"~
+@100267 = ~"If we perform well, the Prime tour will finance itself."~
+
+////////////////
+// ========== //
+// AREA NAMES //
+// ========== //
+////////////////
+
+@300300 = ~The Ditch - Beachside~
+@300301 = ~Tavern~
+@300302 = ~The Ditch - Residential Area~
+@300303 = ~The Ditch - Apartment~
+@300304 = ~The Ditch - Flooded Area~
+@300305 = ~Kuo-Toa Lair~
+@300306 = ~The Ditch - Beneath Zaddfum Trestle~
+@300307 = ~The Ditch - Vertical Sea~
+@300308 = ~The Beneathmask Drama Hall~
+@300309 = ~The Ditch - Suicide Falls~
+@300310 = ~Kabatum's Residence~
+@300311 = ~The Rat God's Temple~
+@300312 = ~Styx Oarsman - Upper Floor~
+@300313 = ~Abandoned House~
+@300314 = ~Rat and Splat (Destroyed)~
+@300315 = ~Library~
+@300316 = ~Streets of Sigil~
+@300317 = ~Ysgard - Earthberg of The Fated~
+@300318 = ~Ysgard - The Division of Debt Collection~
+@300319 = ~Ysgard - Death Hole~
+@300320 = ~Mt. Celestia - Glass Tarn~
+@300321 = ~Mt. Nemezia - Peak~
+@300322 = ~The Doomguard Ambush~
+@300323 = ~Precarious Bridge~
+@300324 = ~The Aftermath~
+@300325 = ~The Beneathmask - Backstage~
+@300326 = ~The Hive - Port~
+@300327 = ~Alfheim~
+@300328 = ~Dead End~
+@300329 = ~Knife in the River~
+@300330 = ~Pipeline~
+@300331 = ~The Beneathmask Drama Hall (Destroyed)~
+@300397 = ~Mephistar~
+@300398 = ~Shendilavri~
+@300399 = ~Ribcage~
+
+///////////////
+// ========= //
+// AREA INFO //
+// ========= //
+///////////////
+
+@300400 = ~The water here is so dirty that you're not sure if you'll emerge from a swim unscathed. Everything floats here, literally.~
+@300401 = ~An object of unknown purpose. Although there is no water in it, something makes you think it is a... fountain.~
+@300402 = ~Whatever it used to be... is long gone.~
+@300403 = ~A large, stone statue of a beautiful, but elegant and wise-looking goddess. She rests her hand on a magnificent shield.~
+@300404 = ~The sign before you marks the entrance to an inn called Rivergate.~
+@300405 = ~The sign before you marks the entrance to an inn called The Styx Oarsman.~
+@300406 = ~A mysterious statue.~
+@300407 = ~This bloody, intricate altar is dedicated to Blibdoolpoolp, the Sea Mother. Scattered shards of gems and pearls lie among the dark stains, but the blood leaves no doubt about what truly transpired here. The priests of this cult do not shy away from human sacrifice.~
+@300408 = ~This is a system of aquariums arranged in a vertical wooden structure. Inside, you can see fish, crabs, snails and other creatures. It's an unusual and impractical design.~
+@300409 = ~Two beautiful flowers grow from a rock that juts out of the rancid water. You can't quite decide whether the sight is beautiful or macabre.~
+@300410 = ~In eerie silence, water spills over the edge of Sigil. There is no easier route to the Cage's edge, but a jump from here would likely mean disappearing forever. The implication offers a grim explanation for the name of this place.~
+@300411 = ~This machine illustrates the relationship between crystal balls in the Prime Material Plane. The knowledge is entirely useless in Sigil, unless one is attempting to summon something from the Prime.~
+@300412 = ~A machine powered by gears hidden beneath the floor. You have no idea what it's used for.~
+@300413 = ~In the center of this dilapidated and dirty temple stands a statue of a giant wererat.~
+@300414 = ~This tall mast is devoid of sails, not that the Styx Oarsman has anything to sail on at the moment. From the crow's nest, an incredible panorama of the Ditch is visible.~
+@300415 = ~The books on the shelves are arranged alphabetically by category. Depending on one's needs, one can find fiction, nonfiction, historical annals, legal documents, copies of political treatises, and even dark grimoires on demonology and witchcraft.~
+@300416 = ~One of the many goddesses of love, probably from the Prime Material Plane. Someone has painted her symbol on a cliff with cheap paint, which will likely disappear in a few months.~
+@300417 = ~Below, another earthberg floats, topped by a circular wooden port-city. High cliffs and waterfalls surround it, and on one side it meets the ocean, which seems impossibly suspended in space.~
+@300418 = ~This impressive golden statue depicts a one-eyed god wielding a spear. Its craftsmanship is dazzling.~
+@300419 = ~These banners display the crest of the Fated: a crowned, robed humanoid figure.~
+@300420 = ~This bust, crafted with *incredible* attention to detail, depicts a woman wearing a winged helmet. It emanates an aura of power and loss.~
+@300421 = ~This stone likely has some ritual significance. The runes visible here appear to be protective.~
+@300422 = ~This is a sauna heater that warms the cabin. It is fired by wood, which heats the stones that store the heat. These stones then release it into the surrounding air and produce steam when water is poured over them.~
+@300423 = ~Shields hang above the fireplace. They are likely still quite functional, despite serving a temporary decorative purpose. They bear patterns characteristic of Ysgardian culture.~
+@300424 = ~This enormous skeleton of an unknown creature has been stripped of all flesh. Who, or what, slaughtered and devoured it remains a mystery.~
+@300425 = ~Perhaps the greatest mystery of this place is this solitary gear. Did it come from the Ditch, or from some Ysgardian clock? Nothing nearby hints at its purpose.~
+@300426 = ~The carcass of a large deer, stripped of most of its edible flesh. In Ysgard, all wildlife tends to be somewhat larger. Flies and scavenging vermin show a particular fondness for this corpse.~
+@300427 = ~The gate you came through looks as if it was placed here deliberately, but also in haste. Without a doubt, it could be demolished with ease.~
+@300428 = ~A lone, large tower stands at the shore of the frozen lake below.~
+@300429 = ~This skull is far too large for any creature you've seen, yet it looks... almost human. It seems fused with the rock behind it.~
+@300430 = ~A large city, built from what appears to be ice, looms over the frozen landscape. A tall citadel marks its center. This must be Mephistar.~
+@300431 = ~A flag bearing the symbol of Mt. Celestia, one of the Upper Planes, flies above the field hospital. The symbol is easy to recognize: a triangle representing a mountain with a horizontal line crossing its peak.~
+@300432 = ~Judging by the beds and all the medical equipment, including bandages, medications, and the like, it appears to be a field hospital. The sick lie under blankets, and the beds are speckled with blood, urine, and vomit. The smell is terrible, and even the fragrant oils someone has applied cannot mask it.~
+@300435 = ~Above the symbol of a hand holding a lightning bolt, a monumental statue gazes down, emanating chivalry, justice, honor, valor, and courage. If it is a temple to some god, then despite its impressive scale, it appears lonely and abandoned.~
+@300436 = ~The crude painting, meticulously drawn on the wall with white paint, depicts a Harmonium symbol hanging from a gallows.~
+@300437 = ~"Is there life before death?"~
+@300438 = ~The traveling salesman's wagon is filled to the brim with various crates and barrels containing his products. It teeters precariously close to the edge.~
+@300439 = ~The Ditch deposits its most dense refuse in this small bay.~
+@300440 = ~The lower floor of this house is completely flooded, but the water is slowly flowing to somewhere deeper.~
+@300441 = ~This stair used to lead to another floor, but that floor is no more.~
+@300442 = ~The yagnoloths must have been thorough. There's no way to reach the other side of this area from up here.~
+@300443 = ~This container is filled with earth. It is unclear for what purpose.~
+@300444 = ~Something large collapsed into the grotto from above, likely during the whole razorvine cataclysm.~
+@300445 = ~An old boat. Wonder where it might have taken its owner before becoming trapped in this grotto.~
+@300446 = ~A primitive-looking idol carved out of stone catches your eye. You think it somewhat resembles a face. It seems to be the focus of worship for the kuo-toa.~
+@300447 = ~Among the posters, most of the space is taken up by missing-person notices. There is also an advertisement for a beach and a schedule of performances for the Beneathmask Theater.~
+@300448 = ~This door has been boarded up from the inside.~
+@300449 = ~You can't be certain, but the blackboard may be depicting the Inner Planes.~
+@300450 = ~All that remains of the famous Fragile-Tail.~
+@300451 = ~Whatever this animal was, it has been stripped clean of flesh, but the skeleton does not look very old.~
+@300452 = ~Some kind of machine, half buried in trash and half submerged.~
+@300453 = ~Just a short distance from the shore, a large clocktower leans in the water.~
+@300454 = ~Someone once lived here.~
+@300455 = ~A large and beautiful musical instrument.~
+@300456 = ~These tools are all made of painted light wood and were likely used in one of the plays.~
+@300457 = ~This is a sensory stone, but it looks fake.~
+@300458 = ~It's a miracle that, for so many years, this precariously balanced pyramid of barrels hasn't collapsed, spilling its contents onto the forest floor.~
+@300459 = ~A wild, primeval forest stretches all around the platform, as far as the eye can see.~
+@300460 = ~Atop the steep wall, you can see Sigil's 'mainland.' No wonder you had to arrive here by raft.~
+@300461 = ~A bright light shines from behind these bars... but there's no visible source. The hallway, like the alleyway, ends in a dead end.~
+@300462 = ~These are the ruins of a once-majestic stairway.~
+@300463 = ~A massive, rusty blade covered in razorvine protrudes from the water. It is a single solid piece of metal. The forge that produced this colossus must have been enormous.~
+@300464 = ~The purpose of these devices is a mystery to you.~
+@300465 = ~A massive valve. You cannot imagine what kind of creature it would take to operate it.~
+@300466 = ~The entrance to the theater was barricaded from the inside. The tale of your betrayal must have reached the artists. You will need to return with more men to break through.~
+@300467 = ~The theater chairs were turned into makeshift barricades, protecting the stage.~
+@300468 = ~The Doomguard symbol painted in blood. It appears the raid did not go well for the defenders of the theater.~
+
+////////////////
+// ========== //
+// AREA NOTES //
+// ========== //
+////////////////
+
+@302000 = ~Rivergate Tavern~
+@302001 = ~To the Residential Area~
+@302002 = ~Beach~
+@302003 = ~To Suicide Falls~
+@302004 = ~Beneath Zaddfum Trestle~
+@302005 = ~To the Ditch Beachside~
+@302006 = ~Styx Oarsman - Upper Floor~
+@302007 = ~The Ditch Apartment~
+@302008 = ~To the Vertical Sea~
+@302009 = ~Styx Oarsman~
+@302010 = ~Library~
+@302011 = ~To the Flooded Area~
+@302012 = ~Abandoned Home~
+@302013 = ~Skppr~
+@302014 = ~Sinking Clock-tower~
+@302015 = ~Rat and Splat~
+@302016 = ~Kabatum's Residence~
+@302017 = ~The Beneathmask Drama Hall~
+@302018 = ~Styx Oarsman - First Floor~
+@302019 = ~To the Division of Debt Collection~
+@302020 = ~Outside~
+@302021 = ~Cave Exit~
+@302022 = ~Grotto~
+@302023 = ~To the Stage~
+@302024 = ~Back towards the Hive~
+@302025 = ~The Piers~
+@302026 = ~Praybast's Storage~
+@302027 = ~Pipe~
+
+///////////////
+// ========= //
+// CREATURES //
+// ========= //
+///////////////
+
+@400000 = ~Frightened Messenger~
+@400001 = ~Gemariel~
+@400002 = ~White Abishai~
+@400003 = ~Fury-Lies-Broken~
+@400004 = ~Baatezu~
+@400005 = ~Baatezu~
+@400006 = ~White Abishai~
+@400007 = ~Gelugon~
+@400008 = ~Monodrone~
+@400009 = ~Black Joseph~
+@400010 = ~Prod~
+@400011 = ~Akershus~
+@400012 = ~Brill~
+@400013 = ~Port Tout~
+@400014 = ~Dopilp~
+@400015 = ~Patron~
+@400016 = ~Kuo-Toa Warrior~
+@400017 = ~Kilthas Dar'Abomyn~
+@400018 = ~Haer'Dalis~
+@400019 = ~Rat~
+@400020 = ~Fragile-Tail~
+@400021 = ~Tripler~
+@400022 = ~Farastu Bouncer~
+@400023 = ~Mare~
+@400024 = ~Adam the Blacksmith~
+@400025 = ~Ikss'odes~
+@400026 = ~Modron Librarian~
+@400027 = ~Zeno~
+@400028 = ~Elea~
+@400029 = ~Black Joseph Thug~
+@400030 = ~Ferry Captain~
+@400031 = ~Charismatic Tiefling~
+@400032 = ~Mawu~
+@400033 = ~Adrean the Bum~
+@400034 = ~Beach Bouncer~
+@400035 = ~Beachgoer~
+@400036 = ~Bladeling~
+@400037 = ~Zombie #000~
+@400038 = ~Adonis~
+@400039 = ~Pale Woman~
+@400040 = ~Tergush'tekhn~
+@400041 = ~Wotyrxil~
+@400042 = ~Spectator~
+@400043 = ~Raelis Shai~
+@400044 = ~Zack~
+@400045 = ~Sonne~
+@400046 = ~Marraenoloth~
+@400047 = ~Guvner Girgosh~
+@400048 = ~Zegonz Vlaric~
+@400049 = ~Valen Shadowbreath~
+@400050 = ~Slime~
+@400051 = ~Pabeshts~
+@400052 = ~Uzuthor~
+@400053 = ~Æ~
+@400054 = ~Anit'bil~
+@400055 = ~Abishai?~
+@400056 = ~Strange Muncher ~
+@400057 = ~Brickgazer~
+@400058 = ~Naked Dandy~
+@400059 = ~Rodin~
+@400060 = ~Orville~
+@400061 = ~Alviro~
+@400062 = ~Sulfur Stefan~
+@400063 = ~The Amnesiac~
+@400064 = ~Damian~
+@400065 = ~Kabatum~
+@400066 = ~Addict~
+@400067 = ~Echo~
+@400068 = ~A Girl and Her Void~
+@400069 = ~Girl in Red~
+@400070 = ~Fleeing Child~
+@400071 = ~Mysterious Relief~
+@400072 = ~Razorvine Blight~
+@400073 = ~Impossible Relief~
+@400074 = ~Agraval~
+@400075 = ~Bloody Wererat~
+@400082 = ~Yagnoloth~
+@400083 = ~Sea Creature~
+@400084 = ~Vulgar Drunkard~
+@400085 = ~Ratcatcher~
+@400086 = ~Prospector~
+@400087 = ~Isey~
+@400088 = ~Motionless Man~
+@400089 = ~Enlightened Cultist~
+@400090 = ~Poet~
+@400091 = ~Old Jack~
+@400092 = ~Beautiful Dancer~
+@400093 = ~Old Jill~
+@400094 = ~Maestro~
+@400095 = ~Human Wreck ~
+@400096 = ~Kabatum's Instrument~
+@400097 = ~Mimic~
+@400098 = ~Ditch Thug~
+@400099 = ~Mahalai Trevisti~
+@400100 = ~Marilith~
+@400101 = ~Kocrachon~
+@400102 = ~Vorrak Dismantle~
+@400103 = ~Clausius~
+@400104 = ~Teik~
+@400105 = ~Sharikira~
+@400106 = ~Ulfbrand Völgarsson Baunaætari~
+@400107 = ~Sauna Master~
+@400108 = ~Word Archon~
+@400109 = ~Narthuul Hollow Maw~
+@400110 = ~Spiderlike Glabrezu~
+@400111 = ~Antilia~
+@400112 = ~Shady Ice Devil~
+@400113 = ~Masked Man~
+@400114 = ~Kuo-Toa~
+@400115 = ~Broken Modron~
+@400116 = ~Elvra Syne~
+@400117 = ~Mezzoloth~
+@400118 = ~Vinrogé~
+@400119 = ~Tasselwick Drohm~
+@400120 = ~Fated Factioneer~
+@400121 = ~Cheapjack~
+@400122 = ~Freezing Portal~
+@400123 = ~The Fated Raid~
+@400124 = ~Summoned Godsman~
+@400125 = ~Dustman Spellslinger~
+@400126 = ~Lonely Xaositect~
+@400127 = ~Local Artist~
+@400128 = ~Local Artist~
+@400129 = ~Local Artist~
+@400130 = ~Local Artist~
+@400131 = ~Local Artist~
+@400132 = ~Harmonium Officer~
+@400133 = ~Berserker~
+@400134 = ~Prisoner~
+@400135 = ~Doomguard~
+@400136 = ~Helpful Kuo-toa~
+@400137 = ~Beatha~
+@400138 = ~Skppr~
+@400139 = ~Ideal Beach Body~
+@400140 = ~Thrasson~
+@400141 = ~Port Tout~
+@400142 = ~Ware-shack Manager~
+@400143 = ~Poirat~
+@400144 = ~Doctor Krauss~
+@400145 = ~The Forbidden Stone~
+@400146 = ~The Animator~
+@400147 = ~Skald~
+@400148 = ~Flower Merchant~
+@400149 = ~Kitten Merchant~
+@400150 = ~Kettle Merchant~
+@400151 = ~Seamstress~
+@400152 = ~Packaging Merchant~
+@400153 = ~String Merchant~
+@400154 = ~Stoner~
+@400155 = ~Bloodied Boy~
+@400156 = ~Tired Woman~
+@400157 = ~Crone of Thanatos~
+@400158 = ~Fated on a Mission~
+@400159 = ~Tortured Soul~
+@400160 = ~Annah~
+@400161 = ~Dak'kon~
+@400162 = ~Morte~
+@400163 = ~Fall-from-Grace~
+@400164 = ~Nordom~
+@400165 = ~Ignus~
+@400166 = ~Vhailor~
+@400167 = ~Ayryn Farlight~
+@400168 = ~"Lying mongrel"~
+@400169 = ~"Sodded lizard"~
+@400170 = ~Menace~
+@400171 = ~Wererat Shaman~
+@400172 = ~Barkeep~
+@400173 = ~Crying Boy~
+@400174 = ~Giggly Cranium Rat~
+@400175 = ~Barmy Spellslinger~
+@400176 = ~Lothar's Golem~
+@400177 = ~Slaad~
+@400178 = ~Hive Dweller~
+@400179 = ~Baernaloth~
+
+///////////
+// ===== //
+// ITEMS //
+// ===== //
+///////////
+
+@500000 = ~A Message from the Fiends~
+@500001 = ~A MESSAGE FROM THE FIENDS
+Weight: 0
+
+It is just an ordinary sheet of paper with a few dried stains and some dark ink. The stains could be blood. A message has been written in shaky letters.
+
+^0xff393ffc"Nameless One, I have heard that you are searching for answers to many troubling questions. I may be able to help you uncover parts of your distant past. I also have a task for you that, along with the information you seek, may prove to be very well paid. Meet me at the Smoldering Corpse Bar.
+
+- Tergush'tekhn"^-~
+@500002 = ~Stygian Ice Storm Bolts~
+@500003 = ~STYGIAN ICE STORM BOLTS
+Enchantment: +3
+Damage: 2-5 (crushing)
+Special Effects:
+ 5 magical cold damage on hit
+Thac0: +1
+Speed: 5
+Weight: 0
+Proficiency: Missiles
+Can be used only by modrons.
+
+These bolts are imbued with a portion of Stygian power. When they strike a target, the surrounding area freezes, making the bolts difficult to remove. The frost is so intense that it causes permanent tissue damage and may lead to necrosis. Even fiends would struggle to resist such a powerful force.~
+@500004 = ~Earring of Cold Protection~
+@500005 = ~EARRING OF COLD PROTECTION
+ Special:
+ +25% Resistance to Cold and Magical Cold
+Weight: 0
+
+Frostbite is temporary or permanent skin damage caused by exposure to low temperatures. It usually begins in the most vulnerable, exposed parts of the body, such as the ears, nose, cheeks, fingers, and toes. To protect this delicate auditory organ, a Sensate designed a pair of earrings to shield the ears from frostbite, along with the swelling and possible necrosis it can cause. With this protection, he could freely enjoy the soft murmurs and sharp whistles carried by the frigid winds of Cania. It is a pity, however, that the earrings offered no defense against the claws of the gelugons.~
+@500006 = ~Bone Whistle~
+@500007 = ~BONE WHISTLE
+Invokes the spell "Improved Strength" once a day
+Weight: 0
+
+Historical records suggest that these whistles were first crafted in the Abyss so that explorers and traders descending from the gate-town of Plague-Mort to deeper layers of the plane would stand a chance against the lesser Tanar'ri. Sensible planewalkers know better than to venture too far, as the chaotic nature of demons makes the likelihood of returning even slimmer. Even so, one must be prepared for the most unpredictable dangers, even on the upper layers. Forewarned is forearmed.
+
+This whistle temporarily increases the user's strength to levels that would otherwise be unattainable. What is troubling, however, is that creating such whistles required a blood sacrifice from a living creature. In recent years, these magical items have also been used successfully when traveling to other Lower Planes. Despite their usefulness, their creation continues to raise ethical concerns.~
+@500008 = ~The Nameless One's Fireball~
+@500009 = ~THE NAMELESS ONE'S FIREBALL
+Damage: 1-3 (missile)
+Damage: 2-8 (fire)
+Speed: 5
+Weight: 5
+Proficiency: Fists
+Action: Ranged Weapon
+Usable only by mages.
+Usable only by the Nameless One.
+
+Ignus has not forgotten the suffering his master caused. You regained that memory through the severe and painful loss of both hands. Now you can wield the same power as your former student and unleash a volley of fireballs at your enemies.~
+@500010 = ~Fiend's Eye~
+@500011 = ~FIEND'S EYE
+Special:
+ +5% Fire resistance
+ +5% Magical Fire resistance 
+ +5% Gas resistance 
+ +5% Cold resistance
+ +5% Magical Cold resistance
+Weight: 0
+ 
+This eye once belonged to a fiend, though it does not matter what kind, as it was not known for anything remarkable. What matters to you is that placing it in your eye socket allows you to take advantage of its immunity.~
+@500012 = ~Ring of Baator~
+@500013 = ~OBSIDIAN RING
+Weight: 0
+
+This large ring is set with black obsidian. It does not appear to be designed specifically for men or women.~
+@500014 = ~RING OF BAATOR
+Special: 
+ +33% Fire resistance
+ +33% Magical Fire resistance 
+ +33% Cold resistance
+ +33% Magical Cold resistance 
+ +33% Acid resistance
+Weight: 0
+
+This large ring is set with black obsidian. It was clearly owned by a high-ranking Baatezu. This likely influenced the ring's magical properties, which not only prevent it from slipping off a finger that is too small but also enhance the wearer's protection against hellish conditions.~
+@500015 = ~Gemariel's Claws~
+@500016 = ~GEMARIEL'S CLAWS
+(Default Weapon) 
+Damage: 1-8, piercing or slashing 
+Enchantment: +1 
+Speed: 1 
+Weight: 0 
+Proficiency: Fists
+
+Abishai claws are razor-sharp, fast, and deadly, but above all, effective. They are the Gemariel's primary weapon, enhanced with a touch of Set's magic. What more could an Abishai of this kind want from life?~
+@500017 = ~Shackles~
+@500018 = ~SHACKLES
+Weight: 10
+
+These shackles were broken centuries ago. At first glance, they do not seem to be of any use, but there is something strange about them and something familiar as well.~
+@500019 = ~FALL-FROM-GRACE'S SHACKLES OF FREEDOM
+Invokes: "Call Lightning" once a day
+Weight: 10
+
+These are the shackles from Fall-from-Grace's former cell, where she endured torture at the hands of the baatezu. The torment is beyond description, but it left such a deep mark that it permanently altered her tanar'ri nature. Now these broken shackles remain an unwanted and painful reminder of the triumph of faith and experience that allowed her to outsmart her executioners and gave Grace the chance to gather knowledge in the subsequent planes.
+
+"My mother was among the finest, seducing countless mortal men to their eternal damnation. She now dwells in the Abyss, selling her children into slavery.
+
+She sold me to the baatezu, the blood enemies of the tanar'ri. I think she rather expected that they would kill me -- despite her knowledge of other subjects, she knows little of their culture and the delight they take in tormenting others.
+
+Fortunately, the baatezu are a proud species. The thought a tanar'ri could best them at anything was something intolerable to them. So I challenged one of the proudest of the pit fiends to a contest of improvisation, and it was here that my tanar'ri heart allowed me to win the day. The tanar'ri are chaotic creatures, wild and unpredictable. The baatezu are more cunning fiends, with orderly hearts. They understand improvisation, but they are not among its best practitioners. And thus, I won my freedom."
+- Fall-from-Grace~
+@500020 = ~Goblet from the Rivergate Tavern~
+@500021 = ~GOBLET FROM THE RIVERGATE TAVERN
+Weight: 1
+
+This dirty goblet is one of many similar ones found in the Rivergate Tavern. You are not sure what is special about them, but Brill seems to keep a close eye on them.~
+@500022 = ~Goblet from the Rivergate Tavern~
+@500023 = ~GOBLET FROM THE RIVERGATE TAVERN
+Weight: 1
+
+This dirty goblet you received from Brill is no different from the many others found at the Rivergate Tavern. However, it is said to allow you to bypass the portal that opens in the inn. You hope that is true...~
+@500024 = ~The Key to Ikss'odes's Apartment~
+@500025 = ~THE KEY TO IKSS'ODES'S APARTMENT
+Weight: 0
+
+This is the key to the apartment of Ikss'odes, the thief.~
+@500026 = ~SOEGO THE DUSTMAN'S HOLY SYMBOL
+Special:
+ +2 to Dexterity
+ -1 to Charisma
+ +25% Stealth Skill
+Weight: 1
+
+This holy symbol once belonged to Soego the Dustman. It is made of heavy iron and is designed to wrap around the wearer's wrist with a series of small, tightly linked chains. The symbol itself resembles a screaming face.
+
+It was recently stolen from Soego and eventually found its way to Fragile-Tail's shop.
+~
+@500027 = ~"The Planewalker's Grimoire"~
+@500028 = ~"THE PLANEWALKER'S GRIMOIRE"
+Weight: 2
+
+This book looks as if it took a dozen years to create. A great deal of effort has clearly gone into its readability and carefully planned structure. When you open it, you see the title: "The Planewalker's Grimoire." The book appears to contain notes on various elements of the multiverse.~
+@500029 = ~"The Plane Truth"~
+@500030 = ~"THE PLANE TRUTH"
+Weight: 1
+
+Author: David "Zeb" Cook
+
+This book explores various planar adventures and the conclusions drawn from them, organized into three parts:
+
+1. Codifying Sigil 
+Excerpts from the notebooks of Fallendor the Mage, covering the following topics: aleax (a formless instrument of divine discipline born from a grave act of transgression against the gods), the Pain Dictionaries owned by Ganeesh of Baator (containing descriptions of all existing types of suffering, sorted by bodily response), the Doomguard and other factions, the geography of Sigil according to the factol of the Guvners, questions about the reality of the multiverse, portals as described by Prespos of Iriaebor, and a description of the Lady of Pain.
+
+2. A Journey to the Outlands
+Excerpts from the unpublished journals of Ambran the Seeker, a Half-Elf paladin of Oghma's temple near the court of Azoun Obarskyr IV, King of Cormyr. These journals detail Ambran's travels from one gate-town to another, including the dangerous Ribcage near Baator and Automata near Mechanus. A key lesson emerges from these journeys: the closer one approaches the edges of the Outlands, the more the area begins to reflect the nature of the adjacent plane.
+
+3. The Transformation
+From the final journal of Ambran the Seeker, a former paladin who abandoned his god, name, and realm to remain in the Outlands. May Oghma forgive his guilt, and may King Azoun judge him with mercy.~
+@500031 = ~"Fire and Dust"~
+@500032 = ~"FIRE AND DUST"
+Weight: 1
+
+Author: James Alan Gardner
+
+This book chronicles the adventures of the Sigillian painter Britlin Cavendish and a handful of his eccentric companions as they travel through the various planes of existence. It begins in Sigil, where Britlin, hired to paint a portrait, accidentally witnesses a bloody assassination.~
+@500033 = ~"The Seafarer's Arch or Final Port-of-Call"~
+@500034 = ~"THE SEAFARER'S ARCH OR FINAL PORT-OF-CALL"
+Weight: 1
+
+This book describes, in a factual manner, the Seafarer's Arch, also known as the Seafarer's Portal or Final Port-of-Call. The uniqueness of this structure is that the portal leads to different destinations depending on which key is used. It is large enough to transfer full ships. Most of the portals lead to locations in the Prime Material Plane, with one known exception.
+
+- Arborea: Pelion, Amun-thys. Key: scarab. Note: no water at the destination, only sand. Returning may be difficult.
+
+The following notes concern only destinations in the Prime Material Plane:
+- Aebrynis: a waterfall in the kingdom of Cariele
+- Athas, Silt Sea: Warning: lurking monstrosities
+- Io's Bloody Isles: an archipelago inhabited primarily by dragons
+- Krynn in Krynnspace: rapids below a canyon in the Khalkist Mountains. Natives call all planes outside their own the Abyss
+- Mystara, Savage Coast: a world in an unknown crystal sphere, one of the seven Wonders of the Multiverse. Key: cinnabryl amulet
+- Oerth in Greyspace: an oblong shoal of rocks in the Nyv Dyr. Home plane of the lich Vecna
+- Ortho: the home plane of the Harmonium faction
+- Rock of Bral, Wildspace: a settlement on an asteroid on the outer reaches of the Prime Material Plane
+- Toril in Realmspace: a sewer pipe from the Underdark that spills into the Trackless Sea
+
+The question remains: what would happen if someone carried all the keys at once? No one has tried and returned. For the cautious, however, spells exist to protect keys that are not meant to be used, either to prevent accidents or to avoid losing disposable keys.~
+@500035 = ~"The Ditch - Of Sigil and the Sea"~
+@500036 = ~"THE DITCH - OF SIGIL AND THE SEA"
+Weight: 1
+
+Author: William James Cuffe
+
+Perhaps not everyone is aware of this, but Sigil has its own river. "River" may be too grand a term, but it is water as extraordinary as the City of Doors itself. The author of this guide invites you on an imaginary rafting trip down the Sigil Ditch.
+
+The guide describes the most important locations along the fifteen-meter-wide drain that flows from the Great Forge in the Lower Ward. The most detailed descriptions include:
+- Suicide Falls: an almost-waterfall where flowers called "the Last Kiss Blossom" grow
+- The Bridge That Spans Worlds: considered one of the seven Wonders of the Multiverse by the Sensates, it contains a planar gateway beneath it, the Seafarer's Arch, which leads to many different destinations depending on the key you possess
+- The Wreck of the Trade Consortium's ship from the Phlogiston and the nearby Knife in the River: a piece of metal said to be the remains of another ship destroyed by the wrath of the Lady of Pain
+- The Taker's Lock: an artificial branch of the Ditch controlled by the Fated
+- The Industrial Stitches: located next to the Great Foundry and controlled by the Godsmen. Named for their resemblance to stitches over a nasty wound, they are the main source of pollution in the area, provoking strong protests from the Rosebringers sect
+
+The author also explores additional topics, including:
+- Portal keys and the Keycloak spell, which protects against their accidental use
+- Portal connections to Ortho, the native plane of Harmonium, the Rock of Bral in Wildspace, and the Blood Isles of Io
+- Legends of Cassie, the Ditch Beast that prowls the murky waters~
+@500037 = ~"The Day of Grace"~
+@500038 = ~"THE DAY OF GRACE"
+Weight: 1
+
+Author: Monte Cook
+
+This small book tells a heartwarming story about the celebration of the Day of Grace in Sigil, a holiday that marks the passing of another year. It recounts the tale of a girl who approached the Lady of Pain, and contrary to expectations, nothing tragic occurred. The girl smiled at the Lady of Pain and is said to have whispered something. The ruler of Sigil floated away on her path. She could have struck the girl down, but she did not. That was the grace shown by the Lady of Pain.
+
+The event happened on the last day of the year, according to the Guvners' records, and it moved the residents of Sigil so deeply that the holiday was named for it, encouraging everyone to treat their neighbors with a little more kindness. Public executions, floggings, and other punishments are suspended on this day. It is said that violating this custom could draw the attention of the Lady.
+
+Merchants hold temporary sales, and each faction celebrates in its own way. The Sensates invent new ways to show kindness every year, and the Hardheads, surprisingly, even organize a parade. On this day, violence is largely set aside.~
+@500039 = ~The Analects of Sigil~
+@500040 = ~THE ANALECTS OF SIGIL
+Weight: 1
+
+Author: David "Zeb" Cook
+
+Analects are a selection of fragments or complete works by an author, accompanied by source notes. In this case, they present the confession of the late Handulus, a scholar of the third rank, as recorded by Jerak of the Mercykillers before appointed witnesses.
+
+Handulus, accused of murdering Jeron, the factor of the Guvners, testifies calmly, bearing no grudge against the Mercykiller. He was once a member of the Fraternity of Order, so his matter-of-fact and composed presentation of the case should come as no surprise. According to him, he inflicted no direct harm on the alleged victim. Instead, he directed his research toward the citadels of the Inner Planes, which he learned about from the Grand Dictum and a page from the perilous Codex of Infinite Planes, knowing that this path would ultimately lead to Jeron's demise.
+
+The truths Handulus discovered during his visits to the Citadels of Surrender caused him to change his beliefs enough to join the Bleak Cabal. However, he had not visited the last of the disturbing citadels. That final citadel was intended for Jeron.~
+@500041 = ~The Seven Wonders of the Multiverse~
+@500042 = ~THE SEVEN WONDERS OF THE MULTIVERSE
+Weight: 1
+
+This neglected copy of the book contains only four of the seven so-called Wonders of the Multiverse. The list was compiled by the Society of Sensation to describe a collection of the most wondrous, breathtaking, and memorable sights across all known planes, created by the more or less conscious actions of intelligent beings.
+
+- The Bridge That Spans Worlds (Sigil, The Ditch)
+A massive mithral-adamantite bridge built before the Great Upheaval, at least five centuries before the reign of Factol Hashkar, by the now-defunct Forgesmiths faction, likely the progenitors of the Believers of the Source. It is a key location for Sigil's trade with other planes due to the presence of the multiportal, the Seafarer's Arch. It is unknown which came first, the portal or the bridge, but the wonder's name derives from the connection to other worlds.
+
+- The Great Library of Thoth (The Outlands, Thebestys by the Ma'at River)
+The place where all known knowledge is stored. It is said that the answer to every question can be found here, if one only knows where to look.
+
+- The Modron Cathedral (Mechanus, Regulus)
+A towering structure that is much larger inside than it appears from the outside, with copings that disappear into darkness. The secrets hidden here are impossible to comprehend without going mad. Entry requires a pass from the Central Office of Processing and Requests and an escort of at least two pentadrones per person.
+
+- The Hollow World of Mystara (Prime Material Plane)
+An unusual world with an inner sun at its core. It is the source of remarkable magic in the kingdoms of Glantri and Alphatia. The Immortals treated this place as an archive to preserve civilizations and species that were on the brink of extinction.~
+@500043 = ~Blue Eye Prosthesis~
+@500044 = ~Philosopher's Eye~
+@500045 = ~BLUE EYE PROSTHESIS
+Weight: 0
+
+This blue sphere resembles an eye. Its unusual color draws your attention, but given its origins, you wonder whether it is worth testing its capabilities.~
+@500046 = ~PHILOSOPHER'S EYE
+Special Effects:
++1 Wisdom
++1 Intelligence
+-1 Dexterity
++50% Missile Resistance
+Weight: 0
+
+This magical eye prosthesis helps you grasp the numerous paradoxes that exist in the multiverse. For example, if an arrow that has traveled half its distance to its target can be said to occupy one-half of its length, and an arrow that has traveled three-quarters of its distance is at that exact point, can we claim it was at rest for even a brief moment? Can this process continue indefinitely? Is it possible for an object to remain at rest while still in motion? And how, to use the terminology of modron scientists, do such precise measurements affect the time evolution of a quantum system, causing wavefunction collapse, or in other words, decoherence? Considering these questions, does the infinite division of a path during constant observation make motion impossible?
+
+This prosthesis accelerates thought processes, helping you understand the essence of such problems, though at the cost of physical heaviness. It also divides the path of any projectile aimed at you in half, effectively granting you partial resistance to attacks.~
+@500047 = ~Entropy +2~
+@500048 = ~ENTROPY +2
+Damage: 1-6 +2, piercing
+Enchanted: +2
+Special:
+ +3 Poison damage (Save vs Poison negates)
+THAC0: +2
+Speed: 1
+Weight: 5
+Proficiency: Edged
+Unusable by Lawful characters
+Unusable by Priests
+
+This greensteel short sword is one of Haer'Dalis's favorite weapons, second only to his other blade, Chaos. It features a highly intricate, ornate handle. The accumulation of sharp edges is characteristic of Doomguard weapons. The sword can inflict additional poison damage if the target fails a Saving Throw. Because of its nature, it is unlikely that creatures of Law could wield it effectively.~
+@500049 = ~Prod~
+@500050 = ~PROD
+Weight: 7
+
+Prod is an imp who works with Tergush'tekhn and the fiends from the Smoldering Corpse Bar. He is not very popular in the area, so he hides from prying eyes in your bag. His small size allows him to fit inside without disturbing the rest of your belongings. 
+
+Prod is a fairly ordinary-looking imp. His skin is grayish, and his his hunched, scrawny frame does not intimidate anyone. The membranes of his bat-like wings have probably seen better days. Some of the holes look fresh and are likely the work of Joseph and his men. Prod does not seem bothered by this, and you do not know whether his wings will heal. Nevertheless, the imp radiates enthusiasm for the upcoming journey.~
+@500051 = ~A Vial of Karach~
+@500052 = ~A VIAL OF KARACH
+Weight: 0
+
+It is a small vial, but the vivid, silvery, swirling material inside seems capable of expanding many times its size and bursting the delicate container at any moment.~
+@500053 = ~Scroll of Fireball~
+@500054 = ~SCROLL OF FIREBALL
+Allows user to cast "Fireball"
+Allows user to copy "Fireball" into Spell Book.
+Level: 3 / Wizard
+Range: 40 feet
+Duration: Instant
+Speed: 3
+Area of effect: 15-ft. radius
+Saving throw: 1/2
+Weight: 0
+
+May Kossuth have mercy on those from whom the fires of creation demand the return of their gift of life.
+
+This spell, very popular on the Prime Material Plane, allows the mage to create a heated ball of flame directly in their hands. When launched at an enemy, it bursts into an explosion, harming not only the target but everyone nearby. For this reason, caution is advised when choosing a target.
+
+A single Fireball deals 1-6 points of damage per mage level (maximum 6-60). A successful saving throw reduces the damage by half. The spell is so powerful for its level that history records the archmage Tenser's research into making it less destructive. For power is one thing, and effectiveness another. And fire follows its own rules.~
+@500055 = ~Scroll of Horrid Wilting~
+@500056 = ~SCROLL OF HORRID WILTING SPELL  
+Allows user to cast "Horrid Wilting"
+Allows user to copy "Horrid Wilting" into Spell Book.
+Level: 8 / Wizard
+Range: 40 feet
+Duration: Instant
+Speed: 8
+Area of effect: 30 ft. cube
+Saving throw: 1/2
+Weight: 0
+
+This devastating spell, born from the mad imagination of the elementalist necromancer Abi-Dalzim, known as the Father of Droughts, causes all water to evaporate from living creatures within its area of effect. Abi-Dalzim committed many atrocities in the name of Incabulos, the god of disease, drought, and nightmares, but the worst of these was the creation of this destructive spell, which withers all vegetation in the area and vaporizes groundwater.
+
+All living creatures within the area of effect take 1-8 damage per caster level, up to a maximum of 25-200 damage.~
+@500057 = ~Scroll of Disintegrate~
+@500058 = ~SCROLL OF DISINTEGRATE
+Allows user to cast "Disintegrate"
+Allows user to copy "Disintegrate" into Spell Book.
+Level: 6 / Wizard
+Range: 40 feet
+Duration: Instant
+Speed: 6
+Area of effect: 1 creature
+Saving throw: Negates
+Weight: 0
+
+The decomposition of a whole into its fragments. The elimination of integrity. The dissolution into its prime elements. However you describe it, this spell produces the simplest and perhaps most powerful offensive effect that even a child can imagine: the opponent's body explodes spectacularly, leaving behind only dust. The transformation is immediate and irreversible.
+
+This spell can be blocked by magic resistance or appropriate spell protection. While it may not be effective against more powerful enemies, it can easily eliminate weaker ones.~
+@500059 = ~Scroll of Lower Resistance~
+@500060 = ~SCROLL OF LOWER RESISTANCE
+Allows user to cast "Lower resistance"
+Allows user to copy "Lower resistance" into Spell Book.
+Level: 5 / Wizard
+Range: 30 feet
+Duration: 5 seconds per level
+Speed: 5
+Area of effect: 1 creature
+Saving throw: None
+Weight: 0
+
+Some mages cast spells blindly, trusting that one of them will hit. Others, however, prefer a more strategic approach, first lowering the target's resistances to deal more severe damage later.
+
+Casting this spell reduces the target's magic resistance to a minimum. This allows you to completely penetrate the defenses of even the most powerful spellcasters.~
+@500061 = ~Scroll of Wail of the Banshee~
+@500062 = ~SCROLL OF WAIL OF THE BANSHEE
+Allows user to cast "Wail of the Banshee"
+Allows user to copy "Wail of the Banshee" into Spell Book.
+Level: 9 / Wizard
+Range: 0
+Duration: Instant
+Speed: 9
+Area of effect: 15-ft. radius around the caster
+Saving throw: Negates
+Weight: 0
+
+Banshees, meaning "women of the fairy mound," are also known as groaning spirits or wailing ghosts. They are cruel specters, said to have been evil elven women in life. Taking on a misty form, they drain energy from their surroundings, causing the plants beneath them to wither. To the common folk, they are omens of death. To planewalkers, they are a truly deadly threat.
+
+With this terrifying spell, the caster can unleash a piercing scream from their own throat, audible up to 15 feet away. Anyone who hears it dies instantly unless they succeed on a saving throw versus death. The caster and their companions are immune to the wail.~
+@500063 = ~Key to the Rat and Splat Backrooms~
+@500064 = ~KEY TO THE RAT AND SPLAT BACKROOMS
+Weight: 0
+
+This key opens the door to the Rat and Splat Backrooms.~
+@500065 = ~The Bottomless Fang of Manill~
+@500066 = ~THE BOTTOMLESS FANG OF MANILL
+Weight: 5
+
+At first glance, the huge fang before you might seem to have belonged to one of the bloodthirsty fiends of the lower planes. In truth, it is quite different. This tooth was taken from the carcass of a Manill, an ancient astral whale (gentle creatures that glide majestically through the astral sea). Its yellowed enamel is crisscrossed with a grid of glowing runes in an unknown language. The runes were likely inscribed by whoever hollowed out the fang and placed a small portal inside it. You do not know where objects you throw into the portal go, yet simply thinking of them returns them safely to your hand. They retain only a faint scent of fish oil afterward.
+
+The fang can be used to store many items inside it.~
+@500067 = ~Fragile-Tail's Journal~
+@500068 = ~FRAGILE-TAIL'S JOURNAL
+Weight: 1
+
+This journal belonged to a wererat thief named Fragile Tail. It is a tattered, palm-sized volume bound in scraps of mismatched leather, some gray and smooth like cured rat hide, others cracked and brown like scavenged human skin. Its corners are frayed, chewed, and stained with grime, as if it had been gnawed during moments of idle anxiety. A crude latch of bent wire keeps it shut, wrapped three times and twisted off-center, serving more to discourage prying than to protect its contents.~
+@500069 = ~Golem Shard~
+@500070 = ~GOLEM SHARD
+Damage: 2-5 piercing
+Enchanted: +2
+THAC0: +2
+Speed: 2
+Weight: 1
+Proficiency: Slashing Weapons
+Cannot be used by Priests.
+
+This is a shard you managed to chip from Lothar's stone golem. It may contain a fragment of its power. Someone with very specific needs would surely recognize its value. Ultimately, it can be used as a weapon.~
+@500071 = ~Shina-Tsu-Hiko Milk~
+@500072 = ~SHINA-TSU-HIKO MILK
+Invokes: "Haste"
+Weight: 1
+
+Shina-Tsu-Hiko is a wind deity residing in Limbo, said to have been born from the breath of Izanagi the Creator himself. Shina-Tsu-Hiko has the power to control the winds, bringing both gentle rain and devastating storms. This drink does not literally originate from him, but it has been sanctified by his magnificent power.
+
+The effect of this cloudy, white, slightly bitter drink on anyone who consumes it is remarkable. Your body feels light and swift, as if every movement is carried by a strong, refreshing wind. It is useful for henchmen who wish to wreak havoc, spellcasters who want to cast spells quickly, and rogues who need to change locations in an instant.
+
+This potion doubles the drinker's speed and sharpens their reactions in combat. The effect lasts for five turns (1 hour).~
+@500073 = ~Mystic Energy Globe Wand~
+@500074 = ~MYSTIC ENERGY GLOBE WAND
+Weight: 1
+
+Wands are 1 1/4 feet long and slender. They can be made of ivory, bone, or wood and are usually tipped with a material such as metal, crystal, or stone. They are fragile and break easily, so they are often kept in protective cases.
+
+Wands are powered by charges, with each use consuming one or more charges depending on the item. Once a wand runs out of charges, it can no longer be used or recharged.
+
+STATISTICS:
+This wand creates a mystical globe of magical energy that strikes its target for 2-8 points of damage, ignoring saving throws. It then explodes in a concussive blast that deals additional damage. The blast also deals 1d8 points of magic damage.~
+@500075 = ~Needle and Thread~
+@500076 = ~NEEDLE AND THREAD
+Weight: 0
+
+This is a spool of thread and a small bone needle. They look like they are meant for stitching wounds, whether in the living or the dead, but there is more to them than meets the eye.
+
+The needle appears ordinary, yet it holds a hidden power. When you touch it, images seem to form in your mind. One image stands out above the rest: a haystack, her long-term prison, from which she was rescued by some forgotten, attentive hero. This needle is now an artifact, a living metaphor for a hidden treasure. It remains concealed even from the shopkeeper who sold it. Only a few can see it for what it truly is.~
+@500077 = ~Scroll of Haste~
+@500078 = ~SCROLL OF HASTE
+Allows user to cast "Haste"
+Allows user to copy "Haste" into Spell Book.
+Level: 3 / Wizard
+Range: 15 ft.
+Duration: (5 seconds per level) + 15 seconds
+Speed: 3
+Area of Effect: 15-ft. radius
+Saving Throw: None
+Weight: 0
+
+When cast, all affected creatures double their movement, gain +2 to initiative, and make one extra attack per round. For example, a creature that normally moves 6 and attacks once per round now moves 12 and attacks twice per round.
+
+The spell affects all allied creatures within a 15-ft. radius centered on a point chosen by the caster at the moment of casting. Creatures leaving the area remain affected, while those entering after casting are not.
+
+This spell does not stack with itself or similar magic. Spellcasting and other effects are unaffected. This spell also negates the effects of a Slow spell.~
+@500079 = ~Xaositect Guidelines?~
+@500080 = ~XAOSITECT GUIDELINES?
+Weight: 0
+
+This letter was written by a Xaositect. You do not know what it is about, but an inner voice tells you that this gibberish is some kind of guideline. Unfortunately, any attempt to make sense of it strains your mind in vain.
+
+"I once ate five cats. The candy in the night mouth lit up. Fresh are the pots full of water, but snow digests grass. Can the snake not? And what fate rings in the winding recesses of two candles? Ask the stool, I will answer bravely... I drank it and white chalk. See."~
+@500081 = ~Robe of the Vanquished~
+@500082 = ~ROBE OF THE VANQUISHED
+Properties:
+ Protection against Cania's deadly cold.
+ +1 AC
+ +1 to Luck
+ +5 to Lore
+Weight: 5
+
+The supernatural cold of Cania, with temperatures supposedly low enough to freeze even a fire giant's blood, instantly penetrates ordinary clothing. In these robes, you can detect the scent of ancient and powerful magic. It is familiar, yet so distant and forgotten that you cannot discern the type of spells it contains. When you put the robe on, you experience a mixture of pleasant sensations and an indescribable fear that rises from deep within your mind. It feels as if you are instinctively afraid of some primordial devilry.
+
+Over the centuries, the robe has taken on the color of blood, and for good reason. To protect certain wearers from the supernatural cold of Cania, a few drops of their blood must be sprinkled on the robe.
+
+Once worn, the robe becomes invisible.
+
+Although it protects against death from hypothermia in Cania, it is not effective against ordinary cold or magical cold damage.~
+@500083 = ~Necklace of Rats~
+@500084 = ~NECKLACE OF RATS
+Weight: 0
+
+Created by a jeweler from The Styx Oarsman, this necklace demonstrates that even the most gruesome raw materials can be transformed into something beautiful by the skilled hands of a talented artist, at least by demonic standards. The tails of cranium rats are woven together in an intricate, syncretic pattern reminiscent of both the biological geometry of the Abyss and the multicultural, cyclical nature of the city at the center of the multiverse, Sigil.
+
+In addition to being a spectacular work of art, the necklace serves as a key to a portal leading to a forgotten temple somewhere in the Ditch.~
+@500085 = ~Unregistered Sensory Stone~
+@500086 = ~UNREGISTERED SENSORY STONE
+Weight: 2
+
+Surprisingly, you have found some kind of sensory stone. Is it lost or unregistered?
+It is dirty and battered, but still functional.~
+@500087 = ~"Captive Dancer"~
+@500088 = ~"CAPTIVE DANCER"
+Weight: 1
+
+C.S. Macat
+
+The sultan of Aharaj cast a languid gaze over the newest acquisitions and sighed with contentment. The vizier had truly outdone himself, selecting only the finest specimens from the market.
+
+In a neat row before the throne stood slaves of various races and genders bound for the harem, all young and beautiful beyond measure, clad only in chains and colorful shawls that emphasized their charms rather than concealing their modesty. Most lowered their gaze to the floor, out of shame, fear, or embarrassment at the grandeur of the court. Only one man did not avert his bright eyes when they met the sultan's. How intriguing. The sovereign examined him with renewed curiosity.
+
+Pointed ears peeked out from his long blond hair. He was tall and lean, with prominent muscles, especially on his legs, hidden beneath pale skin. Was he a warrior? No, unlikely. An acrobat? A circus performer? A pattern of tattoos covering almost his entire body suggested a bohemian past.
+
+"Turn around," ordered the sultan.
+
+The man did not hesitate. He bowed as if accustomed to the attention and adoration of a crowd, obeying gracefully. The sultan marveled at the delicate black ink coiling around his torso and limbs. Some lines curved into abstract spirals, while others formed rough outlines of daggers, swords, and other hand weapons. Subtle arcs of wings were inked across his shoulder blades.
+
+"Your tattoos. What do they mean?" asked the sultan.
+
+"They draw attention when I perform on stage," he replied. His voice was deep and strong, with a warm timbre. "I used to earn my living as a dancer. I often used knives in my acts. I can–"
+
+The sultan raised his hand. The young man fell silent. Either the vizier had trained the slaves well, or the dancer instinctively knew how to fulfill his master's expectations. And the knives he mentioned... Yes, he would be perfect.
+
+"I do not care who you were or what you used to do," said the sultan. "Your past is irrelevant. From now on, you are my pleasure slave, my pet, my toy. You are alive only because I allow it. Do you understand?"
+
+"Of course, Your Brightness. I am but a worthless speck of dust beneath your heel."
+
+The sultan smiled. Perfect. The young man fit his preferred type like a glove: clever, compliant, beautiful. He would be even more beautiful when despair first filled his eyes, followed by emptiness as he realized there was no salvation for him. How pleasant it would be to destroy him.
+
+"From now on, your name is Aotari, like all the other favorites before you."
+
+"As you wish, Your Brightness."
+
+"Excellent. Staff!" A few servants hidden in the shadows stood at attention, afraid even to breathe. "Wash and prepare him. In one hour, I want him ready in my chambers."
+
+"Yes, Your Brightness!" the servants replied in unison. Under the guard's supervision, they led the man away. Before leaving, the dancer glanced over his shoulder at the sovereign, his eyes reflecting both uncertainty and hope.
+
+The sultan could not wait to snuff out that spark of hope.  
+
+* * * 
+
+Exactly an hour later, the sultan lounged on his bed among the pillows, watching as the servants and guards vacated the bedroom. He and Aotari were alone. The dancer wore only his chains but seemed unconcerned. He waited calmly, his expression blank.
+
+The sultan nodded, pleased. "Before we begin, know this: I do not know what you are thinking, Aotari, but my guards are stationed behind these walls. I only need to say one word, and they will rush in and slaughter you. Do not attempt to escape. The windows are open, but remember we are on the fourth floor, with marble stairs below. Do not do anything foolish. You are not foolish, are you, Aotari?"
+
+"I am not, Your Brightness."
+
+"I am glad. I will have so much fun with you. I think we will start with knives. I may not be a dancer like you, but I can be quite creative with them as well. First–"
+
+"You do love the sound of your own voice, do you not?"
+
+The sultan's eyes widened at the insolence. Aotari stared at him with cold defiance, so different from his previous deference, but it mattered little. Nobody interrupts the sovereign.
+
+The brazen youth had to be taught respect. The sultan opened his mouth to call for the guards, but no sound left him. Surprised, he grasped his throat. He screamed, but it was in vain. He could not understand what was happening.
+
+He raised a questioning gaze at the slave and realized, mortified, that the lines on his shoulders glowed subtly purple, forming a strange glyph.
+
+"I am sure you are wondering what has happened," said the dancer casually. "I will not keep you in the dark. Runes from my homeland are hidden in my tattoos. They represent a foreign magic completely unknown here, so your sages could not detect them. That is why my order was chosen for this task. I am a living grimoire that walks the planes."
+
+The young man's stance and expression had completely changed. He resembled a cobra, a deadly predator ready to strike. Not out of hatred, but because it was his nature.
+
+"We do not have much time, but courtesy and my code require that you at least understand why I am here, fulfilling this contract. Sultan of Aharaj, you will die today by my hand because your firstborn son grew tired of waiting for your demise. He paid a fortune to hasten your permanent abdication. The information he provided, including your slave preferences, proved quite useful. Worming my way into the palace and gaining your favor was child's play. Now it is time to end it. Ba'al Verzi sends their regards."
+
+The chains fell to the floor, powerless against his magic. The man flicked his wrist, and the tattoo of a curved dagger on his forearm slid to his hand, becoming a real blade.
+
+The sultan whimpered, shuffling backward until his back hit the wall. He wanted to beg, to promise gold and honors, but the silencing spell held him. He could only watch helplessly as the young man approached, moving with the light grace of a dancer and the deadly precision of an assassin.
+  
+"Do not worry, sultan. I am not you. I do not make my victims suffer unnecessarily. The end will be swift."
+
+The dagger cut through the air and then the sultan's skin so quickly that the pain reached him only moments later. Warm blood streamed down his neck. Darkness quickly overtook him.
+
+The last thing the sultan saw was a beautiful young man walking toward the window with a spring in his step. The tattoo on his back shimmered and unfurled into a pair of feathery wings. The rays of sunset colored his golden hair russet, like congealed blood.
+
+Aotari looked like an angel. An angel of death who had delivered the sultan's soul to the afterlife.~
+@500089 = ~A Page from a Diary~
+@500090 = ~A PAGE FROM A DIARY
+Weight: 0
+
+*Before you see the light, you must die.*
+
+Page from diary of an anonymous cutter. A forgotten wanderer-warrior, fighting for mystical good.
+
+"*"
+
+With every step, a shadow. Behind them, the undead. They walked, chains and gold bracelets, ornaments from lives of all kinds, clinking against their old bones. What else remains of those days? Now only hatred of life smolders in these skulls. They laugh in my face, evil and macabre.
+
+Supernatural voices gasp around my soul like wind around the ankles of hanged men. But I must go forward to the end.
+
+They are attacking!
+
+"*"
+
+Spark: I will succeed. I will win. One blow opens old wounds, scars of hopelessness and pain. How can something I no longer have still hurt me?
+
+"*"
+
+In these winding corridors, candles thirsty for oxygen twitch before my eyes, doing more to darken my vision than to light the way. I no longer know if this is hallucination, dream, or reality. I see things that should not be here, hear things that no one should know, and feel the familiar touch of someone who is no longer alive. These delusions and deceptions are characteristic of this place, illusions sending greetings from the Abyss. The deeper you go, the more intense they become.
+
+"*"
+
+I have failed. I drag my lifeless feet and write with the last of my strength. There are so many of them here, just like me, defeated ones. They failed, and now their bones and skulls lie here like trophies. Some will join the army that defeated me. Only death is... Even it has failed here.~
+@500091 = ~Archon's Sigil~
+@500092 = ~Sacred Sigil of Knowing~
+@500093 = ~ARCHON'S SIGIL
+Weight: 0
+
+This signet ring is undoubtedly valuable. No one goes to such lengths to protect ordinary jewelry. It once rested on a pedestal above the Glass Tarn. What power could it hold?~
+@500094 = ~Bone Earring of Ulfbrand Völgarsson Baunaætari~
+@500095 = ~BONE EARRING OF ULFBRAND VÖLGARSSON BAUNAÆTARI
+Weight: 1
+
+These earrings have a very unique story, if the rumor is to be believed. They once belonged to Ulfbrand when he was still alive. After his death, he somehow returned to find them and reclaim them for his petitioner self. He does not remember how he did it, but the evidence of his deed is now in your hand.
+
+The earrings are made from frost giant bone, which is why they should open the hopping portal to Cania. The frost giant was a distant ancestor of Ulfbrand. The earrings are quite ancient, though admittedly ugly. No serious craftsman could have ever made them.
+
+This is the pair you received before reaching Cania.~
+@500096 = ~Archon Seal~
+@500097 = ~ARCHON SEAL
+Weight: 0
+
+This seal is used to unlock a hidden stash.~
+@500098 = ~The Stolen Bone Earring of Ulfbrand Völgarsson Baunaætari~
+@500099 = ~THE STOLEN EARRING OF BONE EARRING OF ULFBRAND VÖLGARSSON BAUNAÆTARI
+Weight: 1
+
+These earrings have a very unique story, if the rumor is to be believed. They once belonged to Ulfbrand when he was still alive. After his death, he somehow returned to find them and reclaim them for his petitioner self. He does not remember how he did it, but the evidence of his deed is now in your hand.
+
+The earrings are made from frost giant bone, which is why they should open the hopping portal to Cania. The frost giant was a distant ancestor of Ulfbrand. The earrings are quite ancient, though admittedly ugly. No serious craftsman could have ever made them.
+
+This is the pair found in Cania on the body of one of the wererats.~
+@500100 = ~"The Promise"~
+@500101 = ~"THE PROMISE"
+Weight: 1
+
+by Gideon Songblade
+
+"Mommy, did you find me in a flower?"
+
+Arlette's long fingers paused over the silvery strings of her harp. Complete silence, so profound it seemed to echo through the chamber, replaced the beautiful melody. She looked at the little boy who was half-lying on the marble floor among scattered sheets of paper and colorful paints. She had thought Aster was fully absorbed in creating a meadow, but apparently his curious mind had wandered elsewhere.
+
+"Why are you asking, my dear?"
+
+"Because I played with the fairies yesterday, and they told me they are born in flower buds. They even showed me a tree where it happens!"
+
+"Is that so?"
+
+"Yup! Feys don't lie!"
+
+Arlette gave him a warm smile. "Indeed. Fey creatures cannot tell a lie."
+
+"So... did you find me in a flower or not?"
+
+"And what do you think, my dear?"
+
+"I don't know. The flowers on the tree were very small. I don't think I would fit in them."
+
+Arlette tilted her head thoughtfully, letting her golden locks cascade over her ivy-made dress that coiled tightly around her body. If one paid attention to how time worked on the Material Plane, Aster was already six years old. No wonder he was starting to ask questions. Perhaps it was time to answer them.
+
+"No, my dear. I did not find you in a flower. I found you in a crib."
+
+The boy furrowed his brow. He had never heard that word and could not picture its meaning. "What's a crib?"
+
+"It's a bed for very small children. The woman who gave birth to you laid you in one to sleep."
+
+"A woman?" Aster frowned. "Who? Another mommy?"
+
+"No! She brought you into this world, but you belong to me!" Arlette's violet eyes flashed, but the storm of anger quickly passed, leaving only the sweetness of a sunny morning. "That woman came to the forest and prayed to the holy tree for help. I heard her across the Planes and made a pact with her. She agreed to repay my boon with her greatest treasure. I fulfilled my part of the deal, but she did not. She tried to bribe me with worthless gold and trinkets, and then she tried to run. But you cannot outrun a promise. I gave you your true name. You are mine."
+
+Arlette still remembered the stuffy, metallic scent in the room as she stepped barefoot through the puddles of blood from the bodies of the stubborn woman and her husband.
+
+The boy scratched his head, thinking hard. Arlette wondered if it was too much for him or if he even understood what she meant, but Aster pleasantly surprised her. "Was that lady a fey?"
+
+Ah, what a clever child. She could not have asked for a better one. "No, my dear. She was a human."
+
+"So I am a human too, not a fey." He sounded so sad that Arlette knelt in front of him and placed her hand on his cheek.
+
+"You do not have to worry about that, my dear. A few more years in my domain, and the magic of the Faerie Realm will change you irrevocably. You will become one of us. You will be my brave knight, loyal to your queen. You want that, don't you?"
+
+The boy gave her a toothy grin and nodded eagerly. "Yes, Mommy! I will be a fey!"
+
+"Splendid." Arlette kissed the top of his head. "Forget all your worries. Play and have fun, my dear."
+
+She did not have to tell him twice. In high spirits, Aster returned to painting the meadow, humming under his breath the same song his mother had played earlier.
+
+Arlette returned to her harp and let the music flow in perfect harmony with her son.~
+@500102 = ~Kabatum's Note~
+@500103 = ~KABATUM'S NOTE
+Weight: 0
+
+A carefully cut piece of parchment showing the octave notes alongside their solmization names. Below is a rough sketch of the song.
+
+ C - do
+ D - re
+ E - mi
+ F - fa
+ G - sol
+ A - la
+ B - si
+
+"Hymn of Ascendancy"
+
+"Solar in the service of Corellon Larethian | | |
+Lashrael is his name | |
+Sign of his wisdom, a gray aura | |"~
+@500104 = ~Marraenoloth's Flute~
+@500105 = ~MARRAENOLOTH'S FLUTE
+Weight: 1
+
+A flute found next to the frozen corpse of the wererat thief Ratilda. It originally belonged to Wotyrxil, a marraenoloth who awaits its return in Sigil.
+
+The instrument is simple and unadorned, yet it conveys a sense of great value. It is certainly magical, but you do not know how to activate its powers. Perhaps only marraenoloths can use it, as the existence of such instruments is said to be closely tied to them. According to Wotyrxil, they are used for long-distance communication.~
+@500106 = ~"The Last Word"~
+@500107 = ~"THE LAST WORD"
+Damage: 3-18, crushing
+Enchanted: +3
+Special:
+ +1 to Armor Class
+ +3 to Electrical Damage
+THAC0: +1
+Speed: 3
+Weight: 5
+Proficiency: Hammers
+Usable only by Fighters.
+Usable only by Good characters.
+
+Linguists know that the word "discussion" comes from phrases meaning "I shatter" or "I strike down." It implies a clash of different views on a matter. Reaching a compromise or consensus often requires strong arguments. Not all arguments are easy to put into words. Logic also suggests that arguments should be presented from weakest to strongest. In the end, the person who has the last word wins. Here it is.
+
+This powerful hammer belonged to the word archon from Mount Celestia. Since the weapon came into your possession, you clearly have more leverage. That alone should be a strong enough argument in your next fight.~
+@500108 = ~Frightening Gloves~
+@500109 = ~Io's Blood Knuckles~
+@500110 = ~FRIGHTENING GLOVES
+Damage: 3-18, crushing
+Speed: 2
+Weight: 5
+Proficiency: Fists
+Usable only by Fighters and Thieves
+
+These spiked gloves look as if they were lost by a traveler. They appear to have been soaked in blood, and the hardened residue is easily distinguished from the rust one would expect on a piece of metal that has been lying around for an unknown length of time.~
+@500111 = ~IO'S BLOOD KNUCKLES
+Damage: 3-18, crushing
+Enchantment: +3
+Special:
+ +10 Fire Damage
+ +25% Fire Damage Resistance
+ +1 Armor Class
+Speed: 2
+Weight: 5
+Proficiency: Fists
+Usable only by Fighters and Thieves
+
+IIo's Bloody Isles are not named because they belong to the dragon god, but because they were formed from his blood. According to legend, Io saw strife among the dragon species and declared that if blood had to be spilled, it should be his own. He slashed his belly, and his blood fell to the ground, forming an archipelago.
+
+These unique gloves therefore come from the Prime Material Plane and must have reached the Outer Planes through the multiportal in the Seafarer's Arch. The knuckles appear to be soaked in blood, and the hardened residue can be easily distinguished from the rust one would expect on a piece of metal that has been lying around for an unknown length of time.
+
+What sets them apart from other powerful gloves is their incredible speed. They make it easier to dodge an opponent's blows. In addition, each strike seems to carry a fragment of the dragon god, engulfing the enemy in tongues of flame while making the wearer immune to the effects of this destructive force.~
+@500112 = ~Sickle~
+@500113 = ~Noonwraith's Sickle~
+@500114 = ~SICKLE
+Damage: 3-12, slashing
+Speed: 2
+Weight: 1
+Proficiency: Slashing Weapons
+Cannot be used by Clerics
+
+The sickle is one of the oldest agricultural tools used for harvesting. It is characterized by a semicircular, strongly curved blade. It is used to harvest grain and grass or to cut straw. In mythology, the sickle is often placed in divine hands, such as those of Demeter or Cronos.~
+@500115 = ~NOONWRAITH'S SICKLE
+Damage: 3-12, slashing
+Enchantment: +3
+Special:
+ +5 Fire Damage
+ +5 to Fire Resistance
+Speed: 2
+Weight: 1
+Proficiency: Slashing Weapons
+Cannot be used by Clerics
+
+The sickle is one of the oldest agricultural tools used for harvesting. It is characterized by a semicircular, strongly curved blade. It is used to harvest grain and grass or to cut straw. In mythology, the sickle often appears in divine hands, such as those of Demeter or Cronos.
+
+This particular sickle once belonged to a noonwraith. These undead spirits are said to be women who died before or during their wedding. They may appear as young girls or as old women. They are usually dressed in white and wear wreaths in their hair. They are sometimes depicted carrying sacks and sickles. They are known to ask riddles and can be extremely brutal. In folklore, they are considered the embodiment of sunstroke.
+
+This sickle retains the noonwraith's ability to concentrate sunlight. Because of this, it deals additional fire damage to those who are sensitive to it.~
+@500116 = ~Infernal Researcher's Lens~
+@500117 = ~INFERNAL RESEARCHER'S LENS
+Special:
+ +25% Resistance to Cold
+ +25% Resistance to Magical Cold
+ +25% Resistance to Fire
+ +25% Resistance to Magical Fire
+ +25% Resistance to Acid
+ +15% critical hit chance
+ +2 damage
+THAC0: + 2
+Weight: 0
+Can be used only by modrons
+
+This advanced lens combines the beneficial effects of several popular lenses, including "Optix", the Lens of the Horizon, and the Lens of Inherent Viciousness. It also protects the wearer from the harsh conditions of the Nine Hells. Such equipment increases a modron's chances of survival in this deadly environment.~
+@500118 = ~Mysterious Scroll~
+@500119 = ~MYSTERIOUS SCROLL
+Weight: 0
+
+The parchment, tied with a bright pink ribbon, feels strangely sticky to the touch, as if it were coated with a layer of dried mucus. It smells of citrus and musk. You have no idea where it might have been before, and you would probably rather not know. You suspect there are words inside that you might be able to decipher.~
+@500120 = ~Call to Battle~
+@500121 = ~CALL TO BATTLE
+Weight: 0
+
+This set of parchments is ready to be written and sent to the representatives of the factions you expect to support you in battle as soon as possible. You will need to carefully consider who your true allies are and whom you can rely on. It is also important to remember that some factions are hostile toward one another, and bringing their members together may cause more harm than good.~
+@500122 = ~Bizarre Book~
+@500123 = ~BIZARRE BOOK
+Weight: 10
+
+A tome found in the library by the Ditch. It is rather large and heavy, and the cover bears no markings. It seems a bit suspicious...~
+@500124 = ~Terrifying Mace~
+@500125 = ~Mace of the Doomguard~
+@500126 = ~TERRIFYING MACE
+Damage: 3-18, crushing
+Speed: 2
+Weight: 5
+Proficiency: Clubs
+Unusable by Mages
+
+This club has been reinforced with irregularly protruding spikes. The handle bears a crest that resembles an animal skull.~
+@500127 = ~MACE OF THE DOOMGUARD
+Damage: 3-18, crushing
+Enchanted: +3
+Special:
+ +10 Magic Damage
+ +2 Armor Class
+THAC0: +2
+Speed: 3
+Weight: 5
+Proficiency: Clubs
+Unusable by Mages
+Unusable by Good characters
+
+The Doomguard promote entropy in a practical, though morally questionable, way. Their primary source of income is the arms trade. It is no surprise that their headquarters in Sigil is the Armory in the Lady's Ward. In a multiverse where the Blood War is constant, the demand for weapons is equally constant. One might wonder why this is so, but it is easier to accept it and either ignore it or firmly take a side. The Doomguard, however, have found another approach. They profit from the extremes to which others succumb. For them, increasing entropy is paramount.
+
+This mace has been reinforced with irregularly protruding spikes. The hilt bears the Doomguard crest, an animal skull. The weapon's special properties draw on the destructive powers of the Doomguard's home fields in the Inner Planes: the negative quasiplanes of Ash, Dust, Salt, and Vacuum. This results in additional damage from void and decay, treated as magic damage.~
+@500128 = ~Perforated Axe~
+@500129 = ~Axe of the Fated~
+@500130 = ~PERFORATED AXE
+Damage: 3-18, crushing
+Speed: 3
+Weight: 5
+Proficiency: Axes
+Usable only by Fighters
+
+
+This axe has an unusual shape, with a blade that is perforated in several places. The handle bears a crest depicting a figure in a strange blue and red costume on a blue background adorned with green snakes. On closer inspection, the figure's headgear mirrors the shape of the axe itself.~
+@500131 = ~AXE OF THE FATED
+Damage: 3-18, crushing
+Enchanted: +3
+Special:
+ Transfers Hit Points From Target to Wielder
+ +2 Armor Class
+THAC0: +2
+Speed: 3
+Weight: 5
+Proficiency: Axes
+Usable only by Fighters
+Unusable by Neutral characters (on the Good-Evil axis)
+
+
+"Fated count the jink they make,
+Never give when you can take."
+Fragment of a tiefling lullaby
+
+This axe, with its unusual perforated shape, represents the pinnacle of Fated craftsmanship. It allows the wielder to absorb some of the damage inflicted on its target and is powerful enough to be used against fiends or celestials. However, it is not a weapon for the hesitant. Unleashing its full power requires a strong, unwavering will and a decisive, extreme approach to the challenges faced by the inhabitants of the planes.
+
+The handle bears the Fated's crest, depicting a figure in a blue and red costume on a blue background adorned with green snakes. On closer inspection, the figure's headgear mirrors the shape of the axe itself.~
+@500132 = ~Fall-from-Grace's Shackles of Freedom~
+@500133 = ~Body Charm~
+@500134 = ~BODY CHARM
+Special:
+ Heals 100 HP
+ Reduces Fatigue
+Weight: 0
+
+This item resembles a drop of blood with the consistency of a jelly bean. Consuming it distributes its healing power throughout the body.
+
+The body charm surpasses not only the clot and blood charms but also the heart charm. It instantly heals wounds across the body and provides a surge of energy. It was created to treat injuries far more serious than those caused by bar fights or occasional dungeon excursions. Such charms are especially useful for planewalkers, for whom battling fiends or celestials is a real possibility.~
+@500135 = ~Anulus Demonis~
+@500136 = ~^NATTENTION: To unequip the ring, the Nameless One must NOT be holding a weapon, or the game will crash. Simply place one weapon in your inventory to free up a slot.^-
+
+ANULUS DEMONIS
+
+Transformation into a fiend can be frightening for some, but quite manageable or even enjoyable for others. For you, it could be useful in tricky situations and might even help scare off a stubborn opponent.
+
+Jokes aside, there are several benefits to transforming into a Glabrezu. Strength, dexterity, and constitution are all significantly improved. Unfortunately, there are drawbacks as well. Once transformed, you will not be popular with ordinary mortals, many of whom will find your appearance abhorrent. You lose the ability to cast spells and experience constant anxiety, likely caused by the curse of being a fiend. On the bright side, you do feel much stronger.
+
+Strength +3
+Constitution +3
+Dexterity +3
+Charisma -5
+Additional health points resulting from the increase of constitution.
+Magic resistance: +16
+Weight: 1
+
+You cannot cast spells while in fiend form.
+The curse remains active for the entire duration of the transformation.~
+@500137 = ~Candy of Might for Morte~
+@500138 = ~CANDY OF MIGHT FOR MORTE
+Weight: 0
+
+This sticky substance smells faintly of chocolate, though you are not entirely sure. Morte's teeth will handle it perfectly.
+
+It can be used only by Morte.~
+@500139 = ~Cut-up Parchment~
+@500140 = ~CUT-UP PARCHMENT
+Weight: 0
+
+When held correctly, this parchment depicts an obsidian obelisk carved with a thousand names. However, it is cut in a very specific way, allowing it to be unfolded into a large loop.~
+@500141 = ~Agraval's Molar~
+@500142 = ~AGRAVAL'S MOLAR
+Damage: 1-6, piercing
+ 1-6, crushing
+Enchanted: +3
+Special:
+ Transfers Hit Points From Target to Wielder
+ Decreases Charisma by 1
+ Increases Constitution by 1
+THAC0: +3
+Speed: 4
+Weight: 1
+Proficiency: Fists
+Usable only by Morte
+
+This is a molar from the foul mouth of the baernaloth, Agraval. It is said to be able to summon his "dog" back to him. It is disgusting, but it is a tooth, so Morte could use it. He should agree to put it in his mouth if it might enhance his combat abilities.
+
+It is not a mistaken assumption that the tooth of a mysterious ancient fiend holds arcane power. Crucially, it can harm other fiends, and it also reveals an extraordinary ability to drain life. Wounds inflicted by baernaloths can be reopened for up to 24 hours, making the victim's pain extremely intense.~
+@500143 = ~Searing Sword~
+@500144 = ~SEARING SWORD
+Damage: 3-18, slashing
+Speed: 3
+Weight: 5
+Proficiency: Edged
+Unusable by Priests
+
+Waves of heat radiate from this sword. It is undoubtedly magical, and anyone who understands its nature can wield an incredible weapon. Since it once belonged to Kabatum, one might assume it would be useless to those who live in sin.~
+@500145 = ~Flame of Order~
+@500146 = ~FLAME OF ORDER
+Damage: 3-18, slashing
+Enchanted: +3
+Special:
+ +2 Armor Class
+ +2 Charisma
+ +1 Wisdom
+ Immunity to panic
+THAC0: +2
+Speed: 3
+Weight: 5
+Proficiency: Edged
+Unusable by Priests
+Unusable by Evil and Chaotic characters
+
+This holy weapon was forged from the pure iron of Mt. Celestia by the Anunnaki fire god, Girru, in the Forge of Undying Flame, his divine realm in Mercuria. Girru's domains also include justice and law, making him a fitting creator for this ritual tool designed to cleanse the world of evil. Ancient magic and incantations, called nam-búr-bi, are engraved on the sword. They are meant not only to ward off evil but also, as they literally state, to "bolster the king's self-confidence, strengthen his resolution, and steel his will to fight." In practice, this translates to increased Charisma, Wisdom, Armor Class, and fearlessness.~
+@500147 = ~Spark of Iadmon~
+@500148 = ~Obsidian Ring~
+@500149 = ~SPARK OF IADMON
+ Special:
+ Immunity to panic and berserk
+ Improves Armor Class by 1
+ Save vs. death bonus
+ +5% to Magic Resistance
+Weight: 0
+Cannot be used by Evil characters
+
+Long ago, it was worn by Innaya, queen of the devas who ruled from the city of Iadmon in Amoria, Elysium. One day, however, the city was uprooted from its foundations by the dragon god Task, who transported it to the Lower Planes and placed it on the surface of Gehenna, covering the entrance to a dragon lair, his divine realm. Innaya perished along with most of Iadmon's inhabitants, and Task plundered nearly all of its treasures, leaving only a handful, among which this earring was included. The earring retained a fragment of Innaya's wondrous aura, even when lost between the planes as it fell from her ear.~
+@500150 = ~~
+@500151 = ~Fiendango~
+@500152 = ~FIENDANGO
+Weight: 1
+
+An old, dusty book with a gray cover. After carefully examining it and leafing through its pages, you realize it is a bestiary. Part of it is written in a dialect you do not know well, but it should still be at least somewhat understandable.~
+@500153 = ~The Fated Coin~
+@500154 = ~THE FATED COIN
+Weight: 0
+
+This coin was given to you by Haer'Dalis. At first glance, it does not differ much from the other copper coins in your pocket. However, it is said to be the key to a portal to Ysgard by the beach.~
+@500155 = ~Mask of Sonne~
+@500156 = ~Stiff Mask~
+@500157 = ~STIFF MASK
+Weight: 1
+
+This mask does not look very practical. It is made of a stiff fabric that feels like metal, and it must be very tiring to wear constantly.~
+@500158 = ~MASK OF SONNE
+Special:
+ +1 Charisma
+ +1 to Armor Class
+ Resistance to Panic and Berserk
+Weight: 1
+Can be used only by beings with a face
+
+This mask, once worn by Sonne, allowed her to appear composed during conversation, even while she was truly churning with emotion inside. It can similarly help you appear more confident and less affected by stress or panic in social interactions. The mask looks unusual, but once worn, it adapts to the wearer's shape.~
+@500159 = ~Wanted Notice~
+@500160 = ~WANTED NOTICE
+Weight: 0
+
+This flyer shows a portrait of what appears to be a young man, though his age is obscured by a multitude of wrinkles and scars. A quick glance reveals the most important information, written in bold letters at the top and bottom of the parchment:
+
+"ADAIRE, ALIAS KESTER, ALIAS SIGIMUNDIS STIG, ALIAS LEONTES, ALIAS CHANCELLEN THE TRUE.
+WANTED FOR FRAUD, THEFT, AND MURDER, BY THE ORDER OF THE HARMONIUM."
+
+Below that, fine print details the legal basis for issuing the notice. What unsettles you is how closely the wanted man's portrait resembles you, perhaps from a few years earlier. And all those names, yet none of them seem real. It would be wise not to stand near the poster, just in case, and certainly not in the presence of the Harmonium.~
+@500161 = ~Razorvine Garrote~
+@500162 = ~RAZORVINE GARROTE
+Weight: 0
+
+This gnarly piece of branch looks particularly dangerous. It seems to have been tied by the razorvine blight to tighten around your throat, but you managed to defeat it before that happened. A quick durability test of the noose shows it could indeed sever your throat, and it even made your fingers bleed. Leaving it on the city streets might be socially irresponsible, but are you the type of person who would use it? Part of you feels it might be useful in the future, just in case.
+
+You vaguely remember that some people can use assassination techniques with tools like this. A bit of pressure applied to the victim's back using a foot or knee might kill them or at least cause severe injury. You do not think you need to be a professional assassin to do this, although experience would likely make it more effective. This method, unlike a simple backstab, would certainly complicate any investigation, and you would be long gone.~
+@500163 = ~Vagrants' Spit~
+@500164 = ~VAGRANTS' SPIT
+Weight: 1
+
+Arnil the Bartender
+
+A traveler arrived just as a gullywasher was brewing. One of hundreds alike, dressed similarly as well. A long, heavy coat, not very practical in a spring downpour but invaluable in winter. A hood over his head, sturdy boots, a small bag slung over his shoulder. How similar they all looked.
+
+When he opened the door, a draft blew in, rattling the half-closed window.
+
+The stranger, a clone of many others, stood in the doorway for a moment. The rain poured behind him like some kind of hero in a painting, still and watchful. What a cliché.
+
+I knew I had to play my part to get him to order something from me.
+
+He stepped inside, removed his hood, and unbuttoned his cloak. He looked rather young. He glanced around the room as if searching for something or someone. I hoped he was not looking for a problem. Finally, he looked in my direction and took a step in a very standard pattern straight to the bar. To my heart's content.
+
+As he approached, I noticed his unusual eyes. Pupils so gray they were almost transparent. A Northman, no doubt about it. Close-cropped, dirty blond hair and a few days of stubble. At least he was as young as I first thought.
+
+Routine, here I am.
+
+"What can I get you?" I asked, expecting the usual answer. This fellow certainly could not afford the finest drinks. Judging by his attire, I guessed he would reach for a beer.
+
+"Plain water. As pure as possible."
+
+That was something new. Had he not drunk enough rainwater already?
+
+"Want something to eat?" I asked.
+"No need."
+"Of course."
+
+Too bad. It was clear I would not make much money from this berk.
+
+"Awful weather, isn't it? It has been pouring like this for about three hours."
+"Yeah."
+"Where are you headed, if I may ask?" I asked again, handing him the water.
+"Far... further than I thought."
+"A secret, is it?" I smiled to myself. "Well, that is none of my business."
+"I won't be staying long. I am waiting for someone, then I will be on my way."
+"I see."
+
+This cutter seemed like someone who knew what he wanted, I guessed.
+
+He sat at a table in the back, placed his cup of water down, and pondered for fifteen minutes without taking a drink. Strange. Finally, the one he had been waiting for arrived. A thin, elderly man, lightly dressed and equally drenched from the rain. Spotting the Northman, he headed straight toward him. Oh no, my dear, you do not sit here without ordering anything. When he sat, I moved to take the order.
+
+"Sir, would you like something?"
+"What?" The newcomer cleared his throat. "Oh yes. A beer. That is all."
+"At your service."
+
+He seemed richer than I had thought. Well, a beer was enough.
+
+There was nothing to do, so I watched the two of them. At one point, the older man handed the younger one something, a small bag. The Northman poured it into the water and stirred it vigorously. I did not like it. I decided to eavesdrop.
+
+"Did you copy the writing?" the Northman asked.
+"And who do you think I am? I promised you, so I did it. It was not that hard. Believe it or not, I had a harder time getting that weed."
+"Is that so?"
+"Oh yes. 'Vagrants' spit'... harder to get than dragon scales these days. But you are not going to drink that, are you?"
+"Why?"
+"I have heard all sorts of legends about it."
+"What legends? For example?"
+"Pottiness. Suffice it to say, unheard-of nonsense. And even something about imminent death."
+"Hmm. Here is gold and stones, as we agreed." The younger one pulled a large pouch from his jacket and tossed it on the table.
+"Oh, boy. I hope you know what you are doing. And here is the writing, a copy from the Book of the City Closure. Strange name, but what do I know?"
+"Strange only if you do not know the rest of it."
+"What do you mean?"
+"This ancient volume is incomplete, as is its title."
+"I know that. Boy, I have been a scribe for thirty years. The title is incomplete because, in the mists of time, someone brazenly ripped it out, destroyed it, or whatever, and there is no mention of it anywhere."
+"So, scribe, you know how it is with the word 'nowhere.' Anyway, that is no longer your concern. The writing is legit. I was missing the last two lines. You did what you had to do. Farewell."
+
+The elder man glanced into the purse, rummaged inside, then stood up and left without taking a sip of beer.
+
+Intriguing blighters, I thought. Old volumes, some herb with a ridiculous name. Oh what times, oh what people. I wondered what he would do with all that water and herbs now. I did not need a corpse here. I decided to throw him out.
+
+Suddenly, the traveler rose from the table with a mug in one hand and a parchment in the other and headed toward the exit. Standing at the threshold, he froze and began reading aloud from the card in his hand:
+
+"The dead thirst for the water of life.
+How thirsty I am of a way.
+Only you, O Lady, understand this pain.
+I resort to the all-seeing Powers.
+That work of mighty hands.
+To see Sigil that gleams far away."
+
+"What a deranged joke!" I shouted.
+
+Then the visitor from the North tipped the cup and drank the entire contents at once.
+
+At first, he stood motionless at the exit. After a moment, blue flames erupted, and a strange, rounded space appeared where the door had been. An orange mist billowed from within. The stranger stepped into it and vanished, leaving only my mug, which rolled across the floor. The few customers present shook their heads in disbelief, probably attributing the disappearance to the alcohol. Some made signs to ward off curses.
+
+Could anyone ever believe me?
+
+I am writing these words down so I do not forget anything.
+
+Since then, every newcomer has seemed to me as something possibly uncanny.~
+@500165 = ~Cannibal's Fork~
+@500166 = ~CANNIBAL'S FORK
+Damage: 3-12, piercing
+Enchantment: +3
+Speed: 2
+Weight: 1
+Proficiency: Slashing Weapons
+Cannot be used by Priests and Good characters
+
+Forks have been a staple of kitchenware for years. They have a handle and tines that make it easy to spear and lift food to your mouth.
+
+Something inside you has changed, however, and you have begun to see the deadly potential in even the most mundane objects. Moreover, a strange, hidden power allows you to harm even fiends and celestials.~
+@500167 = ~Cannibal's Knife~
+@500168 = ~CANNIBAL'S KNIFE
+Damage: 3-12, slashing
+Enchantment: +3
+Speed: 2
+Weight: 1
+Proficiency: Slashing Weapons
+Cannot be used by Priests and Good characters
+
+Knives have been a staple of kitchenware for years. They consist of a metal blade set into a handle and are used for cutting and slicing food.
+
+Something inside you has changed, and you have begun to see the deadly potential in even the most mundane objects. Knives are already used as weapons, of course, but this one seems a bit dull at first glance. You are fully aware of that. Moreover, a strange, hidden power allows you to harm even fiends and celestials.~
+@500169 = ~Meat Mallet~
+@500170 = ~MEAT MALLET
+Damage: 3-12, crushing
+Enchantment: +3
+Speed: 2
+Weight: 4
+Proficiency: Hammers
+Cannot be used by Good characters
+
+Before cooking, it is a good idea to prepare the meat by pounding it into pieces using a double-sided hammer known as a mallet or tenderizer. Its handle is wooden, while its fittings are metal.
+
+Something inside you has changed, and you have begun to see the deadly potential in even the most mundane objects. Moreover, a strange, hidden power allows you to harm even fiends and celestials.~
+@500171 = ~Cannibal's Bib~
+@500172 = ~CANNIBAL'S BIB
+Special:
+ +1 to Armor Class
+ +1 to ThAC0
+Weight: 0
+
+It takes you some time to finish your meal because you are a man of culture.
+
+This is a cover worn under your chin to prevent any precious bits of food from falling to the ground. You know how to respect your meals and will gnaw everything down to the last bone.~
+@500173 = ~Dead Celestial's Ring~
+@500174 = ~Kintyrean Memory~
+@500175 = ~DEAD CELESTIAL'S RING
+Weight: 1
+
+You took this silver ring from a dead, petrified celestial being trapped in ice at the top of Mount Nemezia. You do not know what he did to deserve such a fate. The ring itself is very old. You cannot identify the type of metal it is made from, and the symbol engraved on it means nothing to you.~
+@500176 = ~KINTYREAN MEMORY
+Special:
+ +3 to Armor Class
+ +2 to Saving Throws vs. Breath
+ Increases spell casting speed
+Weight: 1
+ 
+Even the Identification spell reveals little about the ring. Only its name and properties come to mind. Its origin is shrouded in a mystery far beyond the reach of simple magic.
+
+You took this silver ring from a dead, petrified celestial being trapped in ice at the top of Mount Nemezia. You do not know what he did to deserve such a fate.~
+@500177 = ~Axe of True Wrath~
+@500178 = ~AXE OF TRUE WRATH
+Damage: 3-18 Slashing
+Enchanted: +3
+Special:
+ 10% chance of causing the opponent to go berserk
+ 5% chance of causing the opponent to fall asleep
+ 1% chance of causing the wielder to go berserk
+THAC0: +3
+Speed: 6
+Weight: 4
+Proficiency: Axes
+Usable only by Fighters
+Unusable by Good characters
+
+
+This axe is made of iramant, a unique metal from Wrath's Deep, the 262nd layer of the Abyss. It was once claimed by a cambion lord, a self-proclaimed ruler of demons, but was abandoned after his sentencing to the Wells of Darkness. Today, his blacksmiths remain in the abyssal colony, still smelting magical weapons from the local ore.
+
+Not all of the alleged facts surrounding Kabatum's trophy seem credible, but that matters little when you examine this magnificent weapon. Indeed, it would be wasted as a mere display piece. Whether iramant, extracted from the endless void, is a real material or not, contact with it incites greater ferocity in both enemies and the wielder, which can lead to a loss of touch with reality. Truly, madness lies dormant in the depths of the Abyss.
+
+The righteous will have a hard time wielding this axe. It is intended for irredeemable sinners who display amoralism and hypocrisy, traits alien to the peaceful Upper Planes. Or so it seems.~
+@500179 = ~Skin of Devils' Dread~
+@500180 = ~SKIN OF DEVILS' DREAD
+Invokes: "Horror" once a day
+Weight: 10
+ 
+
+This is a piece of skin from a hellchain weaver, a spider-beast from the darkest recesses of the Nine Hells, feared even by devils. Every creature in the Nine Hells recognizes the sound of these chains and can distinguish them from any torturer or penitent. That is what a hellchain weaver's skin is made of: cruel hooks, barbed chains, and jagged iron. Shake it hard, and its clanging will send shivers down even a baatezu's spine.
+
+No matter how you hold this ghastly chain net, the tiny spikes and blades covering each link prick your fingers. When shaken, these sharp protrusions rub against each other, producing an unsettling rattle and grinding sound, almost as if it carries wails of despair and shrieks of agony. Some of the spikes seem to grasp the user's hand greedily, cutting the fingers.
+
+When wielded, it creates an eerie rattle and grinding noise that instills fear in creatures within its field of vision.~
+@500181 = ~Mawu's Journal~
+@500182 = ~MAWU'S JOURNAL
+Weight: 1
+
+A beautifully crafted, decorated journal containing the notes of Professor Mawu from the Society of Sensation.~
+@500183 = ~Decrepit Amulet~
+@500184 = ~DECREPIT AMULET
+Weight: 0
+
+Apart from the surviving vine motif around the edge, there is nothing to indicate the nature or origin of this symbol.~
+@500185 = ~Decrepit Holy Symbol~
+@500186 = ~DECREPIT HOLY SYMBOL
+Weight: 0
+
+This is clearly a holy symbol, but apart from the surviving vine motif around the edge, there is nothing to indicate its nature or origin. The power it was dedicated to must have been eradicated.~
+@500187 = ~Forbidden Sensory Stone~
+@500188 = ~FORBIDDEN SENSORY STONE
+Weight: 1
+
+This sensory stone has an eerie presence. It also bears dried blood stains, as if it had been used as a murder weapon.~
+@500189 = ~Bolts of Incarnate Fire~
+@500190 = ~BOLTS OF INCARNATE FIRE
+Damage: 2-5 (piercing)
+Enchantment: +3
+Special:
+5 magical fire damage on hit
+Thac0: +2
+Speed: 4
+Weight: 0
+Proficiency: Missiles
+Can be used only by modrons
+
+These bolts contain the power of a primordial elemental fire deity, the Lord of Flames Kossuth. His divine realm is the Crimson Pillar in the Elemental Plane of Fire. It is a globe of flame ten miles wide and so unimaginably hot that the rest of the plane seems almost chilly.
+
+That is where these missiles draw their power from. Even the smallest fraction of this power can wreak havoc on your enemies.~
+@500191 = ~Bolts of Vengeful Storms~
+@500192 = ~BOLTS OF VENGEFUL STORMS
+Damage: 2-5 (crushing)
+Enchantment: +3
+Special:
+ 5 electricity damage on hit
+Thac0: +2
+Speed: 5
+Weight: 0
+Proficiency: Missiles
+Can be used only by modrons
+
+Somehow, these bolts contain the power of the Quasi-Elemental Plane of Lightning, also called the Plane of Storms or, more poetically, the Vengeful Land. The only beings likely able to create such bolts and survive are the vrrxlzk, more commonly called shockers by planewalkers.
+
+They are divided into two groups: the peaceful Contested Ones and the exploratory Sojourners who seek to leave their plane. Such bolts serve their purpose by sending lightning to places they could never reach without outside help.~
+@500193 = ~Bolts of Primordial Rot~
+@500194 = ~BOLTS OF PRIMORDIAL ROT
+Damage: 2-5 (piercing)
+Enchantment: +3
+Special:
+ 5 magical cold damage on hit
+Thac0: +2
+Speed: 4
+Weight: 0
+Proficiency: Missiles
+Can be used only by modrons
+
+Many have discussed the cruel influence that the god of rot, corruption, and decay once had on the planes. Rumors about the slain god's remains include tales of bolts created to spread his decay, allowing his dark glory to return. Whether this is even possible remains a matter of debate, and there is no agreement about whether he was truly destroyed. These uncertainties are fitting for an evil deity who maintained control through lies and half truths. His tentacles were said to move through rotting matter, planting the seed of Moander in sleeping or paralyzed creatures and bringing with it a strange and unknown darkness.
+
+The bolts bear the symbol of a hand with a fanged maw.~
+@500195 = ~Bolts of Extending the Weave~
+@500196 = ~BOLTS OF EXTENDING THE WEAVE
+Damage: 2-5 (crushing)
+Enchantment: +3
+Special:
+ 5 magical damage on hit
+Thac0: +2
+Speed: 4
+Weight: 0
+Proficiency: Missiles
+Can be used only by modrons
+
+It is said that Mystryl gifted the races of the Prime Material Plane with magic. She later came to regret this gift. As wondrous as it was, many evil mages exploited it and twisted it to the limits of their corrupted imaginations. In doing so, they created successive generations of power hungry tyrants who sought to cheat both life and death.
+
+Magic has clearly shaped not only its practitioners but also ordinary people. One result was the rise of a vast market for magical potions and enchanted items. These bolts embody the idea of expanding the Weave, the source of raw magic from which spellcasters draw their power. The Weave flows through nearly every place except dead magic zones. Where it is thin or absent, spellcasting becomes far more difficult, as on Abeir. The Weave is also structured differently on various planes, which alters the way spells function. Any mage who has tried to increase their power in Carceri has noticed this. So has any telepath who hears the whispers of eavesdropping devils in Avernus, not to mention the strange transformation of Bigby's Crushing Hand, which can manifest fiendish claws there.
+
+Even if understanding the true nature of the Weave remains difficult, perhaps impossible, using it in combat is well within reach. Beyond the battlefield, these projectiles are meant to extend the network of the Weave and strengthen the presence of magic in regions where it has not yet taken hold. If the Weave were ever to collapse, it would likely unleash a catastrophe unlike anything the planes have ever known.~
+@500197 = ~Jade Skull~
+@500198 = ~JADE SKULL
+Weight: 2
+
+A miniature skull carved from a precious stone. It appears to serve no purpose other than perhaps acting as a striking yet grotesque paperweight.~
+@500199 = ~Can Ghosts Bleed?~
+@500200 = ~CAN GHOSTS BLEED?
+Weight: 1
+
+This volume, written by an anonymous member or group of members of the Athar, explores whether living beings truly possess souls and what that might imply. A paragraph highlighted in charcoal by a previous reader catches your eye. It reads:
+
+"They say that in the heavens of the Upper Planes we are fulfilled. But what about memories? How can a person burdened by trauma and nightmarish experiences feel eternal joy in paradise? Does the spirit shed them in some form of purgatory, or in heaven itself? And if so, is it still fulfilled after losing its memories? Is it still truly itself without the experiences of life? After all, trauma and regret are inevitable parts of experience, and without them the spirit is no longer the same person it was in life. So can eternal life, which is meant to be paradise, become a trap with no escape for those whose mortal lives were filled with suffering and madness? For such people, would it not be better to die forever in the full sense of the word than to lose themselves or become trapped in a paradise that turns into a personal hell?"
+
+Similar arguments and counterarguments to common religious beliefs appear throughout the book, clearly expressing the author's opposition to an afterlife imposed by the gods.
+~
+@500201 = ~The Paths of Destiny~
+@500202 = ~THE PATHS OF DESTINY
+Weight: 1
+
+This book is a collection of short stories that explore the inevitability of fate and destiny. Some are blissful, while others are overwhelming. The moment it lands in your hands, the bookmark marks the beginning of the following untitled story:
+
+"Once upon a time, in an inaccessible realm, there lived a peaceful and gentle people who cared nothing for the shadow of war that hung over them. It was not their war, they said. When the conflict finally fell upon them like a cataclysm, weeping and gnashing of teeth soon followed.
+
+Among them stood a strange warrior whom they had welcomed when misfortune first came upon them. He roused them from their passivity. His zeal and faith awakened their anger and courage and showed them how strong they could be. Inspired by his example, they went to war to defend their homes and families. The blessing given to the warrior by his beloved stirred their hearts, and an angel proclaimed their victory. As they marched toward glory, none of them realized that the warrior who led them was not driven by care or love, but by a sickness that his surroundings had long restrained, until at last he passed it on to them all.
+
+Faith and courage brought them success. They triumphed and proved their strength. Yet when they returned home, they found only tragedy and ruin. When their proud leader saw the body of his beloved, he understood that if he had not given in to his illness, they might have remained home and protected those they loved. But it was too late. He was left alone, exposed to the full force of the sickness he had once tried to turn against his enemies, and he became its victim in the worst possible way.
+
+Consumed by grief and guilt, the great warrior took his own life. He went to war once more, this time alone and leaving nothing behind. He declared war on an overwhelming force and fell beneath the onslaught of his enemies, hoping that with his death his misery would finally end.
+
+He sought rest in death, but it was not granted to him. He had never understood that his illness was not part of his life but part of his own soul. In the world of the dead, there is no escape from oneself."~
+@500203 = ~Priestess's Note~
+@500204 = ~PRIESTESS'S NOTE
+Weight: 0
+
+This short note was written by a priestess who left the package at the port warehouse. It is written in a language you do not recognize, but three words resemble those in Common:
+
+"water," "belief," "chance"~
+@500205 = ~A Coin with a Two-Faced Likeness~
+@500206 = ~Greater Coin of Fate~
+@500207 = ~A COIN WITH A TWO-FACED LIKENESS 
+Weight: 0
+
+Both sides of this coin show an almost identical image of two female faces fused together. Both are beautiful, but one conveys peace while the other appears malicious. One side is a mirror image of the other.~
+@500208 = ~GREATER COIN OF FATE
+Weight: 0
+
+Sometimes life and death are decided by the toss of a coin.
+
+Both sides of this coin show an almost identical image of two female faces fused together. Both are beautiful, but one conveys peace while the other appears malicious. One side is a mirror image of the other. You recognize the two goddesses of fate in these women: Tymora and Beshaba.
+
+When you toss this coin, the outcome can go one of two ways: everything may feel a little easier for a moment, or quite the opposite. You can never be certain of the result.~
+@500209 = ~Searing Axe~
+@500210 = ~Axe of Ragnarök~
+@500211 = ~SEARING AXE
+Damage: 3-18 Slashing
+Speed: 3
+Weight: 5
+Proficiency: Edged
+Can be used only by Fighters.
+
+This axe is so hot to the touch that you instinctively pull your hand back. It is difficult to explain how it does not burn everything nearby.~
+@500212 = ~AXE OF RAGNARÖK
+Damage: 3-18 Slashing
+Enchanted: +3
+Special:
+ +2 to Armor Class
+ +20 Magical Fire Damage
+ +20% Resistance to Fire and Magical Fire
+ +20% Resistance to Magical Fire
+THAC0: +2
+Speed: 3
+Weight: 5
+Proficiency: Edged
+Can be used only by Fighters.
+
+Surtur, the lord of the fire giants of Muspelheim, is destined to scorch the world one day during Ragnarök, the Twilight of the Gods. No weapon can match his sun-bright sword, but the temples of Mannheim hold many secrets. Among them are vast armaments designed to prepare the giants and their allies for the coming end.~
+@500213 = ~Freezing Axe~
+@500214 = ~Axe of Ultimate Despair~
+@500215 = ~FREEZING AXE
+Damage: 3-18 Slashing
+Speed: 4
+Weight: 5
+Proficiency: Edged
+Can be used only by Fighters.
+
+This axe is extremely cold to the touch, so much so that you can see vapor rising from it.~
+@500216 = ~AXE OF ULTIMATE DESPAIR
+Damage: 3-18 Slashing
+Enchanted: +3
+Special:
+ +2 to Armor Class
+ +20 Magical Cold Damage
+ +20% Resistance to Cold and Magical Cold
+THAC0: +3
+Speed: 4
+Weight: 5
+Proficiency: Edged
+Can be used only by Fighters.
+
+Yggdrasil stretches far, even reaching Hades. Here lies Niflheim, the Northmen's Despair, the land where the evil death goddess Hel is imprisoned. The cold produces a constant, chilling fog that soaks clothing and rusts metal at an alarming rate. This power is bound to an axe that emits a vaporous fog, difficult to overcome even for powerful foes, while making the wielder resistant to the cold.~
+@500217 = ~Smelly Old Axe~
+@500218 = ~Rotting Axe of Corruption~
+@500219 = ~SMELLY OLD AXE
+Damage: 3-18 Slashing
+Speed: 4
+Weight: 5
+Proficiency: Edged
+Can be used only by Fighters.
+
+The smell of this old axe is unpleasant and hard to bear. It appears rusty and worn, and it is difficult to tell if it will be of any use.~
+@500220 = ~ROTTING AXE OF CORRUPTION
+Damage: 3-18 Slashing
+Enchanted: +2
+Special:
+ Poisons the opponent
+ +2 to Armor Class
+ +20 Acid Damage
+ +20% Resistance to Acid
+ Immunity to Poison
+ +2 Save vs. Death
+THAC0: +2
+Speed: 4
+Weight: 5
+Proficiency: Edged
+Can be used only by Fighters.
+
+The toll of the followers of Moander, the Bringer of Darkness, is unimaginable. Weapons touched by their fragments retain lethal properties for centuries, and those struck by them die in excruciating pain. This axe is set with a stone engraved with the symbol of a hand bearing an open, fanged mouth, a reminder of the millennia-long struggle for the ultimate dissolution of the multiverse.~
+@500221 = ~Electrified Axe~
+@500222 = ~Wind Axe of Aaqa~
+@500223 = ~ELECTRIFIED AXE
+Damage: 3-18 Slashing
+Speed: 2
+Weight: 5
+Proficiency: Edged
+Can be used only by Fighters.
+
+When you bring your hand close to it, you feel the hairs on your back rise and see them standing on end. There is something about this weapon that sends a shiver down your spine every time you touch it.~
+@500224 = ~WIND AXE OF AAQA
+Damage: 3-18 Slashing
+Enchanted: +2
+Special:
+ +2 to Armor Class
+ +20 Fire Damage
+ +20% Resistance to Electricity
+THAC0: +1
+Speed: 2
+Weight: 5
+Proficiency: Edged
+Can be used only by Fighters.
+Cannot be used by Chaotic characters.
+
+This axe originally belonged to the vault of the vaati, the Wind Dukes of Aaqa in the Elemental Plane of Air. It may have begun its journey through the planes during the war against the Queen of Chaos, one of the obyriths, ancient demons of the Abyss. The Wind Dukes represented Law, so the battle was fierce, especially when the Queen raised a general, Miska the Wolf-Spider, the predecessor of the infamous Demogorgon. Miska's army conquered world after world. While the Dukes' elite, the Captains of Law, focused on crafting a powerful artifact called the Rod of Law, ordinary soldiers needed weapons capable of standing against the greater tanar'ri. Axes like this one were imbued with lightning energy, incredibly fast, and deadly against fiends. Today it remains a souvenir of a fallen empire.~
+@500225 = ~Cerebral Parasite Earring~
+@500226 = ~CEREBRAL PARASITE EARRING
+Special:
+ +3 to Intelligence
+ +1 to Wisdom
+ -1 to Constitution
+ Immunity to Panic
+Weight: 1
+
+One of the earrings Beatha makes from cerebral parasites called kassegs. They resemble intellect devourers but are much smaller. This would be unsurprising if not for the fact that a kasseg cannot survive more than a few hours after attaching itself to a host, having formed a mental bond. Miraculously, Beatha has made the benefits of this strange symbiosis permanent. The cost, beyond the considerable strain on the body, remains unknown to the wearer and most likely even to Beatha herself.~
+@500227 = ~Clockroach Earring~
+@500228 = ~CLOCKROACH EARRING
+Special:
+ +2 to Armor Class
+ +2 to Armor Class vs. Crushing Attacks
+ +10% Resistance vs. Crushing Attacks
+ +10% Resistance vs. Acid
+Weight: 2
+
+This earring was crafted by Beatha from a miniature clockroach, a construct resembling a cockroach. These creatures were once released into the jungles of Chult to clear paths to ancient ruins, but now they consume not only garbage but also flora, artifacts, and unwary travelers. Normally the size of a dog, their sharp pincers and corrosive acid make them far more dangerous than their size suggests. Above all, they perfect a trait for which cockroaches are infamous: they are extremely difficult to kill. The earring allows you to magically acquire some of the traits of this relentless automaton.
+
+Its effect is similar to that of a cockroach charm, but slightly weaker and permanent while worn. This is not merely a decorative trinket.~
+@500229 = ~Frog Figurine~
+@500230 = ~Figurine of Wondrous Power: Frog~
+@500231 = ~FROG FIGURINE
+Weight: 2
+
+This life-size sculpture resembles a frog. It must have taken great skill to create with such precision, but it is unclear if it serves any purpose beyond artistic expression.~
+@500232 = ~FIGURINE OF WONDROUS POWER: FROG
+Special:
+ Immunity to Poison
+ +2 to Armor Class
+ +2 Save vs. Breath
+Weight: 2
+Cannot be used by characters that are armless or burning
+
+This life-size sculpture resembles a frog. Figurines of wondrous power are typically used to summon a sentient animal by placing them on the ground and speaking a command word. This one, however, has been modified by Beatha to grant the user the benefits of frog-like abilities while it is held. These benefits include improved camouflage, which enhances Armor Class, resistance to poison, and the ability to hold one's breath for an extended period.~
+@500233 = ~Serpent Skin Wallet~
+@500234 = ~SERPENT SKIN WALLET
+Weight: 1
+
+This wallet, likely made from the skin of a Shadow Sea serpent, is designed to store jewelry. Considering how popular jewelry is in Sigil, it could be a worthwhile purchase for better inventory management.
+
+The unnatural properties of its material make the owner more difficult to rob. A thief might hesitate before reaching into the wallet's bottomless darkness. Its origin is the Shadowfell, the Plane of Shadow, where the Shades breed eldritch monstrosities, including enormous serpents crossed with whales that devour anything in their path. The enchantment on this wallet ensures that the owner can recover their possessions with ease, though some doubt is understandable.~
+@500235 = ~Earring of a Tormented Soul~
+@500236 = ~EARRING OF A TORMENTED SOUL
+Special:
+ Increases regeneration
+ +5 to Health Points
+ +2 Save vs. Death
+ +1 to Armor Class
+ -1 to Charisma
+Weight: 1
+
+The symbol tattooed on your arm has haunted you for an incomprehensible amount of time. Did it exist before, or was it born from Ravel's twisted magic? In any case, torment proves to be a force that, like magnetism, draws other tormented souls, and the weapon created by Coaxmetal took the same shape. Therefore, it should be possible to wear this symbol as an earring and use it to prepare the body for the pain to come. Still, expressing suffering does little to aid conversation.~
+@500237 = ~Blood Fly Charm (Troll)~
+@500238 = ~BLOOD FLY CHARM (TROLL)
+Special:
+ Heals 30 Hit Points
+ Increases Regeneration
+ -50% resistance to fire
+Weight: 0
+
+Blood flies are pests thought to have originated from one of the Lower Planes. In many ways, they resemble mosquitoes with an insatiable hunger. A cloud of blood flies can drain all the blood from a human body within minutes, and their stingers are capable of piercing even the skin of fiends.
+
+Some healers use blood flies to draw diseased blood from a patient. Occasionally, swarms are employed to siphon rare types of blood. The flies are then paralyzed with powders or spells and stored for future use.
+
+This particular blood fly charm appears to contain troll blood within its food sac. When the paralyzed fly is consumed, it immediately restores a small amount of damage and grants the user the ability to regenerate for a limited period. If the character already has the ability to regenerate, the effect increases the regeneration rate.~
+@500239 = ~Blood Fly Charm (Cornugon)~
+@500240 = ~BLOOD FLY CHARM (CORNUGON)
+Special:
+ Heals 50 Hit Points
+ Increases Regeneration
+ +10% resistance to fire
+ +7% resistance to magical fire
+ +3% resistance to magic
+ Weight: 0
+
+Blood flies are pests thought to have originated from one of the Lower Planes. In many ways, they resemble mosquitoes with an insatiable hunger. A cloud of blood flies can drain all the blood from a human body within minutes, and their stingers are capable of piercing even the skin of fiends.
+
+Some healers use blood flies to draw diseased blood from a patient. Occasionally, swarms are employed to siphon rare types of blood. The flies are then paralyzed with powders or spells and stored for future use.
+
+This particular blood fly charm appears to contain the blood of a greater fiend, a cornugon. These fiends are the elite of Baator's defenses, with some reporting directly to the Dark Eight. They can survive in extremely harsh conditions and mostly dwell in the lower circles of the Nine Hells. Yet even they bleed.~
+@500241 = ~Blood Fly Charm (Gelugon)~
+@500242 = ~BLOOD FLY CHARM (GELUGON)
+Special:
+ Heals 75 Hit Points
+ Increases Regeneration
+ +10% resistance to cold
+ +7% resistance to magical cold
+ +5% resistance to magic
+ Weight: 0
+
+Blood flies are pests thought to have originated from one of the Lower Planes. In many ways, they resemble mosquitoes with an insatiable hunger. A cloud of blood flies can drain all the blood from a human body within minutes, and their stingers are capable of piercing even the skin of fiends.
+
+Some healers use blood flies to draw diseased blood from a patient. Occasionally, swarms are employed to siphon rare types of blood. The flies are then paralyzed with powders or spells and stored for future use.
+
+This particular blood fly charm appears to contain the blood of an ice devil, a gelugon. Gelugons are insectoid guardians of Cania, the eighth layer of Baator.~
+@500243 = ~Mint Earring~
+@500244 = ~MINT EARRING
+Special:
+ +1 to Armor Class
+ +3 to Charisma
+ +10% resistance to cold
+Weight: 1
+
+This earring was crafted by Beatha from a piece of mint candy and clings to the ear like a pearl. The concept was simple, but the challenge lay in making the earring a durable piece of jewelry that could withstand varying weather conditions. The solution, perfectly suited to its refreshing mint scent, was a chill spell. The earring protects the wearer from cold and enhances their Charisma, ensuring that any conversation goes in their favor.~
+@500245 = ~Mysterious Bag~
+@500246 = ~MYSTERIOUS BAG
+Weight: 1
+
+This is a bag you purchased from the warehouse manager. Its contents are unknown.~
+@500247 = ~Jade Jaw~
+@500248 = ~JADE JAW
+Weight: 1
+
+A jawbone carved from precious stone. It is small, yet its shape closely resembles a human bone.~
+@500249 = ~Clothes~
+@500250 = ~CLOTHES
+Weight: 1
+
+Neatly folded clothes purchased at a Ditch marketplace. They once belonged to the naive young man who was robbed by a woman in a red dress.~
+@500251 = ~SACRED SIGIL OF KNOWING
+(Greater artifact)
+ Special:
+ Blur
+ Improves Armor Class by 3
+ Improves Strength by 1
+ Improves Saving Throws
+Weight: 0
+
+This is the sacred signet ring that once belonged to the Word Archon of the Glass Tarn. It rested on a pedestal, for no one takes such precautions with ordinary jewelry. Inscribed upon it are brief fragments of the Metatext, records that unite all the knowledge of the Multiverse and grant access to its deepest secrets. These inscriptions are said to be the work of priests and monks of the Church of Deneir, known as glyphoscribes. The First Scribe of Oghma recorded and mastered the knowledge of the Metatext, and in doing so transcended reality.
+
+The wisdom contained within empowers the wearer in ways otherwise unattainable. It allows them to partially step beyond this dimension of understanding, producing an effect akin to a permanent Blur spell. This makes the wearer much harder to strike while enabling them to tap into the hidden powers of the multiverse.
+
+Once the truth is known, there is no return to the state of ignorance.~
+@500252 = ~The Prophetess of Action~
+@500253 = ~THE PROPHETESS OF ACTION
+Weight: 1
+
+This legendary work, written in prose, resembles an epic chivalric romance in form, but its content serves more as a mockery of the genre's ideals than as an example of them. Its author was the spirited spellscale priest Qafzech de Vermilion. The book is dedicated to the life and work of Celosia, a prophetess and saint of the cult of Garyx, the dragon god of fire and destruction. Unlike most clergy, Celosia, gifted in magic, preferred to demonstrate her faith through action rather than words. She became known as the Prophetess of Action. Described as a half-nymph, half-lizard woman of hellfire, she was said to be so austere in beauty that even her own god was enchanted. The work emphasizes the solemnity of the scenes of doom and desolation wrought by the protagonist during her pilgrimage. It glorifies acts of mass destruction and imbues them with a twisted significance.
+
+This reissue was published by the Doomguard faction as recommended reading for the Sinkers, providing a literary introduction to their philosophy of destruction. To facilitate understanding, this edition features a detailed foreword by Taranis the Half-Dragon, who explains the parallels between Garyx's religion and the Doomguard's worldview.
+
+"(...) Garyx is called the All-Destroyer, for his will can truly affect any object in the Great Wheel. A mortal's life, a magical artifact, a city, a deity, or even an entire plane may fall under his influence. Yet it is not Garyx but Faluzure and Chronepsis who are the dragons' gods of death. Garyx, venerated by the Doomguard, represents meaningful destruction. What is the meaning of destruction? This book seeks to answer that question.
+
+Everything in the universe ages. Everything will one day pass away. Although Garyx and this book claim that dragonkind is eternal, one must accept the truth that dragons will also eventually become extinct. Celosia explains the meaning of this, the beauty of doom. After destruction comes renewal, like a burned forest that regrows. Extinction crowns decay and decadence just as death ends old age and disease. Readers may find many interpretations within this work, but all lead to the common goal of the Doomguard and the cult of the All-Destroyer, completion.
+
+Some remove the rot from the world and replace it with new, more beautiful life. Others revel in destruction and leave the resulting void to fate. Destruction can have countless motivations, just as Saint Celosia's actions can be interpreted in different ways, revenge, wrath, or mercy. Every act of destruction has meaning. It is for this purpose that the Doomguard reissues this work, not necessarily to celebrate Garyx personally or to foster his cult, as the original author intended, but above all to demonstrate the beauty and ecstasy of destruction. Faith in the Cleanser of Worlds, personally professed and recommended by the initiator of this edition and author of its foreword, is a welcome addition but not required to appreciate the prose or emulate its lessons. Reader, read it with a flushed face and allow yourself to be carried along by the conflagration engulfing the Great Wheel. May the Prophetess of Action ignite your passion and guide your purpose through destruction. Let her lead you in the dance of doomsday. (...)"
+
+In this copy of the book, the most striking moment is the baptism of fire, in which the protagonist becomes an avatar of her god and unleashes a fiery storm upon her family grove. The descriptions of Garyx and Celosia's reunion at the center of the conflagration, combined with the depiction of the fire god's presence in the flames consuming the naked body of the heroine, are suggestive. They give the impression that, in that moment, their union was driven by something more mundane than divine incarnation, yet no less intense than the ecstasy of pyromania.~
+@500254 = ~A Bleaker's Manifesto~
+@500255 = ~A BLEAKER'S MANIFESTO
+Weight: 1
+
+This is an unofficial set of rules written by Ími of the Bleak Cabal, intended to summarize the beliefs and reflections of this faction.
+
+1. I do not seek meaning in all this, for knowing the world is impossible and should remain so. The only meaning I can find is meaninglessness.
+
+2. I worship no deities. They are nothing more than powerful mortals whom Entropy will eventually claim, and their priests likely spread lies.
+
+3. There are no absolute truths, and no one has ever known them nor will they ever know them. Perception of the world is subjective.
+
+4. This life is the only one we have. I do not trust those who promise life after death, freedom from evil spirits, or divine blessings in exchange for temple donations.
+
+5. True freedom comes from inner peace and faithfulness to oneself, for only within can any semblance of meaning be found.
+
+6. I do not allow myself to be hypocritical or foolish, traits so often found in the members and leaders of other groups.
+
+7. I dare to doubt. Everything that has been written may be false, including this text.
+
+8. I accept reality as it is, but I oppose those who impose their will on those who have not formed their own.
+
+9. The value of everything, including my own life, is subjective and depends on perspective.
+
+10. I accept that all must die. When the time comes, every stone will be crushed.~
+@500256 = ~Bone of Thanatos~
+@500257 = ~BONE OF THANATOS
+Weight: 1
+Can be used only by The Nameless One
+
+A gift for a new acolyte of Kiaransalee.
+
+"... and as the White Banshee reveled in the fruits of her work, her wasteful consort, ruled by the illusions of vanity, grew ever more resentful to his once beloved. And as the White Banshee strove to beat death itself and reverse the natural order of things, the wasteful consort was bent on moving tiny pawns of irrelevancy on his tiny, pitiful board. 
+
+Alas, the many small have drowned out the voice of greatest one in the end, and the White Banshee was cast down, disowned, her kingdom not her own any more, even when she dedicated herself in her entirety for the good of her people. 
+
+The White Banshee looked up from the depths of her imprisonment, and the White Banshee saw that the kingdom rejoiced under the consort's trivialities. Their minds and spirits grew weak, insignificant, unworthy of their former queen's love. 
+
+The White Banshee then knew she erred in her ways and would set her eyes on righting this wrong. She would bring meaningful death to this world of meaningless life..." ~
+@500258 = ~The History of Interfactional Diplomacy~
+@500259 = ~THE HISTORY OF INTERFACTIONAL DIPLOMACY
+Weight: 1
+
+This book explores the nuances of the complex relationships between factions and the history of diplomacy, giving considerable attention to alliances and conflicts among them. Countless factions have emerged over the years. Some that were once significant have fallen or been replaced, while others remain small sects that, despite their limited membership, often prove a persistent thorn in the side of larger groups. At the time of writing, fifteen factions are officially recognized, making it a daunting task to memorize all their relationships. These connections are not symmetrical and can only be understood in a general, intuitive sense. Each faction is based on different planes, both Outer and Inner, but they are most likely to encounter one another in the middle, in the City of Doors, Sigil.
+
+An important conclusion drawn from this work is that factions with similar views will tend to cooperate, while those with opposing philosophies are likely to become hostile. As a result, projects that require cooperation among multiple factions must take into account their respective alignments and animosities.
+
+Below are some of the more important interfactional relationships to consider:
+
+Athar
+Factol: Terrance
+Allies: Believers of the Source (good relations and frequent cooperation, shared belief in rising above the powers)
+Enemies: Doomguard (criticism of the extreme methods of their factol, Pentar)
+
+Believers of the Source
+Factol: Ambar Vergrove
+Allies: Athar (good relations), Doomguard (shared belief in the ultimate end of the multiverse)
+Enemies: Dustmen, Bleak Cabal (disagreements of opinion)
+
+Bleak Cabal
+Factol: Lhar
+Allies: Doomguard, Dustmen, Revolutionary League, Xaositects
+Enemies: Fraternity of Order, Harmonium, Mercykillers (lawful beings cannot accept the Bleak Cabal philosophy), Sign of One (responsible for the death of a former factol)
+
+Doomguard
+Factol: Pentar
+Allies: Dustmen, Believers of the Source, Bleak Cabal, Xaositects (shared belief in entropy)
+Enemies: Fraternity of Order, Harmonium (opposed to entropy)
+
+Dustmen
+Factol: Skall
+Allies: Bleak Cabal, Doomguard, Fated, Lords of the Undead (Dead Truce)
+Enemies: Society of Sensation, Sign of One (opposed to Dustmen fatalism)
+
+Fated
+Factol: Rowan Darkwood
+Allies: Free League (shared views on independence), Mercykillers (opposition to mercy, adherence to the law of the strongest)
+Enemies: Harmonium (closely monitored by them)
+
+Fraternity of Order
+Factol: Hashkar
+Allies: Mercykillers, Harmonium (joint enforcement of the law and administration of justice in Sigil)
+Enemies: Xaositects, Revolutionary League (antithetical to the orderly principles of the Guvners)
+
+Free League
+Factol: none
+Allies: Fated (shared views on independence)
+Enemies: Harmonium (perceived as overly suspicious and hostile to freedom)
+
+Harmonium
+Factol: Sarin
+Allies: Fraternity of Order, Mercykillers (joint enforcement of the law and administration of justice in Sigil)
+Enemies: Fated, Revolutionary League, Xaositects (considered criminal or suspect), Transcendent Order (disagreement over the concept of order)
+
+Mercykillers
+Factol: Alisohn Nilesia
+Allies: Harmonium, Fraternity of Order, Doomguard, Fated (adherence to the law of the strongest, opposition to mercy)
+Enemies: Revolutionary League, Society of Sensation, Sign of One (frequent legal conflicts)
+
+Revolutionary League
+Factol: none
+Allies: Doomguard, Xaositects (support the disintegration of existing order)
+Enemies: Harmonium, Mercykillers, Fraternity of Order (represent the structures anarchists oppose)
+
+Sign of One
+Factol: Darius
+Allies: Society of Sensation (similar beliefs)
+Enemies: Harmonium, Bleak Cabal (conflicting views)
+
+Society of Sensation
+Factol: Erin Darkflame Montgomery
+Allies: Sign of One (shared approach to egoism), Fraternity of Order, Free League (mutual respect through the pursuit of knowledge)
+Enemies: Doomguard (philosophical differences)
+
+Transcendent Order
+Factol: Rhys
+Allies: Most factions (disinterested in actual alliances or conflicts)
+Enemies: Harmonium (disagreement over the concept of order)
+
+Xaositects
+Factol: Karan
+Allies: Doomguard, Bleak Cabal (aligned by chaos)
+Enemies: Harmonium, Fraternity of Order (opposed to chaos)
+
+The book concludes with a comprehensive set of footnotes and references to other political, historical, and legal publications in multiple languages.~
+@500260 = ~Limbo in Limbo~
+@500261 = ~LIMBO IN LIMBO
+Weight: 1
+
+FOREWORD
+by Kieran the planewalker
+
+"Hello, my friend! If you are reading these words, it means you are curious about the multiverse and its planes, and that makes you my kindred spirit. With a clear conscience, I can call you my friend.
+
+So, my friend, I invite you on another of my journeys along the Great Wheel. This time, I have wandered into a place with a rather bad reputation. Wrong! I have heard so much about how terrible and unfriendly Limbo is, but it is simply not true. I will show you in the pages of this book that a positive attitude opens all doors and sometimes even creates them out of thin air.
+
+We will stroll along the impressive gray streets of Shra'kt'lor with the delightfully friendly githzerai. I will teach you how to swim in pure chaos, harnessing the power of positive thinking. Then we will take a break at Barnstable, enjoy slaad stew, and sing traditional halfling chants with the hosts. Finally, we will visit Fenmarel Mestarine's domain. I tried to convince him of the power of friendship, but I do not think he was ready to accept love into his heart yet. Perhaps you will be luckier than I was.
+
+Now, let us embark on this magical journey through the Multiverse without delay and discover all the wonders it has to offer. It is so beautiful, after all. If you just smile at it, it will smile back at you.
+
+Kieran"
+
+Beneath the signature is a simple drawing of a smiling face with angel wings and a halo.~
+@500262 = ~By Torch and Shield: A Guide to the Elemental Plane of Fire~
+@500263 = ~"BY TORCH AND SHIELD: A GUIDE TO THE ELEMENTAL PLANE OF FIRE"
+Weight: 1
+
+FOREWORD
+by Kieran the planewalker
+
+"I would like to extend a welcome to you, my traveling companion through the planes. Perhaps I should say a warm welcome, for today I plan to take you to the warmest place in the entire multiverse, the Elemental Plane of Fire.
+
+It is undoubtedly an extraordinary place, full of people with warm hearts, unique monuments, and natural wonders you will not see anywhere else. I recommend bringing cold drinks, a good moisturizer, and plenty of smiles. A flame-proof potion will also be useful if you plan to explore the trackless wilderness of this plane, or you may end up as a pile of ash.
+
+If you prefer reading to walking, and basking by a fireplace sounds better than swimming in white heat, do not worry. In the following pages, I will tell you about the most fascinating things the Elemental Plane of Fire has to offer. We will haggle amicably with the azers in the Crucible's marketplace, visit the beautiful mosques of the City of Brass, and finally explore the Citadel of Fire, which shares a long and colorful history with the City of Doors. Everything in the Multiverse is connected.
+
+Now, I invite you on a journey that will warm your bones and ignite passion in your heart. Onward to adventure.
+
+Kieran"
+
+Beneath the signature is a simple drawing of a smiling face with angel wings and a halo.~
+@500264 = ~~
+@500265 = ~SHINA-TSU-HIKO MILK
+Weight: 1
+
+The label is marked with three curly lines. Could it be real milk inside? Perhaps it is the milk of that creature called Shina-Tsu-Hiko, a name that sounds strange to your ears. It is difficult to answer these questions, and the effects of this cloudy, white, slightly bitter drink on anyone who consumes the contents of the small bottle remain unclear.~
+@500266 = ~~
+@500268 = ~A Piece of String Covered in Saliva~
+@500269 = ~A PIECE OF STRING COVERED IN SALIVA
+Weight: 1
+
+A short piece of string, cut evenly at both ends. It appears to be of fairly good quality despite its pitiful, slobbery condition. The string is soaked in some kind of grease, likely intended to make it waterproof. The coating also made it appealing to the kuo-toa who once possessed it.~
+@500270 = ~A Note from the Priestess of Istishia~
+@500271 = ~A NOTE FROM THE PRIESTESS OF ISTISHIA
+Weight: 0
+
+Whoever you are, read this. I was here, Aquafina the cleric, trying to convert a bunch of stubborn kuo-toa to the only true faith of Istishia, but they just would not listen. They started to profess it, but they still make bloody sacrifices to him now, and somehow I feel like I have become the leader of this cult. I am sure some Mercykillers will come eventually and feed ME to their wyrm for all of this.
+
+So I decided to slip away quietly.
+
+If you are a representative of the law in Sigil: the kuo-toa are down there, I recommend violence, I am innocent.
+
+If you are an adventurer: the kuo-toa are down there, I recommend violence.
+
+If you are some kid snooping around in basements: RUN!~
+@500272 = ~Toxic Drink~
+@500273 = ~TOXIC DRINK
+Weight: 1
+
+The poisonous green color of this drink is clearly suspicious. Simply approaching the container makes you feel nauseous. Opening it is probably unwise unless you know how to handle it. Perhaps the marilith bartender intended to serve it to one of the guests.~
+@500274 = ~Vudran Water~
+@500275 = ~VUDRAN WATER
+Invokes: "Adder's Kiss" on three targets at once, once a day
+Weight: 1
+Cannot be used by Good characters
+
+The 531st layer of the Abyss, Vudra, is known for its highly toxic air and its blood ocean. It is ruled by the marilith queen Shaktari, who was captured by some of the Baatorian Lords of the Nine and taken to the Wells of Darkness, then released by an unknown baernaloth to incite the Blood War. Whether the marilith bartender intended to poison any of the guests remains a mystery. It is unlikely that she spared him out of sentimental attachment to her family plane.
+
+Toxic water vapors will reach their targets if the container is properly aimed after opening. The effect should last for a considerable time, dealing 2 to 8 points of damage to three targets every five seconds. The duration is extended as if the user were an 18th-level mage.~
+@500276 = ~Big Bone~
+@500277 = ~BIG BONE
+Weight: 2
+
+The bone that, for some unknown reason, once belonged to Agraval. It appears to be human.~
+@500278 = ~Bone of Lies~
+@500279 = ~BONE OF LIES
+Invokes: "Reign of Anger" on three targets at once, once a day
+Weight: 2
+Cannot be used by Good characters
+
+Portent in Gehenna is a treacherous place, filled with murder and lies. A tiefling oracle named Laughing Jane lives there, with snakes writhing from her empty eyes, each mouth speaking a different word. Somewhere within her speech lies the truth, but what does it matter when it cannot be verified?
+
+Jane's words were enchanted into this bone, which once belonged to one of Gehenna's petitioners. It can be used as a wand capable of weaponizing words. To activate it, one must select exactly three targets. They will be struck by up to five missiles, each dealing 3 to 6 points of damage.~
+@500280 = ~Heavy Flail~
+@500281 = ~HEAVY FLAIL
+Damage: 1-10, crushing
+Speed: 2
+Weight: 20
+Proficiency: Clubs
+Unusable by Mages
+
+A black, spiked bar made of a cold material resembling bone, and studded with twelve studs, is attached to the handle.~
+@500282 = ~Devil's Bane~
+@500283 = ~DEVIL'S BANE
+Damage: 1-10, crushing
+Enchanted: +3
+Special:
+ +2 Armor Class
+THAC0: +2
+Speed: 3
+Weight: 20
+Proficiency: Clubs
+Unusable by Mages
+
+This is a weapon that Valen the weapon master has come to favor. It is a heavy flail. A black, spiked bar made of a cold material resembling bone, studded with twelve studs, is attached to the handle. These heads increase its striking power, setting it apart from the simple flails used by farmers. Its drawback is a lack of precision, but it is highly effective at breaking through enemy defences. In Valen's case, a veteran of the Blood War, those enemies were hordes of fiends. As a result, the weapon was inevitably shaped for that purpose.~
+@500284 = ~Empyrean Diamond~
+@500285 = ~EMPYREAN DIAMOND
+Weight: 0
+
+A flawless, radiant gemstone that emits a soft, divine light. It is said to be extremely valuable.~
+@500286 = ~Rope~
+@500287 = ~ROPE
+Weight: 3
+
+Around 30 feet of strong, thick rope.~
+@500288 = ~Worse to Ask the Way than to Go Astray~
+@500289 = ~WORSE TO ASK THE WAY THAN TO GO ASTRAY
+Weight: 1
+
+"I, one of many who have fallen, clinging desperately to life and poisoned, write this warning for all the greedy and utterly foolish, for you who walk the paths of ignorance.
+
+Heed the signs, for the hour has struck and there is no turning back.
+
+*
+
+It would seem that the angels seek nothing.
+
+He sought knowledge, but also a paradise long lost, like sand that so often slips through one's fingers.
+
+There was a time when I myself searched for I know not what. At last, my wish was granted, and the Abyss appeared in empty eyes, a gaze behind which a vortex of confusion hides.
+
+I soon realized it was not I who was asking the questions, but the questions that were being asked of me.
+
+One morning, he arrived in the splendor of his fallen glory, all his boundless majesty founded upon pillars of power that elude ordinary perception and a beauty that cannot be fully seen. How hypocritical it all was. He presented himself as a "friend."
+
+Promises, real miracles, solved tasks, all these things I had. And finally, convinced of my own divinity, my twisted mind sought the path to ultimate perfection: immortality. But I know now this is merely a reflection of true death in the distorting mirror of a haunted, false life.
+
+And so, passing through successive levels of knowledge, I arrived at the universal crime. He told me, in a whisper: "Murder is equal to the gift of life. Does not everything perish so that the new may be born? Does not the young consume the old?" And sometimes I still hear that voice. I have fallen into the mirror image of doom, and I know I have forgotten the way to my old home.
+
+Perhaps we revel in the glory of our own anomalous lives, only to find our journey insignificant.
+
+Or perhaps we are the perfect angels.
+
+The "friend" will explain everything to you, taking only your soul in return."~
+@500290 = ~Manifesto?~
+@500291 = ~MANIFESTO?
+Weight: 0
+
+"To the free people of this world!
+
+
+Verily, nothing stranger could occur to a simple and hackneyed mind like mine than to think of carping at the rulers. And yet it happened, for appearances are deceptive.
+
+The situation is not rosy. The rulers are devoid of honor, although power creates the illusion that honor should always come first for such a person. I will point out at once that, as in every pathology, there are exceptions. However, in general, rulers are cunning individuals who believe that everything is theirs and that they are entitled to everything. This cunning stems from the fact that, thanks to their superior position, they think they can deceive our simple minds. But truly, does not life teach us that wisdom and intelligence are two different attributes?
+
+Their haughty manners, evasive speech, expensive clothes, and fat purses, what are these compared to our vision of a happy and carefree world? They will tell you that you do not understand, but I understand perfectly: greed and lust are in your hearts, and desire rules your mind, and there is nothing more. Feelings have faded along with the glitter of gold, freedom has withered along with the will to conquer and destroy all that belongs to others, and joy lies only in inflicting suffering and fulfilling the promises of envy. Sad, oh so sad are your eyes, deceptive and deceitful. Power and ruthless authority, that is your religion!
+
+They say that simple people resent the "better ones" because they envy them, but nothing could be further from the truth. This resentment stems from understanding a simple thing. Power is more than privilege and wealth. Therefore, I appeal to the masses of ordinary people, the ignorant masses: LET US FIGHT the boot of the fat haters who trample on our hearts. Let us fight for a place in this noble world!
+
+The Innominate Ignorant (i.e. Smart Seditionist)"~
+@500292 = ~Ode to Entropy~
+@500293 = ~ODE TO ENTROPY
+Weight: 0
+
+"There is no turning back
+Time is running out
+Many a man has tried
+But no one succeeded
+Time goes only one way
+
+Entropy
+Entropy
+Entropy
+Entropy
+
+Everything falls apart
+Everything is receding
+So deep in its heart
+The multiverse is bleeding
+
+The Inner and the Outer Planes
+Energy and the Elements
+The Astral Sea
+Gate-towns going through shift
+Toril and Oerth
+And people are
+So far
+Away
+
+Everything falls apart
+Everything is receding
+So deep in its heart
+The multiverse is bleeding
+
+Prepare for the endless night
+At the Planes' extremity
+No one sees the light
+Behold entropy!"~
+@500294 = ~Haer'Dalis' Head~
+@500295 = ~HAER'DALIS' HEAD
+Weight: 5
+
+Such is the final fate of the Sigilian actor.~
+@500296 = ~Scroll Case~
+@500297 = ~SCROLL CASE
+Weight: 2
+
+This sturdy container allows dozens of scrolls to be placed inside it, protecting them from exposure to fire, rain, or lightning, common hazards faced by any adventuring wizard. ~
+@500298 = ~Jade Cranium~
+@500299 = ~JADE CRANIUM
+Weight: 2
+
+A cranium carved from a precious jade stone. The lower jaw is missing, leaving only the smooth, polished contours of the skull.~
+
+////////////
+// ====== //
+// Stores //
+// ====== //
+////////////
+         
+@700000 = ~Adam, the Bestest Blacksmith~ 
+@700001 = ~Fragile-Tail's Lost Goods~ 
+@700002 = ~Kabatum's Planar Miscellanea~ 
+@700003 = ~Alviro's Field Infirmary~ 
+@700004 = ~Beatha's Abyssal Jewelry~ 
+@700005 = ~Wandering Goods~ 
+@700006 = ~The Rivergate Tavern~ 
+@700007 = ~The Sauna Lounge~ 
+@700008 = ~The Ware-Shack~ 
+@700009 = ~The Styx Oarsman Tavern~ 
+@700010 = ~The Rat and Splat Tavern~ 
+@700011 = ~Tavern~ 
+@200000 = ~"We shall know what the darkness discovers,"~ [wers1]
+@200001 = ~"If the grave-pit be shallow or deep;"~ [wers2]
+@200002 = ~"And our fathers of old, and our lovers,"~ [wers3]
+@200003 = ~"We shall know if they sleep not or sleep."~ [wers4]
+@200004 = ~"We shall see whether hell be not heaven,"~ [wers5]
+@200005 = ~"Find out whether tares be not grain,"~ [wers6]
+@200006 = ~"And the joys of thee seventy times seven,"~ [wers7]
+@200007 = ~"Our Lady of Pain!"~ [wers8]
+@200008 = ~"Pike off, berk!"~ 
+
+//////////////////
+// ============ //
+// Spells, etc.  //
+// ============ //
+//////////////////
+
+@600001 = ~Black Blessing of Set~
+@600002 = ~BLACK BLESSING OF SET
+Range: Touch
+Duration: 10 seconds
+Speed: 1
+Area of Effect: Creature touched
+Saving Throw: None
+
+Let the aura of Set's power surround us. For a black mana will be sent down, which will grant your bodies and minds a wellspring of power. Do you feel it? Do you have the strength to accept his gifts? Look into the eyes of Set, and it shall be given to you.
+
+The recipient of the spell gains a +1 modifier to attack and saving throws and is under the effect of haste.~
+@600003 = ~Set's Prayer~
+@600004 = ~SET'S PRAYER
+Range: 0
+Duration: 5 seconds per level
+Speed: 1
+Area of Effect: 60 feet radius
+Saving Throw: None
+
+Let us pray... Set looks. Set sees. Set knows. Open your heart to His whisper. Let the blood boil in your veins as you go into battle!
+
+Prayer is an important part of every religion. So it is here. Comforted by Set's word, you know that nothing and no one will stand in the way of your bloody goal.
+
+This dark version of the "Prayer" spell grants a +1 modifier to attack rolls, damage rolls, and saving throws for allies. Enemies suffer a −1 modifier to attack rolls, damage rolls, and saving throws. The spell lasts for 5 seconds per level within an 18-yard radius.~
+@600005 = ~Reptilian Spit~
+@600006 = ~REPTILIAN SPIT
+Range: 3 ft.
+Duration: 10 seconds
+Speed: 4
+Area of effect: 1 creature
+
+Reptiles have never been renowned for being overly polite, and sometimes they must vent their bile. Why not on their enemies?
+
+This spell deals 3-24 poison damage.~
+@600007 = ~Protection from Cold~
+@600008 = ~PROTECTION FROM COLD
+Range: Touch
+Duration: 5 seconds per level
+Speed: 3
+Area of Effect: 1 creature
+Saving Throw: None
+
+This spell lasts 1 turn per caster level. When cast, it confers complete immunity to normal cold attacks and partial protection against magical cold, such as an icy dragon's breath or spells like Cone of Cold. It absorbs 50% of the damage dealt by such magical sources.~
+@600009 = ~Fireball~
+@600010 = ~FIREBALL
+Range: 40 feet
+Duration: Instant
+Speed: 3
+Area of effect: 15 ft. radius
+Saving throw: 1/2
+
+May Kossuth have mercy on those from whom the fires of creation demand the return of their gift of life.
+
+This spell, very popular on the Prime Material Plane, allows the mage to create a heated ball of flame directly in their hands. When launched at an enemy, it bursts into an explosion, harming not only the target but everyone nearby. For this reason, caution is advised when choosing a target.
+
+A single Fireball deals 1-6 points of damage per mage level (maximum 6-60). A successful saving throw reduces the damage by half. The spell is so powerful for its level that history records the archmage Tenser's research into making it less destructive. For power is one thing, and effectiveness another. And fire follows its own rules.~
+@600011 = ~Set Trap~
+@600012 = ~SET TRAP
+Range: Touch
+Duration: Instant
+Speed: 1
+Area of effect: Special
+
+Skilled thieves have mastered the art of creating something from nothing and using it in a variety of ways, whether to evade pursuit or to deal with a much stronger opponent, be it guard or monster. This skill allows them to construct a trap in a chosen location.~
+@600013 = ~Thorns of Torment~
+@600014 = ~THORNS OF TORMENT
+Range: 35 feet
+Duration: Instant
+Speed: 0
+Area of effect: 1 creature
+
+Torment. Sometimes it feels as if this word is *everything*. When the inner abyss, this torn wound of existence, the emptiness of something lost, seems bottomless, all you feel is the pain of torment. Like a beautiful black rose in a deserted garden, when you touch it, you impale yourself on its thorns. Share this pain with others...
+
+This spell deals 3-9 slashing/piercing damage.~
+@600015 = ~Fist of Zerthimon~
+@600016 = ~FIST OF ZERTHIMON
+Range: 6 feet
+Duration: 18 seconds
+Speed: 0
+Area of effect: 1 creature
+
+The opponent suffers penalties to attack and saving throws, a -3 penalty to Armor Class, a -2 penalty to THAC0, and Blindness. The caster receives a +5 damage bonus and takes 1-6 damage upon casting.
+
+"The body is but a vessel, and the fist is judgment. Zerthimon's will flows through my strike."~
+@600017 = ~Horrid Wilting~
+@600018 = ~HORRID WILTING 
+Range: 40 feet
+Duration: Instant
+Speed: 8
+Area of effect: 30 ft. cube
+Saving throw: 1/2
+
+This devastating spell, born from the mad imagination of the elementalist necromancer Abi-Dalzim, known as the Father of Droughts, causes all water to evaporate from living creatures within its area of effect. Abi-Dalzim committed many atrocities in the name of Incabulos, the god of disease, drought, and nightmares, but the worst of these was the creation of this destructive spell, which withers all vegetation in the area and vaporizes groundwater.
+
+All living creatures within the area of effect take 1-8 damage per caster level, up to a maximum of 25-200 damage.~
+@600019 = ~Disintegrate~
+@600020 = ~DISINTEGRATE
+Range: 40 feet
+Duration: Instant
+Speed: 6
+Area of effect: 1 creature
+Saving throw: Negates
+
+The decomposition of a whole into its fragments. The elimination of integrity. The dissolution into its prime elements. However you describe it, this spell produces the simplest and perhaps most powerful offensive effect that even a child can imagine: the opponent's body explodes spectacularly, leaving behind only dust. The transformation is immediate and irreversible.
+
+This spell can be blocked by magic resistance or appropriate spell protection. While it may not be effective against more powerful enemies, it can easily eliminate weaker ones.~
+@600021 = ~Lower Resistance~
+@600022 = ~LOWER RESISTANCE
+Range: 40 feet
+Duration: 5 seconds per level
+Speed: 5
+Area of effect: 1 creature
+Saving throw: None
+
+Some mages cast spells blindly, trusting that one of them will hit. Others, however, prefer a more strategic approach, first lowering the target's resistances to deal more severe damage later.
+
+Casting this spell reduces the target's magic resistance to a minimum. This allows you to completely penetrate the defenses of even the most powerful spellcasters.~
+@600023 = ~Wail of the Banshee~
+@600024 = ~WAIL OF THE BANSHEE
+Range: 0
+Duration: Instant
+Speed: 9
+Area of effect: 15-ft. radius around the caster
+Saving throw: Negates
+
+Banshees, meaning "women of the fairy mound," are also known as groaning spirits or wailing ghosts. They are cruel specters, said to have been evil elven women in life. Taking on a misty form, they drain energy from their surroundings, causing the plants beneath them to wither. To the common folk, they are omens of death. To planewalkers, they are a truly deadly threat.
+
+With this terrifying spell, the caster can unleash a piercing scream from their own throat, audible up to 15 feet away. Anyone who hears it dies instantly unless they succeed on a saving throw versus death. The caster and their companions are immune to the wail.~
+@600025 = ~Fiendish Transformation~
+@600026 = ~FIENDISH TRANSFORMATION
+
+The ability to transform into a fiend can be terrifying for some, but quite manageable or even fun for others. For you, it could prove useful in tricky situations. It might even help scare off a stubborn berk who won't back down. But jokes aside, there are a number of benefits to transforming into a Glabrezu, though it also comes with drawbacks.
+
+Once transformed, you won't be very popular with ordinary mortals. Many will find your appearance abhorrent. You lose the ability to cast spells. You also experience constant anxiety, likely caused by the curse of being a beast, as well as a persistent headache after returning to your normal form. Well, at least you will feel stronger.
+
+Strength +3
+Constitution +3
+Dexterity +4
+Charisma -5
+Hit points: +25
+Magic resistance: +16
+
+You cannot cast spells while in the form of a fiend.
+You are cursed for the duration of the transformation.~
+@600027 = ~Humanoid Reversion~
+@600028 = ~HUMANOID REVERSION
+
+It's good to be back everywhere, but best of all in your own skin. You have returned to human form. What a hellish transformation that was! That muzzle and that stench! Your head will ache for a long time...
+
+Your stats have returned to their previous values.
+You also deactivate spells such as "Aid" and similar effects.~
+@600029 = ~Tornado~
+@600030 = ~~
+@600031 = ~Muspelheim Rune~
+@600032 = ~~
+@600033 = ~Haste~
+@600034 = ~HASTE
+Range: 15 feet
+Duration: (5 seconds per level) + 15 seconds
+Speed: 3
+Area of Effect: 15-ft. radius
+Saving Throw: None
+
+When cast, all affected creatures double their movement, gain +2 to initiative, and make one extra attack per round. For example, a creature that normally moves 6 and attacks once per round now moves 12 and attacks twice per round.
+
+The spell affects all allied creatures within a 15-ft. radius centered on a point chosen by the caster at the moment of casting. Creatures leaving the area remain affected, while those entering after casting are not.
+
+This spell does not stack with itself or similar magic. Spellcasting and other effects are unaffected. This spell also negates the effects of a Slow spell.~
+@600035 = ~"Robe of the Vanquished"~
+@600036 = ~Mimir's Babble~
+@600037 = ~MIMIR'S BABBLE
+Range: 120 feet
+Duration: (1 second per level) + 10 seconds
+Speed: 3
+Area of effect: Up to 60 square feet
+Saving throw: Negates
+
+Morte sometimes claimed to be a mimir. Mimirs are talking metallic skulls that vary in appearance depending on their creator's wishes. They can resemble human or animal skulls, but they may also take the form of discs, cubes, leaves, seeds, butterflies, and many other shapes. They follow their owner and answer questions, provided they can float in air or water.
+
+Their obscure origins are sometimes attributed to Mímisbrunnr, the Well of Mimir in Ysgard, said to grant infinite knowledge for a price. Does Morte have anything to do with Ysgard? Doubtful. Could he be identified with the flying encyclopedias available in Sigil and the gate-towns for 2,000 copper coins? Certainly not. Yet that lie took on a life of its own, and if one truly believed Morte could be a mimir, why could he not bombard his opponents with useless tidbits the way he does with curses?
+
+This skill works similarly to the "Confusion" spell: 1-4 creatures plus 1 additional creature per level become confused and unsure of themselves. Affected creatures will either:
+1) Wander away
+2) Stand confused
+3) Attack the nearest creature
+4) Act normally~
+
+//////////////
+// ======== //
+// Bestiary //
+// ======== //
+//////////////
+
+         
+@800001 = ~Prod is an imp who works with Tergush'tekhn and the fiends from the Smoldering Corpse Bar.
+
+His skin is grayish, and his his hunched, scrawny frame does not intimidate anyone. The membranes of his bat-like wings have probably seen better days. Some of the holes look fresh and are likely the work of Joseph and his men. Prod does not seem bothered by this, and you do not know whether his wings will heal. Nevertheless, the imp radiates enthusiasm for the upcoming journey.~
+@800002 = ~Goodness, virtue, and love are pure concepts guarded by word archons. Their wings are clouds of parchment pages that swirl swiftly around them. They take pride in their supernal intelligence, and their glowing bronze skin is more flawless than any human could imagine. They dwell on Mount Celestia, though they may also be encountered in Oghma's House of Knowledge in the Outlands.
+
+As celestials, they are the natural counterparts and antithesis of fiends, beings of good from the Upper Planes who stand opposed to the evils of the Lower Planes. Yet their understanding of goodness differs from mortal morality. It can lead them to acts so decisive they verge on heartlessness, and to ethical paradoxes so strange that the question of what constitutes pure good remains unsettled.
+
+Word archons have a particular reverence for Truespeech and True Names. For this reason, their natural enemies are logokrons and garblers, who defile the purity of Truespeech. They travel the planes seeking to inspire virtuous creatures and preserve pure concepts from corruption. In battle, they unleash potent utterances that strike their foes like shock waves. Then they follow with blows from their holy warhammers, all while weaving words of power that make it difficult for their opponents to retaliate. Behold the power of Truespeech.~
+@800003 = ~A half-giant einheri from Ysgard, he leads a band of the Fated and reports directly to Rowan Darkwood. Known as the son of Völgar and by such titles as Battle Wolf, he believes without hesitation that whatever he can take is rightfully his. He is not someone to be taken lightly. His faithful companion is a wolf named Sharikira.~
+@800004 = ~Slaadi, or slaads, are frog-like natives of Limbo. Having emerged from the primordial soup, they embody the pure chaos of the planes. Like fiends, they fight in the Blood War. They appear unpredictably in disorganized bands, choose sides as it suits them, and eventually gather whatever loot they can. The color of their skin indicates their status and power. Their hierarchy is as follows: mud, red, blue, green, gray, death, white, and black.
+
+Their method of reproduction is particularly strange and resembles parasitism. After mating at the Spawning Stone, the cradle of their race, slaadi produce fertilized eggs that must be implanted into living hosts. Infected victims fall ill with chaos phage, also known as slaad fever, after a slaad injects them with its eggs. After a few days, a tadpole bursts from the corpse, destined to become a red slaad or, if the victim possessed magical abilities, a green one.
+
+An intriguing theory suggests that the slaadi are proof of the existence of alternate realities, claiming that they originate from such realms and are the only beings capable of perceiving and remembering them. Most scholars dismiss this theory as absurd.~
+@800005 = ~Mimics are bizarre monstrosities that rely on mimesis as a hunting strategy, camouflaging themselves to match their surroundings while they wait for unsuspecting prey. Although they are most commonly associated with chests, records show that mimics can also assume the shapes of doors, books, and other objects. The texture of their skin closely replicates common materials such as wood, stone, and metal, though their natural coloration resembles gray granite.
+
+There have been only a few documented cases of mimics capable of communication. The vast majority are driven solely by survival and the need to feed. They can sense heat from up to 90 feet away and sometimes share territory with other predators.
+
+Book mimics are said to have been bred by the Church of Oghma to safeguard valuable tomes.~
+@800006 = ~Mariliths are the generals and master tacticians of the Abyssal hordes of tanar'ri. They resemble serpentine creatures akin to nagas, but their upper bodies are those of warrior women with three pairs of arms, each capable of wielding a separate blade, often taken from a fallen foe. Their tails can reach up to twenty feet in length.
+
+As the ever-insightful slaad scholar Xanxost once said, "Mariliths prove that chaotic beings do not have to be stupid." Their true talent lies in the planning and execution of warfare. They can weave illusions and charm their enemies, combining brute force with calculated strategy.
+
+They harbor a particular disdain for glabrezus, who favor temptation and manipulation, methods the mariliths consider limited compared to their own broader mastery of war.~
+@800007 = ~Insectoid baatezu resembling giant cockroaches are the elite torturers of Baator. These horrid tormentors have mastered the art of torture, keeping their victims alive long enough that they begin to yearn for death. Like ordinary cockroaches, these fiends have six long limbs tipped with claws, which they manipulate with surprising precision to wield various tools, usually with terrifying and painful effect.
+
+They are intelligent, sadistic, and capable of using spell-like abilities as well as summoning other kocrachons. They prefer tormenting helpless victims and are generally reluctant to engage in direct combat. It is said that they sometimes exchange the body parts of their victims to night hags in return for souls.~
+@800008 = ~Yagnoloths, also known as yagnodaemons, are considered the nobles among lesser yugoloths, dwelling in Gehenna and the Gray Wastes. Their primary role is to draw up contracts, though, according to the archmage Mordenkainen, they do not always honor their own agreements. With their monstrously large hands, sometimes measuring 10 to 15 feet, they are more than capable of enforcing their will.
+
+Theories about their origin suggest cross-mutation or a connection to giants. Considering their formidable power, it is frightening to imagine the might of their superiors, the greater yugoloths.~
+@800009 = ~Marraenoloths, also known as charondaemons or the In-Between, are the highest-ranking lesser yugoloths. Their task is to pilot the boats that sail the River Styx. They serve an altraloth named Charon, who ferries souls down the river for a steep price.
+
+Marraenoloths are short, skeletal humanoids dressed in old, decayed burial robes. In the darkness, their flashing red eyes can be seen. They demonstrate their special abilities more in support of their work than in direct combat. They can control any boat, walk on water, and breathe underwater. They are capable of controlling the weather and charming opponents. They also maintain constant contact with their kin and can summon hydroloths and other marraenoloths to their aid. It is no surprise that they easily inspire fear.~
+@800010 = ~Bladelings are a race from Acheron similar to humans, but their skin resembles frosted metal. Their eyes are purple and glitter like ice. They are known for their xenophobia and superstition, and they are eager to fight and fearless in battle. They use weapons in combat. In their early history, they were nearly wiped out by rust dragons, but through magical experiments they made themselves immune to corrosion. Their spikes are also used as alchemical components.~
+@800011 = ~The planes hold many wonders, and anything is possible. Kabatum is a concordant killer, descended from both a fiend and a celestial. Such creatures, originating from the Outer Planes but claiming none as their home, are primarily hostile to opponents of extreme alignments. Kabatum himself is known as the Summoner and has commanded many kinds of creatures across the planes. He is extremely dangerous in combat, yet for some reason he has chosen to make his home in the Ditch.~
+@800012 = ~Slimes are amorphous creatures composed mainly of acids that allow them to digest their prey. They lurk on ceilings, walls, and beneath floors, emerging when they sense vibrations caused by passing creatures. They are often the result of magical experiments and are rarely encountered outside dungeons and basements. In these environments, they act as a form of cleaner, disposing of leftover matter. Green slimes are the most common, but they sometimes appear in other colors such as ochre, mustard, or gray, gaining new properties. All slimes are characterized by high resistance to various types of damage.~
+@800013 = ~In Molikroth's court, there is a half-elven alu-fiend named Antilia the High Cantor. She openly opposes the Baron, yet he inexplicably ignores her venomous mischief. Perhaps her talent as a bard plays a role, as her songs can be heard throughout the court halls between meetings. Rumors say that she is the daughter of an infernal archduke and a powerful elven queen who turned to hellish powers and became their cleric. Most of these rumors are difficult to verify, except for one: she is unearthly beautiful.~
+@800014 = ~This tiefling bard is from Sigil. For Haer'Dalis, his dual affiliations are important. Artistically, he belongs to the Sigil theater troupe of Lady Raelis Shai, alongside fellow planetouched. Ideologically, he aligns with the Doomguard, which is why he believes in the inevitable decay of all things, only to make way for the new. His speech is distinctive and full of flowery terms, and he often compares the people he knows to birds. Despite his acting talent and penchant for metaphor, he comes across as sincere and straightforward in his intentions.~
+@800015 = ~Cania, the eighth layer of Baator, is home to insectoid gelugons, also known as ice devils. They are merciless commanders in the Blood War, unafraid to sacrifice their units to achieve victory. They stand ten to twelve feet tall and weigh over 700 pounds. Their tails end in spikes, and their complex eyes and antennae can detect every movement.
+
+Gelugons are savage warriors who covet the power held by pit fiends, yet they remain loyal in obtaining souls for their masters. They can slow opponents with numbing cold and create walls of ice. They command numerous legions of devils ready to carry out their orders. Historically, they were enslaved by Mephistopheles long ago. The portal to Nessus, the final layer of Baator, is guarded by 9,999 gelugons.~
+@800016 = ~Alviro is a deva from the Golden Heaven of Mercuria, the second layer of Mt. Celestia. He is a minor representative of the aasimon family, also known as angels. He seeks to spread order and peace wherever he can, tending to those in need in the Ditch. He heals wounds and illnesses and also provides cleansing. He willingly offers his aid to the poor.~
+@800017 = ~Artists create legends, and legends legitimize what artists do, at least most of the time. Akershus is a composer and performer known throughout the Cage and the Outlands. He has just returned from a tour of the gate-towns and is preparing to compose a new masterpiece. He bears a tattoo made by a bladeling artist from Rigus, a complex pattern of razorvine. On closer inspection, it reveals a clever depiction of a scene hidden within the shadows and shapes between the vines. The image shows buildings under attack from razorvine and some bulbous monsters resembling the plant.~
+@800018 = ~Kuo-toa, also known as men-fish, are a piscine race that originated in the the Torilian Underdark. They prefer aquatic environments and underground caves. They are shorter than adult humans and smell of rotten fish. They have mastered the crafting of tools and weapons, which they readily use for hunting. Nets, harpoons, and pincers are their primary means of capturing prey. Kuo-toa have a defined hierarchy with monks called monitors maintaining order alongside priests. They primarily worship the mysterious Blibdoolpoolp, but sometimes also venerate sea monsters such as krakens or other deities like Shar, Bhaal, or Demogorgon, simplifying the names so they can pronounce them.~
+@800019 = ~Among the yugoloths, many monsters inspire fear, yet the over-eight-foot-tall baernaloths are the most ancient, and their true nature remains a mystery to scholars. The baernaloths' obsession is with ancient secrets. They are said to conduct experiments on a massive scale and even interfere with reality itself. They may have created demodands in Carceri, and perhaps even devils and demons. They are an emotionless, colorless enigma. Their large heads resemble the horned skulls of cattle or rams, and their glassy eyes leak a yellow fluid. They do not use weapons, relying instead on their cruel natural abilities. They live as hermits, having rejected yugoloth society and emigrated to Gehenna. They usually choose solitude, though sometimes their companions are night hags and nightmares.
+
+"I do not exaggerate, nor am I a braggart. I saw the powers that now live aborning, and the powers before them as well."
+— Daru Ib Shaitiiq~
+@800020 = ~This redheaded tiefling bard is the leader of the Sigil actors' troupe, which includes another tiefling named Haer'Dalis, the dwarf mage Kirinaldo, the elf mage Lunisia, and Biff the Understudy. She is a confident woman who excels at connecting with audiences. She is also known for her honesty, often refunding dissatisfied audience members if she feels her actors were not fully prepared to deliver a satisfactory performance.~
+@800021 = ~The situation of children in Sigil depends largely on their parents' wages. In poorer wards, such as the Hive, children often have to start earning money early. They are put into jobs where their small size is useful, such as chimney cleaning or maintaining streetlights, but sometimes they are forced to work beyond their strength in factories or as collectors. In worse cases, they end up in criminal gangs and exploit careless Primes. Some, however, are fortunate enough to find work as couriers, touts, or sellers of newsrags like S.I.G.I.S. (Sigil's Global Information Service).
+
+The factions are familiar with the problem of idle children, and they sometimes run schools. However, it is clear that these schools engage in intense indoctrination, imposing the faction's beliefs on the pupils and deepening societal divisions over time. Sigil is not a place where happy children are often seen. The Ditch offers a rare opportunity for joy when a shipment of clean water from the River Oceanus arrives every five to eight months. This event becomes a major celebration in which entire families take part.~
+@800022 = ~Mezzoloths are a common, insectoid variety of yugoloths. They may have once been a different, non-fiend race, kidnapped from their home plane and adapted by higher-ranking daemons such as ultroloths and arcanaloths to serve cruel designs. This transformation was likely not difficult, as mezzoloths have limited intelligence. Nonetheless, they possess a natural talent for magic, a fondness for enchanted objects, and telepathic abilities used for communication. In combat, they wield tridents and, when necessary, their claws. Their insect-like mandibles are incredibly strong, able to cut through most non-magical materials even without weapons. Like insects, they are rarely found alone, and their tough chitinous armor provides resistance to most external attacks.
+
+Mezzoloths are not eager to fight as mercenaries in the Blood War. They often wander the Lower Planes, seeking creatures to torture, usually preying on lemures. If confronted, take precautions against burns and avoid letting them teleport too far when they trap you in a confined space. They can quickly envelop opponents in a cloud of toxic fumes.~
+@800023 = ~Among Lothar's servants, one of the most powerful is a stone golem that resembles an enormous ghoul. This eldritch creature, with sharp claws and a black tongue as bright and gleaming as obsidian, is driven by a strange fire in place of a heart. It is said that this fire will burn for as long as the Master of the Bones lives.
+
+It is therefore safe to assume that the golem will continue to hunt thieves and those who fail to show respect to the fearsome mage for a very long time.~
+@800024 = ~Monodrones are the lowest-ranking spherical constructs in the modron hierarchy, each possessing a single eye, a pair of legs, arms, and wings. They are capable of communication, but their vocabulary is limited to no more than 48 words. They perform only one task at a time and cannot be persuaded to disobey their orders. Only the duodron to whom they are subordinate can recall them.
+
+Monodrones generally cannot comprehend the more advanced modrons with their minds. Their population, numbering around three hundred million, is replenished in the Great Modron Cathedral by Primus whenever it fluctuates. They regularly depart from Mechanus on the Great Modron March through the planes. Separation from the Source can have disastrous and unpredictable consequences.~
+
+///////////
+// ===== //
+// Films //
+// ===== //
+///////////
+
+@1000000 = ~"P a t c h"~
+@1000001 = ~WORSHIP \n\nBelief is one of the fundamental forces that shapes the planes. There are dozens of pantheons and hundreds of powers worshiped by their inhabitants.~
+@1000002 = ~Current worship: Kiaransalee\n(Lady of the Dead, The Revenancer, The Vengeful Banshee, or The Pitiless Dowager) \n\nA Chaotic Evil deity of undeath and vengeance, she is a member of the drow pantheon, the Dark Seldarine. Her divine realm is situated in Thanatos, in the Abyss.\nHer mission is to extinguish all life in the planes so that there can be peace and equality forever.~
+
+/////////////
+// ======= //
+// CREDITS //
+// ======= //
+/////////////
+
+@901000 = ~^0xff78b570CONGRATULATIONS! 
+
+You have reached the end of Act 1 of Blizzard in Baator. As you read these words, we are probably working hard on Acts 2 and 3 to release them as soon as possible.
+
+In Act 2, you will of course see Cania in all its glory, and in Act 3, we will try to implement some of the original PS:T concepts that unfortunately did not make it into the final product due to time and budget constraints.
+
+We hope you enjoyed what you saw and that you managed to catch at least half of the side content and hidden gems (of which there are many in Blizzard in Baator). Don't be afraid to tell us what you think about our demo or what could be changed or added, within reason, of course. You can reach us at: cania.believe.it@gmail.com 
+
+If you want, you can also volunteer to help. Our project is 100% born out of passion, and not a single dollar has been spent on its creation. Only thousands of hours of free time spent by a few enthusiasts - CANIA BELIEVE IT WORKS. Among these enthusiasts are:
+
+Project Lead:
+
+    Filip "FallDamage312" Marczuk: lead developer, lead writer and story coordinator, visual design and execution, chief scriptwriter, translations and additional proofreading
+
+Project developers:
+
+    Filip "FallDamage312" Marczuk
+    Kamil "Wrathu" Kwiatkowski: lead music composer and sound coordinator, writer, chief of inventory and items, translations and additional proofreading
+    szef: project initiator, designer of the installer, structure, and menu elements, additional scriptwriter
+    Alicja Wojciechowska: writer, tester, Polish and English editing and proofreading, additional translations
+
+Editing and proofreading:
+
+    Corpselight: editing and proofreading coordinator, Polish editing and proofreading, additional translations
+    Brenda: Polish editing and proofreading
+    Alexander Hurezeanu: English editing and proofreading
+    Alderdash: English editing and proofreading
+    Dune: English editing and proofreading
+    Aquadrizzt: English editing and proofreading
+    Inter: English editing and proofreading
+
+Support:
+
+    Darnath: organizational and merit-based support, walkthroughs, QA
+
+Additional writers:
+
+    Nordmarski,  Filip Cyrus Madej, Rafał Leniar, Pasza Mickiewicz, Tydeus
+
+Sound and Music:
+
+    Kamil "Wrathu" Kwiatkowski: music composer, sound coordinator,
+    Victor "Winnie Gotmilk" Gautschi: music composer and voiceover sourcing/sound design
+
+The soundtrack is available via
+    Kamil Kwiatkowski (Wrathu)
+    wrathu.bandcamp.com
+    linktr.ee/wrathu
+    Victor Gautschi (Winnie Gotmilk)
+    winniegotmilk.com
+
+    "Friður" is from the album "Sólin" (2016) by Wrathu.
+
+Software
+    Wrathu uses: FL Studio v25.1.2., LABS 3.7.8, RefX Nexus2, Symphonia, Sytrus,
+    Winnie uses: Ableton Live and various libraries by Orchestral Tools, Heavyocity, EastWest, Eduardo Tarilonte, Native Instruments, UVI, Slate+Ash, Spitfire Audio, 8Dio, Performance Samples, Keyscape, Chromaphone
+
+VOICE ACTORS:
+
+    Polish Dubbing
+        Paweł Hajnos as Grotefend / Kruchy Ogon
+        Paskud as Czarny Ziutek
+        Błażej Krzyżanowski as Tergush'tekhn / Prod
+        Filip Marczuk as Akershus / Ulfbrand / Kaowiec / Szalony Mag
+        Alicja Wojciechowska as Archonka Słowa
+        Magdalena Gautschi as Mawu
+        Adrian Waldemar Gajos as Anit'bil
+        Tomasz Hebel as Gemariel
+        Agnieszka "Eliamina" Kryszczyńska-Krauze as Mysterious Alu-Fiend
+
+    English Dubbing
+        Jon Boote as Prod
+        Vincent Rogé as Vinrogé
+        Alicja Wojciechowska as Word Archon
+        Guilhermo as Anit'bil
+        Magdalena Gautschi as Mawu
+        Gui Sancho as Fragile-Tail
+        Filip Marczuk as Akershus / Ulfbrand / Animator / Mad Mage
+        MillicentOak as Tergush'tekhn
+        RevocerGM as Gemariel / Black Joseph
+        Inter as Mysterious Alu-Fiend
+
+SOURCES:
+
+Lore-accurate translations based on Sferopedia.pl https://sfery.fandom.com/wiki/Sferopedia
+
+A large portion of the lore related to the Ditch comes from "Of Sigil and the Sea - The Ditch", an article by William James Cuffe, published in Polyhedron Magazine #137, 1999
+
+A full list of media attributions is available in the Readme file, as it is far too large to fit here.
+
+Dialogues and items may contain fragments of published materials:
+Articles from the Grimuar Sferowca portal https://grimuar.pl/
+"Szataniec" (2018) by Rafał Leniar
+"Dolores" by Algernon Charles Swinburne
+
+COPYRIGHTS:
+
+Blizzard in Baator is an unofficial, fan-made modification for Planescape: Torment. This is unofficial Fan Content permitted under the Fan Content Policy. It is not approved/endorsed by Wizards of the Coast, Beamdog, or any rights holders. Portions of the materials used are property of Wizards of the Coast. ©Wizards of the Coast LLC.
+
+Extraordinary Thanks to:
+
+The original creators at Black Isle Studios
+To the designers, writers, artists, and programmers - thank you for your vision and hard work. Without your talent, Planescape: Torment would never have been created, and this project would not have been possible.
+
+The Gibberlings 3 (Infinity Engine Modding Community)
+Especially:
+Argent77 - For consultation and help with bestiary, quest logic and invaluable help across all fields of expertise. This project would not be the same without you.
+CamDawg 
+Jastey
+
+Additional Thanks to:
+
+Beamdog
+Grimuar Sferowca
+CD-Action
+Spellhold Studios
+Children of Bhaal
+Zenblack
+dark0dave
+Lavalamp
+Udiknedormin
+Kamila Regel
+Brian Crenshaw
+Latch
+Bahzell
+
+The voices for the original Planescape: Torment were recorded over two decades ago. Blizzard in Baator features unused lines recorded by the original actors from that time. We would like to dedicate this mod to the actors who brought the voices of the game's unique characters to life in both language versions and who are no longer with us.
+
+Tony Jay (1933-2006)
+Gabriela Kownacka (1952-2010)
+Władysław Kowalski (1936-2017)
+Mikołaj Müller (1944-2021)
+Emilian Kamiński (1952-2022)
+Jacek Kiss (1943-2022)
+Flo Di Re (1935-2024)
+Jan Plewako (1937-2025) ~ [g-cred]

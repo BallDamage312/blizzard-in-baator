@@ -1,0 +1,9 @@
+
+IF
+    Exists(Player1)
+	Global("g-bb99_Visited","GLOBAL",0)
+    THEN
+    RESPONSE #100
+	SetGlobal("g-bb99_Visited","GLOBAL",1)
+           
+END

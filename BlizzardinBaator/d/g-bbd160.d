@@ -1,0 +1,88 @@
+BEGIN g-bbD160
+CHAIN IF~NumTimesTalkedTo(0)~THEN g-bbD160 g-bbD160.start
+@0 /*The parchment, tied with a bright pink ribbon, feels strangely sticky to the touch, as if coated in a layer of dried mucus. It smells of citrus and musk. You have no idea where it might have been before, and you probably do not want to know. You think there are words inside that you might be able to decipher. */
+END
+IF~~THEN REPLY @2 /*Untie the ribbon... */ DO~CreateCreatureObject("g-bb160",Protagonist,0,0,0)~ + g-bbD160.A0
+IF~~THEN REPLY @3 /*Leave the scroll as it is. */ DO~ActionOverride("g-bb160",DestroySelf())~ EXIT
+CHAIN IF~NumTimesTalkedToGT(0)~THEN g-bbD160 g-bbD160.start2
+@5 /*You are looking again at the scroll tied with a pink ribbon. This time, will you decide to see what it holds? */
+END
+IF~~THEN REPLY @7 /*Untie the ribbon... */ DO~CreateCreatureObject("g-bb160",Protagonist,0,0,0)~ + g-bbD160.A0
+IF~~THEN REPLY @8 /*Leave the scroll as it is. */ DO~ActionOverride("g-bb160",DestroySelf())~ EXIT
+CHAIN IF~~THEN g-bbD160 g-bbD160.A0
+@10 /*You tug on the ribbon and untie the bow. You gently unfold the parchment. Inside are a few words in a language unfamiliar to you. Instinctively, you feel them pulsing gently with power. A spell? Perhaps. But you do not know what effect it might have. */
+END
+IF~InParty("Morte") !StateCheck("Morte",CD_STATE_NOTVALID)~THEN REPLY @12 /*Batten down the witches. Read the enchanted words aloud. "Harakat Abdiluom Calaveras Mah!" */ DO~ DestroyPartyItem("g-bbi056",TRUE) ~ + g-bbD160.A1new
+IF~OR(2) !InParty("Morte") StateCheck("Morte",CD_STATE_NOTVALID)~THEN REPLY @13 /*Batten down the witches. Read the enchanted words aloud. "Harakat Abdiluom Calaveras Mah!" */ DO~ DestroyPartyItem("g-bbi056",TRUE) ~ + g-bbD160.A2new
+IF~~THEN REPLY @14 /*Better not play with fire. You have enough problems already. Tie the bow back and put the parchment back in its place. */ DO~ActionOverride("g-bb160",DestroySelf())~ EXIT
+CHAIN IF~~THEN g-bbD160 g-bbD160.A2new
+@16 /*The moment you utter these words, the parchment crumbles to dust, and a wave of hot air blasts into your face, as if from the heart of a desert. You blink in surprise, expecting the worst. You wait a moment, tense, but you feel no different. Then, you briefly check your body parts, but everything is in its proper place, and nothing hurts. The surroundings do not seem to have suffered any damage either. If the spell did anything, you can not see the effect with the naked eye. */
+END
+IF~~THEN REPLY @18 /*Think about what just happened. */ DO~~ + g-bbD160.A3
+CHAIN IF~~THEN g-bbD160 g-bbD160.A1new
+@20 /*The moment you utter these words, the parchment crumbles to dust, and a wave of hot air blasts into your face, as if from the heart of a desert. You blink in surprise, expecting the worst. You wait a moment, tense, but you feel no different. Then, you briefly check your body parts, but everything is in its proper place, and nothing hurts. The surroundings do not seem to have suffered any damage either. If the spell did anything, you can not see the effect with the naked eye. */
+==DMorte IF ~InParty("Morte") !StateCheck("Morte",CD_STATE_NOTVALID) NearbyDialog("DMorte")~ THEN @21 /*"Heh, chief, what a craMMMMHhhh-" */
+==g-bbd160 @22 /*You glance toward your companion. Morte is vibrating with tension, circling the air. What's more, he is doing it in absolute silence, so atypical of him. You look closer and finally understand the reason for such strange behavior. His jaw and teeth have completely fused with the rest of his skull, leaving not even a slight gap. All you see is solid, smooth bone. Was this the result of the spell? */
+==DAnnah IF ~InParty("Annah") !StateCheck("Annah",CD_STATE_NOTVALID) NearbyDialog("DAnnah")~ THEN @23 /*"I like 'im better this way, yeah... Let's keep 'im that way." */
+==DMorte IF~InParty("Annah") !StateCheck("Annah",CD_STATE_NOTVALID) NearbyDialog("DAnnah")~THEN @24 /*If Morte's death stare could kill, the tiefling would already rot somewhere at the bottom of Baator. */
+END
+IF~CheckStatLT(Protagonist,18,INT) Class(Protagonist,Mage)~THEN REPLY @26 /*"Wait, Morte. I'll try to reverse this spell somehow." */ DO~~ + g-bbD160.C1
+IF~CheckStatGT(Protagonist,17,INT)~THEN REPLY @27 /*"Wait, Morte. I'll try to reverse this spell somehow." */ DO~~ + g-bbD160.C1
+IF~~THEN REPLY @28 /*"I'd like to help you, but I don't know how. The parchment has crumbled." */ DO~~ + g-bbD160.D1
+IF~~THEN REPLY @29 /*"I prefer you this way, too. You finally shut up." */ DO~IncrementGlobal("BD_MORTE_MORALE","GLOBAL",-1) IncrementGlobal("GOOD","GLOBAL",-1)~ + g-bbD160.E1
+IF~~THEN REPLY @30 /*"Well, you're out of luck. Not my problem. Let's move on." */ DO~IncrementGlobal("BD_MORTE_MORALE","GLOBAL",-1) IncrementGlobal("GOOD","GLOBAL",-1)~ + g-bbD160.F1
+CHAIN IF~~THEN g-bbD160 g-bbD160.A3
+@32 /*For the rest of your life, however long it lasts, you will wonder what happened in this moment. */
+END
+IF~~THEN REPLY @34 /*Leave. */ DO~ActionOverride("g-bb160",DestroySelf()) DestroyPartyItem("g-bbi056",TRUE) ~ EXIT
+CHAIN IF~~THEN g-bbD160 g-bbD160.C1
+@36 /*Morte's eyes light up with hope. He waits patiently, though his whole body is still shaking with emotion. */
+==DMorte @37 /*You saw the words of the spell only briefly, but for some reason they got etched in your memory. You do not know their meaning, but you let your intuition guide you. Perhaps one of your past lives struggled with a similar problem? You have a strange feeling that simply rearranging the words will reverse the curse. You concentrate and repeat the words as you feel they should be. "Mah Abdiluom Harakat Calaveras!" */
+==DMorte @38 /*You feel a blast of air so cold it takes your breath away. A chill runs down your spine, but otherwise, nothing seems to be happening to you this time. Your gaze drifts to your undead companion. */
+==DMorte @39 /*The transformation takes place before your eyes: bones shift, and his jaw opens again, revealing a familiar set of teeth. Morte moves his jaw side to side, then back and forth to move it. If he could, he would probably massage it. */
+==DMorte @40 /*"Ah, chief! It's so good to feel like myself again! Thanks! But don't do that again. I mean, don't read suspicious scrolls without knowing what they do. Next time, it could end even worse." */
+END
+IF~~THEN REPLY @42 /*"I'll take that suggestion into consideration. Now let's go." */ DO~~ + g-bbD160.C3
+CHAIN IF~~THEN g-bbD160 g-bbD160.C3
+@44 /*As you turn to leave, you hear mumbling behind your back. */
+==DMorte IF ~InParty("Morte") !StateCheck("Morte",CD_STATE_NOTVALID) NearbyDialog("DMorte")~ THEN @45 /*"From now on, I'll chew and spit out any parchment we find. Just to be safe." */
+END
+IF~~THEN REPLY @47 /*Leave. */ DO~AddexperienceParty(15000) ActionOverride("g-bb160",DestroySelf()) DestroyPartyItem("g-bbi056",TRUE) ~ EXIT
+CHAIN IF~~THEN g-bbD160 g-bbD160.D1
+@49 /*Morte does not make a sound, but he is clearly frustrated and flying around like an angry vargouille. You do not dare to address him, as it would surely result in getting headbutted in the face. */
+=@50 /*The skull calms down a bit only when you start attempting to undo the spell, though you do not have much hope of success. You cannot recall the exact words of the spell so you just repeat aloud various syllables that sound vaguely similar. The effect is exactly what you expect. 
+
+Nothing. */
+=@51 /*After several minutes of fruitless effort, just as you are about to give up, something finally happens. You do not know if it is your doing or if the curse was only meant to last a short time, but Morte suddenly shines in purple. You see the bones shift, and his jaw opens again, revealing a set of familiar teeth. Morte moves his jaw side to side, then back and forth to move it. If he could, he would probably massage it. */
+==DMorte IF ~InParty("Morte") !StateCheck("Morte",CD_STATE_NOTVALID) NearbyDialog("DMorte")~ THEN @52 /*"Finally! I thought I'd stay like this forever! And who would be the brains of this team then, huh, boss?" */
+END
+IF~~THEN REPLY @54 /*"You're a skull. Do you even have a brain?" */ DO~~ + g-bbD160.D3
+CHAIN IF~~THEN g-bbD160 g-bbD160.D3
+@56 /*As you turn to leave, you hear mumbling behind your back. */
+==DMorte IF ~InParty("Morte") !StateCheck("Morte",CD_STATE_NOTVALID) NearbyDialog("DMorte")~ THEN @57 /*"A metaphorical one, for sure! And, without a doubt, I have all my marbles there! If you find another parchment, I'll chew and spit it out before you get your hands on it." */
+END
+IF~~THEN REPLY @59 /*"Okay, okay. Let's go." */ DO~AddexperienceParty(15000) ActionOverride("g-bb160",DestroySelf()) DestroyPartyItem("g-bbi056",TRUE) ~ EXIT
+CHAIN IF~~THEN g-bbD160 g-bbD160.E1
+@61 /*Morte gives you a look so dark that it would look more appropriate on an archdevil. Not waiting for your reaction, he slams his forehead into your shoulder, hard, and then flies a few feet away. */
+==DMorte IF ~InParty("Morte") !StateCheck("Morte",CD_STATE_NOTVALID) NearbyDialog("DMorte")~ THEN @62 /*You enjoy the silence while it lasts, but it does not last long. A strange sound, like claws scraping against metal, fills your ears. The noise seems to come from within Morte, accompanying the transformation process. His skull flashes with purple light. You see the bones shift, and his jaw opens again, revealing a familiar set of teeth. Morte moves his jaw side to side, then back and forth to move it. If he could, he would probably massage it. */
+END
+IF~~THEN REPLY @64 /*"Well?" */ DO~~ + g-bbD160.E2
+CHAIN IF~~THEN g-bbD160 g-bbD160.E2
+@66 /*The skull is visibly happy to have a moving jaw again. */
+==DMorte @67 /*"There! Finally! I thought I'd be stuck like this!" Morte glares at you. "Thanks for nothing, chief. I know I can always count on you." */
+END
+IF~~THEN REPLY @69 /*"No problem. Let's go, we've wasted enough time." */ DO~~ + g-bbD160.E3
+CHAIN IF~~THEN g-bbD160 g-bbD160.E3
+@71 /*As you turn to leave, you hear mumbling behind your back. */
+==DMorte IF ~InParty("Morte") !StateCheck("Morte",CD_STATE_NOTVALID) NearbyDialog("DMorte")~ THEN @72 /*"Wait a moment. I have something to tell you." */
+==DMorte @73 /*You turn to Morte and see the skull levitating directly in front of your face. He takes a deep breath and spits out a torrent, or rather, a stream of the worst curses you have ever heard, and you have heard *plenty* from him. You are almost impressed that Morte still had untapped reserves of such fancifully vulgar combinations. [MRT199] */
+==DMorte @74 /*"Alright. I feel better now. Let's go." */
+END
+IF~~THEN REPLY @76 /*Leave. */ DO~IncrementGlobal("Morte_Taunt","GLOBAL",1) AddexperienceParty(15000) SetGlobal("G-scrollcurses","GLOBAL",1) Damage(Protagonist,LOWER,10) ActionOverride("g-bb160",DestroySelf()) ActionOverride("Morte",ApplySpellRES("g-bb688","Morte")) DestroyPartyItem("g-bbi056",TRUE) ~ EXIT
+CHAIN IF~~THEN g-bbD160 g-bbD160.F1
+@78 /*You want to leave, but Morte will not let you. The skull overtakes you, hovering directly in front of your face. When you try to avoid him, he invariably blocks your path. You serve him a harsh glare, but he is not budging. You have to do something, this problem cannot be ignored entirely. */
+END
+IF~CheckStatLT(Protagonist,18,INT) Class(Protagonist,Mage)~THEN REPLY @80 /*"Alright, Morte. I'll try to reverse this spell somehow." */ DO~~ + g-bbD160.C1
+IF~CheckStatGT(Protagonist,17,INT)~THEN REPLY @81 /*"Alright, Morte. I'll try to reverse this spell somehow." */ DO~~ + g-bbD160.C1
+IF~~THEN REPLY @82 /*"I'd like to help you, but I don't know how. The parchment has crumbled." */ DO~~ + g-bbD160.D1
+IF~~THEN REPLY @83 /*"What? As far as I'm concerned, you can stay like this." */ DO~IncrementGlobal("BD_MORTE_MORALE","GLOBAL",-1) IncrementGlobal("GOOD","GLOBAL",-1)~ + g-bbD160.E1

@@ -1,0 +1,21 @@
+// Nordom Join
+ 
+IF
+  True()
+THEN
+  RESPONSE #100
+	CutSceneId(Player1)
+    StartCutSceneMode()
+	UndoExplore()
+	FadeToColor([15.0],0)
+	SmallWait(4)
+	MoveViewPoint([1160.2420],INSTANT)
+    ActionOverride("Nordom",JoinParty())
+	SmallWait(2)
+	ActionOverride("Nordom",AddXPObject("Nordom",170000))
+	ActionOverride("Nordom",GiveItemCreate("LENS11","Nordom",0,0,0)
+	ActionOverride("Nordom",GiveItemCreate("BOLT01","Nordom",70,0,0)
+	SmallWait(2)
+	TeleportParty("AR0202",[1160.2420],14)
+	EndCutSceneMode()
+END

@@ -1,0 +1,30 @@
+@0=~When you appear by the obelisk in front of the Mortuary, a strange-looking man rushes toward you. You cannot quite put your finger on what is wrong with him. He seems both annoyed and terrified, his face shifting between the two states, as if two forces are fighting for control. "FINALLY, you're here! I've been standing here for Hells know how long. I was... sure I was going to perish..."~
+@1=~He takes another look at you, as if to make sure he has the right person. He sniffs and continues, "You are the amnesia ridden sod with no name, friend of Aethelgrin and Tegar'in? I have a message for you." He pats himself down, shivering with fear, searching for a possible note.~
+@3=~"Is that so? I'm listening."~
+@4=~"Are you... all right?"~
+@5=~"I don't have time for this. I have to get to a certain place."~
+@7=~"Here's the piking message." He takes out a crumpled note, clears his throat, shrieks in terror for a quarter of a second, and begins to recite. 
+
+"Nameless One, I have heard that you are searching for answers to many troubling questions. I may be able to help you uncover parts of your distant past. I also have a task for you that, along with the information you seek, may prove to be very well paid. Meet me at the back of the Smoldering Corpse Bar.
+
+- Tergush'tekhn"
+
+You notice that the paper was blank as he puts it away.~
+@9=~"Interesting."~
+@11=~"You... came back... for the message, after all, YA PRICK!"~
+@13=~"Yes, I'm ready. I'm listening."~
+@14=~"Who is this message from? The fiends from the Smoldering Corpse Bar?"~
+@15=~"No, I just wanted to annoy you again. Good day."~
+@17=~"I think that's what the message is about. It's what they told me, and you WOULD KNOW if you just listened for a gods damned SECOND... Please, just listen to it... You're free to ignore it, but don't make *me* fail my task... they'll punish me..."~
+@19=~"Fine. I'm listening."~
+@20=~"Who are they? The fiends from the Smoldering Corpse?"~
+@21=~"Are you... all right?"~
+@22=~"No, I don't think so. Good day."~
+@24=~"Yes..." The messenger pauses, his expression shifting from annoyance to terror. "But they have another with them, in these recent cycles." You are not sure if the shift is connected to what he is saying, but for the first time it feels meaningful. Or it is simply a coincidence.~
+@26=~"Fine. I'm listening."~
+@27=~"Are you... all right?"~
+@28=~"No, I don't think so, good day."~
+@30=~"BY THE HELLS, NO. I'M NOT ALL RIGHT... I am... perfectly... fine..." Tears run down the messenger's face.~
+@32=~"Okay, I will hear your message. Just calm down."~
+@33=~"Who is this message from? The fiends from the Smoldering Corpse?"~
+@34=~"Right... I should go. Goodbye."~

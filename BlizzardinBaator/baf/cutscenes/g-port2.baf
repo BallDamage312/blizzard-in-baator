@@ -1,0 +1,12 @@
+IF
+     HarmlessEntered(Player1)
+	 Global("G-bbmain","GLOBAL",20)
+	 Global("g-portcut2","GLOBAL",0)
+THEN
+    RESPONSE #100
+        SetGlobal("g-portcut2","GLOBAL",1)
+		SetGlobal("g-ProdCania","GLOBAL",6)
+		CreateCreatureObject("g-bb006",Protagonist,0,0,0)
+		Wait(1)
+		ActionOverride("g-bb006",StartDialogNoSet(Protagonist))
+END

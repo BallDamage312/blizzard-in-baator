@@ -1,0 +1,13 @@
+IF
+	See(Protagonist)
+	Global("G-fatedmission","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("G-fatedmission","GLOBAL",1)
+		ChangeEnemyAlly(Myself,NEUTRAL)
+		StartCutSceneMode()
+		RunToObject(Protagonist) 
+		EndCutSceneMode()
+		StartDialogNoSet(Player1)
+		Continue()
+END

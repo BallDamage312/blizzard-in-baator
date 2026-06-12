@@ -1,0 +1,942 @@
+// 01. Classes & Biographies & Functions 
+// 02. Adidional Special Abilities Button & Menu
+// 03  Menus
+// 04. Languages Lua
+
+COPY ~%MOD_FOLDER%/bam/extras/ui~ ~override~
+
+// ==================================== //
+// 01.Classes & Biographies & Functions //
+// ==================================== //
+
+COPY_EXISTING ~ui.menu~ ~override~
+
+    REPLACE_TEXTUALLY ~label[%TAB%%LNL%%MNL%%WNL%]+{+[%TAB%%LNL%%MNL%%WNL%]+area		234 86 170 33+[%TAB%%LNL%%MNL%%WNL%]+text		lua "characters\[currentID\].class"+[%TAB%%LNL%%MNL%%WNL%]+text style  	'title'+[%TAB%%LNL%%MNL%%WNL%]+text align	center center+[%TAB%%LNL%%MNL%%WNL%]+}~ 
+		
+	~ --g-bb (Classes)
+-- ==========================================================
+-- 01. Classes for new companions (Blizzard in Baator)
+-- ==========================================================
+
+	label
+	{
+		area		234 86 170 33
+		text		lua "characters[currentID].class"
+		text style  	'title'
+		text align	center center
+	}
+	label
+    {
+        area        234 86 170 33
+        text        lua "getBBClass()"
+        text style      'title'
+        text align  center center
+    }~
+	
+	
+    REPLACE_TEXTUALLY ~TEXT_inventoryError = ""~ 
+~TEXT_inventoryError = ""
+customInventoryError = ""~
+
+ REPLACE_TEXTUALLY ~name[ %TAB%]+"slot_inv_77"[^}]*highlight selected 1}~
+    
+    ~~~~~name "slot_inv_77"    area 918 400 43 43    bam "IVSLOT"    sequence 3    slotinfo "characters[id].equipment.ground9"            highlight selected 1} 
+
+--g-bb (Weapon Slots Inventory)
+-- ==========================================================
+-- 02. Mask weapon slots for companions in INVENTORY menu (Blizzard in Baator)
+-- ==========================================================
+    
+    button
+    {
+    area 507 355 43 43
+    bam "g-bbclaw"
+    enabled "isSpecialChar('Gemariel')"
+    tooltip "GEMARIEL_WS_TOOLTIP"
+    action 
+    "
+    customInventoryError = t('GEMARIEL_WS')
+    Infinity_PlaySound('g-geminv')
+    "
+    actionAlt "itemDesc = { item = {} }; Infinity_PushMenu('ITEM_DESCRIPTION_GEMARIEL_WEAPON_SLOT')"
+    actionExit "customInventoryError = ''"
+    }
+    text
+    {
+        area 446 451 362 32
+        text lua "customInventoryError"
+        scrollbar 'CGSCRL1'
+        text style normal
+        text align left center
+    }~~~~~
+
+    REPLACE_TEXTUALLY ~text[%TAB%%LNL%%MNL%%WNL%]+{+[%TAB%%LNL%%MNL%%WNL%]+area 302 144 420 342+[%TAB%%LNL%%MNL%%WNL%]+text lua "Infinity_FetchString(characters\[currentID\].biography)"+[%TAB%%LNL%%MNL%%WNL%]+text style "normal_parchment"+[%TAB%%LNL%%MNL%%WNL%]+scrollbar	'cgscrl1'+[%TAB%%LNL%%MNL%%WNL%]+}~
+	~ --g-bb (Bio's)
+-- ==========================================================
+-- 03. Biografies for new companions (Blizzard in Baator)
+-- ==========================================================
+
+	text
+	{
+		area 302 144 420 342
+		text lua "Infinity_FetchString(characters[currentID].biography)"
+		text style "normal_parchment"
+		scrollbar	'cgscrl1'
+	}
+	text
+    {
+        area 302 144 420 342
+        text lua "getDynamicBio()"
+        text style "normal_parchment"
+        scrollbar   'cgscrl1'
+    }~
+	
+
+	REPLACE_TEXTUALLY ~`[%TAB%%LNL%%MNL%%WNL%]+menu[%TAB%%LNL%%MNL%%WNL%]+{+[%TAB%%LNL%%MNL%%WNL%]+name "WELCOME_MENU"~ 
+	
+	~ --g-bb (Functions)
+-- ==========================================================
+-- 04. Variuos functions (Blizzard in Baator)
+-- ==========================================================
+	
+-- Centralized Portrait & Role Management
+function isPortrait(name)
+    local char = characters[currentID]
+    if not char or not char.portrait then return false end
+    return string.lower(char.portrait) == string.lower(name)
+end
+
+function isSpecialChar(roleName)
+    local roles = {
+        ["Nameless"] = "wmpnam1",
+        ["Gemariel"] = "g-00gem",
+        ["Furia"]    = "wmpfury"
+    }
+
+    local target = roles[roleName]
+    if not target then return false end
+
+ 
+    if not id or not characters or not characters[id] then 
+        return false 
+    end
+    
+    local char = characters[id]
+    if not char.portrait then return false end
+
+    local currentPort = string.lower(char.portrait):gsub("%.bmp", "")
+    local lookFor = string.lower(target):gsub("%.bmp", "")
+
+    return currentPort == lookFor
+end
+
+function getDynamicBio()
+    if isSpecialChar('Gemariel') then 
+        return t('GEMARIEL_BIO')
+    end
+    
+    if isSpecialChar('Furia') then 
+       return t('FURY_BIO')
+    end
+    
+    return ""
+end
+
+function getBBClass()
+    if isSpecialChar('Gemariel') then
+        return t('GEMARIEL_CLASS')
+    end
+    return nil
+end
+
+	function addAmbushArtsToBB()
+		if Infinity_GetScriptVarInt('g-ambush_art') == 1 then
+		Infinity_PushMenu("G-AMBUSH_ART_01")
+		end
+		if Infinity_GetScriptVarInt('g-ambush_art') == 2 then
+		Infinity_PopMenu("G-AMBUSH_ART_01")
+		Infinity_PushMenu("G-AMBUSH_ART_02")
+		end
+		if Infinity_GetScriptVarInt('g-ambush_art') == 3 then
+		Infinity_PushMenu("G-AMBUSH_ART_03")
+		Infinity_PopMenu("G-AMBUSH_ART_02")
+		end		
+		if Infinity_GetScriptVarInt('g-ambush_art') == 4 then
+		Infinity_PushMenu("G-AMBUSH_ART_04")
+		Infinity_PopMenu("G-AMBUSH_ART_03")		
+		end
+		if Infinity_GetScriptVarInt('g-ambush_art') == 5 then
+		Infinity_PushMenu("G-AMBUSH_ART_05") 
+		Infinity_PopMenu("G-AMBUSH_ART_04")
+		end
+		if Infinity_GetScriptVarInt('g-ambush_art') == 6 then
+		Infinity_PushMenu("G-AMBUSH_ART_06")
+		Infinity_PopMenu("G-AMBUSH_ART_01")
+		Infinity_PopMenu("G-AMBUSH_ART_02")
+		Infinity_PopMenu("G-AMBUSH_ART_03")
+		Infinity_PopMenu("G-AMBUSH_ART_04")
+		Infinity_PopMenu("G-AMBUSH_ART_05")
+		end
+		if Infinity_GetScriptVarInt('g-ambush_art') == 7 then
+		Infinity_PushMenu("G-AMBUSH_ART_07")
+		Infinity_PopMenu("G-AMBUSH_ART_01")
+		Infinity_PopMenu("G-AMBUSH_ART_02")
+		Infinity_PopMenu("G-AMBUSH_ART_03")
+		Infinity_PopMenu("G-AMBUSH_ART_04")
+		Infinity_PopMenu("G-AMBUSH_ART_05")	
+		end
+		if Infinity_GetScriptVarInt('g-ambush_art') == 8 then
+		Infinity_PushMenu("G-AMBUSH_ART_08") 
+		Infinity_PopMenu("G-AMBUSH_ART_01")
+		Infinity_PopMenu("G-AMBUSH_ART_02")
+		Infinity_PopMenu("G-AMBUSH_ART_03")
+		Infinity_PopMenu("G-AMBUSH_ART_04")
+		Infinity_PopMenu("G-AMBUSH_ART_05")
+		end
+		if Infinity_GetScriptVarInt('g-ambush_art') == 9 then
+		Infinity_PopMenu("G-AMBUSH_ART_06")
+		Infinity_PopMenu("G-AMBUSH_ART_07")
+		Infinity_PopMenu("G-AMBUSH_ART_08")
+		popSidebars()
+		end
+		end
+		
+		`
+	menu
+	{
+	name "WELCOME_MENU"~
+		
+		
+ REPLACE_TEXTUALLY ~function getFactionFrame()[%TAB%%LNL%%MNL%%WNL%]+local current = characters\[currentID\].factions.current+[%TAB%%LNL%%MNL%%WNL%]+return characters\[currentID\].factions.joinedFactions\[current\].frame[%TAB%%LNL%%MNL%%WNL%]+end~ ~~
+
+ REPLACE_TEXTUALLY ~function getFactionTooltip()[%TAB%%LNL%%MNL%%WNL%]+if(\#characters\[currentID\].factions.joinedFactions \> 1) then+[%TAB%%LNL%%MNL%%WNL%]+return t("FACTION_TOOLTIP")+[%TAB%%LNL%%MNL%%WNL%]+else+[%TAB%%LNL%%MNL%%WNL%]+return nil+[%TAB%%LNL%%MNL%%WNL%]+end+[%TAB%%LNL%%MNL%%WNL%]+end~ ~~
+ 
+ REPLACE_TEXTUALLY "function setFactionHelp()[%TAB%%LNL%%MNL%%WNL%]+local current = characters\[currentID\].factions.current+[%TAB%%LNL%%MNL%%WNL%]+recordHelpString = t('FACTION_GENERAL_DESCRIPTION') .. '\\n\\n'+[%TAB%%LNL%%MNL%%WNL%]+recordHelpString = recordHelpString .. Infinity_FetchString(characters\[currentID\].factions.joinedFactions\[current\].description)+[%TAB%%LNL%%MNL%%WNL%]+end"
+ 
+ ~~~~~--g-bb (New Factions and Gods)
+-- ==========================================================
+-- 05. New factions and gods (Blizzard in Baator)
+-- 1. Faction Registry
+-- ==========================================================
+customFactions = {
+    {
+        res   = "bam1",          -- max 8 char
+        frame = 0,               
+        desc  = t('first_bam'),      
+        var   = "g-tno",  
+        owner = "Nameless"           
+    },
+    {
+        res   = "bam1 or bam2", 
+        frame = 1, 
+        desc  = t('second_bam'), 
+        var   = "g-gem",
+        owner = "Gemariel"           
+    }
+}
+
+if not dgIdx then dgIdx = {1,1,1,1,1,1} end
+
+function isCustomSystemActive()
+    return isSpecialChar("Nameless") or isSpecialChar("Gemariel") or isSpecialChar("Furia")
+end
+
+-- ==========================================================
+-- 2. Helper Functions (Internal Logic) 
+-- ==========================================================
+
+function getActiveModFactions()
+    local active = {}
+    local char = characters[currentID]
+    if not char then return active end
+
+    for _, f in ipairs(customFactions) do
+        local isOwner = false
+        -- Uproszczona logika właściciela
+        if not f.owner or isSpecialChar(f.owner) then
+            isOwner = true
+        end
+
+        if isOwner and Infinity_GetScriptVarInt(f.var) ~= 0 then 
+            table.insert(active, f) 
+        end
+    end
+    return active
+end
+
+function getValidOriginalFactions(char)
+    local valid = {}
+    if char and char.factions and char.factions.joinedFactions then
+        for _, faction in ipairs(char.factions.joinedFactions) do
+            if faction.frame and faction.frame ~= 0 then
+                table.insert(valid, faction)
+            end
+        end
+    end
+    return valid
+end
+
+-- ==========================================================
+-- 3. Display Logic (Resource, Frame, Tooltip)
+-- ==========================================================
+
+function getFactionRes()
+    if not isCustomSystemActive() then return "STFCTION" end
+
+    local activeMods = getActiveModFactions()
+    local idx = dgIdx[currentID + 1] or 1
+    
+    if #activeMods > 0 and idx <= #activeMods then
+        return activeMods[idx].res
+    end
+    return "STFCTION"
+end
+
+function getFactionFrame()
+    local char = characters[currentID]
+    if not char then return 0 end
+
+    if not isCustomSystemActive() then
+        local originals = getValidOriginalFactions(char)
+        return originals[1] and originals[1].frame or 0
+    end
+
+    local activeMods = getActiveModFactions()
+    local idx = dgIdx[currentID + 1] or 1
+    
+    if idx <= #activeMods then
+        return activeMods[idx].frame
+    end
+
+    local originals = getValidOriginalFactions(char)
+    local fIdx = idx - #activeMods
+    return originals[fIdx] and originals[fIdx].frame or 0
+end
+
+function getFactionTooltip()
+    local char = characters[currentID]
+    if not char or not isCustomSystemActive() then return nil end
+
+    local total = #getActiveModFactions() + #getValidOriginalFactions(char)
+
+    if total > 1 then
+        return Infinity_FetchString(67048)
+    end
+    return nil
+end
+
+-- ==========================================================
+-- 4. Faction Description & Priority Validation
+-- ==========================================================
+
+function cycleCustomSystem(systemType)
+    local char = characters[currentID]
+    if not char then return end
+    local activeElements = {}
+    local originals = {}
+    local globalIdxTable = nil
+    if systemType == "faction" then
+        activeElements = getActiveModFactions()
+        originals = getValidOriginalFactions(char)
+        globalIdxTable = dgIdx
+    elseif systemType == "deity" then
+        activeElements = getActiveDeities()
+        originals = {}
+        globalIdxTable = deityIdx
+    end
+    local total = #activeElements + #originals
+    if total <= 1 then return end
+    local currentIdx = globalIdxTable[currentID + 1] or 1
+    currentIdx = currentIdx + 1
+    if currentIdx > total then currentIdx = 1 end
+    globalIdxTable[currentID + 1] = currentIdx
+    if systemType == "faction" then
+        setFactionHelp(currentIdx)
+    elseif systemType == "deity" then
+        setDeityHelp(currentIdx)
+    end
+    Infinity_PlaySound('int_10')
+end
+
+function setFactionHelp(forceIdx)
+    local char = characters[currentID]
+    if not char then return end
+    
+    local activeMods = getActiveModFactions()
+    local idx = forceIdx or dgIdx[currentID + 1] or 1
+
+    -- 1. Frakcje z moda
+    if isCustomSystemActive() and idx <= #activeMods then
+        recordHelpString = t('FACTION_GENERAL_DESCRIPTION') .. '\n\n' .. activeMods[idx].desc
+        return
+    end
+
+    -- 2. Frakcje oryginalne
+    local originals = getValidOriginalFactions(char)
+    local fIdx = idx - #activeMods
+    
+    if originals[fIdx] then
+        local descId = originals[fIdx].description
+        recordHelpString = t('FACTION_GENERAL_DESCRIPTION') .. '\n\n' .. Infinity_FetchString(descId)
+        return
+    end
+
+    -- 3. Failsafe (Niezrzeszony lub błąd indeksu)
+    local current = char.factions.current
+    if current and char.factions.joinedFactions and char.factions.joinedFactions[current] then
+        local descId = char.factions.joinedFactions[current].description
+        recordHelpString = t('FACTION_GENERAL_DESCRIPTION') .. '\n\n' .. Infinity_FetchString(descId)
+    else
+        recordHelpString = t('FACTION_GENERAL_DESCRIPTION')
+    end
+end
+
+-- ==========================================================
+-- 5. Deity Registry Table
+-- ==========================================================
+customDeities = {
+    {
+        res   = "g-bbgods", 
+        frame = 0, 
+        desc  = t('KIARANSALEE_DESC'), 
+        var   = "G-kiaransaleefollower",
+        owner = "Nameless"
+    },
+    {
+        res   = "g-bbgods", 
+        frame = 1, 
+        desc  = t('DEITY_DESC_2'), 
+        var   = "G_DEITY_B",
+        owner = "Gemariel"
+    }
+}
+
+if not deityIdx then deityIdx = {1,1,1,1,1,1} end
+
+-- ==========================================================
+-- 6. Deity System Logic
+-- ==========================================================
+
+function getActiveDeities()
+    local active = {}
+    for _, d in ipairs(customDeities) do
+        local isOwner = (not d.owner or isSpecialChar(d.owner))
+        if isOwner and Infinity_GetScriptVarInt(d.var) ~= 0 then 
+            table.insert(active, d) 
+        end
+    end
+    return active
+end
+
+function getDeityRes()
+    if not isCustomSystemActive() then return "" end 
+    local active = getActiveDeities()
+    local idx = deityIdx[currentID + 1] or 1
+    
+    if #active > 0 and idx <= #active then
+        return active[idx].res
+    end
+    return ""
+end
+
+function getDeityFrame()
+    if not isCustomSystemActive() then return 0 end
+    local active = getActiveDeities()
+    local idx = deityIdx[currentID + 1] or 1
+    
+    if #active > 0 and idx <= #active then
+        return active[idx].frame
+    end
+    return 0
+end
+
+function getDeityTooltip()
+    if not isCustomSystemActive() then return nil end
+    local activeCount = #getActiveDeities()
+    if activeCount >= 1 then
+        return t('TOOLTIP_DEITY_GENERAL') 
+    end
+    return nil
+end
+
+function setDeityHelp(forceIdx)
+    local char = characters[currentID]
+    if not char then return end
+
+    local active = getActiveDeities()
+    
+    if #active == 0 then 
+        return 
+    end
+
+    local idx = forceIdx or deityIdx[currentID + 1] or 1
+
+    if isCustomSystemActive() and idx <= #active then
+        recordHelpString = t('DEITY_GENERAL') .. '\n\n' .. active[idx].desc
+    end
+end
+~~~~~
+
+
+	REPLACE_TEXTUALLY ~text = string.gsub(text, "\%\^0xff212eff", "\^0xFFFFFFFF")[%TAB%%LNL%%MNL%%WNL%]+end+[%TAB%%LNL%%MNL%%WNL%]+return text~
+	~text = string.gsub(text, "%^0xff212eff", "^0xFFFFFFFF")
+	end
+	--g-bb (Ambush Arts func)
+	addAmbushArtsToBB() 
+	return text~
+	
+	
+	// Button for opening bags should not be available if the bag is in a static container (chest, ground pile, etc.), or for sale in a store (Argent77)
+ACTION_DEFINE_ASSOCIATIVE_ARRAY ui_item_fixes_lua BEGIN
+  // lua function name, search string => replacement string
+  ~itemDescLeftButtonEnabled()~, ~^[ %TAB%]+else[ %TAB%%WNL%]+return itemDesc.item.isBag~ => ~%TAB%elseif(itemDesc.mode == 1) then%WNL%%TAB%%TAB%return (itemDesc.item.isBag == 1 and itemDesc.storeItem == 0)~
+  ~itemDescLeftButtonText()~, ~^[ %TAB%]+else[ %TAB%%WNL%]+\(return t('OPEN_CONTAINER_BUTTON')\)~ => ~%TAB%elseif(itemDesc.mode == 1) then%WNL%%TAB%%TAB%\1~
+  ~itemDescLeftButtonAction()~, ~^^[ %TAB%]+else[ %TAB%%WNL%]+\(storeScreen:OpenBag(itemDesc.item.res)\)~ => ~%TAB%elseif(itemDesc.mode == 1) then%WNL%%TAB%%TAB%\1~
+END
+
+COPY_EXISTING ~ui.menu~ ~override~
+  PHP_EACH ui_item_fixes_lua AS header => replace BEGIN
+    SPRINT function $header(~0~)
+    SPRINT search $header(~1~)
+    SET pos1 = INDEX_BUFFER(~function[ %TAB%]+%function%~)
+    PATCH_IF (pos1 >= 0) BEGIN
+      SET pos2 = INDEX_BUFFER(~^end[%WNL%]+~ pos1)
+      PATCH_IF (pos2 > pos1) BEGIN
+        SET old_len = pos2 - pos1
+        READ_ASCII pos1 block (old_len)
+        INNER_PATCH_SAVE new_block ~%block%~ BEGIN
+          REPLACE_TEXTUALLY ~%search%~ ~%replace%~
+        END
+        SET new_len = STRING_LENGTH ~%new_block%~
+        DELETE_BYTES pos1 old_len
+        INSERT_BYTES pos1 new_len
+        WRITE_ASCIIE pos1 ~%new_block%~ (new_len)
+      END
+    END
+  END
+
+	REPLACE_TEXTUALLY ~menu[%TAB%%LNL%%MNL%%WNL%]+{+[%TAB%%LNL%%MNL%%WNL%]+name 'ITEM_DESCRIPTION'~
+
+	~--g-bb (Weapon Slots Desc Menu)
+-- ==========================================================
+-- 06. Weapon slots description Menus (Blizzard in Baator)
+-- ==========================================================
+	
+	menu
+	{
+	name 'ITEM_DESCRIPTION_GEMARIEL_WEAPON_SLOT'
+	align center center
+	modal
+	popupSound lua "playDescPopupSound"
+	onOpen
+	"
+		if(e:GetActiveEngine() == worldScreen) then
+			worldScreenWasPaused = worldScreen:CheckIfPaused()
+			if worldScreenWasPaused == false then
+				worldScreen:TogglePauseGame(true)
+			end
+		end
+	"
+	onClose
+	"
+		if(e:GetActiveEngine() == worldScreen) then
+			if worldScreenWasPaused == false then
+				worldScreen:TogglePauseGame(true)
+			end
+			worldScreenWasPaused = false
+		end
+	"
+	label
+	{
+		area 0 0 750 580
+		mosaic popup1
+	}
+	label --item.icon.large
+	{
+		area 140 136 88 88
+		bam "g-bbclaw"
+		frame 1
+	}
+	label --item.icon.small
+	{
+		area 612 79 41 41
+		bam "g-bbclaw"
+		frame 1
+	}
+	label --item.name
+	{
+		area 284 79 266 42
+		text "GEMARIEL_WS_ITEM_NAME"
+		text align center center
+		text style "label"
+	}
+	text --item.desc
+	{
+		area 294 140 412 336
+		text "GEMARIEL_WS_ITEM_DESC"
+		scrollbar 'CGSCRL1'
+		text style "normal_parchment"
+	}
+	--Note that left/right button are no longer actually left/right for PST. This refers to their positions in the BG games.
+	button
+	{
+		bam			NORMBUTT
+		area		427 497 138 56
+		enabled "itemDescLeftButtonEnabled()"
+		text lua "itemDescLeftButtonText()"
+		text style "button"
+		action
+		"
+			itemDescLeftButtonAction()
+		"
+	}
+	button
+	{
+		bam			NORMBUTT
+		area		577 497 138 56
+		text  "DONE_BUTTON"
+		text style "button"
+		action
+		"
+			Infinity_PopMenu( );
+		"
+	}
+	button
+	{
+		bam			NORMBUTT
+		area		277 497 138 56
+		enabled "itemDescRightButtonEnabled()"
+		text lua "itemDescRightButtonText()"
+		text style "button"
+		action
+		"
+			itemDescRightButtonAction()
+		"
+	}
+}
+menu
+{
+	name 'ITEM_DESCRIPTION'~
+
+
+// ============================================= //
+// 02. Adidional Special Abilities Button & Menu //
+// ============================================= //
+
+	REPLACE_TEXTUALLY ~button[%TAB%%LNL%%MNL%%WNL%]+{+[%TAB%%LNL%%MNL%%WNL%]+area 248 0 45 85+[%TAB%%LNL%%MNL%%WNL%]+bam "TACTBUTT"+[%TAB%%LNL%%MNL%%WNL%]+sequence 3+[%TAB%%LNL%%MNL%%WNL%]+clickable lua "pst:SpecialAbilitiesContextClickable() and fullActionbarClickable()"+[%TAB%%LNL%%MNL%%WNL%]+tooltip "SPECIAL_ABILITIES_TOOLTIP"+[%TAB%%LNL%%MNL%%WNL%]+frame lua "getSpecialAbilityHighlightFrame()"+[%TAB%%LNL%%MNL%%WNL%]+-- MGB, October 4, 2016 - This action is run in two places; the other is ported in C\+\+ in InfScreenWorld::OnKeyDown (special abilities are also a mappable key event)+[%TAB%%LNL%%MNL%%WNL%]+action+[%TAB%%LNL%%MNL%%WNL%]+"+[%TAB%%LNL%%MNL%%WNL%]+actionbarResetState()+[%TAB%%LNL%%MNL%%WNL%]+showContextMenu(const.ACTIONBAR_STATE_SPECIAL_ABILITES)+[%TAB%%LNL%%MNL%%WNL%]+"+[%TAB%%LNL%%MNL%%WNL%]+[%TAB%%LNL%%MNL%%WNL%]+}~
+	
+	~--g-bb (Special Abilities Buttons & Menu)
+	
+-- ==========================================================
+-- 07. Special abilities buttons & menu (Blizzard in Baator)
+-- ==========================================================
+	
+	button
+	{	
+		area 248 0 45 85
+		bam "g-bbsab"
+		sequence 1
+		clickable lua "pst:SpecialAbilitiesContextClickable() and fullActionbarClickable()"
+		tooltip "SPECIAL_ABILITIES_TOOLTIP"
+		frame lua "getSpecialAbilityHighlightFrame()"
+		-- MGB, October 4, 2016 - This action is run in two places; the other is ported in C++ in InfScreenWorld::OnKeyDown (special abilities are also a mappable key event)
+		action
+		"
+			actionbarResetState()
+			showContextMenu(const.ACTIONBAR_STATE_SPECIAL_ABILITES)
+		"
+		boundingPoints	47,0 --1
+						0,0 --2
+						0,85 --3
+		
+	}
+	button
+	{
+		area 248 0 45 85
+		clickable lua "fullActionbarClickable()"
+		bam "g-bbsab"
+		sequence 0
+		tooltip "SPECIAL_ABILITIES_TOOLTIP"
+		frame lua "getSpecialAbilityHighlightFrame()"
+		action
+		"	
+			actionbarResetState()
+			showContextMenu(106)
+		"
+		boundingPoints	47,0 --1
+						47,85 --2
+						0,85 --3
+	}~
+
+    //REPLACE_TEXTUALLY ~clickable lua "pst:SpecialAbilitiesContextClickable() and fullActionbarClickable()"~ ~clickable lua "fullActionbarClickable()"~
+    //REPLACE_TEXTUALLY ~showContextMenu(const.ACTIONBAR_STATE_SPECIAL_ABILITES)~ "if contextBarState == showContextMenu(106) then
+    //showContextMenu(const.ACTIONBAR_STATE_SPECIAL_ABILITES)
+    //end"
+	
+
+// ========= //
+// 03. Menus //
+//========== //
+
+ REPLACE_TEXTUALLY ~menu[%TAB%%LNL%%MNL%%WNL%]+{+[%TAB%%LNL%%MNL%%WNL%]+name 'EPILOGUE'~
+   
+   ~--g-bb (Additional Menus)
+-- ==========================================================
+-- 08. New menus (Blizzard in Baator)
+-- ==========================================================
+    menu
+	{
+    name "G-AMBUSH_ART_01"
+    align center center
+    ignoreEsc
+	label
+    {
+       area -22 -296 520 446
+       mosaic "g-abart1"
+    }
+	}
+    
+	menu
+	{
+    name "G-AMBUSH_ART_02"
+    align center center
+    ignoreEsc
+	label
+    {
+        area -22 -296 520 446
+        mosaic "g-abart2"
+    }
+	}
+
+	menu
+	{
+    name "G-AMBUSH_ART_03"
+    align center center
+    ignoreEsc
+	label
+    {
+        area -22 -296 520 446
+		mosaic "g-abart3"
+    }
+	}
+
+	menu
+	{
+    name "G-AMBUSH_ART_04"
+    align center center
+    ignoreEsc
+	label
+    {
+        area -22 -296 520 446
+        mosaic "g-abart4"
+    }
+	}
+
+	menu
+	{
+    name "G-AMBUSH_ART_05"
+    align center center
+    ignoreEsc
+	label
+    {
+        area -22 -296 520 446
+		mosaic "g-abart5"
+    }
+	}
+
+	menu
+	{
+    name "G-AMBUSH_ART_06"
+    align center center
+    ignoreEsc
+	onClose "pushSidebars() Infinity_PopMenu()"
+	label
+    {
+        area -22 -296 520 446
+        mosaic "g-abart6"
+    }
+	}
+	
+	menu
+	{
+    name "G-AMBUSH_ART_07"
+    align center center
+    ignoreEsc
+	onClose "pushSidebars() Infinity_PopMenu()"
+	label
+    {
+        area -22 -296 520 446
+        mosaic "g-abart7"
+    }
+	}
+
+	menu
+	{
+    name "G-AMBUSH_ART_08"
+    align center center
+    ignoreEsc
+	onClose "pushSidebars() Infinity_PopMenu()"
+	label
+    {
+        area -22 -296 520 446
+        mosaic "g-abart8"
+    }
+	}
+   
+   menu
+   {
+   name 'CHAPTER'
+   align center center
+   ignoreEsc
+
+   label
+   {
+		area 0 0 1024 768
+		mosaic lua "chapterBackground"
+   }
+   text
+   {
+		name "text_CHAPTERSCROLL_item"
+		area 196 470 632 224
+		text lua "text_CHAPTERSCROLL"
+		text style "white_parchment"
+		scrollbar 'cgscrl1'
+		scrollbar func 'UpdateChapterScroll'
+		scrollbar hide lua 'text_CHAPTERSCROLL_auto == 1'
+		action
+		"
+		text_CHAPTERSCROLL_auto = 0
+		"
+   }
+   button
+   {
+		area 330 714 377 44
+		bam NORMBUTT
+		text "QUIT_BUTTON"
+		text style "button"
+		clickable lua "chapterScreen:IsDoneButtonClickable()"
+		action
+		"
+		 --chapterScreen:OnDoneButtonClick()
+        
+        popup3Button(69333, 
+            'CANCEL_BUTTON', nil, 
+            'QUIT_BUTTON', function() optionsScreen:QuitGame() end, 
+            'SAVE_BUTTON', function() optionsScreen:SaveGame(0) end
+            ) 
+		"
+   }
+}
+
+   menu
+   {
+   name 'EPILOGUE'
+   ~
+
+ REPLACE_TEXTUALLY ~onOpen[%TAB%%LNL%%MNL%%WNL% ]+"[%TAB%%LNL%%MNL%%WNL% ]+pushSidebars()[%TAB%%LNL%%MNL%%WNL% ]+resetRecordHelpString()[%TAB%%LNL%%MNL%%WNL% ]+Infinity_SetBackground('BACKGROUND_RECORD')[%TAB%%LNL%%MNL%%WNL% ]+"~
+~onOpen
+    "    
+        pushSidebars()
+		resetRecordHelpString()
+		--setFactionHelp()
+		--setDeityHelp()
+        --validateFactionIndex()
+        Infinity_SetBackground('BACKGROUND_RECORD')
+    "~ //gemini
+
+ REPLACE_TEXTUALLY ~text[%TAB%%LNL%%MNL%%WNL%]+{[541 479 123 122%TAB%%LNL%%MNL%%WNL% ]+area 541 479 123 122[%TAB%%LNL%%MNL%%WNL% ]+bam "STFCTION"[%TAB%%LNL%%MNL%%WNL% ]+frame lua "getFactionFrame()"[%TAB%%LNL%%MNL%%WNL% ]+tooltip lua "getFactionTooltip()"[%TAB%%LNL%%MNL%%WNL% ]+ignoreFocus lua "getFactionTooltip() == nil"[%TAB%%LNL%%MNL%%WNL% ]+actionEnter[%TAB%%LNL%%MNL%%WNL% ]+"[%TAB%%LNL%%MNL%%WNL% ]+setFactionHelp()[%TAB%%LNL%%MNL%%WNL% ]+"[%TAB%%LNL%%MNL%%WNL% ]+actionExit[%TAB%%LNL%%MNL%%WNL% ]+"[%TAB%%LNL%%MNL%%WNL% ]+resetRecordHelpString()[%TAB%%LNL%%MNL%%WNL% ]+"[%TAB%%LNL%%MNL%%WNL% ]+action[%TAB%%LNL%%MNL%%WNL% ]+"[%TAB%%LNL%%MNL%%WNL% ]+local factionCount = #characters\[currentID\].factions.joinedFactions[%TAB%%LNL%%MNL%%WNL% ]+local current = characters\[currentID\].factions.current[%TAB%%LNL%%MNL%%WNL% ]+if(factionCount > 1) then[%TAB%%LNL%%MNL%%WNL% ]+Infinity_PlaySound('int_10')[%TAB%%LNL%%MNL%%WNL% ]+if(current < factionCount) then[%TAB%%LNL%%MNL%%WNL% ]+characters\[currentID\].factions.current = current \+ 1[%TAB%%LNL%%MNL%%WNL% ]+else[%TAB%%LNL%%MNL%%WNL% ]+characters\[currentID\].factions.current = 1[%TAB%%LNL%%MNL%%WNL% ]+end[%TAB%%LNL%%MNL%%WNL% ]+end[%TAB%%LNL%%MNL%%WNL% ]+setFactionHelp()[%TAB%%LNL%%MNL%%WNL% ]+"[%TAB%%LNL%%MNL%%WNL% ]+}~
+ 
+ ~text
+{
+    area 541 479 123 122
+    bam "STFCTION"              -- Default fallback BAM
+    frame lua "getFactionFrame()"
+    bam lua "getFactionRes()"   -- Dynamic BAM override
+    tooltip lua "getFactionTooltip()"
+    
+    -- Interaction only if multiple factions exist
+    ignoreFocus lua "getFactionTooltip() == nil"
+    
+    actionEnter
+    "
+        setFactionHelp()
+    "
+    actionExit
+    "
+        if resetRecordHelpString then resetRecordHelpString() else recordHelpString = '' end
+    "
+   action
+	"
+    if isCustomSystemActive() then
+        cycleCustomSystem('faction')
+    end
+	"
+}
+text
+{
+    area 0 479 123 122
+    enabled "#getActiveDeities() > 0"
+    
+    bam lua "getDeityRes()"
+    frame lua "getDeityFrame()"
+    tooltip lua "getDeityTooltip()"
+    
+    ignoreFocus lua "getDeityTooltip() == nil"
+    
+    actionEnter "setDeityHelp()"
+    actionExit "if resetRecordHelpString then resetRecordHelpString() else recordHelpString = '' end"
+    
+     action
+	"
+    if isCustomSystemActive() then
+        cycleCustomSystem('deity')
+    end
+	"
+}~
+	
+// ================= //
+// 04. Languages Lua //
+// ================= //
+
+COPY_EXISTING ~L_en_US.lua~ ~override~
+	REPLACE_TEXTUALLY ~SHOW_CHEATS_BUTTON = "Show",~ 
+~SHOW_CHEATS_BUTTON = "Show",
+
+	-- G-Blizzard in Baator (story mod)
+	GEMARIEL_CLASS = "Cleric / Mage",
+	GEMARIEL_BIO = "Testowa biografia gemariela \n\neng.",
+	FURY_BIO = "furia bio test.",
+	GEMARIEL_WS =  "The claws are part of Gemariel. They cannot be removed.",
+	GEMARIEL_WS_TOOLTIP = "Gemariel's Claws",
+	GEMARIEL_WS_ITEM_NAME = "Gemariel's Claws",
+	GEMARIEL_WS_ITEM_DESC = "GEMARIEL'S CLAWS \n(Default Weapon) \nDamage: 1-8, piercing or slashing \nEnchantment: +1 \nSpeed: 1 \nWeight: 0 \nProficiency: Fists \n\n \nAbishai claws are razor-sharp, fast, and deadly, but above all, effective. They are the Gemariel's primary weapon, enhanced with a touch of Set's magic. What more could an Abishai of this kind want from life?",
+	DEITY_GENERAL = "WORSHIP \n\nBelief is one of the fundamental forces shaping the Planes. There are dozens of pantheons and hundreds of Powers worshiped by their inhabitants",
+	TOOLTIP_DEITY_GENERAL ="",
+	KIARANSALEE_DESC = "Current worship: Kiaransalee\n(Lady of the Dead, The Revenancer, The Vengeful Banshee or The Pitiless Dowager) \n\nA Chaotic Evil deity of undeath and vengeace, member of the drow pantheon (Dark Seldarine). Her divine realm is situated in Thanatos, Abyss.\nHer mission is to extinguish all life in the Planes so there can be peace and equality, forever.",~
+	
+
+
+COPY_EXISTING ~L_en_US.lua~ ~override/L_pl_PL.lua~
+	REPLACE_TEXTUALLY ~GEMARIEL_CLASS[ ]*=[ ]*"[^"]*",?~ ~GEMARIEL_CLASS = "Kapłan / Mag",~
+	
+	REPLACE_TEXTUALLY ~GEMARIEL_BIO[ ]*=[ ]*"[^"]*",?~ ~GEMARIEL_BIO = "Testowa biografia gemariela \n\npl.",~
+	
+	REPLACE_TEXTUALLY ~FURY_BIO[ ]*=[ ]*"[^"]*",?~ ~FURY_BIO = "furia bio test pl.",~
+	
+	REPLACE_TEXTUALLY ~GEMARIEL_WS[ ]*=[ ]*"[^"]*",?~ ~GEMARIEL_WS = "Pazury są częścią Gemariela. Nie możesz ich zdjąć.",~
+	
+	REPLACE_TEXTUALLY ~GEMARIEL_WS_TOOLTIP[ ]*=[ ]*"[^"]*",?~ ~GEMARIEL_WS_TOOLTIP = "Pazury Gemariela",~
+	
+	REPLACE_TEXTUALLY ~GEMARIEL_WS_ITEM_NAME[ ]*=[ ]*"[^"]*",?~ ~GEMARIEL_WS_ITEM_NAME = "Pazury Gemariela",~
+	
+	REPLACE_TEXTUALLY ~GEMARIEL_WS_ITEM_DESC[ ]*=[ ]*"[^"]*",?~ ~GEMARIEL_WS_ITEM_DESC = "PAZURY GEMARIELA \n(Standardowa broń) \nObrażenia: 1-8, kłute lub sieczne \nUmagicznienie: +1 \nSzybkość: 1 \nWaga: 0 \nBiegłość: Pięści \n\n \nPazury abiszaja - ostre jak brzytwa, szybkie i zabójcze, ale przede wszystkim skuteczne. To podstawowa broń Gemariela, zaprawiona nutką magii Seta. Czegóż abiszai tego pokroju może chcieć więcej od życia?",~	
+	
+	REPLACE_TEXTUALLY ~DEITY_GENERAL[ ]*=[ ]*"[^"]*",?~ ~DEITY_GENERAL = "WYZNANIE \n\nWiara jest jedną z głównych sił poruszających Sfery. Istnieją dziesiątki panteonów i setki Mocy, które wyznają ich mieszkańcy.",~
+	
+	REPLACE_TEXTUALLY ~TOOLTIP_DEITY_GENERAL[ ]*=[ ]*"[^"]*",?~ ~TOOLTIP_DEITY_GENERAL = "",~
+	
+	REPLACE_TEXTUALLY ~KIARANSALEE_DESC[ ]*=[ ]*"[^"]*",?~ ~KIARANSALEE_DESC = "Bieżące wyznanie: Kiaransalee\n(Mścicielka, Mściwa Banshee, Biała Banshee) \n\nChaotyczna Zła bogini nieśmierci i zemsty należąca do panteonu mrocznych elfów (Mroczne Seldarine). Jej święta kraina znajduje się w Thanatos w Otchłani.\nJej misją jest zgaszenie wszelkiego życia w Sferach aby mogła zapanować równość i spokój, na zawsze.",~
+
+
+COPY ~%MOD_FOLDER%/2da/g-bbs01.2da~ ~override~
+REPLACE ~901000~ @901000

@@ -1,0 +1,109 @@
+// Black Joseph vs Adonis
+
+
+
+IF
+    True()
+THEN
+    RESPONSE #100
+        CutSceneId("g-bb049")
+        StartCutSceneMode()
+		SetGlobal("G-ADONISchill","GLOBAL",1)
+      	ActionOverride("g-bb049",MoveToPointNoInterrupt([960.3015]))
+		ActionOverride("g-bb049",FloatMessage("g-bb049",@100017))
+			ActionOverride("g-bb049",SmallWait(23))
+		ActionOverride("g-bb049",FloatMessage("g-bb049",@100018))
+			ActionOverride("g-bb049",SmallWait(23))
+		EndCutSceneMode()
+		CutSceneId("g-bb005")
+        StartCutSceneMode()
+		ActionOverride("g-bb049",FloatMessage("g-bb005",@100020))
+			ActionOverride("g-bb049",SmallWait(23))
+		ActionOverride("g-bb049",FloatMessage("g-bb049",@100019))
+		ActionOverride("g-bb005",SmallWait(63))
+		ActionOverride("g-bb005",Attack("g-bb049")
+		ActionOverride("g-bb049",Attack("g-bb005")
+		ActionOverride("g-bb005",ReturnToSavedPlace())
+		ActionOverride("g-bb005",FloatMessage(Myself,@100021))
+		EndCutSceneMode()
+END
+
+/*
+IF
+    True()
+THEN
+    RESPONSE #100
+        CutSceneId("g-bb049")
+        StartCutSceneMode()
+		FadeToColor([20.0],1)
+		ActionOverride(Protagonist,JumpToPoint([1025.3017]))
+		ActionOverride("g-bb049",JumpToPoint([980.3015]))
+		MoveViewPoint([980.3015],VERY_FAST)
+		ActionOverride("g-bb049",FaceObject("g-bb005"))
+			ActionOverride("g-bb049",SmallWait(23))
+		ActionOverride("g-bb049",PlaySequence(ANIM_STANDTOSTANCE))
+		ActionOverride("g-bb005",FaceObject("g-bb049"))
+        ActionOverride("g-bb049",FloatMessage(Myself,@100017))
+			ActionOverride("g-bb049",SmallWait(23))
+        ActionOverride("g-bb049",FaceObject("g-bb005")) 
+        ActionOverride("g-bb005",FaceObject("g-bb049"))
+        ActionOverride("g-bb049",FloatMessage(Myself,@100018))
+			ActionOverride("g-bb049",SmallWait(23))
+        ActionOverride("g-bb005",FloatMessage(Myself,@100020))
+        Wait(2)
+        ActionOverride("g-bb049",FloatMessage(Myself,@100019))
+		Wait(3)
+		ActionOverride("g-bb049",MoveToObject("g-bb005"))
+        ActionOverride("g-bb005",FloatMessage(Myself,@100021))
+		ActionOverride("g-bb005",Attack("g-bb049"))
+        ActionOverride("g-bb049",Attack("g-bb005"))
+	    ActionOverride("g-bb005",ReturnToSavedPlace()) 
+		Wait(11)
+		EndCutSceneMode()
+END 
+
+IF
+    True()
+THEN
+    RESPONSE #100
+		SetGlobal("G-ADONISchill","GLOBAL",1)
+        CutSceneId("g-bb049")
+        StartCutSceneMode()
+		//FadeToColor([1.0],0)
+		ActionOverride(Protagonist,JumpToPoint([1025.3017]))
+		ActionOverride("g-bb049",JumpToPoint([980.3015]))
+		MoveViewPoint([980.3015],VERY_FAST)
+
+		ActionOverride("g-bb049",ClearAllActions())
+		ActionOverride("g-bb005",ClearAllActions())
+		ActionOverride("g-bb049",FaceObject("g-bb005"))
+ActionOverride("g-bb005",FaceObject("g-bb049"))
+
+ActionOverride("g-bb049",FloatMessage("g-bb049",@100017))
+ActionOverride("g-bb049",SmallWait(23))
+
+ActionOverride("g-bb049",FloatMessage("g-bb049",@100018))
+ActionOverride("g-bb049",SmallWait(23))
+
+ActionOverride("g-bb049",FloatMessage("g-bb005",@100020))
+ActionOverride("g-bb049",SmallWait(23))
+
+ActionOverride("g-bb049",FloatMessage("g-bb049",@100019))
+
+ActionOverride("g-bb049",MoveToObject("g-bb005"))
+ActionOverride("g-bb049",ClearAllActions())
+		ActionOverride("g-bb005",ClearAllActions())
+		//EndCutSceneMode()
+		//CutSceneId(Player1)
+        //StartCutSceneMode()
+		ActionOverride("g-bb005",Attack("g-bb049"))
+		ActionOverride("g-bb005",SetAnimState("g-bb005",ANIM_MIMEATTACK2))
+		ActionOverride("g-bb005",PlaySound("HIT_03J"))
+		ActionOverride("g-bb049",ApplyDamage(MYSELF,13,MAGIC))
+		ActionOverride("g-bb005",SetAnimState("g-bb005",ANIM_MIMEATTACK2))
+		ActionOverride("g-bb005",PlaySound("HIT_03J"))
+		ActionOverride("g-bb049",ApplyDamage(MYSELF,16,MAGIC))
+		ActionOverride("g-bb005",FloatMessage("g-bb005",@100021))
+		SetGlobal("G-ADONISchill","GLOBAL",0)
+		EndCutSceneMode()
+END */

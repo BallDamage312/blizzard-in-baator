@@ -1,0 +1,267 @@
+IF
+GlobalGT("G-ulfbrandwonagainstus","GLOBAL",0)
+THEN
+	RESPONSE #25
+EscapeArea()
+	RESPONSE #75
+Kill(Myself)
+END
+
+
+IF
+GlobalGT("G-ulfbrandlostraid","GLOBAL",0)
+THEN
+	RESPONSE #100
+EscapeArea()
+END
+
+IF
+GlobalGT("G-ulfbrandwonraid","GLOBAL",0)
+THEN
+	RESPONSE #75
+EscapeArea()
+	RESPONSE #25
+Kill(Myself)
+END
+
+IF
+	Global("g-raidendedwhendead","GLOBAL",1)
+
+THEN
+	RESPONSE #75
+	EscapeArea()
+	RESPONSE #25
+	Kill(Myself)
+END
+// Random, when attacked 
+
+IF
+
+Global("g-raidberserk","GLOBAL",1) 
+Global("g-doomguardpounce","LOCALS",1)
+THEN
+    RESPONSE #100
+	FaceObject([0.0.0.0.G-RAID_FATED])
+        RunningAttack([0.0.0.0.G-RAID_FATED])
+		//Enemy()
+        Continue()
+	
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+    RunningAttack(NearestEnemyOf(Myself))
+END
+
+IF
+    AttackedBy([PC],DEFAULT)
+THEN
+    RESPONSE #100
+		FaceObject([PC])
+		Enemy()
+		Help()
+		RunningAttack(NearestEnemyOf(Myself))
+END
+
+IF
+    Help([0.0.0.0.G-RAID_DOOM])
+THEN
+    RESPONSE #100
+        Enemy()
+        RunningAttack(LastAttackerOf(LastHelp))
+END
+ 
+IF
+    Help([ANYONE])
+    Team(LastTrigger,G-RAID_DOOM)
+THEN
+    RESPONSE #100
+        Enemy()
+		Attack(NearestEnemyOf(Myself))
+END 
+
+
+IF
+    OnCreation()
+THEN
+    RESPONSE #100
+        ChangeTeam(Myself,G-FWRAID_DG)
+END
+
+IF
+GlobalGT("g-raidallegiances","GLOBAL",0)
+Global("g-doomguardpounce","LOCALS",0)
+THEN
+	RESPONSE #10
+		StickySinisterPoof("EF01TPRT",Myself,1)
+		SetGlobal("g-doomguardpounce","LOCALS",1)
+		JumpToPoint([512.742])
+		RESPONSE #10
+		StickySinisterPoof("EF01TPRT",Myself,1)
+		SetGlobal("g-doomguardpounce","LOCALS",1)
+		JumpToPoint([552.675])
+		RESPONSE #10
+		StickySinisterPoof("EF01TPRT",Myself,1)
+		SetGlobal("g-doomguardpounce","LOCALS",1)
+		JumpToPoint([461.832])
+		RESPONSE #10
+		StickySinisterPoof("EF01TPRT",Myself,1)
+		SetGlobal("g-doomguardpounce","LOCALS",1)
+		JumpToPoint([421.719])
+		RESPONSE #10
+		StickySinisterPoof("EF01TPRT",Myself,1)
+		SetGlobal("g-doomguardpounce","LOCALS",1)
+		JumpToPoint([494.602])
+		RESPONSE #10
+		StickySinisterPoof("EF01TPRT",Myself,1)
+		SetGlobal("g-doomguardpounce","LOCALS",1)
+		JumpToPoint([646.960])
+		RESPONSE #10
+		StickySinisterPoof("EF01TPRT",Myself,1)
+		SetGlobal("g-doomguardpounce","LOCALS",1)
+		JumpToPoint([427.663])
+		RESPONSE #10
+		StickySinisterPoof("EF01TPRT",Myself,1)
+		SetGlobal("g-doomguardpounce","LOCALS",1)
+		JumpToPoint([462.773])
+		RESPONSE #10
+		StickySinisterPoof("EF01TPRT",Myself,1)
+		SetGlobal("g-doomguardpounce","LOCALS",1)
+		JumpToPoint([743.904])
+		RESPONSE #10
+		StickySinisterPoof("EF01TPRT",Myself,1)
+		SetGlobal("g-doomguardpounce","LOCALS",1)
+		JumpToPoint([429.735])
+END
+
+ 
+IF
+    Help([ANYONE])
+    Team(LastTrigger,G-FWRAID_DG)
+THEN
+    RESPONSE #100
+        Enemy()
+		Attack(NearestEnemyOf(Myself))
+END 
+ 
+ 
+
+IF
+    AttackedBy([ANYONE],DEFAULT)
+THEN
+    RESPONSE #100
+        Enemy()
+        Attack(NearestEnemyOf(Myself))
+   END
+   
+ // ALLEGIANCE SET  
+   
+IF
+		Global("G-allegianceset","LOCALS",0)
+		Global("g-raidallegiances","GLOBAL",3)
+THEN
+	RESPONSE #50
+		ChangeEnemyAlly(Myself,NEUTRAL)
+		Attack("g-bb201")
+		SetGlobal("G-allegianceset","LOCALS",1)
+		Continue()
+	RESPONSE #50
+		ChangeEnemyAlly(Myself,NEUTRAL)
+		Attack("g-bb200")
+		SetGlobal("G-allegianceset","LOCALS",1)
+		Continue()
+	END
+
+IF
+		Global("G-allegianceset","LOCALS",0)
+		Global("g-raidallegiances","GLOBAL",4)
+THEN
+	RESPONSE #30
+		Enemy()
+		Attack("g-bb201")
+		SetGlobal("G-allegianceset","LOCALS",1)
+		Continue()
+	RESPONSE #20
+		Enemy()
+		Attack("g-bb200")
+		SetGlobal("G-allegianceset","LOCALS",1)
+		Continue()
+	RESPONSE #50
+		Enemy()
+		Attack(Protagonist)
+		SetGlobal("G-allegianceset","LOCALS",1)
+		Continue()
+	END
+
+IF
+		Global("G-allegianceset","LOCALS",0)
+		OR(2) Global("g-raidallegiances","GLOBAL",1) Global("g-raidallegiances","GLOBAL",2)
+THEN
+	RESPONSE #35
+		Enemy()
+		Attack("g-bb201")
+		SetGlobal("G-allegianceset","LOCALS",1)
+		Continue()
+	RESPONSE #15
+		Enemy()
+		Attack("g-bb200")
+		SetGlobal("G-allegianceset","LOCALS",1)
+		Continue()
+	RESPONSE #50
+		Enemy()
+		Attack(Protagonist)
+		SetGlobal("G-allegianceset","LOCALS",1)
+		Continue()	
+END
+
+//continuous combat
+ 
+IF
+		Global("G-allegianceset","LOCALS",1)
+		Global("g-raidallegiances","GLOBAL",3)
+THEN
+	RESPONSE #100
+		Attack("g-bb201") END
+IF
+		Global("G-allegianceset","LOCALS",1)
+		Global("g-raidallegiances","GLOBAL",1)
+THEN
+	RESPONSE #100
+		Attack("g-bb201") END
+IF
+		Global("G-allegianceset","LOCALS",1)
+		Global("g-raidallegiances","GLOBAL",2)
+THEN
+	RESPONSE #100
+		Attack("g-bb201") END
+IF
+		Global("G-allegianceset","LOCALS",1)
+		Global("g-raidallegiances","GLOBAL",4)
+THEN
+	RESPONSE #100
+		Attack("g-bb201") END
+
+// Raid finish
+
+IF
+GlobalGT("G-ulfbrandwonagainstus","GLOBAL",0)
+THEN
+	RESPONSE #100
+EscapeArea()
+END
+
+IF
+GlobalGT("G-ulfbrandlostraid","GLOBAL",0)
+THEN
+	RESPONSE #100
+EscapeArea()
+END
+
+IF
+GlobalGT("G-ulfbrandwonraid","GLOBAL",0)
+THEN
+	RESPONSE #100
+EscapeArea()
+END

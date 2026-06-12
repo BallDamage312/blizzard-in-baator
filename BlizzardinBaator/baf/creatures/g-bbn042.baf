@@ -1,0 +1,32 @@
+// Kuo Victim
+
+IF
+	OR(4)
+	Global("g-kuotoaprisonersfree","GLOBAL",1)
+	Global("g-kuotoadead","GLOBAL",1)
+	Global("g-kuotoagone","GLOBAL",1)
+	Global("g-kuotoaraid","GLOBAL",1)
+THEN
+	RESPONSE #100
+		EscapeArea()
+END
+
+IF
+	Global("g-kuotoaprisonersdead","GLOBAL",1)
+THEN
+	RESPONSE #100
+		Kill(Myself)
+END
+
+
+
+
+
+
+IF
+    AttackedBy([PC],DEFAULT)
+THEN
+    RESPONSE #100
+		FaceObject([PC])
+END
+

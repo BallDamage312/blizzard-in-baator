@@ -1,0 +1,10 @@
+// Messenger dialog
+
+IF 
+    	True()
+THEN
+	RESPONSE #100
+	CutSceneId("g-bb001")
+	RunToObject(Player1)
+	StartDialog("g-bbd001",Player1)
+END

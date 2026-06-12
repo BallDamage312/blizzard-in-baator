@@ -1,0 +1,22 @@
+// Vhailor Join
+ 
+IF
+  True()
+THEN
+  RESPONSE #100
+	CutSceneId(Player1)
+    StartCutSceneMode()
+	UndoExplore()
+	FadeToColor([10.0],0)
+	SmallWait(3)
+	MoveViewPoint([1160.2420],INSTANT)
+	Kill("Vhail")
+	CreateCreature("VhailEG",[1160.2420],14)
+    ActionOverride("Vhail",JoinParty())
+	SmallWait(2)
+	ActionOverride("Vhail",AddXPObject("Vhail",900000))
+	//ActionOverride("Vhail",GiveItemCreate("GRINDER","Vhail",0,0,0)
+	SmallWait(2)
+	TeleportParty("AR0202",[1160.2420],14)
+	EndCutSceneMode()
+END

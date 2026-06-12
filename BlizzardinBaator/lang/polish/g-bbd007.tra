@@ -1,0 +1,300 @@
+@0=~To będzie w akcie 2!~
+@2=~"Och. Przepraszam, przestaję czitować."~
+@4=~"Dobry panie. Proszę, powstrzymaj się! Jestem tylko pionkiem w nikczemnej grze diabłów. Oszczędź mnie, nie chcę umierać tutaj, w zimnym objęciu królestwa zdrajców. Okaż miłosierdzie!" ~ [g-00708]
+@6=~Unieś broń. "Nie będzie miłosierdzia! Zaatakowałeś nas i uwięziłeś. Umrzesz za to!" ~
+@7=~Unieś broń. "Nie będzie miłosierdzia! Zaatakowałeś mnie i uwięziłeś. Umrzesz za to!"~
+@8=~"Wynoś się stąd, zanim zmienię zdanie."~
+@9=~"Nigdzie nie pójdziesz, dopóki nie powiesz mi, kim naprawdę jesteś i dlaczego nas zaatakowałeś."~
+@10=~"Nigdzie nie pójdziesz, dopóki nie powiesz mi, kim naprawdę jesteś i dlaczego mnie zaatakowałeś."~
+@12=~"Ach, człowieku z tatuażami, witaj w tym lodowatym piekle. Bardzo mi przykro, że nasze drugie spotkanie odbywa się w tak niefortunnych okolicznościach. Wygląda na to, że znaleźliśmy się po przeciwnych stronach konfliktu, który tak naprawdę nie ma nic wspólnego z żadnym z nas. Cóż za życie..." Zatrzymuje się i przygląda się uważnie diabłu stojącemu przy twoim boku. "Tak więc... mały chochliku? Raz, dwa, trzy, diabeł patrzy." ~ [g-00709]
+@13=~"O nie, niedobrze. Prod zna niektórych z nich, to nasi starzy znajomi..." ~ [g-00610]
+@15=~"Znajomi?"~
+@17=~Bard z "Rzecznej Bramy" nadal stoi w nonszalanckiej pozie. Trąca delikatnie struny swojego instrumentu, ale przede wszystkim rozgląda się dookoła, jakby szukał w tym obskurnym lokalu źródła inspiracji.~
+@18=~"Powracasz, człowieku z tatuażami. Czy twoje uszy pragną muzyki?"~
+@20=~"Jasne, posłuchajmy czegoś."~
+@21=~"Nie, ale mam kilka pytań."~
+@22=~"Nie, właściwie to muszę już iść."~
+@24=~W centrum tawerny widzisz dandysa o fioletowych włosach. Mężczyzna stoi przy kanapie, której obicie dobierano chyba pod kolor jego czupryny, i delikatnie stuka w struny nieznanego ci instrumentu, będącego osobliwą hybrydą lutni i harfy. Ma na sobie fantazyjne, bufiaste ubranie, a jego bulwiasty kapelusz zdobią trzy pióra.~
+@26=~"Witaj."~
+@27=~Zostaw dandysa w spokoju.~
+@29=~Bard odrywa wzrok od swojego instrumentu. "Witaj! Och, piękne tatuaże. Jak na mój gust trochę zbyt ponure i hieroglificzne, ale kunszt jest godny podziwu. Bez wątpienia część z nich to dzieło Upadłego, ale wiele pochodzi też z innych sfer. W każdym razie... czy twoje uszy pragną muzyki?" ~ [g-00710]
+@31=~"Jasne, posłuchajmy czegoś."~
+@32=~"Nie, ale mam kilka pytań."~
+@33=~"Nie, właściwie to muszę już iść."~
+@35=~"Obecnie wykonuję trzy piosenki. 'Coś zabiło dergolotha', 'Zagubiona wioska' i 'Kruk i skowronek'. Wykonanie kosztuje 15 miedzianych monet za piosenkę. Co chcesz usłyszeć?"~
+@37=~"Chciałbym usłyszeć 'Coś zabiło dergolotha'."~
+@38=~"Chciałbym usłyszeć 'Zagubioną wioskę'."~
+@39=~"Chciałbym usłyszeć 'Kruka i skowronka'."~
+@40=~"Właściwie to na nic mnie nie stać, ale chciałbym ci zadać kilka pytań."~
+@41=~"Właściwie to na nic mnie nie stać, muszę już iść."~
+@42=~"Chciałbym ci zadać kilka pytań."~
+@43=~"Właściwie to muszę już iść."~
+@45=~Bard przygotowuje instrument i kaszle głośno, by przywołać ciszę w pomieszczeniu. Następnie zaczyna grać delikatną, melancholijną melodię.~
+@46=~"Och, szepty!
+Szepty, a ktoś stuka.
+Jak mogę odróżnić płomień od iskry,
+skowronka od kruka?"~
+@47=~"Och, sekrety!
+Sekrety, które skrywam.
+Droga stąd w dół jest tak stroma,
+a przepaść wciąż w otchłań mnie porywa."~
+@48=~"Och, próżności!
+Bestio o miękkich kłach.
+Im bliżej jesteś mnie, tym rośnie mój strach,
+czy nadal jestem tym, kim jestem w moich snach?"~
+@49=~"Och, jaskrawe światło.
+Oświetl moich drzwi surowy próg.
+Twoja rada, już nie wróg.
+Jeszcze skowronkiem jestem, czy został kruk?"~
+@50=~Akershus wygrywa długie, smutne rozwinięcie, a na zakończenie zmienia tonację i przechodzi w crescendo w innym rytmie. 
+"Jeśli tylko lęk przed moją miłością, że wzlecę w niebo nie sprawi,
+groza tego, co pozostanie, w rozpaczy mnie zostawi.
+W rozpaczy mnie zostawi..."~
+@51=~Melodia cichnie. Z dalekiego końca tawerny słychać oklaski. Akershus kłania się głęboko i patrzy na ciebie wyczekująco.~
+@53=~"Bardzo smutne i poruszające. Dziękuję."~
+@54=~"Okropnie ckliwe i bez polotu. Strata czasu."~
+@55=~"Chciałbym zadać ci teraz kilka pytań."~
+@56=~"Właściwie to powinienem już iść."~
+@58=~Bard przygotowuje instrument i kaszle głośno, by przywołać ciszę w pomieszczeniu. Następnie zaczyna grać. Utwór jest bardzo szybki, dynamiczny i oparty na chwytliwej, prostej melodii osadzonej w akordach. Bez długiego wstępu Akershus przechodzi do pierwszej linijki.~
+@59=~"Był se raz urzędczy sztab,
+jedna wielka słów gablota.
+A w ich wieży, w środku tam,
+do spraw mieszkań zuch jednostka.
+
+Czworo ledwo cwanych małp,
+jedno drugiemu zagląda.
+Sztuczek zestaw diabła wart,
+wiecznie wiszą na błahostkach."~
+@60=~"Nowy siepacz, dergoloth,
+poszedł w miasto coś doglądać.
+Wszedł do Ula, wprost przez płot,
+dane ścisłe chciał wycmoktać.
+
+Biedny bies nie wiedział o
+tym, że dom był pełny w kotach.
+Piłce był podobny on,
+skończyło się na pieszczotach."~
+@61=~"Na korytarz poszedł, won,
+pośród kocie bibeloty.
+W schodów dół, przez drzwi i sio,
+przeprowadzki marki KOTY.
+
+Na brzeg ścieku potoczon
+czuł już, że będą kłopoty.
+Nikt nic nie wie, zwykły dzion.
+Yugoloth wnet hyc do wody."~
+@62=~"Pływa trochę, lęku kłąb, 
+ale jest to spory kłopot.
+Idzie na dno, szybki zgon.
+Wszystko dzięki kilku kotom.
+
+Może tego nie wiesz, bo
+dajmony to nie sieroty.
+Spalisz, zgnieciesz, potniesz go.
+W swojej sferze się odrodzi.
+
+Lecz ten tutaj zniknął w toń.
+Zbyt plebejski zgon to potwarz.
+Sfer harmonia poszła won,
+coś zabiło dergolotha."~
+@63=~Piosenka kończy się tak samo nagle, jak się zaczęła. Z drugiego końca tawerny słychać oklaski. Akershus kłania się głęboko i patrzy na ciebie wyczekująco.~
+@65=~"Bardzo barwne i zabawne. Dobra robota."~
+@66=~"Niezwykle obraźliwe i prymitywne. Totalna klapa."~
+@67=~"Chciałbym zadać ci teraz kilka pytań."~
+@68=~"Właściwie to powinienem już iść."~
+@70=~Bard przygotowuje instrument i kaszle głośno, by przywołać ciszę w pomieszczeniu. Ten utwór brzmi jak piosenka dla dzieci, ale z ironicznym podtekstem.~
+@71=~"Brnąc w PodSigil, gdzieś natrafisz na ten cud."
+*KLASK KLASK*
+"Cywilizowana wioska, wokół brud."
+*KLASK KLASK*
+"W niej budynki nielogiczne,
+w nich umysły chaotyczne,
+ale nie ma wśród mieszkańców żadnych kutw."
+*KLASK KLASK*~
+@72=~"Kiedyś byli tacy sami jak i ja."
+*KLASK KLASK*
+"Ale miasto miało na nich inny plan."
+*KLASK KLASK*
+"Dabus, hyc, do rozbierania,
+nikt nie skrzyknął głosowania,
+wszystkie domki traktowane niczym szlam."
+*KLASK KLASK*~
+@73=~"Pozrzucane jeden z drugim ciach i prach."
+*KLASK KLASK*
+"Utrzymanie jednej z drugim prosto w piach."
+*KLASK KLASK*
+"Teraz żyją gdzieś pod nami,
+kombinują, jak się zbawić,
+a my na ich miejscu mamy nowy gmach."~
+@74=~Piosenka trwa jeszcze przez chwilę. Akershus odgrywa na instrumencie główną linię melodyczną i tupie w miejscach, gdzie powinny być klaśnięcia. Następnie utwór zwalnia do połowy tempa i ostatecznie dobiega końca. Z dalekiego końca tawerny słychać oklaski. Akershus kłania się głęboko i patrzy na ciebie wyczekująco.~
+@76=~"To była znakomita społeczna krytyka. Bardzo ironiczny utwór!"~
+@77=~"Wykorzystywanie rymowanek do celów politycznych to naprawdę niski poziom, panie grajek."~
+@78=~"Chciałbym zadać ci teraz kilka pytań."~
+@79=~"Właściwie to powinienem już iść."~
+@81=~Bard ponownie kłania się z uśmiechem na twarzy. "Cieszę się, że okazałeś się człowiekiem kultury."~
+@83=~"Czy mogę usłyszeć jeszcze jedną?"~
+@84=~"Chciałbym zadać ci teraz kilka pytań."~
+@85=~"Właściwie to powinienem już iść."~
+@87=~Bard ponownie kłania się z szerokim uśmiechem na twarzy. "Zawsze chętnie przyjmuję konstruktywną krytykę od inteligentnych słuchaczy."~
+@89=~"Czy mogę usłyszeć jeszcze jedną?"~
+@90=~"Chciałbym zadać ci teraz kilka pytań."~
+@91=~"Właściwie to powinienem już iść."~
+@93=~"Moje odpowiedzi są zazwyczaj metaforyczne i dotyczą raczej duszy niż... sfery praktycznej. Ale proszę bardzo. Pytaj."~
+@95=~"Czy mogę usłyszeć jedną z twoich piosenek?"~
+@96=~"Co tu robisz?"~
+@97=~"Kim jesteś?"~
+@98=~"Czy wiesz coś o portalu pułapce za twoimi plecami?"~
+@99=~"Czy wiesz coś o portalu pułapce za twoimi plecami?"~
+@100=~"Lubisz tatuaże?"~
+@101=~"Właściwie to powinienem już iść."~
+@103=~Akershus uśmiecha się. "Och, prowadzę obserwację na potrzeby mojej nowej epickiej kompozycji o przerażających gangach Ula. Tak wiele można się nauczyć od przestępców. Świetnie się bawię."~
+@105=~"Nie boisz się, że sprzedadzą ci po prostu kosy w plecy?"~
+@106=~"Mogę posłuchać fragmentu tej kompozycji?"~
+@107=~"Mam jeszcze kilka pytań."~
+@108=~"Właściwie to powinienem już iść."~
+@110=~"Na Piekła, jasne, że nie. Ludzie zajmujący się nielegalnym rzemiosłem nienawidzą przede wszystkim stróżów prawa oraz innych bandytów, ponieważ są oni dla nich konkurencją. Artystów natomiast *kochają*. Artyści tworzą legendy. Usprawiedliwiają poetycko to, co robią przestępcy. Nie mam się czego obawiać ze strony tych uroczych panów."~
+@113=~"Mogę posłuchać fragmentu twojej nowej kompozycji?"~
+@114=~"Mam jeszcze kilka pytań."~
+@115=~"Właściwie to powinienem już iść."~
+@117=~"O nie, zdecydowanie nie. Kiedy będzie gotowa, zapraszam do teatru na premierę."~
+@119=~"Nie boisz się, że tutejsze oprychy sprzedadzą ci kosy w plecy?"~
+@121=~"Mam jeszcze kilka pytań."~
+@122=~"Właściwie to powinienem już iść."~
+@124=~"Jestem Akershus, kompozytor i wykonawca nadzwyczajny, znany w całej Klatce i Zewnętrzu. Właśnie wróciłem z trasy koncertowej po miastach-bramach i przygotowuję się do skomponowania nowego arcydzieła." ~ [g-00711]
+@125=~"Nigdy o tobie nie słyszałam."~
+@127=~"Przygotowujesz się do stworzenia arcydzieła... tutaj?"~
+@128=~"Czyli jesteś obieżysferem. Byłeś kiedyś w Canii?"~
+@129=~"Mam jeszcze kilka pytań."~
+@130=~"Właściwie to powinienem już iść."~
+@132=~Bard posyła ci krótkie, protekcjonalne spojrzenie. "Po prostu zapytaj właściciela tawerny. To chyba najbardziej logiczny trop, prawda? Nie każdemu ufa, czasami trzeba się przymilić, zrobić z siebie idiotę albo wypić jakiś jego ulubiony trunek. Głaz Rui na przykład. Jeśli *dalej* nie będzie chciał z tobą gadać... zajrzyj mu do kieszeni." ~
+@136=~"Mam jeszcze kilka pytań."~
+@137=~"Właściwie to powinienem już iść."~
+@139=~Bard posyła ci krótkie, protekcjonalne spojrzenie. "Ach, poradziłbym ci po prostu pogadać z karczmarzem, ale on z tobą nie będzie chciał gadać. Wręcz zalatuje od ciebie praworządnością, więc jesteś w jego oczach bez wartości. Chyba że zrobisz coś naprawdę... losowego."~
+@141=~"Coś losowego? Mam jeszcze kilka losowych pytań."~
+@142=~"Hmm. Spróbuję. Powinienem już iść."~
+@144=~Bard podwija bufiasty rękaw na lewym ramieniu i odsłania skomplikowany wzór z ostrorośli. Po bliższych oględzinach okazuje się, że jest to sprytnie przedstawiona scena ukryta w cieniach i kształtach między poszczególnymi pnączami. Ukazuje ona budynki atakowane przez ostrorośl i kilka potworów przypominających kolczaste bulwy. Widać też ludzi uniesionych w powietrze przez nieokiełznane pnącza oraz pęknięcia w ziemi pod nimi.~
+@145=~"To reprodukcja obrazu lokalnego artysty, Caven-kogoś-tam. On sam jest praktycznie malarzem pokojowym, ale tatuaż zrobiła moja stara przyjaciółka, nadobna przedstawicielka ludu ostrzaków z Rigus. Jestem z niego bardzo dumny." Uśmiecha się szeroko. "Mam jeszcze kilka innych dzieł, ale nie mogę ich pokazać w miejscu publicznym."~
+@147=~"Cóż on przedstawia?"~
+@148=~Pozwól, aby powróciło wspomnienie. "Tatuażystka z Rigus?"~
+@149=~"Mam jeszcze kilka pytań."~
+@150=~"Właściwie to powinienem już iść."~
+@152=~"Chociaż mroźne pustkowie na dnie ognistej dziury wydaje się w teorii bardzo poetyckie, wolałbym uniknąć w mojej biografii rozdziału na temat zimowych piekieł... Nie, nigdy tam nie byłem."~
+@154=~"Mam jeszcze kilka pytań."~
+@155=~"Właściwie to powinienem już iść."~
+@157=~"Myślałem, że to oczywiste. Katastrofalne zawalenie się połowy osiedla przy Kanale. Gwałtowny rozrost ostrorośli spowodował, że ziemia się rozstąpiła i cały rząd budynków osunął się w mroczne głębiny. Nawet dabusy nie chcą dotykać tego nieszczęsnego bałaganu, więc gruzy nadal leżą w wodzie. Pomnik zbudowany siłą natury..."~
+@159=~"Mam jeszcze kilka pytań."~
+@160=~"Właściwie to powinienem już iść."~
+@162=~Podchodzisz bliżej do błagającego mężczyzny. Patrzy na ciebie, a jego oczy są pełne strachu.~
+@163=~"Chyba bramy pustki
+otwierają się przede mną..."~
+@165=~"Czy mogę posłuchać jednej z twoich piosenek, zanim odejdziesz?"~
+@166=~Zabij Akershusa. "A ja cię przez nie przepchnę."~
+@167=~Zabij Akershusa. "I pustka cię pochłonie."~
+@168=~Zabij Akershusa. "I nikt łzy za tym chłopcem nie uszczknie,
+gdy w toń wpadnie błędną."~
+@170=~Oddech barda jest szybki i nieregularny. "Pracuję dla diabła o imieniu Anit'bil. Zmusił mnie, żebym tu przyszedł. Nie miałem wyboru... Ja tylko..." Następuje krótka pauza, podczas której Akershus zastanawia się nad słowami. "Od czasu do czasu 'obserwuję' dla mojego patrona, ale nigdy nie robiłem czegoś takiego jak tu. Nie wiem, dlaczego mnie tu wysłali, ale nie chcę umierać, nie w taki sposób."~
+@172=~"Czego szukałeś, kiedy mnie szpiegowałeś?"~
+@173=~"Kim jest twój patron?"~
+@174=~"Co możesz mi powiedzieć o Anit'bilu?"~
+@175=~"To za mało. Czas umrzeć."~
+@176=~"Wynoś się stąd, zanim zmienię zdanie."~
+@178=~Bard zamyka oczy. Zimny wiatr rozwiewa mu po twarzy fioletowe włosy. Widać, że się boi. Widać też, że sztuka rzeczywiście jest całym jego życiem. Artysta z pasji, zdrajca z konieczności.~
+@179=~Po chwili zaczyna śpiewać słabym, drżącym głosem. Bez akompaniamentu instrumentów nie robi to wielkiego wrażenia. Jednak obecna w głosie pieśniarza świadomość nadchodzącej zagłady tworzy bardzo szczególny nastrój.~
+@180=~"A gdy rzeka końca dobiega
+i strumień w ocean się zmienia,
+zaczynam wreszcie dostrzegać,
+że nadszedł kres już istnienia. ~ [g-00714]
+@181=~Pragnę wspiąć się na skały,
+lub popłynąć pod prąd rwący,
+ale duch mój już tak mały,
+rozpływam się, niechcący." ~ [g-00715]
+@183=~Zabij Akershusa.~
+@184=~"No dobrze... Jeszcze jedna szansa... Powiedz mi, kim naprawdę jesteś i dlaczego nas zaatakowałeś."~
+@185=~"Ech... Spływaj stąd, zanim zmienię zdanie."~
+@186=~"To było równie płytkie i bezsensowne jak wszystkie inne twoje piosenki. Czas umierać."~
+@188=~"Miałem znaleźć Tergush'tekhna w Sigil, ale najpierw znalazłem Proda. Miałem nadzieję, że abiszaj przyjdzie go uratować, ale zamiast tego pojawiłeś się ty. Podsłuchałem, że wyruszacie do Canii. To wszystko, czego udało mi się dowiedzieć."~
+@190=~"Kim jest twój patron?"~
+@191=~"Co możesz mi powiedzieć o Anit'bilu?"~
+@192=~"To za mało. Czas umrzeć."~
+@193=~"Wynoś się stąd, zanim zmienię zdanie."~
+@195=~"Prod już podał jego imię. Mammon. Władca Trzeciej Warstwy. Najbogatsza istota w Sferach. Wielki patron sztuki."~
+@197=~"Czego szukałeś, kiedy nas szpiegowałeś?"~
+@198=~"Co możesz mi powiedzieć o Anit'bilu?"~
+@199=~"To za mało. Czas umrzeć."~
+@200=~"Wynoś się stąd, zanim zmienię zdanie."~
+@202=~"To paskudny, ambitny kornugon, zanurzony głęboko w tyłku Mammona. Mam o nim bardzo nieprzyjemną piosenkę. To on dawał mi rozkazy."~
+@204=~"Czego szukałeś, kiedy nas szpiegowałeś?"~
+@205=~"Kim jest twój patron?"~
+@206=~"To za mało. Czas umrzeć."~
+@207=~"Wynoś się stąd, zanim zmienię zdanie."~
+@209=~"Tu jesteś! Mały diabelski przyjacielu, właściwie się nie znamy, ale mamy wspólnego pracodawcę. A raczej... mieliśmy."~
+@210=~"Mieliśmy? Kiedyś? A teraz co? Prod służy tylko Mammonowi, zawsze tak było."~
+@212=~"Wszystko w porządku, Prod?"~
+@213=~"Myślałem, że mamy znaleźć kogoś dla Levistusa."~
+@214=~Nie mów nic.~
+@215=~"Nie rozmawiasz z Prodem, rozmawiasz ZE MNĄ."~
+@217=~"Słyszałem coś innego, malutki. Słyszałem, że ty i twoi przyjaciele abiszaje uciekliście, aby służyć komuś innemu. Jestem tutaj, aby dowiedzieć się, kim jest ten drugi." ~ [g-00712]
+@218=~"Nie, nie, Proda interesuje tylko Pan Chciwości i jego monety. Prod przysięga."  ~ [g-00609]
+@220=~"Wszystko w porządku, Prod?"~
+@221=~"Myślałem, że mamy znaleźć kogoś dla Levistusa."~
+@222=~Nie mów nic.~
+@223=~"Nie rozmawiasz z Prodem, rozmawiasz ZE MNĄ."~
+@225=~"Prod, Prod. *Ty* jesteś nikim. To twoi przyjaciele abiszaje naprawdę go interesują. Powiedz nam, kto jest twoim nowym panem, a daruję ci życie. Mammon nie wie nawet o twoim istnieniu."~
+@226=~Prod potrzebuje na odpowiedź znacznie więcej czasu niż zwykle. Trzykrotnie otwiera i zamyka małe usta, aż w końcu wydaje z siebie dźwięk. "To Levistus", mówi.~
+@227=~"Prod nigdy nie chciał odejść. Prod został zmuszony. Prod dziękuje ci za ratunek!" ~ [g-00608]
+@228=~"Wspaniale." W jednej chwili promień magicznej energii przecina zaśnieżoną ścieżkę i uderza małego chochlika. ~ [g-00713]
+@230=~"Prod!"~
+@231=~Zaatakuj.~
+@233=~"Ach. Levistus. Wspaniale!" ~ [g-00713]
+@234=~W jednej chwili promień magicznej energii przecina zaśnieżoną ścieżkę i uderza małego chochlika.~
+@236=~"Prod!"~
+@237=~Zaatakuj.~
+@239=~"O tak, tak. Prod zna tych kaduków. Jesteśmy starymi przyjaciółmi. Nie mamy się czym martwić!" ~ [g-00602]
+@240=~"Racja, Prod, ty nie masz. Jesteś nikim. To twoi przyjaciele abiszaje naprawdę go interesują. Powiedz nam, kto jest twoim nowym panem, a daruję ci życie. Mammon nie wie nawet o twoim istnieniu."~
+@241=~Prod potrzebuje na odpowiedź znacznie więcej czasu niż zwykle. Trzykrotnie otwiera i zamyka małe usta, aż w końcu wydaje z siebie dźwięk. "To Levistus", mówi.~
+@242=~"Prod nigdy nie chciał odejść. Prod został zmuszony. Prod dziękuje ci za ratunek!" ~ [g-00608]
+@243=~"Wspaniale." W jednej chwili promień magicznej energii przecina zaśnieżoną ścieżkę i uderza małego chochlika. ~ [g-00713]
+@245=~"Prod!"~
+@246=~Zaatakuj.~
+@248=~"Oczywiście, człowieku z tatuażami. Być może wiesz to, czego potrzebuję. Powiedz mi, a będziesz mógł odejść. To proste. Nie komplikujmy sprawy. Dla kogo pracujecie?"~
+@250=~Zaatakuj.~
+@251=~Prawda: "Levistus. Pracujemy dla Levistusa."~
+@252=~Kłamstwo: "Mammon. Pracujemy dla tego samego arcydiabła, bardzie!"~
+@253=~Kłamstwo: "Mammon. Pracujemy dla tego samego arcydiabła, bardzie!"~
+@254=~Kłamstwo: "Baron Molikroth. Zostaliśmy wezwani, a ty sprawiasz mu kłopoty. To nie jest dobry pomysł."~
+@255=~Kłamstwo: "Baron Molikroth. Zostaliśmy wezwani, a ty sprawiasz mu kłopoty. To nie jest dobry pomysł."~
+@256=~"Nie pracuję dla nikogo. Robię, co mi się podoba."~
+@258=~"Głupcy!" W jednej chwili promień magicznej energii przecina zaśnieżoną ścieżkę i uderza małego chochlika.~
+@260=~"Prod!"~
+@262=~Na nieskazitelnej twarzy Akershusa pojawia się cień wątpliwości. Czy to możliwe? Czy jego informacje są błędne? Spogląda na otaczające go biesy w poszukiwaniu potwierdzenia, ale one wydają się być równie nieświadome jak on.~
+@263=~Ale nie.~
+@264=~"Prawie mnie nabrałeś. Doskonałe kłamstwo. Chylę czoła." Odwraca się do Proda.~
+@265=~"Jesteś nikim, Prod. To twoi przyjaciele abiszaje naprawdę go interesują. Powiedz nam, kto jest twoim nowym panem, a daruję ci życie. Mammon nie wie nawet o twoim istnieniu."~
+@266=~Prod potrzebuje na odpowiedź znacznie więcej czasu niż zwykle. Trzykrotnie otwiera i zamyka małe usta, aż w końcu wydaje z siebie dźwięk. "To Levistus", mówi.~
+@267=~"Prod nigdy nie chciał odejść. Prod został zmuszony. Prod dziękuje ci za ratunek!" ~ [g-00608]
+@268=~"Wspaniale." W jednej chwili promień magicznej energii przecina zaśnieżoną ścieżkę i uderza małego chochlika. ~ [g-00713]
+@270=~"Prod!"~
+@271=~Zaatakuj.~
+@273=~"Żałosne kłamstwo, ale... doceniam próbę." Odwraca się do Proda.~
+@274=~"Jesteś nikim, Prod. To twoi przyjaciele abiszaje naprawdę go interesują. Powiedz nam, kto jest twoim nowym panem, a daruję ci życie. Mammon nie wie nawet o twoim istnieniu."~
+@275=~Prod potrzebuje na odpowiedź znacznie więcej czasu niż zwykle. Trzykrotnie otwiera i zamyka małe usta, aż w końcu wydaje z siebie dźwięk. "To Levistus", mówi.~
+@276=~"Prod nigdy nie chciał odejść. Prod został zmuszony. Prod dziękuje ci za ratunek!" ~ [g-00608]
+@277=~"Wspaniale." W jednej chwili promień magicznej energii przecina zaśnieżoną ścieżkę i uderza małego chochlika. ~ [g-00713]
+@279=~"Prod!"~
+@280=~Zaatakuj.~
+@282=~Akershus klaszcze. "Naprawdę ci wierzę. Wyglądasz na silnego, samotnego śmiałka." Robi krok do przodu i składa ręce, patrząc na Proda. "W przeciwieństwie do ciebie, mały potworze."~
+@283=~"Jesteś nikim, Prod. To twoi przyjaciele abiszaje naprawdę go interesują. Powiedz nam, kto jest twoim nowym panem, a daruję ci życie. Mammon nie wie nawet o twoim istnieniu."~
+@284=~Prod potrzebuje na odpowiedź znacznie więcej czasu niż zwykle. Trzykrotnie otwiera i zamyka małe usta, aż w końcu wydaje z siebie dźwięk. "To Levistus", mówi.~
+@285=~"Prod nigdy nie chciał odejść. Prod został zmuszony. Prod dziękuje ci za ratunek!" ~ [g-00608]
+@286=~"Wspaniale." W jednej chwili promień magicznej energii przecina zaśnieżoną ścieżkę i uderza małego chochlika. ~ [g-00713]
+@288=~"Prod!"~
+@289=~Zaatakuj.~
+@291=~Widzisz oczami wyobraźni sugestię wspomnienia. Obraz koncentrycznych, surowych murów, widzianych z powietrza. Platformy do lądowania, na której osiada twoja machina... ~ [SPTR_01]
+@292=~Maszerujące równymi rzędami oddziały podobnie do siebie wyglądających wojowników. Nie. Nie wojowników, żołnierzy. To istotna różnica. Wszyscy tu posiadają rangi. Rangę posiada i ona. ~
+@293=~Jest piękna. Lśniąca. Czysta. Jej metaliczną skórę zdobią symetryczne wzory, mające na celu wzbudzać strach w tych, którzy je zobaczą. Zwykle nie lubi obcych w swoim mieście. Ale ty jesteś inny. Rozkazuje ci się położyć. Pamiętasz ukłucia i ból, ale rezultat jest... perfekcyjny.~
+@294=~Jest teraz później. Dużo później. W lustrze starasz się dostrzec pamiątkę po metalowej kobiecie z Rigus. Niestety skóra w tym miejscu jest spalona. Nie pamiętasz już, jak wyglądał ten wzór. Pamiętasz tylko... jego perfekcję.~
+@296=~Powróć do rzeczywistości.~
+@298=~Widzisz, że Akershus patrzy na ciebie zmieszany. "Zrobiło się bardzo cicho, siepaczu. Wszystko w porządku?"~
+@300=~"Przepraszam. Cóż on przedstawia?"~
+@302=~"Mam jeszcze kilka pytań."~
+@303=~"Właściwie to powinienem już iść."~

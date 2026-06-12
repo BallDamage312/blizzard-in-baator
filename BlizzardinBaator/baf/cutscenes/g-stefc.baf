@@ -1,0 +1,10 @@
+IF
+    True()
+THEN
+    RESPONSE #100
+        StartCutSceneMode()
+        CutSceneId("g-bb088")
+		ActionOverride("g-bb088",ReallyForceSpell(Protagonist,WIZARD_CLOUDKILL))
+		ActionOverride("g-bb088",EscapeArea())
+		EndCutSceneMode()
+END

@@ -1,0 +1,73 @@
+// Mezzoloth 1 Styx O cloud kill
+
+IF
+    AttackedBy([PC], DEFAULT)
+THEN
+    RESPONSE #100
+		Help()
+        Enemy()
+        Continue()
+END
+
+IF
+	See(NearestEnemyOf(Myself))
+    !GlobalTimerNotExpired("G-CastCombatSpell","LOCALS")
+    !StateCheck(Myself,STATE_BLUR)
+THEN
+    RESPONSE #100
+		SetGlobalTimer("G-CastCombatSpell","LOCALS",6)
+		ForceSpell(Myself,WIZARD_BLUR)
+		Continue()
+END
+/*
+IF
+	See(NearestEnemyOf(Myself))
+    !GlobalTimerNotExpired("G-CastCombatSpell","LOCALS") 
+    NumCreatureGT([PC],2)
+THEN
+    RESPONSE #100
+		SetGlobalTimer("G-CastCombatSpell","LOCALS",6)
+		ForceSpell(LastSeenBy(Myself),WIZARD_CLOUDKILL)
+		Continue()
+END
+*/
+IF	
+	See(NearestEnemyOf(Myself))
+    !GlobalTimerNotExpired("G-CastCombatSpell","LOCALS")
+    !StateCheck(LastSeenBy(Myself),STATE_BLIND)
+THEN
+    RESPONSE #100
+		SetGlobalTimer("G-CastCombatSpell","LOCALS",6) 
+		ForceSpell(LastSeenBy(Myself),WIZARD_BLINDNESS) 
+		Continue()
+END
+
+IF
+	See(NearestEnemyOf(Myself))
+    !GlobalTimerNotExpired("G-CastCombatSpell","LOCALS")
+    !Range(LastSeenBy(Myself),4)
+THEN
+    RESPONSE #100
+		SetGlobalTimer("G-CastCombatSpell","LOCALS",6)
+		ForceSpell(LastSeenBy(Myself),WIZARD_TONGUES_OF_FLAME)
+		Continue()
+END
+
+IF
+    
+    See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+    RunningAttack(LastSeenBy(Myself))
+    Continue()
+END
+
+IF
+	Help([ANYONE])
+	Team(LastTrigger,G-PIMPEK)
+THEN
+	RESPONSE #100
+	Enemy()
+	Attack(LastAttackerOf(LastHelp))
+END
+

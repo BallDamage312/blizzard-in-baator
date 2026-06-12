@@ -1,0 +1,118 @@
+// Random, when attacked 
+
+// Elvra clone battle script
+
+IF	
+	Global("G-skadbattle","LOCALS",1)
+	See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        ReallyForceSpell(Myself,WIZARD_BLUR)
+		IncrementGlobal("G-skadbattle","LOCALS",1)
+END
+
+IF
+	Global("G-skadbattle","LOCALS",2)
+	See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        ReallyForceSpell(Myself,WIZARD_GLOBE_OF_INVULNERABILITY)
+		SetGlobal("G-skadbattle","LOCALS",3)
+        Wait(6)
+	END
+
+IF
+	Global("G-skadbattle","LOCALS",3)
+	See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        ReallyForceSpell(Myself,CLERIC_CURE_CRITICAL_WOUNDS)
+        Wait(4)
+		IncrementGlobal("G-skadbattle","LOCALS",1)
+END
+
+IF
+	Global("G-skadbattle","LOCALS",4)
+	See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        ReallyForceSpell(NearestEnemyOf(Myself),WIZARD_ADDERS_KISS)
+        Wait(4)
+		IncrementGlobal("G-skadbattle","LOCALS",1)
+END
+
+IF
+	Global("G-skadbattle","LOCALS",5)
+	See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        	PlaySound("AM_VORTX")
+        ReallyForceSpell(NearestEnemyOf(Myself),WIZARD_ADDERS_KISS)
+		Wait(4)
+		SetGlobal("G-skadbattle","LOCALS",6)
+END
+
+IF
+	Global("G-skadbattle","LOCALS",6)
+	See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        ReallyForceSpell(NearestEnemyOf(Myself),WIZARD_ADDERS_KISS)
+        Wait(4)
+		Wait(4)
+		SetGlobal("G-skadbattle","LOCALS",7)
+END
+
+IF
+	Global("G-skadbattle","LOCALS",7)
+	See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        ReallyForceSpell(NearestEnemyOf(Myself),WIZARD_ADDERS_KISS)
+        Wait(2)
+		ReallyForceSpell(Myself,CLERIC_CURE_SERIOUS_WOUNDS)
+		Wait(4)
+		SetGlobal("G-skadbattle","LOCALS",1)
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+    Enemy()
+	IncrementGlobal("G-skadbattle","LOCALS",1)
+END
+
+IF
+    AttackedBy([PC],DEFAULT)
+	Global("g-belzczce_combat","GLOBAL",0)
+THEN
+    RESPONSE #100
+		FaceObject([PC])
+		Enemy()
+		SetGlobal("G-skadbattle","LOCALS",1)
+		SetGlobal("g-belzczce_combat","GLOBAL",1)
+END
+
+
+// END OF BATTLE SCRIPT
+
+IF
+	Global("G-skaldalert","GLOBAL",0)
+	See(Protagonist)
+	Global("G-visited_alfheim","GLOBAL",1)
+THEN
+    RESPONSE #100
+	CutSceneId(Player1)
+	StartCutSceneMode()
+	ActionOverride("g-bb226",MoveToObject(Player1))
+	SetGlobal("G-skaldalert","GLOBAL",1)
+	StartDialogNoSet(Player1)
+	Continue()
+END
+
+
+
+
+ 
+

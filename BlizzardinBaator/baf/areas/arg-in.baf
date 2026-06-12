@@ -1,0 +1,84 @@
+// initial guides spawn
+
+IF
+    Global("G-portpeople","GLOBAL",0)
+THEN
+    RESPONSE #100
+        CreateCreature("g-bb216",[400.1410],NE) // back to work
+		CreateCreature("g-bb217",[1880.700],NE)
+        SetGlobal("G-portpeople","GLOBAL",1)
+END
+
+// GUIDES RESPAWN AFTER DIE
+
+IF
+    GlobalTimerExpired("G-BBPCaptain_Died","GLOBAL")
+	Global("G-BBPCaptain_DiedX","GLOBAL",1)
+THEN
+    RESPONSE #100
+		SetGlobal("G-BBPCaptain_DiedX","GLOBAL",0)
+		CreateCreature("g-bb217",[1880.700],NE) // new captain hired
+		Continue()
+END
+
+IF
+    GlobalTimerExpired("G-BBPHoller_Died","GLOBAL")
+	Global("G-BBPHoller_DiedX","GLOBAL",1)
+THEN
+    RESPONSE #100
+		SetGlobal("G-BBPHoller_DiedX","GLOBAL",0)
+		CreateCreature("g-bb216",[400.1410],NE) // new child born
+		Continue()
+END
+
+//PADLOCK CONTROL
+
+IF
+    Global("g-in-inilock","GLOBAL",0)
+	Global("g-storage-paid","GLOBAL",0)
+THEN
+    RESPONSE #100
+        SetGlobal("g-in-inilock","GLOBAL",1)
+		Lock("G-storage1")
+		Lock("G-storage2")
+		Lock("G-storage3")
+		Lock("G-storage4")
+		Lock("G-storage5")
+END
+
+IF
+    Global("g-storage-paid","GLOBAL",1)
+	Global("g-in-inilock","GLOBAL",1)
+THEN
+    RESPONSE #100
+        SetGlobal("g-in-inilock","GLOBAL",0)
+		Unlock("G-storage1")
+		Unlock("G-storage2")
+		Unlock("G-storage3")
+		Unlock("G-storage4")
+		Unlock("G-storage5")
+END
+
+// RESTING BONUSES
+
+IF
+    PartyRested()
+THEN
+    RESPONSE #100
+    SetGlobal("G-CroneUsedToday","GLOBAL",0)
+	Continue()
+END
+
+// DIALOGUES
+
+IF
+	InParty("Annah")
+	!StateCheck("Annah",CD_STATE_NOTVALID)
+	Global("G-fakeanndial001triggered","GLOBAL",0) // one time trigger
+THEN
+    RESPONSE #100
+    SetGlobal("G-fakeanndial001triggered","GLOBAL",1) // one time trigger
+	SetGlobal("g-fakeanndialogue","GLOBAL",1) // fake dialog selection
+	CreateCreatureObject("g-bbann",Player1,0,0,0) // fake ann creation
+	ActionOverride("g-bbann",StartDialog("g-bbdann",Player1)) // FakeannMRT dialogue initiation
+END

@@ -1,0 +1,139 @@
+// Word Archon
+
+IF
+    OnCreation()
+THEN
+    RESPONSE #100
+        FaceObject([PC])
+        Continue()
+END
+
+IF
+    HPPercentLT(Myself,30)
+THEN
+    RESPONSE #100
+		ForceSpellRES("g-bb695",Player1)
+        ReallyForceSpell(Myself,CLERIC_CURE_CRITICAL_WOUNDS)
+		//ForceSpellRES("g-bb699",NearestEnemyOf(Myself))
+		//Wait(1)
+		JumpToObject([PC])
+		RunningAttack(NearestEnemyOf(Myself))
+END
+
+IF
+    HPPercentLT(Myself,60)
+THEN
+    RESPONSE #100
+		ForceSpellRES("g-bb695",Player1)
+        ReallyForceSpell(Myself,CLERIC_CURE_MODERATE_WOUNDS)
+		//ForceSpellRES("g-bb699",NearestEnemyOf(Myself))
+		//Wait(1)
+		JumpToObject([PC])
+		RunningAttack(NearestEnemyOf(Myself))
+END
+
+IF
+    HPPercentLT(Myself,80)
+THEN
+    RESPONSE #100
+		ForceSpellRES("g-bb695",Player1)
+        ReallyForceSpell(Myself,CLERIC_CURE_LIGHT_WOUNDS)
+		//ForceSpellRES("g-bb699",NearestEnemyOf(Myself))
+		//Wait(1)
+		JumpToObject([PC])
+		RunningAttack(NearestEnemyOf(Myself))
+END
+
+IF	
+	See(NearestEnemyOf(Myself))
+	Global("G-WArchon_Kombat_N034","LOCALS",1)
+THEN
+    RESPONSE #100
+		//FloatMessage(Myself,@100016)
+		/*ActionOverride(Player1,StickySinisterPoof("g-bbknd2",Player1,1))
+		ActionOverride(Player2,StickySinisterPoof("g-bbknd2",Player2,1))
+		ActionOverride(Player3,StickySinisterPoof("g-bbknd2",Player3,1))
+		ActionOverride(Player4,StickySinisterPoof("g-bbknd2",Player4,1))
+		ActionOverride(Player5,StickySinisterPoof("g-bbknd2",Player5,1))
+		ActionOverride(Player6,StickySinisterPoof("g-bbknd2",Player6,1))*/
+		ActionOverride(Player1,PlaySequence(ANIM_DIE))
+		ActionOverride(Player2,PlaySequence(ANIM_DIE))
+		ActionOverride(Player3,PlaySequence(ANIM_DIE))
+		ActionOverride(Player4,PlaySequence(ANIM_DIE))
+		ActionOverride(Player5,PlaySequence(ANIM_DIE))
+		ActionOverride(Player6,PlaySequence(ANIM_DIE))
+		Wait(1)
+		ForceSpellRES("g-bb693",Player1)
+		SmallWait(1)
+		ActionOverride(Player1,PlaySequence(ANIM_GETUP))
+		ActionOverride(Player2,PlaySequence(ANIM_GETUP))
+		ActionOverride(Player3,PlaySequence(ANIM_GETUP))
+		ActionOverride(Player4,PlaySequence(ANIM_GETUP))
+		ActionOverride(Player5,PlaySequence(ANIM_GETUP))
+		ActionOverride(Player6,PlaySequence(ANIM_GETUP))
+		ForceSpell(Myself,CLERIC_PRAYER)
+		ForceSpellRES("g-bb694",LastAttackerOf(Myself))
+		Wait(1)
+		//ForceSpell([PC],CLERIC_SPIRITUAL_HAMMER)
+		FaceObject([PC])
+		//ForceSpellRES("g-bb696",Myself)
+		//ForceSpellRES("g-bb699",NearestEnemyOf(Myself))
+		//Wait(1)
+		//JumpToObject([PC])
+		//RunningAttack(NearestEnemyOf(Myself))
+		IncrementGlobal("G-WArchon_Kombat_N034","LOCALS",1)
+END
+
+IF	
+	See(NearestEnemyOf(Myself))
+	Global("G-WArchon_Kombat_N034","LOCALS",2)
+THEN
+    RESPONSE #100
+        Spell([PC],CLERIC_HALO_OF_LESSER_REVELATION)
+		Wait(1)
+		//ForceSpellRES("g-bb697",NearestEnemyOf(Myself))
+		//Spell([PC],CLERIC_SPIRITUAL_HAMMER)
+		IncrementGlobal("G-WArchon_Kombat_N034","LOCALS",1)
+END
+
+IF	
+	See(NearestEnemyOf(Myself))
+	Global("G-WArchon_Kombat_N034","LOCALS",3)
+THEN
+    RESPONSE #100
+        ForceSpellRES("g-bb686",Myself)
+		IncrementGlobal("G-WArchon_Kombat_N034","LOCALS",1)
+END
+
+IF
+	See(NearestEnemyOf(Myself))
+    GlobalGT("G-WArchon_Kombat_N034","LOCALS",3)
+THEN
+    RESPONSE #100
+		JumpToObject([PC])
+        RunningAttack(NearestEnemyOf(Myself))
+END
+
+IF
+    AttackedBy([ANYONE],DEFAULT)
+THEN
+    RESPONSE #100
+		FaceObject([ANYONE])
+		Enemy()
+		FloatMessage(Myself,@100016)
+		Wait(1)
+		SetGlobal("G-WArchon_Kombat_N034","LOCALS",1)
+END
+
+
+IF
+    See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+		Enemy()
+		//ForceSpellRES("g-bb699",NearestEnemyOf(Myself))
+		//Wait(1)
+		JumpToObject([PC])
+		RunningAttack(NearestEnemyOf(Myself))
+		IncrementGlobal("G-WArchon_Kombat_N034","LOCALS",1)
+END

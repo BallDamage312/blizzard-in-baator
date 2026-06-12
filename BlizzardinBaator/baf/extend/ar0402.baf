@@ -1,0 +1,46 @@
+// Tergush'tekhn
+
+IF
+    Global("REGRET","GLOBAL",1)
+	Global("G-BBTRGT","GLOBAL",0)
+		
+THEN
+    RESPONSE #100
+        CreateCreature("g-bb051",[339.610],14)
+        SetGlobal("G-BBTRGT","GLOBAL",1)
+		ActionOverride("AETHEL",DestroySelf()) 
+		//ActionOverride("TEGARIN",DestroySelf())
+		//ActionOverride("TEGAR'IN",DestroySelf())
+		SetGlobal("G-tegarreset","GLOBAL",1)
+		Wait(3)
+		CreateCreature("AETHEL",[318.680],NE)
+		CreateCreature("TEGAR'IN",[411.580],4)		
+		Wait(1)	
+		ChangeDialog("AETHEL","g-bbdaet")
+		ChangeDialog("TEGARIN","g-bbdteg") 
+		ActionOverride("TEGARIN",ChangeAIScript("0402tegr",DEFAULT))
+		ActionOverride("AETHEL",ChangeAIScript("0402athl",DEFAULT))
+		Wait(1)	
+		ChangeDialog("AETHEL","g-bbdaet")
+		ChangeDialog("TEGARIN","g-bbdteg") 
+		
+
+		
+END
+
+IF
+    Dead("g-bb051")
+THEN
+    RESPONSE #100
+    SetGlobal("Game_Over","GLOBAL",3)
+END
+
+IF
+		Global("G-intro_mov","GLOBAL",1)
+THEN
+    RESPONSE #100
+		SetGlobal("G-intro_mov","GLOBAL",2)
+		//StartMovie("g-memo")
+		ActionOverride("g-bb051",StartDialogNoSet(Player1))
+END
+

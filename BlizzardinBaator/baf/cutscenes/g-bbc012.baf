@@ -1,0 +1,22 @@
+// Grace Join
+ 
+IF
+  True()
+THEN
+  RESPONSE #100
+	CutSceneId(Player1)
+    StartCutSceneMode()
+	UndoExplore()
+	FadeToColor([10.0],0)
+	SmallWait(3)
+	MoveViewPoint([1160.2420],INSTANT)
+	Kill("Grace")
+	CreateCreature("GraceEG",[1160.2420],14)
+    ActionOverride("Grace",JoinParty())
+	SmallWait(2)
+	ActionOverride("Grace",AddXPObject("Grace",600000))
+	ActionOverride("Grace",GiveItemCreate("BOD_GP","Grace",0,0,0) 
+	ActionOverride("Grace",XEquipItem("BOD_GP",Myself,SLOT_CHEST,2))
+	SmallWait(2)
+	TeleportParty("AR0202",[1160.2420],14)
+END

@@ -1,0 +1,33 @@
+// Thug AttackedBy walk
+
+IF
+    See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        Help()
+        RunningAttack(NearestEnemyOf(Myself))
+END
+
+IF
+    AttackedBy([PC],DEFAULT)
+THEN
+    RESPONSE #100
+        Enemy()
+		Help()
+        RunningAttack(NearestEnemyOf(Myself))
+END
+
+IF
+    Help([0.0.0.0.G-THUG_DITCH])
+THEN
+    RESPONSE #100
+        Enemy()
+        RunningAttack(LastAttackerOf(LastHelp))
+END
+
+IF
+	True()
+THEN
+	RESPONSE #100
+		RandomWalk()
+END

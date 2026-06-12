@@ -1,0 +1,47 @@
+// Hive dwellers (2) no walk
+
+IF
+    OnCreation()
+THEN
+    RESPONSE #100
+        ChangeSpecifics(Myself,%G-DITCH_DWELLER%)
+END
+
+
+IF
+    See(NearestEnemyOf(Myself))
+	!Global("G-steffenMAD","GLOBAL",1) 
+THEN
+    RESPONSE #100
+        RunAwayFrom(NearestEnemyOf(Myself),170)
+END
+
+IF
+    HPPercentLT(Myself,50)
+    Allegiance(Myself,ENEMY)
+	!Global("G-steffenMAD","GLOBAL",1) 
+THEN
+    RESPONSE #100
+        EscapeArea()
+END
+
+IF
+    AttackedBy([PC],DEFAULT)
+THEN
+    RESPONSE #100
+        Enemy()
+END
+
+IF
+    True()
+	!ActuallyinCombat()
+THEN
+    RESPONSE #100
+        Face(W)
+        PlaySequence(ANIM_TALK)
+        WaitRandom(3,5)
+        Face(NW)
+        PlaySequence(ANIM_TALK)
+        WaitRandom(3,5)
+END
+

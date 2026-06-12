@@ -1,0 +1,66 @@
+IF
+    Global("g-biessassin","GLOBAL",2)
+	!Global("g-biessassinme","LOCAL",1)
+	GlobalLT("g-bssn_gatespawn","GLOBAL",3)
+THEN
+    RESPONSE #1
+        Enemy()
+		Help()
+		ReallyForceSpell(NearestEnemyOf(Myself),WIZARD_PACIFY)
+        Attack(NearestEnemyOf(Myself))
+		SetGlobal("g-biessassinme","LOCAL",1)
+	RESPONSE #2
+		SetGlobal("g-biessassinme","LOCAL",1)
+        IncrementGlobal("g-bssn_gatespawn","GLOBAL",1)
+        Enemy()
+        Help()
+        StickySinisterPoof("EF01TPRT",Myself,1)
+		Wait(1)
+        CreateCreatureObject("g-bb218",Myself,0,0,0)
+        Attack(NearestEnemyOf(Myself))
+	RESPONSE #1
+        Enemy()
+		Help()
+		Attack(NearestEnemyOf(Myself))
+		SetGlobal("g-biessassinme","LOCAL",1)
+   END
+   
+IF
+    Global("g-biessassin","GLOBAL",2)
+	!Global("g-biessassinme","LOCAL",1)
+	!GlobalLT("g-bssn_gatespawn","GLOBAL",3)
+THEN
+    RESPONSE #100
+        Enemy()
+		Help()
+		ReallyForceSpell(NearestEnemyOf(Myself),WIZARD_PACIFY)
+        Attack(NearestEnemyOf(Myself))
+		SetGlobal("g-biessassinme","LOCAL",1)
+	RESPONSE #100
+        Enemy()
+		Help()
+		Attack(NearestEnemyOf(Myself))
+		SetGlobal("g-biessassinme","LOCAL",1)
+	RESPONSE #100
+        Enemy()
+		Help()
+		Attack(NearestEnemyOf(Myself))
+		SetGlobal("g-biessassinme","LOCAL",1)
+	RESPONSE #100
+        Enemy()
+		Help()
+		Attack(NearestEnemyOf(Myself))
+		SetGlobal("g-biessassinme","LOCAL",1)
+	RESPONSE #100
+        Enemy()
+		Help()
+		Attack(NearestEnemyOf(Myself))
+		SetGlobal("g-biessassinme","LOCAL",1)
+   END
+   
+  IF
+    Global("g-biessassin","GLOBAL",7)
+THEN
+    RESPONSE #100 
+		EscapeArea()
+		END

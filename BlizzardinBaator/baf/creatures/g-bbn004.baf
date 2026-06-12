@@ -1,0 +1,59 @@
+// Kuo Toa Warrior - walk
+
+IF
+    OnCreation()
+THEN
+    RESPONSE #100
+        ChangeTeam(Myself,G-KUOTOAT)
+        RandomWalk()
+END
+
+
+IF
+    See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        Help()
+        Attack(NearestEnemyOf(Myself))
+END
+
+IF
+    AttackedBy([PC],DEFAULT)
+THEN
+    RESPONSE #100
+        Enemy()
+        Help()
+        Attack(NearestEnemyOf(Myself))
+END
+
+IF
+    Help([ANYONE])
+    Team(LastTrigger,G-KUOTOAT)
+THEN
+    RESPONSE #100
+        Enemy()
+		Attack(NearestEnemyOf(Myself))
+END
+
+IF
+    Global("g-kuotoagone","GLOBAL",1)
+	Global("g-kuotoaEE1","GLOBAL",1) 
+THEN
+    RESPONSE #100
+        Kill(Myself)
+END
+
+IF
+    Global("g-kuotoagone","GLOBAL",1)
+	!Global("g-kuotoaEE1","GLOBAL",1) 
+THEN
+    RESPONSE #100
+        EscapeArea()
+END	
+		
+IF
+    Global("g-kuotoagod","GLOBAL",1)
+THEN
+    RESPONSE #100
+		ChangeEnemyAlly(Myself,ALLY)
+END

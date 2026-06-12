@@ -1,0 +1,21 @@
+
+IF
+   	Global("G-ikssodes_dead","GLOBAL",1)
+    Global("G-ikss_violent","GLOBAL",1)
+THEN
+    RESPONSE #100
+        SetGlobal("G-brill_quest","GLOBAL",11)
+        SetGlobal("G-ikss_murdered","GLOBAL",1)
+		SetGlobal("G-ikss_violent","GLOBAL",2)
+		DisplayString(Player1, @100196)
+		PlaySound("NAM157")
+        Continue()
+END
+
+IF
+    PartyRested()
+THEN
+    RESPONSE #100
+    SetGlobal("G-CroneUsedToday","GLOBAL",0)
+	Continue()
+END

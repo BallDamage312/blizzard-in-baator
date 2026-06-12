@@ -1,0 +1,77 @@
+// Sharikira
+
+IF
+	Global("g-raidendedwhendead","GLOBAL",1)
+	AreaCheck("arg-b2")
+
+THEN
+	RESPONSE #100
+		DestroySelf()
+END
+
+IF
+	Global("G-raidcocluded","GLOBAL",1)
+	AreaCheck("arg-b2")
+
+THEN
+	RESPONSE #100
+		EscapeArea()
+END
+
+
+IF
+    AttackedBy([PC],DEFAULT)
+THEN
+    RESPONSE #100
+		FaceObject([PC])
+		Enemy()
+		Help()
+		RunningAttack(NearestEnemyOf(Myself))
+END
+
+
+IF
+    See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+	Help()
+	FaceObject([PC])
+    RunningAttack(NearestEnemyOf(Myself))
+END
+
+IF
+    Help([0.0.0.0.G-YSGARD_1])
+THEN
+    RESPONSE #100
+		FaceObject([PC])
+        Enemy()
+        RunningAttack(LastAttackerOf(LastHelp))
+END
+
+IF
+    AreaCheck("arg-b2")
+THEN
+    RESPONSE #100
+	RunningAttack("b-bb017")
+END
+
+
+
+
+IF
+	Global("g-raidendedwhendead","GLOBAL",1)
+	AreaCheck("arg-b2")
+
+THEN
+	RESPONSE #100
+		DestroySelf()
+END
+
+IF
+	Global("G-raidcocluded","GLOBAL",1)
+	AreaCheck("arg-b2")
+
+THEN
+	RESPONSE #100
+		EscapeArea()
+END

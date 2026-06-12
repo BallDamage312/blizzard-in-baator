@@ -1,0 +1,37 @@
+// Random, when attacked 
+
+IF
+	Global("G-theaterabandoned","GLOBAL",1)
+	AreaCheck("arg-08")
+THEN
+	RESPONSE #100
+		DestroySelf()
+END
+ 
+IF
+ Global("G-FWRAID","GLOBAL",1)
+ Global("G-raelisreset","GLOBAL",0)
+THEN
+	RESPONSE #100
+		DestroySelf()
+		SetGlobal("G-raelisreset","GLOBAL",1)
+END
+ 
+IF
+
+	Global("G-theaterabandoned","GLOBAL",1)
+	AreaCheck("arg-08")
+THEN
+	RESPONSE #100
+		DestroySelf()
+END
+
+
+IF
+    AttackedBy([ANYONE],DEFAULT)
+THEN
+    RESPONSE #100
+        Enemy()
+        Attack(NearestEnemyOf(Myself))
+END
+

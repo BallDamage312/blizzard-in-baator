@@ -1,0 +1,15 @@
+IF 
+    True()
+THEN
+	RESPONSE #100
+		CutSceneId(Player1)
+		StartCutSceneMode()
+		ScreenShake([530.893],7) 
+		OpenDoor("G-ffd")
+		CreateCreatureObject("g-bb099",Protagonist,0,0,0)
+		CreateCreatureObject("g-bb099",Protagonist,0,0,0)
+		CreateCreatureObject("g-bb100",Protagonist,0,0,0)
+		CreateCreatureObject("g-bb099",Protagonist,0,0,0)
+		SetGlobal("G-ishtarquest","GLOBAL",3)
+		EndCutSceneMode()
+END

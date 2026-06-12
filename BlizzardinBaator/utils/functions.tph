@@ -1,0 +1,1190 @@
+
+// *** Functions for internal use *** Code author: Argent77 ***
+
+// To determine game types more easily
+OUTER_SET GAME_IS_BGEE = (GAME_IS ~bgee~ AND NOT GAME_INCLUDES ~sod~) ? 1 : 0
+OUTER_SET GAME_IS_SOD = (GAME_IS ~bgee~ AND GAME_INCLUDES ~sod~) ? 1 : 0
+OUTER_SET GAME_IS_BG2EE = (GAME_IS ~bg2ee~) ? 1 : 0
+OUTER_SET GAME_IS_IWDEE = (GAME_IS ~iwdee~) ? 1 : 0
+OUTER_SET GAME_IS_EET = (GAME_IS ~eet~) ? 1 : 0
+OUTER_SET GAME_IS_EET_IWD = (GAME_IS ~eet~ AND FILE_EXISTS_IN_GAME ~id1000.are~) ? 1 : 0
+OUTER_SET SPELL_REV = (MOD_IS_INSTALLED ~setup-spell_rev.tp2~ 0) ? 1 : 0
+
+
+/**
+ * Converts any decimal number into a hexadecimal number
+ */
+DEFINE_ACTION_FUNCTION TO_HEX_NUMBER
+INT_VAR
+  value     = 0   // the decimal number
+  minDigits = 1   // min. number of digits in return value (not counting sign)
+  prefix    = 0   // whether to return number with "0x" prefix
+  signed    = 1   // whether number is treated as a signed number
+  upperCase = 0   // whether to represent alphabetic digits in upper case
+RET
+  hexNumber       // returned as string without prefix
+BEGIN
+  ACTION_IF (minDigits < 1) BEGIN OUTER_SET minDigits = 1 END
+  ACTION_IF (minDigits > 8) BEGIN OUTER_SET minDigits = 8 END
+  OUTER_TEXT_SPRINT hexNumber ~~
+  ACTION_DEFINE_ARRAY digit BEGIN ~0~ ~1~ ~2~ ~3~ ~4~ ~5~ ~6~ ~7~ ~8~ ~9~ ~a~ ~b~ ~c~ ~d~ ~e~ ~f~ END
+
+  ACTION_IF (signed && value < 0) BEGIN
+    OUTER_SET isSigned = 1
+    OUTER_SET value = 0 - value
+  END ELSE BEGIN
+    OUTER_SET isSigned = 0
+  END
+
+  OUTER_WHILE (value != 0) BEGIN
+    OUTER_SET curDigit = value BAND 0xf
+    OUTER_SET value = value BLSR 4
+    OUTER_TEXT_SPRINT hexDigit $EVAL digit(~%curDigit%~)
+    OUTER_TEXT_SPRINT hexNumber ~%hexDigit%%hexNumber%~
+  END
+
+  OUTER_WHILE (STRING_LENGTH ~%hexNumber%~ < minDigits) BEGIN
+    OUTER_TEXT_SPRINT hexNumber ~0%hexNumber%~
+  END
+
+  ACTION_IF (upperCase) BEGIN
+    ACTION_TO_UPPER ~hexNumber~
+  END
+
+  ACTION_IF (prefix) BEGIN
+    OUTER_TEXT_SPRINT hexNumber ~0x%hexNumber%~
+  END
+
+  ACTION_IF (isSigned) BEGIN
+    OUTER_TEXT_SPRINT hexNumber ~-%hexNumber%~
+  END
+END
+
+DEFINE_PATCH_FUNCTION TO_HEX_NUMBER
+INT_VAR
+  value     = 0
+  minDigits = 1
+  prefix    = 0
+  signed    = 1
+  upperCase = 0
+RET
+  hexNumber
+BEGIN
+  INNER_ACTION BEGIN
+    LAF TO_HEX_NUMBER INT_VAR value minDigits prefix signed upperCase RET hexNumber END
+  END
+END
+
+
+/**
+ * Converts a hexadecimal value back into a decimal number.
+ * STR_VAR hexNumber  A string containing a hexadecimal number without prefix.
+ * RET value          The resulting decimal number as int value. Returns -1 on error.
+ */
+DEFINE_ACTION_FUNCTION TO_DEC_NUMBER
+STR_VAR
+  hexNumber  = ~~
+RET
+  value
+BEGIN
+  OUTER_SET value = "-1"
+
+  ACTION_IF (~%hexNumber%~ STRING_EQUAL ~~) BEGIN
+    OUTER_SET value = 0
+  END ELSE BEGIN
+    // checking for sign
+    ACTION_IF (~%hexNumber%~ STRING_MATCHES_REGEXP ~-.+~ = 0) BEGIN
+      OUTER_SET signed = 1
+      OUTER_PATCH_SAVE hexNumber ~%hexNumber%~ BEGIN REPLACE_TEXTUALLY ~^-~ ~~ END
+    END ELSE BEGIN
+      OUTER_SET signed = 0
+    END
+
+    // checking for prefix
+    ACTION_IF (~%hexNumber%~ STRING_MATCHES_REGEXP ~^0[xX].+~ = 0) BEGIN
+      OUTER_PATCH_SAVE hexNumber ~%hexNumber%~ BEGIN REPLACE_TEXTUALLY ~^0[xX]~ ~~ END
+    END
+
+    // converting number
+    OUTER_SET curValue = 0
+    OUTER_SET scale = 1
+    OUTER_SET strlen = STRING_LENGTH ~%hexNumber%~
+    OUTER_FOR (idx = strlen - 1; idx >= 0; --idx) BEGIN
+      OUTER_PATCH ~%hexNumber%~ BEGIN READ_BYTE idx hexDigit END
+      OUTER_SET hexDigit = hexDigit BAND 0xff
+      ACTION_IF (hexDigit >= 48 AND hexDigit <= 57) BEGIN // 0..9
+        OUTER_SET digit = hexDigit - 48
+      END ELSE ACTION_IF (hexDigit >= 65 AND hexDigit <= 70) BEGIN  // A..F
+        OUTER_SET digit = hexDigit - 55
+      END ELSE ACTION_IF (hexDigit >= 97 AND hexDigit <= 102) BEGIN // a..f
+        OUTER_SET digit = hexDigit - 87
+      END ELSE BEGIN
+        OUTER_SET digit = 0
+      END
+      OUTER_SET curValue += digit*scale
+      OUTER_SET scale = scale BLSL 4
+    END
+
+    ACTION_IF (signed) BEGIN
+      OUTER_SET curValue = 0 - curValue
+    END
+
+    OUTER_SET value = curValue
+  END
+END
+
+DEFINE_PATCH_FUNCTION TO_DEC_NUMBER
+STR_VAR
+  hexNumber  = ~~
+RET
+  value
+BEGIN
+  INNER_ACTION BEGIN
+    LAF TO_DEC_NUMBER STR_VAR hexNumber = EVAL ~%hexNumber%~ RET value END
+  END
+END
+
+
+/**
+ * Returns a non-zero value in "patched" if the game has been patched to v2.0 or higher.
+ */
+DEFINE_ACTION_FUNCTION IS_PATCHED_V2
+RET patched
+BEGIN
+  OUTER_SET patched = (FILE_EXISTS ~engine.lua~ AND FILE_EXISTS_IN_GAME ~wmpflag.ids~) ? 1 : 0
+END
+
+DEFINE_PATCH_FUNCTION IS_PATCHED_V2
+RET patched
+BEGIN
+  INNER_ACTION BEGIN LAF IS_PATCHED_V2 RET patched END END
+END
+
+
+/**
+ * Adds a new entry to a specified IDS file and returns its IDS value.
+ * 
+ * INT_VAR minValue       Minimum IDS value to consider. (Default: 0)
+ * INT_VAR maxValue       Maximum IDS value to consider. (Default: 255)
+ * INT_VAR preferredValue Try this IDS value first if available. (Default: unset)
+ * INT_VAR hexadecimal    Set to nonzero to add IDS value in hexadecimal notation. (Default: 0)
+ * STR_VAR idsFile        The IDS file to add the entry to.
+ * STR_VAR identifier     The identifier name for the IDS value. Must not contain whitespace.
+ * RET value              The IDS value if entry has been added successfully. -1 if entry could not be added.
+ */
+DEFINE_ACTION_FUNCTION ADD_IDS_ENTRY
+INT_VAR
+  minValue        = 0
+  maxValue        = 255
+  preferredValue  = "-1"
+  hexadecimal     = 0
+STR_VAR
+  idsFile         = ""
+  identifier      = ""
+RET
+  value
+BEGIN
+  OUTER_SET value = "-1"
+
+  ACTION_IF (minValue < 0) BEGIN OUTER_SET minValue = 0 END
+  ACTION_IF (maxValue < minValue) BEGIN OUTER_SET maxValue = minValue END
+
+  ACTION_IF (~%idsFile%~ STRING_MATCHES_REGEXP ~.+\..+~ = 0) BEGIN
+    OUTER_PATCH_SAVE idsFile ~%idsFile%~ BEGIN REPLACE_TEXTUALLY ~\(.+\)\.[^.]+~ ~\1~ END
+  END
+
+  ACTION_IF (FILE_EXISTS_IN_GAME ~%idsFile%.ids~) BEGIN
+    // Try preferred value first
+    OUTER_PATCH ~~ BEGIN
+      PATCH_IF (preferredValue >= minValue AND preferredValue <= maxValue) BEGIN
+        LOOKUP_IDS_SYMBOL_OF_INT retVal ~%idsFile%~ preferredValue
+        PATCH_IF (~%retVal%~ STRING_EQUAL ~%preferredValue%~) BEGIN
+          SET value = preferredValue
+        END
+      END
+    END
+    
+    // Looking for available IDS slot
+    ACTION_IF (value = "-1") BEGIN
+      OUTER_PATCH ~~ BEGIN
+        FOR (v = minValue; v <= maxValue; v += 1) BEGIN
+          LOOKUP_IDS_SYMBOL_OF_INT retVal ~%idsFile%~ v
+          PATCH_IF (~%retVal%~ STRING_EQUAL ~%v%~) BEGIN
+            SET value = v
+            SET v = maxValue + 1
+          END
+        END
+      END
+    END
+
+    // Falling back to preferred value if no free slot found
+    ACTION_IF (value = "-1" AND preferredValue >= minValue AND preferredValue <= maxValue) BEGIN
+      OUTER_SET value = preferredValue
+    END
+
+    // Adding new entry
+    ACTION_IF (value != "-1") BEGIN
+      ACTION_IF (hexadecimal) BEGIN
+        LAF TO_HEX_NUMBER INT_VAR value = value RET hexNumber END
+        OUTER_TEXT_SPRINT idsValue ~0x%hexNumber%~
+      END ELSE BEGIN
+        OUTER_TEXT_SPRINT idsValue ~%value%~
+      END
+
+      APPEND ~%idsFile%.ids~ ~%idsValue% %identifier%~ UNLESS ~%identifier%~
+      OUTER_SET value = IDS_OF_SYMBOL (~%idsFile%~ ~%identifier%~)
+      ACTION_IF (value < minValue OR value > maxValue) BEGIN
+        OUTER_SET value = "-1"
+      END
+    END
+  END
+END
+
+/**
+ * Adds a new entry to SPLPROT.2DA and returns its index. If an identical entry already exists it will return 
+ * the index of that entry instead.
+ * INT_VAR stat     A code from STATS.IDS or an extended stat code starting at 0x100 (256).
+ * STR_VAR value    Either a numeric value that is evaluated by "stat", or a default value "*" for specific stats.
+ *                  (Note: "-1" indicates a user-defined value.)
+ * STR_VAR relation Specifies how to evaluate the value.
+ *                  (Note: Not all extended stats require a relation code. Use "*" in this case.)
+ * RET index        Entry number that can be used to refer to this operation in various effect opcodes.
+ *                  Returns -1 on error.
+ */
+DEFINE_ACTION_FUNCTION ADD_SPLPROT_ENTRY
+INT_VAR
+  stat      = "-1"
+STR_VAR
+  value     = "*"
+  relation  = "*"
+RET
+  index
+BEGIN
+  OUTER_SET index = "-1"
+
+  ACTION_IF (stat >= 0) BEGIN
+    LAF TO_HEX_NUMBER INT_VAR value = stat RET hexNumber END
+    OUTER_TEXT_SPRINT valueHex ~0x%hexNumber%~
+    ACTION_IF (~%value%~ STRING_EQUAL ~~) BEGIN
+      OUTER_TEXT_SPRINT value ~*~
+    END
+    ACTION_IF (~%relation%~ STRING_EQUAL ~~) BEGIN
+      OUTER_TEXT_SPRINT relation ~*~
+    END
+
+    ACTION_IF (FILE_EXISTS_IN_GAME ~splprot.2da~) BEGIN
+      COPY_EXISTING ~splprot.2da~ ~override~
+        READ_2DA_ENTRIES_NOW table 4
+        // Search for identical entries
+        FOR (idx = 0; idx < table; idx += 1) BEGIN
+          READ_2DA_ENTRY_FORMER table idx 1 curStat
+          PATCH_IF (~%stat%~ STRING_EQUAL ~%curStat%~ OR ~%valueHex%~ STRING_EQUAL_CASE ~%curStat%~) BEGIN
+            READ_2DA_ENTRY_FORMER table idx 2 curValue
+            PATCH_IF (~%value%~ STRING_EQUAL ~%curValue%~) BEGIN
+              READ_2DA_ENTRY_FORMER table idx 3 curRelation
+              PATCH_IF (~%relation%~ STRING_EQUAL ~%curRelation%~) BEGIN
+                SET index = idx
+                SET idx = table
+              END
+            END
+          END
+        END
+
+        PATCH_IF (index < 0) BEGIN
+          // Add new entry
+          PATCH_IF (stat >= 0x100) BEGIN
+            TEXT_SPRINT line ~%table%        %valueHex%        %value%         %relation%~
+          END ELSE BEGIN
+            TEXT_SPRINT line ~%table%        %stat%          %value%         %relation%~
+          END
+          INSERT_2DA_ROW table 4 ~%line%~
+          SET index = table
+        END
+      BUT_ONLY IF_EXISTS
+    END
+  END
+END
+
+
+// Animation slots reserved by vanilla or mod-added game creatures (in hexadecimal format)
+// Supported mods:
+// - Bearwalker + extended Werebear animation
+// - Pack Mule
+<<<<<<<< .../inlined/creature/animation/slots.txt
+"0410" "1000" "1003" "1004" "1100" "1101" "1102" "1103" "1104" "1105" "1200" "1201" "1202" "1203" "1204" "1205" "1206" "1207" "1208" "1300" "2000" "2100" "2200" "2300" "3000" "3001" "4000" "4001" "4002" "4010" "4012" "4100" "4101" "4102" "4110" "4112" "4200" "4300" "4400" "4410" "4500" "4600" "4700" "4710" "4800" "5000" "5001" "5002" "5003" "5010" "5011" "5012" "5013" "5100" "5101" "5102" "5103" "5110" "5111" "5112" "5113" "5200" "5201" "5202" "5210" "5211" "5212" "5300" "5301" "5302" "5303" "5310" "5311" "5312" "5313" "6000" "6001" "6002" "6003" "6004" "6005" "6010" "6011" "6012" "6013" "6014" "6015" "6100" "6101" "6102" "6103" "6104" "6105" "6110" "6111" "6112" "6113" "6114" "6115" "6200" "6201" "6202" "6204" "6205" "6210" "6211" "6212" "6214" "6215" "6300" "6301" "6302" "6303" "6304" "6305" "6310" "6311" "6312" "6313" "6314" "6315" "6400" "6401" "6402" "6403" "6404" "6405" "6406" "6500" "6510" "6621" "7000" "7001" "7100" "7101" "7200" "7201" "7202" "7203" "7300" "7301" "7302" "7310" "7311" "7312" "7313" "7314" "7320" "7321" "7400" "7401" "7402" "7500" "7501" "7600" "7601" "7602" "7603" "7604" "7700" "7701" "7702" "7703" "7800" "7801" "7802" "7900" "7901" "7902" "7903" "7904" "7a00" "7a01" "7a02" "7a03" "7a04" "7b00" "7b01" "7b02" "7b03" "7b04" "7b05" "7b06" "7c00" "7c01" "7d00" "7d01" "7d02" "7d03" "7d04" "7d05" "7d06" "7d07" "7d08" "7e00" "7e01" "7f00" "7f01" "7f02" "7f03" "7f04" "7f05" "7f06" "7f07" "7f08" "7f09" "7f0a" "7f0b" "7f0c" "7f0d" "7f0e" "7f0f" "7f10" "7f11" "7f12" "7f13" "7f14" "7f15" "7f16" "7f17" "7f18" "7f19" "7f20" "7f21" "7f22" "7f23" "7f24" "7f27" "7f28" "7f29" "7f2a" "7f2b" "7f2c" "7f2d" "7f2e" "7f2f" "7f30" "7f31" "7f32" "7f33" "7f34" "7f35" "7f36" "7f37" "7f38" "7f39" "7f3a" "7f3b" "7f3c" "7f3d" "7f3e" "7f3f" "7f40" "7f41" "7f42" "7f43" "7f44" "7f45" "7f46" "7f47" "7f48" "7f49" "7f4a" "7f4b" "7f4c" "7f4d" "7f4e" "7f4f" "7f50" "7f51" "7f52" "7f53" "7f54" "7f55" "7f56" "7f57" "7f58" "7f59" "7f5a" "7f5b" "7f5c" "7f5d" "7f5e" "7f5f" "7f60" "7f61" "7f62" "8000" "8100" "8200" "9000" "a000" "a100" "a200" "a201" "a202" "b000" "b100" "b200" "b210" "b300" "b310" "b400" "b410" "b500" "b510" "b600" "b610" "b700" "c000" "c100" "c200" "c300" "c400" "c500" "c600" "c610" "c700" "c710" "c800" "c810" "c900" "c910" "ca00" "ca10" "cb00" "cc00" "cc01" "cc02" "cc04" "d000" "d100" "d200" "d300" "d400" "e000" "e010" "e020" "e040" "e050" "e060" "e070" "e080" "e090" "e0a0" "e0b0" "e0c0" "e0d0" "e0e0" "e0f0" "e0f1" "e0f2" "e200" "e210" "e220" "e230" "e240" "e241" "e242" "e243" "e244" "e245" "e246" "e247" "e248" "e249" "e24a" "e24b" "e24c" "e24d" "e24e" "e24f" "e250" "e251" "e252" "e253" "e254" "e255" "e256" "e257" "e258" "e259" "e25a" "e25b" "e25c" "e25d" "e25e" "e25f" "e260" "e261" "e262" "e263" "e264" "e265" "e266" "e267" "e26a" "e26b" "e26d" "e26e" "e26f" "e270" "e271" "e272" "e273" "e274" "e276" "e279" "e27d" "e27e" "e27f" "e280" "e281" "e282" "e283" "e288" "e289" "e28a" "e28b" "e28c" "e28d" "e28e" "e28f" "e290" "e291" "e292" "e293" "e294" "e300" "e310" "e320" "e330" "e400" "e410" "e420" "e430" "e440" "e441" "e442" "e443" "e444" "e500" "e510" "e520" "e600" "e610" "e6fe" "e700" "e710" "e720" "e800" "e810" "e820" "e830" "e840" "e900" "e910" "ea00" "ea10" "ea20" "eb00" "eb10" "eb20" "ec00" "ec10" "ec20" "ed00" "ed10" "ed20" "ee00" "ee10" "ef10"
+>>>>>>>>
+OUTER_TEXT_SPRINT animationSlotsPath ".../inlined/creature/animation/slots.txt"
+
+/**
+ * Returns the first free creature animation slot in the range defined by slotMin and slotMax.
+ * INT_VAR slotMin    Lowest available creature animation slot for the animation.
+ * INT_VAR slotMax    Highest available creature animation slot for the animation.
+ * INT_VAR slotSteps  How many slots to skip after each iteration, starting from slotMin.
+ *                    Setting this parameter is useful if compatible animation slots are always 
+ *                    a fixed distance apart (e.g. at a distance of 0x10 each)
+ * RET slot           A free animation slot. Returns -1 if none found.
+ */
+DEFINE_ACTION_FUNCTION FIND_FREE_ANIM_SLOT
+INT_VAR
+  slotMin   = 0
+  slotMax   = (slotMin BAND 0xf000) + 0x1000
+  slotSteps = 1
+RET
+  slot
+BEGIN
+  OUTER_SET slot = "-1"
+  ACTION_IF (slotSteps < 1) BEGIN OUTER_SET slotSteps = 1 END
+  ACTION_IF (slotMin < 0) BEGIN OUTER_SET slotMin = 0 END
+  ACTION_IF (slotMax < 0) BEGIN OUTER_SET slotMax = 0 END
+  ACTION_IF (slotMax < slotMin) BEGIN
+    OUTER_SET tmp = slotMin
+    OUTER_SET slotMin = slotMax
+    OUTER_SET slotMax = tmp
+  END
+
+  // animslots.txt contains reserved creature animation slots
+  COPY - ~%animationSlotsPath%~ ~%animationSlotsPath%~
+    READ_ASCII 0 slotList (SOURCE_SIZE)
+    FOR (idx = slotMin; idx < slotMax; idx += slotSteps) BEGIN
+      LOOKUP_IDS_SYMBOL_OF_INT name ~animate~ idx
+      PATCH_IF (~%name%~ STRING_EQUAL ~%idx%~) BEGIN
+        LPF TO_HEX_NUMBER INT_VAR value = idx minDigits = 4 RET hexNumber END
+        PATCH_IF (NOT FILE_EXISTS_IN_GAME ~%hexNumber%.ini~ AND 
+                  ~%slotList%~ STRING_CONTAINS_REGEXP ~"%hexNumber%"~ != 0) BEGIN
+          SET slot = idx
+          SET idx = slotMax
+        END
+      END
+    END
+END
+
+DEFINE_PATCH_FUNCTION FIND_FREE_ANIM_SLOT
+INT_VAR
+  slotMin   = 0
+  slotMax   = (slotMin BAND 0xf000) + 0x1000
+  slotSteps = 1
+RET
+  slot
+BEGIN
+  INNER_ACTION BEGIN
+    LAF FIND_FREE_ANIM_SLOT INT_VAR slotMin = slotMin slotMax = slotMax slotSteps = slotSteps RET slot END
+  END
+END
+
+
+// Work-around for a buggy WeiDU function
+DEFINE_PATCH_FUNCTION ADD_SPELL_EFFECT
+  INT_VAR opcode = 0
+          target = 0
+          timing = 0
+          parameter1 = 0
+          parameter2 = 0
+          power = 0
+          resist_dispel = 0
+          duration = 0
+          probability1 = 100
+          probability2 = 0
+          dicenumber = 0
+          dicesize = 0
+          savingthrow = 0
+          savebonus = 0
+          header = 0
+          insert_point = "-1"
+          special = 0
+          ___#special = special   // fixed spelling error
+  STR_VAR resource = ~~
+BEGIN
+  LAUNCH_PATCH_MACRO ~ADD_SPELL_EFFECT~
+END
+
+
+/**
+ * Determine whether the specified spell effect exists in the current creature.
+ * RET result   Number of spell effects matching the given search parameters.
+ */
+DEFINE_PATCH_FUNCTION CRE_EFFECT_EXISTS
+INT_VAR
+  opcode = "-1"
+RET
+  result
+BEGIN
+  SET result = 0
+  READ_ASCII 0 sig (8) NULL
+  PATCH_IF (~%sig%~ STR_EQ ~CRE V1.0~) BEGIN
+    READ_BYTE 0x33 fx_version
+    SET fx_size = fx_version = 0 ? 0x30 : 0x108
+    READ_LONG 0x2c4 ofs_fx
+    READ_LONG 0x2c8 num_fx
+    FOR (idx = 0; idx < num_fx; ++idx) BEGIN
+      SET ofs = ofs_fx + (idx * fx_size)
+      PATCH_IF (fx_version) BEGIN
+        READ_LONG (ofs + 8) value
+      END ELSE BEGIN
+        READ_SHORT ofs value
+      END
+      PATCH_IF (value = opcode) BEGIN
+        SET result += 1
+      END
+    END
+  END
+END
+
+
+/**
+ * An enhanced version of ALTER_SPELL_EFFECT, which allows to match any available effect parameters.
+ */
+DEFINE_PATCH_FUNCTION ALTER_SPELL_EFFECT_EX
+INT_VAR
+  check_globals           = 0
+  check_headers           = 1
+  header                  = 0
+  header_type             = "-1"
+  enable_match_parameter1 = 0   // whether match_parameter1 is used for a match
+  enable_match_parameter2 = 0   // whether match_parameter2 is used for a match
+  enable_match_special    = 0   // whether match_special is used for a match
+  enable_match_resource   = 0   // whether match_resource is used for a match
+  enable_update_parameter1  = 0 // whether parameter1 value should be written to the matching effect
+  enable_update_parameter2  = 0 // whether parameter2 value should be written to the matching effect
+  enable_update_special   = 0   // whether special value should be written to the matching effect
+  enable_update_resource  = 0   // whether resource value should be written to the matching effect
+  // effect fields to check (negative: do not check)
+  match_opcode            = "-1"
+  match_target            = "-1"
+  match_power             = "-1"
+  match_parameter1        = 0   // checked if enable_match_parameter1 != 0
+  match_parameter2        = 0   // checked if enable_match_parameter2 != 0
+  match_timing            = "-1"
+  match_resist_dispel     = "-1"
+  match_duration          = "-1"
+  match_probability1      = "-1"
+  match_probability2      = "-1"
+  match_dicenumber        = "-1"
+  match_dicesize          = "-1"
+  match_savingthrow       = "-1"
+  match_savebonus         = "-11" // < -10: do not check
+  match_special           = 0   // checked if enable_match_special != 0
+  // effect fields to update (-1: do not update)
+  opcode                  = "-1"
+  target                  = "-1"
+  power                   = "-1"
+  parameter1              = 0   // used if enable_update_parameter1 != 0
+  parameter2              = 0   // used if enable_update_parameter2 != 0
+  timing                  = "-1"
+  resist_dispel           = "-1"
+  duration                = "-1"
+  duration_high           = "-1"  // used if duration_high is != -1 and old duration > 5, otherwise duration is used instead
+  probability1            = "-1"
+  probability2            = "-1"
+  dicenumber              = "-1"
+  dicesize                = "-1"
+  savingthrow             = "-1"
+  savebonus               = "-11" // < -10: do not update
+  special                 = 0   // used if enable_update_special != 0
+STR_VAR
+  match_resource          = ~~  // checked if enable_match_resource != 0
+  resource                = ~~  // used if enable_update_resource != 0
+BEGIN
+  READ_ASCII 0 sig (8) NULL
+  PATCH_IF (~%sig%~ STR_EQ ~SPL V1  ~) BEGIN
+    READ_LONG 0x64 ofs_abil
+    READ_SHORT 0x68 num_abil
+    READ_LONG 0x6a ofs_fx
+    SET effects = 0
+
+    // retrieving list of global effects offsets
+    PATCH_IF (check_globals) BEGIN
+      READ_SHORT 0x6e idx_gfx
+      READ_SHORT 0x70 num_gfx
+      FOR (idx = 0; idx < num_gfx; ++idx) BEGIN
+        SET $effects(~%effects%~) = ofs_fx + (idx_gfx + idx) * 0x30
+        SET effects+= 1
+      END
+    END
+
+    // retrieving list of ability effects offsets
+    PATCH_IF (check_headers) BEGIN
+      PATCH_IF (header != 0) BEGIN
+        PATCH_IF (header > 0 && header <= num_abil) BEGIN
+          SET header -= 1
+          SET num_abil = 1
+        END ELSE BEGIN
+          SET num_abil = 0
+        END
+      END
+      FOR (idx1 = header; idx1 < header + num_abil; ++idx1) BEGIN
+        SET ofs1 = ofs_abil + (idx1 * 0x28)
+        PATCH_IF (header_type < 0 || header_type = BYTE_AT ofs1) BEGIN
+          READ_SHORT (ofs1 + 0x1e) num_afx
+          READ_SHORT (ofs1 + 0x20) idx_afx
+          FOR (idx2 = 0; idx2 < num_afx; ++idx2) BEGIN
+            SET $effects(~%effects%~) = ofs_fx + (idx_afx + idx2) * 0x30
+            SET effects += 1
+          END
+        END
+      END
+    END
+
+    // altering effects
+    FOR (idx = 0; idx < effects; ++idx) BEGIN
+      SET ofs = $effects(~%idx%~)
+      SET match = 1
+      SET match = match && (NOT enable_match_parameter1 || match_parameter1 = LONG_AT (ofs + 0x04))
+      SET match = match && (NOT enable_match_parameter2 || match_parameter2 = LONG_AT (ofs + 0x08))
+      SET match = match && (NOT enable_match_special || match_special = LONG_AT (ofs + 0x2c))
+      SET match = match && (match_opcode < 0 || match_opcode = SHORT_AT ofs)
+      SET match = match && (match_target < 0 || match_target = BYTE_AT (ofs + 0x02))
+      SET match = match && (match_power < 0 || match_power = BYTE_AT (ofs + 0x03))
+      SET match = match && (match_timing < 0 || match_timing = BYTE_AT (ofs + 0x0c))
+      SET match = match && (match_resist_dispel < 0 || match_resist_dispel = BYTE_AT (ofs + 0x0d))
+      SET match = match && (match_duration < 0 || match_duration = LONG_AT (ofs + 0x0e))
+      SET match = match && (match_probability1 < 0 || match_probability1 = BYTE_AT (ofs + 0x12))
+      SET match = match && (match_probability2 < 0 || match_probability2 = BYTE_AT (ofs + 0x13))
+      SET match = match && (match_dicenumber < 0 || match_dicenumber = LONG_AT (ofs + 0x1c))
+      SET match = match && (match_dicesize < 0 || match_dicesize = LONG_AT (ofs + 0x20))
+      SET match = match && (match_savingthrow < 0 || match_savingthrow = LONG_AT (ofs + 0x24))
+      SET match = match && (match_savebonus < "-10" || match_savebonus = LONG_AT (ofs + 0x28))
+      PATCH_IF (match && enable_match_resource) BEGIN
+        READ_ASCII (ofs + 0x14) res (8) NULL
+        SET match = ~%match_resource%~ STR_EQ ~%res%~
+      END
+      PATCH_IF (match) BEGIN
+        WRITE_SHORT (ofs) (opcode >= 0) ? opcode : THIS
+        WRITE_BYTE (ofs + 0x02) (target >= 0) ? target : THIS
+        WRITE_BYTE (ofs + 0x03) (power >= 0) ? power : THIS
+        WRITE_LONG (ofs + 0x04) enable_update_parameter1 ? parameter1 : THIS
+        WRITE_LONG (ofs + 0x08) enable_update_parameter2 ? parameter2 : THIS
+        WRITE_BYTE (ofs + 0x0c) (timing >= 0) ? timing : THIS
+        WRITE_BYTE (ofs + 0x0d) (resist_dispel >= 0) ? resist_dispel : THIS
+        PATCH_IF (duration_high >= 0 && LONG_AT (ofs + 0x0e) > 5) BEGIN
+          WRITE_LONG (ofs + 0x0e) duration_high
+        END ELSE BEGIN
+          WRITE_LONG (ofs + 0x0e) (duration >= 0) ? duration : THIS
+        END
+        WRITE_BYTE (ofs + 0x12) (probability1 >= 0) ? probability1 : THIS
+        WRITE_BYTE (ofs + 0x13) (probability2 >= 0) ? probability2 : THIS
+        PATCH_IF (enable_update_resource) BEGIN WRITE_ASCIIE (ofs + 0x14) ~%resource%~ (8) END
+        WRITE_LONG (ofs + 0x1c) (dicenumber >= 0) ? dicenumber : THIS
+        WRITE_LONG (ofs + 0x20) (dicesize >= 0) ? dicesize : THIS
+        WRITE_LONG (ofs + 0x24) (savingthrow >= 0) ? savingthrow : THIS
+        WRITE_LONG (ofs + 0x28) (savebonus >= "-10") ? savebonus : THIS
+        WRITE_LONG (ofs + 0x2c) enable_update_special ? special : THIS
+      END
+    END
+  END
+END
+
+
+/**
+ * Creates a spell which contains all externalized wild surge effects.
+ * STR_VAR resName    Name of the resulting spell (without extension).
+ * STR_VAR resDefault Name of the default spell when no externalized resource is available or spell is cast successfully.
+ */
+DEFINE_ACTION_FUNCTION CREATE_WILD_SURGE_SPELL
+STR_VAR
+  resName = ~~
+  resDefault = ~~
+BEGIN
+  ACTION_IF (NOT ~%resName%~ STRING_EQUAL ~~) BEGIN
+    // retrieving wild surge resources and strrefs
+    COPY_EXISTING - ~wildmag.2da~ ~override~
+      COUNT_2DA_COLS numCols
+      COUNT_2DA_ROWS numCols numRows
+      PATCH_IF (numRows > 100) BEGIN numRows = 100 END
+      FOR (idx = 0; idx < numRows; ++idx) BEGIN
+        READ_2DA_ENTRY idx 1 numCols res
+        PATCH_IF (NOT ~%res%~ STRING_EQUAL ~*~ AND FILE_EXISTS_IN_GAME ~%res%.spl~) BEGIN
+          TEXT_SPRINT $EVAL resRef(~%idx%~) ~%res%~
+        END ELSE BEGIN
+          TEXT_SPRINT $EVAL resRef(~%idx%~) ~%resDefault%~
+        END
+
+        READ_2DA_ENTRY idx 2 numCols str
+        PATCH_IF (IS_AN_INT ~%str%~) BEGIN
+          SET $EVAL strref(~%idx%~) = str
+        END ELSE BEGIN
+          SET $EVAL strref(~%idx%~) = "-1"
+        END
+      END
+    BUT_ONLY IF_EXISTS
+
+    // applying wild surge effects to target spell
+    CREATE SPL ~%resName%~
+      WRITE_SHORT 0x1c 4      // Spell type = innate
+      WRITE_LONG 0x34 1       // Spell level
+      WRITE_LONG 0x64 0x72    // abilities offset
+      WRITE_SHORT 0x68 1      // # abilities
+      WRITE_LONG 0x6a 0x9a    // effects offset
+      INSERT_BYTES 0x72 0x28  // space for ability
+      // creating ability structure
+      WRITE_SHORT 0x72 1      // type = melee
+      WRITE_SHORT 0x74 4      // location = innate
+      WRITE_BYTE 0x7e 1       // target = living creature
+      WRITE_SHORT 0x80 1      // range
+      WRITE_SHORT 0x82 1      // min. level
+      WRITE_SHORT 0x8e 1      // damage type
+      WRITE_SHORT 0x94 1      // # charges
+      WRITE_SHORT 0x98 1      // projectile = none
+
+      FOR (idx = 0; idx < numRows; ++idx) BEGIN
+        TEXT_SPRINT res $EVAL resRef(~%idx%~)
+        SET str = $EVAL strref(~%idx%~)
+        LPF ADD_SPELL_EFFECT
+        INT_VAR
+          opcode = 146      // Cast spell
+          target = 2        // Preset target
+          parameter2 = 1    // Cast instantly (ignore level)
+          timing = 1        // Instant/Permanent until death
+          probability1 = idx
+          probability2 = idx
+        STR_VAR
+          resource = EVAL "%res%"
+        END
+
+        LPF ADD_SPELL_EFFECT
+        INT_VAR
+          opcode = 139      // Display string
+          target = 2        // Preset target
+          parameter1 = str
+          timing = 1        // Instant/Permanent until death
+          probability1 = idx
+          probability2 = idx
+        END
+      END
+  END
+END
+
+
+/**
+ * Adds a new random treasure entry to RNDTRES.2DA. The entry is generated with a specified percentage for the given item.
+ * This function also creates a treasure placeholder item if needed.
+ * INT_VAR chance   The chance of the item to be generated (in percent).
+ * STR_VAR treasure The resource name of the placeholder treasure item without extension
+ * STR_VAR defItem  Default item for the columns not defined by chance.
+ * STR_VAR item     The resource name of the item to generate by the random treasure item.
+ * RET success      Returns non-zero on success and zero on fail.
+ */
+DEFINE_ACTION_FUNCTION DEFINE_RANDOM_TREASURE
+INT_VAR
+  chance    = 100
+STR_VAR
+  treasure  = ~~
+  defItem   = ~A7!EMPTY~
+  item      = ~~
+RET
+  success
+BEGIN
+  LAF DEFINE_RANDOM_TREASURE_EX INT_VAR chance_0 = chance STR_VAR treasure = EVAL ~%treasure%~ defItem = EVAL ~%defItem%~ item_0 = EVAL ~%item%~ RET success END
+END
+
+
+/**
+ * Adds a new random treasure entry to RNDTRES.2DA. The entry is generated with the specified percentages of the given items.
+ * This function also creates a treasure placeholder item if needed.
+ * INT_VAR chance_x The chance of the associated item to be generated (in percent). x must be a sequential number, starting at 0.
+ *                  Important: The sum of chances must not be greater than 100%.
+ * STR_VAR treasure The resource name of the placeholder treasure item without extension
+ * STR_VAR defItem  Default item for the columns not defined by chance_x.
+ * STR_VAR item_x   The resource names of the items to generate by the random treasure item. x must be a sequential number, starting at 0.
+ * RET success      Returns non-zero on success and zero on fail.
+ */
+DEFINE_ACTION_FUNCTION DEFINE_RANDOM_TREASURE_EX
+INT_VAR
+  // chance_0, chance_1, ...
+STR_VAR
+  treasure  = ~~
+  defItem   = ~A7!EMPTY~
+  // item_0, item_1, ...
+RET
+  success
+BEGIN
+  OUTER_SET success = 0
+  ACTION_IF (FILE_EXISTS_IN_GAME ~rndtres.2da~ AND 
+             NOT ~%treasure%~ STRING_EQUAL ~~ AND
+             STRING_LENGTH ~%treasure%~ <= 8) BEGIN
+    // validating input
+    OUTER_SET numItems = 0
+    OUTER_SET failed = 0
+    OUTER_SET sumChance = 0
+    OUTER_FOR (idx = 0; idx < 100; ++idx) BEGIN
+      ACTION_IF (VARIABLE_IS_SET $EVAL chance(~%idx%~) AND VARIABLE_IS_SET $EVAL item(~%idx%~)) BEGIN
+        ACTION_IF (sumChance > 100) BEGIN OUTER_SET failed = 1 OUTER_SET idx = 100 END
+        OUTER_SET valChance = $EVAL chance(~%idx%~)
+        ACTION_IF (valChance < 0) BEGIN OUTER_SET $EVAL chance(~%idx%~) = 0 END
+        ACTION_IF (valChance > 100) BEGIN OUTER_SET $EVAL chance(~%idx%~) = 100 END
+        OUTER_SET sumChance += valChance
+
+        OUTER_TEXT_SPRINT name $EVAL item(~%idx%~)
+        ACTION_IF (~%name%~ STRING_EQUAL ~~ OR STRING_LENGTH ~%name%~ > 8) BEGIN OUTER_SET failed = 1 OUTER_SET idx = 100 END
+      END ELSE BEGIN
+        OUTER_SET numItems = idx
+        OUTER_SET idx = 100
+      END
+    END
+    ACTION_IF (numItems = 0) BEGIN OUTER_SET failed = 1 END
+
+    ACTION_IF (failed = 0) BEGIN
+      COPY_EXISTING ~rndtres.2da~ ~override~
+        COUNT_2DA_COLS numCols
+        COUNT_2DA_ROWS numCols numRows
+
+        // check if entry already exists
+        FOR (idx = 0; idx < numRows; ++idx) BEGIN
+          READ_2DA_ENTRY idx 0 numCols name
+          PATCH_IF (~%name%~ STRING_EQUAL_CASE ~%treasure%~) BEGIN
+            SET failed = 1
+            SET idx = numRows
+          END
+        END
+
+        PATCH_IF (failed = 0) BEGIN
+          // generating entry name
+          TEXT_SPRINT newEntry ~%treasure%~
+          FOR (idx = 9 - (STRING_LENGTH ~%treasure%~); idx > 0; --idx) BEGIN TEXT_SPRINT newEntry ~%newEntry% ~ END
+
+          SET numCols -= 1  // exclude treasure name column
+          SET sumItems = 0
+          FOR (idxItem = 0; idxItem < numItems; ++idxItem) BEGIN
+            // calculating item count
+            SET itmChance = $EVAL chance(~%idxItem%~)
+            TEXT_SPRINT itmName $EVAL item(~%idxItem%~)
+            SET itmCount = (itmChance * numCols) / 100
+            PATCH_IF (itmChance > 0 AND itmCount = 0) BEGIN SET itmCount += 1 END
+            PATCH_IF (itmChance < 100 AND itmCount = numCols) BEGIN SET itmCount -= 1 END
+            SET sumItems += itmCount
+            PATCH_IF (sumItems <= numCols) BEGIN
+              // adding item to entry
+              FOR (col = 0; col < itmCount; ++col) BEGIN
+                TEXT_SPRINT newEntry ~%newEntry%%itmName%~
+                FOR (idx = 9 - (STRING_LENGTH ~%itmName%~); idx > 0; --idx) BEGIN TEXT_SPRINT newEntry ~%newEntry% ~ END
+              END
+            END ELSE BEGIN
+              SET idxItem = numItems
+            END
+          END
+
+          // adding empty items
+          FOR (idx = 9 - (STRING_LENGTH ~%defItem%~); idx > 0; --idx) BEGIN TEXT_SPRINT defItem ~%defItem% ~ END
+          FOR (col = sumItems; col < numCols; ++col) BEGIN
+            TEXT_SPRINT newEntry ~%newEntry%%defItem%~
+          END
+
+          // adding entry to 2DA
+          INSERT_2DA_ROW numRows (numCols + 1) ~%newEntry%~
+        END
+      BUT_ONLY IF_EXISTS
+
+      ACTION_IF (failed = 0) BEGIN
+        ACTION_IF (NOT FILE_EXISTS ~%treasure%.itm~ AND FILE_EXISTS_IN_GAME ~rndtre01.itm~) BEGIN
+          COPY_EXISTING ~rndtre01.itm~ ~override/%treasure%.itm~
+        END
+        OUTER_SET success = 1
+      END
+    END
+  END
+END
+
+
+/**
+ * Attempts to determine the index of an ARE actor structure.
+ * INT_VAR defaultIndex Returned if no actor matches the specified name.
+ * INT_VAR skip         Set to the number of skipped matches, in case you don't want the first matching actor to be returned. (Default: 0)
+ * STR_VAR name         Name of actor to find.
+ * RET index            The actor index if found, or defaultIndex if not found.
+ * RET offset           The offset of the actor structure if found, or -1 if not found.
+ */
+DEFINE_PATCH_FUNCTION ARE_INDEX_OF_ACTOR
+INT_VAR
+  defaultIndex = "-1"
+  skip = 0
+STR_VAR
+  name = ~~
+RET
+  index
+  offset
+BEGIN
+  SET index = defaultIndex
+  SET offset = "-1"
+  READ_LONG 0x54 ofsActors
+  READ_SHORT 0x58 numActors
+  FOR (idx = 0; idx < numActors; ++idx) BEGIN
+    SET curOfs = ofsActors + (idx * 0x110)
+    READ_ASCII curOfs curName ( 32 ) NULL
+    PATCH_IF (~%curName%~ STRING_EQUAL_CASE ~%name%~) BEGIN
+      PATCH_IF (skip <= 0) BEGIN
+        SET index = idx
+        SET offset = curOfs
+        SET idx = numActors
+      END ELSE BEGIN
+        SET skip -= 1
+      END
+    END
+  END
+END
+
+/**
+ * Attempts to determine the index of an ARE region structure.
+ * INT_VAR defaultIndex Returned if no region matches the specified name.
+ * INT_VAR skip         Set to the number of skipped matches, in case you don't want the first matching region to be returned. (Default: 0)
+ * STR_VAR name         Name of region to find.
+ * RET index            The region index if found, or defaultIndex if not found.
+ * RET offset           The offset of the region structure if found, or -1 if not found.
+ */
+DEFINE_PATCH_FUNCTION ARE_INDEX_OF_REGION
+INT_VAR
+  defaultIndex = "-1"
+  skip = 0
+STR_VAR
+  name = ~~
+RET
+  index
+  offset
+BEGIN
+  SET index = defaultIndex
+  SET offset = "-1"
+  READ_SHORT 0x5a numRegions
+  READ_LONG 0x5c ofsRegions
+  FOR (idx = 0; idx < numRegions; ++idx) BEGIN
+    SET curOfs = ofsRegions + (idx * 0xc4)
+    READ_ASCII curOfs curName ( 32 ) NULL
+    PATCH_IF (~%curName%~ STRING_EQUAL_CASE ~%name%~) BEGIN
+      PATCH_IF (skip <= 0) BEGIN
+        SET index = idx
+        SET offset = curOfs
+        SET idx = numRegions
+      END ELSE BEGIN
+        SET skip -= 1
+      END
+    END
+  END
+END
+
+/**
+ * Attempts to determine the index of an ARE container structure.
+ * INT_VAR defaultIndex Returned if no container matches the specified name.
+ * INT_VAR skip         Set to the number of skipped matches, in case you don't want the first matching container to be returned. (Default: 0)
+ * STR_VAR name         Name of container to find.
+ * RET index            The container index if found, or defaultIndex if not found.
+ * RET offset           The offset of the container structure if found, or -1 if not found.
+ */
+DEFINE_PATCH_FUNCTION ARE_INDEX_OF_CONTAINER
+INT_VAR
+  defaultIndex = "-1"
+  skip = 0
+STR_VAR
+  name = ~~
+RET
+  index
+  offset
+BEGIN
+  SET index = defaultIndex
+  SET offset = "-1"
+  READ_LONG 0x70 ofsContainers
+  READ_SHORT 0x74 numContainers
+  FOR (idx = 0; idx < numContainers; ++idx) BEGIN
+    SET curOfs = ofsContainers + (idx * 0xc0)
+    READ_ASCII curOfs curName ( 32 ) NULL
+    PATCH_IF (~%curName%~ STRING_EQUAL_CASE ~%name%~) BEGIN
+      PATCH_IF (skip <= 0) BEGIN
+        SET index = idx
+        SET offset = curOfs
+        SET idx = numContainers
+      END ELSE BEGIN
+        SET skip -= 1
+      END
+    END
+  END
+END
+
+/**
+ * Attempts to determine the index of an ARE container item structure.
+ * INT_VAR defaultIndex Returned if no container matches the specified name.
+ * INT_VAR skip         Set to the number of skipped matches, in case you don't want the first matching container to be returned. (Default: 0)
+ * STR_VAR resource     Item resource to find.
+ * RET index            The item index if found, or defaultIndex if not found.
+ * RET offset           The offset of the item structure if found, or -1 if not found.
+ */
+DEFINE_PATCH_FUNCTION ARE_INDEX_OF_CONTAINER_ITEM
+INT_VAR
+  defaultIndex = "-1"
+  skip = 0
+STR_VAR
+  resource = ~~
+RET
+  index
+  offset
+BEGIN
+  SET index = defaultIndex
+  SET offset = "-1"
+  PATCH_IF (NOT ~%resource%~ STRING_EQUAL ~~) BEGIN
+    READ_SHORT 0x76 numItems
+    READ_LONG 0x78 ofsItems
+    FOR (idx = 0; idx < numItems; ++idx) BEGIN
+      SET curOfs = ofsItems + (idx * 0x14)
+      READ_ASCII curOfs curRes ( 8 ) NULL
+      PATCH_IF (~%curRes%~ STRING_EQUAL_CASE ~%resource%~) BEGIN
+        PATCH_IF (skip <= 0) BEGIN
+          SET index = idx
+          SET offset = curOfs
+          SET idx = numItems
+        END ELSE BEGIN
+          SET skip -= 1
+        END
+      END
+    END
+  END
+END
+
+
+/**
+ * Distributes items as defined in a 2DA table structure.
+ * STR_VAR table  Full path to the item table.
+ */
+DEFINE_ACTION_FUNCTION DISTRIBUTE_ITEMS
+STR_VAR
+  table = ~~
+BEGIN
+  ACTION_IF (FILE_EXISTS ~%table%~) BEGIN
+    COPY - ~%table%~ ~%table%~
+      EVALUATE_BUFFER
+      COUNT_2DA_ROWS 7 numRows
+      FOR (idx = 0; idx < numRows; ++idx) BEGIN
+        READ_2DA_ENTRY idx 0 7 type
+        READ_2DA_ENTRY idx 1 7 res
+        READ_2DA_ENTRY idx 2 7 name
+        READ_2DA_ENTRY idx 3 7 item
+        READ_2DA_ENTRY idx 4 7 count
+        READ_2DA_ENTRY idx 5 7 count2
+        READ_2DA_ENTRY idx 6 7 count3
+        INNER_ACTION BEGIN
+          ACTION_IF (~%type%~ STRING_EQUAL_CASE ~ACTOR~) BEGIN
+            ACTION_IF (FILE_EXISTS_IN_GAME ~%res%.cre~) BEGIN
+              COPY_EXISTING ~%res%.cre~ ~override~
+                PATCH_IF (~%name%~ STRING_EQUAL_CASE ~*~) BEGIN TEXT_SPRINT name ~NONE~ END
+                ADD_CRE_ITEM ~%item%~ (count) (count2) (count3) ~%name%~ ~INV1 INV2 INV3 INV4 INV5 INV6 INV7 INV8 INV9 INV10 INV11 INV12 INV13 INV14 INV15 INV16 QITEM1 QITEM2 QITEM3 QUIVER1 QUIVER2 QUIVER3 QUIVER4~
+              BUT_ONLY IF_EXISTS
+            END
+          END ELSE ACTION_IF (~%type%~ STRING_EQUAL_CASE ~STORE~ OR ~%type%~ STRING_EQUAL_CASE ~STORE+~) BEGIN
+            ACTION_IF (FILE_EXISTS_IN_GAME ~%res%.sto~) BEGIN
+              COPY_EXISTING ~%res%.sto~ ~override~
+                TO_UPPER name
+                PATCH_MATCH ~%name%~ WITH
+                  ~IDENTIFIED~ ~UNSTEALABLE~ ~STOLEN~ ~IDENTIFIED&STOLEN~ ~IDENTIFIED&UNSTEALABLE~
+                  BEGIN
+                  END
+                  ~*~
+                  BEGIN
+                    TEXT_SPRINT name ~IDENTIFIED~
+                  END
+                  DEFAULT
+                    TEXT_SPRINT name ~NONE~
+                END
+                PATCH_IF (~%type%~ STRING_EQUAL_CASE ~STORE~) BEGIN
+                  ADD_STORE_ITEM ~%item%~ LAST (count2) (count3) (0) ~%name%~ (count)
+                END ELSE BEGIN
+                  ADD_STORE_ITEM + ~%item%~ LAST (count2) (count3) (0) ~%name%~ (count)
+                END
+              BUT_ONLY IF_EXISTS
+            END
+          END ELSE ACTION_IF (~%type%~ STRING_EQUAL_CASE ~CONTAINER~) BEGIN
+            ACTION_IF (FILE_EXISTS_IN_GAME ~%res%.ARE~) BEGIN
+              COPY_EXISTING ~%res%.ARE~ ~override~
+                INNER_PATCH_SAVE name ~%name%~ BEGIN REPLACE_TEXTUALLY EXACT_MATCH ~*~ ~ ~ END
+                LPF ARE_INDEX_OF_CONTAINER STR_VAR name = EVAL ~%name%~ RET index END
+                PATCH_IF (index >= 0) BEGIN
+                  LPF fj_are_structure
+                  INT_VAR
+                    fj_con_itm_idx    = index
+                    fj_charge0        = count
+                    fj_charge1        = count2
+                    fj_charge2        = count3
+                  STR_VAR
+                    fj_structure_type = "itm"
+                    fj_name           = EVAL "%item%"
+                  END
+                END
+              BUT_ONLY IF_EXISTS
+            END
+          END
+        END
+      END
+  END
+END
+
+
+/**
+ * Adds the specified bright tint (opcode 52) to the current CRE resource 
+ * unless it has been recolored already.
+ */
+DEFINE_PATCH_FUNCTION APPLY_GOLEM_TINT_BRIGHT
+INT_VAR
+  rgb = 0
+BEGIN
+  READ_ASCII 0 sig (8)
+  PATCH_IF (~%sig%~ STRING_EQUAL ~CRE V1.0~) BEGIN
+    // checking for existing color effects
+    READ_BYTE 0x33 version
+    READ_LONG 0x2c4 ofsEffects
+    READ_LONG 0x2c8 numEffects
+    SET sizeEffect = (version = 1) ? 0x108 : 0x30
+    SET match = 0
+    FOR (idx = 0; idx < numEffects; idx += 1) BEGIN
+      SET curOfs = ofsEffects + (idx * sizeEffect)
+      PATCH_IF (version = 1) BEGIN
+        READ_LONG (curOfs + 8) opcode
+      END ELSE BEGIN
+        READ_SHORT curOfs opcode
+      END
+      PATCH_IF (opcode = 51 OR opcode = 52) BEGIN
+        SET match = 1
+        SET idx = numEffects
+      END
+    END
+
+    // applying effects
+    PATCH_IF (NOT match) BEGIN
+      // Adding color tint
+      LPF ADD_CRE_EFFECT
+      INT_VAR
+        opcode = 52             // Character tint bright
+        timing = 9              // Instant/Permanent
+        target = 1              // Self
+        parameter1  = rgb
+        parameter2  = 2         // Location = Major color
+      END
+      PATCH_FOR_EACH param2 IN ~9~ ~50~ BEGIN
+        // Protecting original color tint
+        LPF ADD_CRE_EFFECT
+        INT_VAR
+          opcode = 101  // Immunity to effect
+          timing = 9    // Instant/Permanent
+          target = 1    // Self
+          parameter2  = param2
+        END
+      END
+    END
+  END
+END
+
+/**
+ * Adds "Stone Golem" color effect to the current CRE resource unless it has 
+ * been recolored already.
+ */
+DEFINE_PATCH_FUNCTION APPLY_STONE_GOLEM_TINT
+BEGIN
+  // RGB(4,7,7)
+  LPF APPLY_GOLEM_TINT_BRIGHT INT_VAR rgb = 0x7070400 END
+END
+
+/**
+ * Adds "Brain Golem" color effect to the current CRE resource unless it has 
+ * been recolored already.
+ */
+DEFINE_PATCH_FUNCTION APPLY_BRAIN_GOLEM_TINT
+BEGIN
+  // RGB(14,12,8)
+  LPF APPLY_GOLEM_TINT_BRIGHT INT_VAR rgb = 0x080c0e00 END
+END
+
+
+/**
+ * Adds an opcode to set a specific spell state to the current creature or spell resource.
+ */
+DEFINE_PATCH_FUNCTION APPLY_SPELL_STATE
+INT_VAR
+  splstate  = "-1"
+BEGIN
+  PATCH_IF (splstate >= 0) BEGIN
+    READ_ASCII 0 sig (8)
+    PATCH_IF (~%sig%~ STRING_EQUAL ~CRE V1.0~) BEGIN
+      LPF ADD_CRE_EFFECT
+      INT_VAR
+        opcode  = 328     // Set spell state
+        timing  = 9       // Instant/Permanent
+        target  = 1       // Self
+        parameter2  = splstate
+        special = 1       // IWD2 mode
+      END
+    END ELSE PATCH_IF (~%sig%~ STRING_EQUAL ~SPL V1  ~) BEGIN
+      LPF ADD_SPELL_EFFECT
+      INT_VAR
+        opcode  = 328
+        timing  = 9       // Instant/Permanent
+        target  = 2       // Preset target
+        parameter2    = splstate
+        resist_dispel = 2
+        special = 1       // IWD2 mode
+      END
+    END
+  END
+END
+
+
+/**
+ * Removes the specified spell state from the current creature or spell resource.
+ */
+DEFINE_PATCH_FUNCTION REMOVE_SPELL_STATE
+INT_VAR
+  splstate = "-1"
+BEGIN
+  READ_ASCII 0 sig (8)
+  PATCH_IF (~%sig%~ STRING_EQUAL ~CRE V1.0~) BEGIN
+    LPF ADD_CRE_EFFECT
+    INT_VAR
+      opcode  = 337     // Remove opcode
+      timing  = 9       // Instant/Permanent
+      target  = 1       // Self
+      parameter1  = splstate
+      parameter2  = 328 // Opcode: Set Spell State
+    END
+  END ELSE PATCH_IF (~%sig%~ STRING_EQUAL ~SPL V1  ~) BEGIN
+    LPF ADD_SPELL_EFFECT
+    INT_VAR
+      opcode  = 337
+      timing  = 9       // Instant/Permanent
+      target  = 2       // Preset target
+      parameter1  = splstate
+      parameter2  = 328 // Opcode: Set Spell State
+      resist_dispel = 2
+    END
+  END
+END
+
+
+/**
+ * Returns column and row index of the 2DA entry that matches the specified search text of the given 2da file.
+ */
+DEFINE_PATCH_FUNCTION GET_2DA_ENTRY_OF
+INT_VAR
+  row_match = "-1"  // neg. value indicates to search all rows
+  col_match = "-1"  // neg. value indicates to search all columns
+STR_VAR
+  file          = ~~  // the 2da filename
+  entry_match   = ~~  // search text
+RET
+  row col
+BEGIN
+  SET row = "-1"
+  SET col = "-1"
+  INNER_ACTION BEGIN
+    COPY_EXISTING - ~%file%~ ~override~
+      COUNT_2DA_COLS numCols
+      COUNT_2DA_ROWS numCols numRows
+      SET rowOffset = (numCols = 1 || numCols = 2) ? 1 : 0  // to compensate for 2DA headers
+      SET rowMin = (row_match < 0) ? 0 : row_match
+      SET rowMax = (row_match < 0) ? (numRows - 1) : row_match
+      SET colMin = (col_match < 0) ? 0 : col_match
+      SET colMax = (col_match < 0) ? (numCols - 1) : col_match
+      FOR (curRow = rowMin + rowOffset; curRow <= rowMax; ++curRow) BEGIN
+        FOR (curCol = colMin; curCol <= colMax; ++curCol) BEGIN
+          READ_2DA_ENTRY curRow curCol numCols value
+          PATCH_IF (~%entry_match%~ STR_EQ ~%value%~) BEGIN
+            SET row = curRow - rowOffset
+            SET col = curCol
+            SET curRow = rowMax + 1
+            SET curCol = colMax + 1
+          END
+        END
+      END
+    BUT_ONLY IF_EXISTS
+  END
+END

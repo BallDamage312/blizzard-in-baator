@@ -1,0 +1,1533 @@
+
+//////////////////////////////
+// ======================== //
+// Animations with Bestiary //
+// ======================== //
+//////////////////////////////
+
+INCLUDE ~%MOD_FOLDER%/utils/functions.tph~
+INCLUDE ~%MOD_FOLDER%/utils/a7_psteebestiary.tph~
+COPY ~%MOD_FOLDER%/misc/port_bmp~ ~override~
+
+// Prod
+
+	ACTION_IF (max_index > 0) BEGIN
+    OUTER_SET bestiary_index_001 = max_index + 1
+    OUTER_TEXT_SPRINT bestiary_index_str ~%bestiary_index_001%~
+	END
+
+ LAF FIND_FREE_ANIM_SLOT INT_VAR slotMin = 0xF101 RET slot END
+  ACTION_IF (slot <= 0) BEGIN
+    FAIL ~No free creature animation slot found.~
+  END
+
+  LAF TO_HEX_NUMBER INT_VAR value = slot minDigits = 4 RET hexNumber END
+  APPEND ~animate.ids~ ~0x%hexNumber% G-BB_PROD~ UNLESS ~G-BB_PROD~
+  CLEAR_IDS_MAP
+
+  COPY ~%MOD_FOLDER%/bam/animations/002.prod/g-.ini~ ~override/%hexNumber%.ini~
+  REPLACE_TEXTUALLY ~\(bestiary[ %TAB%]*\)=.*~ ~\1=%bestiary_index_001%~
+  BUT_ONLY
+  
+  ////OUTER_SPRINT "hexNumber1" ~%hexNumber%~
+
+  ACTION_BASH_FOR ~%MOD_FOLDER%/bam/animations/002.prod~ ~^.+\.bam$~ BEGIN
+    COPY ~%BASH_FOR_FILESPEC%~ ~override~
+  END
+
+	////COPY_EXISTING ~%hexNumber1%.ini~ ~override~
+	COPY_EXISTING ~bgee.lua~ ~override~
+	
+	SET name_prod = RESOLVE_STR_REF(@400010)
+    SET desc_prod = RESOLVE_STR_REF(@800001)
+	
+    TEXT_SPRINT INDENT ~%TAB%%TAB%%TAB%  ~
+	PATCH_IF (max_index > 0) BEGIN
+	SET bestiary_index = max_index + 1
+      TEXT_SPRINT new_entry ~%TAB%},%WNL%~
+      TEXT_SPRINT new_entry ~%new_entry%%TAB%{%WNL%~
+      TEXT_SPRINT new_entry ~%new_entry%%INDENT%index=%bestiary_index%,%WNL%~
+      TEXT_SPRINT new_entry ~%new_entry%%INDENT%killvar='g-bb006',%WNL%~
+      TEXT_SPRINT new_entry ~%new_entry%%INDENT%desc0=%desc_prod%,%WNL%~
+      TEXT_SPRINT new_entry ~%new_entry%%INDENT%class=1,%WNL%~
+      TEXT_SPRINT new_entry ~%new_entry%%INDENT%imageUnknown='image',%WNL%~
+      TEXT_SPRINT new_entry ~%new_entry%%INDENT%imageKnown='g-bbj001',%WNL%~
+      TEXT_SPRINT new_entry ~%new_entry%%INDENT%name=%name_prod%,%WNL%~
+
+      SET strlen = STRING_LENGTH ~%new_entry%~
+      INSERT_BYTES ofs_end strlen
+      WRITE_ASCIIE ofs_end ~%new_entry%~ (strlen)
+    END ELSE BEGIN
+      PATCH_LOG ~Warning: Could not add Prod bestiary entry.~
+    END
+BUT_ONLY
+
+// Word Archon
+	
+	ACTION_IF (max_index > 0) BEGIN
+    OUTER_SET bestiary_index_002 = max_index + 2
+    OUTER_TEXT_SPRINT bestiary_index_str ~%bestiary_index_002%~
+END
+
+
+ LAF FIND_FREE_ANIM_SLOT INT_VAR slotMin = 0xF101 RET slot END
+  ACTION_IF (slot <= 0) BEGIN
+    FAIL ~No free creature animation slot found.~
+  END
+
+  LAF TO_HEX_NUMBER INT_VAR value = slot minDigits = 4 RET hexNumber END
+  APPEND ~animate.ids~ ~0x%hexNumber% G-BB_WARCHON~ UNLESS ~G-BB_WARCHON~
+  CLEAR_IDS_MAP
+
+  COPY ~%MOD_FOLDER%/bam/animations/031.warchon/g-.ini~ ~override/%hexNumber%.ini~
+  REPLACE_TEXTUALLY ~\(bestiary[ %TAB%]*\)=.*~ ~\1=%bestiary_index_002%~
+  BUT_ONLY
+  
+  //OUTER_SPRINT "hexNumber2" ~%hexNumber%~
+
+  ACTION_BASH_FOR ~%MOD_FOLDER%/bam/animations/031.warchon~ ~^.+\.bam$~ BEGIN
+    COPY ~%BASH_FOR_FILESPEC%~ ~override~
+  END
+  
+	////COPY_EXISTING ~%hexNumber2%.ini~ ~override~
+	COPY_EXISTING ~bgee.lua~ ~override~
+	
+	SET name_warchon = RESOLVE_STR_REF(@400108)
+	SET desc_warchon = RESOLVE_STR_REF(@800002)
+	
+    TEXT_SPRINT INDENT ~%TAB%%TAB%%TAB%  ~
+	PATCH_IF (max_index > 0) BEGIN    
+	SET bestiary_index = max_index + 2
+      TEXT_SPRINT new_entry ~%TAB%},%WNL%~
+      TEXT_SPRINT new_entry ~%new_entry%%TAB%{%WNL%~
+      TEXT_SPRINT new_entry ~%new_entry%%INDENT%index=%bestiary_index%,%WNL%~
+      TEXT_SPRINT new_entry ~%new_entry%%INDENT%killvar='g-bb159',%WNL%~
+      TEXT_SPRINT new_entry ~%new_entry%%INDENT%desc0=%desc_warchon%,%WNL%~
+      TEXT_SPRINT new_entry ~%new_entry%%INDENT%class=1,%WNL%~
+      TEXT_SPRINT new_entry ~%new_entry%%INDENT%imageUnknown='image',%WNL%~
+      TEXT_SPRINT new_entry ~%new_entry%%INDENT%imageKnown='g-bbj002',%WNL%~
+      TEXT_SPRINT new_entry ~%new_entry%%INDENT%name=%name_warchon%,%WNL%~
+
+      SET strlen = STRING_LENGTH ~%new_entry%~
+      INSERT_BYTES ofs_end strlen
+      WRITE_ASCIIE ofs_end ~%new_entry%~ (strlen)
+    END ELSE BEGIN
+      PATCH_LOG ~Warning: Could not add Word Archon bestiary entry.~
+    END
+BUT_ONLY
+
+// UVB Dlg
+
+	ACTION_IF (max_index > 0) BEGIN
+    OUTER_SET bestiary_index_003 = max_index + 3
+    OUTER_TEXT_SPRINT bestiary_index_str ~%bestiary_index_003%~
+	END
+	
+ LAF FIND_FREE_ANIM_SLOT INT_VAR slotMin = 0xF101 RET slot END
+  ACTION_IF (slot <= 0) BEGIN
+    FAIL ~No free creature animation slot found.~
+  END
+
+  LAF TO_HEX_NUMBER INT_VAR value = slot minDigits = 4 RET hexNumber END
+  APPEND ~animate.ids~ ~0x%hexNumber% G-BB_UVB_DLG~ UNLESS ~G-BB_UVB_DLG~
+  CLEAR_IDS_MAP
+
+  COPY ~%MOD_FOLDER%/bam/animations/027.uvb.dlg/g-.ini~ ~override/%hexNumber%.ini~
+  REPLACE_TEXTUALLY ~\(bestiary[ %TAB%]*\)=.*~ ~\1=%bestiary_index_003%~
+  BUT_ONLY
+  
+  //OUTER_SPRINT "hexNumber3" ~%hexNumber%~
+
+  ACTION_BASH_FOR ~%MOD_FOLDER%/bam/animations/027.uvb.dlg~ ~^.+\.bam$~ BEGIN
+    COPY ~%BASH_FOR_FILESPEC%~ ~override~
+  END
+  
+	  //COPY_EXISTING ~%hexNumber3%.ini~ ~override~
+	  COPY_EXISTING ~bgee.lua~ ~override~
+  
+		SET name_uvb = RESOLVE_STR_REF(@400106)
+		SET desc_uvb = RESOLVE_STR_REF(@800003)
+		
+        TEXT_SPRINT INDENT ~%TAB%%TAB%%TAB%  ~
+        PATCH_IF (max_index > 0) BEGIN
+          SET bestiary_index = max_index + 3
+          TEXT_SPRINT new_entry ~%TAB%},%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%TAB%{%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%index=%bestiary_index%,%WNL%~
+		  TEXT_SPRINT new_entry ~%new_entry%%INDENT%killvar='g-bb156',%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%desc0=%desc_uvb%,%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%class=1,%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%imageUnknown='image',%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%imageKnown='g-bbj003',%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%name=%name_uvb%,%WNL%~
+          SET strlen = STRING_LENGTH ~%new_entry%~
+          INSERT_BYTES ofs_end strlen
+          WRITE_ASCIIE ofs_end ~%new_entry%~ (strlen)
+		  END ELSE BEGIN
+      PATCH_LOG ~Warning: Could not add Ulfhild Volgarrson bestiary entry.~
+    END
+BUT_ONLY
+
+// Brill (Slaad)
+
+	ACTION_IF (max_index > 0) BEGIN
+    OUTER_SET bestiary_index_004 = max_index + 4
+    OUTER_TEXT_SPRINT bestiary_index_str ~%bestiary_index_004%~
+	END
+
+ LAF FIND_FREE_ANIM_SLOT INT_VAR slotMin = 0xF101 RET slot END
+  ACTION_IF (slot <= 0) BEGIN
+    FAIL ~No free creature animation slot found.~
+  END
+
+  LAF TO_HEX_NUMBER INT_VAR value = slot minDigits = 4 RET hexNumber END
+  APPEND ~animate.ids~ ~0x%hexNumber% G-BB_SLAAD~ UNLESS ~G-BB_SLAAD~
+  CLEAR_IDS_MAP
+
+  COPY ~%MOD_FOLDER%/bam/animations/003.slaad/g-.ini~ ~override/%hexNumber%.ini~
+  REPLACE_TEXTUALLY ~\(bestiary[ %TAB%]*\)=.*~ ~\1=%bestiary_index_004%~
+  BUT_ONLY
+  
+  //OUTER_SPRINT "hexNumber4" ~%hexNumber%~
+
+  ACTION_BASH_FOR ~%MOD_FOLDER%/bam/animations/003.slaad~ ~^.+\.bam$~ BEGIN
+    COPY ~%BASH_FOR_FILESPEC%~ ~override~
+  END
+		
+		//COPY_EXISTING ~%hexNumber4%.ini~ ~override~
+		COPY_EXISTING ~bgee.lua~ ~override~
+		
+        SET name_brill = RESOLVE_STR_REF(@400177)
+		SET desc_brill = RESOLVE_STR_REF(@800004)
+		
+        TEXT_SPRINT INDENT ~%TAB%%TAB%%TAB%  ~
+        PATCH_IF (max_index > 0) BEGIN
+          SET bestiary_index = max_index + 4
+          TEXT_SPRINT new_entry ~%TAB%},%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%TAB%{%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%index=%bestiary_index%,%WNL%~
+		  TEXT_SPRINT new_entry ~%new_entry%%INDENT%killvar='g-bb008',%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%desc0=%desc_brill%,%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%class=1,%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%imageUnknown='image',%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%imageKnown='g-bbj004',%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%name=%name_brill%,%WNL%~
+          SET strlen = STRING_LENGTH ~%new_entry%~
+          INSERT_BYTES ofs_end strlen
+          WRITE_ASCIIE ofs_end ~%new_entry%~ (strlen)
+        END ELSE BEGIN
+      PATCH_LOG ~Warning: Could not add Slaad bestiary entry.~
+    END
+BUT_ONLY
+
+// Mimik
+
+	ACTION_IF (max_index > 0) BEGIN
+    OUTER_SET bestiary_index_005 = max_index + 5
+    OUTER_TEXT_SPRINT bestiary_index_str ~%bestiary_index_005%~
+	END
+
+ LAF FIND_FREE_ANIM_SLOT INT_VAR slotMin = 0xF101 RET slot END
+  ACTION_IF (slot <= 0) BEGIN
+    FAIL ~No free creature animation slot found.~
+  END
+
+  LAF TO_HEX_NUMBER INT_VAR value = slot minDigits = 4 RET hexNumber END
+  APPEND ~animate.ids~ ~0x%hexNumber% G-BB_MIMIK~ UNLESS ~G-BB_MIMIK~
+  CLEAR_IDS_MAP
+
+  COPY ~%MOD_FOLDER%/bam/animations/030.mimik/g-.ini~ ~override/%hexNumber%.ini~
+  REPLACE_TEXTUALLY ~\(bestiary[ %TAB%]*\)=.*~ ~\1=%bestiary_index_005%~
+  BUT_ONLY
+  
+  //OUTER_SPRINT "hexNumber5" ~%hexNumber%~
+
+  ACTION_BASH_FOR ~%MOD_FOLDER%/bam/animations/030.mimik~ ~^.+\.bam$~ BEGIN
+    COPY ~%BASH_FOR_FILESPEC%~ ~override~
+  END
+  
+		//COPY_EXISTING ~%hexNumber5%.ini~ ~override~
+		COPY_EXISTING ~bgee.lua~ ~override~
+  
+		SET name_mimik = RESOLVE_STR_REF(@400097)
+		SET desc_mimik = RESOLVE_STR_REF(@800005)
+		
+        TEXT_SPRINT INDENT ~%TAB%%TAB%%TAB%  ~
+        PATCH_IF (max_index > 0) BEGIN
+          SET bestiary_index = max_index + 5
+          TEXT_SPRINT new_entry ~%TAB%},%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%TAB%{%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%index=%bestiary_index%,%WNL%~
+		  TEXT_SPRINT new_entry ~%new_entry%%INDENT%killvar='g-bb163',%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%desc0=%desc_mimik%,%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%class=1,%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%imageUnknown='image',%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%imageKnown='g-bbj005',%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%name=%name_mimik%,%WNL%~
+          SET strlen = STRING_LENGTH ~%new_entry%~
+          INSERT_BYTES ofs_end strlen
+          WRITE_ASCIIE ofs_end ~%new_entry%~ (strlen)
+        END ELSE BEGIN
+      PATCH_LOG ~Warning: Could not add Mimik bestiary entry.~
+    END
+BUT_ONLY
+ 
+// Marilith
+
+	ACTION_IF (max_index > 0) BEGIN
+    OUTER_SET bestiary_index_006 = max_index + 6
+    OUTER_TEXT_SPRINT bestiary_index_str ~%bestiary_index_006%~
+	END
+	
+ LAF FIND_FREE_ANIM_SLOT INT_VAR slotMin = 0xF101 RET slot END
+  ACTION_IF (slot <= 0) BEGIN
+    FAIL ~No free creature animation slot found.~
+  END
+
+  LAF TO_HEX_NUMBER INT_VAR value = slot minDigits = 4 RET hexNumber END
+  APPEND ~animate.ids~ ~0x%hexNumber% G-BB_MARILITH~ UNLESS ~G-BB_MARILITH~
+  CLEAR_IDS_MAP
+
+  COPY ~%MOD_FOLDER%/bam/animations/020.marilith/g-.ini~ ~override/%hexNumber%.ini~
+  REPLACE_TEXTUALLY ~\(bestiary[ %TAB%]*\)=.*~ ~\1=%bestiary_index_006%~
+  BUT_ONLY
+  
+  //OUTER_SPRINT "hexNumber6" ~%hexNumber%~
+  
+  ACTION_BASH_FOR ~%MOD_FOLDER%/bam/animations/020.marilith~ ~^.+\.bam$~ BEGIN
+    COPY ~%BASH_FOR_FILESPEC%~ ~override~
+  END
+  
+		//COPY_EXISTING ~%hexNumber6%.ini~ ~override~
+		COPY_EXISTING ~bgee.lua~ ~override~
+		
+		SET name_marilith = RESOLVE_STR_REF(@400100)
+		SET desc_marilith = RESOLVE_STR_REF(@800006)
+		
+        TEXT_SPRINT INDENT ~%TAB%%TAB%%TAB%  ~
+        PATCH_IF (max_index > 0) BEGIN
+          SET bestiary_index = max_index + 6
+          TEXT_SPRINT new_entry ~%TAB%},%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%TAB%{%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%index=%bestiary_index%,%WNL%~
+		  TEXT_SPRINT new_entry ~%new_entry%%INDENT%killvar='g-bb121',%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%desc0=%desc_marilith%,%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%class=1,%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%imageUnknown='image',%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%imageKnown='g-bbj006',%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%name=%name_marilith%,%WNL%~
+          SET strlen = STRING_LENGTH ~%new_entry%~
+          INSERT_BYTES ofs_end strlen
+          WRITE_ASCIIE ofs_end ~%new_entry%~ (strlen)
+		END ELSE BEGIN
+      PATCH_LOG ~Warning: Could not add Marilith bestiary entry.~
+    END
+BUT_ONLY
+  
+// Kokrachon
+
+	ACTION_IF (max_index > 0) BEGIN
+    OUTER_SET bestiary_index_007 = max_index + 7
+    OUTER_TEXT_SPRINT bestiary_index_str ~%bestiary_index_007%~
+	END
+	
+ LAF FIND_FREE_ANIM_SLOT INT_VAR slotMin = 0xF101 RET slot END
+  ACTION_IF (slot <= 0) BEGIN
+    FAIL ~No free creature animation slot found.~
+  END
+
+  LAF TO_HEX_NUMBER INT_VAR value = slot minDigits = 4 RET hexNumber END
+  APPEND ~animate.ids~ ~0x%hexNumber% G-BB_KOKRACHON~ UNLESS ~G-BB_KOKRACHON~
+  CLEAR_IDS_MAP
+
+  COPY ~%MOD_FOLDER%/bam/animations/021.kokrachon/g-.ini~ ~override/%hexNumber%.ini~
+  REPLACE_TEXTUALLY ~\(bestiary[ %TAB%]*\)=.*~ ~\1=%bestiary_index_007%~
+  BUT_ONLY
+  
+  //OUTER_SPRINT "hexNumber7" ~%hexNumber%~
+
+  ACTION_BASH_FOR ~%MOD_FOLDER%/bam/animations/021.kokrachon~ ~^.+\.bam$~ BEGIN
+    COPY ~%BASH_FOR_FILESPEC%~ ~override~
+  END
+  
+		//COPY_EXISTING ~%hexNumber7%.ini~ ~override~
+		COPY_EXISTING ~bgee.lua~ ~override~
+		
+		SET name_kocrachon = RESOLVE_STR_REF(@400101)
+		SET desc_kocrachon = RESOLVE_STR_REF(@800007)
+		
+        TEXT_SPRINT INDENT ~%TAB%%TAB%%TAB%  ~
+        PATCH_IF (max_index > 0) BEGIN
+          SET bestiary_index = max_index + 7
+          TEXT_SPRINT new_entry ~%TAB%},%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%TAB%{%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%index=%bestiary_index%,%WNL%~
+		  TEXT_SPRINT new_entry ~%new_entry%%INDENT%killvar='g-bb167',%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%desc0=%desc_kocrachon%,%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%class=1,%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%imageUnknown='image',%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%imageKnown='g-bbj007',%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%name=%name_kocrachon%,%WNL%~
+          SET strlen = STRING_LENGTH ~%new_entry%~
+          INSERT_BYTES ofs_end strlen
+          WRITE_ASCIIE ofs_end ~%new_entry%~ (strlen)
+  		END ELSE BEGIN
+      PATCH_LOG ~Warning: Could not add Kokrachon bestiary entry.~
+    END
+BUT_ONLY
+
+// Yagnoloth
+
+	ACTION_IF (max_index > 0) BEGIN
+    OUTER_SET bestiary_index_008 = max_index + 8
+    OUTER_TEXT_SPRINT bestiary_index_str ~%bestiary_index_008%~
+	END
+	
+ LAF FIND_FREE_ANIM_SLOT INT_VAR slotMin = 0xF101 RET slot END
+  ACTION_IF (slot <= 0) BEGIN
+    FAIL ~No free creature animation slot found.~
+  END
+
+  LAF TO_HEX_NUMBER INT_VAR value = slot minDigits = 4 RET hexNumber END
+  APPEND ~animate.ids~ ~0x%hexNumber% G-BB_YAGNOLOTH~ UNLESS ~G-BB_YAGNOLOTH~
+  CLEAR_IDS_MAP
+
+  COPY ~%MOD_FOLDER%/bam/animations/017.yagnoloth/g-.ini~ ~override/%hexNumber%.ini~
+  REPLACE_TEXTUALLY ~\(bestiary[ %TAB%]*\)=.*~ ~\1=%bestiary_index_008%~
+  BUT_ONLY
+  
+  //OUTER_SPRINT "hexNumber8" ~%hexNumber%~
+  
+  ACTION_BASH_FOR ~%MOD_FOLDER%/bam/animations/017.yagnoloth~ ~^.+\.bam$~ BEGIN
+    COPY ~%BASH_FOR_FILESPEC%~ ~override~
+  END
+  
+		//COPY_EXISTING ~%hexNumber8%.ini~ ~override~
+		COPY_EXISTING ~bgee.lua~ ~override~
+		
+		SET name_yagn = RESOLVE_STR_REF(@400082)
+		SET desc_yagn = RESOLVE_STR_REF(@800008)
+		
+        TEXT_SPRINT INDENT ~%TAB%%TAB%%TAB%  ~
+        PATCH_IF (max_index > 0) BEGIN
+          SET bestiary_index = max_index + 8
+          TEXT_SPRINT new_entry ~%TAB%},%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%TAB%{%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%index=%bestiary_index%,%WNL%~
+		  TEXT_SPRINT new_entry ~%new_entry%%INDENT%killvar='g-bb119',%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%desc0=%desc_yagn%,%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%class=1,%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%imageUnknown='image',%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%imageKnown='g-bbj008',%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%name=%name_yagn%,%WNL%~
+          SET strlen = STRING_LENGTH ~%new_entry%~
+          INSERT_BYTES ofs_end strlen
+          WRITE_ASCIIE ofs_end ~%new_entry%~ (strlen)
+		END ELSE BEGIN
+      PATCH_LOG ~Warning: Could not add Yagnoloth bestiary entry.~
+    END
+BUT_ONLY
+
+// Marraenoloth
+
+	ACTION_IF (max_index > 0) BEGIN
+    OUTER_SET bestiary_index_009 = max_index + 9
+    OUTER_TEXT_SPRINT bestiary_index_str ~%bestiary_index_009%~
+	END
+ LAF FIND_FREE_ANIM_SLOT INT_VAR slotMin = 0xF101 RET slot END
+  ACTION_IF (slot <= 0) BEGIN
+    FAIL ~No free creature animation slot found.~
+  END
+
+  LAF TO_HEX_NUMBER INT_VAR value = slot minDigits = 4 RET hexNumber END
+  APPEND ~animate.ids~ ~0x%hexNumber% G-BB_MARRAENOLOTH~ UNLESS ~G-BB_MARRAENOLOTH~
+  CLEAR_IDS_MAP
+
+  COPY ~%MOD_FOLDER%/bam/animations/018.marraenoloth/g-.ini~ ~override/%hexNumber%.ini~
+  REPLACE_TEXTUALLY ~\(bestiary[ %TAB%]*\)=.*~ ~\1=%bestiary_index_009%~
+  BUT_ONLY
+  
+  //OUTER_SPRINT "hexNumber9" ~%hexNumber%~
+
+  ACTION_BASH_FOR ~%MOD_FOLDER%/bam/animations/018.marraenoloth~ ~^.+\.bam$~ BEGIN
+    COPY ~%BASH_FOR_FILESPEC%~ ~override~
+  END
+  
+		//COPY_EXISTING ~%hexNumber9%.ini~ ~override~
+		COPY_EXISTING ~bgee.lua~ ~override~
+		
+		SET name_maer = RESOLVE_STR_REF(@400046)
+		SET desc_maer = RESOLVE_STR_REF(@800009)
+		
+        TEXT_SPRINT INDENT ~%TAB%%TAB%%TAB%  ~
+        PATCH_IF (max_index > 0) BEGIN
+          SET bestiary_index = max_index + 9
+          TEXT_SPRINT new_entry ~%TAB%},%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%TAB%{%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%index=%bestiary_index%,%WNL%~
+		  TEXT_SPRINT new_entry ~%new_entry%%INDENT%killvar='g-bb052',%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%desc0=%desc_maer%,%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%class=1,%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%imageUnknown='image',%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%imageKnown='g-bbj009',%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%name=%name_maer%,%WNL%~
+          SET strlen = STRING_LENGTH ~%new_entry%~
+          INSERT_BYTES ofs_end strlen
+          WRITE_ASCIIE ofs_end ~%new_entry%~ (strlen)
+		END ELSE BEGIN
+      PATCH_LOG ~Warning: Could not add Marraenoloth bestiary entry.~
+    END
+BUT_ONLY
+
+// Bladeling
+
+	ACTION_IF (max_index > 0) BEGIN
+    OUTER_SET bestiary_index_010 = max_index + 10
+    OUTER_TEXT_SPRINT bestiary_index_str ~%bestiary_index_010%~
+	END
+	
+ LAF FIND_FREE_ANIM_SLOT INT_VAR slotMin = 0xF101 RET slot END
+  ACTION_IF (slot <= 0) BEGIN
+    FAIL ~No free creature animation slot found.~
+  END
+
+  LAF TO_HEX_NUMBER INT_VAR value = slot minDigits = 4 RET hexNumber END
+  APPEND ~animate.ids~ ~0x%hexNumber% G-BB_BLADELING~ UNLESS ~G-BB_BLADELING~
+  CLEAR_IDS_MAP
+
+  COPY ~%MOD_FOLDER%/bam/animations/008.bladeling/g-.ini~ ~override/%hexNumber%.ini~
+  REPLACE_TEXTUALLY ~\(bestiary[ %TAB%]*\)=.*~ ~\1=%bestiary_index_010%~
+  BUT_ONLY
+  
+  //OUTER_SPRINT "hexNumber10" ~%hexNumber%~
+  
+  ACTION_BASH_FOR ~%MOD_FOLDER%/bam/animations/008.bladeling~ ~^.+\.bam$~ BEGIN
+    COPY ~%BASH_FOR_FILESPEC%~ ~override~
+  END
+  
+		//COPY_EXISTING ~%hexNumber10%.ini~ ~override~
+		COPY_EXISTING ~bgee.lua~ ~override~
+		
+		SET name_bladel = RESOLVE_STR_REF(@400036)
+		SET desc_bladel = RESOLVE_STR_REF(@800010)
+		
+        TEXT_SPRINT INDENT ~%TAB%%TAB%%TAB%  ~
+        PATCH_IF (max_index > 0) BEGIN
+          SET bestiary_index = max_index + 10
+          TEXT_SPRINT new_entry ~%TAB%},%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%TAB%{%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%index=%bestiary_index%,%WNL%~
+		  TEXT_SPRINT new_entry ~%new_entry%%INDENT%killvar='g-bb016',%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%desc0=%desc_bladel%,%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%class=1,%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%imageUnknown='image',%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%imageKnown='g-bbj010',%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%name=%name_bladel%,%WNL%~
+          SET strlen = STRING_LENGTH ~%new_entry%~
+          INSERT_BYTES ofs_end strlen
+          WRITE_ASCIIE ofs_end ~%new_entry%~ (strlen)	
+		END ELSE BEGIN
+      PATCH_LOG ~Warning: Could not add Bladeling bestiary entry.~
+    END
+BUT_ONLY
+  
+// Kabatum
+
+	ACTION_IF (max_index > 0) BEGIN
+    OUTER_SET bestiary_index_011 = max_index + 11
+    OUTER_TEXT_SPRINT bestiary_index_str ~%bestiary_index_011%~
+	END
+
+ LAF FIND_FREE_ANIM_SLOT INT_VAR slotMin = 0xF101 RET slot END
+  ACTION_IF (slot <= 0) BEGIN
+    FAIL ~No free creature animation slot found.~
+  END
+
+  LAF TO_HEX_NUMBER INT_VAR value = slot minDigits = 4 RET hexNumber END
+  APPEND ~animate.ids~ ~0x%hexNumber% G-BB_KABATUM~ UNLESS ~G-BB_KABATUM~
+  CLEAR_IDS_MAP
+
+  COPY ~%MOD_FOLDER%/bam/animations/028.kabatum/g-.ini~ ~override/%hexNumber%.ini~
+  REPLACE_TEXTUALLY ~\(bestiary[ %TAB%]*\)=.*~ ~\1=%bestiary_index_011%~
+  BUT_ONLY
+  
+  //OUTER_SPRINT "hexNumber11" ~%hexNumber%~
+
+  ACTION_BASH_FOR ~%MOD_FOLDER%/bam/animations/028.kabatum~ ~^.+\.bam$~ BEGIN
+    COPY ~%BASH_FOR_FILESPEC%~ ~override~
+  END
+  
+		//COPY_EXISTING ~%hexNumber11%.ini~ ~override~
+		COPY_EXISTING ~bgee.lua~ ~override~
+		
+		SET name_kabatum = RESOLVE_STR_REF(@400065)
+		SET desc_kabatum = RESOLVE_STR_REF(@800011)
+		
+        TEXT_SPRINT INDENT ~%TAB%%TAB%%TAB%  ~
+        PATCH_IF (max_index > 0) BEGIN
+          SET bestiary_index = max_index + 11
+          TEXT_SPRINT new_entry ~%TAB%},%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%TAB%{%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%index=%bestiary_index%,%WNL%~
+		  TEXT_SPRINT new_entry ~%new_entry%%INDENT%killvar='g-bb091',%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%desc0=%desc_kabatum%,%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%class=1,%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%imageUnknown='image',%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%imageKnown='g-bbj011',%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%name=%name_kabatum%,%WNL%~
+          SET strlen = STRING_LENGTH ~%new_entry%~
+          INSERT_BYTES ofs_end strlen
+          WRITE_ASCIIE ofs_end ~%new_entry%~ (strlen)
+		END ELSE BEGIN
+      PATCH_LOG ~Warning: Could not add Kabatum bestiary entry.~
+    END
+BUT_ONLY
+
+// Slime
+
+	ACTION_IF (max_index > 0) BEGIN
+    OUTER_SET bestiary_index_012 = max_index + 12
+    OUTER_TEXT_SPRINT bestiary_index_str ~%bestiary_index_012%~
+	END
+	
+ LAF FIND_FREE_ANIM_SLOT INT_VAR slotMin = 0xF101 RET slot END
+  ACTION_IF (slot <= 0) BEGIN
+    FAIL ~No free creature animation slot found.~
+  END
+
+  LAF TO_HEX_NUMBER INT_VAR value = slot minDigits = 4 RET hexNumber END
+  APPEND ~animate.ids~ ~0x%hexNumber% G-BB_SLIME~ UNLESS ~G-BB_SLIME~
+  CLEAR_IDS_MAP
+
+  COPY ~%MOD_FOLDER%/bam/animations/019.slime/g-.ini~ ~override/%hexNumber%.ini~
+  REPLACE_TEXTUALLY ~\(bestiary[ %TAB%]*\)=.*~ ~\1=%bestiary_index_012%~
+  BUT_ONLY
+  
+  //OUTER_SPRINT "hexNumber12" ~%hexNumber%~
+
+  ACTION_BASH_FOR ~%MOD_FOLDER%/bam/animations/019.slime~ ~^.+\.bam$~ BEGIN
+    COPY ~%BASH_FOR_FILESPEC%~ ~override~
+  END
+  
+		//COPY_EXISTING ~%hexNumber12%.ini~ ~override~
+		COPY_EXISTING ~bgee.lua~ ~override~
+		
+		SET name_slime = RESOLVE_STR_REF(@400050)
+		SET desc_slime = RESOLVE_STR_REF(@800012)
+		
+        TEXT_SPRINT INDENT ~%TAB%%TAB%%TAB%  ~
+        PATCH_IF (max_index > 0) BEGIN
+          SET bestiary_index = max_index + 12
+          TEXT_SPRINT new_entry ~%TAB%},%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%TAB%{%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%index=%bestiary_index%,%WNL%~
+		  TEXT_SPRINT new_entry ~%new_entry%%INDENT%killvar='g-bb061',%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%desc0=%desc_slime%,%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%class=1,%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%imageUnknown='image',%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%imageKnown='g-bbj012',%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%name=%name_slime%,%WNL%~
+          SET strlen = STRING_LENGTH ~%new_entry%~
+          INSERT_BYTES ofs_end strlen
+          WRITE_ASCIIE ofs_end ~%new_entry%~ (strlen)
+		END ELSE BEGIN
+      PATCH_LOG ~Warning: Could not add Slime bestiary entry.~
+    END
+BUT_ONLY
+  
+// Antilla
+
+	ACTION_IF (max_index > 0) BEGIN
+    OUTER_SET bestiary_index_013 = max_index + 13
+    OUTER_TEXT_SPRINT bestiary_index_str ~%bestiary_index_013%~
+	END
+	
+ LAF FIND_FREE_ANIM_SLOT INT_VAR slotMin = 0xF101 RET slot END
+  ACTION_IF (slot <= 0) BEGIN
+    FAIL ~No free creature animation slot found.~
+  END
+
+  LAF TO_HEX_NUMBER INT_VAR value = slot minDigits = 4 RET hexNumber END
+  APPEND ~animate.ids~ ~0x%hexNumber% G-BB_ANTILLA~ UNLESS ~G-BB_ANTILLA~
+  CLEAR_IDS_MAP
+
+  COPY ~%MOD_FOLDER%/bam/animations/032.antilla/g-.ini~ ~override/%hexNumber%.ini~
+  REPLACE_TEXTUALLY ~\(bestiary[ %TAB%]*\)=.*~ ~\1=%bestiary_index_013%~
+  BUT_ONLY
+  
+  //OUTER_SPRINT "hexNumber13" ~%hexNumber%~
+
+  ACTION_BASH_FOR ~%MOD_FOLDER%/bam/animations/032.antilla~ ~^.+\.bam$~ BEGIN
+    COPY ~%BASH_FOR_FILESPEC%~ ~override~
+  END
+  
+		//COPY_EXISTING ~%hexNumber13%.ini~ ~override~
+		COPY_EXISTING ~bgee.lua~ ~override~
+		
+		SET name_antilla = RESOLVE_STR_REF(@400111)
+		SET desc_antilla = RESOLVE_STR_REF(@800013)
+		
+        TEXT_SPRINT INDENT ~%TAB%%TAB%%TAB%  ~
+        PATCH_IF (max_index > 0) BEGIN
+          SET bestiary_index = max_index + 13
+          TEXT_SPRINT new_entry ~%TAB%},%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%TAB%{%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%index=%bestiary_index%,%WNL%~
+		  TEXT_SPRINT new_entry ~%new_entry%%INDENT%killvar='g-bb171',%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%desc0=%desc_antilla%,%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%class=1,%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%imageUnknown='image',%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%imageKnown='g-bbj013',%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%name=%name_antilla%,%WNL%~
+          SET strlen = STRING_LENGTH ~%new_entry%~
+          INSERT_BYTES ofs_end strlen
+          WRITE_ASCIIE ofs_end ~%new_entry%~ (strlen)
+		END ELSE BEGIN
+      PATCH_LOG ~Warning: Could not add Antilla bestiary entry.~
+    END
+BUT_ONLY
+
+// Haer
+
+	ACTION_IF (max_index > 0) BEGIN
+    OUTER_SET bestiary_index_014 = max_index + 14
+    OUTER_TEXT_SPRINT bestiary_index_str ~%bestiary_index_014%~
+	END
+
+ LAF FIND_FREE_ANIM_SLOT INT_VAR slotMin = 0xF101 RET slot END
+  ACTION_IF (slot <= 0) BEGIN
+    FAIL ~No free creature animation slot found.~
+  END
+
+  LAF TO_HEX_NUMBER INT_VAR value = slot minDigits = 4 RET hexNumber END
+  APPEND ~animate.ids~ ~0x%hexNumber% G-BB_HAER~ UNLESS ~G-BB_HAER~
+  CLEAR_IDS_MAP
+
+  COPY ~%MOD_FOLDER%/bam/animations/033.haer/g-.ini~ ~override/%hexNumber%.ini~
+  REPLACE_TEXTUALLY ~\(bestiary[ %TAB%]*\)=.*~ ~\1=%bestiary_index_014%~
+  BUT_ONLY
+  
+  //OUTER_SPRINT "hexNumber14" ~%hexNumber%~
+
+  /*ACTION_BASH_FOR ~%MOD_FOLDER%/bam/animations/033.haer~ ~^.+\.bam$~ BEGIN
+    COPY ~%BASH_FOR_FILESPEC%~ ~override~
+  END*/
+		
+		//COPY_EXISTING ~%hexNumber14%.ini~ ~override~
+		COPY_EXISTING ~bgee.lua~ ~override~
+		
+		SET name_haer = RESOLVE_STR_REF(@400018)
+		SET desc_haer = RESOLVE_STR_REF(@800014)
+		
+        TEXT_SPRINT INDENT ~%TAB%%TAB%%TAB%  ~
+        PATCH_IF (max_index > 0) BEGIN
+          SET bestiary_index = max_index + 14
+          TEXT_SPRINT new_entry ~%TAB%},%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%TAB%{%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%index=%bestiary_index%,%WNL%~
+		  TEXT_SPRINT new_entry ~%new_entry%%INDENT%killvar='g-bb017',%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%desc0=%desc_haer%,%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%class=1,%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%imageUnknown='image',%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%imageKnown='g-bbj014',%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%name=%name_haer%,%WNL%~
+          SET strlen = STRING_LENGTH ~%new_entry%~
+          INSERT_BYTES ofs_end strlen
+          WRITE_ASCIIE ofs_end ~%new_entry%~ (strlen)
+		END ELSE BEGIN
+      PATCH_LOG ~Warning: Could not add Haer'dalis bestiary entry.~
+    END
+BUT_ONLY
+
+// Gelugon
+
+	ACTION_IF (max_index > 0) BEGIN
+    OUTER_SET bestiary_index_015 = max_index + 15
+    OUTER_TEXT_SPRINT bestiary_index_str ~%bestiary_index_015%~
+	END
+	
+ LAF FIND_FREE_ANIM_SLOT INT_VAR slotMin = 0xF101 RET slot END
+  ACTION_IF (slot <= 0) BEGIN
+    FAIL ~No free creature animation slot found.~
+  END
+
+  LAF TO_HEX_NUMBER INT_VAR value = slot minDigits = 4 RET hexNumber END
+  APPEND ~animate.ids~ ~0x%hexNumber% G-BB_GELUGON~ UNLESS ~G-BB_GELUGON~
+  CLEAR_IDS_MAP
+
+  COPY ~%MOD_FOLDER%/bam/animations/034.gelugon/g-.ini~ ~override/%hexNumber%.ini~
+  REPLACE_TEXTUALLY ~\(bestiary[ %TAB%]*\)=.*~ ~\1=%bestiary_index_015%~
+  BUT_ONLY
+  
+  //OUTER_SPRINT "hexNumber15" ~%hexNumber%~
+
+  ACTION_BASH_FOR ~%MOD_FOLDER%/bam/animations/034.gelugon~ ~^.+\.bam$~ BEGIN
+    COPY ~%BASH_FOR_FILESPEC%~ ~override~
+END
+
+		//COPY_EXISTING ~%hexNumber15%.ini~ ~override~
+		COPY_EXISTING ~bgee.lua~ ~override~
+		
+		SET name_gelugon = RESOLVE_STR_REF(@400007)
+		SET desc_gelugon = RESOLVE_STR_REF(@800015)
+		
+        TEXT_SPRINT INDENT ~%TAB%%TAB%%TAB%  ~
+        PATCH_IF (max_index > 0) BEGIN
+          SET bestiary_index = max_index + 15
+          TEXT_SPRINT new_entry ~%TAB%},%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%TAB%{%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%index=%bestiary_index%,%WNL%~
+		  TEXT_SPRINT new_entry ~%new_entry%%INDENT%killvar='g-bb003',%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%desc0=%desc_gelugon%,%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%class=1,%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%imageUnknown='image',%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%imageKnown='g-bbj015',%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%name=%name_gelugon%,%WNL%~
+          SET strlen = STRING_LENGTH ~%new_entry%~
+          INSERT_BYTES ofs_end strlen
+          WRITE_ASCIIE ofs_end ~%new_entry%~ (strlen)	
+		END ELSE BEGIN
+      PATCH_LOG ~Warning: Could not add Gelugon bestiary entry.~
+    END
+BUT_ONLY
+   
+// Alviro
+
+	ACTION_IF (max_index > 0) BEGIN
+    OUTER_SET bestiary_index_016 = max_index + 16
+    OUTER_TEXT_SPRINT bestiary_index_str ~%bestiary_index_016%~
+	END
+
+
+ LAF FIND_FREE_ANIM_SLOT INT_VAR slotMin = 0xF101 RET slot END
+  ACTION_IF (slot <= 0) BEGIN
+    FAIL ~No free creature animation slot found.~
+  END
+
+  LAF TO_HEX_NUMBER INT_VAR value = slot minDigits = 4 RET hexNumber END
+  APPEND ~animate.ids~ ~0x%hexNumber% G-BB_ALVIRO~ UNLESS ~G-BB_ALVIRO~
+  CLEAR_IDS_MAP
+
+  COPY ~%MOD_FOLDER%/bam/animations/012.alviro/g-.ini~ ~override/%hexNumber%.ini~
+  REPLACE_TEXTUALLY ~\(bestiary[ %TAB%]*\)=.*~ ~\1=%bestiary_index_016%~
+  BUT_ONLY
+  
+  //OUTER_SPRINT "hexNumber16" ~%hexNumber%~
+
+  ACTION_BASH_FOR ~%MOD_FOLDER%/bam/animations/012.alviro~ ~^.+\.bam$~ BEGIN
+    COPY ~%BASH_FOR_FILESPEC%~ ~override~
+  END
+  
+		//COPY_EXISTING ~%hexNumber16%.ini~ ~override~
+		COPY_EXISTING ~bgee.lua~ ~override~
+		
+		SET name_alviro = RESOLVE_STR_REF(@400061)
+		SET desc_alviro = RESOLVE_STR_REF(@800016)
+		
+        TEXT_SPRINT INDENT ~%TAB%%TAB%%TAB%  ~
+        PATCH_IF (max_index > 0) BEGIN
+          SET bestiary_index = max_index + 16
+          TEXT_SPRINT new_entry ~%TAB%},%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%TAB%{%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%index=%bestiary_index%,%WNL%~
+		  TEXT_SPRINT new_entry ~%new_entry%%INDENT%killvar='g-bb087',%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%desc0=%desc_alviro%,%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%class=1,%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%imageUnknown='image',%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%imageKnown='g-bbj016',%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%name=%name_alviro%,%WNL%~
+          SET strlen = STRING_LENGTH ~%new_entry%~
+          INSERT_BYTES ofs_end strlen
+          WRITE_ASCIIE ofs_end ~%new_entry%~ (strlen)
+		END ELSE BEGIN
+      PATCH_LOG ~Warning: Could not add Alviro bestiary entry.~
+    END
+BUT_ONLY
+   
+// Bard Akershus
+
+	ACTION_IF (max_index > 0) BEGIN
+    OUTER_SET bestiary_index_017 = max_index + 17
+    OUTER_TEXT_SPRINT bestiary_index_str ~%bestiary_index_017%~
+	END
+
+ LAF FIND_FREE_ANIM_SLOT INT_VAR slotMin = 0xF101 RET slot END
+  ACTION_IF (slot <= 0) BEGIN
+    FAIL ~No free creature animation slot found.~
+  END
+
+  LAF TO_HEX_NUMBER INT_VAR value = slot minDigits = 4 RET hexNumber END
+  APPEND ~animate.ids~ ~0x%hexNumber% G-BB_BARDAKERSHUS~ UNLESS ~G-BB_BARDAKERSHUS~
+  CLEAR_IDS_MAP
+
+  COPY ~%MOD_FOLDER%/bam/animations/004.bardakershus/g-.ini~ ~override/%hexNumber%.ini~
+  REPLACE_TEXTUALLY ~\(bestiary[ %TAB%]*\)=.*~ ~\1=%bestiary_index_017%~
+  BUT_ONLY
+  
+  //OUTER_SPRINT "hexNumber17" ~%hexNumber%~
+
+  ACTION_BASH_FOR ~%MOD_FOLDER%/bam/animations/004.bardakershus~ ~^.+\.bam$~ BEGIN
+    COPY ~%BASH_FOR_FILESPEC%~ ~override~
+  END
+  
+		//COPY_EXISTING ~%hexNumber17%.ini~ ~override~
+		COPY_EXISTING ~bgee.lua~ ~override~
+		
+		SET name_barda = RESOLVE_STR_REF(@400011)
+		SET desc_barda = RESOLVE_STR_REF(@800017)
+		
+        TEXT_SPRINT INDENT ~%TAB%%TAB%%TAB%  ~
+        PATCH_IF (max_index > 0) BEGIN
+          SET bestiary_index = max_index + 17
+          TEXT_SPRINT new_entry ~%TAB%},%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%TAB%{%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%index=%bestiary_index%,%WNL%~
+		  TEXT_SPRINT new_entry ~%new_entry%%INDENT%killvar='g-bb007',%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%desc0=%desc_barda%,%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%class=1,%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%imageUnknown='image',%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%imageKnown='g-bbj017',%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%name=%name_barda%,%WNL%~
+          SET strlen = STRING_LENGTH ~%new_entry%~
+          INSERT_BYTES ofs_end strlen
+          WRITE_ASCIIE ofs_end ~%new_entry%~ (strlen)
+		END ELSE BEGIN
+      PATCH_LOG ~Warning: Could not add Bard Akershus bestiary entry.~
+    END
+BUT_ONLY
+
+
+// Kuotoa ruffian
+
+	ACTION_IF (max_index > 0) BEGIN
+    OUTER_SET bestiary_index_018 = max_index + 18
+    OUTER_TEXT_SPRINT bestiary_index_str ~%bestiary_index_018%~
+	END
+
+ LAF FIND_FREE_ANIM_SLOT INT_VAR slotMin = 0xF101 RET slot END
+  ACTION_IF (slot <= 0) BEGIN
+    FAIL ~No free creature animation slot found.~
+  END
+
+  LAF TO_HEX_NUMBER INT_VAR value = slot minDigits = 4 RET hexNumber END
+  APPEND ~animate.ids~ ~0x%hexNumber% G-BB_KUOTOAR~ UNLESS ~G-BB_KUOTOAR~
+  CLEAR_IDS_MAP
+
+  COPY ~%MOD_FOLDER%/bam/animations/007.kuotoar/g-.ini~ ~override/%hexNumber%.ini~
+  REPLACE_TEXTUALLY ~\(bestiary[ %TAB%]*\)=.*~ ~\1=%bestiary_index_018%~
+  BUT_ONLY
+  
+  //OUTER_SPRINT "hexNumber18" ~%hexNumber%~
+
+
+  ACTION_BASH_FOR ~%MOD_FOLDER%/bam/animations/007.kuotoar~ ~^.+\.bam$~ BEGIN
+    COPY ~%BASH_FOR_FILESPEC%~ ~override~
+  END
+  
+		//COPY_EXISTING ~%hexNumber18%.ini~ ~override~
+		COPY_EXISTING ~bgee.lua~ ~override~
+		
+		SET name_kuo = RESOLVE_STR_REF(@400114)
+		SET desc_kuo = RESOLVE_STR_REF(@800018)
+		
+        TEXT_SPRINT INDENT ~%TAB%%TAB%%TAB%  ~
+        PATCH_IF (max_index > 0) BEGIN
+          SET bestiary_index = max_index + 18
+          TEXT_SPRINT new_entry ~%TAB%},%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%TAB%{%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%index=%bestiary_index%,%WNL%~
+		  TEXT_SPRINT new_entry ~%new_entry%%INDENT%killvar='g-bb015',%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%desc0=%desc_kuo%,%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%class=1,%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%imageUnknown='image',%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%imageKnown='g-bbj018',%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%name=%name_kuo%,%WNL%~
+          SET strlen = STRING_LENGTH ~%new_entry%~
+          INSERT_BYTES ofs_end strlen
+          WRITE_ASCIIE ofs_end ~%new_entry%~ (strlen)
+		END ELSE BEGIN
+      PATCH_LOG ~Warning: Could not add Kuotoa bestiary entry.~
+    END
+BUT_ONLY
+
+// Baernaloth
+
+	ACTION_IF (max_index > 0) BEGIN
+    OUTER_SET bestiary_index_019 = max_index + 19
+    OUTER_TEXT_SPRINT bestiary_index_str ~%bestiary_index_019%~
+	END
+
+ LAF FIND_FREE_ANIM_SLOT INT_VAR slotMin = 0xF101 RET slot END
+  ACTION_IF (slot <= 0) BEGIN
+    FAIL ~No free creature animation slot found.~
+  END
+
+  LAF TO_HEX_NUMBER INT_VAR value = slot minDigits = 4 RET hexNumber END
+  APPEND ~animate.ids~ ~0x%hexNumber% G-BB_BAERNALOTH~ UNLESS ~G-BB_BAERNALOTH~
+  CLEAR_IDS_MAP
+
+  COPY ~%MOD_FOLDER%/bam/animations/016.baernaloth/g-.ini~ ~override/%hexNumber%.ini~
+  REPLACE_TEXTUALLY ~\(bestiary[ %TAB%]*\)=.*~ ~\1=%bestiary_index_019%~
+  BUT_ONLY
+  
+  //OUTER_SPRINT "hexNumber19" ~%hexNumber%~
+  
+  ACTION_BASH_FOR ~%MOD_FOLDER%/bam/animations/016.baernaloth~ ~^.+\.bam$~ BEGIN
+    COPY ~%BASH_FOR_FILESPEC%~ ~override~
+  END
+  
+		//COPY_EXISTING ~%hexNumber19%.ini~ ~override~
+		COPY_EXISTING ~bgee.lua~ ~override~
+		
+		SET name_baer = RESOLVE_STR_REF(@400179)
+		SET desc_baer = RESOLVE_STR_REF(@800019)
+		
+        TEXT_SPRINT INDENT ~%TAB%%TAB%%TAB%  ~
+        PATCH_IF (max_index > 0) BEGIN
+          SET bestiary_index = max_index + 19
+          TEXT_SPRINT new_entry ~%TAB%},%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%TAB%{%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%index=%bestiary_index%,%WNL%~
+		  TEXT_SPRINT new_entry ~%new_entry%%INDENT%killvar='g-bb101',%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%desc0=%desc_baer%,%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%class=1,%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%imageUnknown='image',%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%imageKnown='g-bbj019',%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%name=%name_baer%,%WNL%~
+          SET strlen = STRING_LENGTH ~%new_entry%~
+          INSERT_BYTES ofs_end strlen
+          WRITE_ASCIIE ofs_end ~%new_entry%~ (strlen)
+		END ELSE BEGIN
+      PATCH_LOG ~Warning: Could not add Baernaloth bestiary entry.~
+    END
+BUT_ONLY
+
+// Raelis
+
+	ACTION_IF (max_index > 0) BEGIN
+    OUTER_SET bestiary_index_020 = max_index + 20
+    OUTER_TEXT_SPRINT bestiary_index_str ~%bestiary_index_020%~
+	END
+
+ LAF FIND_FREE_ANIM_SLOT INT_VAR slotMin = 0xF101 RET slot END
+  ACTION_IF (slot <= 0) BEGIN
+    FAIL ~No free creature animation slot found.~
+  END
+
+  LAF TO_HEX_NUMBER INT_VAR value = slot minDigits = 4 RET hexNumber END
+  APPEND ~animate.ids~ ~0x%hexNumber% G-BB_RAELIS~ UNLESS ~G-BB_RAELIS~
+  CLEAR_IDS_MAP
+
+  COPY ~%MOD_FOLDER%/bam/animations/035.raelis/g-.ini~ ~override/%hexNumber%.ini~
+  REPLACE_TEXTUALLY ~\(bestiary[ %TAB%]*\)=.*~ ~\1=%bestiary_index_020%~
+  BUT_ONLY
+  
+  //OUTER_SPRINT "hexNumber20" ~%hexNumber%~
+  
+  ACTION_BASH_FOR ~%MOD_FOLDER%/bam/animations/035.raelis~ ~^.+\.bam$~ BEGIN
+    COPY ~%BASH_FOR_FILESPEC%~ ~override~
+  END
+  
+		//COPY_EXISTING ~%hexNumber20%.ini~ ~override~
+		COPY_EXISTING ~bgee.lua~ ~override~
+		
+		SET name_raelis = RESOLVE_STR_REF(@400043)
+		SET desc_raelis = RESOLVE_STR_REF(@800020)
+		
+        TEXT_SPRINT INDENT ~%TAB%%TAB%%TAB%  ~
+        PATCH_IF (max_index > 0) BEGIN
+          SET bestiary_index = max_index + 20
+          TEXT_SPRINT new_entry ~%TAB%},%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%TAB%{%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%index=%bestiary_index%,%WNL%~
+		  TEXT_SPRINT new_entry ~%new_entry%%INDENT%killvar='g-bb054',%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%desc0=%desc_raelis%,%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%class=1,%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%imageUnknown='image',%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%imageKnown='g-bbj020',%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%name=%name_raelis%,%WNL%~
+          SET strlen = STRING_LENGTH ~%new_entry%~
+          INSERT_BYTES ofs_end strlen
+          WRITE_ASCIIE ofs_end ~%new_entry%~ (strlen)
+		END ELSE BEGIN
+      PATCH_LOG ~Warning: Could not add Raeli Shai bestiary entry.~
+    END
+BUT_ONLY
+
+
+// Holler
+
+	ACTION_IF (max_index > 0) BEGIN
+    OUTER_SET bestiary_index_021 = max_index + 21
+    OUTER_TEXT_SPRINT bestiary_index_str ~%bestiary_index_021%~
+	END
+
+ LAF FIND_FREE_ANIM_SLOT INT_VAR slotMin = 0xF101 RET slot END
+  ACTION_IF (slot <= 0) BEGIN
+    FAIL ~No free creature animation slot found.~
+  END
+
+  LAF TO_HEX_NUMBER INT_VAR value = slot minDigits = 4 RET hexNumber END
+  APPEND ~animate.ids~ ~0x%hexNumber% G-BB_HOLLER~ UNLESS ~G-BB_HOLLER~
+  CLEAR_IDS_MAP
+
+  COPY ~%MOD_FOLDER%/bam/animations/001.holler/g-.ini~ ~override/%hexNumber%.ini~
+  REPLACE_TEXTUALLY ~\(bestiary[ %TAB%]*\)=.*~ ~\1=%bestiary_index_021%~
+  BUT_ONLY
+  
+  //OUTER_SPRINT "hexNumber21" ~%hexNumber%~
+
+  ACTION_BASH_FOR ~%MOD_FOLDER%/bam/animations/001.holler~ ~^.+\.bam$~ BEGIN
+    COPY ~%BASH_FOR_FILESPEC%~ ~override~
+  END
+  
+		//COPY_EXISTING ~%hexNumber21%.ini~ ~override~
+		COPY_EXISTING ~bgee.lua~ ~override~
+		
+		SET name_holler = RESOLVE_STR_REF(@400013)
+		SET desc_holler = RESOLVE_STR_REF(@800021)
+		
+        TEXT_SPRINT INDENT ~%TAB%%TAB%%TAB%  ~
+        PATCH_IF (max_index > 0) BEGIN
+          SET bestiary_index = max_index + 21
+          TEXT_SPRINT new_entry ~%TAB%},%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%TAB%{%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%index=%bestiary_index%,%WNL%~
+		  TEXT_SPRINT new_entry ~%new_entry%%INDENT%killvar='g-bb009',%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%desc0=%desc_holler%,%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%class=1,%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%imageUnknown='image',%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%imageKnown='g-bbj021',%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%name=%name_holler%,%WNL%~
+          SET strlen = STRING_LENGTH ~%new_entry%~
+          INSERT_BYTES ofs_end strlen
+          WRITE_ASCIIE ofs_end ~%new_entry%~ (strlen)
+		END ELSE BEGIN
+      PATCH_LOG ~Warning: Could not add Holler bestiary entry.~
+    END
+BUT_ONLY
+
+// Mezzoloth
+
+	ACTION_IF (max_index > 0) BEGIN
+    OUTER_SET bestiary_index_022 = max_index + 22
+    OUTER_TEXT_SPRINT bestiary_index_str ~%bestiary_index_022%~
+	END
+
+ LAF FIND_FREE_ANIM_SLOT INT_VAR slotMin = 0xF101 RET slot END
+  ACTION_IF (slot <= 0) BEGIN
+    FAIL ~No free creature animation slot found.~
+  END
+
+  LAF TO_HEX_NUMBER INT_VAR value = slot minDigits = 4 RET hexNumber END
+  APPEND ~animate.ids~ ~0x%hexNumber% G-BB_MEZZOLOTH~ UNLESS ~G-BB_MEZZOLOTH~
+  CLEAR_IDS_MAP
+
+  COPY ~%MOD_FOLDER%/bam/animations/037.mezzoloth/g-.ini~ ~override/%hexNumber%.ini~
+  REPLACE_TEXTUALLY ~\(bestiary[ %TAB%]*\)=.*~ ~\1=%bestiary_index_022%~
+  BUT_ONLY
+  
+  //OUTER_SPRINT "hexNumber22" ~%hexNumber%~
+
+  ACTION_BASH_FOR ~%MOD_FOLDER%/bam/animations/037.mezzoloth~ ~^.+\.bam$~ BEGIN
+    COPY ~%BASH_FOR_FILESPEC%~ ~override~
+  END
+  
+		//COPY_EXISTING ~%hexNumber22%.ini~ ~override~
+		COPY_EXISTING ~bgee.lua~ ~override~
+		
+		SET name_mezzoloth = RESOLVE_STR_REF(@400117)
+		SET desc_mezzoloth = RESOLVE_STR_REF(@800022)
+		
+        TEXT_SPRINT INDENT ~%TAB%%TAB%%TAB%  ~
+        PATCH_IF (max_index > 0) BEGIN
+          SET bestiary_index = max_index + 22
+          TEXT_SPRINT new_entry ~%TAB%},%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%TAB%{%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%index=%bestiary_index%,%WNL%~
+		  TEXT_SPRINT new_entry ~%new_entry%%INDENT%killvar='g-bb178',%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%desc0=%desc_mezzoloth%,%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%class=1,%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%imageUnknown='image',%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%imageKnown='g-bbj022',%WNL%~
+          TEXT_SPRINT new_entry ~%new_entry%%INDENT%name=%name_mezzoloth%,%WNL%~
+          SET strlen = STRING_LENGTH ~%new_entry%~
+          INSERT_BYTES ofs_end strlen
+          WRITE_ASCIIE ofs_end ~%new_entry%~ (strlen)
+		END ELSE BEGIN
+      PATCH_LOG ~Warning: Could not add Mezzoloth bestiary entry.~
+    END
+BUT_ONLY
+
+// Monodrone
+ 
+  	ACTION_IF (max_index > 0) BEGIN
+    OUTER_SET bestiary_index_023 = max_index + 23
+    OUTER_TEXT_SPRINT bestiary_index_str ~%bestiary_index_023%~
+END
+
+ LAF FIND_FREE_ANIM_SLOT INT_VAR slotMin = 0xF101 RET slot END
+  ACTION_IF (slot <= 0) BEGIN
+    FAIL ~No free creature animation slot found.~
+  END
+
+  LAF TO_HEX_NUMBER INT_VAR value = slot minDigits = 4 RET hexNumber END
+  APPEND ~animate.ids~ ~0x%hexNumber% G-BB_MONODRONE~ UNLESS ~G-BB_MONODRONE~
+  CLEAR_IDS_MAP
+
+  COPY ~%MOD_FOLDER%/bam/animations/038.monodrone/g-.ini~ ~override/%hexNumber%.ini~
+   REPLACE_TEXTUALLY ~\(bestiary[ %TAB%]*\)=.*~ ~\1=%bestiary_index_023%~
+  BUT_ONLY
+  
+  //OUTER_SPRINT "hexNumber2" ~%hexNumber%~
+
+  ACTION_BASH_FOR ~%MOD_FOLDER%/bam/animations/038.monodrone~ ~^.+\.bam$~ BEGIN
+    COPY ~%BASH_FOR_FILESPEC%~ ~override~
+  END
+  
+	////COPY_EXISTING ~%hexNumber2%.ini~ ~override~
+	COPY_EXISTING ~bgee.lua~ ~override~
+	
+	SET name_monodrone = RESOLVE_STR_REF(@400008)
+	SET desc_monodrone = RESOLVE_STR_REF(@800024)
+	
+    TEXT_SPRINT INDENT ~%TAB%%TAB%%TAB%  ~
+	PATCH_IF (max_index > 0) BEGIN    
+	SET bestiary_index = max_index + 23
+      TEXT_SPRINT new_entry ~%TAB%},%WNL%~
+      TEXT_SPRINT new_entry ~%new_entry%%TAB%{%WNL%~
+      TEXT_SPRINT new_entry ~%new_entry%%INDENT%index=%bestiary_index%,%WNL%~
+      TEXT_SPRINT new_entry ~%new_entry%%INDENT%killvar='g-bb237',%WNL%~
+      TEXT_SPRINT new_entry ~%new_entry%%INDENT%desc0=%desc_monodrone%,%WNL%~
+      TEXT_SPRINT new_entry ~%new_entry%%INDENT%class=1,%WNL%~
+      TEXT_SPRINT new_entry ~%new_entry%%INDENT%imageUnknown='image',%WNL%~
+      TEXT_SPRINT new_entry ~%new_entry%%INDENT%imageKnown='g-bbj023',%WNL%~
+      TEXT_SPRINT new_entry ~%new_entry%%INDENT%name=%name_monodrone%,%WNL%~
+
+      SET strlen = STRING_LENGTH ~%new_entry%~
+      INSERT_BYTES ofs_end strlen
+      WRITE_ASCIIE ofs_end ~%new_entry%~ (strlen)
+    END ELSE BEGIN
+      PATCH_LOG ~Warning: Could not add Monodrone bestiary entry.~
+    END
+BUT_ONLY
+
+/////////////////////////////////
+// =========================== //
+// Animations without Bestiary //
+// =========================== //
+/////////////////////////////////
+
+
+// Cornugon red
+ LAF FIND_FREE_ANIM_SLOT INT_VAR slotMin = 0xF101 RET slot END
+  ACTION_IF (slot <= 0) BEGIN
+    FAIL ~No free creature animation slot found.~
+  END
+
+  LAF TO_HEX_NUMBER INT_VAR value = slot minDigits = 4 RET hexNumber END
+  APPEND ~animate.ids~ ~0x%hexNumber% G-BB_CORNUGONRED~ UNLESS ~G-BB_CORNUGONRED~
+  CLEAR_IDS_MAP
+
+  COPY ~%MOD_FOLDER%/bam/animations/005.cornugonred/g-.ini~ ~override/%hexNumber%.ini~
+
+  ACTION_BASH_FOR ~%MOD_FOLDER%/bam/animations/005.cornugonred~ ~^.+\.bam$~ BEGIN
+    COPY ~%BASH_FOR_FILESPEC%~ ~override~
+  END
+
+// Cornugon red
+ LAF FIND_FREE_ANIM_SLOT INT_VAR slotMin = 0xF101 RET slot END
+  ACTION_IF (slot <= 0) BEGIN
+    FAIL ~No free creature animation slot found.~
+  END
+
+  LAF TO_HEX_NUMBER INT_VAR value = slot minDigits = 4 RET hexNumber END
+  APPEND ~animate.ids~ ~0x%hexNumber% G-BB_ZOMBIE0~ UNLESS ~G-BB_ZOMBIE0~
+  CLEAR_IDS_MAP
+
+  COPY ~%MOD_FOLDER%/bam/animations/000.zombie0/g-.ini~ ~override/%hexNumber%.ini~
+
+  ACTION_BASH_FOR ~%MOD_FOLDER%/bam/animations/000.zombie0~ ~^.+\.bam$~ BEGIN
+    COPY ~%BASH_FOR_FILESPEC%~ ~override~
+  END
+
+
+// Kuotoa Dopilp (priest)
+ LAF FIND_FREE_ANIM_SLOT INT_VAR slotMin = 0xF101 RET slot END
+  ACTION_IF (slot <= 0) BEGIN
+    FAIL ~No free creature animation slot found.~
+  END
+
+  LAF TO_HEX_NUMBER INT_VAR value = slot minDigits = 4 RET hexNumber END
+  APPEND ~animate.ids~ ~0x%hexNumber% G-BB_KUOTOAP~ UNLESS ~G-BB_KUOTOAP~
+  CLEAR_IDS_MAP
+
+  COPY ~%MOD_FOLDER%/bam/animations/006.kuotoap/g-.ini~ ~override/%hexNumber%.ini~
+
+  ACTION_BASH_FOR ~%MOD_FOLDER%/bam/animations/006.kuotoap~ ~^.+\.bam$~ BEGIN
+    COPY ~%BASH_FOR_FILESPEC%~ ~override~
+  END
+
+// Patron1
+ LAF FIND_FREE_ANIM_SLOT INT_VAR slotMin = 0xF101 RET slot END
+  ACTION_IF (slot <= 0) BEGIN
+    FAIL ~No free creature animation slot found.~
+  END
+
+  LAF TO_HEX_NUMBER INT_VAR value = slot minDigits = 4 RET hexNumber END
+  APPEND ~animate.ids~ ~0x%hexNumber% G-BB_PATRON_1~ UNLESS ~G-BB_PATRON_1~
+  CLEAR_IDS_MAP
+
+  COPY ~%MOD_FOLDER%/bam/animations/009.patron1/g-.ini~ ~override/%hexNumber%.ini~
+
+  ACTION_BASH_FOR ~%MOD_FOLDER%/bam/animations/009.patron1~ ~^.+\.bam$~ BEGIN
+    COPY ~%BASH_FOR_FILESPEC%~ ~override~
+  END
+  
+  
+// Patron2
+ LAF FIND_FREE_ANIM_SLOT INT_VAR slotMin = 0xF101 RET slot END
+  ACTION_IF (slot <= 0) BEGIN
+    FAIL ~No free creature animation slot found.~
+  END
+
+  LAF TO_HEX_NUMBER INT_VAR value = slot minDigits = 4 RET hexNumber END
+  APPEND ~animate.ids~ ~0x%hexNumber% G-BB_PATRON_2~ UNLESS ~G-BB_PATRON_2~
+  CLEAR_IDS_MAP
+
+  COPY ~%MOD_FOLDER%/bam/animations/010.patron2/g-.ini~ ~override/%hexNumber%.ini~
+
+  ACTION_BASH_FOR ~%MOD_FOLDER%/bam/animations/010.patron2~ ~^.+\.bam$~ BEGIN
+    COPY ~%BASH_FOR_FILESPEC%~ ~override~
+  END
+  
+  
+// Rat
+ LAF FIND_FREE_ANIM_SLOT INT_VAR slotMin = 0xF101 RET slot END
+  ACTION_IF (slot <= 0) BEGIN
+    FAIL ~No free creature animation slot found.~
+  END
+
+  LAF TO_HEX_NUMBER INT_VAR value = slot minDigits = 4 RET hexNumber END
+  APPEND ~animate.ids~ ~0x%hexNumber% G-BB_RAT~ UNLESS ~G-BB_RAT~
+  CLEAR_IDS_MAP
+
+  COPY ~%MOD_FOLDER%/bam/animations/011.rat/g-.ini~ ~override/%hexNumber%.ini~
+
+  ACTION_BASH_FOR ~%MOD_FOLDER%/bam/animations/011.rat~ ~^.+\.bam$~ BEGIN
+    COPY ~%BASH_FOR_FILESPEC%~ ~override~
+  END
+  
+// Ishtar 1
+ LAF FIND_FREE_ANIM_SLOT INT_VAR slotMin = 0xF101 RET slot END
+  ACTION_IF (slot <= 0) BEGIN
+    FAIL ~No free creature animation slot found.~
+  END
+
+  LAF TO_HEX_NUMBER INT_VAR value = slot minDigits = 4 RET hexNumber END
+  APPEND ~animate.ids~ ~0x%hexNumber% G-BB_ISHTAR1~ UNLESS ~G-BB_ISHTAR1~
+  CLEAR_IDS_MAP
+
+  COPY ~%MOD_FOLDER%/bam/animations/013.ishtar1/g-.ini~ ~override/%hexNumber%.ini~
+
+  ACTION_BASH_FOR ~%MOD_FOLDER%/bam/animations/013.ishtar1~ ~^.+\.bam$~ BEGIN
+    COPY ~%BASH_FOR_FILESPEC%~ ~override~
+  END
+  
+/*  
+// Ishtar 2
+ LAF FIND_FREE_ANIM_SLOT INT_VAR slotMin = 0xF101 RET slot END
+  ACTION_IF (slot <= 0) BEGIN
+    FAIL ~No free creature animation slot found.~
+  END
+
+  LAF TO_HEX_NUMBER INT_VAR value = slot minDigits = 4 RET hexNumber END
+  APPEND ~animate.ids~ ~0x%hexNumber% G-BB_ISHTAR2~ UNLESS ~G-BB_ISHTAR2~
+  CLEAR_IDS_MAP
+
+  COPY ~%MOD_FOLDER%/bam/animations/014.ishtar2/g-.ini~ ~override/%hexNumber%.ini~
+
+  ACTION_BASH_FOR ~%MOD_FOLDER%/bam/animations/014.ishtar2~ ~^.+\.bam$~ BEGIN
+    COPY ~%BASH_FOR_FILESPEC%~ ~override~
+  END
+  */
+  
+// Ishtar 3
+ LAF FIND_FREE_ANIM_SLOT INT_VAR slotMin = 0xF101 RET slot END
+  ACTION_IF (slot <= 0) BEGIN
+    FAIL ~No free creature animation slot found.~
+  END
+
+  LAF TO_HEX_NUMBER INT_VAR value = slot minDigits = 4 RET hexNumber END
+  APPEND ~animate.ids~ ~0x%hexNumber% G-BB_ISHTAR3~ UNLESS ~G-BB_ISHTAR3~
+  CLEAR_IDS_MAP
+
+  COPY ~%MOD_FOLDER%/bam/animations/015.ishtar3/g-.ini~ ~override/%hexNumber%.ini~
+
+  ACTION_BASH_FOR ~%MOD_FOLDER%/bam/animations/015.ishtar3~ ~^.+\.bam$~ BEGIN
+    COPY ~%BASH_FOR_FILESPEC%~ ~override~
+  END
+ 
+// Wolf Sharikira UVB
+ LAF FIND_FREE_ANIM_SLOT INT_VAR slotMin = 0xF101 RET slot END
+  ACTION_IF (slot <= 0) BEGIN
+    FAIL ~No free creature animation slot found.~
+  END
+
+  LAF TO_HEX_NUMBER INT_VAR value = slot minDigits = 4 RET hexNumber END
+  APPEND ~animate.ids~ ~0x%hexNumber% G-BB_WOLF_SHARIKIRA~ UNLESS ~G-BB_WOLF_SHARIKIRA~
+  CLEAR_IDS_MAP
+
+  COPY ~%MOD_FOLDER%/bam/animations/022.uvb.sharikira/g-.ini~ ~override/%hexNumber%.ini~
+
+  ACTION_BASH_FOR ~%MOD_FOLDER%/bam/animations/022.uvb.sharikira~ ~^.+\.bam$~ BEGIN
+    COPY ~%BASH_FOR_FILESPEC%~ ~override~
+  END
+  
+// UVB Chair
+ LAF FIND_FREE_ANIM_SLOT INT_VAR slotMin = 0xF101 RET slot END
+  ACTION_IF (slot <= 0) BEGIN
+    FAIL ~No free creature animation slot found.~
+  END
+
+  LAF TO_HEX_NUMBER INT_VAR value = slot minDigits = 4 RET hexNumber END
+  APPEND ~animate.ids~ ~0x%hexNumber% G-BB_UVB_CHAIR~ UNLESS ~G-BB_UVB_CHAIR~
+  CLEAR_IDS_MAP
+
+  COPY ~%MOD_FOLDER%/bam/animations/023.uvb.chair/g-.ini~ ~override/%hexNumber%.ini~
+
+  ACTION_BASH_FOR ~%MOD_FOLDER%/bam/animations/023.uvb.chair~ ~^.+\.bam$~ BEGIN
+    COPY ~%BASH_FOR_FILESPEC%~ ~override~
+  END
+  
+// UVB Chair PDEAD
+ LAF FIND_FREE_ANIM_SLOT INT_VAR slotMin = 0xF101 RET slot END
+  ACTION_IF (slot <= 0) BEGIN
+    FAIL ~No free creature animation slot found.~
+  END
+
+  LAF TO_HEX_NUMBER INT_VAR value = slot minDigits = 4 RET hexNumber END
+  APPEND ~animate.ids~ ~0x%hexNumber% G-BB_UVB_CHAIR_PDEAD~ UNLESS ~G-BB_UVB_CHAIR_PDEAD~
+  CLEAR_IDS_MAP
+
+  COPY ~%MOD_FOLDER%/bam/animations/024.uvb.chair.pdead/g-.ini~ ~override/%hexNumber%.ini~
+
+  ACTION_BASH_FOR ~%MOD_FOLDER%/bam/animations/024.uvb.chair.pdead~ ~^.+\.bam$~ BEGIN
+    COPY ~%BASH_FOR_FILESPEC%~ ~override~
+  END
+  
+// UVB Sit
+ LAF FIND_FREE_ANIM_SLOT INT_VAR slotMin = 0xF101 RET slot END
+  ACTION_IF (slot <= 0) BEGIN
+    FAIL ~No free creature animation slot found.~
+  END
+
+  LAF TO_HEX_NUMBER INT_VAR value = slot minDigits = 4 RET hexNumber END
+  APPEND ~animate.ids~ ~0x%hexNumber% G-BB_UVB_SIT~ UNLESS ~G-BB_UVB_SIT~
+  CLEAR_IDS_MAP
+
+  COPY ~%MOD_FOLDER%/bam/animations/025.uvb.sit/g-.ini~ ~override/%hexNumber%.ini~
+
+  ACTION_BASH_FOR ~%MOD_FOLDER%/bam/animations/025.uvb.sit~ ~^.+\.bam$~ BEGIN
+    COPY ~%BASH_FOR_FILESPEC%~ ~override~
+  END
+  
+// UVB Forward
+ LAF FIND_FREE_ANIM_SLOT INT_VAR slotMin = 0xF101 RET slot END
+  ACTION_IF (slot <= 0) BEGIN
+    FAIL ~No free creature animation slot found.~
+  END
+
+  LAF TO_HEX_NUMBER INT_VAR value = slot minDigits = 4 RET hexNumber END
+  APPEND ~animate.ids~ ~0x%hexNumber% G-BB_UVB_FORWARD~ UNLESS ~G-BB_UVB_FORWARD~
+  CLEAR_IDS_MAP
+
+  COPY ~%MOD_FOLDER%/bam/animations/026.uvb.forward/g-.ini~ ~override/%hexNumber%.ini~
+
+  ACTION_BASH_FOR ~%MOD_FOLDER%/bam/animations/026.uvb.forward~ ~^.+\.bam$~ BEGIN
+    COPY ~%BASH_FOR_FILESPEC%~ ~override~
+  END
+  
+// Narthuul
+ LAF FIND_FREE_ANIM_SLOT INT_VAR slotMin = 0xF101 RET slot END
+  ACTION_IF (slot <= 0) BEGIN
+    FAIL ~No free creature animation slot found.~
+  END
+
+  LAF TO_HEX_NUMBER INT_VAR value = slot minDigits = 4 RET hexNumber END
+  APPEND ~animate.ids~ ~0x%hexNumber% G-BB_NARTHUUL~ UNLESS ~G-BB_NARTHUUL~
+  CLEAR_IDS_MAP
+
+  COPY ~%MOD_FOLDER%/bam/animations/029.narthuul/g-.ini~ ~override/%hexNumber%.ini~
+
+  ACTION_BASH_FOR ~%MOD_FOLDER%/bam/animations/029.narthuul~ ~^.+\.bam$~ BEGIN
+    COPY ~%BASH_FOR_FILESPEC%~ ~override~
+  END
+
+// Broken Modron
+ LAF FIND_FREE_ANIM_SLOT INT_VAR slotMin = 0xF101 RET slot END
+  ACTION_IF (slot <= 0) BEGIN
+    FAIL ~No free creature animation slot found.~
+  END
+
+  LAF TO_HEX_NUMBER INT_VAR value = slot minDigits = 4 RET hexNumber END
+  APPEND ~animate.ids~ ~0x%hexNumber% G-BB_BMDR~ UNLESS ~G-BB_BMDR~
+  CLEAR_IDS_MAP
+
+  COPY ~%MOD_FOLDER%/bam/animations/036.bmdr/g-.ini~ ~override/%hexNumber%.ini~
+
+  ACTION_BASH_FOR ~%MOD_FOLDER%/bam/animations/036.bmdr~ ~^.+\.bam$~ BEGIN
+    COPY ~%BASH_FOR_FILESPEC%~ ~override~
+  END
+ 
+// Fake PC
+ LAF FIND_FREE_ANIM_SLOT INT_VAR slotMin = 0xF101 RET slot END
+  ACTION_IF (slot <= 0) BEGIN
+    FAIL ~No free creature animation slot found.~
+  END
+
+  LAF TO_HEX_NUMBER INT_VAR value = slot minDigits = 4 RET hexNumber END
+  APPEND ~animate.ids~ ~0x%hexNumber% G-BB_FAKE_PC~ UNLESS ~G-BB_FAKE_PC~
+  CLEAR_IDS_MAP
+
+  COPY ~%MOD_FOLDER%/bam/animations/039.fake_pc/g-.ini~ ~override/%hexNumber%.ini~
+
+  ACTION_BASH_FOR ~%MOD_FOLDER%/bam/animations/039.fake_pc~ ~^.+\.bam$~ BEGIN
+    COPY ~%BASH_FOR_FILESPEC%~ ~override~
+  END
+  
+  // Perfect Beach Body
+ LAF FIND_FREE_ANIM_SLOT INT_VAR slotMin = 0xF101 RET slot END
+  ACTION_IF (slot <= 0) BEGIN
+    FAIL ~No free creature animation slot found.~
+  END
+
+  LAF TO_HEX_NUMBER INT_VAR value = slot minDigits = 4 RET hexNumber END
+  APPEND ~animate.ids~ ~0x%hexNumber% G-BB_PBB~ UNLESS ~G-BB_PBB~
+  CLEAR_IDS_MAP
+
+  COPY ~%MOD_FOLDER%/bam/animations/040.pbb/g-.ini~ ~override/%hexNumber%.ini~
+
+  ACTION_BASH_FOR ~%MOD_FOLDER%/bam/animations/040.pbb~ ~^.+\.bam$~ BEGIN
+    COPY ~%BASH_FOR_FILESPEC%~ ~override~
+  END
+
+    // Berserker
+ LAF FIND_FREE_ANIM_SLOT INT_VAR slotMin = 0xF101 RET slot END
+  ACTION_IF (slot <= 0) BEGIN
+    FAIL ~No free creature animation slot found.~
+  END
+
+  LAF TO_HEX_NUMBER INT_VAR value = slot minDigits = 4 RET hexNumber END
+  APPEND ~animate.ids~ ~0x%hexNumber% G-BB_BERSERKER~ UNLESS ~G-BB_BERSERKER~
+  CLEAR_IDS_MAP
+
+  COPY ~%MOD_FOLDER%/bam/animations/042.berserker/g-.ini~ ~override/%hexNumber%.ini~
+
+  ACTION_BASH_FOR ~%MOD_FOLDER%/bam/animations/042.berserker~ ~^.+\.bam$~ BEGIN
+    COPY ~%BASH_FOR_FILESPEC%~ ~override~
+  END
+
+  
+  
+  

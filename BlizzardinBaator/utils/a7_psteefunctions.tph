@@ -1,0 +1,217 @@
+// ************************** Collection of PSTEE-specific functions **************************
+// Code author: Argent77
+// This patch function converts a classic PST quest definition into a PSTEE quest definition and 
+// adds it to the current file. The file is expected to be of LUA type (e.g. bgee.lua).
+DEFINE_PATCH_FUNCTION A7_ADD_QUEST_PSTEE
+INT_VAR
+  title           = 0   // quest title (strref)
+  descAssigned    = 0   // active quest description (strref)
+  possibleEndings = 1   // number of available "completed quest" entries (range: 0 to 5, default: 1)
+  descCompleted   = 0   // first completed quest description (strref), processed when possibleEndings >= 1
+  descCompletedB  = 0   // second completed quest description (strref), processed when possibleEndings >= 2
+  descCompletedC  = 0   // third completed quest description (strref), processed when possibleEndings >= 3
+  descCompletedD  = 0   // fourth completed quest description (strref), processed when possibleEndings >= 4
+  descCompletedE  = 0   // fifth completed quest description (strref), processed when possibleEndings >= 5
+  assignedChecks  = 0   // number of conditions for active quest stage (see aXXXn variable definitions below)
+  completeChecks  = 0   // number of conditions to check for first completed quest entry (see cXXXn variable definitions below)
+  completeChecksB = 0   // number of conditions to check for second completed quest entry (see cXXXBn variable definitions below)
+  completeChecksC = 0   // number of conditions to check for third completed quest entry (see cXXXCn variable definitions below)
+  completeChecksD = 0   // number of conditions to check for fourth completed quest entry (see cXXXDn variable definitions below)
+  completeChecksE = 0   // number of conditions to check for fifth completed quest entry (see cXXXEn variable definitions below)
+STR_VAR
+  comment         = ~~  // optional comment that can be added to the quest entries
+  // Active quest: aVar1 (string), aValue1 (int), aCondition1 (string), aVar2, ... depending on "assignedChecks"
+  // Completed quest #1: cVar1 (string), cValue1 (int), cCondition1 (string), cVar2, ... depending on "completeChecks"
+  // Completed quest #2: cVarB1 (string), cValueB1 (int), cConditionB1 (string), cVarB2 ... depending on "completeChecksB"
+  // Use C, D and E for completed quest #3, #4 and #5
+
+  // Active and completed quest entries are defined by variable names, values and conditions
+  // Variable names are always assumed to be of "GLOBAL" scope.
+  // Value can be any signed number in 32 bit range.
+  // Condition can be one of the following keywords (translation in parentheses): EQ (==), GT (>), LT (<), NE (!=)
+  // Classic PST supports a scope keyword as well, but it was never used by the unmodded game. It doesn't appear to be 
+  // supported by PST:EE.
+BEGIN
+  PATCH_IF title > 0 BEGIN
+    // Building entries for function buildQuestsTable()
+    TEXT_SPRINT questTable ~%TAB%createQuest    ( %title% )~
+    PATCH_IF NOT ~%comment%~ STR_EQ ~~ BEGIN
+      TEXT_SPRINT questTable ~%questTable% --%comment%~
+    END
+    TEXT_SPRINT questTable ~%questTable%%WNL%~
+
+    PATCH_IF descAssigned > 0 BEGIN
+      TEXT_SPRINT questTable ~%questTable%%TAB%createEntry    ( %title%, %descAssigned%, {} )~
+      PATCH_IF NOT ~%comment%~ STR_EQ ~~ BEGIN
+        TEXT_SPRINT questTable ~%questTable% --%comment%, assigned~
+      END
+      TEXT_SPRINT questTable ~%questTable%%WNL%~
+    END
+
+    PATCH_IF possibleEndings > 0 BEGIN
+      SET index = 0
+      PATCH_FOR_EACH suffix IN ~~ ~B~ ~C~ ~D~ ~E~ BEGIN
+        PATCH_IF index < possibleEndings BEGIN
+          TEXT_SPRINT strref ~descCompleted%suffix%~
+          TEXT_SPRINT strref EVAL ~%%strref%%~
+          TEXT_SPRINT questTable ~%questTable%%TAB%createEntry    ( %title%, %strref%, {} )~
+          PATCH_IF NOT ~%comment%~ STR_EQ ~~ BEGIN
+            SET num = index + 1
+            TEXT_SPRINT questTable ~%questTable% --%comment%, ending #%num%~
+          END
+          TEXT_SPRINT questTable ~%questTable%%WNL%~
+        END
+        SET index += 1
+      END
+    END
+
+    // Building entries for function onSetGlobal(var)
+    TEXT_SPRINT COND_EQ ~==~
+    TEXT_SPRINT COND_GT ~>~
+    TEXT_SPRINT COND_LT ~<~
+    TEXT_SPRINT COND_NE ~!=~
+    TEXT_SPRINT autoJournal ~~
+
+    PATCH_IF descAssigned > 0 BEGIN
+      TEXT_SPRINT expr ~~
+      FOR (idx = 1; idx <= assignedChecks; ++idx) BEGIN
+        TEXT_SPRINT var EVAL ~%aVar%idx%%~
+        TO_UPPER var
+        TEXT_SPRINT val EVAL ~%aValue%idx%%~
+        TEXT_SPRINT cond EVAL ~%aCondition%idx%%~
+        TO_UPPER cond
+        TEXT_SPRINT cond EVAL ~%COND_%cond%%~
+        PATCH_IF idx > 1 BEGIN TEXT_SPRINT expr ~%expr% and ~ END
+        TEXT_SPRINT expr ~%expr%sv("%var%") %cond% %val%~
+      END
+      TEXT_SPRINT autoJournal ~%autoJournal%%TAB%if( %expr% ) then setEntryActive(%descAssigned%) end%WNL%~
+    END
+
+    PATCH_IF possibleEndings > 0 BEGIN
+      SET idx1 = 0
+      PATCH_FOR_EACH suffix IN ~~ ~B~ ~C~ ~D~ ~E~ BEGIN
+        PATCH_IF idx1 < possibleEndings BEGIN
+          TEXT_SPRINT strref ~descCompleted%suffix%~
+          TEXT_SPRINT strref EVAL ~%%strref%%~
+          PATCH_IF strref > 0 BEGIN
+            TEXT_SPRINT expr ~~
+            TEXT_SPRINT numChecks ~completeChecks%suffix%~
+            TEXT_SPRINT numChecks EVAL ~%%numChecks%%~
+            FOR (idx2 = 1; idx2 <= numChecks; ++idx2) BEGIN
+              TEXT_SPRINT var EVAL ~%cVar%suffix%%idx2%%~
+              TO_UPPER var
+              TEXT_SPRINT val EVAL ~%cValue%suffix%%idx2%%~
+              TEXT_SPRINT cond EVAL ~%cCondition%suffix%%idx2%%~
+              TO_UPPER cond
+              TEXT_SPRINT cond EVAL ~%COND_%cond%%~
+              PATCH_IF idx2 > 1 BEGIN TEXT_SPRINT expr ~%expr% and ~ END
+              TEXT_SPRINT expr ~%expr%sv("%var%") %cond% %val%~
+            END
+            TEXT_SPRINT autoJournal ~%autoJournal%%TAB%if( %expr% ) then setEntryDone(%strref%) end%WNL%~
+          END
+        END
+        SET idx1 += 1
+      END
+    END
+
+    // Adding structures to file
+    PATCH_IF NOT ~%questTable%~ STR_EQ ~~ BEGIN
+      SET ofs = INDEX_BUFFER(~function[ %TAB%]*buildQuestsTable()~)
+      PATCH_IF ofs >= 0 BEGIN
+        SET ofs = INDEX_BUFFER(~^[ %TAB%]*createQuest[ %TAB%]*([ %TAB%]*-?[0-9]+[ %TAB%]*)~ ofs)
+        PATCH_IF ofs >= 0 BEGIN
+          SET strlen = STRING_LENGTH ~%questTable%~
+          INSERT_BYTES ofs strlen
+          WRITE_ASCIIE ofs ~%questTable%~ (strlen)
+        END
+      END
+    END
+
+    PATCH_IF NOT ~%autoJournal%~ STR_EQ ~~ BEGIN
+      SET ofs = INDEX_BUFFER(~function[ %TAB%]*onSetGlobal(.*)~)
+      PATCH_IF ofs >= 0 BEGIN
+        SET ofs = INDEX_BUFFER(~^[ %TAB%]*if[ %TAB%]*([ %TAB%]*sv[ %TAB%]*([ %TAB%]*".*"[ %TAB%]*).*)[ %TAB%]*then[ %TAB%]*setEntry~ ofs)
+        PATCH_IF ofs >= 0 BEGIN
+          SET strlen = STRING_LENGTH ~%autoJournal%~
+          INSERT_BYTES ofs strlen
+          WRITE_ASCIIE ofs ~%autoJournal%~ (strlen)
+        END
+      END
+    END
+  END
+END
+
+/*
+Example: Converting Ei-Vene quest in Mortuary
+Section "[2]" in PST's quests.ini:
+title=34222
+descAssigned=34223
+descCompleted=34224
+assignedChecks=2
+aVar1=EiVene
+aValue1=1
+aCondition1=EQ
+aVar2=EiVene_Delivery
+aValue2=0
+aCondition2=EQ
+completeChecks=1
+cVar1=EiVene_Delivery
+cValue1=1
+cCondition1=EQ
+
+WeiDU code for conversion:
+COPY_EXISTING ~bgee.lua~ ~bgee.lua~
+  LPF A7_ADD_QUEST_PSTEE
+  INT_VAR
+    title           = 34222
+    descAssigned    = 34223
+    descCompleted   = 34224
+    assignedChecks  = 2
+    aValue1         = 1
+    aValue2         = 0
+    completeChecks  = 1
+    cValue1         = 1
+  STR_VAR
+    aVar1           = ~EiVene~
+    aCondition1     = ~EQ~
+    aVar2           = ~EiVene_Delivery~
+    aCondition2     = ~EQ~
+    cVar1           = ~EiVene_Delivery~
+    cCondition1     = ~EQ~
+    comment         = ~Fetch Embalming Fluid and Needle for Ei-Vene.~
+  END
+BUT_ONLY
+
+Resulting bgee.lua entries in PST:EE:
+1. in function buildQuestsTable()
+	createQuest    ( 34222 ) --Fetch Embalming Fluid and Needle for Ei-Vene.
+	createEntry    ( 34222, 34223, {} ) --Fetch Embalming Fluid and Needle for Ei-Vene., assigned
+	createEntry    ( 34222, 34224, {} ) --Fetch Embalming Fluid and Needle for Ei-Vene., ending #1
+
+2. in function onSetGlobal(var)
+	if( sv("EIVENE") == 1 and sv("EIVENE_DELIVERY") == 0 ) then setEntryActive(34223) end
+	if( sv("EIVENE_DELIVERY") == 1 ) then setEntryDone(34224) end
+*/
+
+
+// This action function attempts to find and return the first unoccupied creature animation slot 
+// in the given range. Returns -1 if no slot was found.
+
+DEFINE_ACTION_FUNCTION FIND_FREE_ANIM_SLOT
+INT_VAR
+  start_index = 0xf000    // Lower bounds
+  end_index   = 0xffff    // Upper bounds
+RET index                 // Returned slot index (or -1 if none found)
+BEGIN
+  OUTER_SET index = "-1"
+  OUTER_PATCH ~~ BEGIN
+    FOR (slot = start_index; slot <= end_index; ++slot) BEGIN
+      SPRINTF hexValue ~%x~ (slot)
+      INNER_PATCH_SAVE hexValue ~%hexValue%~ BEGIN DELETE_BYTES 0 2 END
+      PATCH_IF NOT FILE_EXISTS_IN_GAME ~%hexValue%.ini~ BEGIN
+        SET index = slot
+        SET slot = end_index + 1
+      END
+    END
+  END
+END

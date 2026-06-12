@@ -1,0 +1,231 @@
+IF
+GlobalGT("G-ulfbrandwonagainstus","GLOBAL",0)
+THEN
+	RESPONSE #100
+EscapeArea()
+END
+
+IF
+GlobalGT("G-ulfbrandlostraid","GLOBAL",0)
+THEN
+	RESPONSE #100
+EscapeArea()
+END
+
+IF
+GlobalGT("G-ulfbrandwonraid","GLOBAL",0)
+THEN
+	RESPONSE #100
+EscapeArea()
+END
+
+
+
+IF
+    Global("G-raeliscrisis","GLOBAL",1)
+THEN
+    RESPONSE #100
+	StartCutSceneMode()
+    CutSceneId(Player1)
+    MoveToPoint([820.736])
+    Wait(2)
+	ActionOverride("G-bb190",StartDialogueNoSet("G-bbd190"))
+    EndCutSceneMode()
+	
+END
+
+IF
+    Global("G-raeliscrisis","GLOBAL",2)
+	Global("G-raeliscrisisX","GLOBAL",0)
+THEN
+    RESPONSE #100
+	SetGlobal("G-raeliscrisisX","GLOBAL",1)
+	StartCutSceneMode()
+    CutSceneId(Player1)
+    MoveToPoint([1141.621])
+    Wait(2)
+	EndCutSceneMode()
+	ActionOverride("G-bb190",StartDialogueNoSet("G-bbd190"))
+    
+	
+END
+// Random, when attacked 
+ 
+IF
+    Help([ANYONE])
+    Team(LastTrigger,G-FWRAID_DG)
+THEN
+    RESPONSE #100
+        Enemy()
+		Attack(NearestEnemyOf(Myself))
+END 
+
+IF
+	GlobalGT("G-theaterraided","GLOBAL",0)
+THEN
+RESPONSE #100
+	ChangeTeam(Myself,G-FWRAID_F)
+	Help()
+END 
+ 
+IF
+	GlobalGT("G-raidberserk","GLOBAL",0)
+	!GlobalGT("G-ulfbrandwonagainstus","GLOBAL",0)
+	!GlobalGT("G-ulfbrandlostraid","GLOBAL",0)
+	!GlobalGT("G-ulfbrandwonraid","GLOBAL",0)
+THEN
+	RESPONSE #60
+		Wait(5)
+	ForceSpell(NearestEnemyOf(Myself),WIZARD_CHROMATIC_ORB)
+	RESPONSE #20
+		Wait(5)
+	ForceSpell(Myself,WIZARD_BLUR) 
+		RESPONSE #20
+		Wait(5)
+	ForceSpell(FarthestEnemyOf(Myself),WIZARD_HORROR)	
+END  
+ 
+ 
+IF
+
+	Global("G-theaterabandoned","GLOBAL",1)
+	AreaCheck("arg-08")
+THEN
+	RESPONSE #100
+		DestroySelf()
+ END
+
+//IF
+ //Global("G-FWRAID","GLOBAL",1)
+ //Global("G-raelisreset","GLOBAL",0)
+//THEN
+	//RESPONSE #100
+		//DestroySelf()
+		//SetGlobal("G-raelisreset","GLOBAL",1)
+//END
+
+// ALLEGIANCE SET  
+   
+IF
+		Global("G-allegianceset","LOCALS",0)
+		Global("g-raidallegiances","GLOBAL",3)  
+THEN
+	RESPONSE #50
+		ChangeEnemyAlly(Myself,NEUTRAL)
+		Attack("g-bb201")
+		SetGlobal("G-allegianceset","LOCALS",1)
+		Continue()
+	RESPONSE #50
+		ChangeEnemyAlly(Myself,NEUTRAL)
+		Attack("g-bb200")
+		SetGlobal("G-allegianceset","LOCALS",1)
+		Continue()
+	END
+
+IF
+		Global("G-allegianceset","LOCALS",0)
+		OR(3) Global("g-raidallegiances","GLOBAL",1) Global("g-raidallegiances","GLOBAL",2) Global("g-raidallegiances","GLOBAL",2)  
+THEN
+	RESPONSE #30
+		Enemy()
+		Attack("g-bb201")
+		SetGlobal("G-allegianceset","LOCALS",1)
+		Continue()
+	RESPONSE #20
+		Enemy()
+		Attack("g-bb200")
+		SetGlobal("G-allegianceset","LOCALS",1)
+		Continue()
+	RESPONSE #50
+		Enemy()
+		Attack(Protagonist)
+		SetGlobal("G-allegianceset","LOCALS",1)
+		Continue()
+	END
+
+
+IF
+    Global("G-FWRAID","GLOBAL",0)
+	AttackedBy([ANYONE],DEFAULT)
+THEN
+    RESPONSE #100
+        Enemy()
+		Help()
+        Attack(NearestEnemyOf(Myself))
+   END
+
+//continuous combat
+ 
+IF
+		Global("G-allegianceset","LOCALS",1)
+		Global("g-raidallegiances","GLOBAL",3)
+THEN
+	RESPONSE #100
+		Attack("g-bb201")  END 
+IF
+		Global("G-allegianceset","LOCALS",1)
+		Global("g-raidallegiances","GLOBAL",1)
+THEN
+	RESPONSE #100
+	Enemy()
+		Attack(Protagonist)  END
+IF
+		Global("G-allegianceset","LOCALS",1)
+		Global("g-raidallegiances","GLOBAL",2)
+THEN
+	RESPONSE #100
+	Enemy()
+		Attack(Protagonist)  END
+IF
+		Global("G-allegianceset","LOCALS",1)
+		Global("g-raidallegiances","GLOBAL",4)
+THEN
+	RESPONSE #100
+	Enemy()
+		Attack(Protagonist)  END
+		
+		
+		IF
+	!ActuallyInCombat()
+THEN
+    RESPONSE #10
+		ReturnToSavedPlace()
+		PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100262) 
+        WaitRandom(6,16)
+        Continue()
+	RESPONSE #10
+        ReturnToSavedPlace()
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100263) 
+		WaitRandom(6,16)
+        Continue()
+	RESPONSE #10
+        ReturnToSavedPlace()
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100264)
+		WaitRandom(6,16)
+        Continue()
+	RESPONSE #10
+        ReturnToSavedPlace()
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100265)
+		WaitRandom(6,16)
+        Continue()
+	RESPONSE #10
+        ReturnToSavedPlace()
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100266)
+		WaitRandom(6,16)
+        Continue()
+	RESPONSE #10
+        ReturnToSavedPlace()
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100267)
+		WaitRandom(6,16)
+        Continue()
+	RESPONSE #30
+        ReturnToSavedPlace()
+		WaitRandom(10,21)
+        Continue()
+END

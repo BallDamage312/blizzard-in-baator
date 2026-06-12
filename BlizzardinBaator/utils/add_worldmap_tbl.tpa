@@ -1,0 +1,396 @@
+//Adds multiple areas and links to the worldmap and saves using BP-BGT Worldmap TBL files convention (refer to readme file of that mod to see how to write them).
+//Should be used after you copied new areas to override.
+DEFINE_ACTION_FUNCTION ~ADD_WORLDMAP_TBL~
+	INT_VAR
+	inclSv = 0            // to 1 if you want to patch saved game worldmaps as well as the master worldmap. NB: changes to saved games are uninstallable
+	verbose = 0           // to 1 to enable debug messages
+	patch_bp_files = 0    // to 1 to patch/create gameFolder/Worldmap files used by BP-BGT Worldmap for wmp creation (needs path_to_areas_bp, path_to_links, path_to_trans)
+	patch_mastarea = 0    // to 1 to patch MASTAREA.2da if area entries doesn't exist there yet
+	add_x = 0             // add this value to area's X (east-west) coordinate specified in TBL file (BP-BGT Worldmap areas file is excluded)
+	add_y = 0             // add this value to area's Y (north-south) coordinate specified in TBL file (BP-BGT Worldmap areas file is excluded)
+	STR_VAR
+	path_to_areas = ~~    // full path to the text file containing your areas data, e.g. ~mymod/tbl/areas.tbl~
+	path_to_areas_bp = ~~ // as above but this points to file used by BP-BGT Worldmap - this way if some save is detected to have BP-BGT Worldmap wmp stored it will use different coordinates / values
+	path_to_links = ~~    // full path to the text file containing your links data, e.g. ~mymod/tbl/links.tbl~
+	path_to_links_bp = ~~ // as above but this points to file used by BP-BGT Worldmap
+	path_to_trans = ~~    // full path to the text file containing your translation data, e.g. ~mymod/language/%LANGUAGE%/worldmap.tra~
+	strref_array = ~~     // array containing pre-set strrefs (ARE name => strref) for area names and tooltips
+	worldmap = ~worldmap~ // which .wmp file should be patched, e.g. ~worldm25~
+	icons_table = ~~      // array containing remapped icons (old_index => new_index) for path_to_areas (use alongside function that can patch BAMv1/BAMv2 icon file)
+	RET
+	areas_added           // how many areas were successfully added. if this is 0, you have a problem
+	links_added           // how many links were successfully added. if this is 0, you have a problem
+	//areNum_array          // array containing worldmap entry number for each added area (name => areNum), e.g. number evaluation code: TEXT_SPRINT areNum $areNum_array(~name~)
+	//commented out because of missing WeiDU feature: http://gibberlings3.net/forums/index.php?showtopic=28123
+BEGIN
+	OUTER_SET areas_added = 0
+	OUTER_SET links_added = 0
+	ACTION_CLEAR_ARRAY valid_areas
+	ACTION_CLEAR_ARRAY valid_areas_bp
+	ACTION_CLEAR_ARRAY valid_links
+	ACTION_CLEAR_ARRAY trans_array
+	ACTION_CLEAR_ARRAY save_dirs
+	ACTION_CLEAR_ARRAY areNum_array
+	ACTION_CLEAR_ARRAY bp_array
+	ACTION_IF NOT ~%strref_array%~ STR_EQ ~~ BEGIN
+		ACTION_PHP_EACH ~%strref_array%~ AS area => strref BEGIN
+			PRINT ~%area% => %strref%~
+			OUTER_SET $trans_array("@%area%") = strref
+		END
+	END
+	ACTION_IF NOT ~%icons_table%~ STR_EQ ~~ BEGIN
+		ACTION_CLEAR_ARRAY remapped_icons
+		ACTION_PHP_EACH ~%icons_table%~ AS old => new BEGIN
+			OUTER_SET $remapped_icons("%old%") = new
+		END
+	END
+	ACTION_IF NOT ~%path_to_areas%~ STR_EQ ~~ BEGIN
+		COPY - ~%path_to_areas%~ ~.../%path_to_areas%~
+			//PRETTY_PRINT_2DA
+			REPLACE_TEXTUALLY ~%WNL%~ ~%LNL%~
+			REPLACE_TEXTUALLY ~//.*$~ ~~
+			READ_2DA_ENTRIES_NOW areas_2da 10
+			FOR (i = 1; i < areas_2da; i = i + 1) BEGIN
+				READ_2DA_ENTRY_FORMER areas_2da i 0 "short_name"
+				PATCH_IF FILE_EXISTS_IN_GAME ~%short_name%.are~ BEGIN
+					DEFINE_ASSOCIATIVE_ARRAY valid_areas BEGIN ~%i%~ => ~%short_name%~ END
+					PATCH_IF patch_mastarea = 1 BEGIN
+						INNER_ACTION BEGIN
+							APPEND ~MASTAREA.2da~ ~%short_name% value~ UNLESS ~^[ %TAB%]*%short_name%[ %TAB%]+value~
+						END
+					END
+				END
+			END
+	END
+	ACTION_IF NOT ~%path_to_areas_bp%~ STR_EQ ~~ BEGIN
+		COPY - ~%path_to_areas_bp%~ ~.../%path_to_areas_bp%~
+			//PRETTY_PRINT_2DA
+			REPLACE_TEXTUALLY ~%WNL%~ ~%LNL%~
+			REPLACE_TEXTUALLY ~//.*$~ ~~
+			READ_2DA_ENTRIES_NOW areas_2da_bp 10
+			FOR (i = 1; i < areas_2da_bp; i = i + 1) BEGIN
+				READ_2DA_ENTRY_FORMER areas_2da_bp i 0 "short_name"
+				PATCH_IF FILE_EXISTS_IN_GAME ~%short_name%.are~ BEGIN
+					DEFINE_ASSOCIATIVE_ARRAY valid_areas_bp BEGIN ~%i%~ => ~%short_name%~ END
+					PATCH_IF patch_mastarea = 1 BEGIN
+						INNER_ACTION BEGIN
+							APPEND ~MASTAREA.2da~ ~%short_name% value~ UNLESS ~^[ %TAB%]*%short_name%[ %TAB%]+value~
+						END
+					END
+				END
+			END
+	END
+	ACTION_IF NOT ~%path_to_links%~ STR_EQ ~~ BEGIN
+		COPY - ~%path_to_links%~ ~.../%path_to_links%~
+			//PRETTY_PRINT_2DA
+			REPLACE_TEXTUALLY ~%WNL%~ ~%LNL%~
+			REPLACE_TEXTUALLY ~//.*$~ ~~
+			READ_2DA_ENTRIES_NOW links_2da 12
+			FOR (i = 1; i < links_2da; i = i + 1) BEGIN
+				READ_2DA_ENTRY_FORMER links_2da i 0 "src_area"
+				READ_2DA_ENTRY_FORMER links_2da i 2 "target_are"
+				PATCH_IF FILE_EXISTS_IN_GAME ~%src_area%.are~ AND FILE_EXISTS_IN_GAME ~%target_are%.are~ BEGIN
+					DEFINE_ASSOCIATIVE_ARRAY valid_links BEGIN ~%i%~ => ~%src_area%~ END
+				END
+			END
+	END
+	ACTION_IF NOT ~%path_to_links_bp%~ STR_EQ ~~ BEGIN
+		COPY - ~%path_to_links_bp%~ ~.../%path_to_links_bp%~
+			//PRETTY_PRINT_2DA
+			REPLACE_TEXTUALLY ~%WNL%~ ~%LNL%~
+			REPLACE_TEXTUALLY ~//.*$~ ~~
+			READ_2DA_ENTRIES_NOW links_2da_bp 12
+			FOR (i = 1; i < links_2da_bp; i = i + 1) BEGIN
+				READ_2DA_ENTRY_FORMER links_2da_bp i 0 "src_area"
+				READ_2DA_ENTRY_FORMER links_2da_bp i 2 "target_are"
+				PATCH_IF FILE_EXISTS_IN_GAME ~%src_area%.are~ AND FILE_EXISTS_IN_GAME ~%target_are%.are~ BEGIN
+					DEFINE_ASSOCIATIVE_ARRAY valid_links_bp BEGIN ~%i%~ => ~%src_area%~ END
+				END
+			END
+	END
+	ACTION_IF NOT ~%path_to_trans%~ STR_EQ ~~ BEGIN
+		COPY - ~%path_to_trans%~ ~.../%path_to_trans%~
+			//PRETTY_PRINT_2DA
+			REPLACE_TEXTUALLY ~%WNL%~ ~%LNL%~
+			REPLACE_TEXTUALLY ~//.*$~ ~~
+			REPLACE_EVALUATE CASE_INSENSITIVE ~~~~~^\([ %TAB%]*\)\(@[^ %TAB%=]+\)\([ %TAB%]*=[ %TAB%]*[~"]\)\([^~"]+\)\([~"]\)~~~~~ BEGIN
+				INNER_PATCH_SAVE string "%MATCH4%" BEGIN
+					REPLACE_TEXTUALLY "###" " "
+				END
+				PATCH_IF (NOT VARIABLE_IS_SET $trans_array("%MATCH2%")) BEGIN
+					DEFINE_ASSOCIATIVE_ARRAY trans_array BEGIN ~%MATCH2%~ => ~%string%~ END
+				END
+			END ~%MATCH0%~
+	END
+	ACTION_IF inclSv = 1 BEGIN
+		ACTION_DEFINE_ASSOCIATIVE_ARRAY save_dirs BEGIN ~save~ => ~~ END
+		ACTION_DEFINE_ASSOCIATIVE_ARRAY save_dirs BEGIN ~mpsave~ => ~~ END
+		ACTION_IF FILE_EXISTS_IN_GAME ~campaign.2da~ BEGIN
+			COPY_EXISTING - ~campaign.2da~ ~.../campaign.2da~
+				COUNT_2DA_ROWS 32 "cntrow"
+				FOR (i = 0; i < "%cntrow%"; i = i + 1) BEGIN
+					READ_2DA_ENTRY i 12 32 "save_dir"
+					TO_LOWER save_dir
+					DEFINE_ASSOCIATIVE_ARRAY save_dirs BEGIN ~%save_dir%~ => ~~ END
+				END
+		END
+	END
+	OUTER_SET messages = verbose
+	OUTER_SET save_patching = 0
+	COPY_EXISTING ~%worldmap%.wmp~ ~override~
+		LPM add_worldmap_macro
+	BUT_ONLY
+	ACTION_IF verbose = 1 BEGIN
+		PRINT ~ADD_WORLDMAP_TBL: %areas_added% areas and %links_added% links added to %worldmap%.wmp~
+	END
+	ACTION_IF inclSv = 1 AND (areas_added > 0 OR links_added > 0) BEGIN
+		OUTER_SET messages = 0
+		OUTER_SET save_patching = 1
+		ACTION_PHP_EACH save_dirs AS save_dir => ~~ BEGIN
+			ACTION_IF DIRECTORY_EXISTS ~%USER_DIRECTORY%/%save_dir%~ BEGIN
+				ACTION_CLEAR_ARRAY save_array
+				GET_DIRECTORY_ARRAY save_array ~%USER_DIRECTORY%/%save_dir%~ ~~
+				ACTION_PHP_EACH save_array AS from => to BEGIN
+					ACTION_IF FILE_EXISTS ~%to%/%worldmap%.wmp~ BEGIN //old games
+						ACTION_IF verbose = 1 BEGIN
+							PRINT ~ADD_WORLDMAP_TBL: Patching %to%/%worldmap%.wmp~
+						END
+						COPY + ~%to%/%worldmap%.wmp~ ~%to%~
+							LPM add_worldmap_macro
+						BUT_ONLY
+					END ELSE ACTION_IF FILE_EXISTS ~%to%/baldur.sav~ BEGIN //ee games
+						ACTION_IF verbose = 1 BEGIN
+							PRINT ~ADD_WORLDMAP_TBL: Patching %to%/baldur.sav~
+						END
+						COPY + ~%to%/baldur.sav~ ~%to%~ //no backup
+							EDIT_SAV_FILE 1 BEGIN
+								PATCH_IF ~%SAV_FILE%~ STR_EQ ~%worldmap%.wmp~ BEGIN
+									LPM add_worldmap_macro
+								END
+							END
+						BUT_ONLY
+					END
+				END
+			END
+		END
+	END
+	ACTION_IF patch_bp_files = 1 BEGIN
+		ACTION_DEFINE_ASSOCIATIVE_ARRAY bp_array BEGIN
+			~map_mods_areas.tbl~ => ~%path_to_areas_bp%~
+			~map_mods_links.tbl~ => ~%path_to_links_bp%~
+			~map_mods_trans.tra~ => ~%path_to_trans%~
+		END
+		MKDIR ~Worldmap~
+		ACTION_PHP_EACH bp_array AS file => path BEGIN
+			ACTION_IF FILE_EXISTS ~Worldmap/%file%~ BEGIN
+				COPY ~Worldmap/%file%~ ~Worldmap~ APPEND_FILE ~%path%~
+			END ELSE BEGIN
+				COPY ~%path%~ ~Worldmap/%file%~
+			END
+		END
+	END
+END
+
+DEFINE_PATCH_MACRO add_worldmap_macro BEGIN
+	READ_LONG 0xc "wmp_off"
+	READ_ASCII (wmp_off) "mos_file"
+	READ_ASCII (wmp_off + 0x30) "wmp_icons"
+	PATCH_IF ~%wmp_icons%~ STR_EQ ~BPBGTMAP~ AND NOT ~%mos_file%~ STR_EQ ~BPBGTMAP~ BEGIN //BP-BGT Worldmap WMP file detected
+		SPRINT valid_var ~valid_areas_bp~
+		SPRINT areas_var ~areas_2da_bp~
+		SPRINT valid_var_links ~valid_links_bp~
+		SPRINT links_var ~links_2da_bp~
+	END ELSE BEGIN
+		SPRINT valid_var ~valid_areas~
+		SPRINT areas_var ~areas_2da~
+		SPRINT valid_var_links ~valid_links~
+		SPRINT links_var ~links_2da~
+	END
+	PHP_EACH ~%valid_var%~ AS i => short_name BEGIN
+		//READ_2DA_ENTRY_FORMER ~%areas_var%~ i 0 "short_name"
+		READ_2DA_ENTRY_FORMER ~%areas_var%~ i 1 "content"
+		READ_2DA_ENTRY_FORMER ~%areas_var%~ i 2 "long_name"
+		READ_2DA_ENTRY_FORMER ~%areas_var%~ i 3 "flags"
+		READ_2DA_ENTRY_FORMER ~%areas_var%~ i 4 "bam_anim"
+		PATCH_IF (VARIABLE_IS_SET $remapped_icons("%bam_anim%")) BEGIN
+			SET bam_anim = $remapped_icons(~%bam_anim%~)
+		END
+		READ_2DA_ENTRY_FORMER ~%areas_var%~ i 5 "x_pos"
+		PATCH_IF NOT ~%wmp_icons%~ STR_EQ ~BPBGTMAP~ BEGIN
+			SET x_pos = x_pos + add_x
+		END
+		READ_2DA_ENTRY_FORMER ~%areas_var%~ i 6 "y_pos"
+		PATCH_IF NOT ~%wmp_icons%~ STR_EQ ~BPBGTMAP~ BEGIN
+			SET y_pos = y_pos + add_y
+		END
+		READ_2DA_ENTRY_FORMER ~%areas_var%~ i 7 "name"
+		READ_2DA_ENTRY_FORMER ~%areas_var%~ i 8 "tooltip"
+		READ_2DA_ENTRY_FORMER ~%areas_var%~ i 9 "load_im"
+		PATCH_IF messages = 1 BEGIN
+			PATCH_PRINT ~ADD_WORLDMAP_TBL: Adding area [%short_name% %content% %long_name% %flags% %bam_anim% %x_pos% %y_pos% %name% %tooltip% %load_im%] to %worldmap%.wmp~
+		END
+		PATCH_FOR_EACH var IN name tooltip BEGIN
+			SPRINT match EVAL ~%%var%%~
+			PATCH_IF ~%match%~ STR_EQ ~N~ BEGIN
+				SPRINT EVAL ~%var%~ ~~ 
+				//SET EVAL ~%var%~ = ~-1~
+			END ELSE PATCH_IF (VARIABLE_IS_SET $trans_array("%match%")) BEGIN
+				TEXT_SPRINT EVAL ~%var%~ $trans_array(~%match%~)
+			END ELSE PATCH_IF ~%path_to_trans%~ STR_EQ ~~ BEGIN
+				PATCH_FAIL ~ADD_WORLDMAP_TBL: Can't evaluate %match% string, path_to_trans has not been specified~
+			END ELSE BEGIN
+				PATCH_FAIL ~ADD_WORLDMAP_TBL: %match% string not found in %path_to_trans%~
+			END
+		END
+		PATCH_IF ~%load_im%~ STR_EQ ~N~ BEGIN
+			SPRINT load_im ~~
+		END
+		// read offsets
+		READ_LONG 0x30 "area_num"
+		READ_LONG 0x34 "area_off"
+		READ_LONG 0x38 "link_off"
+		READ_LONG 0x3c "link_num"
+		SET found_area = 0 //Look for areas already added
+		FOR (j = 0; j < area_num; j = j + 1) BEGIN //Area loop
+			READ_ASCII (area_off + 0xf0*j) "area_ref" //Area reference
+			PATCH_IF ~%area_ref%~ STR_EQ ~%short_name%~ BEGIN
+				// overwrite area data in case there were changes
+				WRITE_ASCIIE (area_off + 0xf0*j + 0x0) "%short_name%" // area resref (current)
+				WRITE_ASCIIE (area_off + 0xf0*j + 0x8) "%content%" // area resref (original)
+				WRITE_ASCIIE (area_off + 0xf0*j + 0x10) "%long_name%" #32 // area script name
+				WRITE_LONG (area_off + 0xf0*j + 0x30) flags // flags
+				WRITE_LONG (area_off + 0xf0*j + 0x34) bam_anim // map icon
+				WRITE_LONG (area_off + 0xf0*j + 0x38) x_pos // x coordinate
+				WRITE_LONG (area_off + 0xf0*j + 0x3c) y_pos // y coordinate
+				PATCH_IF IS_AN_INT name BEGIN
+					WRITE_LONG (area_off + 0xf0*j + 0x40) name
+				END ELSE PATCH_IF ~%name%~ STR_EQ ~~ BEGIN
+					WRITE_LONG (area_off + 0xf0*j + 0x40) ~-1~
+				END ELSE BEGIN
+					SAY (area_off + 0xf0*j + 0x40) "%name%" // area name
+				END
+				PATCH_IF IS_AN_INT tooltip BEGIN
+					WRITE_LONG (area_off + 0xf0*j + 0x40) tooltip
+				END ELSE PATCH_IF ~%tooltip%~ STR_EQ ~~ BEGIN
+					WRITE_LONG (area_off + 0xf0*j + 0x44) ~-1~
+				END ELSE BEGIN
+					SAY (area_off + 0xf0*j + 0x44) "%tooltip%" // area description
+				END
+				WRITE_ASCIIE (area_off + 0xf0*j + 0x48) "%load_im%" // loading mos
+				PATCH_IF save_patching = 0 BEGIN
+					DEFINE_ASSOCIATIVE_ARRAY areNum_array BEGIN ~%short_name%~ => ~%j%~ END
+				END
+				SET found_area = 1
+				SET j = area_num
+			END
+		END
+		PATCH_IF found_area = 0 BEGIN //If the area doesn't exist in the worldmap
+			// add the new area; first we update # of areas, and the following link offset
+			WRITE_LONG 0x30 (area_num + 1)
+			WRITE_LONG 0x38 (link_off + 0xf0)
+			// add area to worldmap
+			INSERT_BYTES (area_off + 0xf0*area_num + 0x0) 0xf0
+			WRITE_ASCIIE (area_off + 0xf0*area_num + 0x0) "%short_name%" // area resref (current)
+			WRITE_ASCIIE (area_off + 0xf0*area_num + 0x8) "%content%" // area resref (original)
+			WRITE_ASCIIE (area_off + 0xf0*area_num + 0x10) "%long_name%" #32 // area script name
+			WRITE_LONG (area_off + 0xf0*area_num + 0x30) flags // flags
+			WRITE_LONG (area_off + 0xf0*area_num + 0x34) bam_anim // map icon
+			WRITE_LONG (area_off + 0xf0*area_num + 0x38) x_pos // x coordinate
+			WRITE_LONG (area_off + 0xf0*area_num + 0x3c) y_pos // y coordinate
+			PATCH_IF IS_AN_INT name BEGIN
+				WRITE_LONG (area_off + 0xf0*area_num + 0x40) name
+			END ELSE PATCH_IF ~%name%~ STR_EQ ~~ BEGIN
+				WRITE_LONG (area_off + 0xf0*area_num + 0x40) ~-1~
+			END ELSE BEGIN
+				SAY (area_off + 0xf0*area_num + 0x40) "%name%" // area name
+			END
+			PATCH_IF IS_AN_INT tooltip BEGIN
+				WRITE_LONG (area_off + 0xf0*area_num + 0x40) tooltip
+			END ELSE PATCH_IF ~%tooltip%~ STR_EQ ~~ BEGIN
+				WRITE_LONG (area_off + 0xf0*area_num + 0x44) ~-1~
+			END ELSE BEGIN
+				SAY (area_off + 0xf0*area_num + 0x44) "%tooltip%" // area description
+			END
+			WRITE_ASCIIE (area_off + 0xf0*area_num + 0x48) "%load_im%" // loading mos
+			PATCH_IF save_patching = 0 BEGIN
+				DEFINE_ASSOCIATIVE_ARRAY areNum_array BEGIN ~%short_name%~ => ~%areNum%~ END
+			END
+		END
+		PATCH_IF save_patching = 0 BEGIN
+			SET areas_added = areas_added + 1
+		END
+	END
+	PHP_EACH ~%valid_var_links%~ AS i => src_area BEGIN
+		//READ_2DA_ENTRY_FORMER links_2da i 0 "src_area"
+		READ_2DA_ENTRY_FORMER ~%links_var%~ i 1 "src_nwse"
+		READ_2DA_ENTRY_FORMER ~%links_var%~ i 2 "target_are"
+		READ_2DA_ENTRY_FORMER ~%links_var%~ i 3 "entry_name"
+		READ_2DA_ENTRY_FORMER ~%links_var%~ i 4 "trv_time"
+		READ_2DA_ENTRY_FORMER ~%links_var%~ i 5 "def_entry"
+		READ_2DA_ENTRY_FORMER ~%links_var%~ i 6 "enc1"
+		READ_2DA_ENTRY_FORMER ~%links_var%~ i 7 "enc2"
+		READ_2DA_ENTRY_FORMER ~%links_var%~ i 8 "enc3"
+		READ_2DA_ENTRY_FORMER ~%links_var%~ i 9 "enc4"
+		READ_2DA_ENTRY_FORMER ~%links_var%~ i 10 "enc5"
+		READ_2DA_ENTRY_FORMER ~%links_var%~ i 11 "enc_prob"
+		PATCH_IF messages = 1 BEGIN
+			PATCH_PRINT ~ADD_WORLDMAP_TBL: Adding link [%src_area% %src_nwse% %target_are% %entry_name% %trv_time% %def_entry% %enc1% %enc2% %enc3% %enc4% %enc5% %enc_prob%] to %worldmap%.wmp~
+		END
+		PATCH_FOR_EACH var IN entry_name enc1 enc2 enc3 enc4 enc5 BEGIN
+			SPRINT match EVAL ~%%var%%~
+			PATCH_IF ~%match%~ STR_EQ ~N~ BEGIN
+				SPRINT EVAL ~%var%~ ~~
+			END
+		END
+		INNER_PATCH_SAVE entry_name "%entry_name%" BEGIN
+			REPLACE_TEXTUALLY ~###~ ~ ~
+		END
+		LPF ADD_WORLDMAP_LINKS
+			INT_VAR
+			distance_scale = trv_time
+			default_entry = def_entry
+			encounter_probability = enc_prob
+			STR_VAR
+			from_area = EVAL ~%src_area%~
+			from_node = EVAL ~%src_nwse%~
+			to_area = EVAL ~%target_are%~
+			entry = EVAL ~%entry_name%~
+			random_area1 = EVAL ~%enc1%~
+			random_area2 = EVAL ~%enc2%~
+			random_area3 = EVAL ~%enc3%~
+			random_area4 = EVAL ~%enc4%~
+			random_area5 = EVAL ~%enc5%~
+		END
+		PATCH_IF save_patching = 0 BEGIN
+			SET links_added = links_added + 1
+		END
+	END
+END
+
+/*
+TBL file format explanation:
+- Areas declaration
+SHORT_NAME // resource reference of the area to add (like "ar0700")
+CONTENT    // same as above
+LONG_NAME  // area script name, e.g. same as above
+FLAGS      // bitmask decimal flags value indicating status of area (BIT0 = visible; BIT1 = reveal from linked area; BIT2 = can be visited; BIT3 = has been visited)
+BAM_ANIM   // area's map icon index (from mapicons.bam)
+X_POS      // area's X (east-west) coordinate
+Y_POS      // area's Y (north-south) coordinate
+NAME       // name of the area as @ reference used in TRA file or 'N' for none
+TOOLTIP    // tooltip of the area as @ reference used in TRA file or 'N' for none
+LOAD_IM    // loading screen MOS file (like "filename")
+- Links declaration
+SRC_AREA   // area from which the links should originate
+SRC_NWSE   // directional node from which the links should originate. Legal values for this variable are "n", "e", "s", "w". Links are added to all four nodes by default.
+TARGET_ARE // area to which the links should lead
+ENTRY_NAME // entry point in TARGET_ARE
+TRV_TIME   // to the distance scale between the two areas. distance_scale * 4 equals the travel time between the areas (in hours)
+DEF_ENTRY  // to the default entry location. Legal values for this variable are 1 (northern side), 2 (eastern), 4 (southern) and 8 (western). The default value is 1.
+ENC1       // first random-encounter area
+ENC2       // second random-encounter area
+ENC3       // third random-encounter area
+ENC4       // fourth random-encounter area
+ENC5       // fifth random-encounter area
+ENC_PROB   // to the probability of a random encounter occurring
+*/

@@ -1,0 +1,45 @@
+// Random, when attacked 
+
+IF
+    AttackedBy([ANYONE],DEFAULT)
+THEN
+    RESPONSE #100
+        Enemy()
+        Attack(NearestEnemyOf(Myself))
+   END
+
+IF
+    See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+		Enemy()
+        Attack(NearestEnemyOf(Myself))
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+		Enemy()
+        Attack(NearestEnemyOf(Myself))
+END
+
+IF
+	HPPercentLT("g-bb016",5)
+	Global("g-kilthasdied","GLOBAL",0)
+THEN
+    RESPONSE #100
+		SetGlobal("g-kilthasdied","GLOBAL",1)
+END
+
+/*
+IF
+    GlobalGT("g-kuotoaangry","GLOBAL",0)
+	Global("g-klths4","GLOBAL",0)
+THEN
+    RESPONSE #100
+		SetGlobal("g-klths4","GLOBAL",1)
+		Enemy()
+		Attack(NearestEnemyOf(Myself))
+END
+*/

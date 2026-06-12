@@ -1,0 +1,34 @@
+IF
+	Dead("g-bb209")  // Skpper
+	Global("g-skpprgone","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("g-skpprgone","GLOBAL",1)
+END
+
+IF
+	Dead("g-bb210")  // Skpper
+	Global("g-skpprgone","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("g-skpprgone","GLOBAL",1)
+		
+END
+
+IF
+	Dead("TEGARIN")  // Tegar'in
+	Global("g-killedangryboys","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("g-killedangryboys","GLOBAL",1)
+		
+END
+
+IF
+	Dead("AETHEL")  // Aethelgrin
+	Global("g-killedangryboys","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("g-killedangryboys","GLOBAL",1)
+		
+END

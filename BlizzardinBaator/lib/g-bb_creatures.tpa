@@ -1,0 +1,2247 @@
+
+///////////////
+// ========= //
+// Creatures //
+// ========= //
+///////////////
+
+
+COPY ~%MOD_FOLDER%/cre/g-bb000.cre~ ~override~ 
+ SAY NAME1 @400037 // Powiew Przeszlosci / Blast form the Past
+ SAY NAME2 @400037
+  WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~G-BB_ZOMBIE0~)) 
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbs001~ #8
+ WRITE_ASCII DIALOG ~g-bbd000~ #8
+ WRITE_ASCII DEATHVAR ~g-bb000~ #32
+ WRITE_ASCII 0x34 ~JRZMMKN~
+COPY_EXISTING ~AR0202.are~ ~override~
+ LPF fj_are_structure
+    INT_VAR
+    fj_loc_x          = 1140
+    fj_loc_y          = 2400
+    fj_schedule       = 0b111111111111111111111111
+    fj_orientation    = 10     //NNE
+    STR_VAR
+    fj_structure_type = actor
+    fj_name           = g-bb000
+    fj_cre_resref     = g-bb000
+	
+  END
+
+COPY_EXISTING  // Tegarrin
+ ~TEGAR'IN.cre~ ~override/TEGAR'IN.cre~
+	WRITE_LONG 0x96 BIT4 + BIT5 + BIT6 // Atrtributes/Flags
+	WRITE_ASCII DEATHVAR ~Tegarin~ #32
+	WRITE_ASCII 0x280 ~Tegarin~ #32
+	 WRITE_ASCII 0x34 ~JRABSKN~
+
+COPY_EXISTING  // Aethelgrin
+ ~AETHEL.cre~ ~override/AETHEL.cre~
+	WRITE_LONG 0x96 BIT4 + BIT5 + BIT6 // Atrtributes/Flags
+	WRITE_ASCII DEATHVAR ~Aethel~ #32
+	WRITE_ASCII 0x280 ~Aethel~ #32
+	 WRITE_ASCII 0x34 ~JRABSKN~
+
+COPY_EXISTING  // LOP
+ ~LADY.cre~ ~override/LADY.cre~
+	WRITE_LONG 0x96 BIT4 + BIT5 + BIT6 // Atrtributes/Flags
+	WRITE_ASCII DEATHVAR ~Lady~ #32
+	WRITE_ASCII 0x280 ~Lady~ #32
+
+
+COPY ~%MOD_FOLDER%/cre/g-bb001.cre~ ~override~ 
+ SAY NAME1 @400000 // Zlękniony posłaniec / Frightened messenger 
+ SAY NAME2 @400000
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbs001~ #8
+ WRITE_ASCII DEATHVAR ~g-bb001~ #32 
+ WRITE_ASCII DIALOG ~g-bbd001~ #8
+ //ADD_CRE_ITEM ~G-BBi000~ #0 #0 #0 ~IDENTIFIED~ ~INV15~
+ WRITE_ASCII 0x34 ~JRHLMKN~
+ 
+ /*
+COPY ~%MOD_FOLDER%/cre/g-bbgem.cre~ ~override~
+ SAY NAME1 @400001 // Gemariel 
+ SAY NAME2 @400001 
+ WRITE_ASCII SCRIPT_OVERRIDE ~~
+ WRITE_ASCII DEATHVAR ~g-bbgem~ #32 
+ WRITE_ASCII DIALOG ~~
+ ADD_KNOWN_SPELL ~g-bb668~ #2 ~wizard~
+ ADD_MEMORIZED_SPELL ~g-bb668~ #2 ~wizard~ ( 1 ) 
+ //WRITE_ASCII 0x34 ~~
+ 
+
+COPY ~%MOD_FOLDER%/cre/g-bbfury.cre~ ~override~
+ SAY NAME1 @400003 // Furia Pokonana / Fury-lies-broken 
+ SAY NAME2 @400004 // Baatezu 
+ WRITE_ASCII SCRIPT_OVERRIDE ~~
+ WRITE_ASCII DEATHVAR ~~ 
+ WRITE_ASCII DIALOG ~~ 
+
+COPY ~%MOD_FOLDER%/cre/g-bb002.cre~ ~override~
+ SAY NAME1 @400006 // Biały Abiszai / White Abishai 
+ SAY NAME2 @400006
+ WRITE_ASCII SCRIPT_OVERRIDE ~~
+ WRITE_ASCII DIALOG ~~ 
+
+COPY ~%MOD_FOLDER%/cre/g-bb003.cre~ ~override~
+ SAY NAME1 @400007 // Gelugon 
+ SAY NAME2 @400007 
+ WRITE_ASCII SCRIPT_OVERRIDE ~~
+ WRITE_ASCII DIALOG ~g-bbd003~ 
+
+COPY ~%MOD_FOLDER%/cre/g-bb004.cre~ ~override~
+ SAY NAME1 @400008 // Monodron 
+ SAY NAME2 @400008 
+ WRITE_ASCII SCRIPT_OVERRIDE ~~
+ WRITE_ASCII DIALOG ~~ 
+*/
+COPY ~%MOD_FOLDER%/cre/g-bb005.cre~ ~override~
+ SAY NAME1 @400009 // Czarny Ziutek / Black Joseph 
+ SAY NAME2 @400009
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbn010~ #8
+ WRITE_ASCII DEATHVAR ~g-bb005~ #32
+ WRITE_ASCII DIALOG ~g-bbd005~
+ WRITE_BYTE 0x90 %thugscz%
+ WRITE_ASCII 0x34 ~JRTLRKN~
+ WRITE_LONG 0x14 ~3000~ // xp value
+ WRITE_LONG 0x18 ~1~ // power level 
+ WRITE_SHORT 0x24 ~75~ // current hp
+ WRITE_SHORT 0x26 ~75~ // max hp
+ WRITE_SHORT 0x46 ~-2~ // natural ac
+ WRITE_SHORT 0x48 ~-2~ // effective ac
+ WRITE_BYTE 0x52 ~8~ // THAC0
+ WRITE_BYTE 0x59 ~30~ // Fire resist. 
+ WRITE_BYTE 0x5a ~25~ // Cold resist.
+ WRITE_BYTE 0x5c ~25~ // Acid resist.
+ WRITE_BYTE 0x60 ~35~ // Slashing resist.
+ WRITE_BYTE 0x61 ~30~ // Crushing resist.
+ WRITE_BYTE 0x62 ~35~ // Piercing resist.
+ WRITE_BYTE 0x63 ~30~ // Missle resist.
+ WRITE_BYTE 0x234 ~18~ // Level first class
+ WRITE_BYTE 0x278 ~17~ // Strenght
+ WRITE_BYTE 0x23c ~16~ // Dexterity
+ WRITE_BYTE 0x23d ~16~ // Constitution
+ WRITE_BYTE 0x273 ~2~ // Class: fighter
+ 
+COPY ~%MOD_FOLDER%/cre/g-bb006.cre~ ~override~
+ SAY NAME1 @400010 // Prod 
+ SAY NAME2 @400010
+ WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~G-BB_PROD~)) 
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-prdAI~ #8
+ WRITE_ASCII DEATHVAR ~g-bb006~ #32
+ WRITE_ASCII DIALOG ~g-bbd006~ #8
+ WRITE_ASCII 0x34 ~g-bb006~
+
+COPY ~%MOD_FOLDER%/cre/g-bb007.cre~ ~override~
+ SAY NAME1 @400011 // Bard Akershus 
+ SAY NAME2 @400011
+ WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~G-BB_BARDAKERSHUS~))
+ ADD_CRE_ITEM ~g-bbi123~ #0 #0 #0 ~IDENTIFIED~ ~lring~
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-aker~ #8
+ WRITE_ASCII DEATHVAR ~g-bb007~ #32
+ WRITE_ASCII DIALOG ~g-bbd007~
+ WRITE_ASCII 0x34 ~g-bb007~
+
+COPY ~%MOD_FOLDER%/cre/g-bb008.cre~ ~override~
+ SAY NAME1 @400012 // Karczmarz Brill / Inkeeper Brill 
+ SAY NAME2 @400012
+ WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~G-BB_SLAAD~))
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-brll~ #8
+ WRITE_ASCII DEATHVAR ~g-bb008~ #32
+ WRITE_ASCII DIALOG ~g-bbd008~
+ ADD_CRE_ITEM ~G-BBi009~ #0 #0 #0 ~IDENTIFIED~ ~INV15~
+ ADD_CRE_ITEM ~TANKARD~ #0 #0 #0 ~IDENTIFIED~ ~INV14~ 
+ ADD_CRE_ITEM ~COPPER~ #300 #0 #0 ~IDENTIFIED~ ~INV13~
+ WRITE_BYTE 0x90 %brill%
+ WRITE_ASCII 0x34 ~g-bb008~ 
+
+COPY ~%MOD_FOLDER%/cre/g-bb009.cre~ ~override~
+ SAY NAME1 @400013 // Tout by Smoldering Corpse
+ SAY NAME2 @400013
+ WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~G-BB_HOLLER~))
+ //WRITE_ASCII SCRIPT_OVERRIDE ~g-hllr~
+ WRITE_ASCII DEATHVAR ~g-bb009~ 
+ WRITE_ASCII DIALOG ~g-bbd009~
+ WRITE_ASCII 0x34 ~g-bb009~
+
+COPY ~%MOD_FOLDER%/cre/g-bb010.cre~ ~override~
+ SAY NAME1 @400014 // Dopilp 
+ SAY NAME2 @400014
+ WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~G-BB_KUOTOAP~))
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbn003~ #8
+ WRITE_ASCII DEATHVAR ~g-bb010~ #32
+ WRITE_ASCII DIALOG ~g-bbd010~
+ WRITE_ASCII 0x34 ~g-bb015~
+ ADD_CRE_ITEM ~SHAMAN~ #0 #0 #0 ~IDENTIFIED~ ~INV15~
+ ADD_CRE_ITEM ~ACID~ #0 #0 #0 ~IDENTIFIED~ ~INV14~
+ ADD_CRE_ITEM ~BOLT02~ #30 #0 #0 ~IDENTIFIED~ ~INV13~
+ ADD_CRE_ITEM ~PLUS2IM~ #0 #0 #0 ~IDENTIFIED~ ~lring~
+ ADD_CRE_ITEM ~g-bbi123~ #0 #0 #0 ~IDENTIFIED~ ~rring~
+ ADD_CRE_ITEM ~IMHOLDCR~ #0 #0 #0 ~IDENTIFIED~ ~helmet~
+ WRITE_BYTE 0x90 %kuotoa%
+
+COPY ~%MOD_FOLDER%/cre/g-bb011.cre~ ~override~
+ SAY NAME1 @400015 // Bywalec 1 / Patron 1 
+ SAY NAME2 @400015
+ WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~G-BB_PATRON_1~))
+ WRITE_ASCII DIALOG ~g-bbd011~ 
+ WRITE_ASCII 0x34 ~JRHLMKN~ 
+
+COPY ~%MOD_FOLDER%/cre/g-bb012.cre~ ~override~
+ SAY NAME1 @400015 // Bywalec 2 / Patron 2 
+ SAY NAME2 @400015 
+ WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~G-BB_PATRON_2~))
+ WRITE_ASCII DIALOG ~g-bbd011~ 
+ WRITE_ASCII 0x34 ~JRHLMKN~ 
+
+COPY ~%MOD_FOLDER%/cre/g-bb013.cre~ ~override~
+ SAY NAME1 @400016 // Kuo Toa Wojownik 1 / Warrior 1 
+ SAY NAME2 @400016
+ WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~G-BB_KUOTOAR~))
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbn005~ #8
+ WRITE_ASCII DIALOG ~~
+ ADD_CRE_ITEM ~PLUS1IM~ #0 #0 #0 ~IDENTIFIED~ ~lring~
+ ADD_CRE_ITEM ~IMHOLDCR~ #0 #0 #0 ~IDENTIFIED~ ~helmet~
+ WRITE_BYTE 0x90 %kuotoa%
+ WRITE_ASCII 0x34 ~g-bb015~
+
+COPY ~%MOD_FOLDER%/cre/g-bb014.cre~ ~override~
+ SAY NAME1 @400016 // Kuo Toa Wojownik 2 / Warrior 2 
+ SAY NAME2 @400016
+ WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~G-BB_KUOTOAR~))
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbn005~ #8
+ WRITE_ASCII DIALOG ~~
+ ADD_CRE_ITEM ~PLUS1IM~ #0 #0 #0 ~IDENTIFIED~ ~lring~
+ ADD_CRE_ITEM ~IMHOLDCR~ #0 #0 #0 ~IDENTIFIED~ ~helmet~
+ WRITE_BYTE 0x90 %kuotoa%
+ WRITE_ASCII 0x34 ~g-bb015~
+ 
+COPY ~%MOD_FOLDER%/cre/g-bb015.cre~ ~override~
+ SAY NAME1 @400016 // Kuo Toa Wojownik 3 / Warrior 3 
+ SAY NAME2 @400016
+ WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~G-BB_KUOTOAR~))
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-kuo~ #8
+ WRITE_ASCII DIALOG ~g-bbd015~ #8
+ ADD_CRE_ITEM ~PLUS2IM~ #0 #0 #0 ~IDENTIFIED~ ~lring~
+ ADD_CRE_ITEM ~IMHOLDCR~ #0 #0 #0 ~IDENTIFIED~ ~helmet~
+ WRITE_BYTE 0x90 %kuotoa%
+ WRITE_ASCII 0x34 ~g-bb015~
+
+COPY ~%MOD_FOLDER%/cre/g-bb016.cre~ ~override~
+ SAY NAME1 @400017 // Killstardo Abominate 
+ SAY NAME2 @400017
+ WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~G-BB_BLADELING~))
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-kilths~ #8
+ WRITE_ASCII DEATHVAR ~g-bb016~ #32
+ WRITE_ASCII DIALOG ~g-bbd016~
+ ADD_CRE_ITEM ~PLUS2IM~ #0 #0 #0 ~IDENTIFIED~ ~lring~
+ ADD_CRE_ITEM ~IMHOLDCR~ #0 #0 #0 ~IDENTIFIED~ ~helmet~ 
+ WRITE_ASCII 0x34 ~g-bb016~
+
+COPY ~%MOD_FOLDER%/cre/g-bb017.cre~ ~override~
+ SAY NAME1 @400018 // Haer'Dalis 
+ SAY NAME2 @400018
+ WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~G-BB_HAER~))
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-BBN012~ #8
+ WRITE_ASCII DEATHVAR ~g-bb017~ #32
+ WRITE_ASCII DIALOG ~g-bbd017~
+ ADD_CRE_ITEM ~PLUS3IM~ #0 #0 #0 ~IDENTIFIED~ ~lring~
+ ADD_CRE_ITEM ~IMHOLDCR~ #0 #0 #0 ~IDENTIFIED~ ~helmet~
+ WRITE_BYTE 0x8f ~16~ 
+ WRITE_ASCII 0x34 ~g-bb017~
+
+COPY ~%MOD_FOLDER%/cre/g-bb018.cre~ ~override~
+ SAY NAME1 @400019 // Szczur / Rat 
+ SAY NAME2 @400019
+ WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~G-BB_RAT~)) 
+ //are script
+ //WRITE_ASCII 0x34 ~~
+
+COPY ~%MOD_FOLDER%/cre/g-bb019.cre~ ~override~
+ SAY NAME1 @400020 // Kruchy Ogon / The Fragile Tail 
+ SAY NAME2 @400020
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-orvw~ #8
+ WRITE_ASCII DEATHVAR ~g-bb019~ #32
+ WRITE_ASCII DIALOG ~g-bbd019~ #8
+ WRITE_ASCII 0x34 ~JRWRMKN~
+
+COPY ~%MOD_FOLDER%/cre/g-bb020.cre~ ~override~ // Wererat 
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-orvW~ #8
+  WRITE_ASCII DEATHVAR ~g-bb020~ #32
+ WRITE_ASCII DIALOG ~g-bbd020~ #8
+
+// ------------------------------------------------------ TRIPLER ---------------------
+
+COPY ~%MOD_FOLDER%/cre/g-bb021.cre~ ~override~
+ SAY NAME1 @400021 // Trójka A / Tripler A 
+ SAY NAME2 @400021
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbs001~ #8
+ WRITE_ASCII DEATHVAR ~g-bb021~ #32
+ WRITE_ASCII DIALOG ~g-bbd021~
+ WRITE_ASCII 0x34 ~JRSKWKN~ 
+
+COPY ~%MOD_FOLDER%/cre/g-bb022.cre~ ~override~
+ SAY NAME1 @400021 // Trójka B / Tripler B 
+ SAY NAME2 @400021
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbs001~ #8
+ WRITE_ASCII DEATHVAR ~g-bb022~ #32
+ WRITE_ASCII DIALOG ~g-bbd021~ 
+ WRITE_ASCII 0x34 ~JRSKWKN~
+
+COPY ~%MOD_FOLDER%/cre/g-bb023.cre~ ~override~
+ SAY NAME1 @400021 // Trójka C / Tripler C 
+ SAY NAME2 @400021
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbs001~ #8
+ WRITE_ASCII DEATHVAR ~g-bb023~ #32
+ WRITE_ASCII DIALOG ~g-bbd021~ 
+ WRITE_ASCII 0x34 ~JRSKWKN~
+
+// ------------------------------------------------------ TRIPLER ---------------------
+
+COPY ~%MOD_FOLDER%/cre/g-bb024.cre~ ~override~ // Glabrezu
+ SAY NAME1 @400168 // 
+ SAY NAME2 @400168
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-oar1~ #8
+ WRITE_ASCII DEATHVAR ~g-bb024~ #32
+ WRITE_ASCII DIALOG ~g-bbd024~
+ WRITE_ASCII 0x34 ~JRGLAKN~
+
+COPY ~%MOD_FOLDER%/cre/g-bb025.cre~ ~override~ // G. Abishai
+ SAY NAME1 @400169 // 
+ SAY NAME2 @400169
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-oar2~ #8
+ WRITE_ASCII DEATHVAR ~g-bb025~ #32
+ WRITE_ASCII DIALOG ~g-bbd025~
+ WRITE_ASCII 0x34 ~JRGABKN~
+
+COPY ~%MOD_FOLDER%/cre/g-bb026.cre~ ~override~
+ SAY NAME1 @400022 // Farastu 
+ SAY NAME2 @400022 
+ REPLACE_CRE_ITEM ~FDAG~ #0 #0 #0 ~IDENTIFIED~ ~weapon1~
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbn036~ #8
+ WRITE_ASCII DEATHVAR ~g-bb026~ #32
+ WRITE_ASCII DIALOG ~g-bbd026~
+ WRITE_BYTE 0x90 %styxo_1%
+ WRITE_ASCII 0x34 ~JRGARKN~
+
+COPY ~%MOD_FOLDER%/cre/g-bb027.cre~ ~override~
+ SAY NAME1 @400023 // Mare 
+ SAY NAME2 @400023
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-mare~ #8
+ WRITE_ASCII DEATHVAR ~g-bb027~ #32
+ WRITE_ASCII DIALOG ~g-bbd027~
+ ADD_CRE_ITEM ~g-bbi012~ #0 #0 #0 ~IDENTIFIED~ ~INV1~
+ WRITE_ASCII 0x34 ~JRHLFKN~
+
+COPY ~%MOD_FOLDER%/cre/g-bb028.cre~ ~override~
+ SAY NAME1 @400024 // Kowal Adam / Blacksmith Adam 
+ SAY NAME2 @400024
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbn011~ #8
+ WRITE_ASCII DEATHVAR ~g-bb028~ #32
+ WRITE_ASCII DIALOG ~g-bbd028~ #8
+ WRITE_ASCII 0x34 ~JRGODKN~
+
+COPY ~%MOD_FOLDER%/cre/g-bb029.cre~ ~override~
+ SAY NAME1 @400025 // Ikss'odes 
+ SAY NAME2 @400025
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-ikss~ #8
+ WRITE_ASCII DEATHVAR ~g-bb029~ #32
+ WRITE_ASCII DIALOG ~g-bbd029~  
+ ADD_CRE_ITEM ~g-bbi025~ #0 #0 #0 ~IDENTIFIED~ ~INV1~
+ ADD_CRE_ITEM ~TTTHF1~ #0 #0 #0 ~IDENTIFIED~ ~CLOAK~
+ WRITE_ASCII 0x34 ~JRGYTKN~
+
+COPY ~%MOD_FOLDER%/cre/g-bb030.cre~ ~override~
+ SAY NAME1 @400026 // Modron Bibliotekarz / Modron Librarian 
+ SAY NAME2 @400026
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbs001~ #8
+ WRITE_ASCII DEATHVAR ~g-bb030~ #32
+ WRITE_ASCII DIALOG ~g-bbd030~ #8
+ WRITE_ASCII 0x34 ~JRMDRKN~ 
+
+COPY ~%MOD_FOLDER%/cre/g-bb031.cre~ ~override~
+ SAY NAME1 @400027 // Zenon 
+ SAY NAME2 @400027
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-zenn~ #8
+ WRITE_ASCII DEATHVAR ~g-bb031~ #7
+ WRITE_ASCII DIALOG ~g-bbd031~
+ WRITE_ASCII 0x34 ~JRWREKN~   
+
+COPY ~%MOD_FOLDER%/cre/g-bb032.cre~ ~override~
+ SAY NAME1 @400028 // Elei 
+ SAY NAME2 @400028
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-elei~ #8
+ WRITE_ASCII DEATHVAR ~g-bb032~ #32
+ WRITE_ASCII DIALOG ~g-bbd032~
+ WRITE_ASCII 0x34 ~JRWREKN~
+   
+COPY ~%MOD_FOLDER%/cre/g-bb033.cre~ ~override~
+ SAY NAME1 @400029 // Black Joseph Thug 1 
+ SAY NAME2 @400029
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbn010~ #8
+ WRITE_ASCII DEATHVAR ~g-bb033~ #32
+ WRITE_ASCII DIALOG ~g-bbd033~ #8
+ WRITE_BYTE 0x90 %thugscz%
+ WRITE_ASCII 0x34 ~JRCTHKN~
+ WRITE_LONG 0x14 ~1000~ // xp value
+ WRITE_LONG 0x18 ~1~ // power level 
+ WRITE_SHORT 0x24 ~60~ // current hp
+ WRITE_SHORT 0x26 ~60~ // max hp
+ WRITE_SHORT 0x46 ~-2~ // natural ac
+ WRITE_SHORT 0x48 ~-2~ // effective ac
+ WRITE_BYTE 0x52 ~10~ // THAC0
+ WRITE_BYTE 0x59 ~30~ // Fire resist. 
+ WRITE_BYTE 0x5a ~25~ // Cold resist.
+ WRITE_BYTE 0x5c ~25~ // Acid resist.
+ WRITE_BYTE 0x60 ~35~ // Slashing resist.
+ WRITE_BYTE 0x61 ~30~ // Crushing resist.
+ WRITE_BYTE 0x62 ~35~ // Piercing resist.
+ WRITE_BYTE 0x63 ~30~ // Missle resist.
+ WRITE_BYTE 0x234 ~16~ // Level first class
+ WRITE_BYTE 0x278 ~15~ // Strenght
+ WRITE_BYTE 0x23c ~16~ // Dexterity
+ WRITE_BYTE 0x23d ~15~ // Constitution
+ WRITE_BYTE 0x273 ~2~ // Class: fighter
+ 
+COPY ~%MOD_FOLDER%/cre/g-bb034.cre~ ~override~
+ SAY NAME1 @400029 // Black Joseph Thug 2 
+ SAY NAME2 @400029
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbn009~ #8
+ WRITE_ASCII DEATHVAR ~g-bb034~ #32
+ WRITE_ASCII DIALOG ~g-bbd033~ #8
+ WRITE_BYTE 0x90 %thugscz%
+ WRITE_ASCII 0x34 ~JRCTHKN~
+ WRITE_LONG 0x14 ~1000~ // xp value
+ WRITE_LONG 0x18 ~1~ // power level 
+ WRITE_SHORT 0x24 ~60~ // current hp
+ WRITE_SHORT 0x26 ~60~ // max hp
+ WRITE_SHORT 0x46 ~-2~ // natural ac
+ WRITE_SHORT 0x48 ~-2~ // effective ac
+ WRITE_BYTE 0x52 ~10~ // THAC0
+ WRITE_BYTE 0x59 ~30~ // Fire resist. 
+ WRITE_BYTE 0x5a ~25~ // Cold resist.
+ WRITE_BYTE 0x5c ~25~ // Acid resist.
+ WRITE_BYTE 0x60 ~35~ // Slashing resist.
+ WRITE_BYTE 0x61 ~30~ // Crushing resist.
+ WRITE_BYTE 0x62 ~35~ // Piercing resist.
+ WRITE_BYTE 0x63 ~30~ // Missle resist.
+ WRITE_BYTE 0x234 ~16~ // Level first class
+ WRITE_BYTE 0x278 ~15~ // Strenght
+ WRITE_BYTE 0x23c ~16~ // Dexterity
+ WRITE_BYTE 0x23d ~15~ // Constitution
+ WRITE_BYTE 0x273 ~2~ // Class: fighter
+ 
+COPY ~%MOD_FOLDER%/cre/g-bb035.cre~ ~override~
+ SAY NAME1 @400029 // Black Joseph Thug 3 
+ SAY NAME2 @400029
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbn010~ #8
+ WRITE_ASCII DEATHVAR ~g-bb035~ #32
+ WRITE_ASCII DIALOG ~g-bbd033~ #8
+ WRITE_BYTE 0x90 %thugscz%
+ WRITE_ASCII 0x34 ~JRCTHKN~
+ WRITE_LONG 0x14 ~1000~ // xp value
+ WRITE_LONG 0x18 ~1~ // power level 
+ WRITE_SHORT 0x24 ~60~ // current hp
+ WRITE_SHORT 0x26 ~60~ // max hp
+ WRITE_SHORT 0x46 ~-2~ // natural ac
+ WRITE_SHORT 0x48 ~-2~ // effective ac
+ WRITE_BYTE 0x52 ~10~ // THAC0
+ WRITE_BYTE 0x59 ~30~ // Fire resist. 
+ WRITE_BYTE 0x5a ~25~ // Cold resist.
+ WRITE_BYTE 0x5c ~25~ // Acid resist.
+ WRITE_BYTE 0x60 ~35~ // Slashing resist.
+ WRITE_BYTE 0x61 ~30~ // Crushing resist.
+ WRITE_BYTE 0x62 ~35~ // Piercing resist.
+ WRITE_BYTE 0x63 ~30~ // Missle resist.
+ WRITE_BYTE 0x234 ~16~ // Level first class
+ WRITE_BYTE 0x278 ~15~ // Strenght
+ WRITE_BYTE 0x23c ~16~ // Dexterity
+ WRITE_BYTE 0x23d ~15~ // Constitution
+ WRITE_BYTE 0x273 ~2~ // Class: fighter
+ 
+COPY ~%MOD_FOLDER%/cre/g-bb036.cre~ ~override~
+ SAY NAME1 @400029 // Black Joseph Thug 4 
+ SAY NAME2 @400029
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbn009~ #8
+ WRITE_ASCII DEATHVAR ~g-bb036~ #32
+ WRITE_ASCII DIALOG ~g-bbd033~ #8
+ WRITE_BYTE 0x90 %thugscz%
+ WRITE_ASCII 0x34 ~JRCTHKN~
+ WRITE_LONG 0x14 ~1000~ // xp value
+ WRITE_LONG 0x18 ~1~ // power level 
+ WRITE_SHORT 0x24 ~60~ // current hp
+ WRITE_SHORT 0x26 ~60~ // max hp
+ WRITE_SHORT 0x46 ~-2~ // natural ac
+ WRITE_SHORT 0x48 ~-2~ // effective ac
+ WRITE_BYTE 0x52 ~10~ // THAC0
+ WRITE_BYTE 0x59 ~30~ // Fire resist. 
+ WRITE_BYTE 0x5a ~25~ // Cold resist.
+ WRITE_BYTE 0x5c ~25~ // Acid resist.
+ WRITE_BYTE 0x60 ~35~ // Slashing resist.
+ WRITE_BYTE 0x61 ~30~ // Crushing resist.
+ WRITE_BYTE 0x62 ~35~ // Piercing resist.
+ WRITE_BYTE 0x63 ~30~ // Missle resist.
+ WRITE_BYTE 0x234 ~16~ // Level first class
+ WRITE_BYTE 0x278 ~15~ // Strenght
+ WRITE_BYTE 0x23c ~16~ // Dexterity
+ WRITE_BYTE 0x23d ~15~ // Constitution
+ WRITE_BYTE 0x273 ~2~ // Class: fighter
+ 
+COPY ~%MOD_FOLDER%/cre/g-bb037.cre~ ~override~ // tg1z
+WRITE_ASCII DEATHVAR ~g-bb037~ #32
+
+COPY ~%MOD_FOLDER%/cre/g-bb038.cre~ ~override~ // corz
+WRITE_ASCII DEATHVAR ~g-bb038~ #32
+WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~G-BB_CORNUGONRED~))
+
+COPY ~%MOD_FOLDER%/cre/g-bb039.cre~ ~override~ // ag3z
+WRITE_ASCII DEATHVAR ~g-bb039~ #32
+
+COPY ~%MOD_FOLDER%/cre/g-bb040.cre~ ~override~
+ SAY NAME1 @400030 // Raft Captain - ARG-IN
+ SAY NAME2 @400030
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-rafts~
+ WRITE_ASCII DEATHVAR ~g-bb040~ #32
+ WRITE_ASCII DIALOG ~g-bbd040~ #8
+  WRITE_ASCII 0x34 ~JRHLMKN~
+
+
+COPY ~%MOD_FOLDER%/cre/g-bb041.cre~ ~override~
+ SAY NAME1 @400031 // Złodziejaszek (Atena) / Thief (Atena) 
+ SAY NAME2 @400031
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbs001~
+ WRITE_ASCII DEATHVAR ~g-bb041~ #7
+ WRITE_ASCII DIALOG ~g-bbd041~
+ WRITE_ASCII 0x34 ~JRTFMKN~
+  
+COPY ~%MOD_FOLDER%/cre/g-bb042.cre~ ~override~
+ SAY NAME1 @400032 // Mawu 
+ SAY NAME2 @400032
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbs001~ #8
+ WRITE_ASCII DEATHVAR ~g-bb042~ #32
+ WRITE_ASCII DIALOG ~g-bbd042~
+ WRITE_ASCII 0x34 ~g-ggrn~
+ WRITE_BYTE 0x244 %tymora%
+ 
+COPY ~%MOD_FOLDER%/cre/g-bb043.cre~ ~override~
+ SAY NAME1 @400033 // Menel Adrean / Adrean the Bum 
+ SAY NAME2 @400033
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-adrn~ #8
+// WRITE_ASCII DEATHVAR ~~ 
+ WRITE_ASCII DIALOG ~g-bbd043~ 
+ ADD_CRE_ITEM ~EMBALM~ #0 #0 #0 ~IDENTIFIED~ ~INV15~ 
+ ADD_CRE_ITEM ~TANKARD~ #0 #0 #0 ~IDENTIFIED~ ~INV14~
+  WRITE_ASCII 0x34 ~JRHLMKN~
+
+COPY ~%MOD_FOLDER%/cre/g-bb044.cre~ ~override~
+ SAY NAME1 @400034 // Wykidajło plażowy / Beach Warden 
+ SAY NAME2 @400034
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbn015~ #8
+ WRITE_ASCII DIALOG ~g-bbd044~
+ WRITE_ASCII 0x34 ~JRCTHKN~
+
+COPY ~%MOD_FOLDER%/cre/g-bb045.cre~ ~override~
+ SAY NAME1 @400035 // Paniusia plażowa 1 / Beachgoer 1 
+ SAY NAME2 @400035
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbn016~ #8
+ WRITE_ASCII DIALOG ~g-bbd045~  
+ ADD_CRE_ITEM ~COPPER~ #30 #0 #0 ~IDENTIFIED~ ~INV15~
+ ADD_CRE_ITEM ~HANKY~ #0 #0 #0 ~IDENTIFIED~ ~INV14~   
+ ADD_CRE_ITEM ~C_2114~ #0 #0 #0 ~IDENTIFIED~ ~INV13~
+ WRITE_ASCII 0x34 ~JRHUFKN~
+ 
+COPY ~%MOD_FOLDER%/cre/g-bb046.cre~ ~override~
+ SAY NAME1 @400035 // Paniusia plażowa 2 / Beachgoer 2 
+ SAY NAME2 @400035
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbn016~ #8
+ WRITE_ASCII DIALOG ~g-bbd046~
+ ADD_CRE_ITEM ~COPPER~ #50 #0 #0 ~IDENTIFIED~ ~INV15~   
+ ADD_CRE_ITEM ~HANKY~ #0 #0 #0 ~IDENTIFIED~ ~INV14~
+ WRITE_ASCII 0x34 ~JRHUFKN~
+
+COPY ~%MOD_FOLDER%/cre/g-bb047.cre~ ~override~
+ SAY NAME1 @400035 // Paniusia plażowa 3 / Beachgoer 3 
+ SAY NAME2 @400035
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-beach~ #8
+ WRITE_ASCII DIALOG ~g-bbd047~
+ ADD_CRE_ITEM ~COPPER~ #10 #0 #0 ~IDENTIFIED~ ~INV15~    
+ ADD_CRE_ITEM ~HANKY~ #0 #0 #0 ~IDENTIFIED~ ~INV14~ 
+ WRITE_ASCII 0x34 ~JRPROKN~
+
+// g-bbd048 - for trigger in river gate
+
+COPY ~%MOD_FOLDER%/cre/g-bb049.cre~ ~override~
+ SAY NAME1 @400038 // Adonis
+ WRITE_ASCII DEATHVAR ~g-bb049~ #32 
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-adns~ #8
+ WRITE_ASCII DIALOG ~g-bbd049~  
+ WRITE_ASCII 0x34 ~JRHARKN~
+
+COPY ~%MOD_FOLDER%/cre/g-bb050.cre~ ~override~
+ SAY NAME1 @400039 // Tonąca / Sinking Belle 
+ SAY NAME2 @400039
+ WRITE_ASCII DEATHVAR ~g-bb050~ #32
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-belle~ #8
+ WRITE_ASCII DIALOG ~g-bbd050~
+ WRITE_BYTE 0x8f ~16~
+ WRITE_BYTE 0x244 %moander%
+ ADD_CRE_ITEM ~COPPER~ #50 #0 #0 ~IDENTIFIED~ ~inv15~  
+ ADD_CRE_ITEM ~KKNIFE~ #0 #0 #0 ~IDENTIFIED~ ~inv14~
+ ADD_CRE_ITEM ~KNOTCHRM~ #0 #0 #0 ~IDENTIFIED~ ~inv13~
+ WRITE_ASCII 0x34 ~g-gblck~
+
+COPY ~%MOD_FOLDER%/cre/g-bb051.cre~ ~override~
+ SAY NAME1 @400040 // Tergush'tekhn 
+// SAY NAME2 @400040
+ WRITE_ASCII DEATHVAR ~g-bb051~ #32
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbn033~ #8
+ WRITE_ASCII DIALOG ~g-bbd051~ 
+ ADD_CRE_ITEM ~OBSIDIAN~ #0 #0 #0 ~IDENTIFIED~ ~INV15~  
+ ADD_CRE_ITEM ~OBEAR~ #0 #0 #0 ~IDENTIFIED~ ~INV14~
+ WRITE_ASCII 0x34 ~JRRABKN~
+ 
+COPY ~%MOD_FOLDER%/cre/g-bb052.cre~ ~override~
+ SAY NAME1 @400041 // Wotyrxil 
+ SAY NAME2 @400041
+ WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~G-BB_MARRAENOLOTH~))
+ WRITE_ASCII DEATHVAR ~g-bb052~ #32
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbn021~ #8
+ WRITE_ASCII DIALOG ~g-bbd052~ 
+ ADD_CRE_ITEM ~ISWD3D10~ #0 #0 #0 ~IDENTIFIED~ ~weapon1~ EQUIP
+ ADD_CRE_ITEM ~PLUS3IM~ #0 #0 #0 ~IDENTIFIED~ ~lring~
+ ADD_CRE_ITEM ~NO_CURSE~ #0 #0 #0 ~IDENTIFIED~ ~rring~
+ ADD_CRE_ITEM ~IMHOLDCR~ #0 #0 #0 ~IDENTIFIED~ ~helmet~
+ WRITE_ASCII 0x34 ~g-bb052~
+
+COPY ~%MOD_FOLDER%/cre/g-bb053.cre~ ~override~
+ SAY NAME1 @400042 // Widz  / Spectator 
+ SAY NAME2 @400042
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbs001~ #8
+ WRITE_ASCII DIALOG ~g-bbd053~
+ WRITE_ASCII 0x34 ~JRHLMKN~
+
+COPY ~%MOD_FOLDER%/cre/g-bb054.cre~ ~override~
+ SAY NAME1 @400043 // Raelis Shai  
+ SAY NAME2 @400043
+ WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~G-BB_RAELIS~))
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-theat~ #8
+ WRITE_ASCII DIALOG ~g-bbd054~
+ ADD_CRE_ITEM ~COPPER~ #150 #0 #0 ~IDENTIFIED~ ~INV15~
+ WRITE_ASCII 0x34 ~g-bb054~
+ 
+COPY ~%MOD_FOLDER%/cre/g-bb055.cre~ ~override~
+ SAY NAME1 @400044 // Eros 
+ SAY NAME2 @400044
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-eros~ #8
+ WRITE_ASCII DIALOG ~g-bbd055~
+ WRITE_ASCII DEATHVAR ~g-bb055~ #32
+ WRITE_ASCII 0x34 ~JRHLMKN~
+ 
+COPY ~%MOD_FOLDER%/cre/g-bb056.cre~ ~override~
+ SAY NAME1 @400045 // Agape 
+ SAY NAME2 @400045
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-agpe~ #8
+ WRITE_ASCII DIALOG ~g-bbd056~
+ WRITE_ASCII DEATHVAR ~g-bb056~ #32
+ WRITE_ASCII 0x34 ~JRPROKN~
+
+//COPY ~%MOD_FOLDER%/cre/g-bb057.cre~ ~override~
+// SAY NAME1 @400046 // pijak harry 
+// SAY NAME2 @400046
+//WRITE_ASCII 0x34 ~~
+
+COPY ~%MOD_FOLDER%/cre/g-bb058.cre~ ~override~
+ SAY NAME1 @400047 // Girgosz 
+ SAY NAME2 @400047
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbs001~ #8
+// WRITE_ASCII DIALOG ~g-bbd058~ #8
+ WRITE_ASCII 0x34 ~JRHLMKN~
+
+COPY ~%MOD_FOLDER%/cre/g-bb059.cre~ ~override~
+ SAY NAME1 @400048 // Zegonz Vlaric 
+ SAY NAME2 @400048
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-zgnz~ #8
+ WRITE_ASCII DIALOG ~g-bbd059~ #8
+ ADD_CRE_ITEM ~TANKARD~ #0 #0 #0 ~IDENTIFIED~ ~INV15~ 
+ ADD_CRE_ITEM ~COPPER~ #200 #0 #0 ~IDENTIFIED~ ~INV14~
+ WRITE_BYTE 0x90 %styxo_1%
+ WRITE_ASCII 0x34 ~JRTFMKN~ 
+
+COPY ~%MOD_FOLDER%/cre/g-bb060.cre~ ~override~
+ SAY NAME1 @400049 // Valen Shadowbreath 
+ SAY NAME2 @400049
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbs010~ #8
+ WRITE_ASCII DIALOG ~g-bbd060~
+ WRITE_BYTE 0x244 %eilistraee%
+ ADD_CRE_ITEM ~PLUS2IM~ #0 #0 #0 ~IDENTIFIED~ ~lring~
+ ADD_CRE_ITEM ~IMHOLDCR~ #0 #0 #0 ~IDENTIFIED~ ~helmet~ 
+ WRITE_ASCII 0x34 ~JREBBKN~
+
+COPY ~%MOD_FOLDER%/cre/g-bb061.cre~ ~override~
+ SAY NAME1 @400050 // Szlam / Slime 
+ SAY NAME2 @400050
+ WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~G-BB_SLIME~))
+ WRITE_ASCII DEATHVAR ~g-bb061~ #32
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbs003~ #8
+ WRITE_ASCII 0x34 ~g-bb061~
+ 
+COPY ~%MOD_FOLDER%/cre/g-bb062.cre~ ~override~
+ SAY NAME1 @400051 // Pabeszc 
+ SAY NAME2 @400051
+ WRITE_ASCII DEATHVAR ~g-bb062~ #32
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-pbsz~ #8
+ WRITE_ASCII DIALOG ~g-bbd062~ #8
+ ADD_CRE_ITEM ~C2_2501~ #0 #0 #0 ~IDENTIFIED~ ~INV15~
+ WRITE_ASCII 0x34 ~JRHLMKN~
+
+ COPY ~%MOD_FOLDER%/cre/g-bb064.cre~ ~override~
+ SAY NAME1 @400122 // cania portal
+ SAY NAME2 @400122
+ WRITE_ASCII SCRIPT_OVERRIDE ~~ #8
+ WRITE_ASCII DIALOG ~g-bbd064~ #8
+ WRITE_ASCII DEATHVAR ~g-bb064~ #32
+ WRITE_BYTE 0x274 %ysgard_1%
+ WRITE_ASCII 0x34 ~~
+
+
+//COPY ~%MOD_FOLDER%/cre/g-bb065.cre~ ~override~
+// SAY NAME1 @400052 // Uzuthor 
+// SAY NAME2 @400052 
+//WRITE_ASCII 0x34 ~~
+
+COPY ~%MOD_FOLDER%/cre/g-bb066.cre~ ~override~
+ SAY NAME1 @400053 // Æ 
+ SAY NAME2 @400053
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbn020~ #8
+ WRITE_ASCII DIALOG ~g-bbd066~ #8
+ ADD_CRE_ITEM ~NO_CURSE~ #0 #0 #0 ~IDENTIFIED~ ~rring~
+ ADD_CRE_ITEM ~IMHOLDCR~ #0 #0 #0 ~IDENTIFIED~ ~helmet~ 
+ //WRITE_ASCII 0x34 ~~
+
+COPY ~%MOD_FOLDER%/cre/g-bb067.cre~ ~override~
+SAY NAME1 @400054 // Anit'bil 
+SAY NAME2 @400054
+WRITE_ASCII SCRIPT_OVERRIDE ~~
+WRITE_ASCII DEATHVAR ~g-bb067~ #32
+WRITE_ASCII DIALOG ~g-bbd067~  
+WRITE_ASCII 0x34 ~~
+
+COPY ~%MOD_FOLDER%/cre/g-bb068.cre~ ~override~
+ SAY NAME1 @400055 // Abiszai? / Abishai? 
+ SAY NAME2 @400055
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-abhK~ #8
+ WRITE_ASCII DIALOG ~g-bbd068~ #8
+ WRITE_ASCII 0x34 ~JRABSKN~
+
+COPY ~%MOD_FOLDER%/cre/g-bb069.cre~ ~override~
+ SAY NAME1 @400056 // Dziwny mieszkaniec Kanału / Strange Ditch dweller 
+ SAY NAME2 @400056
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbn007~ #8
+ WRITE_ASCII DIALOG ~g-bbd069~ #8
+ WRITE_ASCII 0x34 ~JRHLMKN~
+
+COPY ~%MOD_FOLDER%/cre/g-bb070.cre~ ~override~ // pod sciana d3
+ SAY NAME1 @400057 // Ceglarz Teoretyk / Brickgazer 
+ SAY NAME2 @400057
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-brck~ #8
+ WRITE_ASCII DIALOG ~g-bbd070~ #8
+ WRITE_ASCII 0x34 ~JRHLMKN~
+
+COPY ~%MOD_FOLDER%/cre/g-bb071.cre~ ~override~
+ SAY NAME1 @400095 // Przestraszony mieszkaniec Kanału / Frightened Ditch dweller 
+ SAY NAME2 @400095
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-frgh~ #8
+ WRITE_ASCII DIALOG ~g-bbd071~ #8
+ WRITE_ASCII 0x34 ~JRHLMKN~
+
+COPY ~%MOD_FOLDER%/cre/g-bb072.cre~ ~override~
+ SAY NAME1 @400059 // Starszy mieszkaniec Kanału / Older Ditch dweller 
+ SAY NAME2 @400059
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbn007~ #8
+ WRITE_ASCII DIALOG ~g-bbd072~ #8
+ WRITE_ASCII 0x34 ~JRMHTKN~
+
+COPY ~%MOD_FOLDER%/cre/g-bb073.cre~ ~override~
+ SAY NAME1 @400083 // Morska istota /	Sea creature 
+ SAY NAME2 @400083
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbn006~ #8
+ WRITE_ASCII DIALOG ~g-bbd073~ #8
+
+COPY ~%MOD_FOLDER%/cre/g-bb074.cre~ ~override~
+ SAY NAME1 @400084 // Starsza Mieszkanka Kanału	/ Older Ditch dweller 
+ SAY NAME2 @400084
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbn007~ #8
+ WRITE_ASCII DIALOG ~g-bbd074~ #8
+ WRITE_ASCII 0x34 ~JRMIDKN~
+
+COPY ~%MOD_FOLDER%/cre/g-bb075.cre~ ~override~
+ SAY NAME1 @400085 // Szczurołapka / Ratcatcher 
+ SAY NAME2 @400085
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbn006~ #8
+ WRITE_ASCII DIALOG ~g-bbd075~ #8
+ ADD_CRE_ITEM ~RATCHARM~ #0 #0 #0 ~IDENTIFIED~ ~INV15~
+ ADD_CRE_ITEM ~TAIL~ #5 #0 #0 ~IDENTIFIED~ ~INV14~
+ ADD_CRE_ITEM ~TAILS~ #0 #0 #0 ~IDENTIFIED~ ~INV13~
+ WRITE_ASCII 0x34 ~JRCTFKN~
+
+COPY ~%MOD_FOLDER%/cre/g-bb076.cre~ ~override~ // pod sciana d17
+ SAY NAME1 @400086 // Poszukiwacz złota / Prospector 
+ SAY NAME2 @400086
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-miner~ #8
+ WRITE_ASCII DIALOG ~g-bbd076~ #8
+ ADD_CRE_ITEM ~IORE~ #0 #0 #0 ~IDENTIFIED~ ~INV15~
+ WRITE_ASCII 0x34 ~JRHLMKN~
+
+COPY ~%MOD_FOLDER%/cre/g-bb077.cre~ ~override~
+ SAY NAME1 @400087 // Isey / Isey 
+ SAY NAME2 @400087
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbn006~ #8
+ WRITE_ASCII DIALOG ~g-bbd077~ #8
+ WRITE_ASCII 0x34 ~JRHLMKN~
+ 
+COPY ~%MOD_FOLDER%/cre/g-bb078.cre~ ~override~
+ SAY NAME1 @400088 // Nieruchomy mężczyzna / Motionless man 
+ SAY NAME2 @400088
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-still~ #8
+ WRITE_ASCII DIALOG ~g-bbd078~ #8
+ WRITE_ASCII 0x34 ~JRHLMKN~
+ 
+COPY ~%MOD_FOLDER%/cre/g-bb079.cre~ ~override~
+ SAY NAME1 @400089 // Oświecona Mieszkanka Kanału / Enlightened Ditch dweller 
+ SAY NAME2 @400089
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbn007~ #8
+ WRITE_ASCII DIALOG ~g-bbd079~ #8
+ WRITE_ASCII 0x34 ~JRMIDKN~
+
+COPY ~%MOD_FOLDER%/cre/g-bb080.cre~ ~override~
+ SAY NAME1 @400090 // Poeta / Poet 
+ SAY NAME2 @400090
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-poet~ #8
+ WRITE_ASCII DIALOG ~g-bbd080~ #8
+ WRITE_ASCII 0x34 ~JRHUMKN~
+
+COPY ~%MOD_FOLDER%/cre/g-bb081.cre~ ~override~ //
+ SAY NAME1 @400091 // Dziad / Old geezer 
+ SAY NAME2 @400091
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbn007~ #8
+ WRITE_ASCII DIALOG ~g-bbd081~ #8
+ WRITE_ASCII 0x34 ~JRMHTKN~
+
+COPY ~%MOD_FOLDER%/cre/g-bb082.cre~ ~override~
+ SAY NAME1 @400092 // Roztańczona mieszkanka Kanału	/ Dancer in the Ditch 
+ SAY NAME2 @400092
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-dnce~ #8
+ WRITE_ASCII DIALOG ~g-bbd082~ #8
+ WRITE_ASCII 0x34 ~JRPROKN~
+
+COPY ~%MOD_FOLDER%/cre/g-bb083.cre~ ~override~ 
+ SAY NAME1 @400093 // Baba / Babushka 
+ SAY NAME2 @400093
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-baba~ #8
+ WRITE_ASCII DIALOG ~g-bbd083~ #8
+ WRITE_ASCII 0x34 ~JRMIDKN~
+
+COPY ~%MOD_FOLDER%/cre/g-bb084.cre~ ~override~
+ SAY NAME1 @400094 // Maestro / Maestro 
+ SAY NAME2 @400094
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbn006~ #8
+ WRITE_ASCII DIALOG ~g-bbd084~ #8
+ WRITE_ASCII 0x34 ~JRTWZKN~
+
+COPY ~%MOD_FOLDER%/cre/g-bb085.cre~ ~override~ 
+ SAY NAME1 @400058 // Przyczajony mieszkaniec Kanału / Hidden Ditch dweller 
+ SAY NAME2 @400058
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-hddn~ #8
+ WRITE_ASCII DIALOG ~g-bbd085~ #8
+ WRITE_ASCII 0x34 ~JRHLMKN~
+
+COPY ~%MOD_FOLDER%/cre/g-bb086.cre~ ~override~
+ SAY NAME1 @400060 // Orville barman / the bartender 
+ SAY NAME2 @400060
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-orvl~ #8
+ WRITE_ASCII DEATHVAR ~g-bb086~ #32
+ WRITE_ASCII DIALOG ~g-bbd086~ #8
+ ADD_CRE_ITEM ~g-bbi011~ #0 #0 #0 ~IDENTIFIED~ ~inv15~
+ WRITE_ASCII 0x34 ~JRWRMKN~
+
+COPY ~%MOD_FOLDER%/cre/g-bb087.cre~ ~override~
+ SAY NAME1 @400061 // Alviro 
+ SAY NAME2 @400061
+ WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~G-BB_ALVIRO~))
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbn019~ #8
+ WRITE_ASCII DEATHVAR ~g-bb087~ #32
+ WRITE_ASCII DIALOG ~g-bbd087~
+ ADD_CRE_ITEM ~HEARCHRM~ #0 #0 #0 ~IDENTIFIED~ ~INV15~
+ ADD_CRE_ITEM ~IMALIVE~ #0 #0 #0 ~IDENTIFIED~ ~INV14~
+ ADD_CRE_ITEM ~TEARS~ #0 #0 #0 ~IDENTIFIED~ ~INV13~
+ ADD_CRE_ITEM ~COPPER~ #100 #0 #0 ~IDENTIFIED~ ~INV12~
+ ADD_CRE_ITEM ~g-bbi061~ #1 #0 #0 ~IDENTIFIED~ ~INV11~
+ WRITE_ASCII 0x34 ~g-bb087~
+
+COPY ~%MOD_FOLDER%/cre/g-bb088.cre~ ~override~
+ SAY NAME1 @400062 // Pacjent - Siarczysty Stefan / Sulfur Steffen
+ SAY NAME2 @400062
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-stef~ #8
+ WRITE_ASCII DIALOG ~g-bbd088~ #8
+ WRITE_ASCII DEATHVAR ~g-bb088~ #32
+ WRITE_ASCII 0x34 ~JRHLMKN~
+ 
+COPY ~%MOD_FOLDER%/cre/g-bb089.cre~ ~override~
+ SAY NAME1 @400063 // Pacjent - Amnezjak / The Amnesiac 
+ SAY NAME2 @400063
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbn007~ #8
+ WRITE_ASCII DIALOG ~g-bbd089~ #8
+ WRITE_ASCII 0x34 ~JRHLMKN~
+ 
+COPY ~%MOD_FOLDER%/cre/g-bb090.cre~ ~override~
+ SAY NAME1 @400154 // Pacjent 
+ SAY NAME2 @400154
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbn007~ #8
+ WRITE_ASCII DIALOG ~g-bbd090~
+ WRITE_ASCII 0x34 ~JRHLMKN~
+  
+COPY ~%MOD_FOLDER%/cre/g-bb091.cre~ ~override~
+ SAY NAME1 @400065 // Kabatum 
+ SAY NAME2 @400065
+ WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~G-BB_KABATUM~))
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbn018~ #8
+ WRITE_ASCII DEATHVAR ~g-bb091~ #32
+ WRITE_ASCII DIALOG ~g-bbd091~
+ ADD_CRE_ITEM ~g-bbi026~ #0 #0 #0 ~IDENTIFIED~ ~weapon1~ EQUIP
+ ADD_CRE_ITEM ~PLUS3IM~ #0 #0 #0 ~IDENTIFIED~ ~lring~
+ ADD_CRE_ITEM ~NO_CURSE~ #0 #0 #0 ~IDENTIFIED~ ~rring~
+ ADD_CRE_ITEM ~IMHOLDCR~ #0 #0 #0 ~IDENTIFIED~ ~helmet~
+ ADD_CRE_ITEM ~HEARCHRM~ #4 #0 #0 ~IDENTIFIED~ ~inv1~
+ ADD_CRE_ITEM ~g-bbi027~ #0 #0 #0 ~IDENTIFIED~ ~inv14~
+ ADD_CRE_ITEM ~COPPER~ #4000 #0 #0 ~IDENTIFIED~ ~inv15~
+ ADD_KNOWN_SPELL ~g-bb668~ #2 ~wizard~
+ ADD_MEMORIZED_SPELL ~g-bb668~ #2 ~wizard~ ( 1 ) 
+ WRITE_ASCII 0x34 ~g-bb091~
+ 
+COPY ~%MOD_FOLDER%/cre/g-bb092.cre~ ~override~
+ SAY NAME1 @400155 // Pacjent 
+ SAY NAME2 @400155
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbn007~ #8
+ WRITE_ASCII DIALOG ~g-bbd092~
+ WRITE_ASCII 0x34 ~JRHLMKN~
+ 
+ COPY ~%MOD_FOLDER%/cre/g-bb093.cre~ ~override~
+ SAY NAME1 @400066 // Uzalezniona / Addicted 
+ SAY NAME2 @400066
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbn006~ #8
+ WRITE_ASCII DIALOG ~g-bbd093~ #8
+ WRITE_ASCII 0x34 ~JRHLFKN~
+ 
+ COPY ~%MOD_FOLDER%/cre/g-bb094.cre~ ~override~
+ SAY NAME1 @400067 // Echo / Echo 
+ SAY NAME2 @400067
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbn006~ #8
+ WRITE_ASCII DIALOG ~g-bbd094~ #8
+ ADD_CRE_ITEM ~FANGMIRR~ #0 #0 #0 ~IDENTIFIED~ ~INV15~
+ //ADD_CRE_ITEM ~MIRIMAG~ #0 #0 #0 ~IDENTIFIED~ ~INV14~
+ WRITE_ASCII 0x34 ~JRHLFKN~
+
+COPY ~%MOD_FOLDER%/cre/g-bb095.cre~ ~override~
+ SAY NAME1 @400068 // Zadowolona dziewczyna / Happy girl 
+ SAY NAME2 @400068
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbn006~ #8
+ WRITE_ASCII DIALOG ~g-bbd095~ #8
+ WRITE_ASCII 0x34 ~JRHUFKN~
+
+COPY ~%MOD_FOLDER%/cre/g-bb096.cre~ ~override~
+ SAY NAME1 @400069 // Dziewczyna w czerwonej sukience / Girl in red 
+ SAY NAME2 @400069
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbn006~ #8
+ WRITE_ASCII DIALOG ~g-bbd096~ #8
+ WRITE_ASCII 0x34 ~g-gred~
+ 
+// COPY ~%MOD_FOLDER%/cre/g-bb097.cre~ ~override~
+ //SAY NAME1 @400070 // ponury pielgrzym 
+ //SAY NAME2 @400070
+ 
+COPY ~%MOD_FOLDER%/cre/g-bb098.cre~ ~override~
+ SAY NAME1 @400071 // Ishtar 1 
+ SAY NAME2 @400071
+ WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~G-BB_ISHTAR1~))
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-reli2~ #8
+ WRITE_ASCII DIALOG ~g-bbd098~ #8
+ ADD_CRE_ITEM ~PLUS4IM~ #0 #0 #0 ~IDENTIFIED~ ~lring~
+ ADD_CRE_ITEM ~NO_CURSE~ #0 #0 #0 ~IDENTIFIED~ ~rring~
+ ADD_CRE_ITEM ~REGEN20~ #0 #0 #0 ~IDENTIFIED~ ~helmet~
+ //WRITE_ASCII 0x34 ~~
+ 
+COPY ~%MOD_FOLDER%/cre/g-bb099.cre~ ~override~
+ SAY NAME1 @400072 // Ostrokrzewista Zaraza / Razorvine Blight
+ SAY NAME2 @400072
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbs002~ #8
+ WRITE_ASCII DIALOG ~~ #8
+ WRITE_ASCII DEATHVAR ~g-bb099~ #32
+ ADD_CRE_ITEM ~PLUS1IM~ #0 #0 #0 ~IDENTIFIED~ ~lring~
+ ADD_CRE_ITEM ~NO_CURSE~ #0 #0 #0 ~IDENTIFIED~ ~rring~
+ ADD_CRE_ITEM ~REGEN10~ #0 #0 #0 ~IDENTIFIED~ ~helmet~
+ //WRITE_ASCII 0x34 ~~
+ 
+COPY ~%MOD_FOLDER%/cre/g-bb100.cre~ ~override~
+ SAY NAME1 @400072 // Ostrokrzewista Zaraza / Razorvine Blight
+ SAY NAME2 @400072
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbs002~ #8
+ WRITE_ASCII DIALOG ~~ #8
+ WRITE_ASCII DEATHVAR ~g-bb100~ #32
+ ADD_CRE_ITEM ~PLUS1IM~ #0 #0 #0 ~IDENTIFIED~ ~lring~
+ ADD_CRE_ITEM ~NO_CURSE~ #0 #0 #0 ~IDENTIFIED~ ~rring~
+ ADD_CRE_ITEM ~REGEN10~ #0 #0 #0 ~IDENTIFIED~ ~helmet~
+ //WRITE_ASCII 0x34 ~~
+ 
+COPY ~%MOD_FOLDER%/cre/g-bb101.cre~ ~override~
+ SAY NAME1 @400074 // Baernaloth 
+ SAY NAME2 @400074
+ WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~G-BB_BAERNALOTH~))
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbn022~ #8
+ WRITE_ASCII DIALOG ~g-bbd101~
+ ADD_CRE_ITEM ~NO_CURSE~ #0 #0 #0 ~IDENTIFIED~ ~rring~
+ ADD_CRE_ITEM ~REGEN20~ #0 #0 #0 ~IDENTIFIED~ ~helmet~
+ WRITE_ASCII 0x34 ~g-bb101~
+ WRITE_BYTE 0x90 %pimpek%
+ 
+COPY ~%MOD_FOLDER%/cre/g-bb102.cre~ ~override~ // Ghoul Golem
+ SAY NAME1 @400176
+ SAY NAME2 @400176
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbs001~ #8
+ WRITE_ASCII DEATHVAR ~g-bb102~ #32
+ WRITE_ASCII DIALOG ~g-bbd102~
+ ADD_CRE_ITEM ~PLUS2IM~ #0 #0 #0 ~IDENTIFIED~ ~lring~
+ ADD_CRE_ITEM ~NO_CURSE~ #0 #0 #0 ~IDENTIFIED~ ~rring~
+ ADD_CRE_ITEM ~IMHOLDCR~ #0 #0 #0 ~IDENTIFIED~ ~helmet~
+ ADD_CRE_ITEM ~g-bbi032~ #0 #0 #0 ~IDENTIFIED~ ~inv15~
+ WRITE_ASCII 0x34 ~JRGSTKN~
+ 
+ 
+ // klienci
+ 
+ COPY ~%MOD_FOLDER%/cre/g-bbin1.cre~ ~override~ // klient 1
+ SAY NAME1 @400178
+ SAY NAME2 @400178
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-clnt~ #8
+ WRITE_ASCII DEATHVAR ~g-bbin~ #32
+ WRITE_ASCII DIALOG ~~
+ WRITE_ASCII 0x34 ~JRHLMKN~
+   WRITE_BYTE 0x2d ~75~ // cloth
+      WRITE_BYTE 0x2c ~5~ // hair
+   
+    COPY ~%MOD_FOLDER%/cre/g-bbin2.cre~ ~override~ // klient 2
+ SAY NAME1 @400178
+ SAY NAME2 @400178
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-clnt~ #8
+ WRITE_ASCII DEATHVAR ~g-bbin~ #32
+ WRITE_ASCII DIALOG ~~
+ WRITE_ASCII 0x34 ~JRHLMKN~
+   WRITE_BYTE 0x2d ~79~ // cloth
+         WRITE_BYTE 0x2c ~6~ // hair
+ 
+ 
+  COPY ~%MOD_FOLDER%/cre/g-bbin3.cre~ ~override~ // klient 3
+ SAY NAME1 @400178
+ SAY NAME2 @400178
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-clnt~ #8
+ WRITE_ASCII DEATHVAR ~g-bbin~ #32
+ WRITE_ASCII DIALOG ~~
+ WRITE_ASCII 0x34 ~JRHLMKN~
+   WRITE_BYTE 0x2d ~82~ // cloth
+         WRITE_BYTE 0x2c ~7~ // hair
+ 
+ 
+ 
+ // Szczurołaki klony
+ 
+ COPY_EXISTING 
+ ~%MOD_FOLDER%/cre/g-bb104.cre~ ~override/g-bb103.cre~
+  SAY NAME1 @400075 // Krwawy Szczurołak / Bloody Wererat 
+ SAY NAME2 @400075
+ WRITE_ASCII DEATHVAR ~g-bb103~ #32
+ WRITE_ASCII 0x280 ~g-bb103~ #32
+  REPLACE_CRE_ITEM ~ISWD3D10~ #0 #0 #0 ~IDENTIFIED~ ~weapon1~
+ ADD_CRE_ITEM ~PLUS1IM~ #0 #0 #0 ~IDENTIFIED~ ~lring~
+ ADD_CRE_ITEM ~IMHOLDCR~ #0 #0 #0 ~IDENTIFIED~ ~helmet~
+ ADD_CRE_ITEM ~BLOOCHRM~ #1 #0 #0 ~IDENTIFIED~ ~inv15~
+  WRITE_BYTE 0x2c ~75~ // cloth
+ 
+  COPY_EXISTING 
+ ~%MOD_FOLDER%/cre/g-bb104.cre~ ~override/g-bb104.cre~
+  SAY NAME1 @400075 // Krwawy Szczurołak / Bloody Wererat 
+ SAY NAME2 @400075
+  WRITE_ASCII DEATHVAR ~g-bb104~ #32
+ WRITE_ASCII 0x280 ~g-bb104~ #32
+  REPLACE_CRE_ITEM ~ISWD3D10~ #0 #0 #0 ~IDENTIFIED~ ~weapon1~
+ ADD_CRE_ITEM ~PLUS1IM~ #0 #0 #0 ~IDENTIFIED~ ~lring~
+ ADD_CRE_ITEM ~IMHOLDCR~ #0 #0 #0 ~IDENTIFIED~ ~helmet~
+ ADD_CRE_ITEM ~BLOOCHRM~ #1 #0 #0 ~IDENTIFIED~ ~inv15~
+  WRITE_BYTE 0x2c ~76~ // cloth
+  
+   COPY_EXISTING 
+ ~%MOD_FOLDER%/cre/g-bb104.cre~ ~override/g-bb105.cre~
+  SAY NAME1 @400075 // Krwawy Szczurołak / Bloody Wererat 
+ SAY NAME2 @400075
+  WRITE_ASCII DEATHVAR ~g-bb105~ #32
+ WRITE_ASCII 0x280 ~g-bb105~ #32
+  REPLACE_CRE_ITEM ~ISWD3D10~ #0 #0 #0 ~IDENTIFIED~ ~weapon1~
+ ADD_CRE_ITEM ~PLUS1IM~ #0 #0 #0 ~IDENTIFIED~ ~lring~
+ ADD_CRE_ITEM ~IMHOLDCR~ #0 #0 #0 ~IDENTIFIED~ ~helmet~
+ ADD_CRE_ITEM ~BLOOCHRM~ #1 #0 #0 ~IDENTIFIED~ ~inv15~
+  WRITE_BYTE 0x2c ~77~ // cloth
+  
+   COPY_EXISTING 
+ ~%MOD_FOLDER%/cre/g-bb104.cre~ ~override/g-bb106.cre~
+  SAY NAME1 @400075 // Krwawy Szczurołak / Bloody Wererat 
+ SAY NAME2 @400075
+  WRITE_ASCII DEATHVAR ~g-bb106~ #32
+ WRITE_ASCII 0x280 ~g-bb106~ #32
+  REPLACE_CRE_ITEM ~ISWD3D10~ #0 #0 #0 ~IDENTIFIED~ ~weapon1~
+ ADD_CRE_ITEM ~PLUS1IM~ #0 #0 #0 ~IDENTIFIED~ ~lring~
+ ADD_CRE_ITEM ~IMHOLDCR~ #0 #0 #0 ~IDENTIFIED~ ~helmet~
+ ADD_CRE_ITEM ~BLOOCHRM~ #1 #0 #0 ~IDENTIFIED~ ~inv15~
+  WRITE_BYTE 0x2c ~78~ // cloth
+  
+   COPY_EXISTING 
+ ~%MOD_FOLDER%/cre/g-bb104.cre~ ~override/g-bb107.cre~
+  SAY NAME1 @400075 // Krwawy Szczurołak / Bloody Wererat 
+ SAY NAME2 @400075
+  WRITE_ASCII DEATHVAR ~g-bb107~ #32
+ WRITE_ASCII 0x280 ~g-bb107~ #32
+  REPLACE_CRE_ITEM ~ISWD3D10~ #0 #0 #0 ~IDENTIFIED~ ~weapon1~
+ ADD_CRE_ITEM ~PLUS1IM~ #0 #0 #0 ~IDENTIFIED~ ~lring~
+ ADD_CRE_ITEM ~IMHOLDCR~ #0 #0 #0 ~IDENTIFIED~ ~helmet~
+ ADD_CRE_ITEM ~BLOOCHRM~ #1 #0 #0 ~IDENTIFIED~ ~inv15~
+  WRITE_BYTE 0x2c ~79~ // cloth
+  
+   COPY_EXISTING 
+ ~%MOD_FOLDER%/cre/g-bb104.cre~ ~override/g-bb108.cre~
+  SAY NAME1 @400075 // Krwawy Szczurołak / Bloody Wererat 
+ SAY NAME2 @400075
+  WRITE_ASCII DEATHVAR ~g-bb108~ #32
+ WRITE_ASCII 0x280 ~g-bb108~ #32
+  REPLACE_CRE_ITEM ~ISWD3D10~ #0 #0 #0 ~IDENTIFIED~ ~weapon1~
+ ADD_CRE_ITEM ~PLUS1IM~ #0 #0 #0 ~IDENTIFIED~ ~lring~
+ ADD_CRE_ITEM ~IMHOLDCR~ #0 #0 #0 ~IDENTIFIED~ ~helmet~
+ ADD_CRE_ITEM ~BLOOCHRM~ #1 #0 #0 ~IDENTIFIED~ ~inv15~
+  WRITE_BYTE 0x2c ~80~ // cloth
+  
+   COPY_EXISTING 
+ ~%MOD_FOLDER%/cre/g-bb104.cre~ ~override/g-bb109.cre~
+  SAY NAME1 @400075 // Krwawy Szczurołak / Bloody Wererat 
+ SAY NAME2 @400075
+  WRITE_ASCII DEATHVAR ~g-bb109~ #32
+ WRITE_ASCII 0x280 ~g-bb109~ #32
+  REPLACE_CRE_ITEM ~ISWD3D10~ #0 #0 #0 ~IDENTIFIED~ ~weapon1~
+ ADD_CRE_ITEM ~PLUS1IM~ #0 #0 #0 ~IDENTIFIED~ ~lring~
+ ADD_CRE_ITEM ~IMHOLDCR~ #0 #0 #0 ~IDENTIFIED~ ~helmet~
+ ADD_CRE_ITEM ~BLOOCHRM~ #1 #0 #0 ~IDENTIFIED~ ~inv15~
+  WRITE_BYTE 0x2c ~81~ // cloth
+  
+   COPY_EXISTING 
+ ~%MOD_FOLDER%/cre/g-bb104.cre~ ~override/g-bb110.cre~
+  SAY NAME1 @400075 // Krwawy Szczurołak / Bloody Wererat 
+ SAY NAME2 @400075
+  WRITE_ASCII DEATHVAR ~g-bb110~ #32
+ WRITE_ASCII 0x280 ~g-bb110~ #32
+  REPLACE_CRE_ITEM ~ISWD3D10~ #0 #0 #0 ~IDENTIFIED~ ~weapon1~
+ ADD_CRE_ITEM ~PLUS1IM~ #0 #0 #0 ~IDENTIFIED~ ~lring~
+ ADD_CRE_ITEM ~IMHOLDCR~ #0 #0 #0 ~IDENTIFIED~ ~helmet~
+ ADD_CRE_ITEM ~BLOOCHRM~ #1 #0 #0 ~IDENTIFIED~ ~inv15~
+  WRITE_BYTE 0x2c ~82~ // cloth
+  
+   COPY_EXISTING 
+ ~%MOD_FOLDER%/cre/g-bb104.cre~ ~override/g-bb111.cre~
+  SAY NAME1 @400075 // Krwawy Szczurołak / Bloody Wererat 
+ SAY NAME2 @400075
+  WRITE_ASCII DEATHVAR ~g-bb111~ #32
+ WRITE_ASCII 0x280 ~g-bb111~ #32
+  REPLACE_CRE_ITEM ~ISWD3D10~ #0 #0 #0 ~IDENTIFIED~ ~weapon1~
+ ADD_CRE_ITEM ~PLUS1IM~ #0 #0 #0 ~IDENTIFIED~ ~lring~
+ ADD_CRE_ITEM ~IMHOLDCR~ #0 #0 #0 ~IDENTIFIED~ ~helmet~
+ ADD_CRE_ITEM ~BLOOCHRM~ #1 #0 #0 ~IDENTIFIED~ ~inv15~
+  WRITE_BYTE 0x2c ~83~ // cloth
+  
+   COPY_EXISTING 
+ ~%MOD_FOLDER%/cre/g-bb104.cre~ ~override/g-bb112.cre~
+  SAY NAME1 @400075 // Krwawy Szczurołak / Bloody Wererat 
+ SAY NAME2 @400075
+  WRITE_ASCII DEATHVAR ~g-bb112~ #32
+ WRITE_ASCII 0x280 ~g-bb112~ #32
+  REPLACE_CRE_ITEM ~ISWD3D10~ #0 #0 #0 ~IDENTIFIED~ ~weapon1~
+ ADD_CRE_ITEM ~PLUS1IM~ #0 #0 #0 ~IDENTIFIED~ ~lring~
+ ADD_CRE_ITEM ~IMHOLDCR~ #0 #0 #0 ~IDENTIFIED~ ~helmet~
+ ADD_CRE_ITEM ~BLOOCHRM~ #1 #0 #0 ~IDENTIFIED~ ~inv15~
+  WRITE_BYTE 0x2c ~84~ // cloth
+ 
+
+COPY ~%MOD_FOLDER%/cre/g-bb114.cre~ ~override~ 
+ SAY NAME1 @400118 // Grotefend
+ SAY NAME2 @400118
+ ADD_CRE_ITEM ~IMHOLDCR~ #0 #0 #0 ~IDENTIFIED~ ~helmet~
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbs001~ #8
+ WRITE_ASCII DIALOG ~g-bbd114~ #8
+ WRITE_ASCII DEATHVAR ~g-bb114~ #32
+ WRITE_ASCII 0x34 ~JRMHTKN~
+	
+COPY ~%MOD_FOLDER%/cre/g-bb119.cre~ ~override~
+ SAY NAME1 @400082 // Yagnoloth 
+ SAY NAME2 @400082
+ WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~G-BB_YAGNOLOTH~))
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbn023~ #8
+ WRITE_ASCII DIALOG ~g-bbd119~
+ ADD_CRE_ITEM ~ISWD3D10~ #0 #0 #0 ~IDENTIFIED~ ~weapon1~ EQUIP
+ ADD_CRE_ITEM ~PLUS1IM~ #0 #0 #0 ~IDENTIFIED~ ~lring~
+ ADD_CRE_ITEM ~NO_CURSE~ #0 #0 #0 ~IDENTIFIED~ ~rring~
+ ADD_CRE_ITEM ~IMHOLDCR~ #0 #0 #0 ~IDENTIFIED~ ~helmet~
+ WRITE_ASCII 0x34 ~g-bb119~
+ 
+ COPY ~%MOD_FOLDER%/cre/g-bb211.cre~ ~override~
+ SAY NAME1 @400082 // Yagnoloth 
+ SAY NAME2 @400082
+ WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~G-BB_YAGNOLOTH~))
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbn023~ #8
+ WRITE_ASCII DIALOG ~g-bbd119~
+ WRITE_ASCII DEATHVAR ~g-bb211~ #32
+ ADD_CRE_ITEM ~ISWD3D10~ #0 #0 #0 ~IDENTIFIED~ ~weapon1~ EQUIP
+ ADD_CRE_ITEM ~PLUS1IM~ #0 #0 #0 ~IDENTIFIED~ ~lring~
+ ADD_CRE_ITEM ~NO_CURSE~ #0 #0 #0 ~IDENTIFIED~ ~rring~
+ ADD_CRE_ITEM ~IMHOLDCR~ #0 #0 #0 ~IDENTIFIED~ ~helmet~
+ WRITE_ASCII 0x34 ~g-bb119~
+ 
+COPY ~%MOD_FOLDER%/cre/g-bb120.cre~ ~override~
+ SAY NAME1 @400099 // Malakai 
+ SAY NAME2 @400099
+ ADD_CRE_ITEM ~FALSECON~ #1 #0 #0 ~IDENTIFIED~ ~INV15~
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-malah~ #8
+ WRITE_ASCII DIALOG ~g-bbd120~
+ WRITE_ASCII 0x34 ~JRHUMKN~
+
+COPY ~%MOD_FOLDER%/cre/g-bb121.cre~ ~override~
+ SAY NAME1 @400100 // Marilith 
+ SAY NAME2 @400100
+ WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~G-BB_MARILITH~))
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbn024~ #8
+ WRITE_ASCII DIALOG ~g-bbd121~
+ ADD_CRE_ITEM ~ISWD3D06~ #0 #0 #0 ~IDENTIFIED~ ~weapon1~ EQUIP
+ ADD_CRE_ITEM ~PLUS3IM~ #0 #0 #0 ~IDENTIFIED~ ~lring~
+ ADD_CRE_ITEM ~NO_CURSE~ #0 #0 #0 ~IDENTIFIED~ ~rring~
+ ADD_CRE_ITEM ~IMHOLDCR~ #0 #0 #0 ~IDENTIFIED~ ~helmet~
+ WRITE_ASCII 0x34 ~g-bb121~
+ 
+COPY ~%MOD_FOLDER%/cre/g-bb122.cre~ ~override~ // Szkielet (summon001) / Skeleton (summon001) 
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbs002~ #8
+ ADD_CRE_ITEM ~NO_CURSE~ #0 #0 #0 ~IDENTIFIED~ ~rring~
+ //WRITE_ASCII 0x34 ~~
+ 
+COPY ~%MOD_FOLDER%/cre/g-bb123.cre~ ~override~ 
+ SAY NAME1 @400137 // Beatha
+ SAY NAME2 @400137 
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbs001~ #8
+ WRITE_ASCII DEATHVAR ~g-bb123~ #32
+ WRITE_ASCII DIALOG ~g-bbd123~
+ WRITE_ASCII 0x34 ~JRTFFKN~
+ 
+COPY ~%MOD_FOLDER%/cre/g-bb124.cre~ ~override~ // Ciało Kruchego Ogona / Body of Fragile Tail 
+COPY ~%MOD_FOLDER%/cre/g-bb125.cre~ ~override~ // Ciało Szczurołaka 1 / Body of Wererat 1 
+COPY ~%MOD_FOLDER%/cre/g-bb126.cre~ ~override~ // Ciało Szczurołaka 2 / Body of Wererat 2 
+
+COPY ~%MOD_FOLDER%/cre/g-bb127.cre~ ~override~ 
+ SAY NAME1 @400101 // Kokrachon  r1
+ SAY NAME2 @400101
+ WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~G-BB_KOKRACHON~))
+ ADD_CRE_ITEM ~PLUS1IM~ #0 #0 #0 ~IDENTIFIED~ ~lring~
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbn025~ #8
+ WRITE_ASCII DIALOG ~~ #8
+ WRITE_ASCII DEATHVAR ~~ #32
+ WRITE_BYTE 0x274 %kocachron%
+ WRITE_LONG 0x18 ~1~ // power level
+ WRITE_ASCII 0x34 ~g-bb167~
+ 
+COPY ~%MOD_FOLDER%/cre/g-bb128.cre~ ~override~ 
+ SAY NAME1 @400101 // Kocrachon r2 
+ SAY NAME2 @400101
+ WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~G-BB_KOKRACHON~))
+ ADD_CRE_ITEM ~PLUS1IM~ #0 #0 #0 ~IDENTIFIED~ ~lring~
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbn028~ #8
+ WRITE_ASCII DIALOG ~~ #8
+ WRITE_ASCII DEATHVAR ~~ #32
+ WRITE_BYTE 0x274 %kocachron_r2%
+ WRITE_ASCII 0x34 ~g-bb167~
+ WRITE_BYTE 0x270 ~128~ // NEUTRAL
+ 
+COPY_EXISTING  // Oryszek z Kanału enc. 1/ Thug from The Ditch enc. 1 
+ ~TWTHUG1A.cre~ ~override/g-bb129.cre~
+ ~TWTHUG1B.cre~ ~override/g-bb130.cre~
+ ~TWTHUG1C.cre~ ~override/g-bb131.cre~
+ ~TWTHUG1D.cre~ ~override/g-bb132.cre~
+ ~TWTHUG1E.cre~ ~override/g-bb133.cre~
+ ~TWTHUG1F.cre~ ~override/g-bb134.cre~
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbs002~ #8
+ WRITE_ASCII SCRIPT_DEFAULT ~~ #8
+ WRITE_ASCII DIALOG ~~ #8
+ WRITE_ASCII DEATHVAR ~~ #32
+ SAY NAME1 @400098
+ SAY NAME2 @400098
+ REPLACE_CRE_ITEM ~ISWD3D10~ #0 #0 #0 ~IDENTIFIED~ ~weapon1~
+ ADD_CRE_ITEM ~IMHOLDCR~ #0 #0 #0 ~IDENTIFIED~ ~helmet~
+ WRITE_LONG 0x14 ~1000~ // xp value
+ WRITE_LONG 0x18 ~1~ // power level 
+ WRITE_SHORT 0x24 ~60~ // current hp
+ WRITE_SHORT 0x26 ~60~ // max hp
+ WRITE_SHORT 0x46 ~0~ // natural ac
+ WRITE_SHORT 0x48 ~0~ // effective ac
+ WRITE_BYTE 0x52 ~10~ // THAC0
+ WRITE_BYTE 0x59 ~30~ // Fire resist. 
+ WRITE_BYTE 0x5a ~25~ // Cold resist.
+ WRITE_BYTE 0x5c ~25~ // Acid resist.
+ WRITE_BYTE 0x60 ~35~ // Slashing resist.
+ WRITE_BYTE 0x61 ~30~ // Crushing resist.
+ WRITE_BYTE 0x62 ~35~ // Piercing resist.
+ WRITE_BYTE 0x63 ~30~ // Missle resist.
+ WRITE_BYTE 0x234 ~13~ // Level first class
+ WRITE_BYTE 0x278 ~15~ // Strenght
+ WRITE_BYTE 0x23c ~16~ // Dexterity
+ WRITE_BYTE 0x23d ~15~ // Constitution
+ WRITE_BYTE 0x273 ~2~ // Class: fighter
+ WRITE_BYTE 0x270 ~255~ // ENEMY-ALLY
+ 
+COPY_EXISTING  // Oryszek z Kanału enc. 2 / Thug from The Ditch enc. 2 
+ ~THUGP1.cre~ ~override/g-bb135.cre~
+ ~THUGP2.cre~ ~override/g-bb136.cre~
+ ~THUGP2B.cre~ ~override/g-bb137.cre~
+ ~THUGP2C.cre~ ~override/g-bb138.cre~
+ ~THUGS1.cre~ ~override/g-bb139.cre~
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbn027~ #8
+ WRITE_ASCII SCRIPT_DEFAULT ~~ #8
+ WRITE_ASCII DIALOG ~~ #8
+ WRITE_ASCII DEATHVAR ~~ #32
+ SAY NAME1 @400098
+ SAY NAME2 @400098
+ REPLACE_CRE_ITEM ~ISWD3D10~ #0 #0 #0 ~IDENTIFIED~ ~weapon1~
+ ADD_CRE_ITEM ~IMHOLDCR~ #0 #0 #0 ~IDENTIFIED~ ~helmet~
+ WRITE_LONG 0x14 ~1000~ // xp value
+ WRITE_LONG 0x18 ~0~ // power level
+ WRITE_SHORT 0x24 ~60~ // current hp
+ WRITE_SHORT 0x26 ~60~ // max hp
+ WRITE_SHORT 0x46 ~0~ // natural ac
+ WRITE_SHORT 0x48 ~0~ // effective ac
+ WRITE_BYTE 0x52 ~10~ // THAC0
+ WRITE_BYTE 0x59 ~30~ // Fire resist. 
+ WRITE_BYTE 0x5a ~25~ // Cold resist.
+ WRITE_BYTE 0x5c ~25~ // Acid resist.
+ WRITE_BYTE 0x60 ~35~ // Slashing resist.
+ WRITE_BYTE 0x61 ~30~ // Crushing resist.
+ WRITE_BYTE 0x62 ~35~ // Piercing resist.
+ WRITE_BYTE 0x63 ~30~ // Missle resist.
+ WRITE_BYTE 0x234 ~13~ // Level first class
+ WRITE_BYTE 0x278 ~15~ // Strenght
+ WRITE_BYTE 0x23c ~16~ // Dexterity
+ WRITE_BYTE 0x23d ~15~ // Constitution
+ WRITE_BYTE 0x273 ~2~ // Class: fighter
+ WRITE_BYTE 0x270 ~128~ // NEUTRAL
+ WRITE_BYTE 0x274 %thug_r2%
+ 
+COPY ~%MOD_FOLDER%/cre/g-bb140.cre~ ~override~ // Abishai r2 spawn1 
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbn026~ #8
+ WRITE_ASCII SCRIPT_DEFAULT ~~ #8
+
+COPY ~%MOD_FOLDER%/cre/g-bb141.cre~ ~override~ 
+ SAY NAME1 @400102 // Strażnik Zagłady Vorrak Dismantle / Doomguard Vorrak Dismantle 1st cut in Residental
+ SAY NAME2 @400102
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-vorr~ #8
+ WRITE_ASCII DEATHVAR ~g-bb141~ #32
+ WRITE_ASCII DIALOG ~g-bbd141~ #8
+ WRITE_BYTE 0x8f ~16~
+ WRITE_ASCII 0x34 ~JRHLMKN~
+ 
+COPY ~%MOD_FOLDER%/cre/g-bb142.cre~ ~override~ 
+ SAY NAME1 @400103 // Strażnik Zagłady / Doomguard 1st cut in Residental Clausius
+ SAY NAME2 @400103
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-clau~ #8
+ WRITE_ASCII DEATHVAR ~g-bb142~ #32
+ WRITE_ASCII DIALOG ~g-bbd142~ #8
+ WRITE_BYTE 0x8f ~16~
+ WRITE_ASCII 0x34 ~JRHLMKN~
+ 
+COPY ~%MOD_FOLDER%/cre/g-bb143.cre~ ~override~ 
+ SAY NAME1 @400104 // Przeznaczony / Fated  1st cut in Residental
+ SAY NAME2 @400104
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbs001~ #8
+ WRITE_ASCII DEATHVAR ~g-bb143~ #32
+ WRITE_ASCII DIALOG ~g-bbd143~ #8
+ WRITE_BYTE 0x8f ~15~
+ WRITE_ASCII 0x34 ~JRHUMKN~
+ 
+COPY_EXISTING  // Oryszek z Kanału arg-00/ Thug from The Ditch arg-00 
+ ~TWTHUG1A.cre~ ~override/g-bb144.cre~
+ ~TWTHUG1B.cre~ ~override/g-bb145.cre~
+ ~TWTHUG1C.cre~ ~override/g-bb146.cre~
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbs005~ #8
+ WRITE_ASCII SCRIPT_DEFAULT ~~ #8
+ WRITE_ASCII DEATHVAR ~~ #32
+ SAY NAME1 @400098
+ SAY NAME2 @400098
+ REPLACE_CRE_ITEM ~ISWD3D10~ #0 #0 #0 ~IDENTIFIED~ ~weapon1~
+ ADD_CRE_ITEM ~IMHOLDCR~ #0 #0 #0 ~IDENTIFIED~ ~helmet~
+ WRITE_LONG 0x14 ~1000~ // xp value
+ WRITE_LONG 0x18 ~1~ // power level 
+ WRITE_SHORT 0x24 ~60~ // current hp
+ WRITE_SHORT 0x26 ~60~ // max hp
+ WRITE_SHORT 0x46 ~-2~ // natural ac
+ WRITE_SHORT 0x48 ~-2~ // effective ac
+ WRITE_BYTE 0x52 ~10~ // THAC0
+ WRITE_BYTE 0x59 ~30~ // Fire resist. 
+ WRITE_BYTE 0x5a ~25~ // Cold resist.
+ WRITE_BYTE 0x5c ~25~ // Acid resist.
+ WRITE_BYTE 0x60 ~35~ // Slashing resist.
+ WRITE_BYTE 0x61 ~30~ // Crushing resist.
+ WRITE_BYTE 0x62 ~35~ // Piercing resist.
+ WRITE_BYTE 0x63 ~30~ // Missle resist.
+ WRITE_BYTE 0x234 ~16~ // Level first class
+ WRITE_BYTE 0x278 ~15~ // Strenght
+ WRITE_BYTE 0x23c ~16~ // Dexterity
+ WRITE_BYTE 0x23d ~15~ // Constitution
+ WRITE_BYTE 0x273 ~2~ // Class: fighter
+ WRITE_BYTE 0x274 %thug_ditch%
+ 
+COPY_EXISTING  // Oryszek z Kanału arg-00 z ini / Thug from The Ditch from ini arg-00 
+ ~TWTHUG1D.cre~ ~override/g-bb147.cre~
+ ~TWTHUG1E.cre~ ~override/g-bb148.cre~
+ ~TWTHUG1F.cre~ ~override/g-bb149.cre~
+ WRITE_ASCII SCRIPT_DEFAULT ~g-bbs005~ #8
+ WRITE_ASCII DIALOG ~~ #8
+ WRITE_ASCII DEATHVAR ~~ #32
+ SAY NAME1 @400098
+ SAY NAME2 @400098
+ REPLACE_CRE_ITEM ~ISWD3D10~ #0 #0 #0 ~IDENTIFIED~ ~weapon1~
+ ADD_CRE_ITEM ~IMHOLDCR~ #0 #0 #0 ~IDENTIFIED~ ~helmet~
+ WRITE_LONG 0x14 ~1000~ // xp value
+ WRITE_LONG 0x18 ~1~ // power level 
+ WRITE_SHORT 0x24 ~60~ // current hp
+ WRITE_SHORT 0x26 ~60~ // max hp
+ WRITE_SHORT 0x46 ~-2~ // natural ac
+ WRITE_SHORT 0x48 ~-2~ // effective ac
+ WRITE_BYTE 0x52 ~10~ // THAC0
+ WRITE_BYTE 0x59 ~30~ // Fire resist. 
+ WRITE_BYTE 0x5a ~25~ // Cold resist.
+ WRITE_BYTE 0x5c ~25~ // Acid resist.
+ WRITE_BYTE 0x60 ~35~ // Slashing resist.
+ WRITE_BYTE 0x61 ~30~ // Crushing resist.
+ WRITE_BYTE 0x62 ~35~ // Piercing resist.
+ WRITE_BYTE 0x63 ~30~ // Missle resist.
+ WRITE_BYTE 0x234 ~16~ // Level first class
+ WRITE_BYTE 0x278 ~15~ // Strenght
+ WRITE_BYTE 0x23c ~16~ // Dexterity
+ WRITE_BYTE 0x23d ~15~ // Constitution
+ WRITE_BYTE 0x273 ~2~ // Class: fighter
+ WRITE_BYTE 0x274 %thug_ditch%
+ 
+COPY ~%MOD_FOLDER%/cre/g-bb150.cre~ ~override~ 
+ SAY NAME1 @400105 // UVB Wolf Sharikira 
+ SAY NAME2 @400105
+ WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~G-BB_WOLF_SHARIKIRA~))
+ ADD_CRE_ITEM ~PLUS1IM~ #0 #0 #0 ~IDENTIFIED~ ~lring~
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbn031~ #8
+ WRITE_ASCII DIALOG ~g-bbd150~ #8
+ WRITE_ASCII DEATHVAR ~g-bb150~ #32
+ WRITE_BYTE 0x274 %ysgard_1%
+ 
+COPY ~%MOD_FOLDER%/cre/g-bb152.cre~ ~override~ // UVB Chair 
+ SAY NAME1 ~~
+ SAY NAME2 ~~
+ WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~G-BB_UVB_CHAIR~))
+ ADD_CRE_ITEM ~PLUS6IM~ #0 #0 #0 ~IDENTIFIED~ ~lring~
+ ADD_CRE_ITEM ~NO_CURSE~ #0 #0 #0 ~IDENTIFIED~ ~rring~
+ ADD_CRE_ITEM ~IMHOLDCR~ #0 #0 #0 ~IDENTIFIED~ ~helmet~
+ WRITE_ASCII SCRIPT_OVERRIDE ~~ #8
+ WRITE_ASCII DIALOG ~~ #8
+ WRITE_ASCII DEATHVAR ~g-bb152~ #32
+ //WRITE_BYTE 0x274 %ysgard_1%
+ 
+COPY ~%MOD_FOLDER%/cre/g-bb153.cre~ ~override~ // UVB Chair Pdead 
+ SAY NAME1 ~~
+ SAY NAME2 ~~
+ WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~G-BB_UVB_CHAIR_PDEAD~))
+ ADD_CRE_ITEM ~PLUS6IM~ #0 #0 #0 ~IDENTIFIED~ ~lring~
+ ADD_CRE_ITEM ~NO_CURSE~ #0 #0 #0 ~IDENTIFIED~ ~rring~
+ ADD_CRE_ITEM ~IMHOLDCR~ #0 #0 #0 ~IDENTIFIED~ ~helmet~
+ WRITE_ASCII SCRIPT_OVERRIDE ~~ #8
+ WRITE_ASCII DIALOG ~~ #8
+ WRITE_ASCII DEATHVAR ~g-bb153~ #32
+ //WRITE_BYTE 0x274 %ysgard_2%
+ 
+COPY ~%MOD_FOLDER%/cre/g-bb154.cre~ ~override~ // UVB Sit 
+ WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~G-BB_UVB_SIT~))
+ SAY NAME1 ~~
+ SAY NAME2 ~~
+ ADD_CRE_ITEM ~PLUS3IM~ #0 #0 #0 ~IDENTIFIED~ ~lring~
+ ADD_CRE_ITEM ~NO_CURSE~ #0 #0 #0 ~IDENTIFIED~ ~rring~
+ ADD_CRE_ITEM ~IMHOLDCR~ #0 #0 #0 ~IDENTIFIED~ ~helmet~
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbn030~ #8
+ WRITE_ASCII DIALOG ~~ #8
+ WRITE_ASCII DEATHVAR ~g-bb154~ #32
+ WRITE_BYTE 0x274 %ysgard_1%
+ 
+COPY ~%MOD_FOLDER%/cre/g-bb155.cre~ ~override~	
+ WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~G-BB_UVB_FORWARD~))
+ SAY NAME1 @400106 // UVB Forward
+ SAY NAME2 @400106
+ ADD_CRE_ITEM ~PLUS6IM~ #0 #0 #0 ~IDENTIFIED~ ~lring~
+ ADD_CRE_ITEM ~NO_CURSE~ #0 #0 #0 ~IDENTIFIED~ ~rring~
+ ADD_CRE_ITEM ~IMHOLDCR~ #0 #0 #0 ~IDENTIFIED~ ~helmet~
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbn032~ #8
+ WRITE_ASCII DIALOG ~~ #8
+ WRITE_ASCII DEATHVAR ~g-bb155~ #32
+ WRITE_BYTE 0x274 %ysgard_1%
+ 
+COPY ~%MOD_FOLDER%/cre/g-bb156.cre~ ~override~  
+ WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~G-BB_UVB_DLG~))
+ SAY NAME1 @400106 // UVB Dialog
+ SAY NAME2 @400106
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbn029~ #8
+ WRITE_ASCII DIALOG ~g-bbd156~ #8
+ WRITE_ASCII DEATHVAR ~g-bb156~ #32
+ WRITE_BYTE 0x274 %ysgard_1%
+ WRITE_ASCII 0x34 ~g-bb156~
+ 
+ 
+ COPY ~%MOD_FOLDER%/cre/g-bb160.cre~ ~override~  
+ SAY NAME1 @500118 // MORTE W KUBEŁ
+ SAY NAME2 @500118
+  WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~G-BB_FAKE_PC~))
+  WRITE_ASCII DIALOG ~g-bbd160~ #8
+ WRITE_ASCII DEATHVAR ~g-bb160~ #32
+
+ 
+COPY ~%MOD_FOLDER%/cre/g-bb157.cre~ ~override~
+ SAY NAME1 @400107 // Saunamistrz / Saunamaster
+ SAY NAME2 @400107
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbs001~ #8
+ WRITE_ASCII DIALOG ~g-bbd157~ #8
+ //WRITE_ASCII DEATHVAR ~g-bb157~ #32
+ WRITE_ASCII 0x280 ~g-bb157~ #32
+ WRITE_ASCII 0x34 ~JRMHTKN~
+ 
+ // g-bb158 - Kabatum's piano
+ 
+COPY ~%MOD_FOLDER%/cre/g-bb159.cre~ ~override~
+ SAY NAME1 @400108 // Archon Słowa / Word Archon 
+ SAY NAME2 @400108
+ WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~G-BB_WARCHON~))
+ ADD_CRE_ITEM ~PLUS3IM~ #0 #0 #0 ~IDENTIFIED~ ~lring~
+ ADD_CRE_ITEM ~NO_CURSE~ #0 #0 #0 ~IDENTIFIED~ ~rring~
+ ADD_CRE_ITEM ~IMHOLDCR~ #0 #0 #0 ~IDENTIFIED~ ~helmet~
+ ADD_CRE_ITEM ~g-bbi047~ #0 #0 #0 ~IDENTIFIED~ ~inv15~
+ ADD_CRE_ITEM ~SPWI805~ #0 #0 #0 ~IDENTIFIED~ ~inv14~
+ ADD_CRE_ITEM ~SPWI909~ #0 #0 #0 ~IDENTIFIED~ ~inv13~
+ ADD_CRE_ITEM ~SPPR201~ #0 #0 #0 ~IDENTIFIED~ ~inv12~
+ ADD_CRE_ITEM ~SPPR502~ #2 #0 #0 ~IDENTIFIED~ ~inv11~
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbn034~ #8
+ WRITE_ASCII DIALOG ~g-bbd159~ #8
+ WRITE_ASCII DEATHVAR ~g-bb159~ #32
+ WRITE_ASCII 0x34 ~g-bb159~
+
+ 
+COPY ~%MOD_FOLDER%/cre/g-bb161.cre~ ~override~ 
+ SAY NAME1 @400109 // Narthuul Pusta Szczęka / Narthuul the Hollow Maw 
+ SAY NAME2 @400110
+ WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~G-BB_NARTHUUL~))
+ ADD_CRE_ITEM ~PLUS1IM~ #0 #0 #0 ~IDENTIFIED~ ~lring~
+ ADD_CRE_ITEM ~NO_CURSE~ #0 #0 #0 ~IDENTIFIED~ ~rring~
+ ADD_CRE_ITEM ~IMHOLDCR~ #0 #0 #0 ~IDENTIFIED~ ~helmet~
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbn035~ #8
+ WRITE_ASCII DIALOG ~g-bbd161~ #8
+ WRITE_ASCII DEATHVAR ~g-bb161~ #32
+ WRITE_BYTE 0x272 %spiderlike%
+ WRITE_BYTE 0x244 %kiaransalee%
+ ADD_CRE_ITEM ~g-bbi061~ #1 #0 #0 ~IDENTIFIED~ ~INV15~
+ ADD_CRE_ITEM ~NO_CURSE~ #0 #0 #0 ~IDENTIFIED~ ~rring~
+ ADD_CRE_ITEM ~REGEN20~ #0 #0 #0 ~IDENTIFIED~ ~helmet~
+ WRITE_ASCII 0x34 ~JRTGTKN~
+ 
+COPY ~%MOD_FOLDER%/cre/g-bb163.cre~ ~override~
+ SAY NAME1 @400097 // Mimik 
+ SAY NAME2 @400097
+ WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~G-BB_MIMIK~))
+ ADD_CRE_ITEM ~PLUS1IM~ #0 #0 #0 ~IDENTIFIED~ ~lring~
+ ADD_CRE_ITEM ~g-bbi123~ #0 #0 #0 ~IDENTIFIED~ ~rring~
+ ADD_CRE_ITEM ~IMHOLDCR~ #0 #0 #0 ~IDENTIFIED~ ~helmet~
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-mimc~ #8
+ WRITE_ASCII DIALOG ~g-bbd163~ #8
+ WRITE_ASCII DEATHVAR ~g-bb163~ #32
+ WRITE_ASCII 0x34 ~g-bb163~
+ 
+COPY ~%MOD_FOLDER%/cre/g-bb164.cre~ ~override~ // Slaad
+ SAY NAME1 @400177 
+ SAY NAME2 @400177
+ WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~G-BB_SLAAD~))
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbs003~ #8
+ WRITE_BYTE 0x90 %brill%
+ 
+COPY ~%MOD_FOLDER%/cre/g-bb165.cre~ ~override~ // Gereleth
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbn036~ #8
+ WRITE_ASCII DIALOG ~g-bbd165~ #8
+ WRITE_BYTE 0x90 %styxo_1%
+ 
+COPY ~%MOD_FOLDER%/cre/g-bb166.cre~ ~override~ // R. Abishai
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbn036~ #8
+ WRITE_ASCII DIALOG ~g-bbd166~ #8
+ WRITE_BYTE 0x90 %styxo_1%
+ 
+COPY ~%MOD_FOLDER%/cre/g-bb167.cre~ ~override~ 
+ SAY NAME1 @400116 // Elvra Syne
+ SAY NAME2 @400116
+ WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~G-BB_KOKRACHON~))
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbn038~ #8
+ WRITE_ASCII DIALOG ~g-bbd167~ #8
+ WRITE_ASCII DEATHVAR ~g-bb167~ #32
+ WRITE_ASCII 0x34 ~g-bb167~
+ 
+COPY ~%MOD_FOLDER%/cre/g-bb169.cre~ ~override~
+ SAY NAME1 @400112 // Podejrzany Bies / Shady Ice Devil - Cut Mephistar
+ SAY NAME2 @400112
+ WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~G-BB_GELUGON~))
+ WRITE_ASCII SCRIPT_OVERRIDE ~~ #8
+ WRITE_ASCII DIALOG ~g-bbd169~ #8
+ WRITE_ASCII DEATHVAR ~g-bb169~ #32
+ WRITE_ASCII 0x34 ~g-bb003~
+  
+COPY ~%MOD_FOLDER%/cre/g-bb170.cre~ ~override~ 
+ SAY NAME1 @400113 // Zamaskowany / Masked Man - Cut Mephistar
+ SAY NAME2 @400113
+ WRITE_ASCII SCRIPT_OVERRIDE ~~ #8
+ WRITE_ASCII DIALOG ~g-bbd170~ #8
+ WRITE_ASCII DEATHVAR ~g-bb170~ #32
+ WRITE_ASCII 0x34 ~JRCTMKN~
+  
+COPY ~%MOD_FOLDER%/cre/g-bb171.cre~ ~override~ 
+ SAY NAME1 @400111 // Antilla
+ SAY NAME2 @400111
+ WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~G-BB_ANTILLA~))
+ ADD_CRE_ITEM ~PLUS3IM~ #0 #0 #0 ~IDENTIFIED~ ~lring~
+ ADD_CRE_ITEM ~NO_CURSE~ #0 #0 #0 ~IDENTIFIED~ ~rring~
+ ADD_CRE_ITEM ~IMHOLDCR~ #0 #0 #0 ~IDENTIFIED~ ~helmet~
+ WRITE_ASCII SCRIPT_OVERRIDE ~~ #8
+ WRITE_ASCII DIALOG ~g-bbd171~ #8
+ WRITE_ASCII DEATHVAR ~g-bb171~ #32
+ WRITE_ASCII 0x34 ~g-bb171~
+ 
+ // 172 - Map
+ 
+COPY ~%MOD_FOLDER%/cre/g-bb173.cre~ ~override~ // Kornugon - Nemezia
+ ADD_CRE_ITEM ~PLUS2IM~ #0 #0 #0 ~IDENTIFIED~ ~lring~
+ ADD_CRE_ITEM ~NO_CURSE~ #0 #0 #0 ~IDENTIFIED~ ~rring~
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbs002~ #8
+ WRITE_ASCII DIALOG ~~ #8
+ WRITE_ASCII DEATHVAR ~g-bb173~ #32
+ //WRITE_ASCII 0x34 ~~
+ 
+COPY ~%MOD_FOLDER%/cre/g-bb174.cre~ ~override~ // Abishai Black - Nemezia
+ ADD_CRE_ITEM ~PLUS2IM~ #0 #0 #0 ~IDENTIFIED~ ~lring~
+ ADD_CRE_ITEM ~NO_CURSE~ #0 #0 #0 ~IDENTIFIED~ ~rring~
+ //WRITE_ASCII SCRIPT_OVERRIDE ~~ #8
+ WRITE_ASCII DIALOG ~~ #8
+ WRITE_ASCII DEATHVAR ~g-bb174~ #32
+ //WRITE_ASCII 0x34 ~~
+
+COPY ~%MOD_FOLDER%/cre/g-bb175.cre~ ~override~ // Modron 1, Pimpek / Patch (Patch quest)
+ ADD_CRE_ITEM ~PLUS2IM~ #0 #0 #0 ~IDENTIFIED~ ~lring~
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbn006~ #8
+ WRITE_ASCII DIALOG ~g-bbd175~ #8
+ WRITE_ASCII DEATHVAR ~g-bb175~ #32
+ WRITE_ASCII 0x34 ~JRMDRKN~
+ 
+COPY ~%MOD_FOLDER%/cre/g-bb176.cre~ ~override~ // Modron 2 (Patch quest)
+ ADD_CRE_ITEM ~PLUS1IM~ #0 #0 #0 ~IDENTIFIED~ ~lring~
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbn006~ #8
+ WRITE_ASCII DIALOG ~g-bbd176~ #8
+ WRITE_ASCII DEATHVAR ~g-bb176~ #32
+ WRITE_ASCII 0x34 ~JRMDRKN~
+ 
+COPY ~%MOD_FOLDER%/cre/g-bb177.cre~ ~override~ // Modron 3, broken (Patch quest)
+ SAY NAME1 @400115
+ SAY NAME2 @400115
+ WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~G-BB_BMDR~))
+ ADD_CRE_ITEM ~PLUS2IM~ #0 #0 #0 ~IDENTIFIED~ ~lring~
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-wurr~ #8
+ WRITE_ASCII DIALOG ~g-bbd177~ #8
+ WRITE_ASCII DEATHVAR ~g-bb177~ #32
+ WRITE_ASCII 0x34 ~JRMDRKN~
+ 
+COPY ~%MOD_FOLDER%/cre/g-bb178.cre~ ~override~ 
+ SAY NAME1 @400117 // Mezzoloth 1 Styx O
+ SAY NAME2 @400117
+ WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~G-BB_MEZZOLOTH~))
+ ADD_CRE_ITEM ~NO_CURSE~ #0 #0 #0 ~IDENTIFIED~ ~rring~
+ ADD_CRE_ITEM ~IMHOLDCR~ #0 #0 #0 ~IDENTIFIED~ ~helmet~
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbn039~ #8
+ WRITE_ASCII DIALOG ~g-bbd178~ #8
+ WRITE_ASCII DEATHVAR ~g-bb178~ #32
+ WRITE_ASCII 0x34 ~g-bb178~
+ WRITE_BYTE 0x90 %pimpek%
+ 
+COPY ~%MOD_FOLDER%/cre/g-bb179.cre~ ~override~ 
+ SAY NAME1 @400117 // Mezzoloth 2 Styx O
+ SAY NAME2 @400117
+ WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~G-BB_MEZZOLOTH~))
+ ADD_CRE_ITEM ~NO_CURSE~ #0 #0 #0 ~IDENTIFIED~ ~rring~
+ ADD_CRE_ITEM ~IMHOLDCR~ #0 #0 #0 ~IDENTIFIED~ ~helmet~
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbn040~ #8
+ WRITE_ASCII DIALOG ~g-bbd178~ #8
+ WRITE_ASCII DEATHVAR ~g-bb179~ #32
+ WRITE_ASCII 0x34 ~g-bb178~
+ WRITE_BYTE 0x90 %pimpek%
+
+COPY ~%MOD_FOLDER%/cre/g-bb181.cre~ ~override~ 
+ SAY NAME1 @400119 // Frędzelknot Drohm / Tasselwick Drohm
+ SAY NAME2 @400119
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbs001~ #8
+ WRITE_ASCII DIALOG ~g-bbd181~ #8
+ WRITE_ASCII DEATHVAR ~g-bb181~ #32
+ WRITE_ASCII 0x34 ~JRHUMKN~
+ 
+COPY ~%MOD_FOLDER%/cre/g-bb182.cre~ ~override~ 
+ SAY NAME1 @400120 // Członek Przeznaczonych / Fated Member
+ SAY NAME2 @400120
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbn041~ #8
+ WRITE_ASCII DIALOG ~g-bbd183~ #8
+ WRITE_ASCII DEATHVAR ~g-bb182~ #32
+ WRITE_ASCII 0x34 ~JRGODKN~
+ WRITE_BYTE 0x274 %ysgard_1%
+ 
+COPY ~%MOD_FOLDER%/cre/g-bb183.cre~ ~override~ 
+ SAY NAME1 @400120 // Członek Przeznaczonych / Fated Member
+ SAY NAME2 @400120
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbn041~ #8
+ WRITE_ASCII DIALOG ~g-bbd183~ #8
+ WRITE_ASCII DEATHVAR ~g-bb183~ #32
+ WRITE_ASCII 0x34 ~JRGODKN~
+ WRITE_BYTE 0x274 %ysgard_1%
+ 
+COPY ~%MOD_FOLDER%/cre/g-bb184.cre~ ~override~ 
+ SAY NAME1 @400120 // Członek Przeznaczonych / Fated Member
+ SAY NAME2 @400120
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbn041~ #8
+ WRITE_ASCII DIALOG ~g-bbd183~ #8
+ WRITE_ASCII DEATHVAR ~g-bb184~ #32
+ WRITE_ASCII 0x34 ~JRGODKN~
+ WRITE_BYTE 0x274 %ysgard_1%
+ 
+COPY ~%MOD_FOLDER%/cre/g-bb185.cre~ ~override~ 
+ SAY NAME1 @400120 // Członek Przeznaczonych / Fated Member
+ SAY NAME2 @400120
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbn041~ #8
+ WRITE_ASCII DIALOG ~g-bbd183~ #8
+ WRITE_ASCII DEATHVAR ~g-bb185~ #32
+ WRITE_ASCII 0x34 ~JRGODKN~
+ WRITE_BYTE 0x274 %ysgard_1%
+ 
+COPY ~%MOD_FOLDER%/cre/g-bb186.cre~ ~override~ 
+ SAY NAME1 @400120 // Członek Przeznaczonych / Fated Member
+ SAY NAME2 @400120
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbn041~ #8
+ WRITE_ASCII DIALOG ~g-bbd183~ #8
+ WRITE_ASCII DEATHVAR ~g-bb186~ #32
+ WRITE_ASCII 0x34 ~JRGODKN~
+ WRITE_BYTE 0x274 %ysgard_1%
+ 
+COPY ~%MOD_FOLDER%/cre/g-bb187.cre~ ~override~ 
+ SAY NAME1 @400120 // Członek Przeznaczonych / Fated Member
+ SAY NAME2 @400120
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbn041~ #8
+ WRITE_ASCII DIALOG ~g-bbd183~ #8
+ WRITE_ASCII DEATHVAR ~g-bb187~ #32
+ WRITE_ASCII 0x34 ~JRGODKN~
+ WRITE_BYTE 0x274 %ysgard_1%
+ 
+ COPY ~%MOD_FOLDER%/cre/g-bb188.cre~ ~override~
+ SAY NAME1 @400121 // Wędrowny handlarz / Cheapjack
+ SAY NAME2 @400121
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbs020~ #8
+ WRITE_ASCII DIALOG ~g-bbd188~ #8
+ WRITE_ASCII DEATHVAR ~g-bb188~ #32
+ WRITE_ASCII 0x34 ~JRMHTKN~
+
+  COPY ~%MOD_FOLDER%/cre/g-bb189.cre~ ~override~
+ SAY NAME1 @300322 // Ambush narration
+ SAY NAME2 @300322
+ WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~G-BB_FAKE_PC~))
+ WRITE_ASCII SCRIPT_OVERRIDE ~~ #8
+ WRITE_ASCII DIALOG ~g-bbd189~ #8
+ WRITE_ASCII DEATHVAR ~g-bb189~ #32
+ WRITE_ASCII 0x34 ~~
+
+   COPY ~%MOD_FOLDER%/cre/g-bb190.cre~ ~override~
+ SAY NAME1 @400123 // Raid narration
+ SAY NAME2 @400123
+ WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~G-BB_FAKE_PC~))
+ WRITE_ASCII SCRIPT_OVERRIDE ~~ #8
+ WRITE_ASCII DIALOG ~g-bbd190~ #8
+ WRITE_ASCII DEATHVAR ~g-bb190~ #32
+ WRITE_ASCII 0x34 ~~
+
+  COPY ~%MOD_FOLDER%/cre/g-bb191.cre~ ~override~
+ SAY NAME1 @400124 // Raid Godsmen
+ SAY NAME2 @400124
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-raidA~ #8
+ WRITE_ASCII DIALOG ~~ #8
+ WRITE_ASCII DEATHVAR ~g-bb191~ #32
+ WRITE_ASCII 0x34 ~~
+
+    COPY ~%MOD_FOLDER%/cre/g-bb192.cre~ ~override~
+ SAY NAME1 @400125 // Raid Dustmen
+ SAY NAME2 @400125
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-raidD~ #8
+ WRITE_ASCII DIALOG ~~ #8
+ WRITE_ASCII DEATHVAR ~g-bb192~ #32
+ WRITE_ASCII 0x34 ~~
+
+   COPY ~%MOD_FOLDER%/cre/g-bb193.cre~ ~override~
+ SAY NAME1 @400126 // chaositect
+ SAY NAME2 @400126
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-rgst~ #8
+ WRITE_ASCII DIALOG ~g-bbd193~ #8
+ WRITE_ASCII DEATHVAR ~g-bb193~ #32
+ WRITE_ASCII 0x34 ~~
+
+   COPY ~%MOD_FOLDER%/cre/g-bb194.cre~ ~override~
+ SAY NAME1 @400127 // Local Artist 1
+ SAY NAME2 @400127
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-rgst~ #8
+ WRITE_ASCII DIALOG ~~ #8
+ WRITE_ASCII DEATHVAR ~g-bb194~ #32
+ 
+
+   COPY ~%MOD_FOLDER%/cre/g-bb195.cre~ ~override~
+ SAY NAME1 @400128 //Local Artist 1
+ SAY NAME2 @400128
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-rgst~ #8
+ WRITE_ASCII DIALOG ~~ #8
+ WRITE_ASCII DEATHVAR ~g-bb195~ #32
+
+
+   COPY ~%MOD_FOLDER%/cre/g-bb196.cre~ ~override~
+ SAY NAME1 @400129 // Local Artist 1
+ SAY NAME2 @400129
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-rgst~ #8
+ WRITE_ASCII DIALOG ~~ #8
+ WRITE_ASCII DEATHVAR ~g-bb196~ #32
+ 
+
+   COPY ~%MOD_FOLDER%/cre/g-bb197.cre~ ~override~
+ SAY NAME1 @400130 // Raid Sensate 4
+ SAY NAME2 @400130
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-rgst~ #8
+ WRITE_ASCII DIALOG ~~ #8
+ WRITE_ASCII DEATHVAR ~g-bb197~ #32
+ WRITE_ASCII 0x34 ~~
+
+   COPY ~%MOD_FOLDER%/cre/g-bb198.cre~ ~override~
+ SAY NAME1 @400131 // Local Artist 1
+ SAY NAME2 @400131
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-rgst~ #8
+ WRITE_ASCII DIALOG ~~ #8
+ WRITE_ASCII DEATHVAR ~g-bb198~ #32
+ 
+   COPY ~%MOD_FOLDER%/cre/g-bb199.cre~ ~override~
+ SAY NAME1 @400132 // Raid harmonium
+ SAY NAME2 @400132
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-raidA~ #8
+ WRITE_ASCII DIALOG ~~ #8
+ WRITE_ASCII DEATHVAR ~g-bb199~ #32
+ WRITE_ASCII 0x34 ~~
+
+    COPY ~%MOD_FOLDER%/cre/g-bb200.cre~ ~override~
+ SAY NAME1 @400133 // Raid Berserker
+ SAY NAME2 @400133
+ WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~G-BB_BERSERKER~))
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-raid~ #8
+ WRITE_ASCII DIALOG ~~ #8
+ WRITE_ASCII DEATHVAR ~g-bb200~ #32
+ WRITE_ASCII 0x34 ~~
+ 
+
+ COPY ~%MOD_FOLDER%/cre/g-bb201.cre~ ~override~
+ WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~G-BB_UVB_FORWARD~))
+ SAY NAME1 @400106 // UVB Forward
+ SAY NAME2 @400106
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-ulf~ #8
+ WRITE_ASCII DIALOG ~g-bbd156~ #8
+ WRITE_ASCII DEATHVAR ~g-bb201~ #32
+ WRITE_BYTE 0x274 %ysgard_1%
+  
+  COPY ~%MOD_FOLDER%/cre/g-bb207.cre~ ~override~
+ WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~G-BB_UVB_FORWARD~))
+ SAY NAME1 @400106 // UVB Forward
+ SAY NAME2 @400106
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbn031~ #8
+ WRITE_ASCII DIALOG ~g-bbd156~ #8
+ WRITE_ASCII DEATHVAR ~g-bb207~ #32
+ WRITE_BYTE 0x274 %ysgard_1%
+
+      COPY ~%MOD_FOLDER%/cre/g-bb203.cre~ ~override~
+ SAY NAME1 @400135 // Doomguard
+ SAY NAME2 @400135
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-raid2~ #8
+ WRITE_ASCII DIALOG ~~ #8
+ WRITE_ASCII DEATHVAR ~g-bb203~ #32
+ WRITE_ASCII 0x34 ~~
+ WRITE_BYTE 0x274 %raid_doom%
+
+
+
+     COPY ~%MOD_FOLDER%/cre/g-bb202.cre~ ~override~
+ SAY NAME1 @400134 // Kuo Toa Victim                    -> NOT PART OF RAID!
+ SAY NAME2 @400134
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbn042~ #8
+ WRITE_ASCII DIALOG ~g-bbd202~ #8
+ WRITE_ASCII DEATHVAR ~g-bb202~ #32
+ WRITE_ASCII 0x34 ~~
+
+ COPY ~%MOD_FOLDER%/cre/g-bb204.cre~ ~override~
+ SAY NAME1 @400136 // Kuo Toa friend 1
+ SAY NAME2 @400136
+ WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~G-BB_KUOTOAR~))
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-kuof~ #8
+ WRITE_ASCII DIALOG ~g-bbd204~ #8
+ WRITE_BYTE 0x90 %kuotoa%
+ WRITE_ASCII 0x34 ~g-bb015~
+
+  //COPY ~%MOD_FOLDER%/cre/g-bb205.cre~ ~override~
+ //SAY NAME1 @400136 // Kuo Toa friend 1
+ //SAY NAME2 @400136
+ //WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~G-BB_KUOTOAR~))
+ //WRITE_ASCII SCRIPT_OVERRIDE ~g-kuo~ #8
+ //WRITE_ASCII DIALOG ~g-bbd205~ #8
+ //WRITE_BYTE 0x90 %kuotoa%
+ //WRITE_ASCII 0x34 ~g-bb015~
+
+  //COPY ~%MOD_FOLDER%/cre/g-bb206.cre~ ~override~
+ //SAY NAME1 @400136 // Kuo Toa friend 1
+ //SAY NAME2 @400136
+ //WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~G-BB_KUOTOAR~))
+ //WRITE_ASCII SCRIPT_OVERRIDE ~g-kuo~ #8
+ //WRITE_ASCII DIALOG ~g-bbd206~ #8
+ //WRITE_BYTE 0x90 %kuotoa%
+ //WRITE_ASCII 0x34 ~g-bb015~
+
+COPY ~%MOD_FOLDER%/cre/g-bb208.cre~ ~override~ 
+ SAY NAME1 @400139 // Ideal Beach Body 
+ SAY NAME2 @400139
+ WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~G-BB_PBB~))
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-crab~ #8
+ WRITE_ASCII DEATHVAR ~g-bb208~ #32 
+ WRITE_ASCII DIALOG ~g-bbd208~ #8
+ WRITE_ASCII 0x34 ~JRHLMKN~
+
+COPY ~%MOD_FOLDER%/cre/g-bb209.cre~ ~override~ 
+ SAY NAME1 @400138 // Skppr 
+ SAY NAME2 @400138
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbskp1~ #8
+ WRITE_ASCII DEATHVAR ~g-bb209~ #32 
+ WRITE_ASCII DIALOG ~g-bbd209~ #8
+  WRITE_ASCII 0x280 ~g-bb209~ #32
+ WRITE_ASCII 0x34 ~JRHLMKN~
+ 
+ COPY ~%MOD_FOLDER%/cre/g-bb210.cre~ ~override~ 
+ SAY NAME1 @400138 // Skppr 
+ SAY NAME2 @400138
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbskp1~ #8
+ WRITE_ASCII DEATHVAR ~g-bb210~ #32 
+ WRITE_ASCII DIALOG ~g-bbd209~ #8
+  WRITE_ASCII 0x280 ~g-bb210~ #32
+ WRITE_ASCII 0x34 ~JRHLMKN~
+ 
+ COPY ~%MOD_FOLDER%/cre/g-bb214.cre~ ~override~
+ SAY NAME1 @400070 // Feeling child
+ SAY NAME2 @400070
+ WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~G-BB_HOLLER~))
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-run~
+ WRITE_ASCII DEATHVAR ~g-bb214~ 
+ WRITE_ASCII DIALOG ~g-bb214~
+ //WRITE_ASCII 0x34 ~g-bb009~
+ 
+  COPY ~%MOD_FOLDER%/cre/g-bb215.cre~ ~override~ 
+ SAY NAME1 @400140 // Trasson 
+ SAY NAME2 @400140
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-thra~ #8
+ WRITE_ASCII DEATHVAR ~g-bb215~ #32 
+ WRITE_ASCII DIALOG ~g-bbd215~ #8
+
+COPY ~%MOD_FOLDER%/cre/g-bb216.cre~ ~override~
+ SAY NAME1 @400141 // Port Tout
+ SAY NAME2 @400141
+ WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~G-BB_HOLLER~))
+ WRITE_ASCII DEATHVAR ~g-bb216~ 
+ WRITE_ASCII DIALOG ~g-bbd216~
+ WRITE_ASCII 0x34 ~g-bb009~
+
+COPY ~%MOD_FOLDER%/cre/g-bb217.cre~ ~override~
+ SAY NAME1 @400030 // Captain Secondthought
+ SAY NAME2 @400030
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-rafts~
+ WRITE_ASCII DEATHVAR ~g-bb217~ #32
+ WRITE_ASCII DIALOG ~g-bbd217~ #8
+  WRITE_ASCII 0x34 ~JRHLMKN~
+ 
+ COPY ~%MOD_FOLDER%/cre/g-bb218.cre~ ~override~ // R. Abishai Port
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bssn~ #8
+ WRITE_ASCII DIALOG ~g-bbd218~ #8
+  WRITE_ASCII DEATHVAR ~g-bb218~ #32
+  
+COPY ~%MOD_FOLDER%/cre/g-bb219.cre~ ~override~
+ SAY NAME1 @400142 // Were-shack manager
+ SAY NAME2 @400142
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbs001~
+ WRITE_ASCII DEATHVAR ~g-bb219~ #32
+ WRITE_ASCII DIALOG ~g-bbd219~ #8
+ 
+ COPY ~%MOD_FOLDER%/cre/g-bb220.cre~ ~override~
+ SAY NAME1 @400143 // Poirat
+ SAY NAME2 @400143
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-orvw~
+ WRITE_ASCII DEATHVAR ~g-bb220~ #32
+ WRITE_ASCII DIALOG ~g-bbd220~ #8
+ 
+ COPY ~%MOD_FOLDER%/cre/g-bb221.cre~ ~override~
+ SAY NAME1 @400144 // Expert
+ SAY NAME2 @400144
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbs001~
+ WRITE_ASCII DEATHVAR ~g-bb221~ #32
+ WRITE_ASCII DIALOG ~g-bbd221~ #8
+ 
+ //COPY ~%MOD_FOLDER%/cre/g-bb222.cre~ ~override~
+ //SAY NAME1 @400045 // Forbidden Stone
+ //SAY NAME2 @400045
+ //WRITE_ASCII SCRIPT_OVERRIDE ~g-bbs001~
+ //WRITE_ASCII DEATHVAR ~g-bb222~ #32
+ //WRITE_ASCII DIALOG ~g-bbd222~ #8
+ 
+ COPY ~%MOD_FOLDER%/cre/g-bb223.cre~ ~override~
+ SAY NAME1 @302015 // Drzwi
+ SAY NAME2 @302015
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbs001~
+ WRITE_ASCII DEATHVAR ~g-bb223~ #32
+ WRITE_ASCII DIALOG ~g-bbd100~ #8
+ 
+  COPY ~%MOD_FOLDER%/cre/g-bb224.cre~ ~override~
+ SAY NAME1 @400146 // Animator
+ SAY NAME2 @400146
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-anmtr0~
+ WRITE_ASCII DEATHVAR ~g-bb224~ #32
+ WRITE_ASCII DIALOG ~g-bbd224~ #8
+ 
+   COPY ~%MOD_FOLDER%/cre/g-bb225.cre~ ~override~ // zielona kobieta od malahaia
+ SAY NAME1 @400156 // 
+ SAY NAME2 @400156
+ WRITE_ASCII SCRIPT_OVERRIDE ~~
+ WRITE_ASCII DEATHVAR ~g-bb225~ #32
+ WRITE_ASCII DIALOG ~~ #8
+ 
+ COPY ~%MOD_FOLDER%/cre/g-bb226.cre~ ~override~
+ SAY NAME1 @400147 //Skald
+ SAY NAME2 @400147
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-skald~ #8
+ WRITE_ASCII DIALOG ~g-bbd226~ #8
+ WRITE_ASCII DEATHVAR ~g-bb226~ #32
+ WRITE_ASCII 0x34 ~~
+ 
+     COPY ~%MOD_FOLDER%/cre/g-bb227.cre~ ~override~
+ SAY NAME1 @400133 // Raid Berserker
+ SAY NAME2 @400133
+  WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~G-BB_BERSERKER~))
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-host~ #8
+ WRITE_ASCII DIALOG ~~ #8
+ WRITE_ASCII DEATHVAR ~g-bb227~ #32
+ WRITE_ASCII 0x34 ~~
+  WRITE_BYTE 0x274 %raid_fated%
+ 
+ // few of my favourite merchants
+ 
+ COPY ~%MOD_FOLDER%/cre/g-bb229.cre~ ~override~
+ SAY NAME1 @400148 // Rose
+ SAY NAME2 @400148
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-dmer1~ #8
+ WRITE_ASCII DIALOG ~g-bbd229~ #8
+ WRITE_ASCII DEATHVAR ~g-bb229~ #32
+ WRITE_ASCII 0x34 ~~
+ 
+  COPY ~%MOD_FOLDER%/cre/g-bb230.cre~ ~override~
+ SAY NAME1 @400149 // Kitten
+ SAY NAME2 @400149
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-dmer2~ #8
+ WRITE_ASCII DIALOG ~g-bbd230~ #8
+ WRITE_ASCII DEATHVAR ~g-bb230~ #32
+ WRITE_ASCII 0x34 ~~
+ 
+  COPY ~%MOD_FOLDER%/cre/g-bb231.cre~ ~override~
+ SAY NAME1 @400150 // Kettle
+ SAY NAME2 @400150
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-dmer3~ #8
+ WRITE_ASCII DIALOG ~g-bbd231~ #8
+ WRITE_ASCII DEATHVAR ~g-bb231~ #32
+ WRITE_ASCII 0x34 ~~
+ 
+  COPY ~%MOD_FOLDER%/cre/g-bb232.cre~ ~override~
+ SAY NAME1 @400151 // Mitten
+ SAY NAME2 @400151
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-dmer4~ #8
+ WRITE_ASCII DIALOG ~g-bbd232~ #8
+ WRITE_ASCII DEATHVAR ~g-bb232~ #32
+ WRITE_ASCII 0x34 ~~
+ 
+  COPY ~%MOD_FOLDER%/cre/g-bb233.cre~ ~override~
+ SAY NAME1 @400152 // Boxes
+ SAY NAME2 @400152
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-dmer5~ #8
+ WRITE_ASCII DIALOG ~g-bbd233~ #8
+ WRITE_ASCII DEATHVAR ~g-bb233~ #32
+ WRITE_ASCII 0x34 ~~
+ 
+  COPY ~%MOD_FOLDER%/cre/g-bb234.cre~ ~override~
+ SAY NAME1 @400153 // String
+ SAY NAME2 @400153
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-dmer6~ #8
+ WRITE_ASCII DIALOG ~g-bbd234~ #8
+ WRITE_ASCII DEATHVAR ~g-bb234~ #32
+ WRITE_ASCII 0x34 ~~
+ 
+   COPY ~%MOD_FOLDER%/cre/g-bb235.cre~ ~override~
+ SAY NAME1 @400157 // CRONE
+ SAY NAME2 @400157
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-crone~ #8
+ WRITE_ASCII DIALOG ~~ #8
+ WRITE_ASCII DEATHVAR ~g-bb235~ #32
+ WRITE_ASCII 0x34 ~~
+ WRITE_BYTE 0x244 %kiaransalee%
+ 
+   COPY ~%MOD_FOLDER%/cre/g-bb236.cre~ ~override~
+ SAY NAME1 @400158 // FATED ON A MISSION
+ SAY NAME2 @400158
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-fatmi~ #8
+ WRITE_ASCII DIALOG ~g-bbd236~ #8
+ WRITE_ASCII DEATHVAR ~g-bb236~ #32
+ WRITE_ASCII 0x34 ~~
+ 
+ COPY ~%MOD_FOLDER%/cre/g-bb237.cre~ ~override~
+ SAY NAME1 @400008 // Monodrone
+ SAY NAME2 @400008 
+ WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~G-BB_MONODRONE~))
+ WRITE_ASCII SCRIPT_OVERRIDE ~~
+ WRITE_ASCII DIALOG ~g-bbd237~
+ WRITE_ASCII DEATHVAR ~g-bb237~ #32 
+ WRITE_ASCII 0x34 ~g-bb237~
+ 
+  COPY ~%MOD_FOLDER%/cre/g-bb238.cre~ ~override~ // R. Abishai Port
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bssn2~ #8
+ WRITE_ASCII DIALOG ~g-bbd218~ #8
+  WRITE_ASCII DEATHVAR ~g-bb238~ #32
+  
+// NEW TECHNOLOGY CUTOFF
+
+////////////////
+// ======+=== //
+// Creatures2 //
+// =====+==== //
+////////////////
+
+
+COPY ~%MOD_FOLDER%/cre/g-bbANN.cre~ ~override~
+ SAY NAME1 @400160 SAY NAME2 @400160
+ WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~G-BB_FAKE_PC~))
+ WRITE_ASCII SCRIPT_OVERRIDE ~~ #8
+ WRITE_ASCII DIALOG ~g-bbdANN~ #8
+ WRITE_ASCII DEATHVAR ~g-bbANN~ #32
+ WRITE_ASCII 0x34 ~AMPANN~ //Fake Annah
+COPY ~%MOD_FOLDER%/cre/g-bbDKK.cre~ ~override~
+ SAY NAME1 @400161 SAY NAME2 @400161
+ WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~G-BB_FAKE_PC~))
+ WRITE_ASCII SCRIPT_OVERRIDE ~~ #8
+ WRITE_ASCII DIALOG ~g-bbdDKK~ #8
+ WRITE_ASCII DEATHVAR ~g-bbDKK~ #32
+ WRITE_ASCII 0x34 ~AMPDKK~ //Fake Dakkon
+COPY ~%MOD_FOLDER%/cre/g-bbMRT.cre~ ~override~
+ SAY NAME1 @400162 SAY NAME2 @400162
+ WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~G-BB_FAKE_PC~))
+ WRITE_ASCII SCRIPT_OVERRIDE ~~ #8
+ WRITE_ASCII DIALOG ~g-bbdMRT~ #8
+ WRITE_ASCII DEATHVAR ~g-bbMRT~ #32
+ WRITE_ASCII 0x34 ~AMPMRT~ //Fake Morte
+COPY ~%MOD_FOLDER%/cre/g-bbFFG.cre~ ~override~
+ SAY NAME1 @400163 SAY NAME2 @400163
+ WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~G-BB_FAKE_PC~))
+ WRITE_ASCII SCRIPT_OVERRIDE ~~ #8
+ WRITE_ASCII DIALOG ~g-bbdFFG~ #8
+ WRITE_ASCII DEATHVAR ~g-bbFFG~ #32
+ WRITE_ASCII 0x34 ~AMPFFG~ //Fake FFG
+COPY ~%MOD_FOLDER%/cre/g-bbNRD.cre~ ~override~
+ SAY NAME1 @400164 SAY NAME2 @400164
+ WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~G-BB_FAKE_PC~))
+ WRITE_ASCII SCRIPT_OVERRIDE ~~ #8
+ WRITE_ASCII DIALOG ~g-bbdNRD~ #8
+ WRITE_ASCII DEATHVAR ~g-bbNRD~ #32
+ WRITE_ASCII 0x34 ~AMPNDM~ //Fake Nordom
+COPY ~%MOD_FOLDER%/cre/g-bbIGY.cre~ ~override~
+ SAY NAME1 @400165 SAY NAME2 @400165
+ WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~G-BB_FAKE_PC~))
+ WRITE_ASCII SCRIPT_OVERRIDE ~~ #8
+ WRITE_ASCII DIALOG ~g-bbdIGY~ #8
+ WRITE_ASCII DEATHVAR ~g-bbIGY~ #32
+ WRITE_ASCII 0x34 ~AMPIGY~ //Fake Ignus
+COPY ~%MOD_FOLDER%/cre/g-bbVHA.cre~ ~override~
+ SAY NAME1 @400166 SAY NAME2 @400166
+ WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~G-BB_FAKE_PC~))
+ WRITE_ASCII SCRIPT_OVERRIDE ~~ #8
+ WRITE_ASCII DIALOG ~g-bbdVHA~ #8
+ WRITE_ASCII DEATHVAR ~g-bbVHA~ #32
+ WRITE_ASCII 0x34 ~AMPVHA~ //Fake Vhailor
+COPY ~%MOD_FOLDER%/cre/g-bb240.cre~ ~override~ /*Do Tyche*/
+ SAY NAME1 @400167 SAY NAME2 @400167
+ WRITE_ASCII SCRIPT_OVERRIDE ~~ #8
+ WRITE_ASCII DIALOG ~g-bbd240~ #8
+ WRITE_ASCII DEATHVAR ~g-bb240~ #32
+ WRITE_ASCII 0x34 ~~
+ WRITE_BYTE 0x244 %tymora%
+ 
+COPY ~%MOD_FOLDER%/cre/g-bb241.cre~ ~override~ /*fallback do szczurzej swiatni*/
+ SAY NAME1 @400170 SAY NAME2 @400170
+  WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~G-BB_HOLLER~))
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-urwis~ #8
+ WRITE_ASCII DIALOG ~g-bbd241~ #8
+ WRITE_ASCII DEATHVAR ~g-bb241~ #32
+ WRITE_ASCII 0x34 ~~
+COPY ~%MOD_FOLDER%/cre/g-bb242.cre~ ~override~ /*szczurołacza swiatynua*/
+ SAY NAME1 @400171 SAY NAME2 @400171
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-shamn~ #8
+ WRITE_ASCII DIALOG ~g-bbd242~ #8
+ WRITE_ASCII DEATHVAR ~g-bb242~ #32
+ WRITE_ASCII 0x34 ~~
+COPY ~%MOD_FOLDER%/cre/g-bb243.cre~ ~override~ /**/
+ SAY NAME1 @400172 SAY NAME2 @400172
+ WRITE_ASCII SCRIPT_OVERRIDE ~~ #8
+ WRITE_ASCII DIALOG ~g-bbd243~ #8
+ WRITE_ASCII DEATHVAR ~g-bb243~ #32
+ WRITE_ASCII 0x34 ~~
+
+COPY ~%MOD_FOLDER%/cre/g-bb244.cre~ ~override~ /*CRYING BOY*/
+ SAY NAME1 @400173 SAY NAME2 @400173
+ WRITE_LONG 0x28 (IDS_OF_SYMBOL (~animate~ ~G-BB_HOLLER~))
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-cry~ #8
+ WRITE_ASCII DIALOG ~g-bbd244~ #8
+ WRITE_ASCII DEATHVAR ~g-bb244~ #32
+ WRITE_ASCII 0x34 ~~
+
+COPY ~%MOD_FOLDER%/cre/g-bb245.cre~ ~override~ /*GIGGLY RAT*/
+ SAY NAME1 @400174 SAY NAME2 @400174
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-ggrat~ #8  
+ WRITE_ASCII DIALOG ~g-bbd245~ #8
+ WRITE_ASCII DEATHVAR ~g-bb245~ #32
+ WRITE_ASCII 0x34 ~~
+ 
+ COPY ~%MOD_FOLDER%/cre/g-bb246.cre~ ~override~ /*Master of the Pipe*/
+ SAY NAME1 @400175 SAY NAME2 @400175
+  ADD_CRE_ITEM ~g-bbi123~ #0 #0 #0 ~IDENTIFIED~ ~lring~
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-mdmag~ #8
+ //WRITE_ASCII DIALOG ~~ #8
+ WRITE_ASCII DEATHVAR ~g-bb246~ #32
+ //WRITE_ASCII 0x34 ~~

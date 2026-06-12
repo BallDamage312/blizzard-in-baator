@@ -1,0 +1,6 @@
+IF
+    Entered([PC])
+THEN
+    RESPONSE #100
+        SetGlobal("g-beachstatus","GLOBAL",1)
+END

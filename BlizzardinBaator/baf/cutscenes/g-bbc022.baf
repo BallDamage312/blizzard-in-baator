@@ -1,0 +1,14 @@
+// Raelis crisis 2
+
+
+IF
+    True()
+THEN
+    RESPONSE #100
+    CutSceneId(Player1)
+    ActionOverride("g-bb054",MoveToPoint([1059.850]))
+    Wait(1)
+	ActionOverride("G-bb190",StartDialogueNoSet("G-bbd190"))
+    EndCutSceneMode()
+	
+END

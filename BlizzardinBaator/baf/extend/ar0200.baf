@@ -1,0 +1,28 @@
+// Messenger
+
+IF
+    Global("Regret","GLOBAL",1)
+    Global("G-BB_M","GLOBAL",0)
+	Global("G-BBTRGT","GLOBAL",0)
+THEN
+    RESPONSE #100
+        CreateCreature("g-bb001",[1325.1595],SWW)
+		StartCutSceneMode()
+        SetGlobal("G-BB_M","GLOBAL",1)
+        StartCutScene("g-bbC003")
+
+END
+
+IF
+    Global("g-blastdelete","GLOBAL",0)
+THEN
+    RESPONSE #100
+        SetGlobal("g-blastdelete","GLOBAL",1)
+END
+
+IF
+    True()
+THEN
+    RESPONSE #100
+    DestroyPartyItem("g-bbi072",0)
+END

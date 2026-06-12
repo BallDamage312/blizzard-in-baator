@@ -1,0 +1,101 @@
+@0=~Trzymasz w rękach zestaw pergaminów wzywających frakcje w Sigil do działania. Są to oficjalne dokumenty z pieczęciami Gmachu Mówców. Rozesłanie tych dokumentów przypieczętuje losy konfliktu, w który zostałeś zaangażowany.~
+@1=~Dołączono też do nich osobny pergamin z symbolem końskiej głowy, który według załączonego opisu ma przyzwać gońca.~
+@2=~Opowiedziałeś się po stronie Strażników Zagłady: Haer'Dalisa, Raelis Shai i całego teatru "Podmaszcze." Chcąc uniknąć zniszczenia tej świątyni sztuki, możesz wezwać sojuszników, aby dołączyli do zasadzki Strażników Zagłady w odosobnionej uliczce za Wielką Kuźnią.~
+@3=~^NUWAGA: Użyj tego przedmiotu, aby zainicjować rozwiązanie konfliktu frakcji.^-~
+@5=~Czas wezwać sojuszników. Zastanów się, do kogo możesz wysłać depeszę.~
+@6=~Nie przyzywaj jeszcze sojuszników.~
+@7=~Nie wyruszaj jeszcze na bitwę. Nie jesteś gotowy do walki.~
+@8=~Czas zagonić Ulfbranda w zasadzkę. ^0xff8c6b69Niechaj zacznie się marsz.^-~
+@10=~Do przedstawicieli których frakcji chciałbyś się zwrócić z sekretnym wezwaniem, by obrócili się przeciw Przeznaczonym? Pamiętaj, że niektóre frakcje nie dogadują się ze sobą, więc musisz zachować ostrożność.~
+@12=~Zwróć się do Emorika z prośbą o wsparcie Grabarzy.~
+@13=~Zwróć się do Keldora z prośbą o wsparcie Bogowców.~
+@14=~Zwróć się do Drzazgi z prośbą o wsparcie Czuciowców.~
+@15=~Zwróć się do Ebba Skrzypiącego z prośbą o wsparcie Anarchistów.~
+@16=~Zwróć się do Ebba Skrzypiącego z prośbą o wsparcie Harmonium.~
+@17=~Nie licząc na wiele, zwróć się do Jazgoczącego Dzikusa z prośbą o wsparcie Kaosytów.~
+@18=~Nie potrzebujesz nikogo więcej. Dotknij symbolu końskiej głowy. ~
+@19=~Nie potrzebujesz niczyjego wsparcia.~
+@21=~Dotykasz symbolu końskiej głowy, ale nie dostrzegasz żadnej widocznej reakcji. Zaczynasz się zastanawiać, czy dobrze zrozumiałeś instrukcję lub czy ten pergamin nie jest może jedynie żartem, któremu poddaje cię jakiś wybitnie złośliwy frakcyjniak.~
+@22=~Za moment jednak słyszysz w oddali stukot kopyt. Odgłos robi się coraz głośniejszy, jakby podbiegał do ciebie koń, chociaż nie widzisz w okolicy żadnego takiego zwierzęcia. Nagle tuż przed twoją twarzą otwiera się mały, jasnoniebieski, przypominający płomień portal i wychyla się z niego... pomarańczowa końska głowa. Wyraźnie międzysferowy koń parska i otwiera znacząco pysk.~
+@24=~Wetknij depesze do końskiego pyska.~
+@25=~"W czym... mogę pomóc?"~
+@27=~Koń nie odpowiada, ale przewraca oczami, jakby z dezaprobatą. Następnie parska ponownie, lecz tym razem wyraźnie możesz odczytać w tym odgłosie zniecierpliwienie.~
+@29=~Wetknij depesze do końskiego pyska.~
+@31=~Koń cofa się przez portal i znika bez słowa wyjaśnienia, zabierając w pysku twoje listy do sojuszników. Zdaje się, że dostarczenie ich nie zajmie mu dużo czasu.~
+@33=~Poczekaj, aż koń wróci.~
+@35=~W rzeczy samej, nie trwało to długo. Wkrótce ponownie rozlega się odgłos kopyt i za moment znowu otwiera się portal. Wychyla się z niego końska głowa, tym razem niebieska, i wypluwa w twoje ręce odpowiedzi. Spojrzenie, jakie rzuca ci zwierzę przed zniknięciem, utwierdza cię w przekonaniu, że mimo zmiany koloru był to dokładnie ten sam koń.~
+@37=~Przejrzyj wiadomości.~
+@39=~Oto listy, które przyszły.~
+@41=~Przeczytaj odpowiedź Emorika.~
+@42=~Przeczytaj odpowiedź Emorika.~
+@43=~Przeczytaj odpowiedź Keldora.~
+@44=~Przeczytaj odpowiedź Drzazgi.~
+@45=~Przeczytaj odpowiedź Drzazgi.~
+@46=~Przeczytaj odpowiedź anonima.~
+@47=~Przeczytaj odpowiedź anonima.~
+@48=~Przeczytaj odpowiedź Ebba.~
+@49=~Przeczytaj odpowiedź Ebba.~
+@50=~Przeczytaj odpowiedź Ebba.~
+@51=~Przeczytaj odpowiedź Jazgoczącego Dzikusa?!~
+@52=~Przeczytaj odpowiedź Jazgoczącego Dzikusa?!~
+@53=~To już wszystkie. Żadnego nie przeoczyłeś.~
+@55=~"Bezimienny,
+By uniknąć zaostrzonego konfliktu w Sigil, zgadzamy się pomóc, zanim przemoc zacznie eskalować, zwłaszcza że Straż Zagłady to nasi bliscy sojusznicy. Oczywiście użyczymy naszych magów.
+
+Z poważaniem
+Emorik
+Faktor frakcji Grabarzy"~
+@57=~Sprawdź inne listy.~
+@59=~"Bezimienny,
+Nie możemy pomóc. Wiesz, co zrobiłeś.
+
+Z poważaniem
+Emorik
+Faktor frakcji Grabarzy"~
+@61=~Sprawdź inne listy.~
+@63=~"Witaj, Towarzyszu!
+
+Wygląda na to, że walka będzie się toczyć tuż pod naszymi murami. Pamiętaj, że to test. My również potraktujemy to w ten sposób. Wyślemy zbrojną pomoc.
+
+Z poważaniem
+Keldor z Durian"~
+@65=~Sprawdź inne listy.~
+@67=~"Szanowny Panie,
+
+Niestety musimy odmówić pomocy. Naszą odpowiedź motywujemy zerwaniem współpracy w momencie opuszczenia przez Pana szeregów naszej frakcji.
+
+Z poważaniem
+Keldor z Durian"~
+@69=~Sprawdź inne listy.~
+@71=~"Drogi Przyjacielu,
+
+Pomimo iż Straż Zagłady nie jest nam bliska, bliska jest nam twoja drużyna. Pomożemy wam w potrzebie. Trzymaj się.
+
+Drzazga
+Syn Isahar i Król-Kapłan Ur"~
+@73=~Sprawdź inne listy.~
+@75=~"Szanowny Panie,
+
+Z przykrością musimy odmówić pomocy. Naszą odpowiedź motywujemy zerwaniem współpracy w momencie opuszczenia przez Pana szeregów naszej frakcji.
+
+Z poważaniem
+Drzazga
+Syn Isahar i Król-Kapłan Ur"~
+@77=~Sprawdź inne listy.~
+@79=~List jest krótki. "ZGODA." Pochodzi zapewne od Anarchistów.~
+@81=~Sprawdź inne listy.~
+@83=~List jest krótki. "Nie da rady. Naraziłeś się komuś. Uważaj na siebie." Pochodzi zapewne od Anarchistów.~
+@85=~Sprawdź inne listy.~
+@87=~"Pomożemy. Nie możemy pozwolić na takie zakłócanie porządku na naszych ulicach. Trzymaj się.
+Ebb"~
+@89=~Sprawdź inne listy.~
+@91=~"Niestety, przyjacielu, nie udało mi się przekonać tych postawionych wyżej. Trzymaj się.
+Ebb"~
+@93=~Sprawdź inne listy.~
+@95=~"Wiesz chyba, że jesteś poszukiwany, przyjacielu? Nie możemy się z tobą zadawać. Bądź wdzięczny, że nie wysyłamy patrolu, by cię zatrzymał.
+Ebb"~
+@97=~Sprawdź inne listy.~
+@99=~List jest złożony w taki sposób, że rzucony może polecieć niczym papierowy ptak. Pismo jest niedbałe i ledwo czytelne. "PSA WYGŁODZONEGO KLAN POMOC?! TWOJE ALE KOGO?!"~
+@101=~Sprawdź inne listy.~
+@103=~List jest złożony w taki sposób, że rzucony może polecieć niczym papierowy ptak. Pismo jest niedbałe i ledwo czytelne. "CHAOS, PROSZĘ PANA. ZA MAŁO. NOGI I EMOCJE."~
+@105=~Sprawdź inne listy.~

@@ -1,0 +1,79 @@
+IF
+    True()
+THEN
+    RESPONSE #100
+        SetWorldmap("G-DITCH")
+		Continue()
+END
+
+IF
+    Global("ARG-07_visited","GLOBAL",0)
+THEN
+    RESPONSE #100
+        SetGlobal("ARG-07_visited","GLOBAL",1)
+		Continue()
+END
+
+IF
+    Global("G-hitmanD","GLOBAL",3)
+THEN
+    RESPONSE #100
+        SetGlobal("G-hitmanD","GLOBAL",4)
+		Continue()
+END
+
+
+IF
+    Global("G-RaidTheaterF","GLOBAL",0)
+THEN
+    RESPONSE #100
+		TriggerActivation("g-blok",FALSE)
+		TriggerActivation("g-to08",TRUE)
+		TriggerActivation("g-tob2",FALSE)
+		SetGlobal("G-RaidTheaterF","GLOBAL",10)
+END
+
+IF
+    Global("G-RaidTheaterF","GLOBAL",1)
+	Global("G-theatermidswitch","GLOBAL",0)
+THEN
+    RESPONSE #100
+		TriggerActivation("g-blok",TRUE)
+		TriggerActivation("g-to08",FALSE)
+		TriggerActivation("g-tob2",FALSE)
+		SetGlobal("G-theatermidswitch","GLOBAL",1)
+END
+
+IF
+    Global("g-raidberserk","GLOBAL",1) 
+	Global("G-theaterfinalswitch","GLOBAL",0)
+THEN
+    RESPONSE #100
+		TriggerActivation("g-blok",FALSE)
+		TriggerActivation("g-to08",FALSE)
+		TriggerActivation("g-tob2",TRUE)
+		SetGlobal("G-theaterfinalswitch","GLOBAL",1)
+END
+
+
+
+IF
+    PartyRested()
+THEN
+    RESPONSE #100
+    SetGlobal("G-CroneUsedToday","GLOBAL",0)
+	Continue()
+END
+
+IF
+    //Global("G-bbmain","GLOBAL",2) // occasion
+	InParty("Ignus")
+	!StateCheck("Ignus",CD_STATE_NOTVALID)
+	Global("G-fakeigydial001triggered","GLOBAL",0) // one time trigger
+THEN
+    RESPONSE #100
+    SetGlobal("G-fakeigydial001triggered","GLOBAL",1) // one time trigger
+	SetGlobal("g-fakeigydialogue","GLOBAL",1) // fake dialog selection
+	CreateCreatureObject("g-bbigy",Player1,0,0,0) // fake igy creation
+	ActionOverride("g-bbigy",StartDialog("g-bbdigy",Player1)) // Fake igy dialogue initiation
+END

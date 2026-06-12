@@ -1,0 +1,22 @@
+IF
+    True()
+THEN
+    RESPONSE #100
+        CutSceneId(Player1)
+        StartMovie("g-meph")
+        SetRenderable(Player1,FALSE)
+        ActionOverride(Player2,SetRenderable(Player2,FALSE))
+        ActionOverride(Player3,SetRenderable(Player3,FALSE))
+        ActionOverride(Player4,SetRenderable(Player4,FALSE))
+        ActionOverride(Player5,SetRenderable(Player5,FALSE))
+        ActionOverride(Player6,SetRenderable(Player6,FALSE))
+        ActionOverride("g-bb169",Face(NE))
+        Wait(3)
+        ActionOverride("g-bb170",RunToPoint([440.718]))
+        Wait(2)
+        ActionOverride("g-bb169",FaceObject("g-bb170"))  // Zamaskowany mężczyzna
+        Wait(2)
+        ActionOverride("g-bb169",StartDialog("g-bbd169","g-bb170"))  // Zamaskowany mężczyzna
+        SetGlobal("G-demoend2","Global",1)
+END
+

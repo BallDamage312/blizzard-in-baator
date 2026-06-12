@@ -1,0 +1,64 @@
+// Wotyrxil
+
+IF	
+	See(NearestEnemyOf(Myself))
+	Global("G-Wotyrxil_Kombat_N021","LOCALS",1)
+THEN
+    RESPONSE #100
+		ForceSpell([PC],WIZARD_HORROR)
+		IncrementGlobal("G-Wotyrxil_Kombat_N021","LOCALS",1)
+END
+
+IF	
+	See(NearestEnemyOf(Myself))
+	Global("G-Wotyrxil_Kombat_N021","LOCALS",2)
+THEN
+    RESPONSE #100
+		ForceSpell([PC],WIZARD_SEEKING_FLAMES)
+		IncrementGlobal("G-Wotyrxil_Kombat_N021","LOCALS",1)
+END
+
+IF	
+	See(NearestEnemyOf(Myself))
+	Global("G-Wotyrxil_Kombat_N021","LOCALS",3)
+THEN
+    RESPONSE #100
+		Wait(2)
+		ForceSpell([PC],WIZARD_BLINDNESS)
+		IncrementGlobal("G-Wotyrxil_Kombat_N021","LOCALS",1)
+END
+
+IF	
+	See(NearestEnemyOf(Myself))
+	Global("G-Wotyrxil_Kombat_N021","LOCALS",4)
+THEN
+    RESPONSE #100
+		ForceSpell([PC],WIZARD_TONGUES_OF_FLAME)
+		IncrementGlobal("G-Wotyrxil_Kombat_N021","LOCALS",1)
+END
+
+IF	
+	See(NearestEnemyOf(Myself))
+	GlobalGT("G-Wotyrxil_Kombat_N021","LOCALS",4)
+THEN
+    RESPONSE #100
+		Attack(NearestEnemyOf(Myself))
+END
+
+IF
+    AttackedBy([PC],DEFAULT)
+THEN
+    RESPONSE #100
+		FaceObject([PC])
+		Enemy()
+		SetGlobal("G-Wotyrxil_Kombat_N021","LOCALS",1)
+END
+
+
+IF
+    AttackedBy([PC],DEFAULT)
+	GlobalLT("G-BBMain","GLOBAL",9) 
+THEN
+    RESPONSE #100
+    SetGlobal("Game_Over","GLOBAL",3)
+END

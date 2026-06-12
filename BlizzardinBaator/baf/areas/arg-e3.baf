@@ -1,0 +1,32 @@
+IF
+    Global("G-pimpekback","GLOBAL",0)
+    Global("G-agravalquest","GLOBAL",7)
+THEN
+       RESPONSE #100
+		CreateCreature("g-bb175",[2163.1249],10)
+		DisableAI("g-bb175",TRUE)
+		SetGlobal("G-pimpekback","GLOBAL",1)
+		Continue()
+END
+
+IF
+    Global("G-agravalrun","GLOBAL",1)
+    Global("G-agravalambush","GLOBAL",0)
+THEN
+    RESPONSE #100
+		ActionOverride("g-bb101",DestroySelf())
+		ActionOverride("g-bb178",DestroySelf())
+		ActionOverride("g-bb179",DestroySelf())
+		SetGlobal("G-agravalambush","GLOBAL",1)
+		Continue()
+END
+
+IF
+    Global("G-pimpekmov","GLOBAL",1)
+
+THEN
+    RESPONSE #100
+		ActionOverride("g-bb101",StartDialogNoSet(Player1))
+		Continue()
+END
+

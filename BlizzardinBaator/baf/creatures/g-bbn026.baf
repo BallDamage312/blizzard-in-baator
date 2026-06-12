@@ -1,0 +1,39 @@
+// Abishai green - enc r2, spawn1
+
+IF
+    OnCreation()
+THEN
+    RESPONSE #100
+        FaceObject([PC])
+		Enemy()
+        Continue()
+END
+
+IF
+    AttackedBy([ANYONE],DEFAULT)
+THEN
+    RESPONSE #100
+		FaceObject([ANYONE])
+		Enemy()
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+	Global("G-Abishai_r2_Kombat_N026","LOCALS",0)
+THEN
+    RESPONSE #100
+    Enemy()
+	ForceSpellRES("g-bb690",[PC])
+	ForceSpell(Myself,WIZARD_PAIN_MIRROR)
+	RunningAttack(NearestEnemyOf(Myself))
+	IncrementGlobal("G-Abishai_r2_Kombat_N026","LOCALS",1)
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+	Global("G-Abishai_r2_Kombat_N026","LOCALS",1)
+THEN
+    RESPONSE #100
+    Enemy()
+	RunningAttack(NearestEnemyOf(Myself))
+END

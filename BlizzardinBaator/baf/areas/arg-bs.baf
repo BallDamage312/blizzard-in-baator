@@ -1,0 +1,27 @@
+IF
+	True()
+THEN
+	RESPONSE #100
+		SetWorldmap("G-DITCH")
+		Continue()
+END
+
+IF
+	Global("G-hitmanD","GLOBAL",1)
+	Global("G-backstage_stab","GLOBAL",0)
+THEN
+	RESPONSE #100
+		ActionOverride("G-bb017",StartDialogueNoSet("G-bbd017"))
+		SetGlobal("G-backstage_stab","GLOBAL",1)
+		Continue()
+END
+
+IF
+	Global("G-hitmanD","GLOBAL",2)
+	Global("G-backstage_stab","GLOBAL",0)
+THEN
+	RESPONSE #100
+		ActionOverride("G-bb017",StartDialogueNoSet("G-bbd017"))
+		SetGlobal("G-backstage_stab","GLOBAL",1)
+		Continue()
+END

@@ -1,0 +1,31 @@
+// White abishai
+
+IF
+	See([PC])
+THEN
+	RESPONSE #100
+		Enemy()
+		FloatMessage(Myself,@100001)
+		ReallyForceSpell([PC],WIZARD_CONE_OF_COLD)
+		FloatMessage(Myself,@100000)
+		//RunningAttack(LastSeenBy(Myself))
+		RunningAttack(NearestEnemyOf(Myself))
+		Wait(1)
+		ForceSpell([PC],WIZARD_MAGIC_MISSILE)
+END
+
+IF
+	AttackedBy([PC],DEFAULT)
+THEN
+		RESPONSE #100
+		RunningAttack(NearestEnemyOf(Myself))
+		//Attack(LastSeenBy(Myself))
+END
+
+IF
+	True()
+THEN
+	RESPONSE #100
+		RandomWalk()
+END
+

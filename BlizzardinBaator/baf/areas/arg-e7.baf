@@ -1,0 +1,54 @@
+IF
+    True()
+THEN
+    RESPONSE #100
+        SetWorldmap("G-DITCH")
+		Continue()
+END
+
+IF
+
+Global("g-battlescreenhide","GLOBAL",1)
+
+THEN
+    RESPONSE #100
+		SetRenderable(Player1,TRUE)
+        ActionOverride(Player2,SetRenderable(Player2,TRUE))
+        ActionOverride(Player3,SetRenderable(Player3,TRUE))
+        ActionOverride(Player4,SetRenderable(Player4,TRUE))
+        ActionOverride(Player5,SetRenderable(Player5,TRUE))
+        ActionOverride(Player6,SetRenderable(Player6,TRUE))
+		SetGlobal("g-battlescreenhide","GLOBAL",0)
+END
+
+
+IF
+    Global("g-FWAMBUSH","GLOBAL",2)
+    Global("g-FWAMBUSHq1","GLOBAL",0)
+THEN
+    RESPONSE #100
+		CreateCreature("g-bb201",[466.691],13)
+		CreateCreature("g-bb189",[466.691],13)
+		CreateCreature("g-bb156",[466.691],13)
+ 		CreateCreature("g-bb187",[291.866],13)
+		CreateCreature("g-bb200",[320.844],14)
+		CreateCreature("g-bb200",[283.785],15)
+		CreateCreature("g-bb184",[349.774],13)
+		CreateCreature("g-bb183",[316.725],14)
+		CreateCreature("g-bb200",[352.677],14)
+		CreateCreature("g-bb186",[604.669],15)
+		CreateCreature("g-bb200",[430.594],15)
+		CreateCreature("g-bb200",[330.565],14)
+		CreateCreature("g-bb182",[275.574],13)
+		CreateCreature("g-bb200",[252.665],14)
+		CreateCreature("g-bb200",[257.746],14)
+		CreateCreature("g-bb185",[316.754],16)
+		CreateCreature("g-bb200",[268.800],13)
+        ChangeEnemyAlly("g-bb201",ALLY)
+		MoveViewPoint([684.895],VERY_FAST)
+		Wait(3)
+		StartDialog("g-bbd189",Player1)
+        ActionOverride("g-bb189",StartDialog("g-bbd189",Player1))
+        SetGlobal("g-FWAMBUSHq1","GLOBAL",1)
+        Continue()
+END

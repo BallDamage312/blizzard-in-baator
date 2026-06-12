@@ -1,0 +1,2927 @@
+//////////////////
+// =========== //
+// Floating Text //
+// =========== //
+//////////////////
+
+@100000 = ~"Giń!"~
+@100001 = ~"Zamrożę ci dupsko!"~
+@100002 = ~"Oto wchodzi Haer'Dalis!"~
+@100003 = ~"Przeznaczenie daje nam wszystkim znak."~
+@100004 = ~"Oto rola, którą rad jestem zagrać!"~
+@100005 = ~"Taaak, krew miasta. W każdej sferze płynie i krąży tak samo."~
+@100006 = ~*Gwiżdże*~
+@100007 = ~"Z chęcią zatańczę do twojej melodii... jeśli jeno nauczysz się grać."~
+@100008 = ~"Ależ cieplutko. Czyż nie?"~
+@100009 = ~"Co za wspaniałe miejsce!"~
+@100010 = ~"Ach!"~
+@100011 = ~"Nie wiesz nic o Sztuce!"~
+@100012 = ~"Teraz umrzesz."~
+@100013 = ~"Skończ to!"~
+@100014 = ~"Giń, kurduplu!"~
+@100015 = ~"MÓJ WILK!!!"~
+@100016 = ~"Ukorz się!"~
+@100017 = ~"Ech. No tak..."~
+@100018 = ~"Czarny Ziutku... Jak by to... Przyszedłem skonfiskować... twojego chochlika."~
+@100019 = ~"Tak... mi się zdaje."~
+@100020 = ~"Czyżby?"~
+@100021 = ~"Zdaje mi się, że nie."~
+@100022 = ~"Joooouż się robi."~
+@100023 = ~"W porzoooooądku..."~
+@100024 = ~"Rooooutterkiński Rooooum!"~
+@100025 = ~"Kanałowy Koooouktajl ma być?"~
+@100026 = ~*Rechot*~
+@100027 = ~"Plaża w Kanale, plaża w Kanale. Tylko u mnie, zaraz wyruszam!"~
+@100028 = ~"Chodźcie, chodźcie. Wygrzejcie kości w najcieplejszym miejscu w całym Ulu!"~
+@100029 = ~"Wycieczka do Kanału! Tylko 10 miedziaków za wstęp!"~
+@100030 = ~"Łooo..."~
+@100031 = ~"Sprowadź pomyślne nurty dla naszych pobratymców..."~
+@100032 = ~"Sprowadź śmierć na naszych wrogów!"~
+@100033 = ~"Rach-ciach, tak-tak... Flaki chlap-ciap!"~
+@100034 = ~"Chwała Istishii!"~
+@100035 = ~"Chwała Baluu!"~
+@100036 = ~"Chwała Zmarłej Pani!"~
+@100037 = ~"Chwała Panu Szramie!"~
+@100038 = ~*Wycie*~
+@100039 = ~"Skurlała jaszczurko!"~
+@100040 = ~"Tym razem przegrasz z kretesem!"~
+@100041 = ~"Co, abiszaju, Tiamat poskąpiła czerwonego barwnika?"~
+@100042 = ~"Grrr..."~
+@100043 = ~"Nawet poprawnie oszukiwać nie umiesz!"~
+@100044 = ~"Oż ty pchlarzu! Odszczekaj to!"~
+@100045 = ~"Pewnego dnia zaśpiewam 'Radosne płomienie' na twoim grobie."~
+@100046 = ~*Westchnięcie*~
+@100047 = ~"Śmiałku, chcesz się zabawić?"~
+@100048 = ~"Porozmawiajmy, przystojniaku..."~
+@100049 = ~"Słuchaj uważnie, bo nie będę dwa razy powtarzać..."~
+@100050 = ~"Rozumiesz, o czym mówię?"~
+@100051 = ~"Paradoks strzały, już ci to tłumaczyłem..."~
+@100052 = ~"Czej, myślę, że już łapię..."~
+@100053 = ~"Stary, chyba jednak nie do końca rozumiem..."~
+@100054 = ~"Aha..."~
+@100055 = ~*Czknięcie*~
+@100056 = ~"Czegoś poszszeba...?"~
+@100057 = ~"Kierowniku! Kieeerownikuuu!"~
+@100058 = ~"Op... oprowadzacz! Najlepszy w tym mrowisku!"~
+@100059 = ~"Da kierownik drobne, ja pooprowadzam!"~
+@100060 = ~*Beknięcie*~
+@100061 = ~"Aaale to powaszszne oskaarżenie...!"~
+@100062 = ~"Och, Sonne."~
+@100063 = ~"Naprawdę mnie kochasz?"~
+@100064 = ~"Kochanie, proszę, bądź ze mną szczera."~
+@100065 = ~"Czy ty mnie już mnie nie kochasz?"~
+@100066 = ~"Och, Zacku..."~
+@100067 = ~"Wiesz, że cię kocham."~
+@100068 = ~"Dlaczego mnie nie rozumiesz?"~
+@100069 = ~"Miłość nie jest tym, czym ci się zdaje."~
+@100070 = ~"Zamawiasz coś? A może interesuje cię odrobina hazardu?"~
+@100071 = ~"Piwo raz!"~
+@100072 = ~"Piwo dla ciebie, trepie!"~
+@100073 = ~"Trzymaj!"~
+@100074 = ~"Świeży browar dla ciebie!"~
+@100075 = ~"Uwaga, napitki w drodze!"~
+@100076 = ~"Kto zamawiał pszeniczne?"~
+@100077 = ~"Otchłanne Ale Avnera!"~
+@100078 = ~"Krwawe Wino Baatezu!"~
+@100079 = ~"Wyniki wyścigów czaszkoszczurów..."~
+@100080 = ~"Nie bić się tam!"~
+@100081 = ~"Żadnego otwartego ognia w lokalu! To nie 'Gorejący'!"~
+@100082 = ~"Jakieś wieści z frontu?"~
+@100083 = ~"Szlamy! Gdzie jesteście?"~
+@100084 = ~"Jeden... Dwa..."~
+@100085 = ~"Zaraz, czy to jest pojedynczy szlam? A może dwa bardzo blisko siebie?"~
+@100086 = ~"Na Primusa, jak tu brudno..."~
+@100087 = ~"Cassie? To ty?"~
+@100088 = ~"Grrr!"~
+@100089 = ~"Ekhm. No ryczę przecież."~
+@100090 = ~"Bój się!"~
+@100091 = ~*Mamrocze*~
+@100092 = ~*Mruczy pod nosem*~
+@100093 = ~"Sześć... siedem... Cholera, znowu się pomyliłem..."~
+@100094 = ~"Pory... Przeklęte pory..."~
+@100095 = ~"Nie! Nie! NIE!!!"~
+@100096 = ~"Zgiń, przepadnij!"~
+@100097 = ~"Już nigdy mnie nie skrzywdzisz!"~
+@100098 = ~*Krzyk*~
+@100099 = ~*Westchnięcie*~
+@100100 = ~*Ciężkie westchnięcie*~
+@100101 = ~"Hi, hi!"~
+@100102 = ~*Rechot*~
+@100103 = ~*Chichot*~
+@100104 = ~"Szczurki! Chodźcie do mnie, szczureczki!"~
+@100105 = ~"Mam cię!"~
+@100106 = ~"Nie! Nie uciekaj!"~
+@100107 = ~"Złoto!"~
+@100108 = ~"Złoooootooo!"~
+@100109 = ~"Nie ma złota...?"~
+@100110 = ~"Obserwują mnie!"~
+@100111 = ~"Oni mnie widzą!"~
+@100112 = ~"Czuję twój wzrok! Nie widzę, ale czuję!"~
+@100113 = ~"Oczy... Widzę oczy! W mojej głowie!"~
+@100114 = ~*Kap*~
+@100115 = ~"Oświecenie już tak blisko..."~
+@100116 = ~"Razu pewnego człowiek w Ulu..."~
+@100117 = ~"Jaki powinien być następny wers...?"~
+@100118 = ~"W Ulu... Co się rymuje z 'Ulu'...?"~
+@100119 = ~"Czy tam w ogóle jest siedem sylab?"~
+@100120 = ~"Dobra, to chyba zabrzmi lepiej..."~
+@100121 = ~*Chrząknięcie*~
+@100122 = ~"Dobra, od początku..."~
+@100123 = ~"Przepraszam..."~
+@100124 = ~"Widzieliście może dziewczynę w czerwonej sukience?"~
+@100125 = ~"Nie patrzcie się tak na mnie..."~
+@100126 = ~"Piwo raz!"~
+@100127 = ~"Piwo dla ciebie!"~
+@100128 = ~"Zamawiasz coś, dwunogu?"~
+@100129 = ~"Trzymaj!"~
+@100130 = ~"Świeży browar dla ciebie!"~
+@100131 = ~"Uwaga, napitki w drodze!"~
+@100132 = ~"Kto zamawiał piwo z pestkami słonecznika?"~
+@100133 = ~"Piwo kukurydziane raz!"~
+@100134 = ~"Jaka dziś śpiewka? Pij i opowiadaj."~
+@100135 = ~"Cholerni ryboludzie! Znowu zaatakowali naszych?"~
+@100136 = ~"Szpieg w Ziemiach Umarłych? Obawiam się, że go zdybali."~
+@100137 = ~"Obczaj tego bystrzaka."~
+@100138 = ~"O co w ogóle chodzi z tym szkieletem? Mam nadzieję, że ten szarobrody to nie od Hargrimma."~
+@100139 = ~"Zaczekaj jeszcze chwilę. Podejdę do ciebie."~
+@100140 = ~"Bardzo boli?"~
+@100141 = ~"Zaraz poczujesz się lepiej."~
+@100142 = ~"Spokojnie! Już ja temu zaradzę."~
+@100143 = ~"Bólu, odejdź!"~
+@100144 = ~"Kim ja jestem...?"~
+@100145 = ~"Ej, ty! Znasz mnie może?"~
+@100146 = ~"Kim byłem całe życie?!"~
+@100147 = ~"Jestem tylko... diabelstwem?"~
+@100148 = ~"To Sigil, prawda?"~
+@100149 = ~"Panie! Poratuj pan brzdękiem!"~
+@100150 = ~"Potrzebuję kamieni..."~
+@100151 = ~"Masz kamienie?"~
+@100152 = ~"Potrzebuję więcej..."~
+@100153 = ~"Patrzcie na te kolory!"~
+@100154 = ~"Mamo!"~
+@100155 = ~*Krzyk*~
+@100156 = ~"Dwunogi w świątyni!"~
+@100157 = ~"Poleje się krew!"~
+@100158 = ~"Squerriku! Przyjmij te skarby i krwawą ofiarę na twoją chwałę!"~
+@100159 = ~"Śmierć dwunogom!"~
+@100160 = ~"Szanowny panie! Skoro już tu pan jest, to nie zaszkodzi mały podpisik przed skokiem."~
+@100161 = ~"Szybki podpisik, hop i złota przyszłość w krainie aniołów!"~
+@100162 = ~"Zdecydował się pan?"~
+@100163 = ~"Rozumiem, rozumiem. To trudna decyzja. Będę tutaj czekać."~
+@100164 = ~"Niedobrze. Zaborcy już tu węszą..."~
+@100165 = ~"Szefie, obawiam się, że nie ma czasu na kółko teatralne. Trzeba nam się gotować do bitki."~
+@100166 = ~"Wuff!"~
+@100167 = ~"Auuu!"~
+@100168 = ~"Jakieś wieści z Sigil?"~
+@100169 = ~"Jedzcie do syta! Jutro walczymy po raz kolejny!"~
+@100170 = ~"Podajcie mi dziczyznę."~
+@100171 = ~"Przeznaczeni! Przeznaczeni! Co czyni prawo? Siła!"~
+@100172 = ~"Przygotujcie łaźnię i saunę, niedługo się tam wybieram."~
+@100173 = ~"Heill Óðinn! Sæl Óðinn!"~
+@100174 = ~*Siorb*~
+@100175 = ~*Siooorb*~
+@100176 = ~*WURR TURR*~
+@100177 = ~"Nie mogę się doczekać jutrzejszej bitwy."~
+@100178 = ~"Co za uczta!"~
+@100179 = ~"Siła czyni prawo!"~
+@100180 = ~"Siła! Siła! Siła!"~
+@100181 = ~"Heill Óðinn!"~
+@100182 = ~"Dobijemy targu?"~
+@100183 = ~"Nie obchodzi mnie, kim jesteś. Liczy się tylko handel, śmiałku."~
+@100184 = ~Skrzynia została prawdopodobnie zamknięta za pomocą magii. Obok uchwytu wyrzeźbiony jest wizerunek klucza, ale jego szczegóły są niewyraźne.~
+@100185 = ~Skrzynia została otwarta dzięki wspomnieniu z wizerunkiem klucza z książki-mimika.~
+@100186 = ~"CHRUPKI KRABOWE! CHRUPKI KRABOWE! OLEJ GODZINY NADLICZBOWE, KUP CHRUPKI KRABOWE!"~
+@100187 = ~"CHRUPKI KRABOWE! CHRUPKI KRABOWE! PO CO WAM LODY MALINOWE, JAK MACIE CHRUPKI KRABOWE?"~
+@100188 = ~"CHRUPKA PAKUJ DO DZIÓBKA! HOP HOP!"~
+@100189 = ~"KTO NIE JE CHRUPKA, TEN PARÓWKA! HYC HYC!" ~
+@100190 = ~"Uff..."~
+@100191 = ~"Dabus, hyc, do rozbierania."~
+@100192 = ~*KLASK KLASK*~
+@100193 = ~"Czy nadal jestem tym, kim jestem w moich snach?"~
+@100194 = ~"Jak mogę odróżnić płomień od iskry?"~
+@100195 = ~"Interesujące..."~
+@100196 = ~^0xffFFFFFFNowy wpis w dzienniku^-~
+@100197 = ~"ŚMIERĆ!"~
+@100198 = ~"Niewierni zostaną ukarani. Czeka ich ŚMIERĆ!"~
+@100199 = ~"Þetta var frábardagi."~
+@100200 = ~"Ég held að ég hafi drepið að minnsta kosti tólf."~
+@100201 = ~"Það var nánast eins og á fornum dögum."~
+@100202 = ~"Það er leitt með fallna menn."~
+@100203 = ~"Gaaaa!"~
+@100204 = ~"Ojojoooj!!!"~
+@100205 = ~"Ratunku!!!"~
+@100206 = ~"Maaamooo!!!"~
+@100207 = ~"Aaaaa!!!"~
+@100208 = ~^0xffFFFFFFNowy wpis w dzienniku^-~
+@100209 = ~"To musi być gdzieś tutaj..."~
+@100210 = ~"Czy to było na tym poziomie?"~
+@100211 = ~"Moje miasto mnie potrzebuje!"~
+@100212 = ~"A może by..."~
+@100213 = ~"Pięknie..."~
+@100214 = ~*Niuch niuch*~
+@100215 = ~"Róże, róże!"~
+@100216 = ~"Kupujcie kwiaty!"~
+@100217 = ~"Krople deszczu na różach!"~
+@100218 = ~"Wąsiki kociąt!"~
+@100219 = ~"Koty, urocze koty."~
+@100220 = ~"Zawsze chciałeś mieć przyjaciela, który cię zje?"~
+@100221 = ~"Lśniące miedziane czajniki!"~
+@100222 = ~"Wyposaż u mnie swoją kuchnię!"~
+@100223 = ~"Garnki i czajniki!"~
+@100224 = ~"Ciepłe wełniane rękawiczki!"~
+@100225 = ~"Przewiewne, luźne koszule."~
+@100226 = ~"Ubrania na każdą pogodę!"~
+@100227 = ~"Brązowe papierowe paczki!"~
+@100228 = ~"Pudełka! Tylko u mnie!"~
+@100229 = ~"Wszystko z papieru!"~
+@100230 = ~"SZNUUURKI!"~
+@100231 = ~"Zara odpływam. Ostatnie miejsce!"~
+@100232 = ~"Na moim promie poczujesz się jak wilk morski."~
+@100233 = ~"Ul-Kanał, Kanał-Ul, codziennie, przez cały dzień!"~
+@100234 = ~"Wracacie do 'Gorejącego'?"~
+@100235 = ~"Hej! Tutaj! Poprowadzę was do centrum Ula."~
+@100236 = ~"Halo, halo!"~
+@100237 = ~Dwie części jadeitowej czaszki natychmiast przyciągają się do siebie i łączą się w całość, wytwarzając zieloną iskrę energii.~
+@100238 = ~"O potężny Istishio, przyjmij naszą ofiarę, by krwi twój ocean szerzył się wnet. Tak-tak!"~
+@100239 = ~"Nie! Litości, błagam!"~
+@100240 = ~"Blup, dup, ciup. Rach-ciach."~
+@100241 = ~"Chwała, chwała Istishii."~
+@100242 = ~"To co teraz robimy?"~
+@100243 = ~"Wiem! Wkradnijmy się do Więzienia!"~
+@100244 = ~"A może by ukraść jakiś klucz Artusowi?"~
+@100245 = ~"Nuda."~
+@100246 = ~"Ciekawe, co jest za krawędzią..."~
+@100247 = ~"Łeeeeee!"~
+@100248 = ~*Chlip*~
+@100249 = ~"Łaaaaaa!"~
+@100250 = ~^0x008000"Panie, zatrzymaj się. Coś jest nie tak... Prod zaraz..."^-~
+@100251 = ~"E! To ten, co ubił szefa. Kaowiec, cho no tu!"~
+@100253 = ~"Wspaniały teatr, nieprawdaż?"~
+@100256 = ~"Nie mam nic przeciwko komedii, ale niech te żarty czemuś służą."~
+@100257 = ~"Nie, nie wydaje mi się, żeby łamanie czwartej ściany w tym miejscu było uzasadnione..."~
+@100258 = ~"W porządku, to nawet całkiem ciekawe..."~
+@100262 = ~"Przećwiczmy to jeszcze raz, dobra?"~
+@100263 = ~"Jeszcze raz."~
+@100264 = ~"Mam nadzieję, że Kirinaldo czuje się lepiej."~
+@100265 = ~"Gdzie ten dubler? Znów się spóźnia."~
+@100266 = ~"Sigilijska Trupa zasłuży na waszą uwagę i miedź, obiecuję!"~
+@100267 = ~"Jeśli dobrze nam pójdzie, trasa po Pierwszej sfinansuje się sama."~
+
+////////////////
+// ========== //
+// AREA NAMES //
+// ========== //
+////////////////
+
+@300300 = ~Kanał - plaża~
+@300301 = ~Tawerna~
+@300302 = ~Kanał - osiedle~
+@300303 = ~Mieszkanie przy Kanale~
+@300304 = ~Kanał - zatopiona okolica~
+@300305 = ~Siedliszcze kuo-toa~
+@300306 = ~Kanał - pod Kładką Zaddfuma~
+@300307 = ~Kanał - Pionowe Morze~
+@300308 = ~Teatr dramatyczny "Podmaszcze"~
+@300309 = ~Kanał - Kaskada Samobójców~
+@300310 = ~Rezydencja Kabatuma~
+@300311 = ~Świątynia szczurzego boga~
+@300312 = ~"Wioślarz Styksu" - taras~
+@300313 = ~Opuszczony dom~
+@300314 = ~"Szczurwidołek" (zniszczony)~
+@300315 = ~Biblioteka~
+@300316 = ~Ulice Sigil~
+@300317 = ~Ysgard - Bryła Przeznaczonych~
+@300318 = ~Ysgard - siedziba Wydziału Windykacji~
+@300319 = ~Ysgard - trupi dołek~
+@300320 = ~Niebiański Szczyt - Szklany Staw~
+@300321 = ~Nemezja - szczyt~
+@300322 = ~Zasadzka Straży Zagłady~
+@300323 = ~Prowizoryczny most~
+@300324 = ~Po bitwie~
+@300325 = ~"Podmaszcze" - zaplecze~
+@300326 = ~Port w Ulu~
+@300327 = ~Alfheim~
+@300328 = ~Ślepy zaułek~
+@300329 = ~Nóż w Rzece~
+@300330 = ~Rurociąg~
+@300331 = ~Teatr dramatyczny "Podmaszcze" (zniszczony)~
+@300397 = ~Mefistar~
+@300398 = ~Shendilavri~
+@300399 = ~Żebrowisko~
+
+///////////////
+// ========= //
+// AREA INFO //
+// ========= //
+///////////////
+
+@300400 = ~Woda tutaj jest tak brudna, że nie masz pewności, czy po kąpieli wyszedłbyś z niej cało. Pływa tu dosłownie wszystko.~
+@300401 = ~Obiekt nieznanego zastosowania. Mimo iż nie ma w nim wody, coś każe ci myśleć, że to... fontanna.~
+@300402 = ~Czymkolwiek to kiedyś było... już dawno nie działa.~
+@300403 = ~To duży, kamienny posąg jakiejś pięknej i dostojnej bogini. Podpiera ona rękę na wspaniałej, zdobionej tarczy.~
+@300404 = ~Znak informuje cię, że przed tobą wejście do tawerny "Rzeczna Brama".~
+@300405 = ~Znak informuje cię, że przed tobą wejście do karczmy "Wioślarz Styksu".~
+@300406 = ~Tajemniczy posąg.~
+@300407 = ~Ten zakrwawiony ołtarz o zawiłych kształtach poświęcony jest Matce Morza, Blibdoolpoolp. Odłamki sugerują, że poświęcano tu przeróżne klejnoty i perły, a krew nie pozostawia wątpliwości. Kapłani tego kultu nie stronią od żywych ofiar.~
+@300408 = ~System akwariów wbudowanych w wysoką drewnianą konstrukcję. W zbiornikach widać ryby, kraby, ślimaki i inne stworzenia. Pomysł wydaje się dosyć szalony.~
+@300409 = ~Na wystającym z brudnej wody kamieniu kwitną dwa okazałe kwiaty. Nie możesz się zdecydować, czy jest to widok piękny czy makabryczny.~
+@300410 = ~W niesamowitej ciszy woda przelewa się za krawędź Sigil. Nie ma łatwiejszej drogi poza granice Klatki, ale skok stąd prawdopodobnie równałby się przepadnięciu na zawsze. Wyjaśnia to, skąd wzięła się ponura nazwa tego miejsca.~
+@300411 = ~Machina obrazująca zależności między kryształowymi kulami w którejś Sferze Materialnej. Wiedza nieprzydatna nikomu w Sigil - z wyjątkiem magów parających się przywoływaniem właśnie ze Sfer Materialnych.~
+@300412 = ~Machina zasilana przez mechanizm znajdujący się pod podłogą. Nie masz pojęcia, do czego służy.~
+@300413 = ~W centralnej części tej zniszczonej i brudnej świątyni znajduje się posąg przedstawiający olbrzymiego szczurołaka.~
+@300414 = ~Ten wysoki maszt pozbawiony jest ożaglowania. Nie żeby "Wioślarz Styksu" miał aktualnie po czym żeglować. Z bocianiego gniazda musi być widoczna niesamowita panorama Kanału.~
+@300415 = ~Książki na półkach są podzielone na kategorie i ułożone w porządku alfabetycznym. Zależnie od potrzeb można tu znaleźć literaturę faktograficzną, historie fikcyjne, roczniki historyczne, dokumenty prawne i kopie traktatów politycznych, a nawet mroczne grimuary dotyczące demonologii i czarnoksięstwa.~
+@300416 = ~Jedna z wielu bogiń miłości, prawdopodobnie z którejś Sfery Materialnej. Ktoś namalował jej symbol na klifie przy pomocy taniej farby. Pewnie za kilka miesięcy nic z niego nie pozostanie.~
+@300417 = ~W dole unosi się kolejna bryła ziemi, na której widać okrągłe, drewniane miasto portowe. Otaczają je wysokie klify i wodospady, a z jednej strony styka się z nim niemożliwie zawieszony w przestrzeni ocean.~
+@300418 = ~Ten imponujący, kunsztownie wykonany złoty posąg przedstawia jednookiego boga z włócznią.~
+@300419 = ~Na tych sztandarach złotymi nićmi wyszyto symbol Przeznaczonych - zakapturzoną postać na tle poskręcanych węży.~
+@300420 = ~To popiersie, przy którym ktoś *bardzo* przyłożył się do detali, przedstawia kobietę w skrzydlatym hełmie. Emanuje od niej moc, ale także uczucie... straty.~
+@300421 = ~Ten kamień ma prawdopodobnie znaczenie rytualne. Widoczne na nim runy zdają się mieć charakter ochronny.~
+@300422 = ~To piec saunowy dostarczający ciepło do kabiny. Jest opalany drewnem, które zwiększa temperaturę gromadzących ciepło kamieni. Te z kolei oddają je do otoczenia i po polaniu wodą wytwarzają parę wodną.~
+@300423 = ~Nad kominkiem wiszą tarcze. Można przypuszczać, że mimo tymczasowej roli dekoracyjnej nadal są zdatne do użytku. Widać na nich wzory charakterystyczne dla ysgardzkiej kultury.~
+@300424 = ~Ten wielki szkielet został do cna ogołocony z mięsa. Pozostaje zagadką, do jakiego gatunku należało to stworzenie i w jaki sposób straciło życie.~
+@300425 = ~Być może największą zagadką tego miejsca pozostanie to samotne koło zębate. Czy pochodzi z Kanału? A może z jakiegoś ysgardzkiego zegara? Nic w okolicy nie sugeruje, do czego mogło służyć.~
+@300426 = ~To pozbawione już większości jadalnego mięsa zwłoki dużego jelenia. W Ysgardzie wszystkie dzikie zwierzęta są nieco większe. Muchy i trupożerne robactwo bardzo sobie upodobały to konkretne truchło.~
+@300427 = ~Brama, przez którą przeszedłeś. Wygląda na zbudowaną tutaj celowo, ale w pośpiechu. Nie ulega wątpliwości, że łatwo byłoby ją zniszczyć.~
+@300428 = ~Nad brzegiem zamarzniętego jeziora w dolinie stoi wysoka, samotna wieża.~
+@300429 = ~Sądząc po rozmiarze, czaszka nie należy do żadnej ze znanych ci istot, mimo że wygląda niemal... ludzko. Stanowi jedną całość ze skałą, w której się znajduje.~
+@300430 = ~Ogromne miasto, wyglądające, jakby wzniesiono je z lodu, wyraźnie odstaje na tle surowego krajobrazu. W jego centrum stoi wysoka cytadela. Jest to zapewne Mefistar.~
+@300431 = ~Nad polowym szpitalem powiewa flaga z symbolem Niebiańskiego Szczytu, jednej ze Sfer Wyższych. Symbol ten łatwo rozpoznać: składa się z przypominającego górę trójkąta i przekreślającej go poziomej linii.~
+@300432 = ~Wnioskując po obecności łóżek i medycznego wyposażenia, wliczając w to bandaże, leki i tym podobne, musi to być szpital polowy. Chorzy leżą przykryci kocami, a łóżka upstrzone są krwią, moczem i wymiocinami. Okropnego smrodu nie są w stanie ukryć nawet wonne olejki, które również wyczuwasz w powietrzu.~
+@300435 = ~Znad symbolu dłoni trzymającej piorun spogląda monumentalny posąg. Emanuje od niego aura sprawiedliwości, honoru, męstwa i odwagi. Jeśli jest to świątynia jakiegoś boga, to mimo imponującego rozmachu sprawia wrażenie samotnej i opuszczonej.~
+@300436 = ~Malowidło, pieczołowicie namalowane białą farbą, przedstawia symbol Harmonium... na szubienicy.~
+@300437 = ~"Czy istnieje życie przed śmiercią?"~
+@300438 = ~Obwoźny stragan wędrownego kupca stoi niebezpiecznie blisko krawędzi. Wypełniony jest skrzynkami i beczkami pełnymi różnych towarów.~
+@300439 = ~Kanał powoli deponuje w tym zakątku co gęstsze odpady.~
+@300440 = ~Niższe piętro tego mieszkania jest całkowicie zatopione, ale woda zdaje się stamtąd wypływać do jeszcze głębiej położonego miejsca.~
+@300441 = ~Schody prowadziły niegdyś na wyższe piętro, które jednak już nie istnieje.~
+@300442 = ~Yagnolothy musiały tu urządzić niezłą jatkę. Nawet tu na górze nie da się już przejść dalej.~
+@300443 = ~Pojemnik jest wypełniony ziemią. Nie wiesz, do czego mogłaby służyć.~
+@300444 = ~Coś dużego zawaliło się do groty, prawdopodobnie podczas kataklizmu spowodowanego przez ostrorośl.~
+@300445 = ~Stara łódź. Ciekawe, dokąd zabierała swego właściciela, zanim utknęła w grocie.~
+@300446 = ~Prymitywnie wyglądający posąg wyrzeźbiony w kamieniu. Wydaje ci się, że przypomina nieco twarz. Najwyraźniej stanowi obiekt czci kuo-toa.~
+@300447 = ~Wśród wywieszonych ogłoszeń większość stanowią wizerunki zaginionych osób. Wisi tu też reklama plaży oraz repertuar teatru "Podmaszcze".~
+@300448 = ~Drzwi są zabarykadowane.~
+@300449 = ~Nie jesteś pewny, ale na tablicy rozrysowano chyba Sfery Wewnętrzne.~
+@300450 = ~Tyle pozostało z wielce poszukiwanego Kruchego Ogona.~
+@300451 = ~Truchło tego zwierzęcia zostało całkowicie pozbawione mięsa, ale szkielet nie wygląda na zbyt stary.~
+@300452 = ~To jakaś maszyna, na wpół zakopana w śmieciach, na wpół zanurzona w wodzie.~
+@300453 = ~W wodzie, w niewielkiej odległości od brzegu, znajduje się duża, pochylona wieża zegarowa.~
+@300454 = ~Ktoś kiedyś tutaj mieszkał.~
+@300455 = ~Duży, piękny instrument muzyczny.~
+@300456 = ~Wszystkie te narzędzia są wykonane z pomalowanego lekkiego drewna. Muszą być używane w jednej z wystawianych sztuk.~
+@300457 = ~To kamień doznań, ale wygląda na sztuczny.~
+@300458 = ~To cud, że przez tyle lat ta stojąca na słowo honoru piramida beczułek nie runęła w dół i nie zasiliła leśnej ściółki swą wysokoprocentową zawartością.~
+@300459 = ~Dookoła platformy jak okiem sięgnąć rozciąga się dziki, pierwotny bór.~
+@300460 = ~Na szczycie stromej ściany widać "główne" Sigil. Nic dziwnego, że trzeba było tutaj dotrzeć tratwą.~
+@300461 = ~Za kratami widać jasne światło... ale nie ma żadnego jego źródła. Korytarz, podobnie jak cała aleja, kończy się ślepym zaułkiem.~
+@300462 = ~Ruiny niegdyś majestatycznych schodów.~
+@300463 = ~Z wody wystaje ogromnych rozmiarów ostrze, pokryte rdzą i ostroroślą. Jest to jeden, spójny kawałek metalu. Nie wiesz, jak wielka musiała być kuźnia, z której wyszedł ten kolos.~
+@300464 = ~Nie wiesz, do czego służą te urządzenia.~
+@300465 = ~Olbrzymi zawór. Nie wyobrażasz sobie istoty, która byłaby w stanie go obsługiwać.~
+@300466 = ~Wejście do teatru zostało zabarykadowane od wewnątrz. Wieści o twojej zdradzie musiały już dotrzeć do artystów. Będziesz musiał wrócić z większą liczbą ludzi, aby wedrzeć się do środka.~
+@300467 = ~Krzesła teatralne posłużyły do stworzenia prowizorycznej barykady chroniącej scenę.~
+@300468 = ~Wymalowany krwią symbol Straży Zagłady. Wygląda na to, że nalot nie skończył się szczęśliwie dla obrońców teatru.~
+
+////////////////
+// ========== //
+// AREA NOTES //
+// ========== //
+////////////////
+
+@302000 = ~Tawerna "Rzeczna Brama"~
+@302001 = ~Do osiedla~
+@302002 = ~Plaża~
+@302003 = ~Do Kaskady Samobójców~
+@302004 = ~Do Kładki Zaddfuma~
+@302005 = ~Do plaży~
+@302006 = ~"Wioślarz Styksu" - piętro~
+@302007 = ~Mieszkanie w Kanale~
+@302008 = ~Do Pionowego Morza~
+@302009 = ~"Wioślarz Styksu"~
+@302010 = ~Biblioteka~
+@302011 = ~Do zatopionej okolicy~
+@302012 = ~Opuszczone domostwo~
+@302013 = ~Skppr~
+@302014 = ~Podtopiona wieża zegarowa~
+@302015 = ~"Szczurwidołek"~
+@302016 = ~Rezydencja Kabatuma~
+@302017 = ~Teatr dramatyczny "Podmaszcze"~
+@302018 = ~"Wioślarz Styksu" - parter~
+@302019 = ~Do Wydziału Windykacji~
+@302020 = ~Na zewnątrz~
+@302021 = ~Wyjście z jaskini~
+@302022 = ~Grota~
+@302023 = ~Na scenę~
+@302024 = ~Z powrotem do Ula~
+@302025 = ~Doki~
+@302026 = ~Magazyn Wielbasteta~
+@302027 = ~Rura~
+
+///////////////
+// ========= //
+// CREATURES //
+// ========= //
+///////////////
+
+@400000 = ~Zlękniony posłaniec~
+@400001 = ~Gemariel~
+@400002 = ~Biały abiszai~
+@400003 = ~Furia Pokonana~
+@400004 = ~Baatezu~
+@400005 = ~Baatezu~
+@400006 = ~Biały abiszai~
+@400007 = ~Gelugon~
+@400008 = ~Monodron~
+@400009 = ~Czarny Ziutek~
+@400010 = ~Prod~
+@400011 = ~Akershus~
+@400012 = ~Brill~
+@400013 = ~Naganiacz~
+@400014 = ~Dopilp~
+@400015 = ~Bywalec~
+@400016 = ~Kuo-toa wojownik~
+@400017 = ~Kilthas Dar'Abomyn~
+@400018 = ~Haer'Dalis~
+@400019 = ~Szczur~
+@400020 = ~Kruchy Ogon~
+@400021 = ~Trójka~
+@400022 = ~Farastu wykidajło~
+@400023 = ~Mare~
+@400024 = ~Kowal Adam~
+@400025 = ~Ikss'odes~
+@400026 = ~Modron bibliotekarz~
+@400027 = ~Zenon~
+@400028 = ~Elei~
+@400029 = ~Zbir Czarnego Ziutka~
+@400030 = ~Kapitan promu~
+@400031 = ~Charyzmatyczne diabelstwo~
+@400032 = ~Mawu~
+@400033 = ~Żul Adrean~
+@400034 = ~Plażowy wykidajło~
+@400035 = ~Plażowiczka~
+@400036 = ~Ostrzak~
+@400037 = ~Zombie #000~
+@400038 = ~Adonis~
+@400039 = ~Blada kobieta~
+@400040 = ~Tergush'tekhn~
+@400041 = ~Wotyrksil~
+@400042 = ~Widz~
+@400043 = ~Raelis Shai~
+@400044 = ~Zack~
+@400045 = ~Sonne~
+@400046 = ~Marraenoloth~
+@400047 = ~Girgosz~
+@400048 = ~Zegonz Vlaric~
+@400049 = ~Valen Shadowbreath~
+@400050 = ~Szlam~
+@400051 = ~Pabeszc~
+@400052 = ~Uzuthor~
+@400053 = ~Æ~
+@400054 = ~Anit'bil~
+@400055 = ~Abiszai?~
+@400056 = ~Dziwny przeżuwacz~
+@400057 = ~Ceglarz teoretyk~
+@400058 = ~Nagi dandys~
+@400059 = ~Rodin~
+@400060 = ~Orville~
+@400061 = ~Alviro~
+@400062 = ~Siarczysty Stefan~
+@400063 = ~Amnezjak~
+@400064 = ~Damian~
+@400065 = ~Kabatum~
+@400066 = ~Uzależniona~
+@400067 = ~Echo~
+@400068 = ~Dziewczyna z pustką~
+@400069 = ~Dziewczyna w czerwonej sukience~
+@400070 = ~Uciekające dziecko~
+@400071 = ~Tajemnicza płaskorzeźba~
+@400072 = ~Ostrokrzewista zaraza~
+@400073 = ~Niemożliwa płaskorzeźba~
+@400074 = ~Agraval~
+@400075 = ~Krwawy szczurołak~
+@400082 = ~Yagnoloth~
+@400083 = ~Morska istota~
+@400084 = ~Wulgarna pijaczka~
+@400085 = ~Szczurołapka~
+@400086 = ~Poszukiwacz złota~
+@400087 = ~Isey~
+@400088 = ~Nieruchomy mężczyzna~
+@400089 = ~Oświecona kultystka~
+@400090 = ~Poeta~
+@400091 = ~Dziad~
+@400092 = ~Piękna tancerka~
+@400093 = ~Baba~
+@400094 = ~Maestro~
+@400095 = ~Wrak człowieka~
+@400096 = ~Instrument Kabatuma~
+@400097 = ~Mimik~
+@400098 = ~Opryszek z Kanału~
+@400099 = ~Mahalai Trevisti~
+@400100 = ~Marilith~
+@400101 = ~Kokrachon~
+@400102 = ~Vorrak Dismantle~
+@400103 = ~Klausjusz~
+@400104 = ~Teik~
+@400105 = ~Sharikira~
+@400106 = ~Ulfbrand Völgarsson Baunaætari~
+@400107 = ~Saunamistrz~
+@400108 = ~Archonka słowa~
+@400109 = ~Narthuul Pusta Szczęka~
+@400110 = ~Pajęczy glabrezu~
+@400111 = ~Antilia~
+@400112 = ~Podejrzany bies~
+@400113 = ~Zamaskowany mężczyzna~
+@400114 = ~Kuo-toa~
+@400115 = ~Zepsuty modron~
+@400116 = ~Elvra Syne~
+@400117 = ~Mezzoloth~
+@400118 = ~Grotefend~
+@400119 = ~Frędzelknot Drohm~
+@400120 = ~Członek Przeznaczonych~
+@400121 = ~Wędrowny handlarz~
+@400122 = ~Lodowaty portal~
+@400123 = ~Nalot Przeznaczonych~
+@400124 = ~Zawezwany Bogowiec~
+@400125 = ~Mag z Kostnicy~
+@400126 = ~Samotny Chaosyta~
+@400127 = ~Lokalny artysta~
+@400128 = ~Lokalny artysta~
+@400129 = ~Lokalny artysta~
+@400130 = ~Lokalny artysta~
+@400131 = ~Lokalny artysta~
+@400132 = ~Oficer Harmonium~
+@400133 = ~Bërserker~
+@400134 = ~Więzień~
+@400135 = ~Strażnik Zagłady~
+@400136 = ~Pomocny kuo-toa~
+@400137 = ~Beatha~
+@400138 = ~Skppr~
+@400139 = ~Idealne plażowe ciało~
+@400140 = ~Trassończyk~
+@400141 = ~Naganiacz~
+@400142 = ~Magazynier~
+@400143 = ~Poirat~
+@400144 = ~Doktor Krauss~
+@400145 = ~Zakazany kamień~
+@400146 = ~Kaowiec~
+@400147 = ~Skald~
+@400148 = ~Sprzedawczyni kwiatów~
+@400149 = ~Koci handlarz~
+@400150 = ~Sprzedawca czajników~
+@400151 = ~Szwaczka~
+@400152 = ~Sprzedawca opakowań~
+@400153 = ~Powroźnik~
+@400154 = ~Głaziarz~
+@400155 = ~Zakrwawiony chłopak~
+@400156 = ~Zmęczona kobieta~
+@400157 = ~Wiedźma z Tanatos~
+@400158 = ~Przeznaczony z misją~
+@400159 = ~Udręczona dusza~
+@400160 = ~Anna~
+@400161 = ~Dak'kon~
+@400162 = ~Morte~
+@400163 = ~Nie-Sława~
+@400164 = ~Nordom~
+@400165 = ~Ignus~
+@400166 = ~Vhailor~
+@400167 = ~Ayryn Dalekowidząca~
+@400168 = ~"Kłamliwy kundel" ~
+@400169 = ~"Skurlała jaszczurka"~
+@400170 = ~Urwis~
+@400171 = ~Szczurołaczy szaman~
+@400172 = ~Karczmarz~
+@400173 = ~Zapłakany chłopak~
+@400174 = ~Chichoczący czaszkoszczur~
+@400175 = ~Szalony czaromiot~
+@400176 = ~Golem Lotara~
+@400177 = ~Slaad~
+@400178 = ~Mieszkaniec Ula~
+@400179 = ~Baernaloth~
+
+///////////
+// ===== //
+// ITEMS //
+// ===== //
+///////////
+
+@500000 = ~Wiadomość od biesów~
+@500001 = ~WIADOMOŚĆ OD BIESÓW
+Waga: 0
+
+Ten zwyczajnie wyglądający pergamin upstrzony jest plamami substancji przypominającej krew. Podobny kolor ma atrament, którym chybotliwymi literami naskrobano następującą wiadomość:
+
+^0xff393ffc"Bezimienny. Wiem, że poszukujesz odpowiedzi na wiele trapiących cię pytań. Mogę ci pomóc odpowiedzieć na kilka z nich, dotyczących zarówno twojej dalekiej przeszłości, jak i bliskiej przyszłości. Nie za darmo, rzecz jasna. Mam dla ciebie zadanie. O szczegółach porozmawiamy w cztery oczy.
+
+Znajdziesz mnie w 'Gorejącym Człeku'. Czekam z twoimi przyjaciółmi, abiszajami.
+
+- Tergush'tekhn"^0xff393ffc^-~
+@500002 = ~Bełty stygijskiej lodowej nawałnicy~
+@500003 = ~BEŁTY STYGIJSKIEJ LODOWEJ NAWAŁNICY
+Obrażenia: 2-5, obuchowe
+Umagicznienie: +3
+Specjalne właściwości:
+ 5 obrażeń od magicznego chłodu przy uderzeniu
+TraK0: +1
+Szybkość: 5
+Waga: 0
+Biegłość: Pociski
+Mogą być używane jedynie przez Modrony
+
+W bełtach tych zaklęta jest część mocy Stygii. Kiedy trafią one w cel, okolica trafienia zamarza, co utrudnia ich wyjęcie. Mróz jest tak dotkliwy, że powoduje trwałe uszkodzenia tkanki i może prowadzić do martwicy. Nawet biesom ciężko będzie się oprzeć tak potężnej sile.~
+@500004 = ~Kolczyk ochrony przed chłodem~
+@500005 = ~KOLCZYK OCHRONY PRZED CHŁODEM
+Specjalne właściwości:
+ +25% do odporności na chłód
+ +25% do odporności na magiczny chłód
+Waga: 0
+
+Odmrożenia, czyli czasowe lub nieodwracalne uszkodzenie skóry, powstające w wyniku działania na nią niskiej temperatury, zaczynają się od najbardziej narażonych na to odstających części ciała - uszu, nosa, policzków oraz palców rąk i stóp. Dlatego, by uratować tak cenny receptor słuchu, pewien Czuciowiec zaprojektował kolczyki, które są w stanie ochronić uszy przed odmarzaniem, a w konsekwencji obrzękiem i wreszcie martwicą. Tak ochroniony mógł bez przeszkód doznawać przyjemnych szumów i głośnych świstów zapewnianych przez mroźne wichry Canii... Szkoda tylko, że nie uzyskał ochrony przed szponami gelugonów.~
+@500006 = ~Kościany gwizdek~
+@500007 = ~KOŚCIANY GWIZDEK
+Przywołuje czar: "Ulepszone wzmocnienie siły" (raz dziennie)
+Waga: 0
+
+Historyczne zapiski sugerują, że po raz pierwszy tego typu gwizdki wykonywano w Otchłani, by badacze i handlarze schodzący z miasta-bramy Kiły-Mogiły do kolejnych warstw tej sfery mieli jakiekolwiek szanse przeciwko pomniejszym tanar'ri. Bo choć co rozsądniejsi z obieżysferów wiedzą, by nie zapuszczać się zbyt głęboko, bo szansa na powrót spada, to ze względu na chaotyczną naturę demonów trzeba być gotowym na najbardziej nieprzewidywalny scenariusz nawet na najwyższych warstwach. Przezorny zawsze ubezpieczony.
+
+Gwizdek ten pozwala tymczasowo zwiększyć siłę użytkownika do nieosiągalnych inaczej poziomów. Niepokojący jest jednak fakt, że do tworzenia takich gwizdków potrzebna była krwawa ofiara z żywej istoty. W ostatnich latach z powodzeniem zaczęto wykorzystywać te magiczne przedmioty również podczas podróży do innych Sfer Niższych, jednak mimo ich użyteczności przywołuje to naturalnie pytania natury etycznej.~
+@500008 = ~Ognista kula Bezimiennego~
+@500009 = ~OGNISTA KULA BEZIMIENNEGO
+Obrażenia: 1-3, pociski
+Obrażenia: 2-8, ogień
+Szybkość: 5
+Waga: 5
+Biegłość: Pięści
+Działanie: Broń dystansowa
+Może być używana jedynie przez Magów
+Może być używana jedynie przez Bezimiennego
+
+Ignus nie zapomniał cierpienia, które spowodował jego mistrz. Odzyskałeś wspomnienie o tym za dotkliwą i bolesną cenę obu dłoni, ale teraz jesteś w stanie korzystać z tej samej mocy co twój niegdysiejszy uczeń i zesłać na wrogów serię ognistych kul.~
+@500010 = ~Oko biesa~
+@500011 = ~OKO BIESA
+Specjalne właściwości:
+ +5% do odporności na ogień
+ +5% do odporności na magiczny ogień
+ +5% do odporności na gazowe ataki
+ +5% do odporności na chłód
+ +5% do odporności na magiczny chłód
+Waga: 0
+
+To oko należało kiedyś do jednego z wielu biesów. Przestało mieć znaczenie, do jakiego, ponieważ nie wsławił się on niczym szczególnym. Co ważne dla ciebie, włożenie go do oczodołu oznacza skorzystanie z jego odporności.~
+@500012 = ~Pierścień Baator~
+@500013 = ~OBSYDIANOWY PIERŚCIEŃ
+Waga: 0
+
+To duży pierścień z okazałym czarnym obsydianem. Nie wydaje się, by był przeznaczony konkretnie dla mężczyzn lub kobiet.~
+@500014 = ~PIERŚCIEŃ BAATOR
+Specjalne właściwości:
+ +33% do odporności na ogień
+ +33% do odporności na magiczny ogień
+ +33% do odporności na chłód
+ +33% do odporności na magiczny chłód
+ +33% do odporności na kwas
+Waga: 0
+
+To duży pierścień z okazałym czarnym obsydianem. Z pewnością był niegdyś własnością wysoko postawionego baatezu. Musiało to wpłynąć na magiczne właściwości pierścienia, który nie tylko nie spada z nawet zbyt małego palca, ale również wzmacnia ochronę właściciela przed piekielnymi warunkami.~
+@500015 = ~Pazury Gemariela~
+@500016 = ~PAZURY GEMARIELA
+(Standardowa broń)
+Obrażenia: 1-8, kłute lub sieczne
+Umagicznienie: +1
+Szybkość: 1
+Waga: 0
+Biegłość: Pięści
+
+Pazury abiszaja - ostre jak brzytwa, szybkie i zabójcze, ale przede wszystkim skuteczne. To podstawowa broń Gemariela, zaprawiona nutką magii Seta. Czegóż abiszai tego pokroju może chcieć więcej od życia?~
+@500017 = ~Kajdany~
+@500018 = ~KAJDANY
+Waga: 10
+
+Te kajdany zostały skruszone wieki temu. Na pierwszy rzut oka nie wydaje się, by mogły się w jakikolwiek sposób przydać. Jest w nich jednak coś dziwnego... i na swój sposób znajomego.~
+@500019 = ~KAJDANY UWOLNIENIA NIE-SŁAWY
+Przywołuje czar: "Wezwanie błyskawic" (raz dziennie)
+Waga: 10
+
+To kajdany z byłej celi Nie-Sławy, w której cierpiała katusze od swoich oprawców - baatezu. Nie sposób opisać tych tortur, ale wiadomo, że odcisnęły na niej tak mocne piętno udręki, że były w stanie zmienić jej naturę. Te skruszone kajdany pozostają niechcianą, bolesną pamiątką przywołującą triumf wiary i doświadczenia, które pozwoliły Sławie przechytrzyć katów i dały jej szansę na zbieranie doznań w kolejnych sferach.
+
+"Moja matka była jedną z najlepszych, uwiodła niezliczone rzesze śmiertelników... ku ich wiecznemu potępieniu. Teraz mieszka w Otchłani i sprzedaje w niewolę swe dzieci...
+
+Sprzedała mnie baatezu, śmiertelnym wrogom tanar'ri. Podejrzewam, że spodziewała się, że mnie raczej zabiją - pomimo wiedzy z rozległych dziedzin niewiele wie o ich kulturze i zamiłowaniu do zadawania tortur.
+
+Na szczęście baatezu to dumna rasa. Nie potrafią znieść myśli, że tanar'ri może ich w czymś przewyższać. Wyzwałam więc jednego z najdumniejszych piekielnych czartów na turniej improwizacji, a moje serce tanar'ri pozwoliło mi tego dnia zwyciężyć. Tanar'ri to chaotyczne istoty, dzikie i nieprzewidywalne. Baatezu są bardziej przebiegli, mają uporządkowane serca. Rozumieją, na czym polega improwizacja, ale nie są w niej najlepsi. W taki sposób wygrałam wolność."
+- Nie-Sława~
+@500020 = ~Kielich z "Rzecznej Bramy"~
+@500021 = ~KIELICH Z "RZECZNEJ BRAMY"
+Waga: 1
+
+Ten brudny kielich to jeden z wielu podobnych, które można znaleźć w tawernie "Rzeczna Brama". Nie jesteś pewien, co jest w nich wyjątkowego, ale Brill zdaje się sprawować nad nimi pilną pieczę.~
+@500022 = ~Kielich z "Rzecznej Bramy"~
+@500023 = ~KIELICH Z "RZECZNEJ BRAMY"
+Waga: 1
+
+Ten brudny kielich otrzymany od Brilla nie różni się niczym szczególnym od wielu podobnych, które można znaleźć w tawernie "Rzeczna Brama". Podobno ma ci on pozwolić na ominięcie portalu otwierającego się w lokalu. Masz nadzieję, że to prawda...~
+@500024 = ~Klucz do mieszkania Ikss'odesa~
+@500025 = ~KLUCZ DO MIESZKANIA IKSS'ODESA
+Waga: 0
+
+Jest to klucz do mieszkania złodzieja Ikss'odesa.~
+@500026 = ~ŚWIĘTY SYMBOL GRABARZA SOEGO
+Specjalne właściwości:
+ +2 do zręczności
+ -1 do charyzmy
+ +25% do cichego chodzenia
+Waga: 1
+
+Ten święty symbol należał kiedyś do Grabarza Soego. Wykonany jest z ciężkiego żelaza i zaprojektowany tak, aby można go było owinąć wokół nadgarstka za pomocą kilku małych, mocno połączonych łańcuszków. Sam symbol przypomina ci krzyczącą twarz.
+
+Został niedawno skradziony Soemu i ostatecznie trafił do sklepu Kruchego Ogona.~
+@500027 = ~Grimuar Sferowca~
+@500028 = ~GRIMUAR SFEROWCA
+Waga: 2
+
+Ta księga wygląda, jakby na przestrzeni dekad dopisywano do niej coraz to nowe fragmenty. Z pewnością wiele wysiłku włożono w jej czytelność i przemyślaną strukturę. Kiedy ją otwierasz, ukazuje ci się tytuł - Grimuar Sferowca. Wygląda na to, że zawiera w sobie notatki na temat przeróżnych elementów wieloświata.~
+@500029 = ~Prawda o Sferach~
+@500030 = ~PRAWDA O SFERACH
+Waga: 1
+
+Autor: David "Zeb" Cook
+
+Ta książka zawiera opisy różnych planarnych przygód i wynikających z nich wniosków. Jest podzielona na trzy części:
+
+Część 1. Porządek w Sigil
+Fragmenty zapisków maga Fallendora, poruszających następujące kwestie: aleaks (pozbawione własnej postaci narzędzie boskiej dyscypliny rodzące się w obliczu aktu ciężkiego sprzeniewierzenia się bogom), Słowniki Bólu Ganeesha z Baator (zawierające opisy wszystkich istniejących rodzajów cierpienia, posortowane według reakcji ciała), Straż Zagłady i inne frakcje, geografia Sigil według faktona Guwernantów, poddanie w wątpliwość realności wieloświata, portale według Presposa z Iriaeboru i wreszcie opis Pani Bólu. 
+
+Część 2. Podróż po Zewnętrzu
+Z niepublikowanych dzienników półelfa Ambrana Poszukiwacza, paladyna świątyni Oghmy przy dworze Azouna Obarskyra IV, króla Cormyru. Zawiera opisy miast-bram, w tym niebezpiecznego Żebrowiska przy Baator czy Automaty przy Mechanusie. Ważny wniosek płynący z tej części: im bliżej do obrzeży Zewnętrza, tym bardziej okolica zaczyna przypominać poszczególne sfery.
+
+Część 3. Transformacja
+Z ostatniego dziennika Ambrana Poszukiwacza, niegdyś paladyna, który porzucił swojego boga, imię i królestwo, aby pozostać w Sferach Zewnętrznych. Niechaj Oghma wybaczy mu jego winy, niechaj król Azoun nie sądzi go zbyt surowo.~
+@500031 = ~Ogień i pył~
+@500032 = ~OGIEŃ I PYŁ
+Waga: 1
+
+Autor: James Alan Gardner
+
+Książka ta opisuje przygody sigilijskiego malarza Britlina Cavendisha i garstki jego ekscentrycznych towarzyszy podczas podróży przez różne sfery egzystencji. Wszystko zaczyna się w Sigil, gdzie wynajęty do namalowania obrazu Britlin przypadkiem zostaje świadkiem krwawego zamachu.~
+@500033 = ~Łuk Żeglarza albo Ostatni Port Pośredni~
+@500034 = ~ŁUK ŻEGLARZA ALBO OSTATNI PORT POŚREDNI
+Waga: 1
+
+Książka ta opisuje w rzeczowy sposób Łuk Żeglarza, znany także jako Portal Żeglarza oraz Ostatni Port Pośredni. Wyjątkowość tej konstrukcji polega na tym, że znajdujący się w niej portal prowadzi do różnych miejsc zależnie od tego, jaki klucz się przyniesie. Jest przy tym wystarczająco duży, by przenosić całe statki. Miejsca, do których można się za jego pomocą przenieść, znajdują się w Pierwszej Sferze Materialnej, z jednym znanym wyjątkiem.
+
+- Arborea: Pelion, Amun-thys. Klucz: skarabeusz. Uwaga: brak wody w miejscu docelowym, tylko piasek. Powrót może być utrudniony.
+
+Dalsze zapiski dotyczą tylko miejsc w Pierwszej Sferze Materialnej.
+- Aebrynis, wodospad w królestwie Cariele.
+- Athas, Morze Iłu. Uwaga: czające się potworności.
+- Krwawe Wyspy Io, archipelag zamieszkany głównie przez smoki.
+- Krynn w Przestrzeni Krynn, bystrza poniżej kanionu w górach Khalkist. Tubylcy nazywają Otchłanią wszystkie sfery poza swoją własną.
+- Mystara, Dzikie Wybrzeże. Świat w nieznanej kryształowej kuli, kolejny z Siedmiu Cudów Wieloświata. Klucz: cynabrylowy amulet.
+- Oerth w Przestrzeni Szarej, podłużne skalne wybrzeże w Nyv Dyr. Ojczysta sfera lisza Vekny.
+- Ortho, rodzima sfera frakcji Harmonium.
+- Skała Bral w Dzikiej Przestrzeni. Osada na asteroidzie na obrzeżach Pierwszej Sfery Materialnej.
+- Toril w Przestrzeni Krain, rura kanałowa z Podmroku wylewająca się do Bezdrożnego Morza.
+
+Pozostaje pytanie, co się stanie, jeśli ktoś wziąłby ze sobą wszystkie klucze naraz. Nie znalazł się nikt, kto by tego spróbował i powrócił. Dla przezornych istnieją jednak zaklęcia, które pozwalają na zabezpieczenie kluczy, których nie chce się użyć, by nie doszło do wypadku albo żeby zapobiec zużyciu jednorazowych kluczy.~
+@500035 = ~Kanał. Pomiędzy Sigil a morzami~
+@500036 = ~KANAŁ. POMIĘDZY SIGIL A MORZAMI
+Waga: 1
+
+Autor: William James Cuffe
+
+Być może nie każdy zdaje sobie z tego sprawę, ale Sigil ma swoją rzekę. No dobrze, "rzeka" to zbyt dumne określenie, ale jest to woda równie niezwykła jak samo Miasto Drzwi. Autor przewodnika zaprasza na wyobrażony spływ sigilijskim Kanałem.
+
+Przewodnik opisuje najważniejsze miejsca zlokalizowane wzdłuż szerokiego na piętnaście metrów ścieku wypływającego z Wielkiej Kuźni w Niższej Dzielnicy. Najbardziej szczegółowo zostały opisane:
+- prawie wodospad Kaskada Samobójców z rosnącymi w okolicy kwiatami zwanymi "ostatnim pocałunkiem";
+- Most Pomiędzy Światami (według Czuciowców jeden z Siedmiu Cudów Wieloświata) i znajdująca się pod nim planarna brama Łuk Żeglarza - portal do wielu różnych miejsc w zależności od posiadanego klucza;
+- wrak statku merkantów z Flogistonu i leżący nieopodal Nóż w Rzece - kawał metalu będący według legendy pozostałością po innym statku, na który spadł gniew Pani Bólu;
+- Śluza Przeznaczonych, sztuczna odnoga Kanału pod kontrolą Zaborców;
+- Szwy Przemysłowe bezpośrednio przy Wielkiej Kuźni, pod kontrolą Bogowców, będące głównym źródłem zanieczyszczeń w okolicy, co spotkało się ze stanowczymi protestami sekty Różonośców; nazwane tak ze względu na to, że przypominają szwy założone na paskudną ranę.
+
+Autor pochyla się także nad takimi kwestiami jak:
+- klucze do portali i chroniące przed ich przypadkowym użyciem zaklęcie "Kluczopłaszcz";
+- portalowe połączenia z rodzimą sferą Harmonium, Ortho, Skałą Bral w Dzikiej Przestrzeni i Krwawymi Wyspami Io;
+- podania o Cassie, Kanałowej Bestii grasującej w mętnej wodzie.~
+@500037 = ~Dzień Łaski~
+@500038 = ~DZIEŃ ŁASKI
+Waga: 1
+
+Autor: Monte Cook
+
+Ta niegruba książeczka to pokrzepiające opowiadanie o obchodach w Sigil Dnia Łaski - święta oznaczającego, iż minął kolejny rok w kalendarzu. To historia o dziewczynce, która podeszła do Pani Bólu i wbrew oczekiwaniom nie stało się nic tragicznego. Dziewczynka uśmiechnęła się do Pani Bólu i ponoć nawet coś szepnęła. Władczyni Sigil odpłynęła w powietrzu w swoją stronę. A mogła zabić. Na tym polegała łaska w wykonaniu Pani Bólu.
+
+Stało się to właśnie w ostatni dzień roku (zgodnie z zapiskami Guwernantów) i na tyle poruszyło mieszkańców Sigil, że na cześć tego wydarzenia nazwano święto, które ma zachęcać wszystkich do nieco łaskawszego spojrzenia na bliźniego. Zawiesza się też wtedy wykonywanie publicznych egzekucji, chłost i innych kar. Mówi się, że naruszenie tego obyczaju mogłoby zwrócić uwagę Pani.
+
+Kupcy wprowadzają tymczasowe promocje, a każda frakcja ma swoje własne sposoby na obchodzenie tej uroczystości. Czuciowcy każdego roku wymyślają nowe sposoby na okazywanie życzliwości innym, a Twardogłowi, kto by pomyślał, organizują nawet paradę. Tego dnia przemoc schodzi na dalszy plan.~
+@500039 = ~Analekta sigilijskie~
+@500040 = ~ANALEKTA SIGILIJSKIE
+Waga: 1
+
+Autor: David "Zeb" Cook
+
+Analekta to wybór fragmentów lub całych dzieł danego autora, zaopatrzony w noty źródłowe. W tym wypadku są to zeznania zmarłego Handulusa, uczonego trzeciego kręgu, zebrane przez Jeraka Łaskobójcę przed wyznaczonymi świadkami.
+
+Handulus, oskarżony o morderstwo faktora Guwernantów Jerona, zeznaje spokojnie, nie żywiąc urazy do Łaskobójcy. Sam należał do Stowarzyszenia Porządku, więc rzeczowe i spokojne postawienie sprawy nie powinno dziwić. Według jego słów nie uczynił on żadnej bezpośredniej krzywdy domniemanej ofierze, a raczej skierował jej badania na trop cytadel w Sferach Wewnętrznych, o których wyczytał w Wielkim Orzeczeniu i stronicy z niebezpiecznego Kodeksu Nieskończonych Sfer, wiedząc, że ścieżka ta przywiedzie ją do zguby.
+
+Prawda, do której dotarł Handulus przez wizyty w Cytadelach Rezygnacji, sprawiła, że zmienił swoje przekonania na tyle, by wstąpić do Loży Ponurych, a nie odwiedził ostatniej z niepokojących Cytadel. Ostatnia była przeznaczona dla Jerona.~
+@500041 = ~Siedem cudów wieloświata~
+@500042 = ~SIEDEM CUDÓW WIELOŚWIATA
+Waga: 1
+
+Z tego zaniedbanego egzemplarza da się wyczytać jedynie o czterech z siedmiu tzw. cudów wieloświata. Lista została stworzona przez Stronnictwo Doznań w celu opisania zbioru najcudowniejszych, najbardziej zapierających dech w piersiach i najbardziej zapadających w pamięć widoków we wszystkich znanych sferach, powstałych na skutek mniej lub bardziej świadomych działań istot inteligentnych.
+
+- Most Pomiędzy Światami (Sigil, Kanał)
+Ogromny mitrylowo-adamantytowy most wybudowany przed Wielkim Powstaniem (a więc przynajmniej pięć wieków przed rządami faktona Hashkara) przez nieistniejącą już frakcję Kowali (prawdopodobnie protoplastów Wyznawców Źródła). Miejsce kluczowe dla handlu Sigil z innymi sferami ze względu na obecność multiportalu, Łuku Żeglarza. Nie wiadomo, co było pierwsze - portal czy most - ale to z połączenia z innymi światami wynika nazwa cudu.
+
+- Wielka Biblioteka Tota (Krainy Zewnętrzne, Tebestys nad rzeką Ma'at)
+Miejsce przechowywania całej znanej wiedzy. Ponoć można tam znaleźć odpowiedź na każde pytanie, jeśli tylko wie się, gdzie szukać.
+
+- Katedra Modronów (Mechanus, Regulus)
+Wysoka konstrukcja, o wiele większa wewnątrz, niż mogłoby się zdawać z zewnątrz, ze sklepieniem znikającym w ciemności. Pojęcie skrywających się tu tajemnic nie jest możliwe bez popadnięcia w szaleństwo. Do wejścia wymagana jest przepustka z Centralnego Biura Przetwarzania i Wniosków oraz eskorta co najmniej dwóch pentadronów na osobę.
+
+- Pusty Świat Mystary (Pierwsza Sfera Materialna)
+Nietypowy świat z wewnętrznym słońcem w jądrze planety. Źródło interesującej magii w królestwach Glantri i Alphatii. Nieśmiertelni traktowali to miejsce jako archiwum dla utrzymania cywilizacji i gatunków, które były na krawędzi wyginięcia.~
+@500043 = ~Niebieska proteza oka~
+@500044 = ~Oko filozofa~
+@500045 = ~NIEBIESKA PROTEZA OKA
+Waga: 0
+
+Ta niebieska kulka imituje gałkę oczną. Zwraca uwagę niecodziennym kolorem, ale biorąc pod uwagę jej pochodzenie, zastanawiasz się, czy warto sprawdzać jej możliwości.~
+@500046 = ~OKO FILOZOFA
+Specjalne właściwości:
+ +1 do mądrości
+ +1 do inteligencji
+ -1 do zręczności
+ +50% do odporności na pociski
+Waga: 0
+
+Ta magiczna proteza oka pomaga w zrozumieniu paradoksów, których pełno w wieloświecie. Bo skoro o strzale, która pokonała połowę drogi do celu, można powiedzieć, że znajduje się w jednej drugiej odcinka, a i strzała, która pokonała trzy czwarte drogi, znajduje się w tym dokładnie punkcie, czy można stwierdzić, że przez krótką chwilę była w spoczynku? Czy można tak w nieskończoność? Czy możliwe jest, by pozostawała w spoczynku, nie przestając być w ruchu? I jak, używając terminologii modrońskich uczonych, tak skrupulatne pomiary wpływają na ewolucję układu kwantowego, powodując kolaps funkcji falowej, innymi zaś słowy dykoherencję? Czy, biorąc pod uwagę te rozważania, nieskończony podział odcinka drogi podczas ciągłej obserwacji uniemożliwia ruch?
+
+Ta proteza przyspiesza procesy myślowe, pomagając zrozumieć istotę powyższych problemów kosztem ociężałości fizycznej. Dzieli też na pół drogę każdego wycelowanego w ciebie pocisku, funkcjonalnie dając ci połowiczną odporność na ten typ amunicji.~
+@500047 = ~Entropia +2~
+@500048 = ~ENTROPIA +2
+Obrażenia: 1-6 +2, kłute
+Umagicznienie: +2
+Specjalne właściwości: 
+ +3 obrażenia od trucizny (rzut obronny przeciw truciznom neguje)
+TraK0: +2
+Szybkość: 1
+Waga: 5
+Biegłość: Bronie sieczne
+Nie może być używana przez Praworządne postacie
+Nie może być używana przez Kapłanów
+
+Ten krótki miecz z zielonej stali pochodzącej z Otchłani jest jedną z ulubionych broni Haer'Dalisa, obok Chaosu. Ma bardzo misterną, zdobioną rękojeść. Nagromadzenie ostrych krawędzi jest charakterystyczne dla oręża Straży Zagłady. Zadaje dodatkowe obrażenia od trucizny, jeśli atakowanemu nie powiedzie się rzut obronny. Ze względu na naturę tego ostrza, wątpliwe jest, by istoty Prawa były w stanie go użyć.~
+@500049 = ~Prod~
+@500050 = ~PROD
+Waga: 7
+
+Prod to chochlik współpracujący z Tergush'tekhnem i biesami z "Gorejącego Człeka". Nie jest zbyt mile widziany w okolicy, więc skrywa się przed wścibskimi oczami w twojej sakwie. Jego niewielki rozmiar pozwala mu zmieścić się w środku bez negatywnego wpływu na resztę twoich rzeczy.
+
+Prod to dość zwyczajnie wyglądający chochlik. Jego skóra jest szarobura, jego zgarbiona, chuda postura nie wywołuje przestrachu, a membrany jego nietoperzowych skrzydeł z pewnością widziały lepsze dni. Niektóre dziury wyglądają na świeże i są zapewne sprawką Ziutka i jego ludzi. Prod nie wydaje się tym faktem przybity. Nie wiesz, czy jego skrzydła kiedykolwiek się zagoją, ale bije od niego aura entuzjazmu wobec zbliżającej się podróży.~
+@500051 = ~Fiolka karachu~
+@500052 = ~FIOLKA KARACHU
+Waga: 0
+
+Jest to mała fiolka, chociaż żywy, srebrzysty, wirujący materiał w środku wydaje się zdolny do powiększenia się do wielokrotnie większych rozmiarów i rozsadzenia delikatnego szkła.~
+@500053 = ~Zwój Ognistej kuli~
+@500054 = ~ZWÓJ OGNISTEJ KULI
+Umożliwia rzucenie zaklęcia "Ognista kula"
+Umożliwia przepisanie zaklęcia "Ognista kula" do Księgi czarów
+Poziom: 3 / Czarodziej
+Zasięg: 12 metrów
+Czas działania: Natychmiastowy
+Szybkość: 3
+Obszar działania: Promień 5 m
+Rzut obronny: 1/2
+Waga: 0
+
+Niechaj Kossuth zlituje się nad tymi, od których ognie stworzenia będą się domagać zwrotu daru życia.
+
+Ten niezwykle popularny w Pierwszej Sferze Materialnej czar pozwala magowi na wytworzenie bezpośrednio w rękach rozgrzanej kuli płomieni. Ciśnięta w stronę przeciwnika, kula rozbłyskuje eksplozją raniącą nie tylko jego, ale i wszystkich wokół. Z tego powodu zalecana jest rozwaga przy wyborze celu.
+
+Pojedyncza kula zadaje 1-6 punktów obrażeń na każdy poziom maga (maksymalnie 6-60). Możliwe jest uchronienie się przed połową obrażeń dzięki udanemu rzutowi obronnemu. To potężny jak na swoje wymagania czar - historia wspomina wręcz o badaniach Tensera nad uczynieniem go mniej niszczycielskim. Ponieważ potęga to jedno, ale równie ważna jest efektywność. Zaś ogień kieruje się swoimi zasadami.~
+@500055 = ~Zwój Plugawego uwiądu~
+@500056 = ~ZWÓJ PLUGAWEGO UWIĄDU
+Umożliwia rzucenie zaklęcia "Plugawy uwiąd"
+Umożliwia przepisanie zaklęcia "Plugawy uwiąd" do Księgi czarów
+Poziom: 8 / Czarodziej
+Zasięg: 12 metrów
+Czas działania: Natychmiastowy
+Szybkość: 8
+Obszar działania: sześcian o boku 9 metrów
+Rzut obronny: 1/2
+Waga: 0
+
+Ten dotkliwy czar, pochodzący z szaleńczej wyobraźni nekromanty-elementalisty Abi-Dalzima, zwanego Ojcem Susz, sprawia, że ze wszystkich żywych istot w obszarze jego działania wyparowuje wszelka woda. Abi-Dalzim uczynił wiele okropności w imię Incabulosa, boga chorób, susz i koszmarów, ale najgorszą z nich było stworzenie tego niszczycielskiego czaru, po którego użyciu na danym terenie usycha także wszelka roślinność i znikają wody gruntowe.
+
+Wszystkie żywe istoty na obszarze działania czaru otrzymują 1-8 punktów obrażeń na poziom rzucającego, maksymalnie 25-200 obrażeń.~
+@500057 = ~Zwój Dezintegracji~
+@500058 = ~ZWÓJ DEZINTEGRACJI
+Umożliwia rzucenie zaklęcia "Dezintegracja"
+Umożliwia przepisanie zaklęcia "Dezintegracja" do Księgi czarów
+Poziom: 6 / Czarodziej
+Zasięg: 12 metrów
+Czas działania: Natychmiastowy
+Szybkość: 6
+Obszar działania: 1 istota
+Rzut obronny: Neguje
+Waga: 0
+
+Rozpad całości na elementy cząstkowe. Zlikwidowanie integralności. Rozkład na czynniki pierwsze. Jakkolwiek tego nie opisać, czar Dezintegracji powoduje najprostszy i być może najpotężniejszy ofensywny efekt, jaki mogłoby sobie wyobrazić nawet dziecko: ciało przeciwnika efektownie wybucha, pozostawiając po sobie jedynie pył. Zamiana jest natychmiastowa i nieodwracalna.
+
+Działanie tego zaklęcia może zostać zablokowane przez odporność na magię lub odpowiednią ochronę przed czarami. Nie będzie więc ono efektywne wobec potężniejszych wrogów, ale może efektownie pozbyć się tych słabszych.~
+@500059 = ~Zwój Obniżenia odporności~
+@500060 = ~ZWÓJ OBNIŻENIA ODPORNOŚCI
+Umożliwia rzucenie zaklęcia "Obniżenie odporności"
+Umożliwia przepisanie zaklęcia "Obniżenie odporności" do Księgi czarów
+Poziom: 5 / Czarodziej
+Zasięg: 12 metrów
+Czas działania: 5 sekund na poziom
+Szybkość: 5
+Obszar działania: 1 istota
+Rzut obronny: Brak
+Waga: 0
+
+Niektórzy magowie strzelają czarami na oślep, ufając, że któryś z nich trafi. Są jednak tacy, którzy preferują strategiczne podejście poprzez uprzednie osłabienie odporności celu, co skutkuje bardziej dotkliwymi obrażeniami.
+
+Rzucenie tego czaru powoduje obniżenie odporności na magię celu do minimum. Nie ma możliwości wykonania rzutu obronnego. Można dzięki temu całkowicie przebić się przez obronę jakiegoś potężnego czaromiotacza.~
+@500061 = ~Zwój Zawodzenia banshee~
+@500062 = ~ZWÓJ ZAWODZENIA BANSHEE
+Umożliwia rzucenie zaklęcia "Zawodzenie banshee"
+Umożliwia przepisanie zaklęcia "Zawodzenie banshee" do Księgi czarów
+Poziom: 9 / Czarodziej
+Zasięg: 0
+Czas działania: Natychmiastowy
+Szybkość: 9
+Obszar działania: Promień 5 metrów wokół rzucającego
+Rzut obronny: Neguje
+Waga: 0
+
+Banshee, co oznacza 'kobiety z kurhanu', znane także jako wyjące duchy, to okrutne widma, o których mówi się, że za życia były złymi elfimi kobietami. Przyjmują mglistą postać, wysysając energię ze wszystkiego dookoła do tego stopnia, że flora pod nimi usycha. Prostaczkowie znają je jako zły omen zwiastujący śmierć, obieżysferowie zaś jako prawdziwie śmiertelne zagrożenie.
+
+Dzięki temu przerażającemu czarowi mag jest w stanie wydać z własnego gardła przeraźliwy krzyk słyszalny w promieniu 5 m. Kto go usłyszy, ginie natychmiast, o ile nie wykona rzutu obronnego przeciw śmierci. Rzucający i jego towarzysze są odporni na zawodzenie.~
+@500063 = ~Klucz do zaplecza "Szczurwidołka"~
+@500064 = ~KLUCZ DO ZAPLECZA "SZCZURWIDOŁKA"
+Waga: 0
+
+Jest to klucz otwierający drzwi na zaplecze "Szczurwidołka."~
+@500065 = ~Bezdenny kieł Manilla~
+@500066 = ~BEZDENNY KIEŁ MANILLA
+Waga: 5
+
+Na pierwszy rzut oka mogłoby się wydawać, że ogromny kieł, który masz przed sobą, należał do jednego z krwiożerczych biesów z Niższych Sfer. Prawda jest jednak zgoła inna. Ząb ten został zabrany z truchła Manilla, wiekowego astralnego wieloryba - łagodnej istoty przypominającej wielką rybę sunącą majestatycznie poprzez Morze Astralne. Pożółkłe szkliwo przecina siatka jarzących się run w nieznanym ci języku. To prawdopodobnie ich autor wydrążył kieł i umieścił w nim niewielki portal. Nie wiesz, dokąd trafiają przedmioty, które się do niego wrzuci, ale wystarczy o nich znów pomyśleć, by powróciły bezpiecznie do ręki. Nieco tylko zalatują później tranem.
+
+Służy do przechowywania wielorakich przedmiotów.~
+@500067 = ~Dziennik Kruchego Ogona~
+@500068 = ~DZIENNIK KRUCHEGO OGONA
+Waga: 1
+
+Ten dziennik należał do szczurołaka złodzieja o imieniu Kruchy Ogon. Jest to niewielka, podniszczona książeczka oprawiona w niepasujące do siebie skrawki skóry - niektóre szare i gładkie jak wyprawiona skóra szczura, inne popękane i brązowe jak skóra ludzkiego trupa. Jej rogi są postrzępione, pogryzione i poplamione, jakby ktoś gryzł ją w chwilach bezczynnego niepokoju. Zamknięta jest na prymitywny zatrzask z wygiętego drutu, owiniętego trzykrotnie i skręconego bez ładu i składu, bardziej po to, aby zniechęcić do podglądania niż zabezpieczyć zawarte w środku tajemnice.~
+@500069 = ~Odłamek golema~
+@500070 = ~ODŁAMEK GOLEMA
+Obrażenia: 2-5, kłute
+Umagicznienie: +2
+TraK0: +2
+Szybkość: 2
+Waga: 1
+Biegłość: Bronie sieczne
+Nie może być używany przez Kapłanów
+
+To odłamek, który udało ci się odłupać z kamiennego golema Lotara. Niewykluczone, że ma w sobie fragment jego mocy. Ktoś z bardzo konkretnymi potrzebami na pewno doceniłby jego wartość. W ostateczności można go użyć jako broni.~
+@500071 = ~Mleko Shina-Tsu-Hiko~
+@500072 = ~MLEKO SHINA-TSU-HIKO
+Przywołuje czar: "Przyspieszenie ruchów"
+Waga:1
+
+Shina-Tsu-Hiko to rezydujące w Limbo bóstwo wiatru, rzekomo zrodzone z oddechu samego Izanagiego. Ma ono moc kontroli wichrów i w konsekwencji może wywoływać zarówno przyjemne deszcze, jak i okropne burze. Napój ten nie pochodzi dosłownie od niego, a raczej został uświęcony jego wspaniałą mocą.
+
+Ciekawy jest efekt, jaki ów mętny, biały, lekko gorzkawy płyn wywołuje u kogokolwiek, kto wypije zawartość niewielkiej butelki. Ciało każdorazowo ogarnia uczucie lekkości i szybkości, jakby każdy ruch niesiony był silnym, acz orzeźwiającym wiatrem. Przydatne zarówno siepaczom chcącym komuś spuścić łomot, czaromiotom pragnącym szybko rzucać zaklęcia, jak i łotrzykom, którzy potrzebują szybko zmienić lokalizację.
+
+Napój dwukrotnie zwiększa szybkość osoby, która go wypije, oraz przyspiesza jej reakcje podczas walki. Efekt utrzymuje się przez 5 tur (1 godzinę).~
+@500073 = ~Różdżka mistycznej kuli energii magicznej~
+@500074 = ~RÓŻDŻKA MISTYCZNEJ KULI ENERGII MAGICZNEJ
+Waga: 1
+
+Różdżki mają zazwyczaj około czterdziestu pięciu centymetrów długości. Wykonuje się je z kości słoniowej, kości i drewna; zwykle na ich końcu umieszcza się metalowy, kryształowy lub kamienny element. Są delikatne i łatwo się łamią. Z tego też powodu trzyma się je w futerałach.
+
+Zawierają magiczne ładunki. Każde ich użycie kosztuje jeden lub więcej ładunków (zależnie od przedmiotu). W momencie, gdy zostaną wyczerpane, ulegają zniszczeniu.
+
+PARAMETRY:
+Różdżka ta tworzy mistyczną kulę energii magicznej, która trafia w przeciwnika, zadając 2-8 punktów obrażeń niezależnie od rzutu obronnego. Następnie pocisk eksploduje, wywołując niszczycielski podmuch, zadający dodatkowe obrażenia.
+Zadaje też 1d8 punktów obrażeń od magii.~
+@500075 = ~Igła i nitka~
+@500076 = ~IGŁA I NITKA
+Waga: 0
+
+Szpulka nici i mała igła z kości. Wyglądają, jakby były używane do zszywania ran... tak w żywych, jak i martwych ciałach. Kiedy użyje ich się na jakiejś istocie, przywrócą jej... ale zaraz...
+
+Igła wygląda jak każda inna, a jednak jest w niej coś wyjątkowego. Kiedy jej dotykasz, wydaje się wywoływać w twojej głowie obrazy. Jeden z nich przebija się ponad inne: stóg siana, jej wieloletnie więzienie, z którego została uratowana przez jakiegoś zapomnianego, uważnego bohatera. Teraz ta igła jest artefaktem, żywą metaforą ukrytego skarbu. Ukrywa się nawet przed właścicielem sklepu, w którym została sprzedana. Tylko nieliczni potrafią zobaczyć, czym jest naprawdę.~
+@500077 = ~Zwój Przyspieszenia ruchów~
+@500078 = ~ZWÓJ PRZYSPIESZENIA RUCHÓW 
+Umożliwia rzucenie zaklęcia "Przyspieszenie ruchów"
+Umożliwia przepisanie zaklęcia "Przyspieszenie ruchów" do Księgi czarów
+Poziom: 3 / Czarodziej
+Zasięg: 5 metrów
+Czas działania: 15 sekund + 5 sekund na poziom
+Szybkość: 3
+Obszar działania: Promień 5 metrów
+Rzut obronny: Brak
+Waga: 0
+
+Po rzuceniu tego zaklęcia wszystkie istoty znajdujące się pod jego wpływem zaczynają się poruszać z dwukrotnie większą prędkością, a także otrzymują premię +2 do inicjatywy oraz dodatkowy atak na rundę. Przykładowo, istota poruszająca się z prędkością 6 i atakująca raz na rundę będzie poruszała się z prędkością 12 i atakowała dwa razy na rundę. Zaklęcie to działa na wszystkich sprzymierzeńców znajdujących się w promieniu 5 metrów od miejsca wskazanego przez czarującego (istoty opuszczające obszar działania czaru nadal podlegają jego efektom; z kolei istoty, które wejdą na ów obszar już po rzuceniu zaklęcia, są odporne na jego działanie). Efekty zaklęcia nie kumulują się po jego wielokrotnym użyciu lub po rzuceniu podobnego czaru. Czar ten nie wpływa na prędkość rzucania zaklęć i prędkość działania efektów zaklęć. Warto zauważyć, że czar ten neguje efekty "Spowolnienia ruchów".~
+@500079 = ~Wskazówki Chaosyty?~
+@500080 = ~WSKAZÓWKI CHAOSYTY?
+Waga: 0
+
+List spisany ręką Chaosyty. Nie wiesz, o co tu chodzi, ale wewnętrzny głos podpowiada ci, że ten bełkot to jakieś wskazówki. Niestety daremnie wytężasz umysł.
+
+"Kiedyś zjadłem pięć kotów. Rozpromienił się cukierek w nocnych ustach. Świeże są garnki pełne wody, ale śnieg co trawi trawę. Wąż nie potrafi? Azaliż jaki los dzwoni w krętych zakamarkach dwóch świec? Zapytaj stołka, odpowiem mężnie... Wypiłem to i białą kredę. Zobaczyć."
+~
+@500081 = ~Szata Pokonanych~
+@500082 = ~SZATA POKONANYCH
+Specjalne właściwości:
+ Chroni przed zabójczym zimnem Canii
+ +1 do klasy pancerza
+ +1 do szczęścia
+ +5 do wiedzy
+Waga: 5
+
+Nadnaturalne zimno Canii (mowa o temperaturach, które rzekomo potrafią zamrozić nawet krew ognistych olbrzymów) błyskawicznie przenika przez zwykłą odzież. Ową szatę czuć wonią magii, starożytnej i mocnej, znajomej, ale zarazem tak odległej i zapomnianej, że nie jesteś w stanie określić tego, jakie to zaklęcia. Odczucia, które towarzyszą ci, gdy ją przywdziewasz, są z jednej strony miłe, a z drugiej budzą gdzieś wewnątrz twojego umysłu nieopisany lęk. Tak jakbyś instynktownie bał się jakiegoś pierwotnego "diabelstwa".
+
+Przez stulecia szata przybrała kolor krwi - i nie bez powodu. Każdy, kto chce uzyskać ochronę przed nadnaturalnym chłodem Canii, musi upuścić na nią kilka kropli swej krwi.
+
+Po założeniu szata staje się niewidzialna.
+
+Chociaż chroni przed śmiercią z wychłodzenia w Canii, nie jest skuteczna przeciw zadawanym obrażeniom od chłodu i magicznego chłodu.~
+@500083 = ~Naszyjnik ze szczurów~
+@500084 = ~NASZYJNIK ZE SZCZURÓW
+Waga: 0
+
+Ten stworzony przez jubilerkę z "Wioślarza Styksu" naszyjnik jest dowodem na to, że nawet z najbardziej makabrycznego surowca zręczne ręce utalentowanego artysty mogą stworzyć coś na kształt piękna. Przynajmniej według biesich standardów. Ogony czaszkoszczurów splecione są ze sobą w fantazyjnym, synkretycznym wzorze przywołującym na myśl zarówno biologiczną geometrię Otchłani, jak i wielowątkowość oraz cykliczność miasta w centrum wieloświata: Sigil.
+
+Poza byciem spektakularnym dziełem sztuki naszyjnik ma służyć jako klucz do portalu do zapomnianej świątyni gdzieś w Kanale.~
+@500085 = ~Niezarejestrowany kamień doznań~
+@500086 = ~NIEZAREJESTROWANY KAMIEŃ DOZNAŃ
+Waga: 2
+
+Znalazłeś kamień doznań. Zaginiony? Niezarejestrowany? 
+Jest brudny i poobijany, ale wciąż można z niego skorzystać.~
+@500087 = ~Zniewolony tancerz~
+@500088 = ~ZNIEWOLONY TANCERZ
+Waga: 1
+
+Autor: C.S. Macat
+
+"Sułtan Aharaju obdarzył najnowsze nabytki powłóczystym spojrzeniem i aż westchnął ukontentowany. Wezyr tym razem przeszedł samego siebie, wybierając z targu prawdziwie smakowite kąski. 
+
+W szeregu przed tronem stali niewolnicy różnych ras i płci przeznaczeni do haremu, wszyscy młodzi i przepiękni, ubrani jedynie w kajdany i kolorowe chusty bardziej podkreślające niż zakrywające ich wdzięki. Większość z nich spuszczała skromnie oczy, czy to ze wstydu, strachu, czy też z onieśmielenia majestatem władzy. Tylko jeden młodzieniec nie odwrócił wzroku, gdy sułtan na niego spojrzał. Intrygujące. Władca przyjrzał mu się z większym zainteresowaniem.
+
+Młody mężczyzna miał jasne oczy, a spomiędzy długich blond loków wystawały spiczaste uszy. Był wysoki i chudy, choć pod jego bladą skórą, zwłaszcza na nogach, wyraźnie rysowały się mięśnie nawykłe do wysiłku. Wojownik? Nie. Akrobata? Może cyrkowiec? Ciąg tatuaży pokrywających niemal całe jego ciało wskazywał na artystyczną przeszłość. 
+
+- Obróć się - rozkazał sułtan. 
+
+Młodzieniec nie zwlekał. Ukłonił się, jakby nawykły do atencji i adoracji tłumów, po czym z gracją wykonał polecenie. Sułtan podziwiał delikatne linie czarnego tuszu oplatające jego tors i kończyny. Niektóre kreski układały się w abstrakcyjne spirale, inne przedstawiały szkice sztyletów, mieczy i innych rodzajów ostrzy. Na łopatkach widniały subtelne łuki skrzydeł. 
+
+- Twoje tatuaże. Co one znaczą? - zapytał sułtan.
+
+- Przyciągają uwagę, kiedy jestem na scenie - odpowiedział niewolnik. Miał głęboki, mocny głos o ciepłej barwie. - Zarabiałem na życie jako tancerz. W swoich występach często używałem noży. Potrafię...
+
+Sułtan uniósł dłoń, a młodzieniec momentalnie umilkł. Albo wezyr dobrze wytresował nowych, albo chłopak instynktownie wiedział, jak spełnić oczekiwania swojego pana. No i jeszcze te noże... Będzie idealny.
+ 
+- Nie interesuje mnie, kim byłeś ani co robiłeś - powiedział sułtan. - To wszystko przeszłość bez znaczenia. Od teraz jesteś moim niewolnikiem, moim nałożnikiem, moją zabawką. Żyjesz tylko dlatego, że mam taki kaprys. Rozumiesz?
+
+- Oczywiście, Wasza Najjaśniejszość. Jestem tylko nic nie znaczącym pyłem pod twoim butem.
+
+Sułtan uśmiechnął się. Idealnie. Młodzieniec był dokładnie w jego typie: bystry, uległy, ładny. Będzie jeszcze piękniejszy, gdy jego oczy wypełni wpierw rozpacz, a potem pustka, gdy zrozumie, że nie ma już dla niego ratunku. Jak przyjemnie będzie go zniszczyć!  
+
+- Od dzisiaj nazywasz się Aotari. Tak jak wszyscy moi poprzedni ulubieńcy.
+
+- Jak sobie życzysz, Wasza Najjaśniejszość.
+
+- Wspaniale. Służba! - Kilkoro pochowanych po kątach sług stanęło na baczność, bojąc się głośniej odetchnąć. - Umyjcie go i przygotujcie odpowiednio. Za godzinę chcę mieć go w swojej sypialni.
+
+- Tak, Wasza Najjaśniejszość! - odpowiedzieli chórem służący, po czym pod nadzorem strażników wyprowadzili młodzieńca z sali. Na odchodnym Aotari rzucił władcy krótkie spojrzenie pełne niepewności i nadziei na poprawę swojego losu. Sułtan nie mógł się już doczekać, by zdusić tę iskrę już w zarodku.
+
+* * * 
+
+Dokładnie godzinę później sułtan leżał na swoim łożu, wygodnie rozparty na poduszkach, patrząc, jak słudzy i strażnicy wychodzą z pokoju. On i Aotari zostali sam na sam. Młodzieniec miał na sobie tylko kajdany, lecz nie wyglądał na speszonego. Czekał spokojnie, nie dając nic po sobie poznać. Sułtan potaknął zadowolony.
+
+- Zanim zaczniemy, wiedz jedno. Nie wiem, co teraz chodzi ci po głowie, Aotari, ale za ścianą znajdują się strażnicy. Jedno moje słowo, a wpadną tutaj i posiekają cię na kawałki. Nie myśl też o ucieczce. Okna są otwarte, ale jesteśmy na czwartym piętrze pałacu, a pod nami są marmurowe schody. Nie rób więc nic głupiego. Nie jesteś głupi, prawda, Aotari?
+
+- Nie jestem, Wasza Najjaśniejszość.
+
+- Cieszę się. Zabawię się tobą doskonale. Dobrze, zaczniemy od noży. Może nie jestem tancerzem, jak ty, ale też potrafię być z nimi bardzo kreatywny... Najpierw...
+
+- Kochasz dźwięk własnego głosu, prawda?
+
+Sułtan otworzył szerzej oczy na taką bezczelność. Aotari przyglądał mu się z chłodną niechęcią, tak odległą od wcześniejszej pokory, lecz nie miało to znaczenia. Nikt nie przerywa władcy! 
+
+Bezczelnego niewolnika należało nauczyć szacunku. Sułtan otworzył usta, by zawołać straże, ale żaden dźwięk nie wyrwał się z jego krtani. Zaskoczony złapał się za gardło. Krzyczał, ale nic to nie dawało. Nie rozumiał, co się działo.
+
+Uniósł na niewolnika pytający wzrok i z przerażeniem dostrzegł, że linie na jego ramieniu świecą się delikatnie na purpurowo, tworząc dziwny glif. 
+
+- Pewnie zastanawiasz się, co się stało - powiedział Aotari, spokojnie, jakby od niechcenia. - Nie będę cię trzymał w niepewności. W tatuażach ukryte są runy z mojej ojczyzny. To magia nieznana tutaj, twoi czarownicy nie byli w stanie jej wykryć. Między innymi dlatego mój zakon został wybrany do tego zlecenia. Jestem żywym grimuarem, który przemierza Sfery.
+
+Cała postawa i wyraz twarzy młodego tancerza uległy zmianie. Przypominał gada, śmiercionośną kobrę gotową w każdej chwili do zadania ciosu. Nie z nienawiści, ale po prostu dlatego, że taka była jej natura. 
+
+- Nie mamy dużo czasu, ale uprzejmość i kodeks wymagają, byś poznał przynajmniej powód, dla którego tu dzisiaj jestem i wypełniam ten kontrakt. A więc, sułtanie Aharaju, zginiesz dzisiaj z mojej ręki, bo twój pierworodny znudził się czekaniem na twoje naturalne odejście. Zdecydował się zapłacić pokaźną sumę, aby nieco przyspieszyć twoją... permanentną abdykację. Informacje, które dostarczył, między innymi o twoich upodobaniach co do niewolników, były naprawdę pomocne. Dostanie się tutaj i wkupienie się w twoje łaski było dziecinnie proste. Cóż, czas to zakończyć. Ba'al Verzi przesyłają swoje pozdrowienia.
+
+Kajdany opadły na podłogę pokonane siłą obcej magii. Zabójca poruszył lekko nadgarstkiem, a tatuaż zakrzywionego sztyletu, który znajdował się na jego przedramieniu, spłynął do jego dłoni, przemieniając się w najprawdziwsze ostrze.  
+
+Sułtan zaskomlał bezgłośnie, cofając się rakiem, aż natrafił plecami na ścianę. Chciał błagać, obiecywać złoto i zaszczyty, ale zaklęcie milczenia wciąż trzymało go w objęciach. Mógł tylko patrzeć bezsilnie, jak młodzieniec zbliża się do niego lekkim krokiem, niczym tancerz. Niczym skrytobójca.
+ 
+- Nie martw się, sułtanie. Nie jestem tobą. Nie zadaję ofiarom niepotrzebnego bólu. Załatwię wszystko szybko i sprawnie.
+
+Sztylet przeciął najpierw powietrze, a potem skórę sułtana tak szybko, że ból przyszedł dopiero po chwili. Ciepła ciecz spłynęła po szyi. Pociemniało mu w oczach. 
+
+Ostatnią rzeczą, jaką zarejestrowały jego zmysły, był widok pięknego młodzieńca, który sprężystym krokiem podszedł do okna. Tatuaż na jego plecach zafalował i rozwinął się w parę pierzastych skrzydeł. Światło zachodzącego słońca padało na jego złociste włosy, barwiąc je na kolor zakrzepłej krwi. 
+
+Aotari wyglądał jak anioł. Anioł śmierci, który odesłał duszę sułtana w zaświaty."~
+@500089 = ~Strona z pamiętnika~
+@500090 = ~STRONA Z PAMIĘTNIKA
+Waga: 0
+
+*Zanim ujrzysz światło, musisz umrzeć.*
+
+Strona z pamiętnika anonimowego śmiałka. Zapomnianego wędrowca-wojownika, walczącego o mistyczne dobro.
+
+*
+
+"Na każdym kroku cień, za ich śladem nieumarli. Chodzą, klekocząc swymi ozdobami - łańcuchami i złotymi bransoletami na starych kościach - pamiątkami z żyć wszelakich. Cóż jeszcze pozostało z tamtych dni? Teraz w tych czerepach tli się jedynie nienawiść do życia. Złowrogo i makabrycznie śmieją mi się w twarz!
+
+Sapiące, nadprzyrodzone głosy świszczą wokół mojej duszy jak wiatr wokół kostek wisielców. Lecz muszę iść naprzód, do końca.
+
+Atakują!
+
+*
+
+Iskierka: uda się. Zwyciężę. Cios, krwawa rana, otwarte stare blizny beznadziei i ból. Jak może boleć coś, czego już nie mam?
+
+*
+
+W tych krętych korytarzach świece spragnione tlenu drgają przed oczyma, bardziej mrocząc wzrok niż oświetlając drogę. Już sam nie wiem, czy to halucynacje, sen czy jawa. Widzę coś, czego nie może tu być. Słyszę coś, czego nikt nie powinien znać. Czuję znajomy dotyk kogoś, kogo nie ma już wśród żyjących. Te omamy i podstępy to zasługa tego miejsca, iluzje ślące pozdrowienia z Otchłani. Im głębiej, tym usilniej.
+
+*
+
+Zawiodłem. Włóczę nogami bez życia i piszę ostatkiem sił. Ilu tu ich jest! Takich jak ja: pokonanych. Zawiedli, a ich kości i czaszki leżą tu jak trofea. Część z nich przyłączy się do armii, tej armii, która i mnie pokonała. Jedynie śmierć jest... Nawet i ona tu zawiodła."~
+@500091 = ~Sygnet archonki~
+@500092 = ~Uświęcony Sygnet Poznania~
+@500093 = ~SYGNET ARCHONA
+Waga: 0
+
+Ten sygnet bez wątpienia jest cenny. Nikt nie zadaje sobie tyle trudu, by zabezpieczyć zwykłą biżuterię. Spoczywał na piedestale nad Szklanym Stawem. Jaką moc może w sobie kryć?~
+@500094 = ~Kościany kolczyk Ulfbranda Völgarssona Baunaætari~
+@500095 = ~KOŚCIANY KOLCZYK ULFBRANDA VÖLGARSSONA BAUNAÆTARI
+Waga: 1
+
+Jeśli wierzyć plotkom, kolczyki te mają bardzo wyjątkową historię. Należały do Ulfbranda, kiedy jeszcze żył. Po śmierci przybył, aby je odnaleźć i odzyskać dla siebie - oczekującego. Nie pamięta, jak to zrobił, ale dowód tego czynu trzymasz właśnie w ręku.
+
+Kolczyk jest wykonany z kości lodowego giganta, dlatego powinien otworzyć portal do Canii. Taki gigant był dalekim przodkiem Ulfbranda. Biżuteria ta jest w rzeczywistości dość stara, ale też, trzeba przyznać, brzydka. Nie wykonał jej żaden poważny rzemieślnik.
+
+Ten kolczyk zdobyłeś przed wyruszeniem do Canii.~
+@500096 = ~Pieczęć archonki~
+@500097 = ~PIECZĘĆ ARCHONKI
+Waga: 0
+
+Pieczęć ta służy do odblokowania jakiejś skrytki.~
+@500098 = ~Ukradziony kościany kolczyk Ulfbranda Völgarssona Baunaætari~
+@500099 = ~UKRADZIONY KOŚCIANY KOLCZYK ULFBRANDA VÖLGARSSONA BAUNAÆTARI
+Waga: 1
+
+Jeśli wierzyć plotkom, kolczyki te mają bardzo wyjątkową historię. Należały do Ulfbranda, kiedy jeszcze żył. Po śmierci przybył, aby je odnaleźć i odzyskać dla siebie - oczekującego. Nie pamięta, jak to zrobił, ale dowód tego czynu trzymasz właśnie w ręku.
+
+Kolczyk jest wykonany z kości lodowego giganta, dlatego otwiera portal do Canii. Taki gigant był dalekim przodkiem Ulfbranda. Biżuteria ta jest w rzeczywistości dość stara, ale też, trzeba przyznać, brzydka. Nie wykonał jej żaden poważny rzemieślnik.
+
+Ten kolczyk znalazłeś już w Canii, przy jednym z zamarzniętych szczurołaków.~
+@500100 = ~Obietnica~
+@500101 = ~OBIETNICA
+Waga: 1
+
+"Autor: Gideon Songblade
+
+- Mamo, czy znalazłaś mnie w kwiatku?
+
+Długie palce Arlette zawisły nad srebrzystymi strunami harfy. Piękną melodię zastąpiła głęboka cisza niemal odbijająca się echem od ścian. Kobieta spojrzała na małego chłopca wpółleżącego na marmurowej posadzce pośród rozrzuconych kartek papieru i farb. Wydawało jej się, że Stokrotek był całkowicie pochłonięty tworzeniem łąki, ale widać jego ciekawski umysł zaczął błądzić ku innym sprawom. 
+
+- Dlaczego pytasz, mój skarbie?
+
+- No bo bawiłem się wczoraj z wróżkami i powiedziały mi, że one rodzą się w pąkach kwiatów. Nawet pokazały mi drzewko, gdzie to się dzieje!
+
+- Ach, tak?
+
+- Tak! Feye nie kłamią.
+
+Arlette obdarzyła chłopca łagodnym uśmiechem.
+
+- To prawda. Istoty fey nie potrafią kłamać.
+
+- No... to czy znalazłaś mnie w kwiatku, czy nie?
+
+- A jak myślisz, mój skarbie?
+
+- Nie wiem. Te kwiatki na drzewie są bardzo małe i chyba bym się tam nie zmieścił.
+
+Arlette przekrzywiła lekko głowę w zamyśleniu, pozwalając, by jej złote loki spłynęły kaskadą na suknię z liści bluszczu ciasno oplatających jej ciało. Według rachuby czasu Sfery Materialnej Stokrotek miał już sześć lat. Nic dziwnego, że zaczynał zadawać pytania. Może nadszedł czas, aby zacząć mu odpowiadać. 
+
+- Nie, mój skarbie. Nie znalazłam cię w kwiatku, tylko w kołysce.
+
+Chłopiec zmarszczył czółko. Nigdy wcześniej nie słyszał tego słowa i nie potrafił go sobie zwizualizować.
+
+- Co to kołyska?
+
+- Łóżeczko dla malutkich dzieci. Kobieta, która cię urodziła, kładła cię tam spać.
+
+- Kobieta? - Stokrotek nie rozumiał. - Kto? Inna mama?
+
+- Nie! Ona wydała cię na świat, ale należysz do mnie! - Fiołkowe oczy Arlette rozbłysły groźnie, ale burzowa chmura szybko przemknęła po jej idealnej twarzy, zostawiając za sobą tylko słodycz słonecznego poranka. - Ta kobieta przyszła do lasu i modliła się do świętego drzewa o pomoc. Usłyszałam ją przez Sfery i zawarłam z nią pakt. Zgodziła się, bym za okazaną łaskę zabrała jej największy skarb. Wypełniłam swoje zobowiązania, lecz ona nie chciała dotrzymać umowy. Próbowała przekupić mnie bezwartościowym złotem i błyskotkami, próbowała uciekać. Przed obietnicą nie ma jednak ucieczki. To ja nadałam ci prawdziwe imię. Jesteś mój.
+
+Arlette wciąż pamiętała duszny, metaliczny zapach w izbie, gdy w drodze do kołyski omijała bosą stopą kałuże krwi wypływające ze zwłok upartej kobiety i jej męża. 
+
+Chłopiec skrobał się po głowie, myśląc intensywnie. Arlette zastanawiała się, czy to nie było dla niego zbyt dużo i czy w ogóle zrozumiał jej wywód, ale Stokrotek mile ją zaskoczył. 
+
+- A czy ta pani była fey?
+
+Ach, jaki mądry chłopiec, nie mogła trafić lepiej.
+
+- Nie, mój skarbie. Była człowiekiem.
+
+- No to ja też jestem człowiekiem, nie feyem. - Jego głos zabrzmiał tak smutno, że Arlette uklękła przed nim i położyła mu dłoń na policzku.
+
+- Nie musisz się tym martwić, mój skarbie. Jeszcze kilka lat w mojej domenie, a magia krainy Faerie zmieni cię nie do poznania. Będziesz jednym z nas. Moim dzielnym rycerzem wiernym swojej królowej. Chcesz tego, prawda?
+
+Chłopiec wyszczerzył wszystkie zęby i ochoczo pokiwał głową. 
+
+- Tak, mamo! Będę feyem!
+
+- Doskonale. - Arlette złożyła pocałunek na czubku jego głowy. - Zapomnij o wszelkich troskach. Baw się i raduj, mój skarbie.
+
+Nie musiała mu tego powtarzać dwa razy. Stokrotek był w doskonałym humorze. Z radością wrócił do malowania łąki, nucąc pod nosem piosenkę, którą wygrywała wcześniej jego matka. 
+
+Arlette usiadła przy harfie i pozwoliła muzyce płynąć w idealnej harmonii ze swoim synem."~
+@500102 = ~Notatka Kabatuma~
+@500103 = ~NOTATKA KABATUMA
+Waga: 0
+
+To dość starannie wycięty kawałek pergaminu, na którym widać zestawienie dźwięków oktawy z ich nazwami solmizacyjnymi. Pod spodem znajduje się wstępny szkic pieśni.
+
+ C - do
+ D - re
+ E - mi
+ F - fa
+ G - sol
+ A - la
+ H - si
+
+"Pieśń Pochwalna (Uniesienie)"
+
+"Solar w służbie Corellona Larethiana | | |
+Lashrael imię jego | |
+Siwa jego aura mądrości | |"~
+@500104 = ~Flet marraenolotha~
+@500105 = ~FLET MARRAENOLOTHA
+Waga: 1
+
+Flet znaleziony przy zamarzniętych zwłokach szczurołaczej złodziejki Ratyldy. Pierwotnie należał do marraenolotha Wotyrksila, który oczekuje na jego zwrot w Sigil.
+
+Jest on dość prosty i mało ozdobny, ale mimo tego sprawia wrażenie bardzo drogocennego. Z pewnością jest też magiczny, ale nie wiesz, jak aktywować drzemiące w nim moce. Być może mogą to zrobić tylko marraenolothy, gdyż ponoć to z nimi powiązane jest istnienie tego typu instrumentów. Według słów Wotyrksila mają im one służyć do komunikacji na odległość.~
+@500106 = ~"Ostatnie Słowo"~
+@500107 = ~"OSTATNIE SŁOWO"
+Obrażenia: 3-18, obuchowe
+Umagicznienie: +3
+Specjalne właściwości:
+ +1 do klasy pancerza
+ +3 do obrażeń od elektryczności
+TraK0: +1
+Szybkość: 3
+Waga: 5
+Biegłość: Młoty
+Może być używany jedynie przez Wojowników
+Może być używany jedynie przez Dobre postacie
+
+Uczeni w językach wiedzą, że samo słowo 'dyskusja' pochodzi od 'roztrząsania' i 'rozbijania'. W wyniku dyskusji dochodzi do ścierania się różnych poglądów na sprawę. By dojść do kompromisu lub konsensusu, trzeba nieraz bardzo dobrych argumentów. Nie wszystkie łatwo ubrać w słowa. Logika też nakazywałaby prezentację argumentów od najsłabszych do najmocniejszych. Ostatecznie wygrywa ten, którego słowo padnie ostatnie. Oto ono.
+
+Ten potężny młot należał do archonki słowa z Niebiańskiego Szczytu. Skoro wszedł w twoje posiadanie, najwyraźniej miałeś większą siłę przebicia. Już samo to powinno być odpowiednio dobitnym argumentem w twojej następnej potyczce.~
+@500108 = ~Przerażające rękawice~
+@500109 = ~Rękawice Krwi Io~
+@500110 = ~PRZERAŻAJĄCE RĘKAWICE
+Obrażenia: 3-18, obuchowe
+Szybkość: 2
+Waga: 5
+Biegłość: Pięści
+Mogą być używane jedynie przez Wojowników i Złodziei
+
+Te kolczaste rękawice wyglądają, jakby należały niegdyś do jakiegoś podróżnika. Sprawiają wrażenie unurzanych we krwi - jej zastygłe pozostałości z łatwością da się odróżnić od rdzy, której można by się spodziewać na leżącym tu nie wiadomo jak długo kawałku metalu.~
+@500111 = ~RĘKAWICE KRWI IO
+Obrażenia: 3-18, obuchowe
+Umagicznienie: +3
+Specjalne właściwości:
+ +10 do obrażeń od ognia
+ +25% do odporności na ogień
+ +1 do klasy pancerza
+Szybkość: 2
+Waga: 5
+Biegłość: Pięści
+Mogą być używane jedynie przez Wojowników i Złodziei
+
+Nazwa 'Krwawe Wyspy Io' nie oznacza, że wyspy te należały do smoczego boga, tylko że powstały z jego krwi. Według legendy Io, widząc spór wśród różnych gatunków smoków, powiedział, że skoro ma się polać krew, niech będzie to jego własna. Rozciął sobie brzuch, a jego krew rozlała się na ziemię, formując archipelag.
+
+Te wyjątkowe rękawice pochodzą więc z Pierwszej Sfery Materialnej, a do Sfer Zewnętrznych musiały trafić poprzez portal w Łuku Żeglarza. Sprawiają wrażenie unurzanych we krwi - jej zastygłe pozostałości z łatwością da się odróżnić od rdzy, której można by się spodziewać na leżącym tu nie wiadomo jak długo kawałku metalu.
+
+To, co odróżnia je od innych potężnych rękawic, to ich niewiarygodna szybkość. Łatwiej dzięki nim unikać ciosów przeciwnika, ale to nie wszystko. Każde uderzenie zdaje się zawierać cząstkę smoczego boga, traktując wroga językami płomieni i jednocześnie uodparniając użytkownika na skutki działania tej niszczycielskiej siły.~
+@500112 = ~Sierp~
+@500113 = ~Sierp południcy~
+@500114 = ~SIERP
+Obrażenia: 3-12, sieczne
+Szybkość: 2
+Waga: 1
+Biegłość: Bronie sieczne
+Nie może być używany przez Kapłanów
+
+Najstarsze z narzędzi rolniczych, stworzone do prac żniwnych. Charakteryzuje się półokrągłym, mocno zakrzywionym ostrzem. Służy do zbioru zbóż i traw czy ścinania słomy. Legendy wkładały sierp w boskie ręce, np. Demetry czy Kronosa.~
+@500115 = ~SIERP POŁUDNICY
+Obrażenia: 3-12, sieczne
+Umagicznienie: +3
+Specjalne właściwości:
+ +5 do obrażeń od ognia
+ +5% do odporności na ogień
+Szybkość: 2
+Waga: 1
+Biegłość: Bronie sieczne
+Nie może być używany przez Kapłanów
+
+Najstarsze z narzędzi rolniczych, stworzone do prac żniwnych. Charakteryzuje się półokrągłym, mocno zakrzywionym ostrzem. Służy do zbioru zbóż i traw czy ścinania słomy. Legendy wkładały sierp w boskie ręce, np. Demetry czy Kronosa.
+
+Ten konkretny sierp należał do południcy. Te nieumarłe istoty powstają z ciał kobiet, które zmarły przed swoim ślubem bądź w jego trakcie. Ukazują się jako młode dziewczyny lub stare kobiety. Są ubrane na biało, noszą wianki we włosach, czasem mają ze sobą worki i sierpy. Lubią zadawać zagadki i bywają bardzo brutalne.
+
+W tym sierpie zawarta jest zdolność południcy do koncentrowania światła słonecznego. Z tego powodu będzie on zadawał dodatkowe obrażenia od ognia tym, którzy są na niego wrażliwi.~
+@500116 = ~Okular badacza Piekieł~
+@500117 = ~OKULAR BADACZA PIEKIEŁ
+Specjalne właściwości:
+ +25% do odporności na chłód
+ +25% do odporności na magiczny chłód
+ +25% do odporności na ogień
+ +25% do odporności na magiczny ogień
+ +25% do odporności na kwas
+ +15% do szansy na trafienie krytyczne
+ +2 do obrażeń
+TraK0: +2
+Waga: 0
+Może być używany jedynie przez Modrony
+
+Ten zaawansowany model soczewki łączy w sobie korzystne efekty innych popularnych soczewek, takich jak "Optix", soczewka horyzontu i soczewka wrodzonej zajadłości, a ponadto zapewnia użytkownikowi ochronę przed trudnymi warunkami panującymi w Dziewięciu Piekłach. Tego typu sprzęt jest w stanie zwiększyć szanse przetrwania modrona na tak niesprzyjających badaniom ziemiach.~
+@500118 = ~Tajemniczy zwój~
+@500119 = ~TAJEMNICZY ZWÓJ
+Waga: 0
+
+Związany wściekle różową wstążką pergamin jest dziwnie lepki w dotyku, jakby pokryty warstwą wyschniętego już śluzu. Pachnie cytrusami i piżmem. Nie masz pojęcia, gdzie mógł przebywać wcześniej, i chyba nie chcesz tego wiedzieć. Wydaje ci się, że w środku znajdują się słowa, które być może byłbyś w stanie odczytać.~
+@500120 = ~Wezwanie do bitwy~
+@500121 = ~WEZWANIE DO BITWY
+Waga: 0
+
+Ten zestaw pergaminów należy jak najszybciej zapisać i wysłać reprezentantom frakcji, od których oczekujesz pomocy podczas bitwy. Będziesz się musiał zastanowić, kto tak naprawdę jest twoim sojusznikiem i na kogo możesz liczyć. Warto przy tym pamiętać, że niektóre frakcje są ze sobą zwaśnione i doprowadzenie do spotkania ich członków może przynieść więcej szkody niż pożytku.~
+@500122 = ~Dziwaczna książka~
+@500123 = ~DZIWACZNA KSIĄŻKA
+Waga: 10
+
+Księga znaleziona w bibliotece przy Kanale. Jest niezwykle duża i ciężka, a na jej okładce nie widnieje żaden tytuł. Wydaje się nieco podejrzana...~
+@500124 = ~Przerażająca maczuga~
+@500125 = ~Maczuga Straży Zagłady~
+@500126 = ~PRZERAŻAJĄCA MACZUGA
+Obrażenia: 3-18, obuchowe
+Szybkość: 3
+Waga: 5
+Biegłość: Maczugi
+Nie może być używana przez Magów
+
+Z głowicy tej maczugi wystają nieregularnie nabite kolce. Rękojeść została oznaczona herbem przypominającym czaszkę zwierzęcia.~
+@500127 = ~MACZUGA STRAŻY ZAGŁADY
+Obrażenia: 3-18, obuchowe
+Umagicznienie: +3
+Specjalne właściwości:
+ +10 do obrażeń od magii
+ +2 do klasy pancerza
+TraK0: +2
+Szybkość: 3
+Waga: 5
+Biegłość: Maczugi
+Nie może być używana przez Magów
+Nie może być używana przez Dobre postacie
+
+Straż Zagłady pomaga entropii w bardzo praktyczny, choć moralnie wątpliwy sposób. Ich głównym źródłem utrzymania jest handel bronią. Nic dziwnego, że ich siedzibę w Sigil stanowi Zbrojownia w Dzielnicy Pani. W wieloświecie, gdzie jedną z podstawowych zasad jest to, że Wojna Krwi trwa ciągle, popyt na broń nie ustaje. Można się zastanawiać nad przyczyną takiego stanu rzeczy, ale łatwiej po prostu go zaakceptować i albo zignorować konflikt, albo zdecydowanie zająć stanowisko po jednej ze stron. Straż Zagłady znalazła jednak inną drogę. Korzystają na skrajnościach, którym ulegają inni. Dla nich liczy się głównie wzrost entropii.
+
+Z głowicy tej maczugi wystają nieregularnie nabite kolce. Rękojeść została oznaczona herbem Straży Zagłady - zwierzęcą czaszką. Specjalne właściwości tej broni pomagają przywołać niszczycielskie moce siedzib Straży Zagłady w Sferach Wewnętrznych, a dokładniej w Sferach Pseudożywiołów Popiołu, Pyłu, Soli i Próżni, skutkując dodatkowymi obrażeniami od pustki i rozkładu (traktowane jako obrażenia od magii).~
+@500128 = ~Dziurawy topór~
+@500129 = ~Topór Przeznaczonych~
+@500130 = ~DZIURAWY TOPÓR
+Obrażenia: 3-18, sieczne
+Szybkość: 3
+Waga: 5
+Biegłość: Topory
+Może być używany jedynie przez Wojowników
+
+Ten topór ma nietypowy kształt. Jego ostrze jest w niektórych miejscach poznaczone dziurami. Rękojeść została ozdobiona herbem przypominającym postać w dziwnym niebiesko-czerwonym stroju na niebieskim tle wzbogaconym zielonymi wężami. Dostrzegasz, że nakrycie głowy postaci przypomina kształtem sam topór.~
+@500131 = ~TOPÓR PRZEZNACZONYCH
+Obrażenia: 3-18, sieczne
+Umagicznienie: +3
+Specjalne właściwości:
+ +2 do klasy pancerza
+ Przenosi PŻ z przeciwnika na właściciela broni
+TraK0: +2
+Szybkość: 3
+Waga: 5
+Biegłość: Topory
+Może być używany jedynie przez Wojowników
+Nie może być używany przez postacie Neutralne (na osi Dobro-Zło)
+
+"Przeznaczeni brzdęk swój liczą wciąż,
+Nigdy nie dawaj, kiedy możesz wziąć."
+Fragment kołysanki popularnej u diabelstw
+
+Ten topór o nietypowym, podziurawionym ostrzu zdaje się być szczytowym osiągnięciem myśli Przeznaczonych, ponieważ pozwala zabrać w postaci życiodajnej siły część zadanych celowi obrażeń. Jest też na tyle potężną bronią, że spokojnie można go użyć do walki z biesami czy niebianami. Nie jest jednakże przeznaczony dla niezdecydowanych. Do wyzwolenia jego mocy potrzebna jest silna, niezachwiana wola i stanowcze, skrajne podejście do kwestii nurtujących mieszkańców Sfer.
+
+Rękojeść została ozdobiona herbem przypominającym postać w dziwnym niebiesko-czerwonym stroju na niebieskim tle wzbogaconym zielonymi wężami. Dostrzegasz, że nakrycie głowy postaci przypomina kształtem sam topór.~
+@500132 = ~Kajdany Uwolnienia Nie-sławy~
+@500133 = ~Amulet ciała~
+@500134 = ~AMULET CIAŁA
+Specjalne właściwości:
+ Leczy 100 PŻ
+ Zmniejsza zmęczenie
+Waga: 0
+
+Ten przedmiot wygląda jak kropla krwi o konsystencji żelka. Spożycie go rozprowadza leczniczą moc po całym ciele.
+
+Amulet ciała swoim działaniem przewyższa nie tylko amulety skrzepu i krwi, ale nawet amulet serca. Natychmiast leczy rany na powierzchni całego ciała i daje zastrzyk energii. Jego istnienie wynikło z potrzeby leczenia znacznie poważniejszych ran niż te powstałe na skutek bójek w karczmach i okazjonalnego zwiedzania lochów. Tego rodzaju amulety są przydatne dla obieżysferów, dla których zmagania z biesami czy niebianami to realna perspektywa.~
+@500135 = ~Anulus Demonis~
+@500136 = ~^NUWAGA: By zdjąć pierścień, Bezimienny NIE może mieć w ręce broni - w przeciwnym razie gra się zawiesi. Po prostu odłóż jedną broń do ekwipunku, aby zwolnić miejsce.^-
+
+ANULUS DEMONIS
+Specjalne właściwości:
+ Zamiana w glabrezu
+ +3 do siły
+ +3 do kondycji
+ +3 do zręczności
+ -5 do charyzmy
+ +16 do odporności na obrażenia magiczne
+ Dodatkowe PŻ wynikłe z podniesienia kondycji
+ Nie możesz rzucać czarów w biesiej formie
+ Zostajesz przeklęty na czas przemiany
+Waga: 1
+
+Przemiana w biesa dla jednych brzmi przerażająco, dla innych całkiem zabawnie. Dla ciebie może okazać się przydatna w sytuacjach bez wyjścia - na przykład kiedy chcesz przestraszyć jakiegoś trepa, który nie chce się odczepić. Ale żarty na bok. Przemiana w glabrezu niesie za sobą szereg korzyści: siła, kondycja i zręczność ulegają znacznej poprawie. Niestety ma również swoje wady. Po przeobrażeniu nie budzisz dużego zaufania wśród przeciętnych śmiertelników, a twoja aparycja w oczach wielu jest wręcz odrażająca. Tracisz również dar rzucania czarów. Dodatkowo czujesz ciągły niepokój - spowodowane jest to zapewne klątwą bycia biesem. Cóż, przynajmniej czujesz się silniejszy.~
+@500137 = ~Cukierek mocy dla Mortego~
+@500138 = ~CUKIEREK MOCY DLA MORTEGO
+Waga: 0
+Może być użyty tylko przez Mortego
+
+Ta mordoklejka zalatuje czekoladą, chociaż tak naprawdę nie jesteś pewien, co to za zapach. Tak czy inaczej zęby Mortego na pewno sobie z nią poradzą.~
+@500139 = ~Pocięty pergamin~
+@500140 = ~POCIĘTY PERGAMIN
+Waga: 0
+
+Pergamin ten przedstawia obsydianowy obelisk z mnóstwem wyrytych imion. Jest jednak pocięty w bardzo specyficzny sposób. Można go rozłożyć tak, aby stworzył sporych rozmiarów papierową pętlę.~
+@500141 = ~Trzonowiec Agravala~
+@500142 = ~TRZONOWIEC AGRAVALA
+Obrażenia: 1-6, kłute
+Obrażenia: 1-6, obuchowe
+Umagicznienie: +3
+Specjalne właściwości:
+ Przenosi PŻ z przeciwnika na właściciela broni
+ -1 do charyzmy
+ +1 do kondycji
+TraK0: +3
+Szybkość: 4
+Waga: 1
+Biegłość: Pięści
+Może być używany jedynie przez Mortego
+
+Jest to ząb trzonowy baernalotha o imieniu Agraval. Ma ci pomóc w zwabieniu jego 'pieska' z powrotem do właściciela. Jest obrzydliwy, ale w zasadzie to ząb, więc mógłby trafić do arsenału Mortego. Twój towarzysz nie powinien protestować, jeśli ma to zwiększyć jego umiejętności bojowe.
+
+Nie było to błędne założenie, że ząb tajemniczego starożytnego biesa skrywa jakąś tajemną moc. Co najważniejsze, jest w stanie ranić inne biesy oraz posiada niezwykłą właściwość wysysania życia. Rany zadawane przez baernalothy mogą być przez nie otwierane nawet przez dobę po walce, więc ból ofiary będzie bardzo dotkliwy.~
+@500143 = ~Gorący miecz~
+@500144 = ~GORĄCY MIECZ
+Obrażenia: 3-18, sieczne
+Szybkość: 3
+Waga: 5
+Biegłość: Bronie sieczne
+Nie może być używany przez Kapłanów
+
+Od tego miecza buchają fale ciepła. Z całą pewnością jest magiczny i osoba, która zrozumie jego naturę, zyska niesamowity oręż. Biorąc pod uwagę, że należał do Kabatuma, można się domyślać, że będzie bezużyteczny dla tych, którzy żyją w grzechu.~
+@500145 = ~Płomień Ładu~
+@500146 = ~PŁOMIEŃ ŁADU
+Obrażenia: 3-18, sieczne
+Umagicznienie: +3
+Specjalne właściwości:
+ +2 do klasy pancerza
+ +2 do charyzmy
+ +1 do mądrości
+ Odporność na panikę
+TraK0: +2
+Szybkość: 3
+Waga: 5
+Biegłość: Bronie sieczne
+Nie może być używany przez Kapłanów
+Nie może być używany przez Złe ani Chaotyczne postacie
+
+Ta święta broń została wykuta z czystego żelaza Góry Celestii przez samego boga ognia Anunnaki, Girru, w kuźni Niegasnącego Ognia, jego boskiej krainy w Merkurii. Girru patronuje także sprawiedliwości i prawu, zatem trudno o bardziej adekwatnego stwórcę tego narzędzia rytualnego oczyszczania świata ze zła. Starożytna magia i wyryte na mieczu inkantacje, zwane nam-búr-bi, mają nie tylko odpędzać zło, ale też, jak dosłownie głoszą, "wspierać pewność siebie króla, wzmacniać jego determinację i hartować wolę walki". W praktyce oznacza to zwiększenie charyzmy, mądrości i klasy pancerza oraz nieustraszoność.~
+@500147 = ~Iskra z Iadmon~
+@500148 = ~Obsydianowy pierścień~
+@500149 = ~ISKRA Z IADMON
+Specjalne właściwości:
+ Odporność na panikę i szał bojowy
+ +1 do klasy pancerza
+ Ulepszone rzuty obronne przeciw śmierci
+ +5% do odporności na magię
+Waga: 0
+Nie może być używana przez Złe postacie
+
+Dawno temu kolczyk ten nosiła Innaja, królowa dev rządząca ze złotego miasta Iadmon w Amorii w Elizjum. Pewnej nocy miasto zostało wyrwane z fundamentami przez smoczego boga Taska, który przeniósł je do Sfer Niższych i tam położył na powierzchni Gehenny, zakrywając nim wejście do smoczego leża, swej boskiej krainy. Innaja zginęła wraz z większością mieszkańców Iadmon, a Task zagrabił wszystkie tamtejsze skarby - poza nielicznymi wyjątkami, do których należy ten kolczyk. Spadł on królowej z ucha i zagubił się między sferami, jednak po dziś dzień zachował skrawek jej cudownej aury.~
+@500150 = ~~
+@500151 = ~Szataniec~
+@500152 = ~SZATANIEC
+Waga: 1
+
+To stara, zakurzona księga o szarej okładce. Po wstępnych oględzinach stwierdzasz, że to bestiariusz. Napisano go częściowo w niezbyt dobrze ci znanym dialekcie, ale przynajmniej w jakimś stopniu powinien być zrozumiały.~
+@500153 = ~Moneta Przeznaczonych~
+@500154 = ~MONETA PRZEZNACZONYCH
+Waga: 0
+
+Moneta otrzymana od Haer'Dalisa. Na pierwszy rzut oka nie różni się specjalnie od innych miedziaków w twojej kieszeni. Ma jednak otwierać portal do Ysgardu przy plaży.~
+@500155 = ~Maska Sonne~
+@500156 = ~Sztywna maska~
+@500157 = ~SZTYWNA MASKA
+Waga: 1
+
+Ta maska nie wygląda na zbyt praktyczną. Jest wykonana ze sztywnego, przypominającego metal materiału. Noszenie jej przez dłuższy czas musi być bardzo męczące.~
+@500158 = ~MASKA SONNE
+Specjalne właściwości:
+ +1 do charyzmy
+ +1 do klasy pancerza
+ Odporność na panikę i szał bojowy
+Waga: 1
+Może być używana jedynie przez istoty posiadające twarz
+
+To maska, którą nosiła Sonne. Pozwalała kobiecie sprawiać wrażenie, że trzyma emocje na wodzy, podczas gdy wewnątrz targały nią emocje. Tobie również może pomóc podczas rozmów, byś wydał się pewniejszy siebie i niewrażliwy na stres oraz panikę. Sama maska wygląda bardzo dziwnie, ale po założeniu dopasowuje swój kształt do rysów twarzy użytkownika.~
+@500159 = ~List gończy~
+@500160 = ~LIST GOŃCZY
+Waga: 0
+
+Na tej ulotce widać portret, zdawałoby się, młodego mężczyzny, którego prawdziwy wiek maskuje ogrom zmarszczek i blizn. Pierwszy rzut oka wychwytuje najważniejsze informacje ujęte tłustymi literami na górze i na dole pergaminu.
+
+"ADAIRE, ALIAS KESTER, ALIAS SIGIMUNDIS STIG, ALIAS LEONTES, ALIAS CHANCELLEN PRAWDZIWY.
+POSZUKIWANY Z ROZKAZU HARMONIUM ZA OSZUSTWO, ZŁODZIEJSTWO I MORDERSTWO."
+
+Poza tym jest jeszcze jakiś drobny druk z prawnymi podstawami wystawienia listu. Niepokojące wydaje się to, że wizerunek poszukiwanego przypomina ciebie samego. Może kilka lat wcześniej? I ten ogrom imion, ale żadne prawdziwe... Chyba lepiej byłoby nie stawać obok tego rysunku, tak na wszelki wypadek. A na pewno nie w obecności Harmonium.~
+@500161 = ~Garota z ostrorośli~
+@500162 = ~GAROTA Z OSTROROŚLI
+Waga: 0
+
+Ten sękaty kawałek gałęzi wygląda szczególnie niebezpiecznie. Zdaje się, że został zawiązany przez ostrokrzewistą zarazę dokładnie po to, by zacisnąć ci się wokół gardła... Na szczęście udało ci się ją pokonać, zanim to się stało. Szybki test wytrzymałości pętli wykazuje, że faktycznie mogłaby przeciąć ci gardło. Pozostawienie jej na ulicy mogłoby być nieodpowiedzialne, ale czy jesteś typem osoby, która byłaby w stanie jej użyć? Jakaś część ciebie ma wrażenie, że w przyszłości mogłaby się okazać przydatna...
+
+Masz mgliste wspomnienia ludzi, którzy potrafią wykorzystywać takie narzędzia do zabójstw. Wszystko, czego potrzeba, to odrobina nacisku na plecy ofiary z użyciem stopy lub kolana. Może to zabić albo przynajmniej poważnie uszkodzić przeciwnika. Nie wydaje ci się, by trzeba było być zabójcą, by tego dokonać, choć doświadczenie w tej profesji zapewne uczyniłoby cię bardziej skutecznym. Taka metoda zamiast noża w plecy z pewnością utrudni śledztwo - ciebie już dawno nie będzie na miejscu.~
+@500163 = ~Ślina włóczęgów~
+@500164 = ~ŚLINA WŁÓCZĘGÓW
+Waga: 1
+
+Autor: Arnil, barman przybytku "U Arnila"
+
+"Wędrowiec przybył akurat w trakcie oberwania chmury. Jeden z setek sobie podobnych, nawet podobnie odziany. Długi, ciężki płaszcz, niezbyt praktyczny podczas wiosennej ulewy, chociaż nieoceniony w zimie. Kaptur na głowie, wytrzymałe buciska, przez ramię przewieszona nieduża torba... Jakże oni wszyscy podobnie wyglądali.
+
+Kiedy otworzył drzwi, przeciąg wionął do środka, trzaskając niedomkniętym oknem.
+
+Stał tak przez chwilę w progu, przybysz-klon. Za jego plecami siekł deszcz, on niczym bohater na jakimś obrazie - nieruchomy i czujny... Co za banał.
+
+Wiedziałem, że muszę odegrać swoją rolę, żeby coś u mnie zamówił.
+
+Wszedł do środka, zdjął kaptur, rozpiął płaszcz. Dość młody z twarzy... Rozejrzał się po izbie, jakby czegoś lub kogoś szukał. Miałem nadzieję, że nie guza. Wreszcie, zerknąwszy w moim kierunku, podjął krok w jakże standardowym tańcu - wprost do baru. Ku pokrzepieniu serca!
+
+Gdy się do mnie zbliżył, ujrzałem jego niecodzienne oczy. Źrenice tak szare, że niemalże przeźroczyste. Północniak jak nic. Krótko przystrzyżone, jasne, brudne włosy oraz kilkudniowy zarost. No cóż, przynajmniej był tak młody, jak z początku myślałem.
+
+Rutyno, oto jestem.
+
+ - Czym mogę służyć? - zagadnąłem, oczywiście spodziewając się typowej odpowiedzi. Tego towarzysza na pewno nie było stać na najlepsze trunki. Sądząc po ubiorze, z doświadczenia obstawiałem, że sięgnie po piwo.
+
+- Zwykła woda. Jak najczystsza.
+
+A, to było coś nowego. Nie napił się deszczówki?
+
+- Coś na ząb? - zapytałem.
+- Nie trzeba.
+- Oczywiście...
+
+Bardzo słabo. Było jasne, że wiele na nim nie zarobię.
+
+- Wstrętna pogoda, nie? Leje tak od jakichś trzech godzin.
+- Ta.
+- Dokąd to zmierzacie, jeśli wolno spytać? - zagadnąłem ponownie, podając mu wodę.
+- Daleko... Dalej, niż myślałem.
+- Cóż za tajemnica. - Uśmiechnąłem się pod nosem. - No, ale nie moja sprawa.
+- Długo nie zabawię. Czekam na kogoś, a później już w drogę.
+- Rozumiem.
+
+Śmiałek ten wyglądał na kogoś, kto wie, czego chce. Chyba.
+
+Usiadł gdzieś z tyłu. Postawił kubek z wodą na stoliku i dumał o czymś przez kwadrans, nie napiwszy się ani razu. Dziwne. Wreszcie przybył ten, na którego czekał. Chudy, starszy osobnik, lekko ubrany, równie mokry od deszczu. Wypatrzywszy człowieka z północy, ruszył prosto ku niemu. O nie, mój kochany, u mnie nie siedzi się bez niczego... Gdy dosiadł się do stolika, ruszyłem, by odebrać zamówienie.
+
+- Szanowny pan sobie życzy?
+- Co? - chrząknął nowo przybyły. - A tak, no to... Piwo. Tylko.
+- Służę.
+
+Ten wyglądał na bogatszego. Ech, ale dobre i piwo.
+
+Nie było co robić, więc poobserwowałem sobie tę parkę. W pewnym momencie ten starszy podał coś młodszemu. Jakiś woreczek. Tamten wsypał to do wody i energicznie zamieszał. Nie podobało mi się to. Postanowiłem chwilę ich podsłuchać...
+
+- Skopiowałeś pismo? - spytał północniak.
+- A za kogo mnie uważasz? Obiecałem, to i jest. Kropka w kropkę. Nie było aż tak ciężko. Wierz lub nie, gorzej miałem ze zdobyciem tego zielska.
+- Czyżby?
+- O tak. 'Ślina włóczęgów'... Trudniej to dziś zdobyć niż smoczą łuskę. Ale, ale... nie zamierzasz chyba tego pić?
+- Bo?
+- Różne słyszałem o tym legendy, jakby.
+- Jakie legendy? Na przykład?
+- Dziwactwa. Dość by rzec, że niespotykane bzdury. A nawet coś o rychłej śmierci.
+- Hmm. Tu masz złoto i kamienie. Tak jak się umawialiśmy... - Młodszy wyjął zza pazuchy pokaźną sakiewkę i rzucił ją na stół.
+- Oj, chłopcze, mam nadzieję, że wiesz, co robisz. A oto pismo, kopia z Księgi Zamknięcia Do Miasta. Dziwna nazwa, ale cóż ja mogę wiedzieć.
+- Dziwna, jeśli się nie zna dalszej części.
+- To znaczy?
+- Ten antyczny wolumin jest niekompletny, tak jak i tytuł...
+- To wiem. Chłopcze, byłem skrybą trzydzieści lat. Tytuł jest niepełny, bo w pomroce dziejów ktoś go bezczelnie wyrwał, zniszczył czy cokolwiek i nie ma o nim nigdzie wzmianki.
+- Zatem, skrybo, wiesz, jak to jest ze słowem 'nigdzie'. W każdym razie to już nie twoje zmartwienie. Pismo się zgadza, brakowało mi dwóch ostatnich wersów. Zrobiłeś, co do ciebie należało. Żegnam.
+
+Starszy zerknął do sakiewki, pogmerał w środku, po czym wstał i odszedł, nie napiwszy się ani łyku piwa.
+
+Niezłe gagatki, pomyślałem sobie wtedy - stare woluminy, jakieś zioło o idiotycznej nazwie... Co za czasy, co za ludzie. Ciekawe, co zrobi teraz z tą wodą i ziołami. Niepotrzebny mi tu trup. Postanowiłem go wyrzucić.
+
+Nagle wędrowiec wstał od stolika i z kubkiem w jednej ręce, zaś pergaminem w drugiej ruszył w stronę wyjścia. Stanąwszy tak przed progiem, znieruchomiał... i zaczął czytać na głos z trzymanej karty:
+
+'Spragniony jest umarły wody życia.
+Jak spragniony jestem drogi.
+Tylko ty, o Wielka, rozumiesz ten ból.
+Uciekam się do mocy, co widzą wszystko.
+Owo dzieło rąk wspaniałych.
+Ujrzeć Sigil, które błyszczy daleko.'
+
+- Co to za wykolejone żarty! - krzyknąłem.
+
+Wtedy gość z Północy przechylił kubek i wypił całą zawartość naraz.
+
+Z początku stał bez ruchu przed wyjściem, ale po chwili coś zaczęło się dziać. Buchnęły jakby błękitne płomienie i w miejscu drzwi pojawiła się dziwna, zaokrąglona przestrzeń. Ze środka wionęła pomarańczowa mgła. Nieznajomy wszedł w nią i... zniknął, zostawiając po sobie jedynie mój kubek, który poturlał się po podłodze. Nieliczni obecni klienci z niedowierzaniem kiwali głowami, zapewne przypisując to zniknięcie alkoholowi. Niektórzy robili znaki odpędzające uroki.
+
+Czy ktoś mi w to uwierzy?
+
+Spisuję te słowa, by niczego nie zapomnieć.
+
+Od tamtej pory każdy nowy przybysz jawi mi się jako coś możliwie niesamowitego..."~
+@500165 = ~Widelec kanibala~
+@500166 = ~WIDELEC KANIBALA
+Obrażenia: 3-12, kłute
+Umagicznienie: +3
+Szybkość: 2
+Waga: 1
+Biegłość: Bronie sieczne
+Nie może być używany przez Kapłanów
+Nie może być używany przez Dobre postacie
+
+Widelce od lat wchodziły w skład zastawy kuchennej. Posiadają uchwyt i zębiska, które pomagają w nadziewaniu i przenoszeniu potraw do ust.
+
+Ponieważ coś się w tobie zmieniło, zacząłeś dostrzegać morderczy potencjał w nawet najbardziej prozaicznych przedmiotach. Co więcej, jakaś dziwna siła sprawia, że jesteś w stanie nimi ranić nawet biesy i niebian.~
+@500167 = ~Nóż kanibala~
+@500168 = ~NÓŻ KANIBALA
+Obrażenia: 3-12, sieczne
+Umagicznienie: +3
+Szybkość: 2
+Waga: 1
+Biegłość: Bronie sieczne
+Nie może być używany przez Kapłanów
+Nie może być używany przez Dobre postacie
+
+Noże od lat wchodziły w skład zastawy kuchennej. Składają się z metalowej głowni osadzonej w rękojeści i pomagają w krojeniu i cięciu pożywienia.
+
+Ponieważ coś się w tobie zmieniło, zacząłeś dostrzegać morderczy potencjał w nawet najbardziej prozaicznych przedmiotach. Nie żeby noże nie były używane także jako broń, ale ten na pierwszy rzut oka wydaje się nieco tępy... Doskonale zdajesz sobie z tego sprawę. Co więcej, jakaś dziwna siła sprawia, że jesteś w stanie nim ranić nawet biesy i niebian.~
+@500169 = ~Tłuczek do mięsa~
+@500170 = ~TŁUCZEK DO MIĘSA
+Obrażenia: 3-12, obuchowe
+Umagicznienie: +3
+Szybkość: 2
+Waga: 4
+Biegłość: Bronie obuchowe
+Nie może być używany przez Dobre postacie
+
+Przed podgrzaniem mięsa dobrze jest rozbić jego płaty przy użyciu dwustronnego młotka zwanego tłuczkiem. Jego rękojeść jest drewniana, a okucia metalowe.
+
+Ponieważ coś się w tobie zmieniło, zacząłeś dostrzegać morderczy potencjał w nawet najbardziej prozaicznych przedmiotach. Co więcej, jakaś dziwna siła sprawia, że jesteś w stanie nimi ranić nawet biesy i niebian.~
+@500171 = ~Śliniaczek kanibala~
+@500172 = ~ŚLINIACZEK KANIBALA
+Specjalne właściwości:
+ +1 do klasy pancerza
+ +1 do TraK0
+Waga: 0
+
+Jesz niespiesznie, więc kultura musi być.
+
+Jest to osłona zakładana pod brodę, by żaden cenny kawałek dania nie zmarnował się, spadając na ziemię. Wiesz, jak szanować jedzenie. Ogryziesz wszystko do ostatniej kości.~
+@500173 = ~Pierścień martwego niebianina~
+@500174 = ~Wspomnienie o Kintyre~
+@500175 = ~PIERŚCIEŃ MARTWEGO NIEBIANINA
+Waga: 1
+
+Ten srebrny pierścień zdjąłeś z palca spetryfikowanego, uwięzionego w lodzie niebianina na szczycie góry Nemezji. Nie wiesz, co zrobił, aby zasłużyć na taki los. Pierścień wygląda na bardzo stary. Nie znasz typu metalu, z jakiego został wykonany, a widniejący na nim symbol nic ci nie mówi.~
+@500176 = ~WSPOMNIENIE O KINTYRE
+Specjalne właściwości:
+ +3 do klasy pancerza
+ +2 do rzutów obronnych przeciw zionięciom
+ Zwiększa szybkość rzucanych zaklęć
+Waga: 1
+ 
+Nawet zaklęcie "Identyfikacja" nie ujawnia wiele nowego o pierścieniu. W głowie pojawia ci się jedynie jego nazwa oraz właściwości. Jego pochodzenie spowite jest tajemnicą silniejszą niż proste zaklęcia.
+
+Ten srebrny pierścień zdjąłeś z palca spetryfikowanego, uwięzionego w lodzie niebianina na szczycie góry Nemezji. Nie wiesz, co zrobił, aby zasłużyć na taki los.~
+@500177 = ~Topór Prawdziwego Gniewu~
+@500178 = ~TOPÓR PRAWDZIWEGO GNIEWU
+Obrażenia: 3-18, sieczne
+Umagicznienie: +3
+Specjalne właściwości:
+ 10% szans na wywołanie szału bojowego u przeciwnika
+ 5% szans na wywołanie snu u przeciwnika
+ 1% szans na wywołanie szału bojowego u właściciela
+TraK0: +3
+Szybkość: 6
+Waga: 4
+Biegłość: Topory
+Może być używany jedynie przez Wojowników
+Nie może być używany przez Dobre postacie
+
+Oto topór z iramantu, wyjątkowego metalu z Głębi Gniewu, dwieście sześćdziesiątej drugiej warstwy Otchłani. Onegdaj zagarnął ją dla siebie pewien kambion, samozwańczy władca demonów. Gdy jego przeciwnicy zesłali go wreszcie do Studni Ciemności, warstwa niemal całkowicie opustoszała. Jego kowale nadal jednak tkwią w otchłannej kolonii, wytapiając z tamtejszej rudy magiczny oręż.
+
+Nie wszystkie domniemane fakty dotyczące trofeum Kabatuma wydają się wiarygodne. Przestaje to jednak mieć znaczenie, gdy przyglądasz się tej wspaniałej broni. Rzeczywiście marnowałaby się jedynie wystawiona na pokaz. Kontakt z wydobytym z nieskończonej pustki iramantem wywołuje we wrogach i właścicielu zaciekłość, która może prowadzić do utraty kontaktu z rzeczywistością. Zaprawdę szaleństwo drzemie w głębinach Otchłani.
+
+Prawym ciężko będzie dobyć tego topora. Przeznaczony jest on bowiem dla niereformowalnych grzeszników, wykazujących się amoralizmem i hipokryzją, tak obcych w spokojnych Sferach Wyższych. A przynajmniej tak mogłoby się zdawać.~
+@500179 = ~Skóra Postrachu Diabłów~
+@500180 = ~SKÓRA POSTRACHU DIABŁÓW
+Przywołuje czar: "Groza" (raz dziennie)
+Waga: 10
+
+Oto skóra tkacza piekielnego łańcucha - pajęczej bestii z najciemniejszych zakamarków Dziewięciu Piekieł, której boją się nawet diabły. Każdy z nich w Dziewięciu Piekłach rozpozna dźwięk tych łańcuchów i odróżni tkacza od jakiegokolwiek oprawcy czy pokutnika. Bo jego skóra to właśnie to - okrutne haki, kolczaste łańcuchy i wyszczerbione żelazo. Potrząśnij nim mocno, a od jego dzwonienia nawet baatezu poczują ciarki na plecach.
+
+Nieważne, jak trzymałbyś tę upiorną siatkę z łańcucha, jej drobne kolce i ostrza pokrywające każde ogniwo kłują cię w palce. Przy potrząśnięciu ostre wyrostki trą o siebie, wydając niepokojący grzechot i zgrzyty, które wydają się podszyte zawodzeniem rozpaczy i wrzaskami bolesnej agonii. Niektóre z nich jakby łapczywie chwytają rękę użytkownika, kalecząc jego palce.
+
+Przy użyciu wydaje upiorny grzechot i zgrzyty, które wywołują efekt strachu u istot w polu widzenia.~
+@500181 = ~Dziennik Mawu~
+@500182 = ~DZIENNIK MAWU
+Waga: 1
+
+Pięknie zdobiony, gruby dziennik zawierający notatki profesor Mawu od Czuciowców.~
+@500183 = ~Zniszczony amulet~
+@500184 = ~ZNISZCZONY AMULET
+Waga: 0
+
+Poza motywem winorośli zachowanym na obrzeżach nie dostrzegasz w tym amulecie nic, co wskazywałoby na jego naturę lub pochodzenie.~
+@500185 = ~Zniszczony święty symbol~
+@500186 = ~ZNISZCZONY ŚWIĘTY SYMBOL
+Waga: 0
+
+Jest to najwyraźniej jakiś święty symbol, jednak poza motywem winorośli zachowanym na obrzeżach nie dostrzegasz w nim nic, co wskazywałoby na jego naturę lub pochodzenie. Moc, której był poświęcony, musiała zostać całkowicie zniszczona.~
+@500187 = ~Zakazany kamień doznań~
+@500188 = ~ZAKAZANY KAMIEŃ DOZNAŃ
+Waga: 1
+
+Ten kamień sensoryczny roztacza niepokojącą aurę. Pokrywają go zaschnięte plamy krwi, jakby został kiedyś użyty jako narzędzie zbrodni.~
+@500189 = ~Bełty Wcielonego Ognia~
+@500190 = ~BEŁTY WCIELONEGO OGNIA
+Obrażenia: 2-5, kłute
+Umagicznienie: +3
+Specjalne właściwości:
+ 5 obrażeń od magicznego ognia przy uderzeniu
+TraK0: +2
+Szybkość: 4
+Waga: 0
+Biegłość: Pociski
+Mogą być używane jedynie przez Modrony
+
+Te bełty zawierają w sobie potęgę pierwotnego ognistego bóstwa, Władcy Płomieni Kossutha. Jego boską krainą jest Karmazynowy Filar w Sferze Żywiołu Ognia. To 16-kilometrowa kopuła złożona z płomieni tak niewyobrażalnie gorących, że cała reszta sfery wydaje się przy nich chłodna. Stamtąd właśnie pochodzą te pociski. Są odpowiednio zabezpieczone, ale nawet najmniejszy ułamek tej potęgi zasieje zniszczenie wśród wrogów.~
+@500191 = ~Bełty Mściwych Burz~
+@500192 = ~BEŁTY MŚCIWYCH BURZ
+Obrażenia: 2-5, obuchowe
+Umagicznienie: +3
+Specjalne właściwości:
+ 5 obrażeń od elektryczności przy uderzeniu
+TraK0: +2
+Szybkość: 3
+Waga: 0
+Biegłość: Pociski
+Mogą być używane jedynie przez Modrony
+
+Jakimś cudem w tych bełtach zaklęto moc Sfery Pseudożywiołu Błyskawic, zwanej też po prostu Sferą Burz lub - nieco bardziej poetycko - Gniewną Krainą. Jedynymi istotami, które prawdopodobnie były w stanie to zrobić i przeżyć, musieli być przedstawiciele ludu vrrxlzk, przez obieżysferów prościej nazywani szokerami. Są oni podzieleni na spokojnych Kwestionujących i odkrywczych Wizytatorów starających się opuścić swoją sferę. Takie pociski służą ich idei, śląc błyskawice w miejsca, w które bez zewnętrznej pomocy mogłyby nigdy nie dotrzeć.~
+@500193 = ~Bełty Pierwotnej Zgnilizny~
+@500194 = ~BEŁTY PIERWOTNEJ ZGNILIZNY
+Obrażenia: 2-5, kłute
+Umagicznienie: +3
+Specjalne właściwości:
+ 5 obrażeń od kwasu przy uderzeniu
+TraK0: +2
+Szybkość: 4
+Waga: 0
+Biegłość: Pociski
+Mogą być używane jedynie przez Modrony
+
+Okrutny wpływ starożytnego bóstwa zgnilizny, zepsucia i rozkładu na Sfery pozostaje od wieków przedmiotem dyskusji. Plotki o istnieniu pozostałości po zabitym bogu obejmują też doniesienia o produkcji pocisków mających rozprzestrzeniać jego zgniliznę, by znów mógł powrócić w mrocznej chwale. Nie wiadomo, czy to w ogóle możliwe; nie ma też pełnej zgody co do tego, że w ogóle został unicestwiony. Pewne jest natomiast, że wszystkie te niejasności bardzo pasują do złego bóstwa, które utrzymywało kontrolę dzięki kłamstwom i półprawdom. Jego macki miały rzekomo możliwość przemieszczania się między skupiskami gnijącej materii, by rozsiewać jego nasiona w śpiących i sparaliżowanych istotach, przynosząc nieznany rodzaj ciemności.
+
+Pociski zostały oznaczone symbolem dłoni z uzębioną paszczą.~
+@500195 = ~Bełty Tkania Splotu~
+@500196 = ~BEŁTY TKANIA SPLOTU
+Obrażenia: 2-5, obuchowe
+Umagicznienie: +3
+Specjalne właściwości:
+ 5 obrażeń od magii przy uderzeniu
+TraK0: +2
+Szybkość: 4
+Waga: 0
+Biegłość: Pociski
+Mogą być używane jedynie przez Modrony
+
+Mówi się, że Mystryl darowała rasom Pierwszej Sfery Materialnej wiedzę o tym, jak korzystać z magii. Później miała tego żałować. Bo jakkolwiek cudowny był to dar, wykorzystało go mrowie złych magów. Wypaczyli go do takiego stopnia, na jaki tylko pozwalała ich zepsuta wyobraźnia, tworząc kolejne pokolenia żądnych władzy tyranów chcących oszukać życie i śmierć.
+
+Nie da się ukryć, że magia miała istotny wpływ nie tylko na jej użytkowników, ale i na zwykłych ludzi, choćby przez fakt powstania całego rynku magicznych mikstur i przedmiotów. Te pociski to ucieleśnienie idei poszerzania Splotu, czyli źródła surowej magii, z której rzucający czary mają czerpać. Splot płynie w zasadzie wszędzie, poza strefami martwej magii. Tam, gdzie jest słabiej utkany bądź nieobecny, rzucanie czarów jest trudniejsze, jak choćby na Abeirze. Splot jest też nieco inaczej skonstruowany na różnych sferach, co wpływa na inny sposób działania zaklęć - zauważył to z pewnością każdy mag próbujący wzmocnić swoją siłę w Tartarze czy telepata słyszący szepty podsłuchujących diabłów w Avernusie, nie mówiąc o Miażdżących Dłoniach Bigby'ego zyskujących biesie szpony.
+
+Nawet jeśli zrozumienie istoty Splotu pozostaje zadaniem trudnym, o ile nie niemożliwym, wykorzystanie go do walki pozostaje w zakresie tego, co możliwe. Te pociski poza zastosowaniem bitewnym mają poszerzać sieć Splotu, zwiększając wpływ magii w rejonach, do których jeszcze niekoniecznie dotarła. Prawdopodobnie gdyby Splot się zapadł, poskutkowałoby to katastrofą, jakiej Sfery jeszcze nie widziały.~
+@500197 = ~Jadeitowa czaszka~
+@500198 = ~JADEITOWA CZASZKA
+Waga: 2
+
+To miniaturowa czaszka wyrzeźbiona z cennego kamienia. Wydaje się nie mieć żadnego konkretnego zastosowania, choć z pewnością może posłużyć za piękny, ale nieco groteskowy przycisk do papieru.~
+@500199 = ~Czy duchy mogą krwawić?~
+@500200 = ~CZY DUCHY MOGĄ KRWAWIĆ?
+Waga: 1
+
+Ten tomik autorstwa anonimowego członka (lub członków) Ataru zawiera rozważania na temat tego, czy żywe istoty faktycznie mają dusze - i co miałoby z tego wynikać. W oczy rzuca ci się akapit zakreślony przez poprzedniego czytelnika węglem, którego treść brzmi:
+
+"Mówi się, że w niebiosach Sfer Wyższych jesteśmy spełnieni. Ale co ze wspomnieniami? Jak osoba trapiona traumą i koszmarnymi doświadczeniami ma zaznać wiecznej radości w raju? Czy dusza wyzbywa się ich w jakiegoś rodzaju czyśćcu lub w samym niebie? Ale jeśli tak, to czy zatraciwszy pamięć, dalej jest spełniona? Czy bez życiowego doświadczenia nadal jest naprawdę sobą? Wszak trauma i żal, nieuchronne elementy doświadczenia, nie dają zaznać prawdziwego szczęścia, a bez nich dusza nie jest już tą samą osobą, którą była za życia. Czy zatem życie wieczne, mające być rajem, może stać się pułapką bez ucieczki dla istot, których żywot był dość trudny, złożony z cierpienia i szaleństwa? Czyż dla takich nie byłoby lepszym wyjściem umrzeć na zawsze, w całym tego słowa znaczeniu, niż zatracić siebie lub trwale utknąć w raju zmienionym w osobiste piekło?"
+
+Podobne tezy i antytezy wobec religijnych założeń ciągną się przez wszystkie strony, dobitnie wyrażając stronniczość autora, przeciwnego 'wymuszonemu przez bogów' życiu pośmiertnemu.~
+@500201 = ~Ścieżki Przeznaczenia~
+@500202 = ~ŚCIEŻKI PRZEZNACZENIA
+Waga: 1
+
+Ta książka stanowi zbiór opowiadań, koncentrujących się na nieuchronności przeznaczenia i fatum - czasem błogiego, a czasem przytłaczającego. W chwili, gdy trafia w twoje ręce, zakładka wyznacza początek następującego, pozbawionego tytułu opowiadania:
+
+"Dawno, dawno temu, w niedostępnej sferze, żył lud spokojny i łagodny, który nic sobie nie robił z wiszącego nad nim cienia wojny. To nie ich wojna, mówili. A gdy konflikt spadł na nich jak kataklizm, zaczął się płacz i zgrzytanie zębów.
+
+Dopiero obcy wojownik, którego gościli, gdy zastał ich czas nieszczęść, wyrwał ich ze stanu bierności. Jego zapał i wiara obudziły w nich gniew i odwagę, pokazując im, jacy są silni. Za jego przykładem ruszyli na wojnę, by bronić swych domów i rodzin. Błogosławieństwo, którego wojownikowi udzieliła jego ukochana, poruszyło ich serca, zaś anioł zwiastował im zwycięstwo. I gdy maszerowali ku chwale, nikt z nich nie pomyślał, że wojownika na ich czele nie napędza troska i miłość, a choroba, którą powstrzymywało jego otoczenie, aż wreszcie zaraził nią wszystkich.
+
+Wiara i odwaga dały im sukces. Zwyciężyli i pokazali, że są siłą. Jednak gdy wrócili do domów, zastali tragedię i ruinę. Na widok ciała ukochanej ich dumny przywódca pojął, że gdyby nie uległ swej chorobie, mogliby zostać w domach i ochronić bliskich. Jednak było już dla nich za późno. A on został sam - wystawiony na żer choroby, którą próbował przenieść na wrogów, a sam padł jej ofiarą, w najgorszy możliwy sposób.
+
+Trawiony zgryzotą i poczuciem winy wielki wojownik odebrał sobie życie. Znów wyruszył na wojnę - tym razem samotnie i nie zostawiając niczego na powrót. Sam sprowokował do walki przytłaczającą siłę i poległ zmasakrowany przez nawałę wrogów, licząc, że wraz z jego życiem wreszcie zgaśnie też jego niedola.
+
+Szukał odpoczynku w śmierci, ale nie był on mu dany. Nie pojmował bowiem, że choroba nie była częścią jego życia, a jego własnej duszy - zaś w świecie zmarłych nie ma ucieczki przed samym sobą."~
+@500203 = ~Notatka kapłanki~
+@500204 = ~NOTATKA KAPŁANKI
+Waga: 0
+
+To krótka notatka sporządzona przez kapłankę, która pozostawiła paczkę w portowym magazynie. Jest napisana w nieznanym ci języku, jednak w jej treści odnajdujesz trzy słowa, które odpowiadają wyrazom znanym ci we wspólnym:
+
+"woda," "wiara," "szansa"~
+@500205 = ~Moneta z podobizną kobiety o dwóch twarzach~
+@500206 = ~Potężna Moneta Losu~
+@500207 = ~MONETA Z PODOBIZNĄ KOBIETY O DWÓCH TWARZACH
+Waga: 0
+
+Po obu stronach monety widnieje prawie bliźniaczy wizerunek dwóch stopionych ze sobą kobiecych twarzy. Obie są piękne, ale jedna wyraża spokój, a druga jakby złośliwość. Wizerunek na jednej stronie jest lustrzanym odbiciem strony przeciwnej.~
+@500208 = ~POTĘŻNA MONETA LOSU
+Waga: 0
+
+Czasem o życiu i śmierci decyduje rzut monetą.
+
+Po obu stronach monety widnieje prawie bliźniaczy wizerunek dwóch stopionych ze sobą kobiecych twarzy. Obie są piękne, ale jedna wyraża spokój, a druga jakby złośliwość. Wizerunek na jednej stronie jest lustrzanym odbiciem strony przeciwnej. Rozpoznajesz w kobietach dwie boginie losu: Tymorę oraz Beshabę.
+
+Kiedy rzucisz tą monetą, efekt może być dwojaki - albo wszystko będzie się przez chwilę zdawało nieco łatwiejsze, albo zgoła przeciwnie. Nie sposób przewidzieć, co się stanie.~
+@500209 = ~Naprawdę gorący topór~
+@500210 = ~Topór Zmierzchu Bogów~
+@500211 = ~NAPRAWDĘ GORĄCY TOPÓR
+Obrażenia: 3-18, sieczne
+Szybkość: 3
+Waga: 5
+Biegłość: Topory
+Może być używany jedynie przez Wojowników
+
+Ten topór jest tak gorący w dotyku, że odruchowo cofasz dłoń. Ciężko wyjaśnić, jak to możliwe, że nie przepala wszystkiego, z czym się zetknie.~
+@500212 = ~TOPÓR ZMIERZCHU BOGÓW
+Obrażenia: 3-18, sieczne
+Umagicznienie: +3
+Specjalne właściwości:
+ +2 do klasy pancerza
+ +10 do obrażeń od magicznego ognia
+ +20% do odporności na ogień
+ +20% do odporności na magiczny ogień
+TraK0: +2
+Szybkość: 3
+Waga: 5
+Biegłość: Topory
+Może być używany jedynie przez Wojowników
+
+Surturowi, władcy ognistych gigantów z Muspelheimu, pisane jest pewnego dnia spalić świat podczas Ragnaröku, Zmierzchu Bogów. Żadna broń nie dorówna jego jaśniejszemu od wszelkich słońc mieczowi, ale świątynie w Mannheim skrywają wiele sekretów. Przeważnie są to ogromne ilości broni mające przygotować gigantów i ich sojuszników na nadchodzący koniec.~
+@500213 = ~Naprawdę zimny topór~
+@500214 = ~Topór Ostatecznej Rozpaczy~
+@500215 = ~NAPRAWDĘ ZIMNY TOPÓR
+Obrażenia: 3-18, sieczne
+Szybkość: 4
+Waga: 5
+Biegłość: Topory
+Może być używany jedynie przez Wojowników
+
+Ten topór jest bardzo zimny w dotyku - do tego stopnia, że widzisz, jak paruje.~
+@500216 = ~TOPÓR OSTATECZNEJ ROZPACZY
+Obrażenia: 3-18, sieczne
+Umagicznienie: +3
+Specjalne właściwości:
+ +2 do klasy pancerza
+ +20 do obrażeń od magicznego chłodu
+ +20% do odporności na chłód
+ +20% do odporności na magiczny chłód
+TraK0: +3
+Szybkość: 4
+Waga: 5
+Biegłość: Topory
+Może być używany jedynie przez Wojowników
+
+Yggdrasil sięga daleko, nawet do Hadesu. Właśnie tam znajduje się Niflheim, Rozpacz Ludzi Północy. To kraina, w której została uwięziona zła bogini śmierci, Hel. Chłód tworzy niepokojącą wieczną mgłę, która sprawia, że ubranie nasiąka wodą, a metal rdzewieje w zastraszającym tempie. Ten efekt został zaklęty w toporze - paruje on mgłą, którą ciężko pokonać nawet potężniejszym przeciwnikom, jednocześnie uodparniając władającego bronią.~
+@500217 = ~Zatęchły stary topór~
+@500218 = ~Gnijący Topór Zepsucia~
+@500219 = ~ZATĘCHŁY STARY TOPÓR
+Obrażenia: 3-18, sieczne
+Szybkość: 4
+Waga: 5
+Biegłość: Topory
+Może być używany jedynie przez Wojowników
+
+Niełatwo wytrzymać zapach tego starego, zardzewiałego topora. Trudno powiedzieć, czy będzie z niego jakiś użytek.~
+@500220 = ~GNIJĄCY TOPÓR ZEPSUCIA
+Obrażenia: 3-18, sieczne
+Umagicznienie: +3
+Specjalne właściwości:
+ Zatruwa przeciwnika
+ +2 do klasy pancerza
+ +20 do obrażeń od kwasu
+ +20% do odporności na kwas
+ Odporność na trucizny
+ +2 do rzutów obronnych przeciw śmierci
+TraK0: +2
+Szybkość: 4
+Waga: 5
+Biegłość: Topory
+Może być używany jedynie przez Wojowników
+
+Trudno wyobrazić sobie liczbę ofiar wyznawców Moandera, Przynoszącego Ciemność. Broń, która została skażona jego fragmentami, przez wieki utrzymuje śmiercionośne właściwości. Ci, którzy zostaną nią trafieni, giną w okrutnych bólach. Topór zdobi kamień z wyrytym symbolem dłoni z otwartymi uzębionymi ustami - przypomnienie o tysiącleciach walki o ostateczny rozkład wieloświata.~
+@500221 = ~Naelektryzowany topór~
+@500222 = ~Topór Wietrznych Książąt~
+@500223 = ~NAELEKTRYZOWANY TOPÓR
+Obrażenia: 3-18, sieczne
+Szybkość: 2
+Waga: 5
+Biegłość: Topory
+Może być używany jedynie przez Wojowników
+Nie może być używany przez chaotyczne postacie
+
+Kiedy zbliżasz rękę do tego topora, czujesz i widzisz, jak włosy stają ci dęba. Gdy go dotykasz, po mięśniach przebiega ci dreszcz.~
+@500224 = ~TOPÓR WIETRZNYCH KSIĄŻĄT
+Obrażenia: 3-18, sieczne
+Umagicznienie: +3
+Specjalne właściwości:
+ +2 do klasy pancerza
+ +20 do obrażeń od elektryczności
+ +20% do odporności na elektryczność
+TraK0: +1
+Szybkość: 2
+Waga: 5
+Biegłość: Topory
+Może być używany jedynie przez Wojowników
+Nie może być używany przez chaotyczne postacie
+
+Ten topór należał pierwotnie do skarbca vaati, Książąt Wiatru z Aaqi w Sferze Żywiołu Powietrza. Niewykluczone, że swoją podróż przez Sfery rozpoczął od bycia użytym w wojnie z Królową Chaosu, jedną z obyrithów, pradawnych demonów Otchłani. Wietrzni Książęta reprezentowali Prawo, więc bój był zaciekły - szczególnie gdy Królowa powołała generała Miskę Wilczego Pająka, poprzednika późniejszego niesławnego Demogorgona. Armia Miski zdobywała świat po świecie. Podczas gdy elita Książąt, Kapitanowie Prawa, miała tworzyć potężny artefakt o nazwie Berło Prawa, zwykli żołnierze potrzebowali broni, która dałaby im szanse w starciu z większymi tanar'ri. Stąd topory takie jak ten, nasycone energią błyskawic, niewiarygodnie szybkie i zdolne do walki przeciw biesom. Dziś to już tylko pamiątka po upadłym imperium.~
+@500225 = ~Pasożytniczy Kolczyk Umysłu~
+@500226 = ~PASOŻYTNICZY KOLCZYK UMYSŁU
+Specjalne właściwości:
+ +3 do inteligencji
+ +1 do mądrości
+ -1 do kondycji
+ Odporność na panikę
+Waga: 1
+
+Jeden z kolczyków, które Beatha wytwarza z mózgowych pasożytów zwanych kassegami. Przypominają one pożeracze intelektu, ale są dużo mniejsze. Nie byłoby w tym nic dziwnego, gdyby nie to, że kasseg nie może przeżyć dłużej niż kilka godzin po przyssaniu się do ofiary, z którą łączy się umysłową więzią. Jakimś cudem Beatha sprawiła, że korzyści z tej przedziwnej symbiozy stały się trwałe. Cena, jaką się za nią płaci - poza znacznym obciążeniem organizmu - pozostaje nieznana użytkownikowi i najpewniej samej Beacie.~
+@500227 = ~Kolczyk z karamecha~
+@500228 = ~KOLCZYK Z KARAMECHA
+Specjalne właściwości:
+ +2 do klasy pancerza
+ +2 do klasy pancerza przeciw atakom obuchowym
+ +10% do odporności na ataki obuchowe
+ +10% do odporności na kwas
+Waga: 2
+
+Ten kolczyk został zrobiony przez Beathę z miniaturowego karamecha, czyli konstruktu przypominającego karalucha. Konstrukty te miały zostać wypuszczone w dżunglach Chultu, by oczyścić drogę do ruin, ale teraz pożerają nie tylko śmieci, ale również naturę, artefakty i podróżnych. Zwykle mają rozmiary psa, a dzięki ostrym żuwaczkom i żrącemu kwasowi są dużo bardziej niszczycielskie niż inne stworzenia podobnych rozmiarów. Przede wszystkim jednak doprowadziły do perfekcji cechę, z której słyną karaluchy: bardzo trudno je ubić. Kolczyk pozwala w magiczny sposób zyskać nieco ich właściwości.
+
+Kolczyk przypomina działaniem amulet z karalucha. Choć jego efekty są minimalnie słabsze, to za to permanentne - na czas noszenia kolczyka, oczywiście. A nie należy on do lekkich.~
+@500229 = ~Figurka żaby~
+@500230 = ~Posążek Cudownej Mocy: Żaba~
+@500231 = ~FIGURKA ŻABY
+Waga: 2
+
+To naturalnych rozmiarów rzeźba przedstawiająca żabę. Na pewno niełatwo było ją wykonać z taką dokładnością, ale trudno powiedzieć, czy posiada inne walory oprócz dekoracyjnych.~
+@500232 = ~POSĄŻEK CUDOWNEJ MOCY: ŻABA
+Specjalne właściwości:
+ Odporność na trucizny
+ +2 do klasy pancerza
+ +2 do rzutów obronnych przeciw atakom opartym na oddechu
+Waga: 2
+Nie może być używany przez postacie bez rąk lub płonące
+
+To naturalnych rozmiarów rzeźba przedstawiająca żabę. Posążki cudownej mocy służą zwykle do przywoływania rozumnego zwierzęcia przez rzucenie na ziemię i wypowiedzenie słowa rozkazu. Ten jednak został zmodyfikowany przez Beathę, dzięki czemu zapewnia użytkownikowi korzystny wpływ żabich cech. Obejmują one żabi kamuflaż (bonus do klasy pancerza), odporność na trucizny i zdolność dłuższego wstrzymywania oddechu. Efekt utrzymuje się, kiedy posążek jest trzymany w ręce.~
+@500233 = ~Portfel ze skóry węża~
+@500234 = ~PORTFEL ZE SKÓRY WĘŻA
+Waga: 1
+
+Ten portfel, wykonany najpewniej ze skóry węża Morza Cieni, służy do przechowywania biżuterii. Biorąc pod uwagę, jak popularnymi ozdobami w Sigil są pierścienie i kolczyki, tego typu pokrowiec może ułatwić zarządzanie ekwipunkiem.
+
+Nienaturalne właściwości miejsca, z którego pochodzi materiał na ten portfel, sprawiają, że trudniej zostać okradzionym. Złodziej dwa razy się zastanowi, zanim włoży rękę w bezdenną ciemność... Miejscem tym jest Sfera Cieni. To tam pomroki hodują niezwykłe potworności, w tym ogromne, skrzyżowane z wielorybami węże pochłaniające wszystko, co znajdą. Zaklęcie nałożone na ten portfel sprawia, że właściciel nie będzie miał problemu z odzyskaniem własności, choć obawy o to są w pełni zrozumiałe.~
+@500235 = ~Kolczyk Udręczonej Duszy~
+@500236 = ~KOLCZYK UDRĘCZONEJ DUSZY
+Specjalne właściwości:
+ Przyspiesza regenerację
+ +5 do bazowych PŻ
+ +2 do rzutów obronnych przeciw śmierci
+ +1 do klasy pancerza
+ -1 do charyzmy
+Waga: 1
+
+Symbol, który nosisz na ramieniu, prześladuje cię, odkąd pamiętasz. Czy istniał już wcześniej? Czy zrodziła go zawiła jak gałęzie magia Raveli? Jakkolwiek by nie było, udręka okazuje się siłą, która jak magnetyzm przyciąga inne udręczone dusze. Taki sam kształt przyjęła broń stworzona przez Pieścimetala; powinno więc być możliwe noszenie tego symbolu jako kolczyka i wykorzystanie do przygotowania ciała na nadchodzące bóle. Mina cierpiętnika nie poprawia jednak prezencji i nie pomaga w rozmowach z innymi.~
+@500237 = ~Amulet z krwawej muchy (troll)~
+@500238 = ~AMULET Z KRWAWEJ MUCHY (TROLL)
+Specjalne właściwości:
+ Leczy 30 PŻ
+ Przyspiesza regenerację
+ -50% do odporności na ogień
+Waga: 0
+
+Krwawe muchy to owady, które najprawdopodobniej pochodzą z jednej ze Sfer Niższych. Swoim nienasyconym apetytem przypominają komary. Rój tych much może w kilka minut wyssać całą krew z ludzkiego ciała. Ich żądła są w stanie przebić nawet skórę biesów.
+
+Krwawe muchy wykorzystywane są przez niektórych uzdrowicieli do ściągania chorej krwi z pacjentów. Czasami używa się wręcz całych rojów much do odciągania rzadkich rodzajów krwi. Następnie owady paraliżuje się za pomocą zaklęć oraz różnych substancji i przechowuje do późniejszego wykorzystania.
+
+Ta akurat mucha zawiera w sobie krew trolla. Po zjedzeniu takiego owada osoba, która to zrobiła, zostaje natychmiast uleczona z małej ilości obrażeń oraz otrzymuje tymczasową zdolność regeneracji. Jeśli postać już wcześniej miała tę zdolność, szybkość regeneracji ulegnie zwiększeniu.~
+@500239 = ~Amulet z krwawej muchy (kornugon)~
+@500240 = ~AMULET Z KRWAWEJ MUCHY (KORNUGON)
+Specjalne właściwości:
+ Leczy 50 PŻ
+ Przyspiesza regenerację
+ +10% do odporności na ogień
+ +7% do odporności na magiczny ogień
+ +3% do odporności na magię
+Waga: 0
+
+Krwawe muchy to owady, które najprawdopodobniej pochodzą z jednej ze Sfer Niższych. Swoim nienasyconym apetytem przypominają komary. Rój tych much może w kilka minut wyssać całą krew z ludzkiego ciała. Ich żądła są w stanie przebić nawet skórę biesów.
+
+Pomimo swego niezaspokojonego apetytu krwawe muchy wykorzystywane są przez niektórych uzdrowicieli do ściągania chorej krwi z pacjentów. Czasami używa się wręcz całych rojów much do odciągania rzadkich rodzajów krwi. Następnie owady paraliżuje się za pomocą zaklęć oraz różnych substancji i przechowuje do późniejszego wykorzystania.
+
+Ta akurat mucha zawiera w sobie krew większego biesa, kornugona. Diabły te to elita obrony Baator - część z nich podlega bezpośrednio pod Mroczną Ósemkę. Są w stanie przetrwać w bardzo trudnych warunkach, w większości rezydując w dolnych kręgach Dziewięciu Piekieł. Jednak nawet one krwawią.~
+@500241 = ~Amulet z krwawej muchy (gelugon)~
+@500242 = ~AMULET Z KRWAWEJ MUCHY (GELUGON)
+Specjalne właściwości:
+ Leczy 75 PŻ
+ Przyspiesza regenerację
+ +10% do odporności na chłód
+ +7% do odporności na magiczny chłód
+ +5% do odporności na magię
+Waga: 0
+
+Krwawe muchy to owady, które najprawdopodobniej pochodzą z jednej ze Sfer Niższych. Swoim nienasyconym apetytem przypominają komary. Rój tych much może w kilka minut wyssać całą krew z ludzkiego ciała. Ich żądła są w stanie przebić nawet skórę biesów.
+
+Pomimo swego niezaspokojonego apetytu krwawe muchy wykorzystywane są przez niektórych uzdrowicieli do ściągania chorej krwi z pacjentów. Czasami używa się wręcz całych rojów much do odciągania rzadkich rodzajów krwi. Następnie owady paraliżuje się za pomocą zaklęć oraz różnych substancji i przechowuje do późniejszego wykorzystania.
+
+Ta akurat mucha zawiera w sobie krew lodowego diabła - gelugona, insektoidalnego strażnika Canii, ósmej warstwy Baator. Ponieważ biesy te są niewrażliwe na zimno, ich krew przywołuje właśnie taki efekt.~
+@500243 = ~Miętowy kolczyk~
+@500244 = ~MIĘTOWY KOLCZYK
+Specjalne właściwości:
+ +1 do klasy pancerza
+ +3 do charyzmy
+ +10% do odporności na chłód
+Waga: 1
+
+Ten kolczyk został zrobiony przez Beathę z miętowego cukierka i przylega do ucha niczym perła. Pomysł był prosty, jednak niełatwo było sprawić, by kolczyk pozostał trwałą ozdobą, której niestraszne różne warunki pogodowe. Rozwiązaniem okazało się zaklęcie chłodu - jakże adekwatne, biorąc pod uwagę przyjemną miętową woń cukierka. Kolczyk uodparnia użytkownika na chłód i dodaje mu charyzmy, dzięki czemu każda rozmowa powinna pójść po jego myśli.~
+@500245 = ~Tajemnicza sakwa~
+@500246 = ~TAJEMNICZA SAKWA 
+Waga: 1
+
+Sakwa zakupiona u kierownika magazynu. Nie wiesz, co jest w środku.~
+@500247 = ~Jadeitowa żuchwa~
+@500248 = ~JADEITOWA ŻUCHWA
+Waga: 1
+
+Żuchwa zrobiona z cennego kamienia. Jest niewielka, ale kształtem przypomina ludzką żuchwę.~
+@500249 = ~Ubrania~
+@500250 = ~UBRANIA
+Waga: 1
+
+Poskładane ubrania odkupione na targu przy Kanale. Należały do naiwnego chłopaka okradzionego przez kobietę w czerwonej sukience.~
+@500251 = ~UŚWIĘCONY SYGNET POZNANIA
+(Większy artefakt)
+Specjalne właściwości:
+ Rozmycie
+ +3 do klasy pancerza
+ +1 do siły
+ Ulepszone rzuty obronne
+Waga: 0
+
+Oto uświęcony sygnet archonki słowa znad Szklanego Stawu. Spoczywał na specjalnym piedestale. Nikt nie zadaje sobie tyle trudu, by zabezpieczyć zwykłą biżuterię. Są na nim zapisane krótkie fragmenty słów Metatekstu - zapisków łączących całą wiedzę wieloświata i umożliwiających poznanie jego tajemnic. Mówi się, że jest to zbiór pracy kapłanów i mnichów z Kościoła Deneira, zwanych glifoskrybami. Pierwszy Skryba Oghmy zapisał i poznał wiedzę wynikającą z Metatekstu i w konsekwencji wyszedł poza rzeczywistość.
+
+Narracja zawarta w tych słowach wzmacnia noszącego w sposób inaczej nieosiągalny i pozwala mu częściowo opuścić obecny wymiar pojmowania. Skutkuje to permanentnym efektem przypominającym czar "Rozmycie", dzięki czemu użytkownika trudniej jest trafić. Łatwiej mu też wykorzystać siłę ukrytą głęboko w jego wnętrzu.
+
+Poznawszy prawdę, nie można powrócić do stanu niewiedzy.~
+@500252 = ~Prorokini Czynu~
+@500253 = ~PROROKINI CZYNU
+Waga: 1
+
+Ten pisany prozą legendarz przypomina formą epicki romans dworski, ale jego treść stanowi raczej szyderstwo wobec przesłania owego gatunku, nie zaś jego przykład. Jego autorem był natchniony czarołuski kapłan Qafzech de Vermilion, a poświęcony jest życiu i aktywności Celozji, prorokini i świętej z kultu Garyxa, smoczego boga ognia i zniszczenia. W odróżnieniu od większości duchownych uzdolniona w magii Celozja wolała głosić wiarę czynem, a nie słowem, toteż zapamiętano ją jako Prorokinię Czynu - a jako półnimfa, półjaszczurzyca piekielnego ognia była ponoć tak surowo piękna, że oczarowała nawet własnego boga. Utwór kładzie nacisk na podniosłość scen zagłady i zniszczenia, do których bohaterka doprowadza podczas swojej pielgrzymki po świecie. Gloryfikuje też akty masowej destrukcji i nadaje im pokraczny sens.
+
+To wznowienie zostało wydane przez frakcję Straży Zagłady jako polecana lektura propagująca i w formie prozy wprowadzająca w destrukcyjny światopogląd Tonących. W celu łatwiejszego zrozumienia treści wydanie opatrzono bogatą przedmową autorstwa Taranisa Półsmoka, wyjaśniającą podobieństwa między kultem Garyxa a filozofią Straży Zagłady:
+
+"(...) Garyxa nazywa się Wszechniszczycielem, bowiem zaiste jego wola może spaść na dowolny obiekt w Wielkim Kole: życie śmiertelnika, magiczny artefakt, miasto, bóstwo, nawet całą sferę! Ale to nie Garyx, a Faluzure i Chronepsis są u smoków bogami śmierci. Garyx, tak szanowany i czczony w Straży Zagłady, jest bóstwem zniszczenia z sensem. Jaki jest sens zniszczenia? Odpowiedzeniu na to pytanie służy właśnie ta książka.
+
+Wszystko w wieloświecie się starzeje. Wszystko pewnego dnia przeminie, a chociaż według wyznawców Garyxa - i niniejszej książki - smoczy rodzaj jest wieczny, to trzeba zaakceptować prawdę, że i smoki któregoś dnia wyginą. Ale Celozja wyjaśnia tego sens - piękno zagłady. Po zagładzie przychodzi nowe życie, jak odrasta spalony las. Zagłada wieńczy szpetny rozkład i dekadencję, jak śmierć kończy starość i chorobę. Czytelnik tej książki może znaleźć w niej rozmaite wyjaśnienia, zależnie od swojej interpretacji. Wszystkie one wiodą do wspólnego celu Straży Zagłady oraz kultu Wszechniszczyciela: zakończenia. 
+
+Jedni usuwają zepsucie ze świata i zapełniają go nowym, piękniejszym życiem. Inni po prostu radują się niszczeniem i zostawiają pustkę po zagładzie przeznaczeniu. U podstaw zniszczenia mogą stać przeliczne motywacje, tak jak różnie można interpretować decyzje świętej Celozji. Zemsta. Gniew. Litość. Każda zagłada ma sens. Właśnie w tym celu, drogi czytelniku, Straż Zagłady wznawia tę lekturę i przekazuje ją w Twoje ręce: niekoniecznie po to, by religijnie opiewać samego Garyxa i krzewić jego kult, jak zamierzał pierwotny autor, a przede wszystkim by wyjaśnić, jak piękna i ekstatyczna jest zagłada. Wiara w Czyściciela Światów - osobiście polecana przez inicjatora tego wydania i autora przedmowy - stanowi wspaniały dodatek, ale nie jest przecież niezbędna, by radować się tą prozą, a potem wcielać w życie jej nauki. Tedy czytaj ją, czytelniku, z wypiekami na twarzy, i pozwól się nieść pożodze ogarniającej Wielkie Koło. Niech Prorokini Czynu i w Tobie rozpali ogień pasji i celowości zniszczenia! Daj jej się poprowadzić do tańca końca świata! (...)"
+
+W tym egzemplarzu najczęściej czytanym fragmentem wydaje się scena chrztu ognia, w której główna bohaterka staje się awatarem swojego boga i sprowadza ognistą burzę na rodzinny gaj. Opisy zjednoczenia Garyxa i Celozji w oku pożogi, w połączeniu z podkreśleniem bezpośredniej obecności boga ognia w płomieniach intensywnie spowijających nagie ciało oddającej mu się femme fatale, są co najmniej dwuznaczne i dają wrażenie, że w tym momencie łączyło ich też coś zgoła bardziej przyziemnego niż boskie wcielenie i ekstaza piromanii.~
+@500254 = ~Manifest Ponurych~
+@500255 = ~MANIFEST PONURYCH
+Waga: 1
+
+Jest to nieoficjalny zbiór zasad spisany przez Ími z Loży Ponurych, mający podsumować przemyślenia dotyczące wierzeń tej frakcji.
+
+"1. Nie szukam w niczym sensu, jako że poznanie wieloświata nie jest możliwe ani nie powinno być - jedyny sens, jaki mogę znaleźć, to brak sensu.
+
+2. Nie czczę żadnych bóstw - nie są nikim więcej niż potężnymi śmiertelnikami, których w swoim czasie również dosięgnie entropia, a ich kapłani prawdopodobnie głoszą kłamstwa.
+
+3. Nie ma prawd absolutnych i nikt ich nigdy nie poznał ani nie pozna - postrzeganie wieloświata jest subiektywne.
+
+4. Życie, które mamy, jest jedynym, jakie dostaniemy - nie wierzę tym, którzy oferują życie po śmierci, uwolnienie od złych duchów i błogosławieństwo bogów za datki na świątynię.
+
+5. Prawdziwą wolność można osiągnąć poprzez spokój wewnętrzny i wierność samemu sobie, bowiem tylko w środku może się kryć jakakolwiek namiastka znaczenia.
+
+6. Nie pozwalam sobie na hipokryzję i głupotę, tak często spotykane u członków i przywódców innych grup.
+
+7. Mam odwagę wątpić - wszystko, co zostało spisane, może być nieprawdziwe, łącznie z tym tekstem.
+
+8. Akceptuję rzeczywistość taką, jaka jest, ale sprzeciwiam się tym, którzy narzucają swoją wolę tym, którzy nie wykształcili własnej.
+
+9. Wartość wszystkiego, łącznie z moim własnym życiem, jest subiektywna i proporcjonalna do perspektywy.
+
+10. Akceptuję fakt, że wszyscy muszą umrzeć, a gdy nadejdzie czas, każdy kamień zostanie skruszony."~
+@500256 = ~Kość z Tanatos~
+@500257 = ~KOŚĆ Z TANATOS
+Waga: 1
+Może być używana jedynie przez Bezimiennego
+
+Podarunek dla nowo zainicjowanego wyznawcy Kiaransalee.
+
+"(...) a gdy Biała Banshee rozkoszowała się owocami swego dzieła, jej marnotrawny małżonek, kierowany ułudą próżności, coraz większą żywił urazę do tej, którą niegdyś umiłował. Zaprawdę, gdy Biała Banshee usiłowała pokonać samą śmierć i odwrócić naturalny porządek rzeczy, jej małżonek zajęty był przesuwaniem drobnych pionków po swej małej, żałosnej planszy.
+
+I stało się, że liczni mali zagłuszyli w końcu głos tej największej. Biała Banshee została strącona, odrzucona i wydziedziczona; a królestwo jej nie należało już do niej, choć całą siebie poświęciła dla dobra swego ludu.
+
+I spojrzała Biała Banshee z głębin swego uwięzienia, i ujrzała, że królestwo raduje się błahostkami jej małżonka. Umysły ich i duchy osłabły, stały się nikłe i niegodne miłości swej dawnej królowej.
+
+Wtedy Biała Banshee poznała, iż pobłądziła na swych ścieżkach, i postanowiła naprawić owo przewinienie. I zwróciła swe oczy ku temu, by sprowadzić śmierć istotną na ten świat nieistotnego życia..."~
+@500258 = ~Historia dyplomacji międzyfrakcyjnej~
+@500259 = ~HISTORIA DYPLOMACJI MIĘDZYFRAKCYJNEJ
+Waga: 1
+
+Książka ta opisuje niuanse złożonych relacji między frakcjami i historię stosunków dyplomatycznych, wiele uwagi poświęcając sojuszom i konfliktom. Przez lata powstały niezliczone ugrupowania. Niektóre - niegdyś istotne - upadły bądź zostały zastąpione, inne są ledwie sektami, które mimo lichej liczebności członków bywają cierniem w oku większych grup. Ponieważ w momencie pisania tego opracowania istnieje piętnaście oficjalnie uznawanych frakcji, spamiętanie wszystkich relacji wydaje się karkołomnym zadaniem, tym bardziej że nie są to relacje symetryczne i można mówić co najwyżej o namiastce intuicyjności. Każda frakcja ma siedzibę w różnych Sferach, zarówno Zewnętrznych, jak i Wewnętrznych, ale największą szansę na styczność mają pośrodku - w Mieście Drzwi, Sigil.
+
+Ważnym wnioskiem wynikającym z lektury jest to, że jeśli frakcje mają podobne poglądy, będą współpracować. Jeśli sobie przeczą, łatwo może skończyć się na obopólnej wrogości, a współpraca jest wykluczona. Zatem realizacja projektów wymagających w mieście współpracy kilku frakcji musi wziąć pod uwagę wszelkie sympatie i antypatie.
+
+Oto kilka z ważniejszych zależności:
+
+Atar
+Fakton: Terrance
+Sojusznicy: Wyznawcy Źródła (dobre układy i częsta współpraca z faktonem Ambarem, dzielenie wiary we wzniesienie się ponad moce)
+Wrogowie: Straż Zagłady (krytyka skrajnego podejścia faktonki Pentar)
+
+Chaosyci
+Fakton: Karan
+Sojusznicy: Straż Zagłady, Loża Ponurych (CHAOS)
+Wrogowie: Harmonium, Stowarzyszenie Porządku (antyteza Chaosu)
+
+Grabarze
+Fakton: Skall
+Sojusznicy: Loża Ponurych, Straż Zagłady, Przeznaczeni (zbieżność niektórych poglądów), również: władcy nieumarłych (tzw. Pakt Umarłych)
+Wrogowie: Stronnictwo Doznań, Znak Jedynego (przeciwni fatalizmowi Grabarzy)
+
+Harmonium
+Fakton: Sarin
+Sojusznicy: Stowarzyszenie Porządku, Łaskobójcy (wspólna walka w imię Prawa, wspólna opieka nad wymiarem sprawiedliwości w Sigil)
+Wrogowie: Wolna Liga, Liga Rewolucyjna, Chaosyci (mają te grupy za zbiorowisko przestępców), Przeznaczeni (potencjalnie niebezpieczna grupa), Transcendentalny Zakon (rozminięcie się w kwestii idei porządku)
+
+Loża Ponurych
+Fakton: Lhar
+Sojusznicy: Straż Zagłady, Grabarze, Liga Rewolucyjna, Chaosyci
+Wrogowie: Stowarzyszenie Porządku, Harmonium, Łaskobójcy (istoty praworządne nie są w stanie zaakceptować filozofii Ponurych), Znak Jedynego (doprowadzili do śmierci jednego z faktonów Loży)
+
+Liga Rewolucyjna
+Fakton: brak
+Sojusznicy: Straż Zagłady, Chaosyci (sprzyjają rozkładowi istniejącego porządku)
+Wrogowie: Harmonium, Łaskobójcy, Stowarzyszenie Porządku (ucieleśniają to, z czym Anarchiści walczą)
+
+Łaskobójcy
+Faktonka: Alisohn Nilesia
+Sojusznicy: Harmonium, Stowarzyszenie Porządku, Straż Zagłady (wspólna walka w imię Prawa, wspólna opieka nad wymiarem sprawiedliwości w Sigil), Przeznaczeni (sprzeciw wobec łaski i współczucia, wyznawanie prawa silniejszego)
+Wrogowie: Liga Rewolucyjna, Stronnictwo Doznań, Znak Jedynego (ciągłe konflikty na tle prawnym)
+
+Przeznaczeni
+Fakton: Rowan Darkwood
+Sojusznicy: Wolna Liga (podobne poglądy), Łaskobójcy (sprzeciw wobec łaski i współczucia, wyznawanie prawa silniejszego)
+Wrogowie: Harmonium (uważnie obserwowani)
+
+Transcendentalny Zakon
+Fakton: Rhys
+Sojusznicy: większość (brak zainteresowania faktycznymi sojuszami i konfliktami)
+Wrogowie: Harmonium (niezgoda co do idei porządku)
+
+Stowarzyszenie Porządku
+Fakton: Hashkar
+Sojusznicy: Łaskobójcy, Harmonium (wspólna walka w imię Prawa, wspólna opieka nad wymiarem sprawiedliwości w Sigil)
+Wrogowie: Chaosyci, Liga Rewolucyjna (antyteza porządkowych idei Guwernantów)
+
+Straż Zagłady
+Faktonka: Pentar
+Sojusznicy: Grabarze, Wyznawcy Źródła, Loża Ponurych, Chaosyci (podobne przekonania, wspomagają entropię)
+Wrogowie: Stowarzyszenie Porządku, Harmonium (przeciwdziałają entropii)
+
+Stronnictwo Doznań
+Faktonka: Erin Darkflame Montgomery
+Sojusznicy: Znak Jedynego (podobne podejście do kwestii akceptowalnego egoizmu), Stowarzyszenie Porządku, Wolna Liga (respekt wynikający z dążenia do wiedzy i poznania)
+Wrogowie: Straż Zagłady (sprzeczne poglądy)
+
+Wolna Liga
+Fakton: brak
+Sojusznicy: Przeznaczeni (podobne poglądy w kwestii niezależności)
+Wrogowie: Harmonium (zbyt podejrzliwi, walczący z niezależnością)
+
+Wyznawcy Źródła
+Fakton: Ambar Vergrove
+Sojusznicy: Atar (dobre układy), Straż Zagłady (wiara w ostateczny koniec wieloświata)
+Wrogowie: Grabarze, Loża Ponurych (niezgodność poglądów)
+
+Znak Jedynego
+Fakton: Darius
+Sojusznicy: Stronnictwo Doznań (podobne przekonania)
+Wrogowie: Harmonium, Loża Ponurych (niezgodność poglądów)
+
+Na końcu znajduje się bardzo treściwa lista przypisów i odnośników do innych publikacji o tematyce politycznej i historycznej oraz dokumentów prawnych spisanych w wielu językach.~
+@500260 = ~Limbo w Limbo~
+@500261 = ~LIMBO W LIMBO
+Waga: 1
+
+PRZEDMOWA
+Autor: Kieran, obieżysfer
+
+"Witaj, przyjacielu! Skoro czytasz te słowa, to znaczy, że jesteś ciekawy wieloświata i Sfer, a to czyni cię mą pokrewną duszą. Z czystym sumieniem mogę cię więc nazywać swoim przyjacielem. 
+
+Zapraszam cię więc, przyjacielu, na kolejną z moich wypraw po Wielkim Kole. Tym razem zawędrowałem do miejsca, które cieszy się raczej złą renomą. Niesłusznie! Nasłuchałem się tak wiele, jakie to Limbo jest rzekomo okropne i nieprzyjazne, ale to nieprawda. Udowodnię ci na kartach tej książki, że dobre nastawienie otwiera wszelkie drzwi... a czasem też stwarza je z niczego!
+
+Przejdziemy się razem po imponujących szarością ulicach Shra'kt'lor z przemiłymi githzerai. Nauczę cię też, jak pływać w czystym chaosie, wykorzystując potęgę pozytywnego myślenia. Potem zrobimy sobie przerwę w Trwałej Stodole, zjemy gulasz ze slaada i wraz z gospodarzami pośpiewamy tradycyjne niziołcze przyśpiewki. Na koniec wpadniemy z wizytą do domeny Fenmarela Mestarine'a. Próbowałem go przekonać o potędze przyjaźni, ale chyba nie był jeszcze gotowy przyjąć miłości do swojego serca. Może ty będziesz miał więcej szczęścia!
+
+Wyruszmy więc bez ociągania się w tę magiczną podróż po wieloświecie i odkryjmy wszelkie cuda, jakie oferuje. Jest w końcu taki piękny! Jeśli tylko się do niego uśmiechniesz, to on uśmiechnie się do ciebie!
+
+Kieran"
+
+Pod podpisem widnieje prosty rysunek uśmiechniętej buźki z anielskimi skrzydłami i aureolą.~
+@500262 = ~Pochodnią i tarczą: przewodnik po Sferze Żywiołu Ognia~
+@500263 = ~POCHODNIĄ I TARCZĄ: PRZEWODNIK PO SFERZE ŻYWIOŁU OGNIA
+Waga: 1
+
+PRZEDMOWA
+Autor: Kieran, obieżysfer
+
+"Witam cię serdecznie, mój towarzyszu podróży poprzez Sfery! Chociaż może powinienem raczej powiedzieć: witam cię gorąco, bo chciałbym cię dziś zabrać do najcieplejszego miejsca w całym wieloświecie - prosto do Sfery Żywiołu Ognia!
+
+Jest to bez wątpienia przeciekawe miejsce, pełne wspaniałych osób o gorejących sercach, unikalnych zabytków oraz cudów natury, których nie zobaczysz nigdzie indziej! Na wyprawę polecam zabrać ze sobą zimne napoje, dobry krem nawilżający oraz dużo uśmiechu. Napar zapewniający niewrażliwość na płomienie też na pewno się przyda, jeśli zamierzasz powłóczyć się trochę po bezdrożach tej sfery. Inaczej zostanie z ciebie stosik popiołu!
+
+Jeśli jednak zamiast spaceru preferujesz czytanie, a wygrzewanie się przed kominkiem brzmi dla ciebie lepiej niż pływanie w oceanie żaru, nie martw się! Na kolejnych stronach opowiem ci o wszystkim, co Sfera Żywiołu Ognia ma do zaoferowania. Potargujemy się po przyjacielsku z azerami na targu w Tyglu, zwiedzimy przepiękne meczety Mosiężnego Miasta, a na sam koniec wstąpimy do Cytadeli Ognia, która ma długą i barwną historię z Miastem Drzwi. W wieloświecie wszystko jest ze sobą powiązane! 
+
+Zapraszam cię więc w podróż, która na pewno rozgrzeje twoje kości i rozbudzi pasję w sercu. Naprzód, ku przygodzie!
+
+Kieran"
+
+Pod podpisem widnieje prosty rysunek uśmiechniętej buźki z anielskimi skrzydłami i aureolą.~
+@500264 = ~NAZWA ITEMU zident~
+@500265 = ~MLEKO SHINA-TSU-HIKO
+Waga: 1
+
+Etykieta jest oznaczona trzema falistymi liniami. Czy to w środku to faktycznie mleko? Czy to mleko tego czegoś, co zwie się (tak bardzo obco dla twoich uszu) Shina-Tsu-Hiko? Ciężko odpowiedzieć na te dwa pytania, nie jest też jasne, jaki efekt ma ów mętny, biały, lekko gorzkawy napój na kogokolwiek, kto wypije zawartość niewielkiej butelki.~
+@500266 = ~NAZWA ITEMU niezident~
+@500268 = ~Obśliniony sznurek~
+@500269 = ~OBŚLINIONY SZNUREK
+Waga: 1
+
+Krótki kawałek sznurka, równo ucięty z obu stron. Zdaje się być dość dobrej jakości, nawet mimo opłakanego stanu. Jest nasączony jakimś tłuszczem, który zapewne miał sprawić, że będzie wodoodporny. Sprawił również, że stał się smakowity dla kuo-toa.~
+@500270 = ~Notatka kapłanki Istishii~
+@500271 = ~NOTATKA KAPŁANKI ISTISHII
+Waga: 0
+
+"Kimkolwiek jesteś, przeczytaj to. Nazywam się Aquafina i jestem kleryczką. Byłam tu i próbowałam nawrócić bandę durnych kuo-toa na jedyną słuszną wiarę w Istishię, ale oni po prostu nie słuchają. Niby zaczęli go wyznawać, ale i tak składają mu krwawe ofiary. Czułam się, jakbym była przywódczynią jakiejś sekty... Pewnie w końcu przybyliby tu jacyś Łaskobójcy i to *MNĄ* nakarmiliby swojego pupila... 
+
+Tak więc postanowiłam się zmyć, po cichu. 
+
+Jeśli jesteś przedstawicielem prawa w Sigil: kuo-toa są tam na dole, zalecam przemoc, jestem niewinna. 
+
+Jeśli jesteś poszukiwaczem przygód: kuo-toa są tam na dole, zalecam przemoc. 
+
+Jeśli jesteś dzieciakiem wałęsającym się po piwnicach: UCIEKAJ!"~
+@500272 = ~Toksyczny napój~
+@500273 = ~TOKSYCZNY NAPÓJ
+Waga: 1
+
+Jadowita zieleń tego napoju jest zdecydowanie podejrzana. Sama bliskość pojemnika sprawia, że robi ci się niedobrze. Otwarcie go prawdopodobnie nie byłoby dobrym pomysłem, jeśli nie wiesz, jak go użyć. Być może barmanka z "Wioślarza" planowała podać go któremuś z gości.~
+@500274 = ~Wudrańska woda~
+@500275 = ~WUDRAŃSKA WODA
+Przywołuje czar: "Pocałunek węża" (dla trzech celów jednocześnie, raz dziennie)
+Waga: 1
+Nie może być używana przez Dobre postacie
+
+Pięćset trzydziesta pierwsza warstwa Otchłani, Wudra, znana jest z wysoce toksycznego powietrza i oceanu krwi. Rządzi nią królowa marilithów, Shaktari, która została schwytana przez kilku z baatoriańskich Władców Dziewięciu do Studni Ciemności, a następnie uwolniona przez nieznanego baernalotha, by zaognić Wojnę Krwi. Pozostanie tajemnicą, czy barmanka z "Wioślarza" planowała otruć tym napojem któregoś z gości. Wątpliwe jednak, by trzymała go wyłącznie z sentymentu do rodzinnej sfery.
+
+Zawartość pojemnika powinna starczyć na dość długo. Gdy po otwarciu odpowiednio skieruje się jego wylot, opary toksycznej wody same znajdą cel, zadając trzem istotom 2-8 punktów obrażeń co 5 sekund. Efekt jest wydłużony, tak jakby użytkownik był magiem na 18 poziomie.~
+@500276 = ~Duża kość~
+@500277 = ~DUŻA KOŚĆ
+Waga: 2
+
+Kość, którą z jakiegoś powodu miał przy sobie Agraval. Wygląda na ludzką.~
+@500278 = ~Kość Kłamstw~
+@500279 = ~KOŚĆ KŁAMSTW
+Przywołuje czar: "Rządy gniewu" (dla trzech celów jednocześnie, raz dziennie)
+Waga: 2
+Nie może być używana przez Dobre postacie
+
+Portent w Gehennie to zdradliwe miejsce, pełne mordu i kłamstw. Żyje tam diabelstwo wyrocznia zwane Szyderczą Jane. Z jej pustych oczodołów wychodzą węże, a każde z ust mówi co innego. Gdzieś pośród tego jest prawda, ale jakie to ma znaczenie, kiedy nie można tego zweryfikować?
+
+Słowa Jane zostały zaklęte w tej kości, należącej wcześniej do jednego z oczekujących Gehenny. Może ona dzięki temu posłużyć jako różdżka, która uczyni broń ze słów. By efekt zadziałał, trzeba wybrać dokładnie trzy cele. Trafi w nie do 5 pocisków zadających 3-6 punktów obrażeń.~
+@500280 = ~Cep bojowy~
+@500281 = ~CEP BOJOWY
+Obrażenia: 1-10, obuchowe
+Szybkość: 3
+Waga: 20
+Biegłość: Maczugi
+Nie może być używany przez Magów
+
+Czarna, kolczasta sztabka z zimnego, przypominającego kość materiału przytwierdzona jest do rękojeści dwunastoma ćwiekami.~
+@500282 = ~Zguba Diabła~
+@500283 = ~ZGUBA DIABŁA
+Obrażenia: 1-10, obuchowe
+Umagicznienie: +3
+Specjalne właściwości:
+ +2 do klasy pancerza
+TraK0: +2
+Szybkość: 3
+Waga: 20
+Biegłość: Maczugi
+Nie może być używana przez Magów
+
+Oto szczególna broń, do której przywiązał się mistrz broni Valen. Można nazwać ją cepem bojowym lub korbaczem. Czarna, kolczasta sztabka z zimnego, przypominającego kość materiału przytwierdzona jest do rękojeści dwunastoma ćwiekami. Ich duże łby zwiększają siłę rażenia. Tym broń Valena różni się od zwykłego cepa używanego przez rolników. Jej wadą jest brak precyzji, ale jest całkiem niezła do przedzierania się przez obronę przeciwnika. W przypadku Valena, weterana Wojny Krwi, były to zastępy biesów. Broń musiała więc zostać przystosowana do walki z nimi.~
+@500284 = ~Empirejski diament~
+@500285 = ~EMPIREJSKI DIAMENT
+Waga: 0
+
+Nieskazitelny, lśniący klejnot, który emanuje delikatnym, boskim światłem. Ponoć jest niezwykle cenny.~
+@500286 = ~Lina~
+@500287 = ~LINA
+Waga: 3
+
+Około 10 metrów grubej, mocnej liny.~
+@500288 = ~Kto szuka, ten zbłądził~
+@500289 = ~KTO SZUKA, TEN ZBŁĄDZIŁ
+Waga: 1
+
+"Ja, jeden z wielu, którzy ulegli - kurczowo trzymający się życia i zatruty, spisuję to ostrzeżenie dla wszystkich chciwych i bezgranicznie głupich. Was, którzy kroczycie ścieżkami niewiedzy. 
+        
+Baczcie na znaki, bo godzina już wybiła i nie ma odwrotu.
+
+*
+
+Zdawałoby się, że anioły nie szukają niczego.
+Ten szukał. Szukał wiedzy, ale też raju dawno utraconego. Tego piasku, który tak często przesypuje się przez palce.
+
+Był taki czas, gdy ja sam szukałem długo sam nie wiem czego. Wreszcie życzenie się spełniło i pojawiła się Otchłań w oczach, które są puste, oraz wzrok, za którym kryje się wir zagubienia.
+
+Wkrótce zrozumiałem, że to nie ja zadawałem pytania, ale pytania zadawane były mnie.
+
+Pewnego ranka przybył w splendorze swej upadłej chwały. Cały jego majestat bez granic, oparty na filarach mocy umykającej zwykłej percepcji i piękna nie dającego się w pełni ujrzeć. Jakże to wszystko było zakłamane. Przedstawił się jako 'przyjaciel'.
+
+Obietnice, realne cuda, rozwiązane zadania - wszystko to miałem. Wreszcie, przekonany o własnej boskości, mój pokręcony umysł zaczął szukać drogi do ostatecznej perfekcji: nieśmiertelności. Teraz wiem, że jest to jedynie odbicie prawdziwej śmierci w krzywym zwierciadle zaszczutego, fałszywego życia.
+
+I tak, przechodząc przez kolejne poziomy poznania, doszedłem do zbrodni uniwersalnej. Mówił mi subtelnie: 'Morderstwo jest na równi z podarunkiem życia. Czyż nie wszystko ginie po to, by narodziło się nowe? Czyż młode nie zjada starego?' I czasami, dzisiaj, słyszę już tylko ten właśnie głos. Wpadłem w lustrzane odbicie zguby i wiem, że zapomniałem drogę do starego domu.
+
+Być może kręcimy się w chwale własnego życia - anomalii, tylko po to, by stwierdzić, że nasza podróż nie jest niczym ważnym?
+
+A być może to my jesteśmy doskonałymi aniołami?
+
+'Przyjaciel' wszystko ci wyjaśni - biorąc w zamian tylko twoją duszę."~
+@500290 = ~Manifest?~
+@500291 = ~MANIFEST?
+Waga: 0
+
+"Do wolnych ludzi tego świata!
+
+Po prawdzie nic bardziej dziwnego nie może przyjść do głowy umysłowi prostemu i banalnemu jak mój niż przyczepienie się do władców. A jednak przyszło, gdyż pozory mylą.
+
+Sprawa nie wygląda wesoło. Władcy są pozbawieni honoru, aczkolwiek władztwo daje złudzenie, że taki człek honor powinien mieć na miejscu pierwszym. Od razu zaznaczę, że jak w każdej patologii, tak i tutaj zdarzają się wyjątki. Jednak na ogół rządzący to przebiegłe osobniki, myślące, że wszystko jest ich i wszystko im się należy. Spryt ów jest spowodowany tym, że dzięki lepszej pozycji myślą, że są w stanie oszukać nasze proste umysły. Ale zaprawdę, czyż nie naucza nas życie, że mądrość i inteligencja to dwie różne cechy? 
+
+Ich wyniosłe maniery, wymijająca mowa, drogie ubrania i grube mieszki - czymże są w obliczu naszej wizji świata szczęśliwego i beztroskiego? Powiedzą ci: 'ty nie rozumiesz', ale ja rozumiem doskonale: chciwość i żądza są w waszym sercu i pożądanie włada umysłem - i nic więcej nie ma... Uczucia przygasły wraz z blaskiem złota, wolność uwiędła wraz z chęcią zdobywania i niszczenia wszystkiego, co cudze, radość tylko w zadawaniu cierpienia i dopełnianiu przyrzeczeń zazdrości. Smutne, ach, smutne są wasze oczy - zwodnicze i zakłamane. Potęga i władza bezwzględna - to wasza religia! 
+
+Mówią, że ludzie prości czują niechęć do 'tych lepszych', bo zazdroszczą. Nic bardziej mylnego. Owa niechęć bierze się ze zrozumienia prostej rzeczy - władza to coś więcej niż przywilej i bogactwo. Dlatego apeluję, maso zwykłych ludzi, maso ciemna, WALCZMY z butem opasłych nienawistników, który depczą nasze serca! Walczmy o miejsce w tym szlachetnym świecie!
+
+Anonimowy ciemniak (czyt. sprytny wichrzyciel)"~
+@500292 = ~Oda do Entropii~
+@500293 = ~ODA DO ENTROPII
+Waga: 0
+
+"Nie ma odwrotu
+Czas ucieka
+Niejeden próbował
+Lecz nikomu się nie powiodło
+Czas płynie tylko w jedną stronę
+
+Entropia
+Entropia
+Entropia
+Entropia
+
+Wszystko się rozpada
+Wszystko się oddala
+Więc głęboko w jego sercu
+Wieloświat krwawi
+
+Sfery Wewnętrzne i Zewnętrzne
+Energia i żywioły
+Astralne Morze
+Przesuwające się miasta-bramy
+Toril i Oerth
+I ludzie są
+Tak daleko
+
+Wszystko się rozpada
+Wszystko się oddala
+Więc głęboko w swym sercu
+Wieloświat krwawi
+
+Przygotuj się na wieczną noc
+Na peryferiach Sfer
+Nikt nie widzi światła
+Oto entropia!"~
+@500294 = ~Głowa Haer'Dalisa~
+@500295 = ~GŁOWA HAER'DALISA
+Waga: 5
+
+Taki oto los spotkał sigilijskiego aktora.~
+@500296 = ~Tuba na zwoje~
+@500297 = ~TUBA NA ZWOJE
+Waga: 2
+
+W tym mocnym pojemniku można umieścić tuziny zwojów, zabezpieczając je w ten sposób przed ogniem, deszczem i piorunami - czyli najczęstszymi zagrożeniami, jakich może spodziewać się czarodziej szukający przygód. ~
+@500298 = ~Jadeitowa mózgoczaszka~
+@500299 = ~JADEITOWA MÓZGOCZASZKA
+Waga: 2
+
+Czaszka zrobiona z cennego kamienia. Jest niewielka i brakuje jej żuchwy.~
+
+////////////
+// ====== //
+// Stores //
+// ====== //
+////////////
+         
+@700000 = ~Adam, najlepsiejszy kowal~ 
+@700001 = ~Zgubione dobra Kruchego Ogona~ 
+@700002 = ~Sferowe różności Kabatuma~ 
+@700003 = ~Szpital polowy Alviro~ 
+@700004 = ~Otchłanna biżuteria Beathy~ 
+@700005 = ~Wędrujące dobra~ 
+@700006 = ~Tawerna "Rzeczna Brama"~ 
+@700007 = ~Sala wypoczynkowa~ 
+@700008 = ~Szopa magazynowa~ 
+@700009 = ~Tawerna "Wioślarz Styksu"~ 
+@700010 = ~Tawerna "Szczurwidołek"~ 
+@700011 = ~Tawerna~ 
+@200000 = ~"Wiemy już, co nam ciemność odkrywa,"~ [wers1]
+@200001 = ~"Czy głęboki, czy płytki nasz grób;"~ [wers2]
+@200002 = ~"Starzy nasi ojcowie, kochanki,"~ [wers3]
+@200003 = ~"Czuć będziemy, czy zmógł sen ich już."~ [wers4]
+@200004 = ~"Zobaczymy, czy piekło jest niebem,"~ [wers5]
+@200005 = ~"Czy chleba nie da nam chwast,"~ [wers6]
+@200006 = ~"Siedemdziesiąt radości po siedem,"~ [wers7]
+@200007 = ~"Pani Bólu i Łez!"~ [wers8]
+@200008 = ~"Szpicuj się, trepie!"~ 
+
+//////////////////
+// ============ //
+// Spells, etc.  //
+// ============ //
+//////////////////
+
+@600001 = ~Czarne błogosławieństwo Seta~
+@600002 = ~CZARNE BŁOGOSŁAWIEŃSTWO SETA
+Zasięg: Dotyk
+Czas działania: 10 sekund
+Szybkość: 1
+Obszar działania: Dotknięta istota
+Rzut obronny: Brak
+
+Niech otoczy nas aura mocy Seta. Albowiem zesłana będzie czarna manna, która obdarzy łaską wasze ciała i umysły. Czy czujesz? Czy masz dość siły, by przyjąć jego dary? Spójrz w oczy Seta! A będzie ci dane.
+
+Cel objęty zaklęciem otrzymuje modyfikator +1 do trafienia i +1 do rzutów obronnych oraz poddany jest efektowi przyspieszenia ruchów.~
+@600003 = ~Modlitwa do Seta~
+@600004 = ~MODLITWA DO SETA
+Zasięg: 0
+Czas działania: 5 sekund na poziom
+Szybkość: 1
+Obszar działania: Promień 18 metrów
+Rzut obronny: Brak
+
+Módlmy się... Set patrzy. Set widzi. Set wie. Otwórz swe serce na Jego szept. Niechaj krew gotuje się w żyłach, gdy ruszysz w bój! Modlitwa odgrywa ważną rolę w każdej religii. Pokrzepiony słowem Seta wiesz, że nic i nikt nie stanie ci na przeszkodzie do osiągnięcia krwawego celu.
+
+Ta mroczna wersja zaklęcia "Modlitwa" daje modyfikator +1 do rzutów na atak i obrażenia oraz rzutów obronnych dla sojuszników. Wrogowie otrzymują modyfikator ujemny o wartości -1 do rzutów na atak i obrażenia oraz rzutów obronnych. Czar trwa 5 sekund na poziom i działa w promieniu 18 metrów.~
+@600005 = ~Gadzie splunięcie~
+@600006 = ~GADZIE SPLUNIĘCIE
+Zasięg: 1 metr
+Czas działania: 10 sekund
+Szybkość: 4
+Obszar działania: 1 istota
+
+Gady nigdy nie słynęły ze zbytniej uprzejmości. Czasami wręcz muszą wydalić z siebie żółć. Dlaczego by nie w stronę swoich wrogów?
+
+Czar zadaje 3-24 punktów obrażeń od trucizny.~
+@600007 = ~Ochrona przed zimnem~
+@600008 = ~OCHRONA PRZED ZIMNEM
+Zasięg: Dotyk
+Czas działania: 5 sekund na poziom
+Szybkość: 3
+Obszar działania: 1 istota
+Rzut obronny: Brak
+
+Czar ten działa przez jedną turę na poziom czarodzieja. Zapewnia całkowitą ochronę przed zwykłym chłodem oraz częściową przed chłodem magicznym, takim jak zionięcie lodowego smoka czy czary w rodzaju "Stożka zimna". W przypadku magicznego chłodu czar ten zmniejsza otrzymane obrażenia o połowę.~
+@600009 = ~Ognista kula~
+@600010 = ~OGNISTA KULA
+Zasięg: 12 metrów
+Czas działania: Natychmiastowy
+Szybkość: 3
+Obszar działania: Promień 5 m
+Rzut obronny: 1/2
+
+Niechaj Kossuth zlituje się nad tymi, od których ognie stworzenia będą się domagać zwrotu daru życia.
+
+Ten niezwykle popularny w Pierwszej Sferze Materialnej czar pozwala magowi na wytworzenie bezpośrednio w rękach rozgrzanej kuli płomieni. Ciśnięta w stronę przeciwnika, kula rozbłyskuje eksplozją raniącą nie tylko jego, ale i wszystkich wokół. Z tego powodu zalecana jest rozwaga przy wyborze celu.
+
+Pojedyncza kula zadaje 1-6 punktów obrażeń na każdy poziom maga (maksymalnie 6-60). Możliwe jest uchronienie się przed połową obrażeń dzięki udanemu rzutowi obronnemu. To potężny jak na swoje wymagania czar - historia wspomina wręcz o badaniach Tensera nad uczynieniem go mniej niszczycielskim. Ponieważ potęga to jedno, ale równie ważna jest efektywność. Zaś ogień kieruje się swoimi zasadami.~
+@600011 = ~Zakładanie pułapek~
+@600012 = ~ZAKŁADANIE PUŁAPEK
+Zasięg: Dotyk
+Czas działania: Natychmiastowy
+Szybkość: 1
+Obszar działania: Specjalny
+
+Zdolni złodzieje opanowali sztukę tworzenia czegoś z niczego i stosowania tego na najróżniejsze sposoby - by zgubić pościg czy poradzić sobie z dużo silniejszym fizycznie przeciwnikiem, czy to strażnikiem, czy potworem. Umiejętność ta pozwala na skonstruowanie pułapki w wybranym miejscu.~
+@600013 = ~Ciernie udręki~
+@600014 = ~CIERNIE UDRĘKI
+Zasięg: 10 metrów
+Czas działania: Natychmiastowy
+Szybkość: 0
+Obszar działania: 1 istota
+
+Udręka. Czasami masz wrażenie, że to słowo jest *wszystkim*. Kiedy wewnętrzna otchłań, owa rozdarta rana egzystencji, pustka po czymś straconym, wydaje się nie mieć dna... jedyne, co czujesz, to ból udręki. Niczym piękna, czarna róża w opustoszałym ogrodzie, po dotknięciu której nadziewasz się na kolce. Podziel się tym bólem z innymi...
+
+Zadaje 3-9 punktów obrażeń siecznych/kłutych.~
+@600015 = ~Pięść Zerthimona~
+@600016 = ~PIĘŚĆ ZERTHIMONA
+Zasięg: 2 metry
+Czas działania: 18 sekund
+Szybkość: 0
+Obszar działania: 1 istota
+
+Przeciwnik otrzymuje karę do ataku i rzutów obronnych, karę -3 do klasy pancerza, karę -2 to traK0 i stan "Ociemniałość". Rzucający dostaje bonus +5 do obrażeń, ale sam odnosi obrażenia przy rzucaniu (1-6 punktów, jednorazowo).
+
+"Ciało jest jedynie naczyniem, a ta pięść je osądzi. Przez mój cios płynie wola Zerthimona."~
+@600017 = ~Plugawy uwiąd~
+@600018 = ~PLUGAWY UWIĄD
+Zasięg: 12 metrów
+Czas działania: Natychmiastowy
+Szybkość: 8
+Obszar działania: Sześcian o boku 9 metrów
+Rzut obronny: 1/2
+
+Ten dotkliwy czar, pochodzący z szaleńczej wyobraźni nekromanty-elementalisty Abi-Dalzima, zwanego Ojcem Susz, sprawia, że ze wszystkich żywych istot w obszarze jego działania wyparowuje wszelka woda. Abi-Dalzim uczynił wiele okropności w imię Incabulosa, boga chorób, susz i koszmarów, ale najgorszą z nich było stworzenie tego niszczycielskiego czaru, po którego użyciu na danym terenie usycha także wszelka roślinność i znikają wody gruntowe.
+
+Wszystkie żywe istoty na obszarze działania czaru otrzymują 1-8 punktów obrażeń na poziom rzucającego, maksymalnie 25-200 obrażeń.~
+@600019 = ~Dezintegracja~
+@600020 = ~DEZINTEGRACJA
+Zasięg: 12 metrów
+Czas działania: Natychmiastowy
+Szybkość: 6
+Obszar działania: 1 istota
+Rzut obronny: Neguje
+
+Rozpad całości na elementy cząstkowe. Zlikwidowanie integralności. Rozkład na czynniki pierwsze. Jakkolwiek tego nie opisać, czar Dezintegracji powoduje najprostszy i być może najpotężniejszy ofensywny efekt, jaki mogłoby sobie wyobrazić nawet dziecko: ciało przeciwnika efektownie wybucha, pozostawiając po sobie jedynie pył. Zamiana jest natychmiastowa i nieodwracalna.
+
+Działanie tego zaklęcia może zostać zablokowane przez odporność na magię lub odpowiednią ochronę przed czarami. Nie będzie więc ono efektywne wobec potężniejszych wrogów, ale może efektownie pozbyć się tych słabszych.~
+@600021 = ~Obniżenie odporności~
+@600022 = ~OBNIŻENIE ODPORNOŚCI
+Zasięg: 12 metrów
+Czas działania: 5 sekund na poziom
+Szybkość: 5
+Obszar działania: 1 istota
+Rzut obronny: Brak
+
+Niektórzy magowie strzelają czarami na oślep, ufając, że któryś z nich trafi. Są jednak tacy, którzy preferują strategiczne podejście poprzez uprzednie osłabienie odporności celu, co skutkuje bardziej dotkliwymi obrażeniami.
+
+Rzucenie tego czaru powoduje obniżenie odporności na magię celu do minimum. Nie ma możliwości wykonania rzutu obronnego. Można dzięki temu całkowicie przebić się przez obronę jakiegoś potężnego czaromiotacza.~
+@600023 = ~Zawodzenie banshee~
+@600024 = ~ZAWODZENIE BANSHEE
+Zasięg: 0
+Czas działania: Natychmiastowy
+Szybkość: 9
+Obszar działania: Promień 5 metrów wokół rzucającego
+Rzut obronny: Neguje
+
+Banshee, co oznacza 'kobiety z kurhanu', znane także jako wyjące duchy, to okrutne widma, o których mówi się, że za życia były złymi elfimi kobietami. Przyjmują mglistą postać, wysysając energię ze wszystkiego dookoła do tego stopnia, że flora pod nimi usycha. Prostaczkowie znają je jako zły omen zwiastujący śmierć, obieżysferowie zaś jako prawdziwie śmiertelne zagrożenie.
+
+Dzięki temu przerażającemu czarowi mag jest w stanie wydać z własnego gardła przeraźliwy krzyk słyszalny w promieniu 5 m. Kto go usłyszy, ginie natychmiast, o ile nie wykona rzutu obronnego przeciw śmierci. Rzucający i jego towarzysze są odporni na zawodzenie.~
+@600025 = ~Przemiana w biesa~
+@600026 = ~PRZEMIANA W BIESA
+Zamiana w glabrezu
++3 do siły
++3 do kondycji
++3 do zręczności
+-5 do charyzmy
++16 do odporności na obrażenia magiczne
+Dodatkowe PŻ wynikłe z podniesienia kondycji
+Nie możesz rzucać czarów w biesiej formie
+Zostajesz przeklęty na czas przemiany
+
+Przemiana w biesa dla jednych brzmi przerażająco, dla innych całkiem zabawnie. Dla ciebie może okazać się przydatna w sytuacjach bez wyjścia - na przykład kiedy chcesz przestraszyć jakiegoś trepa, który nie chce się odczepić. Ale żarty na bok. Przemiana w glabrezu niesie za sobą szereg korzyści: siła, kondycja i zręczność ulegają znacznej poprawie. Niestety ma również swoje wady. Po przeobrażeniu nie budzisz dużego zaufania wśród przeciętnych śmiertelników, a twoja aparycja w oczach wielu jest wręcz odrażająca. Tracisz również dar rzucania czarów. Dodatkowo czujesz ciągły niepokój - spowodowane jest to zapewne klątwą bycia biesem. Cóż, przynajmniej czujesz się silniejszy.~
+@600027 = ~Powrót do ludzkiej formy~
+@600028 = ~POWRÓT DO LUDZKIEJ FORMY
+Statystyki zostają przywrócone do poprzednich wartości
+Dezaktywujesz czary, takie jak "Pomoc" itp.
+
+Wszędzie dobrze, ale we własnej skórze najlepiej. Wracasz do ludzkiej formy. Cóż to była za piekielna przemiana. Ten pysk i ten smród. Głowa będzie długo boleć...~
+@600029 = ~Tornado~
+@600030 = ~~
+@600031 = ~Runa Muspelheimu~
+@600032 = ~~
+@600033 = ~Przyspieszenie ruchów~
+@600034 = ~PRZYSPIESZENIE RUCHÓW
+Zasięg: 5 metrów
+Czas działania: 15 sekund + 5 sekund na poziom 
+Szybkość: 3
+Obszar działania: Promień 5 metrów
+Rzut obronny: Brak
+
+Po rzuceniu tego zaklęcia wszystkie istoty znajdujące się pod jego wpływem zaczynają się poruszać z dwukrotnie większą prędkością, a także otrzymują premię +2 do inicjatywy oraz dodatkowy atak na rundę. Przykładowo, istota poruszająca się z prędkością 6 i atakująca raz na rundę będzie poruszała się z prędkością 12 i atakowała dwa razy na rundę. Zaklęcie to działa na wszystkich sprzymierzeńców znajdujących się w promieniu 5 metrów od miejsca wskazanego przez czarującego (istoty opuszczające obszar działania czaru nadal podlegają jego efektom; z kolei istoty, które wejdą na ów obszar już po rzuceniu zaklęcia, są odporne na jego działanie). Efekty zaklęcia nie kumulują się po jego wielokrotnym użyciu lub po rzuceniu podobnego czaru. Czar ten nie wpływa na prędkość rzucania zaklęć i prędkość działania efektów zaklęć. Warto zauważyć, że czar ten neguje efekty "Spowolnienia ruchów".~
+@600035 = ~Szata Pokonanych~
+@600036 = ~Bełkot mimira~
+@600037 = ~BEŁKOT MIMIRA
+Zasięg: 36 metrów
+Czas działania: 10 sekund + 1 sekunda na poziom
+Szybkość: 3
+Obszar działania: 20 metrów kwadratowych
+Rzut obronny: Neguje
+
+Mortemu zdarzało się utrzymywać, że jest mimirem. Nazwą tą określa się gadające metaliczne czaszki, różniące się wyglądem zależnie od tego, czego sobie zażyczył twórca. Mogą przypominać czaszkę ludzką lub zwierzęcą, ale przybierają też formę dysków, sześcianów, liści, nasion, motyli i nie tylko. Krążą za właścicielem niczym kamienie ioun i odpowiadają na pytania, jeśli tylko mogą się unosić w powietrzu lub wodzie. Ich niejasne pochodzenie bywa wiązane ze Studnią Mimira Mímisbrunnr w Ysgardzie, mającą zapewnić nieskończoną wiedzę za odpowiednią opłatą. Czy Morte ma cokolwiek wspólnego z Ysgardem? Wątpliwe. Czy można go utożsamić z latającą encyklopedią za dwa tysiące miedziaków, którą można zakupić w Sigil i miastach-bramach? Wiesz, że nie. Kłamstwo zaczęło jednak żyć swoim życiem i gdybyś naprawdę uwierzył, że Morte może być mimirem, czemu nie mógłby zasypać przeciwników potokiem bezużytecznych ciekawostek, tak jak robi to z przekleństwami?
+
+Umiejętność ta działa analogicznie do czaru "Zamęt": 1-4 istot, +1 istota na poziom, zostanie oszołomionych. Mogą zareagować w następujący sposób: 
+1) Rozejdą się;
+2) Będą stały oszołomione;
+3) Zaatakują istotę znajdującą się najbliżej;
+4) Będą zachowywać się normalnie.~
+
+//////////////
+// ======== //
+// Bestiary //
+// ======== //
+//////////////
+
+         
+@800001 = ~Prod to chochlik współpracujący z Tergush'tekhnem i biesami z "Gorejącego Człeka". 
+
+To dość zwyczajnie wyglądający chochlik. Jego skóra jest szarobura, jego zgarbiona, chuda postura nie wywołuje przestrachu, a membrany jego nietoperzowych skrzydeł z pewnością widziały lepsze dni. Niektóre dziury wyglądają na świeże i są zapewne sprawką Ziutka i jego ludzi. Prod nie wydaje się tym faktem przybity. Nie wiesz, czy jego skrzydła kiedykolwiek się zagoją, ale bije od niego aura entuzjazmu wobec zbliżającej się podróży.~
+@800002 = ~Dobro, cnota czy miłość to czyste idee, których bronią archoni słowa. Ich skrzydła są w istocie chmurami prędko wirujących pergaminów. Szczycą się ponadprzeciętną inteligencją, a ich lśniąca, brązowa skóra jest doskonalsza niż jakikolwiek człowiek mógłby sobie wymarzyć. Mieszkają na Niebiańskim Szczycie, choć można ich też spotkać w Domu Wiedzy Oghmy na Zewnętrzu.
+
+Jako niebianie są naturalnymi odpowiednikami i zaprzeczeniem biesów: dobrymi istotami ze Sfer Wyższych. Ich pojmowanie dobra różni się jednak od ludzkiej moralności. Może ono prowadzić do działań tak stanowczych, że ocierają się o bezduszność, i do etycznych paradoksów tak przedziwnych, że odpowiedź na pytanie, czym jest czyste dobro, wciąż pozostaje nieoczywista.
+
+Archoni słowa upodobali sobie szczególną dziedzinę, jaką jest magia Prawdziwych Imion. Z tego powodu ich naturalnymi wrogami są logokrony i przekłamywacze, którzy naruszają czystość Prawdziwej Mowy. Archoni podróżują po Sferach, starając się zainspirować dobre istoty i ratować czyste idee od zepsucia. W walce posługują się potężnymi zdaniami, które powalają wrogów jak fala uderzeniowa. Następnie uderzają świętymi młotami bojowymi, jednocześnie cały czas utrudniając przeciwnikowi odwet. Oto moc Prawdziwej Mowy.~
+@800003 = ~Znany również pod takimi tytułami jak Wilk Bitewny czy syn Völgara. Półolbrzym einherjer z Ysgardu przewodzący grupie Przeznaczonych. Odpowiada bezpośrednio przed Rowanem Darkwoodem; w jego przekonaniu zatem należy do niego wszystko, co może sobie wziąć. Nie jest to ktoś, kogo warto lekceważyć. Jego wiernym towarzyszem jest wilk Sharikira.~
+@800004 = ~Slaady to żabopodobni mieszkańcy Limbo. Wyłoniwszy się z pierwotnej zupy, uosabiają czysty chaos Sfer. Ponieważ w chaosie wszystko jest możliwe, czasem powstają praworządne gormeele, które współpracują z githzerai. Padają one często ofiarą chaotycznych slaadów. Tak jak i biesy, slaady walczą w Wojnie Krwi. Pojawiają się przypadkowo w niezorganizowanych grupach i stają po jednej ze stron, zbierając potem łupy. Kolor ich skóry wyznacza ich status i moc. Ich hierarchia jest następująca: błotne, czerwone, błękitne, zielone, szare, śmierci, białe, czarne.
+
+Sposób, w jaki się rozmnażają, jest przedziwny - przypomina bardziej zachowania pasożytów. Po godach odbywających się przy Głazie Rui, kolebce ich rasy, slaady uzyskują zapłodnione jaja, które muszą trafić do żywicieli. Zainfekowane jajami ofiary zapadają na chorobę zwaną slaadzią gorączką. Po kilku dniach ze zwłok wychodzi kijanka, której przeznaczone jest stać się czerwonym slaadem lub - jeśli ofiara miała zdolności magiczne - zielonym.
+
+Ciekawa teoria postuluje, jakoby slaady miały być dowodem na istnienie alternatywnych rzeczywistości - jakoby miały z nich pochodzić i być jedynymi istotami, które potrafią je dostrzec i o nich pamiętać. Większość uczonych uznaje tę teorię za absurd.~
+@800005 = ~Mimiki to przedziwne wynaturzenia, które jako strategię zdobywania pokarmu upodobały sobie mimetyzm, czyli kamuflaż upodabniający do otoczenia w oczekiwaniu na potencjalne ofiary. Zapiski mówią o tym, że są w stanie przybrać kształt nie tylko skrzyń, jak się popularnie utarło, ale też drzwi czy książek. Faktura ich skóry niemal idealnie odwzorowuje podstawowe materiały, takie jak drewno, kamień czy metal. Naturalny odcień ich ciała przypomina raczej szary granit.
+
+Niewiele opisano przypadków mimików, które były w stanie się porozumieć; znaczna większość koncentruje się wyłącznie na przetrwaniu i zdobywaniu pożywienia, które są w stanie wykryć z odległości nawet 30 metrów dzięki zdolności wyczuwania ciepła. Czasami dzielą przestrzeń z innymi drapieżnikami.
+
+Mówi się, że książkowe mimiki były hodowane przez kościół Oghmy w celu ochrony cennych woluminów.~
+@800006 = ~Marilithy to generałowie i taktycy hord tanar'ri z Otchłani. Z wyglądu przypominają wężowate nagi, jednak od pasa w górę posiadają ciała wojowniczych kobiet z trzema parami rąk, z których każda może dzierżyć inne ostrze, często należące niegdyś do pokonanego wroga. Ich ogony są długie na sześć metrów.
+
+Jak rzekł niegdyś Xanxost: "marilithy są dowodem na to, że chaotyczne byty nie muszą być głupimi bytami". Mają talent do wojennego planowania; są w stanie korzystać też z pomocy iluzji i rzucać uroki. Nie przepadają za glabrezu, gdyż te nalegają na to, by marilithy korzystały przede wszystkim z kuszenia i manipulacji, podczas gdy marilithy postrzegają taką strategię jako ograniczoną.~
+@800007 = ~Te insektoidalne baatezu przypominające nieco karaluchy to elitarni oprawcy Baator. Ci okrutni dręczyciele perfekcyjnie opanowali sztukę tortur i utrzymywania swoich ofiar przy życiu tak długo, aż same zapragną śmierci. Tak jak zwykłe karaluchy, biesy te mają sześć długich kończyn; w ich przypadku są one jednak zakończone szponami. Mogą nimi manipulować z zadziwiającą precyzją, a także używać przeróżnych narzędzi - przeważnie z zatrważającym i bolesnym skutkiem.
+
+Kokrachony są inteligentne i sadystyczne. Korzystają ze zdolności przypominających magię i mogą przywoływać swoich pobratymców. Wolą jednak ranić tylko bezbronną ofiarę i nie palą się do otwartej walki. Mówi się, że kończyny ofiar często sprzedają nocnym wiedźmom w zamian za dusze.~
+@800008 = ~Yagnolothy, znane też jako yagnodajmony, to swego rodzaju szlachta pośród pomniejszych yugolothów, zamieszkująca Gehennę i Szare Pustkowia. Ich głównym zajęciem jest spisywanie kontraktów, choć według maga Mordenkainena nie zawsze dotrzymują własnych umów. Mając monstrualnie wielką rękę i mierząc nawet ponad cztery metry, nie muszą się przejmować konsekwencjami. Poza fizyczną przewagą mają do dyspozycji szereg magicznych zdolności i potrafią manipulować elektrycznością.
+
+Teorie dotyczące ich pochodzenia mówią o rasowych hybrydach i powiązaniu z olbrzymami. Patrząc na ich potęgę, strach pomyśleć, jacy są ich przełożeni, większe yugolothy.~
+@800009 = ~Marraenolothy, znane też jako charondajmony lub "ci pomiędzy", to najwyższe rangą pomniejsze yugolothy. Ich zadaniem jest pilotowanie łodzi żeglujących po rzece Styks. Są podopiecznymi altralotha Charona, który za wygórowaną cenę przewozi dusze w dół rzeki.
+
+Marraenolothy są niewysokimi humanoidami o aparycji szkieletów, ubranymi w stare, przegniłe szaty pogrzebowe. W ciemności można zauważyć ich błyskające czerwienią oczy. Zamiast dążyć do bezpośredniej walki, wolą polegać na swoich specjalnych zdolnościach, szczególnie tych związanych z ich profesją. Są w stanie przejąć kontrolę nad każdą łodzią, a także chodzić po wodzie i w niej oddychać. Potrafią kontrolować pogodę i rzucać uroki. Są też w stałym kontakcie ze swoimi pobratymcami i mogą przywołać na pomoc hydrolothy i inne marraenolothy. Nie powinno zatem dziwić, że budzą powszechny strach.~
+@800010 = ~Ostrzaki to rasa z Acheronu. Są podobne do ludzi, ale ich skóra przypomina matowy metal. Ich oczy są fioletowe i lśnią jak lód. Rasę tę charakteryzuje ksenofobia i przesądność. Są też wojownicze i nie boją się walki. Używają broni. W początkach swej historii zostały niemal doszczętnie wybite przez rdzawe smoki, ale dzięki magicznym eksperymentom uodporniły się na korozję. Ich kolce bywają używane jako składnik alchemiczny.~
+@800011 = ~W Sferach istnieje wiele dziwów i wszystko jest możliwe. Kabatum to harmoniczny zabójca, potomek biesa i niebianina. Takie istoty, pochodzące ze Sfer Zewnętrznych, ale niemogące żadnej z nich nazwać domem, są wrogie przede wszystkim wobec przeciwników o skrajnych charakterach. Sam Kabatum zwany jest Przywoływaczem i pośród Sfer wysługiwał się wieloma rodzajami stworzeń. Jest niezwykle groźny w walce, ale z jakiegoś powodu postanowił się zadomowić w rezydencji w Kanale.~
+@800012 = ~Szlamy to bezkształtne stworzenia składające się głównie z kwasu, który pozwala im trawić ofiary. Czają się na sufitach, ścianach i pod podłogami. Wychodzą, gdy wyczują wibracje wywołane przez przechodzące obok istoty. Często są efektami magicznych eksperymentów. Rzadko spotyka się je poza podziemiami i lochami. W tych środowiskach służą za swojego rodzaju 'czyścicieli' pozbywających się resztek.
+
+Najczęściej spotyka się zielone szlamy, ale czasem przybierają one inne kolory, jak ochrowy, musztardowy czy szary, zyskując przy tym nowe właściwości. Wszystkie szlamy charakteryzuje wysoka odporność na różnego rodzaju obrażenia.~
+@800013 = ~Na dworze Molikrotha przebywa półelfia alu-bieska o imieniu Antilia, zwana również Wysoką Pieśniarką. Otwarcie występuje przeciw baronowi, ale on ignoruje wszystkie jej występki. Być może pewną rolę odgrywa tu jej talent muzyczny - pomiędzy spotkaniami pośród hal dworu można często usłyszeć jej pieśni.
+
+Plotki mówią, że Antilia jest córką piekielnego arcyksięcia, zrodzoną z potężnej elfiej królowej, która zwróciła się ku piekielnym mocom i została ich kapłanką. Prawdziwość większości plotek ciężko udowodnić,ale jedna na pewno nie rozmija się z prawdą: Wysoka Pieśniarka jest nieziemsko piękna.~
+@800014 = ~Haer'Dalis to pochodzący z Sigil bard z domieszką biesiej krwi. Ważna jest dla niego jego dwojaka przynależność. Jako artysta związany jest z trupą teatralną pani Raelis Shai, gdzie spełnia się w aktorstwie u boku podobnych mu sferotkniętych. Światopoglądowo zaś należy do Strażników Zagłady - wierzy zatem, że wszystko dąży do nieuniknionego rozkładu... by ustąpić miejsca nowemu.
+
+Ma specyficzną manierę mowy. Wyraża się kwieciście, a znane mu osoby porównuje do ptaków. Mimo talentu aktorskiego i zamiłowania do metafor wydaje się szczery i wręcz prostolinijny w swoich intencjach.~
+@800015 = ~Z Canii, ósmej warstwy Baator, wywodzą się insektoidalne gelugony, zwane lodowymi diabłami. Mają ponad trzy metry wzrostu i ważą ponad 300 kilogramów. Ich ogony są zakończone kolcami, a złożone oczy i czułki potrafią wykryć nawet najdrobniejszy ruch. Są w stanie spowalniać swoich przeciwników paraliżującym zimnem i tworzyć lodowe mury.
+
+Gelugony to bezlitośni dowódcy Wojny Krwi, którzy władają zastępami pomniejszych diabłów i nie obawiają się poświęcić własnych jednostek, by sięgnąć po zwycięstwo. To także zawzięci wojownicy pragnący mocy czartów, jednak posłusznie zbierający dusze dla swoich panów. Dawno temu lodowe diabły zostały zniewolone przez Mefistofelesa. Do dziś portalu do Nessus, ostatniej warstwy Baator, strzeże 9999 gelugonów.~
+@800016 = ~Alviro to deva ze Złotego Nieba Merkurii, drugiej warstwy Niebiańskiego Szczytu. Pomniejszy przedstawiciel rodu aasimonów, zwanych też aniołami. Stara się na każdym kroku krzewić ład i spokój, co podczas wizyty w Sigil realizuje poprzez uzdrawianie potrzebujących w Kanale. Leczy rany i choroby, a także sprząta. Pomaga ubogim, nie oczekując od nich zapłaty.~
+@800017 = ~Artyści tworzą legendy. Legendy usprawiedliwiają to, co robią artyści. A przynajmniej na ogół tak jest. Akershus to kompozytor i wykonawca znany w całej Klatce i na Zewnętrzu. Właśnie wrócił z trasy po miastach-bramach i przygotowuje się do skomponowania kolejnego dzieła. Ma tatuaż wykonany przez artystkę z Rigus, przedstawiający budynki atakowane przez ostrorośl i kilka przypominających ją pękatych potworów.~
+@800018 = ~Kuo-toa, znani też jako ryboludzie, są rybią rasą pochodzącą z torilskiego Podmroku. Preferują środowisko wodne i podziemne jaskinie. Są niższe od dorosłego człowieka i nieustannie czuć od nich zgniłą rybą. Opanowały wytwarzanie narzędzi oraz broni, z której chętnie korzystają podczas polowania: sieci, harpuny czy szczypce to ich podstawowy środek w chwytaniu ofiar. Mają określoną hierarchię, w której ważną rolę odgrywają pilnujący porządku mnisi zwani monitorami oraz kapłani. Przeważnie wyznają Blibdoolpoolp, ale czasem czczą też morskie potwory, takie jak krakeny, albo cudze bóstwa, takie jak Shar, Bhaal czy Demogorgon, upraszczając ich imiona w taki sposób, by były w stanie je wymówić.~
+@800019 = ~Pośród yugolothów wiele jest istot budzących powszechny strach. Dwuipółmetrowe baernalothy uchodzą za jednych z najbardziej starożytnych przedstawicieli tej rasy, a ich natura wciąż pozostaje dla uczonych kwestią sporną. Biesy te mają obsesję na punkcie starożytnych sekretów. Przypisuje im się eksperymenty na wielką skalę, ingerowanie w rzeczywistość oraz stworzenie demodandów w Tartarze, a może nawet i diabłów i demonów.
+
+Baernalothy są pozbawioną emocji i barw wielką niewiadomą. Ich wielkie głowy przypominają rogate czaszki bydła lub kozłów, a ze szklistych oczu sączy się płyn. Nie używają broni - zamiast tego opierają się na swoich naturalnych umiejętnościach. Żyją jak pustelnicy na Szarym Pustkowiu, odrzucając społeczeństwo yugolothów, które wyemigrowało do Gehenny. Przeważnie są samotne, choć czasem towarzyszą im nocne wiedźmy i koszmary.
+
+"Nie myśl, że to przesadzone przechwałki. Widziałem narodziny żyjących współcześnie mocy, a także mocy przed nimi."
+- Daru Ib Shaitiiq~
+@800020 = ~To rudowłose diabelstwo to bardka będąca faktyczną przywódczynią trupy teatralnej z Sigil, w której skład wchodzą również: drugie diabelstwo - Haer'dalis, krasnoludzki mag Kirinaldo, elfia magiczka Lunisia i dubler Biff Niedouczony.
+
+Raelis to pewna siebie kobieta, która z łatwością nawiązuje kontakt z publicznością. Cechuje ją też uczciwość; jest gotowa oddać pieniądze niezadowolonym widzom, jeśli uzna, że aktorzy nie byli wystarczająco przygotowani, by wystawić satysfakcjonującą sztukę.~
+@800021 = ~Sytuacja dzieci w Sigil uzależniona jest od zarobków ich rodziców. W biedniejszych dzielnicach, takich jak Ul, dzieci często bardzo wcześnie muszą rozpocząć pracę i wykonują zadania, w których przydaje się ich niewielki rozmiar, na przykład czyszczenie kominów czy obsługa lamp ulicznych. Niekiedy też bywają wykorzystywane do pracy ponad siły w fabrykach lub jako Zbieracze. W gorszych wypadkach trafiają do grup przestępczych i obrabiają nieuważnych pierwszaków. Tym, które mają szczęście, trafia się lżejsza praca w roli kurierów, naganiaczy lub sprzedawców brukowców pokroju "S.I.G.I.S".
+
+Frakcjom nie umyka problem dzieci pozostawionych samym sobie. Niektóre z nich prowadzą szkoły, jednakże łatwo się domyślić, że stosują w nich silną indoktrynację, narzucając uczniom konkretne przekonania. Sigil nie jest miejscem, w którym szczęśliwe dzieci stanowią częsty widok. W Kanale najmłodsi miewają powód do radości głównie wtedy, gdy co pięć do ośmiu miesięcy przybywa dostawa czystej wody z rzeki Okeanos. To prawdziwe święto, w którym biorą udział całe rodziny.~
+@800022 = ~Mezzolothy to insektoidalna, pospolita odmiana yugolothów, neutralnych biesów. Niewykluczone, że niegdyś były inną, niebiesią rasą, która mogła zostać porwana z rodzinnej sfery i przystosowana przez wyższej rangi dajmony, takie jak ultrolothy i arkanalothy, do ich okrutnych planów. Nie było to pewnie najtrudniejszym zadaniem, ponieważ mezzolothy nie grzeszą inteligencją, ale mimo to mają pewien wrodzony talent do magii, zamiłowanie do zaczarowanych przedmiotów, a nawet zdolności telepatyczne wykorzystywane do komunikacji. W walce posługują się trójzębami, a w ostateczności także szponami. Ich owadzie żuwaczki również odznaczają się niebywałą siłą nacisku. Nawet pozbawione broni są w stanie przeciąć - czy to żuwaczkami, czy szponami - większość niemagicznych materiałów. Podobnie jak insekty, raczej nie występują pojedynczo. Innym elementem czyniącym z nich godnych przeciwników jest twardy chitynowy pancerz, dający im odporność na większość czynników zewnętrznych.
+
+Mezzolothy nie palą się do najemniczej walki w Wojnie Krwi. Często wędrują po Sferach Niższych w poszukiwaniu istot, które mogłyby torturować. Przeważnie pada na lemury. Jeśli przyjdzie ci walczyć z mezzolothami, zabezpiecz się przeciw oparzeniom i nie pozwól im teleportować się zbyt daleko, kiedy przyblokują cię w jakimś ciasnym przejściu. Nim zdążysz się zorientować, otoczy cię chmura toksycznych oparów.~
+@800023 = ~Pośród sług Lotara jednym z potężniejszych jest kamienny golem uformowany na kształt ghula. Ta upiorna istota z ostrymi szponami i połyskującym jak obsydian czarnym językiem ma zamiast serca przedziwny ogień, który ją napędza. Mówi się, że będzie on płonąć dopóty, dopóki żyć będzie Pan Kości. Można więc założyć, że golem jeszcze całkiem długo będzie likwidować złodziei i wszystkich, którzy nie okażą przerażającemu magowi należytego szacunku.~
+@800024 = ~Monodrony to najniżej postawione w hierarchii modronów sferyczne konstrukty posiadające jedno oko, a także po parze nóg, rąk i skrzydeł. Ich zasób słownictwa jest mocno ograniczony - są w stanie przechować w pamięci maksymalnie 48 wyrazów. Nie wykonują też więcej niż jednego zadania naraz. Nie da się ich przekonać do złamania rozkazów; te może wycofać jedynie duodron, któremu podlegają. Na ogół nie są w stanie pojąć mechanizmów działania bardziej zaawansowanych modronów.
+
+Populacja monodronów liczy trzysta milionów i jest uzupełniana w Wielkiej Katedrze Modronów przez Primusa za każdym razem, gdy liczba ta ulegnie zmianie. Regularnie wyruszają z Mechanusa na Wielki Marsz Modronów przez Sfery. Oddzielenie od Źródła może mieć dla nich fatalne i nieprzewidywalne konsekwencje.~
+
+///////////
+// ===== //
+// Films //
+// ===== //
+///////////
+
+@1000000 = ~"P i m p e k"~
+@1000001 = ~WYZNANIE \n\nWiara jest jedną z głównych sił poruszających Sfery. Istnieją dziesiątki panteonów i setki mocy, które wyznają ich mieszkańcy.~
+@1000002 = ~Bieżące wyznanie: Kiaransalee\n(Mścicielka, Mściwa Banshee, Biała Banshee) \n\nChaotyczna Zła bogini nieśmierci i zemsty należąca do panteonu mrocznych elfów (Mroczne Seldarine). Jej święta kraina znajduje się w Tanatos w Otchłani.\nJej misją jest zgaszenie wszelkiego życia w Sferach, aby mogły na zawsze zapanować równość i spokój.~
+
+/////////////
+// ======= //
+// CREDITS //
+// ======= //
+/////////////
+
+@901000 = ~^0xffffbf00GRATULACJE! 
+
+Udało ci się dotrzeć do końca aktu 1 Blizzard in Baator. W tym miejscu kończy się wersja demonstracyjna. Kiedy czytasz te słowa, my zapewne ciężko pracujemy nad aktami 2 oraz 3, aby wydać pełną wersję w jak najkrótszym czasie.
+
+W akcie 2 zobaczysz oczywiście Canię w całej okazałości, a w akcie 3 postaramy się zrealizować kilka pierwotnych założeń PS:T, które niestety z powodu ograniczeń czasowych oraz budżetowych nie trafiły do końcowego produktu.
+
+Mamy nadzieję, że spodobało ci się to, co zaprezentowaliśmy, i że udało ci się złapać chociaż połowę pobocznego i nieoczywistego kontentu (którego jest w Blizzard in Baator dużo). Nie bój się powiedzieć nam, co myślisz o naszym demie, co można by zmienić albo dodać, w ramach zdrowego rozsądku oczywiście. Można się z nami kontaktować pod adresem: cania.believe.it@gmail.com
+
+Jeśli chcesz, możesz się także zgłosić do pomocy. Nasz projekt jest w 100% zrodzony z pasji - na stworzenie go nie została wydana ani jedna złotówka, tylko tysiące godzin wolnego czasu kilkorga zapaleńców stanowiących zespół CANIA BELIEVE IT WORKS. A wśród tychże zapaleńców:
+
+Project Lead
+
+    Filip "FallDamage312" Marczuk: lead developer, lead writer i koordynator fabuły, projekty graficzne i ich wykonanie, główny twórca skryptów, tłumaczenia i dodatkowa korekta
+
+Projektanci
+
+    Filip "FallDamage312" Marczuk
+    Kamil "Wrathu" Kwiatkowski: główny autor muzyki i koordynator udźwiękowienia, writer, koordynator ekwipunku i przedmiotów, tłumaczenia i dodatkowa korekta
+    szef: inicjator projektu, twórca instalatora, struktury oraz elementów menu, twórca skryptów
+    Alicja Wojciechowska: writer, tester, redakcja i korekta polskojęzyczna oraz anglojęzyczna, dodatkowe tłumaczenia
+
+Zespół redakcyjny
+
+    Corpselight: koordynatorka redakcji i korekty, redakcja i korekta polskojęzyczna, dodatkowe tłumaczenia
+    Brenda: redakcja i korekta polskojęzyczna
+    Alexander Hurezeanu: redakcja i korekta anglojęzyczna
+    Alderdash: redakcja i korekta anglojęzyczna
+    Dune: redakcja i korekta anglojęzyczna
+    Aquadrizzt: redakcja i korekta anglojęzyczna
+    Inter: redakcja i korekta anglojęzyczna
+
+Wsparcie
+
+    Darnath: wsparcie merytoryczne i organizacyjne, poradniki, QA
+
+Dodatkowe dialogi
+
+    Nordmarski, Filip Cyrus Madej, Rafał Leniar, Pasza Mickiewicz, Tydeus
+
+Ścieżka dźwiękowa
+
+    Kamil "Wrathu" Kwiatkowski: autor muzyki, koordynator udźwiękowienia
+    Victor "Winnie Gotmilk" Gautschi: kompozytor muzyki, pozyskiwanie lektorów, projektowanie dźwięku i edycja kwestii mówionych
+
+Ścieżka dźwiękowa jest dostępna na profilach jej autorów:
+
+    Kamil Kwiatkowski (Wrathu)
+    wrathu.bandcamp.com
+    linktr.ee/wrathu
+    Victor Gautschi (Winnie Gotmilk)
+    winniegotmilk.com
+
+    "Friður" pochodzi z albumu "Sólin" (2016) by Wrathu.
+
+Oprogramowanie
+    Wrathu używał: FL Studio v25.1.2., LABS 3.7.8, RefX Nexus2, Symphonia, Sytrus,
+    Winnie używał: Ableton Live i różne biblioteki od Orchestral Tools, Heavyocity, EastWest, Eduardo Tarilonte, Native Instruments, UVI, Slate+Ash, Spitfire Audio, 8Dio, Performance Samples, Keyscape, Chromaphone 
+
+AKTORZY:
+
+    Wersja polska
+        Paweł Hajnos jako Grotefend / Kruchy Ogon
+        Paskud jako Czarny Ziutek
+        Błażej Krzyżanowski jako Tergush'tekhn / Prod
+        Filip Marczuk jako Akershus / Ulfbrand / Kaowiec / Szalony Mag
+        Alicja Wojciechowska jako Archonka Słowa
+        Magdalena Gautschi jako Mawu
+        Adrian Waldemar Gajos jako Anit'bil
+        Tomasz Hebel jako Gemariel
+        Agnieszka "Eliamina" Kryszczyńska-Krauze jako Tajemnicza Alu-Bieska
+
+    Wersja angielska
+        Jon Boote jako Prod
+        Vincent Rogé jako Vinrogé
+        Alicja Wojciechowska jako Word Archon
+        Magdalena Gautschi jako Mawu
+        Guilhermo jako Anit'bil
+        Gui Sancho jako Fragile-Tail
+        Filip Marczuk jako Akershus / Ulfbrand / Animator / Mad Mage
+        MillicentOak jako Tergush'tekhn
+        RevocerGM jako Gemariel / Black Joseph
+        Inter jako Tajemnicza Alu-Bieska
+
+ŹRÓDŁA:
+
+Tłumaczenia kanonicznych wyrażeń oparte na stronie Sferopedia https://sfery.fandom.com/wiki/Sferopedia
+
+Znaczna część wiedzy na temat Kanału i jego okolic pochodzi z artykułu "Of Sigil and the Sea - The Ditch" autorstwa Williama Jamesa Cuffe'a, opublikowanego w Polyhedron Magazine #137, 1999 (polskie tłumaczenie "Kanał. Pomiędzy Sigil a morzami" autorstwa Christoffa dostępne jest na Grimuarze Sferowca)
+
+Pełna lista atrybucji użytych mediów jest dostępna w pliku Readme, ponieważ jest zbyt obszerna, aby zmieścić się w tym miejscu.
+
+Dialogi oraz przedmioty mogą zawierać fragmenty opublikowanych materiałów:
+Artykuły z portalu Grimuar Sferowca https://grimuar.pl/
+"Szataniec" (2018) - Rafał Leniar
+"Dolores" - Algernon Charles Swinburne, tłum. Bartłomiej Walczak (fragment pochodzący z książki "Strony bólu", Wydawnictwo ISA, 1999)
+
+PRAWA AUTORSKIE:
+
+"Blizzard in Baator" to nieoficjalna modyfikacja gry Planescape: Torment stworzona przez fanów. Jest to nieoficjalna zawartość fanowska dozwolona zgodnie z zasadami dotyczącymi zawartości fanowskiej. Nie została zatwierdzona ani poparta przez Wizards of the Coast, Beamdog ani żadnego z posiadaczy praw. Część wykorzystanych materiałów stanowi własność Wizards of the Coast. ©Wizards of the Coast LLC.
+
+SZCZEGÓLNE PODZIĘKOWANIA:
+
+Serdeczne podziękowania dla oryginalnych twórców z Black Isle Studios.
+Projektantom, scenarzystom, grafikom i programistom - dziękujemy za Waszą wizję i ciężką pracę. Bez Waszego talentu Planescape: Torment nigdy by nie powstał, a ten projekt nie byłby możliwy.
+
+The Gibberlings 3 (społeczność modderów Infinity Engine)
+a zwłaszcza:
+Argent77 – za konsultacje i pomoc przy tworzeniu bestiariusza oraz logiki questów, a także za nieocenione wsparcie we wszystkich dziedzinach. Bez Ciebie ten projekt nie wyglądałby tak samo.
+CamDawg 
+Jastey
+
+PODZIĘKOWANIA:
+
+Beamdog
+Grimuar Sferowca
+CD-Action
+Spellhold Studios
+Children of Bhaal
+Zenblack
+dark0dave
+Lavalamp
+Udiknedormin
+Kamila Regel
+Brian Crenshaw
+Latch
+Bahzell
+
+Głosy do oryginalnego Planescape: Torment zostały nagrane ponad dwie dekady temu. W modzie pojawiają się niewykorzystane wówczas kwestie nagrane przez oryginalnych aktorów. Chcielibyśmy zadedykować moda aktorom, którzy urzeczywistnili głosy wyjątkowych postaci z gry w obu wersjach językowych, a już ich z nami nie ma.
+
+Tony Jay (1933-2006)
+Gabriela Kownacka (1952-2010)
+Władysław Kowalski (1936-2017)
+Mikołaj Müller (1944-2021)
+Emilian Kamiński (1952-2022)
+Jacek Kiss (1943-2022)
+Flo Di Re (1935-2024)
+Jan Plewako (1937-2025)~ [g-cred]

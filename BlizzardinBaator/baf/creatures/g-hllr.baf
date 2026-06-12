@@ -1,0 +1,45 @@
+// Port TOUTS children
+
+IF
+    Die()
+	Global("G-BBSholler_DiedX","GLOBAL",0)
+	AreaCheckObject("AR0400",Player1)
+THEN
+    RESPONSE #100
+		SetGlobalTimerRandom("G-BBSholler_Died","GLOBAL",179,180) // mortal was killed
+		SetGlobal("G-BBSholler_DiedX","GLOBAL",1)
+END
+
+IF
+  	!ActuallyInCombat()
+THEN
+    RESPONSE #33
+		ReturnToSavedPlace()
+		FaceObject([PC])
+		PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100027) 
+        WaitRandom(10,10)
+        Continue()
+	RESPONSE #33
+        ReturnToSavedPlace()
+		FaceObject([PC])
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100028) 
+		WaitRandom(10,10)
+        Continue()
+	RESPONSE #33
+        ReturnToSavedPlace()
+		FaceObject([PC])
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100029)
+		WaitRandom(10,10)
+        Continue()
+END
+
+IF
+    AttackedBy([ANYONE],DEFAULT)
+THEN
+    RESPONSE #100
+        Enemy()
+        //EscapeArea()
+END

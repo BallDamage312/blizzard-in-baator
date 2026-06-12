@@ -1,0 +1,271 @@
+IF	
+	Died("g-bb150")
+THEN
+    RESPONSE #100
+		Wait(3)
+        FloatMessage("g-bb155",@100015)
+		Continue()
+END 
+
+IF
+    InParty("Grace")
+	Global("g-fakeffgdialogue","GLOBAL",3)
+	!StateCheck("Grace",CD_STATE_NOTVALID)
+	Global("G-fakeffgsaunatriggered","GLOBAL",0) // one time trigger
+THEN
+    RESPONSE #100
+	Wait(8)
+	SetGlobal("G-fakeffgsaunatriggered","GLOBAL",1) // one time trigger
+	CreateCreatureObject("g-bbFFG",Player1,0,0,0) // fake FFG creation
+	ActionOverride("g-bbFFG",StartDialog("g-bbdFFG",Player1)) // Fake FFG dialogue initiation
+END
+
+// SAUNA MOVE
+
+
+// present
+IF
+Global("g-saunamove","GLOBAL",1)
+Global("g-saumor","GLOBAL",1)
+Global("g-saunamorteprocessed","GLOBAL",0)
+THEN
+	RESPONSE #100
+	SetGlobal("g-saunamorteprocessed","GLOBAL",1)
+	ActionOverride("Morte",JumpToPoint([1318.635]))
+END
+
+IF
+Global("g-saunamove","GLOBAL",1)
+Global("g-saudak","GLOBAL",1)
+Global("g-saunadakkonprocessed","GLOBAL",0)
+THEN
+	RESPONSE #100
+	SetGlobal("g-saunadakkonprocessed","GLOBAL",1)
+	ActionOverride("Dakkon",JumpToPoint([1354.640]))
+END
+
+IF
+Global("g-saunamove","GLOBAL",1)
+Global("g-sauann","GLOBAL",1)
+Global("g-saunaannaprocessed","GLOBAL",0)
+THEN
+	RESPONSE #100
+	SetGlobal("g-saunaannaprocessed","GLOBAL",1)
+	ActionOverride("Annah",JumpToPoint([1469.666]))
+END
+
+IF
+Global("g-saunamove","GLOBAL",1)
+Global("g-sauign","GLOBAL",1)
+Global("g-saunaignusprocessed","GLOBAL",0)
+THEN
+	RESPONSE #100
+	SetGlobal("g-saunaignusprocessed","GLOBAL",1)
+	ActionOverride("Ignus",JumpToPoint([1213.538]))
+END
+
+// ASBSENT 1108.867
+
+IF
+Global("g-saunamove","GLOBAL",1)
+Global("g-saumor","GLOBAL",0)
+Global("g-saunamorteprocessed","GLOBAL",0)
+THEN
+	RESPONSE #100
+	SetGlobal("g-saunamorteprocessed","GLOBAL",1)
+	ActionOverride("Morte",JumpToPoint([1108.867]))
+END
+
+IF
+Global("g-saunamove","GLOBAL",1)
+Global("g-saudak","GLOBAL",0)
+Global("g-saunadakkonprocessed","GLOBAL",0)
+THEN
+	RESPONSE #100
+	SetGlobal("g-saunadakkonprocessed","GLOBAL",1)
+	ActionOverride("Dakkon",JumpToPoint([1108.867]))
+END
+
+IF
+Global("g-saunamove","GLOBAL",1)
+Global("g-sauann","GLOBAL",0)
+Global("g-saunaannaprocessed","GLOBAL",0)
+THEN
+	RESPONSE #100
+	SetGlobal("g-saunaannaprocessed","GLOBAL",1)
+	ActionOverride("Annah",JumpToPoint([1108.867]))
+END
+
+IF
+Global("g-saunamove","GLOBAL",1)
+Global("g-sauign","GLOBAL",0)
+Global("g-saunaignusprocessed","GLOBAL",0)
+THEN
+	RESPONSE #100
+	SetGlobal("g-saunaignusprocessed","GLOBAL",1)
+	ActionOverride("Ignus",JumpToPoint([1108.867]))
+END
+
+IF
+Global("g-saunaignusprocessed","GLOBAL",1)
+Global("g-saunadakkonprocessed","GLOBAL",1)
+Global("g-saunaannaprocessed","GLOBAL",1)
+Global("g-saunamorteprocessed","GLOBAL",1)
+Global("g-saunamove","GLOBAL",1)
+THEN
+	RESPONSE #100
+	ActionOverride("Vhail",JumpToPoint([1108.867]))
+	ActionOverride("Grace",JumpToPoint([1108.867]))
+	ActionOverride("Nordom",JumpToPoint([1108.867]))
+	SetGlobal("g-saunamove","GLOBAL",2)
+	CutSceneId(Player1)
+	StartCutSceneMode()
+	ActionOverride("g-bb157",MoveToPoint([1363.706]))
+	SetGlobal("g-saunamove","GLOBAL",2)
+	EndCutSceneMode()
+	ActionOverride("g-bb157",StartDialogNoSet("g-bbd157"))
+
+END
+
+IF
+GlobalGT("G-ulfbrandwonagainstus","GLOBAL",0)
+Global("G-postwar","GLOBAL",0)
+THEN
+	RESPONSE #100
+SetGlobal("G-postwar","GLOBAL",1)	
+ActionOverride("g-bb152",DestroySelf())	
+ActionOverride("g-bb153",DestroySelf())
+ActionOverride("g-bb154",DestroySelf())
+ActionOverride("g-bb155",DestroySelf())
+ActionOverride("g-bb182",DestroySelf())
+ActionOverride("g-bb183",DestroySelf())
+ActionOverride("g-bb184",DestroySelf())
+ActionOverride("g-bb185",DestroySelf())
+ActionOverride("g-bb186",DestroySelf())
+ActionOverride("g-bb187",DestroySelf())
+ActionOverride("g-bb156",DestroySelf())
+ActionOverride("g-bb150",DestroySelf())
+Wait(1)
+//CreateCreature("g-bb207",[749.1782],0)
+//CreateCreatureObject("g-bb150","g-bb207",0,0,0)
+
+END
+
+IF
+Global("G-postwar","GLOBAL",0)
+GlobalGT("G-ulfbrandlostraid","GLOBAL",0)
+THEN
+	RESPONSE #100
+	SetGlobal("G-postwar","GLOBAL",1)
+ActionOverride("g-bb152",DestroySelf())	
+ActionOverride("g-bb153",DestroySelf())
+ActionOverride("g-bb154",DestroySelf())
+ActionOverride("g-bb155",DestroySelf())
+ActionOverride("g-bb156",DestroySelf())
+ActionOverride("g-bb150",DestroySelf())
+END
+
+IF
+Global("G-postwar","GLOBAL",0)
+GlobalGT("G-ulfbrandwonraid","GLOBAL",0)
+THEN
+	RESPONSE #100
+SetGlobal("G-postwar","GLOBAL",1)	
+ActionOverride("g-bb152",DestroySelf())	
+ActionOverride("g-bb153",DestroySelf())
+ActionOverride("g-bb154",DestroySelf())
+ActionOverride("g-bb155",DestroySelf())
+ActionOverride("g-bb182",DestroySelf())
+ActionOverride("g-bb183",DestroySelf())
+ActionOverride("g-bb184",DestroySelf())
+ActionOverride("g-bb185",DestroySelf())
+ActionOverride("g-bb186",DestroySelf())
+ActionOverride("g-bb187",DestroySelf())
+ActionOverride("g-bb156",DestroySelf())
+ActionOverride("g-bb150",DestroySelf())
+Wait(1)
+//CreateCreature("g-bb207",[749.1782],0)
+//CreateCreatureObject("g-bb150","g-bb207",0,0,0)
+END
+
+IF
+Global("G-postwar","GLOBAL",0)
+GlobalGT("G-ulfbrandlady","GLOBAL",0)
+THEN
+	RESPONSE #100
+	SetGlobal("G-postwar","GLOBAL",1)
+ActionOverride("g-bb152",DestroySelf())	
+ActionOverride("g-bb153",DestroySelf())
+ActionOverride("g-bb154",DestroySelf())
+ActionOverride("g-bb155",DestroySelf())
+ActionOverride("g-bb182",DestroySelf())
+ActionOverride("g-bb183",DestroySelf())
+ActionOverride("g-bb184",DestroySelf())
+ActionOverride("g-bb185",DestroySelf())
+ActionOverride("g-bb186",DestroySelf())
+ActionOverride("g-bb187",DestroySelf())
+ActionOverride("g-bb156",DestroySelf())
+ActionOverride("g-bb150",DestroySelf())
+END
+
+IF
+Global("G-postwar","GLOBAL",0)
+GlobalGT("G-ulfbrandwonambush","GLOBAL",0)
+THEN
+	RESPONSE #100
+SetGlobal("G-postwar","GLOBAL",1)	
+ActionOverride("g-bb152",DestroySelf())	
+ActionOverride("g-bb153",DestroySelf())
+ActionOverride("g-bb154",DestroySelf())
+ActionOverride("g-bb155",DestroySelf())
+ActionOverride("g-bb182",DestroySelf())
+ActionOverride("g-bb183",DestroySelf())
+ActionOverride("g-bb184",DestroySelf())
+ActionOverride("g-bb185",DestroySelf())
+ActionOverride("g-bb186",DestroySelf())
+ActionOverride("g-bb187",DestroySelf())
+ActionOverride("g-bb156",DestroySelf())
+ActionOverride("g-bb150",DestroySelf())
+Wait(1)
+//CreateCreature("g-bb207",[749.1782],0)
+//CreateCreatureObject("g-bb150","g-bb207",0,0,0)
+
+END
+
+IF
+Global("G-postwar","GLOBAL",0)
+GlobalGT("G-ulfbrandlostambush","GLOBAL",0)
+THEN
+	RESPONSE #100
+	SetGlobal("G-postwar","GLOBAL",1)
+ActionOverride("g-bb152",DestroySelf())	
+ActionOverride("g-bb153",DestroySelf())
+ActionOverride("g-bb154",DestroySelf())
+ActionOverride("g-bb155",DestroySelf())
+ActionOverride("g-bb182",DestroySelf())
+ActionOverride("g-bb183",DestroySelf())
+ActionOverride("g-bb184",DestroySelf())
+ActionOverride("g-bb185",DestroySelf())
+ActionOverride("g-bb186",DestroySelf())
+ActionOverride("g-bb187",DestroySelf())
+ActionOverride("g-bb156",DestroySelf())
+ActionOverride("g-bb150",DestroySelf())
+END
+
+IF
+    PartyRested()
+THEN
+    RESPONSE #100
+    SetGlobal("G-CroneUsedToday","GLOBAL",0)
+	Continue()
+END
+
+IF
+Global("G-doomvsfatevsKEY","GLOBAL",0)
+Global("G-FatedMissionspawn","GLOBAL",0)
+THEN
+    RESPONSE #100
+	SetGlobal("G-FatedMissionspawn","GLOBAL",1)
+    CreateCreature("g-bb236",[1554.1177],14)
+	Continue()
+END

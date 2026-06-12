@@ -1,0 +1,78 @@
+@0=~W momencie, gdy dotykasz kamienia, wyczuwasz z tyłu głowy znajome mrowienie. Co chcesz zrobić?~
+@2=~Zacznij doznanie.~
+@3=~Odłóż kamień.~
+@5=~"Reputacja jest wszystkim."
+
+Ryk bełciarza z Ula do innego nieprzyjemnego trepa kroi wpół codzienny gwar sigilijskich slumsów. Ach, kolejna krwawo zapowiadająca się bójka - cały urok Ula, gdzie kosa w nerki stanowi uprzejmy sposób powitania.
+
+Dzisiaj jednak ignorujesz pospolitych oprychów, którzy wiedzą, że z tobą akurat nie ma co wymieniać takich uprzejmości. Znają twoją reputację i - co ważniejsze - twoje umiejętności. Ignorujesz pijanych skurli, smród Ula, krzywe chaty, karczmy, cudaczne stwory, ludność, zakrzywiony horyzont... W istocie ignorujesz samo Sigil. Koniec sielanki. Czas pokazać, na co cię stać.~
+@6=~W Sigil istnieje wiele frakcji, organizacji, gangów, grupek i innych skupisk, dla których liczy się tylko reputacja. Należysz do jednego z takich gangów, a dokładniej jesteś jego hersztem. Niekompetencja twych podwładnych - która na szczęście nie zdarza się często - zmusiła cię dziś do własnoręcznej interwencji, pofatygowania się w obstawie do ulubionej roboty.
+
+Nie zostałbyś przywódcą tej sfory psów, gdybyś nie rozumiał słów: "Chcesz coś zrobić dobrze? Zrób to sam". Mimo tego, mimo chorobliwej pewności siebie, od rana masz złe przeczucia. Może lata obcowania ze Sztuką wyostrzyły w tobie jakiś uśpiony u innych zmysł, a może to zwykła chwila słabości. W każdym razie czujesz, że będą problemy.~
+@7=~Wkraczasz do Dzielnicy Urzędników - zadbanej, "lepszej" części Sigil. Pełno tu okazji. Za małolata, tak dawno temu, że jakby w innym życiu, uwielbiałeś okradać tych wypachnionych gogusiów. Życie się zmieniło i choć rozkosz rozboju pozostała, to jednak dzieciakowi było jakoś lżej. Tobie nie przystoi już beztroskie kieszonkostwo. Zresztą za dużo ślepi łypie na ciebie z cienia.
+
+Jest. Dom doktora Konrdina. Słyszałeś od swoich ludzi opisy jego wnętrza. Przepych, rozpasanie i zero współczucia dla mniej zamożnej miernoty. Dawno temu miałeś wielu kumpli, którzy za misję życia uważali grabienie podobnych zabogaconych indywiduów - takich, co bez skrupułów i z czarem w oku wyzyskiwali, kogo się dało. Okradanie ich miało podobno przynosić większy zaszczyt, ale ciebie nigdy szczególnie nie obchodziło, kim były twoje ofiary.
+
+Otwierają. Pan doktor czeka na ciebie. Chłopaki zostają na zewnątrz.~
+@8=~Luksus na pokaz w całym majestacie. Od obrazów, przez meble, na skurlonych kotach kończąc.
+"Ach, proszę usiąść, szanowny panie..." Zaczyna doktorek, gdy wkraczasz do jego legowiska. Szanowny pan - no, to mamy to. Zaczyna się złośliwym sarkazmem z ukrytą nutką kpiny.~
+@10=~Cholerny trep. Nie dajesz mu skończyć. "Darujmy sobie takie uprzejmości. Gdzie brzdęk?"~
+@11=~Przerwij doznanie i odłóż kamień.~
+@13=~Zmiana zachowania doktora Konrdina - choć oczekiwana - zaskakuje cię, ponieważ spodziewałeś się czegoś innego. Doktor robi ordynarną minę, która następnie zmienia się w coś, co widuje się u uduchowionych kapłanów, gdy zaczynają głosić puentę swej mszy. Rzekłoby się: akt ostatniego, uświęconego obrządku. Wstaje zza swego biurka i zaczyna chodzić z tym wyrazem twarzy wzdłuż gablotki z jakimiś staroświeckimi mieczami i nożami.~
+@14=~"Czy wie pan może..." Obraca się do ciebie. "Czym się *zajmuję*?"~
+@16=~"Na moce, śpiewasz mi, że jesteś uzdrowicielem w świrowni? Wiem o tym. Wiem o tobie dużo więcej, doktorku."~
+@17=~Przerwij doznanie i odłóż kamień.~
+@19=~"Tak, tak. Widzi pan, ja naprawdę wielu osobom pomogłem. I zmuszony jestem pomóc i panu."~
+@21=~"Mnie? Mam jeszcze resztkę cierpliwości, ale zaraz pomoc potrzebna będzie tobie. Płacisz albo zdychasz."~
+@22=~Przerwij doznanie i odłóż kamień.~
+@24=~Konrdin unosi pojednawczo dłonie. "Spokojnie. Gotów jestem zapłacić dziesięciokrotność drugiej, nazwijmy to... raty. Ale niezbędna będzie panu pomoc. Pan jest ciekawym... człowiekiem." Konrdin wysuwa język, wskazując palcem na jego koniec. "Wielu, wielu różnych z pańskiego otoczenia przewinęło się przez tę moją, jak pan to nazwał, świrownię. Nieinteresujące, pospolite, często odrażające istoty. Ale pan ma głębsze refleksje."~
+@26=~Masz coraz głębsze wrażenie, że coś tu śmierdzi, ale chciwość wygrywa. "Dziesięciokrotność, powiadasz? I jaka to niby pomoc...?"~
+@27=~Przerwij doznanie i odłóż kamień.~
+@29=~"Oczywiście. Już tłumaczę. Zanim to jednak uczynię, muszę przyznać, że nie byłem z panem do końca szczery. Chciałbym pana wynająć do wyeliminowania kogoś, przez kogo kilku wcześniej wynajętych przeze mnie ludzi straciło życie. Ci zaś, którzy wykrwawiali się na moich oczach, mówili o nim 'niepokonany'."~
+@31=~"Słyszałem historie o takich niby niepokonanych. Każdego trepa da się zabić. Chyba że jest nieśmiertelny, he, he."~
+@32=~Przerwij doznanie i odłóż kamień.~
+@34=~"Tak, tak." Doktor robi głupią minę. Komuś innemu mogłoby to umknąć, ale ty dostrzegasz jednak nagłą nerwowość.~
+@36=~"Zazwyczaj nie pytam o takie sprawy, ale kim jest ten skurl? Czym zasłużył sobie na taką nagonkę?"~
+@37=~Przerwij doznanie i odłóż kamień.~
+@39=~"Kilka tygodni temu był moim pacjentem. Uciekł z przytułku... i w swej paranoi ubzdurał sobie, że, proszę sobie to wyobrazić..." Konrdin ścisza głos. "Jestem w zmowie z Panią."~
+@41=~"Że niby jak?"~
+@42=~Przerwij doznanie i odłóż kamień.~
+@44=~"Z Panią Bólu. Tłumaczę, że ten pacjent z ostrymi urojeniami paranoidalnymi jest ekstremalnie zaburzony i niebezpieczny."~
+@46=~"I tak po prostu mordujesz każdego chorego, który grozi ci śmiercią?"~
+@47=~Przerwij doznanie i odłóż kamień.~
+@49=~"Szanowny panie, oczywiście, że nie. Gdyby tak było, musiałbym usunąć przynajmniej połowę moich podopiecznych. Dość powiedzieć, że mam uzasadnione obawy o swoje bezpieczeństwo. Były już trzy próby. Oto, co ostatnio znalazłem pod drzwiami."
+Doktor podaje ci naderwaną kartkę pożółkłego pergaminu.~
+@50=~Czytasz: "Teraz już wiem, GDZIE mieszkasz, ZŁODZIEJU. Szykuj się!"~
+@52=~"O, dość sugestywne. Ale dlaczego 'złodzieju'?"~
+@53=~Przerwij doznanie i odłóż kamień.~
+@55=~"Ach, to jakieś urojenia." Konrdin odwraca wzrok. "Ale proszę o powagę. W sumie usunął już trzynaście osób spośród moich zaufanych ludzi i siedem z pańskiego otoczenia."~
+@57=~"Dwadzieścia osób?"~
+@58=~Przerwij doznanie i odłóż kamień.~
+@60=~"Niepokonany."~
+@62=~"A co z tą pomocą?"~
+@63=~Przerwij doznanie i odłóż kamień.~
+@65=~"Wynająłem kilku chybkich siepaczy. Będą tu lada moment."~
+@66=~Do gabinetu Konrdina wpada jeden z twoich chłopców z obstawy. "Szefie, coś dzieje się na ulicy, jakaś rzeźnia."
+ ~ [FAL_03C]
+@68=~"Jaka rzeźnia?" Pytasz, ale odpowiedź wkrótce przychodzi sama.~
+@69=~Przerwij doznanie i odłóż kamień.~
+@71=~Ktoś z rumorem wpada do domu doktora Konrdina. Kilka jęków i łomot upadających ciał. W progu pomieszczenia staje nieznany osobnik - potężny mężczyzna w okrwawionym płaszczu. Nie jesteś pewien czy to jego krew. W rękach trzyma dwa krzywe, długie noże. Odkryte, pełne blizn przedramiona, opadają na boki wzdłuż jego sylwetki. Nagle podnosi rękę, wskazuje palcem na doktora i odzywa się dudniącym głosem: 
+
+"Psie, ZŁODZIEJU! Gdzie jest mój DZIENNIK!?" ~ [FAL_06]
+@72=~Rozbiegane, przekrwione oczy przenoszą się z doktora na ciebie.
+
+"To on! Ratunku!" Wyje szacowny Konrdin, skacząc w kąt gabinetu.~
+@74=~Rzuć czar ochronny na lekarza.~
+@75=~Rzuć czar ochronny na siebie.~
+@76=~Rzuć czar ofensywny na napastnika.~
+@77=~Przerwij doznanie i odłóż kamień.~
+@79=~Składasz dłonie do czaru, lecz nagle pomieszczenie rozbłyskuje niebieskim światłem. Upadasz twarzą do ziemi. Zdążasz tylko zauważyć, jak doktor i potężny mężczyzna znikają w łunie portalu. ~ [AR_PORT]
+@81=~Wybiegnij z tego przeklętego domu.~
+@82=~Przerwij doznanie i odłóż kamień.~
+@84=~W holu, na schodach, na ulicy - wszędzie leżą trupy i migoczą kałuże krwi. Mocząc w nich buty, wiejesz, ile sił w nogach. A tamci dwaj? Reputacja przestała mieć znaczenie. Wiesz, co ich spotkało: wpadli w Labirynty Pani. Szacunek do Sigil powraca. Masz tylko cichą nadzieję, że tobie darowała życie. Znowu nie wiesz dlaczego - może to nowy, lepszy zmysł albo strach - ale jesteś pewien, że to nieprawda.~
+@85=~Po paru metrach z zaułka przed tobą wylewa się niebieskie światło. Dzieje się to dokładnie w momencie, gdy zaczynasz wierzyć, że może jednak się uratujesz.~
+@86=~Za małolata lubiłeś to miejsce - dobre łupy, dobra zabawa... Trzymając się dobrych wspomnień, ostatni raz zerkasz na Sigil i przepadasz.
+
+Zostaje po tobie tylko cicha śpiewka i *pamiętna reputacja* na ustach upojonych bywalców sigilijskich bełciarni.~
+@88=~Przerwij doznanie i odłóż kamień.~
+@89=~Przerwij doznanie i odłóż kamień.~

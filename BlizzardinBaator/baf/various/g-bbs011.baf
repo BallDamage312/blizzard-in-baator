@@ -1,0 +1,21 @@
+// portal to rat god temple
+
+IF
+    HarmlessEntered("Nordom")
+THEN
+    RESPONSE #100
+        VerbalConstant("Nordom",NORDOM_PORTAL)
+        Continue()
+END
+
+IF
+	HarmlessEntered([PC])
+	PartyHasItem("g-bbi042")
+	//Global("G-To_Rat_God_Temple_Portal_Open","arg-02",0)
+THEN
+	RESPONSE #100
+		SetPortalCursor("G-TOE2",PORTAL_CURSOR_VISIBLE,TRUE)
+        SetPortalCursor("G-TOE2",PORTAL_ENABLED,TRUE)
+		//SetGlobal("G-To_Rat_God_Temple_Portal_Open","arg-02",1)
+END
+

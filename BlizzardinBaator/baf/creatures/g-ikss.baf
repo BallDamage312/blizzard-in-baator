@@ -1,0 +1,27 @@
+// Ikss'odes
+
+
+IF
+	Die()
+THEN
+    RESPONSE #100
+	SetGlobal("G-ikssodes_dead","GLOBAL",1)		
+	Continue()
+END
+
+
+IF
+    AttackedBy([ANYONE],DEFAULT)
+THEN
+    RESPONSE #100
+        Enemy()
+        Attack(NearestEnemyOf(Myself))
+   END
+
+IF
+	Die()
+THEN
+    RESPONSE #100
+	SetGlobal("G-ikssodes_dead","GLOBAL",1)		
+	Continue()
+END

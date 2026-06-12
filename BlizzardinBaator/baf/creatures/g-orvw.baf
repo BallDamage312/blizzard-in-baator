@@ -1,0 +1,30 @@
+// Random, when attacked 
+
+IF
+    AttackedBy([ANYONE],DEFAULT)
+	Global("G-ratalarm","GLOBAL",1)
+THEN
+    RESPONSE #100
+        Enemy()
+         RunningAttack(NearestEnemyOf(Myself))
+		 Help()
+   END
+
+IF
+    Help([ANYONE])
+    Team(LastTrigger,G-ORVILLE)
+THEN
+    RESPONSE #100
+        Enemy()
+		 RunningAttack(NearestEnemyOf(Myself))
+		 SetGlobal("G-ratalarm","GLOBAL",1)
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        Help()
+		SetGlobal("G-ratalarm","GLOBAL",1)
+        RunningAttack(NearestEnemyOf(Myself))
+END

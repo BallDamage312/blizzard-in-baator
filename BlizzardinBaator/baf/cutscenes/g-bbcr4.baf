@@ -1,0 +1,13 @@
+// cutsene bard ribcage 4
+
+IF
+    True()
+THEN
+    RESPONSE #100
+    CutSceneId(Player1)
+    RestorePartyLocations()
+	EnableFogDither() 
+	EnableSpriteDither()
+    EndCutSceneMode()
+	FadeFromColor([30.0],0)
+END

@@ -1,0 +1,52 @@
+// Holler Hive
+
+IF
+    Global("G-BBHoller_Hive","GLOBAL",0)
+	GlobalGT("G-BBMain","GLOBAL",3)
+THEN
+    RESPONSE #100
+        CreateCreature("g-bb009",[2320.1820],NE)
+        SetGlobal("G-BBHoller_Hive","GLOBAL",1)
+END
+
+IF
+    Died("g-bb009")
+	Global("G-BBSholler_DiedX","GLOBAL",0)
+THEN
+    RESPONSE #100
+		RealSetGlobalTimer("G-BBSholler_Died","GLOBAL",180) // mortal was killed
+		SetGlobal("G-BBSholler_DiedX","GLOBAL",1)
+END
+
+IF
+    GlobalTimerExpired("G-BBSholler_Died","GLOBAL")
+	Global("G-BBSholler_DiedX","GLOBAL",1)
+THEN
+    RESPONSE #100
+		SetGlobal("G-BBSholler_DiedX","GLOBAL",0)
+		CreateCreature("g-bb009",[2320.1820],NE) // new mortal was spawned
+		Continue()
+END
+
+IF
+    True()
+THEN
+    RESPONSE #100
+        SetWorldmap("worldmap")
+	Continue()
+END
+
+// Fake MRT dialogue
+
+IF
+    Global("G-bbmain","GLOBAL",2) // occasion
+	InParty("Morte")
+	!StateCheck("Morte",CD_STATE_NOTVALID)
+	Global("G-fakemrtdial001triggered","GLOBAL",0) // one time trigger
+THEN
+    RESPONSE #100
+    SetGlobal("G-fakemrtdial001triggered","GLOBAL",1) // one time trigger
+	SetGlobal("g-fakemrtdialogue","GLOBAL",1) // fake dialog selection
+	CreateCreatureObject("g-bbMRT",Player1,0,0,0) // fake MRT creation
+	ActionOverride("g-bbMRT",StartDialog("g-bbdMRT",Player1)) // Fake MRT dialogue initiation
+END

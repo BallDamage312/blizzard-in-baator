@@ -1,0 +1,89 @@
+// Mad Wizard - pipe master
+
+IF
+	Global("G-madwizardagro","GLOBAL",1)
+	See(NearestEnemyOf(Myself))
+THEN
+	RESPONSE #100
+		ReallyForceSpell(Myself,WIZARD_BLUR)  // SPWI216.SPL (Rozmycie)
+		SetGlobal("G-madwizardagro","GLOBAL",2)
+END
+
+IF
+	Global("G-madwizardagro","GLOBAL",2)
+	See(NearestEnemyOf(Myself))
+THEN
+	RESPONSE #100
+		ReallyForceSpell(Myself,WIZARD_ANTIMAGIC_SHELL)  // SPWI601.SPL (Powłoka antymagii)
+		SetGlobal("G-madwizardagro","GLOBAL",3)
+		Wait(4)
+END
+
+IF
+	Global("G-madwizardagro","GLOBAL",3)
+	See(NearestEnemyOf(Myself))
+THEN
+	RESPONSE #100
+		ReallyForceSpellRES("g-bb668",FarthestEnemyOf(Myself))  // Ognista kula
+		Wait(4)
+		IncrementGlobal("G-madwizardagro","GLOBAL",1)
+END
+
+IF
+	Global("G-madwizardagro","GLOBAL",4)
+	See(NearestEnemyOf(Myself))
+THEN
+	RESPONSE #100
+		ReallyForceSpell(NearestEnemyOf(Myself),WIZARD_CONE_OF_COLD)  // SPWI502.SPL (Stożek zimna)
+		Wait(4)
+		IncrementGlobal("G-madwizardagro","GLOBAL",1)
+END
+
+IF
+	Global("G-madwizardagro","GLOBAL",5)
+	See(NearestEnemyOf(Myself))
+THEN
+	RESPONSE #100
+		PlaySound("AM_VORTX")
+		StickySinisterPoof("EF01TPRT",Myself,1)
+		JumpToObject(FarthestEnemyOf(Myself))
+		StickySinisterPoof("EF01TPRT",Myself,1)
+		Wait(4)
+		SetGlobal("G-madwizardagro","GLOBAL",6)
+END
+
+IF
+	Global("G-madwizardagro","GLOBAL",6)
+	See(NearestEnemyOf(Myself))
+THEN
+	RESPONSE #33
+		ReallyForceSpell(NearestEnemyOf(Myself),CLERIC_SPIRITUAL_HAMMER)  // SPPR204.SPL (Młot duchowy)
+		Wait(7)
+		SetGlobal("G-madwizardagro","LOCALS",8)
+	RESPONSE #33
+		ReallyForceSpell(NearestEnemyOf(Myself),WIZARD_MAGIC_MISSILE)  // SPWI107.SPL (Magiczny pocisk)
+		Wait(1)
+		ReallyForceSpell(NearestEnemyOf(Myself),WIZARD_MAGIC_MISSILE)  // SPWI107.SPL (Magiczny pocisk)
+		Wait(2)
+		ReallyForceSpell(NearestEnemyOf(Myself),WIZARD_MAGIC_MISSILE)  // SPWI107.SPL (Magiczny pocisk)
+		Wait(2)
+		SetGlobal("G-madwizardagro","GLOBAL",8)
+	RESPONSE #33
+		ReallyForceSpell(NearestEnemyOf(Myself),WIZARD_PAIN_MIRROR)  // SPWI209.SPL (Zwierciadło bólu)
+		Wait(7)
+		SetGlobal("G-madwizardagro","GLOBAL",8)
+END
+
+IF
+	Global("G-madwizardagro","GLOBAL",8)
+	See(NearestEnemyOf(Myself))
+THEN
+	RESPONSE #100
+		StickySinisterPoof("EF01TPRT",Myself,1)
+		JumpToObject([PC])
+		StickySinisterPoof("EF01TPRT",Myself,1)
+		ReallyForceSpell(NearestEnemyOf(Myself),CLERIC_CURE_SERIOUS_WOUNDS)  // SPPR401.SPL (Leczenie poważnych ran)
+		SetGlobal("G-madwizardagro","GLOBAL",3)
+END
+
+	

@@ -1,0 +1,88 @@
+// cut black joseph, we leave with prod
+
+IF
+    True()
+THEN
+    RESPONSE #100
+        CutSceneId(Player1)
+        StartCutSceneMode()
+        MoveViewPoint([1210.3490],VERY_FAST)
+        MoveToPointNoInterrupt([1210.3490])
+        Wait(3)  
+END
+
+IF
+    True()
+THEN
+    RESPONSE #100
+        CutSceneId("Morte")  // Morte - Mówiąca czaszka
+        MoveToPointNoInterrupt([1210.3490])
+        Wait(3)
+END
+
+IF
+    True()
+THEN
+    RESPONSE #100
+        CutSceneId("Dakkon")  // Dak'kon - Githzerai
+        MoveToPointNoInterrupt([1210.3490])
+        Wait(3)
+END
+
+IF
+    True()
+THEN
+    RESPONSE #100
+        CutSceneId("Annah")  // Anna - Diabelstwo
+        MoveToPointNoInterrupt([1210.3490])
+        Wait(3)
+END
+
+IF
+    True()
+THEN
+    RESPONSE #100
+        CutSceneId("Grace")  // Nie-Sława - Sukkub
+        MoveToPointNoInterrupt([1210.3490])
+        Wait(3)
+END
+
+IF
+    True()
+THEN
+    RESPONSE #100
+        CutSceneId("Ignus")  // Ignus - Pod Gorejącym Człekiem
+        MoveToPointNoInterrupt([1210.3490])
+        Wait(3)
+END
+
+IF
+    True()
+THEN
+    RESPONSE #100
+        CutSceneId("Nordom")  // Nordom - Modron
+        MoveToPointNoInterrupt([1210.3490])
+        Wait(3)
+END
+
+IF
+    True()
+THEN
+    RESPONSE #100
+        CutSceneId("Vhail")  // Vhailor - Zbroja Łaskobójcy
+        MoveToPointNoInterrupt([1210.3490])
+        Wait(3)
+END
+
+IF
+    True()
+THEN
+    RESPONSE #100
+        CutSceneId("g-bb006") 
+        MoveToPointNoInterrupt([1210.3490])
+        Wait(3)
+        EndCutSceneMode()
+        SmallWait(2)
+        ActionOverride("G-bb006",StartDialogueNoSet("G-bbd006"))
+END
+

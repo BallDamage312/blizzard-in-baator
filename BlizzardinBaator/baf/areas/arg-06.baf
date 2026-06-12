@@ -1,0 +1,64 @@
+IF
+    Global("G-Szczurwidolek","GLOBAL",0)
+THEN
+    RESPONSE #100
+        SetDoorLocked("G-door1",TRUE)
+		//OpenDoor("G-door1")		
+        TriggerActivation("G-doorinfo",TRUE)
+		TriggerActivation("G-doortalk",FALSE)
+		TriggerActivation("G-To01",FALSE)
+		TriggerActivation("G-Toe5",FALSE)
+		SetGlobal("G-Szczurwidolek","GLOBAL",1)
+END
+
+IF
+    Global("G-Szczurwidolek","GLOBAL",2)
+THEN
+    RESPONSE #100
+        SetDoorLocked("G-door1",TRUE)
+		//OpenDoor("G-door1")		
+        TriggerActivation("G-doorinfo",FALSE)
+		TriggerActivation("G-doortalk",TRUE)
+		TriggerActivation("G-To01",FALSE)
+		TriggerActivation("G-Toe5",FALSE)
+		SetGlobal("G-Szczurwidolek","GLOBAL",3)
+END
+
+IF
+    Global("G-Szczurwidolek","GLOBAL",4)
+THEN
+    RESPONSE #100
+        SetDoorLocked("G-door1",FALSE)
+		OpenDoor("G-door1")		
+        TriggerActivation("G-doorinfo",FALSE)
+		TriggerActivation("G-doortalk",FALSE)
+		TriggerActivation("G-To01",TRUE)
+		TriggerActivation("G-Toe5",FALSE)
+		SetGlobal("G-Szczurwidolek","GLOBAL",5)
+END
+
+IF
+    Global("G-Szczurwidolek","GLOBAL",6)
+THEN
+    RESPONSE #100
+        SetDoorLocked("G-door1",FALSE)
+		OpenDoor("G-door1")		
+        TriggerActivation("G-doorinfo",FALSE)
+		TriggerActivation("G-doortalk",FALSE)
+		TriggerActivation("G-To01",FALSE)
+		TriggerActivation("G-Toe5",TRUE)
+		SetGlobal("G-Szczurwidolek","GLOBAL",7)
+END
+
+IF
+    //Global("G-bbmain","GLOBAL",2) // occasion
+	InParty("Vhail")
+	!StateCheck("Vhail",CD_STATE_NOTVALID)
+	Global("G-fakevhadial001triggered","GLOBAL",0) // one time trigger
+THEN
+    RESPONSE #100
+    SetGlobal("G-fakevhadial001triggered","GLOBAL",1) // one time trigger
+	SetGlobal("g-fakevhadialogue","GLOBAL",1) // fake dialog selection
+	CreateCreatureObject("g-bbvha",Player1,0,0,0) // fake vha creation
+	ActionOverride("g-bbvha",StartDialog("g-bbdvha",Player1)) // Fakevha dialogue initiation
+END

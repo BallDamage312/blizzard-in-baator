@@ -1,0 +1,7 @@
+IF
+    True()
+THEN
+    RESPONSE #100
+        SetWorldmap("G-DITCH")
+		Continue()
+END

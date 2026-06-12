@@ -1,0 +1,115 @@
+// Random, when attacked 
+
+IF
+
+HPPercentLT(Myself,40)
+AreaCheck("arg-10")
+Global("G-akerplead","GLOBAL",0)
+
+THEN
+    RESPONSE #100
+		SetGlobal("G-akerplead","GLOBAL",1)
+        ActionOverride("g-bb007",StartDialogNoSet(Player1))
+END
+
+IF
+    AttackedBy([ANYONE],DEFAULT)
+	Global("G-akermove","GLOBAL",0)
+	AreaCheck("arg-01")
+THEN
+    RESPONSE #100
+		PlaySound("AM_VORTX")
+        SinisterPoof("EF01TPRT",[803.3159],1)
+        DestroySelf()
+   END
+   
+IF
+    Global("G-Bard_Ambush_Fight","Global",1)  
+	AreaCheck("arg-10")
+	Global("G-akerplead","GLOBAL",0)
+THEN
+    RESPONSE #15
+		PlaySound("AM_VORTX")
+		StickySinisterPoof("EF01TPRT",Myself,1)
+        JumpToPoint([3710.1205])
+		StickySinisterPoof("EF01TPRT",Myself,1)
+		ForceSpell(NearestEnemyOf(Myself),WIZARD_MAGIC_MISSILE)
+		Wait(4)
+	RESPONSE #15
+		PlaySound("AM_VORTX")
+        StickySinisterPoof("EF01TPRT",Myself,1)
+        JumpToPoint([4111.1016])
+		StickySinisterPoof("EF01TPRT",Myself,1)
+		ForceSpell(Protagonist,WIZARD_HORROR)
+		Wait(4)
+	RESPONSE #15
+		PlaySound("AM_VORTX")
+        StickySinisterPoof("EF01TPRT",Myself,1)
+        JumpToPoint([4600.1526])
+		StickySinisterPoof("EF01TPRT",Myself,1)
+		ForceSpell(NearestEnemyOf(Myself),WIZARD_INFERNAL_ORB)
+		Wait(4)
+	RESPONSE #15
+		PlaySound("AM_VORTX")
+        StickySinisterPoof("EF01TPRT",Myself,1)
+        JumpToPoint([4183.1499])
+		StickySinisterPoof("EF01TPRT",Myself,1)
+	RESPONSE #40
+	    ForceSpell(Myself,CLERIC_CURE_MODERATE_WOUNDS)
+		Wait(4)
+END 
+ 
+IF
+
+HPPercentLT(Myself,40)
+AreaCheck("arg-10")
+Global("G-akerplead","GLOBAL",0)
+
+THEN
+    RESPONSE #100
+		SetGlobal("G-akerplead","GLOBAL",1)
+        ActionOverride("g-bb007",StartDialogNoSet(Player1))
+END
+ 
+   
+IF
+    Global("G-akermove","GLOBAL",0)
+	!ActuallyInCombat()
+	AreaCheck("arg-01")
+THEN
+    RESPONSE #100
+		ReturnToSavedPlace()
+		SetAnimState(Myself,ANIM_MISC2)
+        FloatMessage(Myself,@100191) 
+        WaitRandom(10,14)
+        Continue()
+	RESPONSE #100
+        ReturnToSavedPlace()
+        SetAnimState(Myself,ANIM_MISC2)
+        FloatMessage(Myself,@100192) 
+		WaitRandom(10,14)
+        Continue()
+	RESPONSE #100
+        ReturnToSavedPlace()
+        SetAnimState(Myself,ANIM_MISC2)
+        FloatMessage(Myself,@100194)
+		WaitRandom(10,14)
+        Continue()
+	RESPONSE #100
+        ReturnToSavedPlace()
+        SetAnimState(Myself,ANIM_MISC2)
+        FloatMessage(Myself,@100193)
+		WaitRandom(10,14)
+        Continue()
+END
+
+IF
+
+Global("G-akermove","GLOBAL",1)
+AreaCheck("arg-01")
+
+THEN
+    RESPONSE #100
+        SetGlobal("G-akermove","GLOBAL",2)
+        DestroySelf()
+END

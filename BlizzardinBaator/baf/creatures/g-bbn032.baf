@@ -1,0 +1,39 @@
+// UVB Forward
+
+IF
+    OnCreation()
+THEN
+    RESPONSE #100
+		FaceObject([PC])
+        Attack([PC])
+        Continue()
+END
+
+IF
+    See([PC])
+THEN
+    RESPONSE #100
+		Help()
+		FloatMessage(Myself,@100014)
+    	Attack(NearestEnemyOf(Myself))
+END
+
+IF
+    AttackedBy([ANYONE],DEFAULT)
+THEN
+    RESPONSE #100
+		FaceObject([ANYONE])
+		Enemy()
+		Help()
+		FloatMessage(Myself,@100014)
+		Attack(NearestEnemyOf(Myself))
+END
+
+IF
+    Help([0.0.0.0.G-YSGARD_1])
+THEN
+    RESPONSE #100
+        Enemy()
+		FloatMessage(Myself,@100015)
+		Attack(LastAttackerOf(LastHelp))
+END

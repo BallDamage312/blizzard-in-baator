@@ -1,0 +1,75 @@
+// Hive dwellers (2) miner
+
+IF
+    OnCreation()
+THEN
+    RESPONSE #100
+        ChangeSpecifics(Myself,%G-DITCH_DWELLER%)
+END
+
+
+IF
+    See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        RunAwayFrom(NearestEnemyOf(Myself),170)
+END
+
+IF
+    HPPercentLT(Myself,50)
+    Allegiance(Myself,ENEMY)
+THEN
+    RESPONSE #100
+        EscapeArea()
+END
+
+IF
+    AttackedBy([PC],DEFAULT)
+THEN
+    RESPONSE #100
+        Enemy()
+        RunAwayFrom(NearestEnemyOf(Myself),170)
+END
+
+IF
+    !ActuallyInCombat()
+THEN
+    RESPONSE #20
+		ReturnToSavedPlace()
+		PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100242) 
+        WaitRandom(4,12)
+        Continue()
+	RESPONSE #20
+		ReturnToSavedPlace()
+		PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100243) 
+        WaitRandom(4,12)
+        Continue()
+	RESPONSE #20
+		ReturnToSavedPlace()
+		PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100244) 
+        WaitRandom(4,13)
+        Continue()
+	RESPONSE #20
+		ReturnToSavedPlace()
+		PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100245) 
+        WaitRandom(4,12)
+        Continue()
+	RESPONSE #20
+		ReturnToSavedPlace()
+		PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100246) 
+        WaitRandom(5,10)
+        Continue()
+
+END
+
+IF
+   Global("g-kid","GLOBAL",1)
+THEN
+    RESPONSE #100
+         EscapeArea()
+END

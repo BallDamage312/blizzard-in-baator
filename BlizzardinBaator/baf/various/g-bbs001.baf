@@ -1,0 +1,10 @@
+// Random, when attacked 
+
+IF
+    AttackedBy([ANYONE],DEFAULT)
+THEN
+    RESPONSE #100
+        Enemy()
+        Attack(NearestEnemyOf(Myself))
+   END
+

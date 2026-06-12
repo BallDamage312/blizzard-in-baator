@@ -1,0 +1,54 @@
+
+IF
+	Global("G-theaterraided","GLOBAL",2)
+	HPPercentLT("g-bb201",1)
+
+THEN
+	RESPONSE #100
+		Kill("g-bb0201")
+		SetGlobal("G-theaterraided","GLOBAL",3)
+		SetGlobal("G-ulfbrandlostraid","GLOBAL",1)
+		ActionOverride("G-bb017",StartDialogueNoSet("G-bbd017")) // variables 19 or 20 - depending on former heist
+
+		Continue()
+END
+
+
+
+IF
+	Global("g-raidallegiances","GLOBAL",1)
+THEN
+	RESPONSE #100
+		Attack("g-bb017")    
+END
+
+IF
+	Global("g-raidallegiances","GLOBAL",2)
+THEN
+	RESPONSE #100
+		Attack("g-bb017")
+END
+		
+IF
+	Global("g-raidallegiances","GLOBAL",3)
+THEN
+	RESPONSE #100
+		Enemy()
+		Attack(NearestEnemyOf(Myself))
+END 
+	
+	
+IF
+		Global("g-raidallegiances","GLOBAL",4)
+THEN
+	RESPONSE #100
+		Enemy()
+		Attack(NearestEnemyOf(Myself))
+END
+		
+IF
+	Global("g-trapvictoryloop","GLOBAL",3)
+THEN
+	RESPONSE #100
+		Attack(NearestEnemyOf(Myself))  
+END

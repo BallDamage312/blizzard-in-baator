@@ -1,0 +1,23 @@
+//cutscene with mage murder
+
+IF
+	Global("G-magemurdercutscene","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("G-magemurdercutscene","GLOBAL",1)
+		StartCutSceneMode()
+        CutSceneId("g-bb102")
+		Wait(4)
+		PlaySound("ABYSS05")
+		ActionOverride("g-bb102",JumpToObject("g-bb246"))
+		ActionOverride("g-bb102",StickySinisterPoof("S213HRHD",Myself,1))
+		Wait(2)
+		ActionOverride("g-bb102",FaceObject("g-bb246"))
+		ActionOverride("g-bb102",PlaySequence(ANIM_ATTACK))
+		ActionOverride("g-bb246",Kill(Myself))
+		PlaySound("MALEUD01")
+		AddexperienceParty(15000)
+		Wait(4)
+		SetGlobal("G-madwizardtrap","GLOBAL",2)
+		EndCutSceneMode()
+END

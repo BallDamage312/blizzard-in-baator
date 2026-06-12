@@ -1,0 +1,68 @@
+// Hidden Ditch dweller 
+
+IF
+    OnCreation()
+THEN
+    RESPONSE #100
+        ChangeSpecifics(Myself,%G-DITCH_DWELLER%)
+END
+
+
+IF
+    See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        RunAwayFrom(NearestEnemyOf(Myself),170)
+END
+
+IF
+    HPPercentLT(Myself,50)
+    Allegiance(Myself,ENEMY)
+THEN
+    RESPONSE #100
+        EscapeArea()
+END
+
+IF
+    AttackedBy([PC],DEFAULT)
+THEN
+    RESPONSE #100
+        Enemy()
+        RunAwayFrom(NearestEnemyOf(Myself),170)
+END
+
+IF
+    True()
+THEN
+    RESPONSE #100
+        Face(W)
+        PlaySequence(ANIM_TALK)
+        WaitRandom(3,5)
+        Face(NW)
+        PlaySequence(ANIM_TALK)
+        WaitRandom(3,5)
+END
+
+IF
+    True()
+	!ActuallyInCombat()
+THEN
+    RESPONSE #100
+		ReturnToSavedPlace()
+		PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100123) 
+        WaitRandom(10,10)
+        Continue()
+	RESPONSE #100
+        ReturnToSavedPlace()
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100124) 
+		WaitRandom(10,10)
+        Continue()
+	RESPONSE #100
+        ReturnToSavedPlace()
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100125)
+		WaitRandom(10,10)
+        Continue()
+END

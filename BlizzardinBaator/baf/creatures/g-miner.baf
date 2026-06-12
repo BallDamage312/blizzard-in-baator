@@ -1,0 +1,48 @@
+// Hive dwellers (2) miner
+
+IF
+    OnCreation()
+THEN
+    RESPONSE #100
+        ChangeSpecifics(Myself,%G-DITCH_DWELLER%)
+END
+
+
+IF
+    See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        RunAwayFrom(NearestEnemyOf(Myself),170)
+END
+
+IF
+    HPPercentLT(Myself,50)
+    Allegiance(Myself,ENEMY)
+THEN
+    RESPONSE #100
+        EscapeArea()
+END
+
+IF
+    AttackedBy([PC],DEFAULT)
+THEN
+    RESPONSE #100
+        Enemy()
+        RunAwayFrom(NearestEnemyOf(Myself),170)
+END
+
+IF
+    True()
+THEN
+    RESPONSE #100
+        Face(N)
+        PlaySequence(ANIM_ATTACK)
+        WaitRandom(3,5)
+        Face(NW)
+        PlaySequence(ANIM_ATTACK)
+        WaitRandom(3,5)
+		Face(NE)
+        PlaySequence(ANIM_ATTACK)
+        WaitRandom(3,5)
+END
+

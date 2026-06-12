@@ -1,0 +1,69 @@
+// Random, when attacked 
+
+IF
+	Global("G-adreaninidia","GLOBAL",0)
+	See(Protagonist)
+THEN
+    RESPONSE #100
+		SetGlobal("G-adreaninidia","GLOBAL",1)
+		StartDialogNoSet(Player1)
+		Continue()
+END
+
+
+
+IF
+    AttackedBy([ANYONE],DEFAULT)
+THEN
+    RESPONSE #100
+        Enemy()
+        Attack(NearestEnemyOf(Myself))
+   END
+
+IF
+    True()
+	!ActuallyInCombat()
+THEN
+    RESPONSE #100
+		ReturnToSavedPlace()
+		PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100055) 
+        WaitRandom(5,10)
+        Continue()
+	RESPONSE #100
+        ReturnToSavedPlace()
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100056) 
+		WaitRandom(10,10)
+        Continue()
+	RESPONSE #100
+        ReturnToSavedPlace()
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100057)
+		WaitRandom(10,10)
+        Continue()
+		    RESPONSE #100
+		ReturnToSavedPlace()
+		PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100058) 
+        WaitRandom(5,10)
+        Continue()
+	RESPONSE #100
+        ReturnToSavedPlace()
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100059) 
+		WaitRandom(10,10)
+        Continue()
+	RESPONSE #100
+        ReturnToSavedPlace()
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100060)
+		WaitRandom(10,10)
+        Continue()
+		RESPONSE #100
+        ReturnToSavedPlace()
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100061)
+		WaitRandom(10,10)
+        Continue()
+END

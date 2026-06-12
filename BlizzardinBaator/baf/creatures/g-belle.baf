@@ -1,0 +1,151 @@
+// Random, when attacked 
+
+IF
+    !ActuallyInCombat()
+	AreaCheck("arg-02")
+THEN
+    RESPONSE #100
+		FloatMessage(Myself,@100212) 
+        WaitRandom(10,14)
+        Continue()
+	RESPONSE #100
+        FloatMessage(Myself,@100213) 
+		WaitRandom(10,14)
+        Continue()
+	RESPONSE #100
+        WaitRandom(10,14)
+        Continue()
+	RESPONSE #100
+        WaitRandom(10,14)
+        Continue()
+END
+
+// Elvra clone battle script
+
+IF	
+	Global("G-palebattle","LOCALS",1)
+	See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        ReallyForceSpell(Myself,WIZARD_BLUR)
+		IncrementGlobal("G-palebattle","LOCALS",1)
+END
+
+IF
+	Global("G-palebattle","LOCALS",2)
+	See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        ReallyForceSpell(NearestEnemyOf(Myself),WIZARD_HOWL_OF_PANDEMONIUM)
+		SetGlobal("G-palebattle","LOCALS",3)
+        Wait(6)
+	END
+
+IF
+	Global("G-palebattle","LOCALS",3)
+	See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        ReallyForceSpell(Myself,CLERIC_CURE_CRITICAL_WOUNDS)
+        Wait(4)
+		IncrementGlobal("G-palebattle","LOCALS",1)
+END
+
+IF
+	Global("G-palebattle","LOCALS",4)
+	See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        ReallyForceSpell(NearestEnemyOf(Myself),CLERIC_SPIRITUAL_HAMMER)
+        Wait(4)
+		IncrementGlobal("G-palebattle","LOCALS",1)
+END
+
+IF
+	Global("G-palebattle","LOCALS",5)
+	See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        	PlaySound("AM_VORTX")
+        StickySinisterPoof("EF01TPRT",Myself,1)
+        JumpToPoint([525.2154])
+		StickySinisterPoof("EF01TPRT",Myself,1)
+		Wait(4)
+		SetGlobal("G-palebattle","LOCALS",6)
+END
+
+IF
+	Global("G-palebattle","LOCALS",6)
+	See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        ReallyForceSpell(NearestEnemyOf(Myself),CLERIC_SPIRITUAL_HAMMER)
+        Wait(4)
+		Wait(4)
+		SetGlobal("G-palebattle","LOCALS",7)
+END
+
+IF
+	Global("G-palebattle","LOCALS",7)
+	See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        ReallyForceSpell(NearestEnemyOf(Myself),CLERIC_SPIRITUAL_HAMMER)
+        Wait(4)
+		ReallyForceSpell(Myself,CLERIC_CURE_CRITICAL_WOUNDS)
+		Wait(4)
+		SetGlobal("G-palebattle","LOCALS",8)
+END
+
+IF
+	Global("G-palebattle","LOCALS",8)
+	See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        StickySinisterPoof("EF01TPRT",Myself,1)
+        JumpToObject([PC])
+		StickySinisterPoof("EF01TPRT",Myself,1)
+		ReallyForceSpell(NearestEnemyOf(Myself),CLERIC_CALL_LIGHTNING)
+		SetGlobal("G-palebattle","LOCALS",1)
+END
+
+
+IF
+	HPPercentLT(Myself,40)
+	See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        ReallyForceSpell(NearestEnemyOf(Myself),CLERIC_CALL_LIGHTNING)
+        Wait(1)
+		SetGlobal("G-palebattle","LOCALS",3)
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+    Enemy()
+	IncrementGlobal("G-palebattle","LOCALS",1)
+END
+
+IF
+    AttackedBy([PC],DEFAULT)
+	Global("g-belle_combat","GLOBAL",0)
+THEN
+    RESPONSE #100
+		FaceObject([PC])
+		Enemy()
+		SetGlobal("G-palebattle","LOCALS",1)
+		SetGlobal("g-belle_combat","GLOBAL",1)
+END
+
+
+// END OF BATTLE SCRIPT
+
+
+
+
+
+
+ 
+

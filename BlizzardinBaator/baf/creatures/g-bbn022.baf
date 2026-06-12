@@ -1,0 +1,84 @@
+// Baernaloth
+
+
+IF	
+	See(NearestEnemyOf(Myself))
+	Global("G-Baernaloth_Kombat_N022","LOCALS",1)
+THEN
+    RESPONSE #100
+		ForceSpell([PC],WIZARD_HORROR)
+		IncrementGlobal("G-Baernaloth_Kombat_N022","LOCALS",1)
+END
+
+IF	
+	See(NearestEnemyOf(Myself))
+	Global("G-Baernaloth_Kombat_N022","LOCALS",2)
+THEN
+    RESPONSE #100
+		ForceSpell([PC],WIZARD_SEEKING_FLAMES)
+		IncrementGlobal("G-Baernaloth_Kombat_N022","LOCALS",1)
+END
+
+IF	
+	See(NearestEnemyOf(Myself))
+	Global("G-Baernaloth_Kombat_N022","LOCALS",3)
+THEN
+    RESPONSE #100
+		ForceSpell([PC],WIZARD_TONGUES_OF_FLAME)
+		IncrementGlobal("G-Baernaloth_Kombat_N022","LOCALS",1)
+END
+
+IF	
+	See(NearestEnemyOf(Myself))
+	Global("G-Baernaloth_Kombat_N022","LOCALS",4)
+THEN
+    RESPONSE #100
+		ForceSpell([PC],WIZARD_SEEKING_FLAMES)
+		IncrementGlobal("G-Baernaloth_Kombat_N022","LOCALS",1)
+END
+
+IF	
+	See(NearestEnemyOf(Myself))
+	GlobalGT("G-Baernaloth_Kombat_N022","LOCALS",4)
+THEN
+    RESPONSE #100
+		Attack(NearestEnemyOf(Myself))
+END
+
+IF
+    AttackedBy([PC],DEFAULT)
+THEN
+    RESPONSE #100
+		FaceObject([PC])
+		Help()
+		Enemy()
+		SetGlobal("G-Baernaloth_Kombat_N022","LOCALS",1)
+END
+
+IF
+	Help([ANYONE])
+	Team(LastTrigger,G-PIMPEK)
+THEN
+	RESPONSE #100
+	Enemy()
+	Attack(LastAttackerOf(LastHelp))
+END
+
+
+IF
+    Global("G-pimpekmov","GLOBAL",1)
+
+THEN
+    RESPONSE #100
+		StartDialogNoSet(Player1)
+		Continue()
+END
+
+IF
+    AreaCheck("arg-02")
+	See(Protagonist)
+THEN
+    RESPONSE #100
+		StartDialogNoSet(Player1)
+		Continue()
+END

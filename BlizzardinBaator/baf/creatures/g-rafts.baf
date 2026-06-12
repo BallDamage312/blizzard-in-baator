@@ -1,0 +1,58 @@
+// raft captains
+
+
+IF
+    Die()
+	AreaCheck("arg-in")
+	AreaCheckObject("ARG-IN",Player1)
+	Global("G-BBPCaptain_DiedX","GLOBAL",0)
+THEN
+    RESPONSE #100
+		SetGlobalTimerRandom("G-BBPCaptain_Died","GLOBAL",179,180) // captain was killed
+		SetGlobal("G-BBPCaptain_DiedX","GLOBAL",1)
+END
+
+IF
+    Die()
+	AreaCheck("arg-00")
+	AreaCheckObject("ARG-00",Player1)
+	Global("G-BBBcaptain_DiedX","GLOBAL",0)
+THEN
+    RESPONSE #100
+		SetGlobalTimerRAndom("G-BBBcaptain_Died","GLOBAL",179,180) // captain was killed
+		SetGlobal("G-BBBcaptain_DiedX","GLOBAL",1)
+END
+
+IF
+  	!ActuallyInCombat()
+THEN
+    RESPONSE #33
+		ReturnToSavedPlace()
+		FaceObject([PC])
+		PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100231) 
+        WaitRandom(10,10)
+        Continue()
+	RESPONSE #33
+        ReturnToSavedPlace()
+		FaceObject([PC])
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100232) 
+		WaitRandom(10,10)
+        Continue()
+	RESPONSE #33
+        ReturnToSavedPlace()
+		FaceObject([PC])
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100233)
+		WaitRandom(10,10)
+        Continue()
+END
+
+IF
+    AttackedBy([ANYONE],DEFAULT)
+THEN
+    RESPONSE #100
+        Enemy()
+        //EscapeArea()
+END

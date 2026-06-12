@@ -1,0 +1,64 @@
+IF
+	OnCreation()
+THEN
+	RESPONSE #100
+		ChangeEnemyAlly(Myself,FAMILIAR)
+		Continue()
+END
+
+IF
+	!Range(NearestEnemyOf([PC]),100)
+THEN
+	RESPONSE #100
+		StickySinisterPoof("S113SMOK",Myself,1)
+		Wait(1)
+		DestroySelf()
+END
+
+IF
+	See(NearestEnemyOf(Myself))
+THEN
+	RESPONSE #33
+		ReallyForceSpell(NearestEnemyOf(Protagonist),WIZARD_BLACKSPHERE)
+		SetAnimState(Myself,ANIM_MIMEATTACK1)
+		PlaySound("ZOMBF08")
+		Wait(9)
+	RESPONSE #33
+		ReallyForceSpell(NearestEnemyOf(Protagonist),WIZARD_CONFUSION)
+		SetAnimState(Myself,ANIM_MIMEATTACK1)
+		PlaySound("ZOMBF10")
+		Wait(6)
+	RESPONSE #33
+		ReallyForceSpell(NearestEnemyOf(Protagonist),WIZARD_ADDERS_KISS)
+		SetAnimState(Myself,ANIM_MIMEATTACK1)
+		PlaySound("ZOMBF02")
+		Wait(6)
+
+END
+
+IF
+	AttackedBy([ANYONE],DEFAULT)
+THEN
+	RESPONSE #33
+		ReallyForceSpell(NearestEnemyOf(Protagonist),WIZARD_BLACKSPHERE)
+		SetAnimState(Myself,ANIM_MIMEATTACK1)
+		PlaySound("ZOMBF08")
+		Wait(9)
+	RESPONSE #33
+		ReallyForceSpell(NearestEnemyOf(Protagonist),WIZARD_CONFUSION)
+		SetAnimState(Myself,ANIM_MIMEATTACK1)
+		PlaySound("ZOMBF10")
+		Wait(6)
+	RESPONSE #33
+		ReallyForceSpell(NearestEnemyOf(Protagonist),WIZARD_ADDERS_KISS)
+		SetAnimState(Myself,ANIM_MIMEATTACK1)
+		PlaySound("ZOMBF02")
+		Wait(6)
+END
+
+IF
+	True()
+THEN
+	RESPONSE #100
+		ProtectObject([PC],60)
+END

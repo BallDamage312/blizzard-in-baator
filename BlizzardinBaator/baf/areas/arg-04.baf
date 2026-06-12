@@ -1,0 +1,71 @@
+IF
+    True()
+THEN
+    RESPONSE #100
+        SetWorldmap("G-DITCH")
+		Continue()
+END
+
+IF
+	Global("g-skpprgone","GLOBAL",1)
+THEN
+    RESPONSE #100
+		TriggerActivation("G-skppr1",TRUE)
+        TriggerActivation("G-spkkr2",TRUE)
+		ActionOverride("g-bb209",DestroySelf())
+		ActionOverride("g-bb210",DestroySelf())
+		SetGlobal("g-skpprgone","GLOBAL",1)
+END
+
+IF
+    GlobalGT("G-BBMain","GLOBAL",8)
+	Global("G-akermove","GLOBAL",0)
+
+THEN
+    RESPONSE #100
+        SetGlobal("G-akermove","GLOBAL",1)
+		StartMovie("g-rbcg")
+		StartCutScene("g-bbCr1")
+ 		Continue()
+END
+
+IF
+    Global("G-laidorini","GLOBAL",0)
+
+THEN
+    RESPONSE #100
+        TriggerActivation("G-Toe4",FALSE)
+        TriggerActivation("G-To05",TRUE)
+        SetGlobal("G-laidorini","GLOBAL",1)
+		Continue()
+END
+
+IF
+    PartyRested()
+THEN
+    RESPONSE #100
+    SetGlobal("G-CroneUsedToday","GLOBAL",0)
+	Continue()
+END
+
+
+IF
+    Global("G-kuotoabamboozled","GLOBAL",1)
+
+THEN
+    RESPONSE #100
+        TriggerActivation("G-Toe4",TRUE)
+        TriggerActivation("G-To05",FALSE)
+        SetGlobal("G-kuotoabamboozled","GLOBAL",2)
+		Continue()
+END
+
+IF
+    Global("G-ARG-04visited","GLOBAL",0)
+
+THEN
+    RESPONSE #100
+        SetGlobal("G-ARG-04visited","GLOBAL",1)
+		Continue()
+END
+

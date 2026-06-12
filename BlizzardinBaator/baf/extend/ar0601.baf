@@ -1,0 +1,24 @@
+// Mawu
+
+IF
+        Global("G-BBMAWUspawned","GLOBAL",0)
+THEN
+    RESPONSE #100
+        CreateCreature("g-bb042",[2629.1141],W)
+        SetGlobal("G-BBMAWUspawned","GLOBAL",1)
+END
+
+// Fake FFG dialogue
+
+IF
+    Global("G-bbmain","GLOBAL",2) // occasion
+	InParty("Grace")
+	!StateCheck("Grace",CD_STATE_NOTVALID)
+	Global("G-fakeffgdial001triggered","GLOBAL",0) // one time trigger
+THEN
+    RESPONSE #100
+    SetGlobal("G-fakeffgdial001triggered","GLOBAL",1) // one time trigger
+	SetGlobal("g-fakeffgdialogue","GLOBAL",1) // fake dialog selection
+	CreateCreatureObject("g-bbFFG",Player1,0,0,0) // fake FFG creation
+	ActionOverride("g-bbFFG",StartDialog("g-bbdFFG",Player1)) // Fake FFG dialogue initiation
+END

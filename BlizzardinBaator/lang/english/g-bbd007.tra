@@ -1,0 +1,300 @@
+@0=~This is act 2 dialogue!~
+@2=~"Oh sorry. I'll stop cheating now."~
+@4=~"Good sir, I bid you to stop! I am but a pawn in this devil's foul game. Spare me, I wish not to die here, in the cold embrace of the traitor's realm. Show mercy!" ~ [g-00708]
+@6=~Ready your weapon for the final blow. "No mercy! You assaulted and trapped us here. You die for this!" ~
+@7=~Ready your weapon for the final blow. "No mercy! You assaulted and trapped me here. You die for this!"~
+@8=~"Go on then, get out of here before I change my mind."~
+@9=~"You are not going anywhere until you tell me who you really are and why you attacked us."~
+@10=~"You are not going anywhere until you tell me who you really are and why you attacked me."~
+@12=~"Ah, tattoo-man. Welcome to this icy hell. I regret that our second meeting has to be under such unfortunate circumstance. It appears that we find ourselves on the opposite sides of a conflict which in itself doesn't really concern either of us. What a life..." He pauses and looks closely at the little devil standing by your side. "Anyway... little imp? Come out, come out, wherever you are." ~ [g-00709]
+@13=~"Oh, not good. Prod knows some of them. These are our old fellas... " ~ [g-00610]
+@15=~"Fellas?"~
+@17=~The bard is still standing nonchalantly at the center of the Rivergate tavern. He's strumming the strings of his instrument in a gentle manner, but mostly he's looking around, as if hoping to find inspiration in this seedy joint.~
+@18=~"You've come back, tattoo-man. Do you find yourself in need of a ditty?"~
+@20=~"Sure, let's hear one."~
+@21=~"No, but I have some questions."~
+@22=~"No. Actually, I have to go."~
+@24=~At the center of the tavern, a purple-haired dandy is standing next to a couch that almost matches his hair color. He is looking around the place and gently tapping the strings of a curious instrument that seems to be a hybrid between a lute and a harp. His ornate clothes have puffed sleeves, and his gaudy hat is adorned with three feathers.~
+@26=~"Greetings."~
+@27=~Leave the dandy alone.~
+@29=~The bard looks up from his instrument. "Hello! Oh, lovely tattoos. A bit grim and hieroglyphic for my taste, but the craft is admirable. No doubt some of it is Fell's work, but a lot is... from around the planes, certainly. Anyhow, mayhap you find yourself in need of a little ditty?" ~ [g-00710]
+@31=~"Sure, let's hear one."~
+@32=~"No, but I have some questions."~
+@33=~"No. Actually, I have to go."~
+@35=~"I am currently performing three ditties. 'The Job Done Killed a Dhergoloth,' 'The Misplaced Village,' and 'A Crow and a Lark.' Performances are 15 copper pieces per song. What would you like to hear?"~
+@37=~"I would love to hear 'The Job Done Killed a Dhergoloth.'"~
+@38=~"I would love to hear 'The Misplaced Village.'"~
+@39=~"I would love to hear 'A Crow and a Lark.'"~
+@40=~"Actually, I can't afford any, but I would love to ask you some questions."~
+@41=~"Actually, I can't afford any. I should be going now."~
+@42=~"I would love to ask you some questions instead."~
+@43=~"Actually, I should be going now."~
+@45=~The bard readies his instrument and coughs loudly, ushering silence in the room. Then, he begins by strumming a soft, melancholic tune.~
+@46=~"Oh, whispers!
+Whispers of the dark.
+How can I tell the difference 'tween a flame and a spark,
+'tween a crow and a lark?"~
+@47=~"Oh, secrets!
+Secrets I do keep.
+For see the path down from here is so very steep,
+the rift beneath me, deep."~
+@48=~"Oh, vanity!
+My friend throughout the years.
+The closer you crawl to me, the stronger are my fears,
+am I still who I am in my dreams?"~
+@49=~"Oh, shining light.
+Illuminate my hallways stark.
+To all your wits now I do hark,
+be I a crow or lovely lark?"~
+@50=~Akershus plays a prolonged, melancholy build-up. The music modulates into a new key, then changes to a different rhythm. 
+"Unless the terror of my love can send me flying through the sky,
+the horror of what doth remain will echo in my cries.
+Will echo in my cries..."~
+@51=~The melody drifts away. Some clapping can be heard from the far side of the tavern. Akershus bows deeply and looks at you expectantly.~
+@53=~"That was very sad and deep. Thank you."~
+@54=~"That was whiny and uninspired. A waste of my time."~
+@55=~"I would love to ask you some questions now."~
+@56=~"Actually, I should be going now."~
+@58=~The bard readies his instrument and coughs loudly, ushering silence in the room. Then, he begins. The tune is fast and dynamic, with a catchy, simple melody singing over the chords. With a quick introduction, Akershus jumps into the first line.~
+@59=~"There was once a house of lore,
+run by some crunchy bureaucrats.
+And in their tower, seventh floor,
+'Division for the State of Flats.'
+
+Up there, the Staff was merely four,
+but all absurdly tricksy brats.
+The pranks and tricks they had in store
+would breed between them lots of spats."~
+@60=~"A newly hired dhergoloth
+was sent out to count attic bats.
+He came to the Hive with stacks of notes,
+to come out armed with doubtless facts."
+
+"The poor fiend though just did not know
+the house was full of canny cats,
+and being mostly like a ball,
+he couldn't get away with pats."~
+@61=~"They rolled him out into the hall,
+through their old native habitats,
+right down the stairs and out the door,
+like piking little acrobats.
+
+They took him to the Ditch's shore
+and scared away the local rats.
+Without a chance to squeak, or roar
+the 'loth into the water splats."~
+@62=~"He floats a bit, scared to the core,
+but I can only tip my hat.
+He sinks below then, what a score,
+all thanks to local hero cats.
+
+Now, if you never knew before,
+the yugoloths aren't idle chats.
+They drown, explode, get smashed, and more,
+and come back in their ziggurats.
+
+But this one here, they so abhorred,
+for being ripped like spineless cloth.
+The natural order was ignored,
+the job done killed the dhergoloth."~
+@63=~The song ends as abruptly as it began. Some clapping can be heard from the far side of the tavern. Akershus bows deeply and looks at you expectantly.~
+@65=~"That was very humorous and evocative. Good fun!"~
+@66=~"That was borderline offensive and primitive. Absolute manure."~
+@67=~"I would love to ask you some questions now."~
+@68=~"Actually, I should be going now."~
+@70=~The bard readies his instrument and coughs loudly, ushering silence in the room. The tune sounds much like a song for children, but with an ironic undertone.~
+@71=~"If you brave the darkness under Sigil's streets."
+*CLAP CLAP*
+"There is but one civilized hamlet to be."
+*CLAP CLAP*
+"Their buildings may be jumbled,
+their minds may be scrambled,
+but their hospitality is rather neat."
+*CLAP CLAP*~
+@72=~"They were once citizens just like you and me."
+*CLAP CLAP*
+"But the city planning had to disagree."
+*CLAP CLAP*
+"Then there came along the float goats,
+there was not a time to note votes,
+and their houses were condemned as mere debris."
+*CLAP CLAP*~
+@73=~"They got stacked on one another like old toys."
+*CLAP CLAP*
+"All their livelihoods discarded and destroyed."
+*CLAP CLAP*
+"Now they live among the sewers,
+gather money to come sue us,
+and we live in brand new villas we purloined."~
+@74=~The song continues for a bit, with his "lute" taking the melody and Akershus stomping where the claps would go. Eventually, he slows down before finally concluding. Some clapping can be heard from the far side of the tavern. Akershus bows deeply and looks at you expectantly.~
+@76=~"That was some excellent social commentary. A very ironic piece!"~
+@77=~"Repurposing nursery rhymes for a political agenda is really low, minstrel."~
+@78=~"I would love to ask you some questions now."~
+@79=~"Actually, I should be going now."~
+@81=~The bard bows again with a smile on his face. "I am glad you proved to be a man of culture."~
+@83=~"Can I hear another one?"~
+@84=~"I would love to ask you some questions now."~
+@85=~"Actually, I should be going now."~
+@87=~The bard bows again with a huge smile on his face. "I always welcome constructive criticism from intelligent spectators."~
+@89=~"Can I hear another one?"~
+@90=~"I would love to ask you some questions now."~
+@91=~"Actually, I should be going now."~
+@93=~"My answers are usually metaphorical and of the soul rather than... actionable advice. But go ahead."~
+@95=~"Can I hear one of your ditties?"~
+@96=~"What are you doing here?"~
+@97=~"Who are you?"~
+@98=~"Do you know anything about the portal trap behind you?"~
+@99=~"Do you know anything about the portal trap behind you?"~
+@100=~"You like tattoos?"~
+@101=~"Actually, I should be going now."~
+@103=~Akershus smiles. "Oh, I am doing research for my new epic about the terrifying gangs of the Hive. There is so much to learn from the criminal element. I am having the most brilliant of times."~
+@105=~"Aren't you afraid they will just shank you?"~
+@106=~"Can I hear some of this epic?"~
+@107=~"I have some other questions."~
+@108=~"Actually, I should be going now."~
+@110=~"Oh, hells no. The people of the illegal crafts hate the lawbringers most of all, and other gangmen as well, as they are their competition. But they do *love* artists. Artists create legends. We legitimize their picturesque lives. I have nothing to fear from such lovely gentlemen."~
+@113=~"Can I hear some of this epic?"~
+@114=~"I have some other questions."~
+@115=~"Actually, I should be going now."~
+@117=~"Oh, certainly not. Come see the premiere at the theater when it's ready."~
+@119=~"Aren't you afraid they will hurt you?"~
+@121=~"I have some other questions."~
+@122=~"Actually, I should be going now."~
+@124=~"I am Akershus, composer and performer extraordinaire, known across the entire Cage and the Outlands. I have just come back from a tour around the gate-towns and am preparing to compose a new masterpiece." ~ [g-00711]
+@125=~"Ah've never heard o' yeh."~
+@127=~"And you're preparing for your masterpiece... here?"~
+@128=~"So, you are a well-traveled man. Ever been to Cania?"~
+@129=~"I have some other questions."~
+@130=~"Actually, I should be going now."~
+@132=~The bard gives you a meaningful, condescending look. "Just ask the tavern owner. Seems like a logical thing to do, doesn't it? He doesn't just trust anyone, you need to butter him up. Make a fool out of yourself or order one of his favorite drinks, like Spawning Stone Sour. If all *that* fails... try looking into his pockets... "~
+@136=~"I have some other questions."~
+@137=~"Actually, I should be going now."~
+@139=~The bard gives a you a meaningful, condescending look. "Well, I would tell you to ask the barkeep, but he won't talk to you. You reek of order, and therefore you are worthless in his eyes. Unless you do something really... random."~
+@141=~"Random... I have some random questions."~
+@142=~"Hmm. Let me try. I should be going now."~
+@144=~The bard rolls up the puffy sleeve on his left arm and reveals a complex tattoo of razorvine. Upon closer inspection, there is a clever depiction of a scene, hidden within shadows and shapes between each vine. It depicts buildings attacked by vicious plants and razorvine-like bulbous monsters. There are people lifted up into the air by rogue vines and cracks in the ground beneath it all.~
+@145=~"This is a recreation of a painting by a local artist, Caven-something. He himself is nothing but a hack, but a very talented bladeling woman from Rigus did this on my arm, and I couldn't be prouder." He smiles widely. "I have some other pieces but cannot really show them in a public place."~
+@147=~"What does it depict?"~
+@148=~Allow a memory to resurface. "A tattoo artist from Rigus?"~
+@149=~"I have some other questions."~
+@150=~"Actually, I should be going now."~
+@152=~"While the stark coldness does seem poetic in theory, I would rather avoid frigid hells in my biography... No, I have never been."~
+@154=~"I have some other questions."~
+@155=~"Actually, I should be going now."~
+@157=~"I had thought it obvious. It's the catastrophic collapse of half of the Ditch-side settlement. A rather violent sprout of razorvine shattered the ground and caused a whole block of buildings to slide into the murky depths. Even the dabus don't want to touch that miserable mess, so all the debris is still there in the water. A monument to the powers of nature..."~
+@159=~"I have some other questions."~
+@160=~"Actually, I should be going now."~
+@162=~You come closer to the pleading man. He looks at you, his eyes full of fear.~
+@163=~"I feel that the gates of the void
+open in front of me..."~
+@165=~"Can I hear one of your ditties before you go?"~
+@166=~Finish Akershus. "And I shall push you right on through."~
+@167=~Finish Akershus. "And the void consumes you."~
+@168=~Finish Akershus. "And none shall weep for this boy,
+when he falls into his final sleep."~
+@170=~The bard's breath is fast, and panicky. "I work for a fiend called Anit'bil. He forced me to come here. I had no choice... I only do a..." He pauses slightly as he weighs his words. "Bit of... 'observation', on occasion, for my patron. I never do anything like this. I don't know why they sent me, but I do not wish to die for whatever this is."~
+@172=~"What were you looking for when you were spying on me?"~
+@173=~"Who is your patron?"~
+@174=~"What can you tell me about Anit'bil?"~
+@175=~"That's not enough. Time to die."~
+@176=~"Go on, then. Get out of here before I change my mind."~
+@178=~The bard closes his eyes. The cold wind sweeps his purple hair across his face. You can tell he's afraid, but you can also tell that art is indeed his true calling. Artist by passion, traitor by circumstance.~
+@179=~After a moment, he starts singing in a weak, trembling voice. With no instruments to accompany it, it sounds rather unimpressive. But the impending doom in the minstrel's voice does create a very special kind of performance.~
+@180=~"And as the stream runs to its end
+and water turns to sea,
+I come to see, I apprehend 
+that it is time for me. ~ [g-00714]
+@181=~I yearn to climb onto the bank
+or swim upstream, I see so clear.
+But all my struggles come up blank
+as into depths... I disappear." ~ [g-00715]
+@183=~Finish Akershus.~
+@184=~"Fine... One more chance. Tell me who you really are and why you attacked us."~
+@185=~"Eh... Go on, then. Get out of here before I change my mind."~
+@186=~"As shallow and meaningless as all your other songs. Die now."~
+@188=~"I was supposed to find Tergush'tekhn in Sigil, but I found Prod first. I was hoping that the abishai would come and retrieve him, but you showed up instead. And I overheard you were leaving for Cania. That's all I really gathered."~
+@190=~"Who is your patron?"~
+@191=~"What can you tell me about Anit'bil?"~
+@192=~"That's not enough. Time to die."~
+@193=~"Go on, then. Get out of here before I change my mind."~
+@195=~"Prod already said his name. Mammon. Lord of the Third. Richest being in the planes. Great patron of the arts."~
+@197=~"What were you looking for when you were spying on us?"~
+@198=~"What can you tell me about Anit'bil?"~
+@199=~"That's not enough. Time to die."~
+@200=~"Go on, then. Get out of here before I change my mind."~
+@202=~"He's a nasty, ambitious cornugon, buried extremely deep in Mammon's ass. I do have a very unsavory song about him. He has been giving me orders."~
+@204=~"What were you looking for when you were spying on us?"~
+@205=~"Who is your patron?"~
+@206=~"That's not enough. Time to die."~
+@207=~"Go on, then. Get out of here before I change my mind."~
+@209=~"There you are! My little fiendish friend, we haven't actually met before, but we do share an employer. Or... well, we used to."~
+@210=~"Used to? What now, Prod only serves Mammon. Always has."~
+@212=~"Are we okay, Prod?"~
+@213=~"I thought we were retrieving someone for Levistus."~
+@214=~Say nothing.~
+@215=~"You don't talk to Prod, you talk to ME around here."~
+@217=~"I heard otherwise, little one. I heard you and your abishai friends had absconded into service of another. I am here to learn who *is* that another." ~ [g-00712]
+@218=~"No, no, Prod only has eyes for the Lord of Avarice and his coin. Prod swears it."  ~ [g-00609]
+@220=~"Are we okay, Prod?"~
+@221=~"I thought we were retrieving someone for Levistus."~
+@222=~Say nothing.~
+@223=~"You don't talk to Prod, you talk to ME around here."~
+@225=~"You are a small fish, Prod. Your abishai friends are what really interests him. Tell us who your new master is and I will spare your life. Mammon doesn't even know you exist."~
+@226=~Prod clearly takes much longer to respond than usual. He opens his tiny mouth three times over and closes it again before uttering a sound. "Levistus," he says eventually.~
+@227=~"Prod never wanted to leave, Prod was forced! Prod thanks you for the rescue!" ~ [g-00608]
+@228=~"Excellent." In an instant, a beam of magical energy streaks across the snowy path and hits the little imp. ~ [g-00713]
+@230=~"Prod!"~
+@231=~Attack.~
+@233=~"Ah. Levistus. Excellent!" ~ [g-00713]
+@234=~In an instant, a beam of magical energy streaks across the snowy path and hits the little imp.~
+@236=~"Prod!"~
+@237=~Attack.~
+@239=~"Oh, yes, yes. Prod knows these guys. We are old friends. We have nothing to worry about!" ~ [g-00602]
+@240=~"Indeed, you are safe. You are a small fish, Prod. Your abishai friends are what really interests him. Tell us who your new master is and I will spare your life. Mammon doesn't even know you exist."~
+@241=~Prod clearly takes much longer to respond than usual. He opens his tiny mouth three times over and closes it again before uttering a sound. "Levistus," he says eventually.~
+@242=~"Prod never wanted to leave, Prod was forced! Prod thanks you for the rescue!" ~ [g-00608]
+@243=~"Excellent." In an instant, a beam of magical energy streaks across the snowy path and hits the little imp. ~ [g-00713]
+@245=~"Prod!"~
+@246=~Attack.~
+@248=~"By all means, tattoo-man. Maybe you have the information I need. Tell me and you get to leave. It's simple. Let us keep it simple. Who do you work for?"~
+@250=~Attack.~
+@251=~Truth: "Levistus. We are working for Levistus."~
+@252=~Lie: "Mammon. We are working for the same archfiend, bard!"~
+@253=~Lie: "Mammon. We are working for the same archfiend, bard!"~
+@254=~Lie: "Baron Molikroth. We have been summoned and you are causing him trouble. Not wise."~
+@255=~Lie: "Baron Molikroth. We have been summoned and you are causing him trouble. Not wise."~
+@256=~"I work for nobody. I go as I please and do what I want."~
+@258=~"Fools!" In an instant, a beam of magical energy streaks across the snowy path and hits the little imp.~
+@260=~"Prod!"~
+@262=~You see a shade of doubt run over Akershus's flawless face. Could it be? Could his information be wrong? He looks to the surrounding fiends for confirmation, but they seem to be as clueless as he is.~
+@263=~But no.~
+@264=~"You almost got me. Still, kindred cunning knows its kind. Excellent lying. I tip my hat." He turns back to Prod.~
+@265=~"You are a small fish, Prod. Your abishai friends are what really interests him. Tell us who your new master is and I will spare your life. Mammon doesn't even know you exist."~
+@266=~Prod clearly takes much longer to respond than usual. He opens his tiny mouth three times over and closes it again before uttering a sound. "Levistus," he says eventually.~
+@267=~"Prod never wanted to leave, Prod was forced! Prod thanks you for the rescue!" ~ [g-00608]
+@268=~"Excellent." In an instant, a beam of magical energy streaks across the snowy path and hits the little imp. ~ [g-00713]
+@270=~"Prod!"~
+@271=~Attack.~
+@273=~"A pitiful lie, but... I appreciate the attempt." He turns back to Prod.~
+@274=~"You are a small fish, Prod. Your abishai friends are what really interests him. Tell us who your new master is and I will spare your life. Mammon doesn't even know you exist."~
+@275=~Prod clearly takes much longer to respond than usual. He opens his tiny mouth three times over and closes it again before uttering a sound. "Levistus," he says eventually.~
+@276=~"Prod never wanted to leave, Prod was forced! Prod thanks you for the rescue!" ~ [g-00608]
+@277=~"Excellent." In an instant, a beam of magical energy streaks across the snowy path and hits the little imp. ~ [g-00713]
+@279=~"Prod!"~
+@280=~Attack.~
+@282=~Akershus claps. "Truly, I believe you. You do seem like a strong, lonely type." He takes a step closer and puts his hands together, facing Prod. "Unlike you, little fiend." ~
+@283=~"You are a small fish, Prod. Your abishai friends are what really interests him. Tell us who your new master is and I will spare your life. Mammon doesn't even know you exist."~
+@284=~Prod clearly takes much longer to respond than usual. He opens his tiny mouth three times over and closes it again before uttering a sound. "Levistus," he says eventually.~
+@285=~"Prod never wanted to leave, Prod was forced! Prod thanks you for the rescue!" ~ [g-00608]
+@286=~"Excellent." In an instant, a beam of magical energy streaks across the snowy path and hits the little imp. ~ [g-00713]
+@288=~"Prod!"~
+@289=~Attack.~
+@291=~With your mind's eye, you see a suggestion of a memory. An image of concentric, austere walls seen from the air. A landing platform on which your machine settles... ~ [SPTR_01]
+@292=~Troops of similar-looking warriors marching in neat rows. No. Not warriors, soldiers. That's an important distinction. Everyone here has a rank. She has a rank, too.~
+@293=~She is beautiful. Shiny. Clean. Her metallic skin is decorated with symmetrical patterns designed to instill fear in those who see them. She usually doesn't like strangers in her city, but you are different. She orders you to lie down. You remember the pricks and the pain, but the result is... perfect.~
+@294=~It is now later. Much later. In the mirror, you try to inspect the souvenir from the metal woman from Rigus. Unfortunately, the skin in that spot is burned. You no longer remember what the pattern looked like. You only remember... its perfection.~
+@296=~Snap out of it.~
+@298=~Akershus is looking at you. He seems confused. "You got really quiet there, cutter. You alright?"~
+@300=~"Sorry. What does it depict?"~
+@302=~"I have some other questions."~
+@303=~"Actually, I should be going now."~

@@ -1,0 +1,25 @@
+// Random See PC - Running Attack
+
+IF
+    OnCreation()
+THEN
+    RESPONSE #100
+        FaceObject([PC])
+	Enemy()
+        Continue()
+END
+
+IF
+    See([PC])
+THEN
+    RESPONSE #100
+        RunningAttack(NearestEnemyOf(Myself))
+END
+
+IF
+    AttackedBy([ANYONE],DEFAULT)
+THEN
+    RESPONSE #100
+        Enemy()
+        RunningAttack(LastAttackerOf(Myself))
+END

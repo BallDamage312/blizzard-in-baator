@@ -1,0 +1,17 @@
+// cutsene bard ribcage 3
+
+IF
+  
+  True()
+
+THEN
+    RESPONSE #100
+	StartCutSceneMode()
+	CutSceneId("G-bb067")
+	MoveViewPoint([1280.1000],INSTANT)
+	MoveToPointNoInterrupt([1228.1249])
+	    //ActionOverride("G-bb067",StartDialogueNoSet("G-bbd067"))
+        //ActionOverride("G-bb007",StartDialogueNoSet("G-bbd067"))
+        StartDialogueNoSet("G-bbd067")
+	EndCutSceneMode()
+END

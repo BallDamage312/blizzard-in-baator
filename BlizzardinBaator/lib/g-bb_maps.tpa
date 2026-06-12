@@ -1,0 +1,1871 @@
+
+
+//////////////////////
+// ================ //
+// Maps & TIS, etc. //
+// ================ //
+//////////////////////
+
+//COPY ~%MOD_FOLDER%/are~ ~override~
+COPY ~%MOD_FOLDER%/wed+bmp~ ~override~
+COPY ~%MOD_FOLDER%/tis+pvrz~ ~override~
+COPY ~%MOD_FOLDER%/are/ini~ ~override~
+COPY ~%MOD_FOLDER%/mos/v1/maps~ ~override~
+COPY ~%MOD_FOLDER%/wmps/g-ditch.wmp~ ~override~
+
+// Adds new areas to the console menu listing (from top)
+
+INCLUDE ~%MOD_FOLDER%/lib/g-bb_cheat_areas.tpa~
+
+// Add map names
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY map_names BEGIN
+  // mapping: ARE resref => tra reference
+  "arg-in" => 300326
+  "arg-00" => 300300
+  "arg-0w" => 300328
+  "arg-01" => 300301
+  "arg-02" => 300302
+  "arg-03" => 300303
+  "arg-ff" => 300304
+  "arg-05" => 300305
+  "arg-06" => 300306
+  "arg-07" => 300307
+  "arg-08" => 300308
+  "arg-bs" => 300325
+  "arg-b2" => 300331
+  "arg-b3" => 300331
+  "arg-09" => 300309
+  "arg-ek" => 300329
+  "arg-ep" => 300330
+  "arg-10" => 300321
+    "arg-e1" => 300310
+    "arg-e2" => 300311
+    "arg-e3" => 300312
+    "arg-e4" => 300313
+    "arg-e5" => 300314
+    "arg-e6" => 300315
+    "arg-e7" => 300322
+	"arg-97" => 300397
+  "arg-99" => 300399
+    "arg-r1" => 300316
+    "arg-r2" => 300316
+    "arg-r3" => 300316
+    "arg-r4" => 300323
+        "arg-p1" => 300317
+        "arg-p2" => 300318
+        "arg-p3" => 300319
+        "arg-p4" => 300320
+		"arg-p5" => 300327
+    "arg-d1" => 300324
+            "arg-k1" => 300313
+            "arg-k2" => 300313
+            "arg-kk" => 300305
+    "arg-b1" => 300322 // 24
+END
+ACTION_PHP_EACH map_names AS are_resref => tra_ref BEGIN
+  OUTER_SET strref = RESOLVE_STR_REF((AT tra_ref))
+  APPEND ~mapname.2da~ ~%are_resref% %strref%~
+END
+
+// Adding specific details to areas: type, music, info & notes etc.
+
+
+COPY ~%MOD_FOLDER%/are/arg-in.are~ ~override~	 							// arg-in - Port						
+
+// Type
+//WRITE_ASCII 0x18 arg-02 // Area North
+WRITE_LONG 0x14 BIT4 + BIT7 + BIT8 // AreaType/Flags
+WRITE_LONG 0x48 BIT0 + BIT10 // AreaType/Location
+
+// Script
+WRITE_ASCII 0x94 arg-in
+
+// Music
+SET songDay = IDS_OF_SYMBOL (~songs~ ~G-THE_DITCH~)
+SET songNight = IDS_OF_SYMBOL (~songs~ ~G-THE_DITCH_NIGHT~)
+SET songBattle = IDS_OF_SYMBOL (~songs~ ~G-THE_DITCH_BATTLE~)
+READ_LONG 0xbc ofsSong 
+SET ofsDay = ofsSong
+SET ofsNight = ofsSong + 4
+SET ofsBattle = ofsSong + 0xc 
+WRITE_LONG ofsDay  %songDay% // Day song
+WRITE_LONG ofsNight  %songNight% // Night song
+WRITE_LONG ofsBattle  %songBattle% // Battle music
+
+WRITE_ASCII ofsSong + 0x28 AR_0100D // Main day ambient 1
+WRITE_ASCII ofsSong + 0x30 AR_0100D // Main day ambient 2
+WRITE_LONG ofsSong + 0x38 75 // Main day ambient volume %
+WRITE_ASCII ofsSong + 0x3c AR_0100N // Main night ambient 1
+WRITE_ASCII ofsSong + 0x44 AR_0100N // Main night ambient 2
+WRITE_LONG ofsSong + 0x4c 75 // Main night ambient volume %
+WRITE_LONG ofsSong + 0x50 4 // Reverb
+
+ADD_MAP_NOTE #314 #1491 ~gray~ @302024 // to hive
+ADD_MAP_NOTE #1911 #661 ~gray~ @302025 // port
+ADD_MAP_NOTE #283 #325 ~gray~ @302026 // storage
+
+
+COPY ~%MOD_FOLDER%/are/arg-00.are~ ~override~								// arg-00 - Beachside
+
+// Type
+//WRITE_ASCII 0x18 arg-02 // Area North
+WRITE_LONG 0x14 BIT4 + BIT7 + BIT8 // AreaType/Flags
+WRITE_LONG 0x48 BIT0 + BIT10 // AreaType/Location
+
+// Script
+WRITE_ASCII 0x94 arg-00
+
+// Music
+SET songDay = IDS_OF_SYMBOL (~songs~ ~G-THE_DITCH~)
+SET songNight = IDS_OF_SYMBOL (~songs~ ~G-THE_DITCH_NIGHT~)
+SET songBattle = IDS_OF_SYMBOL (~songs~ ~G-THE_DITCH_BATTLE~)
+READ_LONG 0xbc ofsSong 
+SET ofsDay = ofsSong
+SET ofsNight = ofsSong + 4
+SET ofsBattle = ofsSong + 0xc 
+WRITE_LONG ofsDay  %songDay% // Day song
+WRITE_LONG ofsNight  %songNight% // Night song
+WRITE_LONG ofsBattle  %songBattle% // Battle music
+
+WRITE_ASCII ofsSong + 0x28 AR_0100D // Main day ambient 1
+WRITE_ASCII ofsSong + 0x30 AR_0100D // Main day ambient 2
+WRITE_LONG ofsSong + 0x38 75 // Main day ambient volume %
+WRITE_ASCII ofsSong + 0x3c AR_0100N // Main night ambient 1
+WRITE_ASCII ofsSong + 0x44 AR_0100N // Main night ambient 2
+WRITE_LONG ofsSong + 0x4c 75 // Main night ambient volume %
+WRITE_LONG ofsSong + 0x50 4 // Reverb
+
+SET water = RESOLVE_STR_REF (@300400)
+LPF ALTER_AREA_REGION
+    INT_VAR 
+	info_point = water
+    STR_VAR 
+	region_name = "g-water"
+END
+SET fountain = RESOLVE_STR_REF (@300401)
+LPF ALTER_AREA_REGION
+    INT_VAR 
+	info_point = fountain
+    STR_VAR 
+	region_name = "g-fountain"
+END
+SET rivergate_sign = RESOLVE_STR_REF (@300404)
+LPF ALTER_AREA_REGION
+    INT_VAR 
+	info_point = rivergate_sign 	
+    STR_VAR 
+	region_name = "g-rivergate"
+END
+
+SET posts = RESOLVE_STR_REF (@300447)
+LPF ALTER_AREA_REGION
+    INT_VAR 
+	info_point = posts 	
+    STR_VAR 
+	region_name = "g-posts"
+END
+
+ADD_MAP_NOTE #4239 #403 ~gray~ @302000 // rivergate
+ADD_MAP_NOTE #4682 #76 ~gray~ @302001 // to residential area
+ADD_MAP_NOTE #1234 #1656 ~gray~ @302002 // beachside
+ADD_MAP_NOTE #3474 #2455 ~gray~ @302003 // to suicide falls
+ADD_MAP_NOTE #5025 #1700 ~gray~ @300328 // to dead end
+
+COPY ~%MOD_FOLDER%/are/arg-0w.are~ ~override~								// arg-0W - Dead end
+
+// Type
+//WRITE_ASCII 0x18 arg-02 // Area North
+WRITE_LONG 0x14 BIT4 + BIT8 // AreaType/Flags
+WRITE_LONG 0x48 BIT0 + BIT10 // AreaType/Location
+
+// Script
+WRITE_ASCII 0x94 arg-0w
+
+// Music
+SET songDay = IDS_OF_SYMBOL (~songs~ ~G-THE_DITCH~)
+SET songNight = IDS_OF_SYMBOL (~songs~ ~G-THE_DITCH_NIGHT~)
+SET songBattle = IDS_OF_SYMBOL (~songs~ ~G-THE_DITCH_BATTLE~)
+READ_LONG 0xbc ofsSong 
+SET ofsDay = ofsSong
+SET ofsNight = ofsSong + 4
+SET ofsBattle = ofsSong + 0xc 
+WRITE_LONG ofsDay  %songDay% // Day song
+WRITE_LONG ofsNight  %songNight% // Night song
+WRITE_LONG ofsBattle  %songBattle% // Battle music
+
+WRITE_ASCII ofsSong + 0x28 AR_0100D // Main day ambient 1
+WRITE_ASCII ofsSong + 0x30 AR_0100D // Main day ambient 2
+WRITE_LONG ofsSong + 0x38 75 // Main day ambient volume %
+WRITE_ASCII ofsSong + 0x3c AR_0100N // Main night ambient 1
+WRITE_ASCII ofsSong + 0x44 AR_0100N // Main night ambient 2
+WRITE_LONG ofsSong + 0x4c 75 // Main night ambient volume %
+WRITE_LONG ofsSong + 0x50 4 // Reverb
+
+SET wall = RESOLVE_STR_REF (@300460)
+LPF ALTER_AREA_REGION
+    INT_VAR 
+	info_point = wall
+    STR_VAR 
+	region_name = "g-wall"
+END
+SET bars = RESOLVE_STR_REF (@300461)
+LPF ALTER_AREA_REGION
+    INT_VAR 
+	info_point = bars
+    STR_VAR 
+	region_name = "g-bars"
+END
+SET stair = RESOLVE_STR_REF (@300462)
+LPF ALTER_AREA_REGION
+    INT_VAR 
+	info_point = stair 	
+    STR_VAR 
+	region_name = "g-stairs"
+END
+
+
+COPY ~%MOD_FOLDER%/are/arg-01.are~ ~override~								// arg-01 - Taverns
+
+// Type
+WRITE_LONG 0x14 BIT4 + BIT7 + BIT8 // AreaType/Flags
+WRITE_LONG 0x48 BIT0 // AreaType/Location
+
+// Script
+WRITE_ASCII 0x94 arg-01
+
+// Music
+SET songDay = IDS_OF_SYMBOL (~songs~ ~G-KNIFE_IN_THE_RIVER~)
+SET songNight = IDS_OF_SYMBOL (~songs~ ~G-STYX_OARSMAN~)
+SET songBattle = IDS_OF_SYMBOL (~songs~ ~G-THE_DITCH_BATTLE~)
+READ_LONG 0xbc ofsSong 
+SET ofsDay = ofsSong
+SET ofsNight = ofsSong + 4
+SET ofsBattle = ofsSong + 0xc 
+WRITE_LONG ofsDay  %songDay% // Day song
+WRITE_LONG ofsNight  %songNight% // Night song
+WRITE_LONG ofsBattle  %songBattle% // Battle music
+
+WRITE_ASCII ofsSong + 0x28 G-M08A // Main day ambient 1
+WRITE_ASCII ofsSong + 0x30 G-M08A // Main day ambient 2
+WRITE_LONG ofsSong + 0x38 75 // Main day ambient volume %
+WRITE_ASCII ofsSong + 0x3c G-M08A // Main night ambient 1
+WRITE_ASCII ofsSong + 0x44 G-M08A // Main night ambient 2
+WRITE_LONG ofsSong + 0x4c 75 // Main night ambient volume %
+WRITE_LONG ofsSong + 0x50 1 // Reverb
+
+ADD_MAP_NOTE #1319 #1642 ~gray~ @302001 // to residential area
+ADD_MAP_NOTE #3632 #2265 ~gray~ @302004 // to zaddfum trestle
+ADD_MAP_NOTE #1254 #3563 ~gray~ @302005 // to beachside
+ADD_MAP_NOTE #916 #533 ~gray~ @302006 // styx upper floor
+
+COPY ~%MOD_FOLDER%/are/arg-02.are~ ~override~								// arg-02 - Residential area
+
+// Type
+WRITE_LONG 0x14 BIT4 + BIT7 + BIT8 // AreaType/Flags
+WRITE_LONG 0x48 BIT0 + BIT10 // AreaType/Location
+
+// Script
+WRITE_ASCII 0x94 arg-02
+
+// Music
+SET songDay = IDS_OF_SYMBOL (~songs~ ~G-THE_DITCH~)
+SET songNight = IDS_OF_SYMBOL (~songs~ ~G-THE_DITCH_NIGHT~)
+SET songBattle = IDS_OF_SYMBOL (~songs~ ~G-THE_DITCH_BATTLE~)
+READ_LONG 0xbc ofsSong 
+SET ofsDay = ofsSong
+SET ofsNight = ofsSong + 4
+SET ofsBattle = ofsSong + 0xc 
+WRITE_LONG ofsDay  %songDay% // Day song
+WRITE_LONG ofsNight  %songNight% // Night song
+WRITE_LONG ofsBattle  %songBattle% // Battle music
+
+WRITE_ASCII ofsSong + 0x28 AR_0100D // Main day ambient 1
+WRITE_ASCII ofsSong + 0x30 AR_0100D // Main day ambient 2
+WRITE_LONG ofsSong + 0x38 75 // Main day ambient volume %
+WRITE_ASCII ofsSong + 0x3c AR_0100N // Main night ambient 1
+WRITE_ASCII ofsSong + 0x44 AR_0100N // Main night ambient 2
+WRITE_LONG ofsSong + 0x4c 75 // Main night ambient volume %
+WRITE_LONG ofsSong + 0x50 4 // Reverb
+
+SET water = RESOLVE_STR_REF (@300400)
+LPF ALTER_AREA_REGION
+    INT_VAR 
+	info_point = water
+    STR_VAR 
+	region_name = "g-water"
+END
+SET clock = RESOLVE_STR_REF (@300402)
+LPF ALTER_AREA_REGION
+    INT_VAR 
+	info_point = clock
+    STR_VAR 
+	region_name = "g-clock"
+END
+SET atena = RESOLVE_STR_REF (@300403)
+LPF ALTER_AREA_REGION
+    INT_VAR 
+	info_point = atena
+    STR_VAR 
+	region_name = "g-atena"
+END
+SET styx_o_sign = RESOLVE_STR_REF (@300405)
+LPF ALTER_AREA_REGION
+    INT_VAR 
+	info_point = styx_o_sign
+    STR_VAR 
+	region_name = "g-styx oarsmen"
+END
+SET cflag = RESOLVE_STR_REF (@300431)
+LPF ALTER_AREA_REGION
+    INT_VAR 
+	info_point = cflag
+    STR_VAR 
+	region_name = "g-cflag"
+END
+SET patients = RESOLVE_STR_REF (@300432)
+LPF ALTER_AREA_REGION
+    INT_VAR 
+	info_point = patients
+    STR_VAR 
+	region_name = "g-patients"
+END
+
+ADD_MAP_NOTE #1711 #2345 ~gray~ @302007 // apartament 
+ADD_MAP_NOTE #1366 #627 ~gray~ @302004 // to zaddfum
+ADD_MAP_NOTE #4735 #3790 ~gray~ @302005 // to beachside
+ADD_MAP_NOTE #5052 #923 ~gray~ @302008 // to courtyyard
+ADD_MAP_NOTE #250 #1283 ~gray~ @302009 // styx oarsman
+ADD_MAP_NOTE #2722 #1713 ~gray~ @302010 // library
+ADD_MAP_NOTE #47 #1905 ~gray~ @302011 // to flooded area
+
+COPY ~%MOD_FOLDER%/are/arg-03.are~ ~override~								// arg-03 - Apartment
+
+// Type
+WRITE_LONG 0x14 BIT4 // AreaType/Flags
+
+// Script
+WRITE_ASCII 0x94 arg-03
+
+ADD_MAP_NOTE #670 #289 ~gray~ @302001 // residental area
+
+SET relief1 = RESOLVE_STR_REF(@400071)
+//SET relief2 = RESOLVE_STR_REF(@400073)
+COPY ~%MOD_FOLDER%/are/arg-FF.are~ ~override~								// arg-04/FF - Flooded area
+
+// Type
+WRITE_LONG 0x14 BIT4 + BIT7 + BIT8 // AreaType/Flags
+WRITE_LONG 0x48 BIT0 + BIT10 // AreaType/Location
+
+// Script
+WRITE_ASCII 0x94 arg-04
+
+// Music
+SET songDay = IDS_OF_SYMBOL (~songs~ ~G-THE_DITCH~)
+SET songNight = IDS_OF_SYMBOL (~songs~ ~G-THE_DITCH_NIGHT~)
+SET songBattle = IDS_OF_SYMBOL (~songs~ ~G-THE_DITCH_BATTLE~)
+READ_LONG 0xbc ofsSong 
+SET ofsDay = ofsSong
+SET ofsNight = ofsSong + 4
+SET ofsBattle = ofsSong + 0xc 
+WRITE_LONG ofsDay  %songDay% // Day song
+WRITE_LONG ofsNight  %songNight% // Night song
+WRITE_LONG ofsBattle  %songBattle% // Battle music
+
+WRITE_ASCII ofsSong + 0x28 AR_0100D // Main day ambient 1
+WRITE_ASCII ofsSong + 0x30 AR_0100D // Main day ambient 2
+WRITE_LONG ofsSong + 0x38 75 // Main day ambient volume %
+WRITE_ASCII ofsSong + 0x3c AR_0100N // Main night ambient 1
+WRITE_ASCII ofsSong + 0x44 AR_0100N // Main night ambient 2
+WRITE_LONG ofsSong + 0x4c 75 // Main night ambient volume %
+WRITE_LONG ofsSong + 0x50 4 // Reverb
+
+SET skele = RESOLVE_STR_REF (@300451)
+LPF ALTER_AREA_REGION
+    INT_VAR 
+	info_point = skele
+    STR_VAR 
+	region_name = "g-skele"
+END
+
+SET machine = RESOLVE_STR_REF (@300452)
+LPF ALTER_AREA_REGION
+    INT_VAR 
+	info_point = machine
+    STR_VAR 
+	region_name = "g-machine"
+END
+
+SET tower = RESOLVE_STR_REF (@300453)
+LPF ALTER_AREA_REGION
+    INT_VAR 
+	info_point = tower
+    STR_VAR 
+	region_name = "g-tower"
+END
+
+SET boarded = RESOLVE_STR_REF (@300454)
+LPF ALTER_AREA_REGION
+    INT_VAR 
+	info_point = boarded
+    STR_VAR 
+	region_name = "g-boarded"
+END
+
+ADD_MAP_NOTE #4644 #683 ~gray~ @302001 // to residental area
+ADD_MAP_NOTE #1048 #1753 ~gray~ @302012 // kuo tao lair
+ADD_MAP_NOTE #373 #1742 ~gray~ @302012 // kuo tao lair
+ADD_MAP_NOTE #3427 #1483 ~gray~ @302013 // statue
+ADD_MAP_NOTE #2083 #3146 ~gray~ @302014 // clock-tower
+
+COPY ~%MOD_FOLDER%/are/arg-06.are~ ~override~								// arg-06 - Zaddfum
+
+// Type
+WRITE_LONG 0x14 BIT4 + BIT7 // AreaType/Flags
+WRITE_LONG 0x48 BIT0 + BIT10 // AreaType/Location
+
+// Script
+WRITE_ASCII 0x94 arg-06
+
+// Music
+SET songDay = IDS_OF_SYMBOL (~songs~ ~G-THE_DITCH~)
+SET songNight = IDS_OF_SYMBOL (~songs~ ~G-THE_DITCH_NIGHT~)
+SET songBattle = IDS_OF_SYMBOL (~songs~ ~G-THE_DITCH_BATTLE~)
+READ_LONG 0xbc ofsSong 
+SET ofsDay = ofsSong
+SET ofsNight = ofsSong + 4
+SET ofsBattle = ofsSong + 0xc 
+WRITE_LONG ofsDay  %songDay% // Day song
+WRITE_LONG ofsNight  %songNight% // Night song
+WRITE_LONG ofsBattle  %songBattle% // Battle music
+
+WRITE_ASCII ofsSong + 0x28 AR_0100D // Main day ambient 1
+WRITE_ASCII ofsSong + 0x30 AR_0100D // Main day ambient 2
+WRITE_LONG ofsSong + 0x38 75 // Main day ambient volume %
+WRITE_ASCII ofsSong + 0x3c AR_0100N // Main night ambient 1
+WRITE_ASCII ofsSong + 0x44 AR_0100N // Main night ambient 2
+WRITE_LONG ofsSong + 0x4c 75 // Main night ambient volume %
+WRITE_LONG ofsSong + 0x50 4 // Reverb
+
+SET doorinfo = RESOLVE_STR_REF (@300448)
+LPF ALTER_AREA_REGION
+    INT_VAR 
+	info_point = doorinfo 	
+    STR_VAR 
+	region_name = "g-doorinfo"
+END
+
+ADD_MAP_NOTE #888 #1474 ~gray~ @302011 // to residental area
+ADD_MAP_NOTE #1574 #622 ~gray~ @302015 // rat & splat sign
+
+COPY ~%MOD_FOLDER%/are/arg-07.are~ ~override~								// arg-07 - Vertical Sea
+
+// Type
+WRITE_LONG 0x14 BIT4 + BIT7 + BIT8 // AreaType/Flags
+WRITE_LONG 0x48 BIT0 + BIT10 // AreaType/Location
+
+// Script
+WRITE_ASCII 0x94 arg-07
+
+// Music
+SET songDay = IDS_OF_SYMBOL (~songs~ ~G-THE_DITCH~)
+SET songNight = IDS_OF_SYMBOL (~songs~ ~G-THE_DITCH_NIGHT~)
+SET songBattle = IDS_OF_SYMBOL (~songs~ ~G-THE_DITCH_BATTLE~)
+READ_LONG 0xbc ofsSong 
+SET ofsDay = ofsSong
+SET ofsNight = ofsSong + 4
+SET ofsBattle = ofsSong + 0xc 
+WRITE_LONG ofsDay  %songDay% // Day song
+WRITE_LONG ofsNight  %songNight% // Night song
+WRITE_LONG ofsBattle  %songBattle% // Battle music
+
+WRITE_ASCII ofsSong + 0x28 AR_0100D // Main day ambient 1
+WRITE_ASCII ofsSong + 0x30 AR_0100D // Main day ambient 2
+WRITE_LONG ofsSong + 0x38 75 // Main day ambient volume %
+WRITE_ASCII ofsSong + 0x3c AR_0100N // Main night ambient 1
+WRITE_ASCII ofsSong + 0x44 AR_0100N // Main night ambient 2
+WRITE_LONG ofsSong + 0x4c 75 // Main night ambient volume %
+WRITE_LONG ofsSong + 0x50 4 // Reverb
+
+SET sea_1 = RESOLVE_STR_REF (@300408)
+LPF ALTER_AREA_REGION
+    INT_VAR 
+	info_point = sea_1
+    STR_VAR 
+	region_name = "g-sea1"
+END
+SET sea_3 = RESOLVE_STR_REF (@300408)
+LPF ALTER_AREA_REGION
+    INT_VAR 
+	info_point = sea_3
+    STR_VAR 
+	region_name = "g-sea3"
+END
+
+SET sea_4 = RESOLVE_STR_REF (@300466)
+LPF ALTER_AREA_REGION
+    INT_VAR 
+	info_point = sea_4
+    STR_VAR 
+	region_name = "g-blok"
+END
+
+
+ADD_MAP_NOTE #1204 #1847 ~gray~ @302001 // to residental area
+ADD_MAP_NOTE #72 #703 ~gray~ @302016 // kabatum res.
+ADD_MAP_NOTE #1489 #478 ~gray~ @302017 // theatr
+
+COPY ~%MOD_FOLDER%/are/arg-08.are~ ~override~								// arg-08 - Theater
+
+// Type
+WRITE_LONG 0x14 BIT4 + BIT7 // AreaType/Flags
+WRITE_LONG 0x48 BIT0 // AreaType/Location
+
+// Script
+WRITE_ASCII 0x94 arg-08
+
+// Music
+SET songDay = IDS_OF_SYMBOL (~songs~ ~G-THEATERGOING~)
+SET songNight = IDS_OF_SYMBOL (~songs~ ~G-THEATERGOING~)
+SET songBattle = IDS_OF_SYMBOL (~songs~ ~G-THE_DITCH_BATTLE~)
+READ_LONG 0xbc ofsSong 
+SET ofsDay = ofsSong
+SET ofsNight = ofsSong + 4
+SET ofsBattle = ofsSong + 0xc 
+WRITE_LONG ofsDay  %songDay% // Day song
+WRITE_LONG ofsNight  %songNight% // Night song
+WRITE_LONG ofsBattle  %songBattle% // Battle music
+
+WRITE_ASCII ofsSong + 0x28 AR_0100D // Main day ambient 1
+WRITE_ASCII ofsSong + 0x30 AR_0100D // Main day ambient 2
+WRITE_LONG ofsSong + 0x38 25 // Main day ambient volume %
+WRITE_ASCII ofsSong + 0x3c AR_0100N // Main night ambient 1
+WRITE_ASCII ofsSong + 0x44 AR_0100N // Main night ambient 2
+WRITE_LONG ofsSong + 0x4c 25 // Main night ambient volume %
+WRITE_LONG ofsSong + 0x50 4 // Reverb
+
+ADD_MAP_NOTE #246 #254 ~gray~ @302008 // to vertical sea
+
+COPY ~%MOD_FOLDER%/are/arg-bs.are~ ~override~								// arg-BS - Theater backstage
+
+// Type
+WRITE_LONG 0x14 BIT4 // AreaType/Flags
+WRITE_LONG 0x48 BIT0 // AreaType/Location
+
+// Script
+WRITE_ASCII 0x94 arg-bs
+
+// Music
+SET songDay = IDS_OF_SYMBOL (~songs~ ~G-THEATERGOING~)
+SET songNight = IDS_OF_SYMBOL (~songs~ ~G-THEATERGOING~)
+SET songBattle = IDS_OF_SYMBOL (~songs~ ~G-THE_DITCH_BATTLE~)
+READ_LONG 0xbc ofsSong 
+SET ofsDay = ofsSong
+SET ofsNight = ofsSong + 4
+SET ofsBattle = ofsSong + 0xc 
+WRITE_LONG ofsDay  %songDay% // Day song
+WRITE_LONG ofsNight  %songNight% // Night song
+WRITE_LONG ofsBattle  %songBattle% // Battle music
+
+WRITE_ASCII ofsSong + 0x28 AR_0611 // Main day ambient 1
+WRITE_ASCII ofsSong + 0x30 AR_0611 // Main day ambient 2
+WRITE_LONG ofsSong + 0x38 15 // Main day ambient volume %
+WRITE_ASCII ofsSong + 0x3c AR_0611 // Main night ambient 1
+WRITE_ASCII ofsSong + 0x44 AR_0611 // Main night ambient 2
+WRITE_LONG ofsSong + 0x4c 15 // Main night ambient volume %
+WRITE_LONG ofsSong + 0x50 4 // Reverb
+
+SET harp = RESOLVE_STR_REF (@300455)
+LPF ALTER_AREA_REGION
+    INT_VAR 
+	info_point = harp
+    STR_VAR 
+	region_name = "g-bsharp"
+END
+
+SET tools = RESOLVE_STR_REF (@300456)
+LPF ALTER_AREA_REGION
+    INT_VAR 
+	info_point = tools
+    STR_VAR 
+	region_name = "g-bstools"
+END
+
+SET stone = RESOLVE_STR_REF (@300457)
+LPF ALTER_AREA_REGION
+    INT_VAR 
+	info_point = stone
+    STR_VAR 
+	region_name = "g-bsstone"
+END
+
+ADD_MAP_NOTE #322 #200 ~gray~ @302023 // to the stage
+
+
+COPY ~%MOD_FOLDER%/are/arg-b2.are~ ~override~								// arg-b2 - Raid Theater
+
+// Type
+WRITE_LONG 0x14 BIT4 + BIT7 // AreaType/Flags
+WRITE_LONG 0x48 BIT0 // AreaType/Location
+
+// Script
+WRITE_ASCII 0x94 arg-b2
+
+// Music
+SET songDay = IDS_OF_SYMBOL (~songs~ ~G-FACTIONS~)
+SET songNight = IDS_OF_SYMBOL (~songs~ ~G-FACTIONS~)
+SET songBattle = IDS_OF_SYMBOL (~songs~ ~G-FACTIONS~)
+READ_LONG 0xbc ofsSong 
+SET ofsDay = ofsSong
+SET ofsNight = ofsSong + 4
+SET ofsBattle = ofsSong + 0xc 
+WRITE_LONG ofsDay  %songDay% // Day song
+WRITE_LONG ofsNight  %songNight% // Night song
+WRITE_LONG ofsBattle  %songBattle% // Battle music
+
+WRITE_ASCII ofsSong + 0x28 AR_0100D // Main day ambient 1
+WRITE_ASCII ofsSong + 0x30 AR_0100D // Main day ambient 2
+WRITE_LONG ofsSong + 0x38 25 // Main day ambient volume %
+WRITE_ASCII ofsSong + 0x3c AR_0100N // Main night ambient 1
+WRITE_ASCII ofsSong + 0x44 AR_0100N // Main night ambient 2
+WRITE_LONG ofsSong + 0x4c 25 // Main night ambient volume %
+WRITE_LONG ofsSong + 0x50 4 // Reverb
+
+ADD_MAP_NOTE #246 #254 ~gray~ @302008 // to vertical sea
+
+SET benches = RESOLVE_STR_REF (@300467)
+LPF ALTER_AREA_REGION
+    INT_VAR 
+	info_point = benches
+    STR_VAR 
+	region_name = "g-bbb2a"
+END
+
+SET benches2 = RESOLVE_STR_REF (@300467)
+LPF ALTER_AREA_REGION
+    INT_VAR 
+	info_point = benches2
+    STR_VAR 
+	region_name = "g-bbb2b"
+END
+
+COPY ~%MOD_FOLDER%/are/arg-b3.are~ ~override~								// arg-b2 - Raid Theater
+
+// Type
+WRITE_LONG 0x14 BIT4 + BIT7 // AreaType/Flags
+WRITE_LONG 0x48 BIT0 // AreaType/Location
+
+// Script
+WRITE_ASCII 0x94 arg-b3
+
+// Music
+SET songDay = IDS_OF_SYMBOL (~songs~ ~G-FACTIONS~)
+SET songNight = IDS_OF_SYMBOL (~songs~ ~G-FACTIONS~)
+SET songBattle = IDS_OF_SYMBOL (~songs~ ~G-FACTIONS~)
+READ_LONG 0xbc ofsSong 
+SET ofsDay = ofsSong
+SET ofsNight = ofsSong + 4
+SET ofsBattle = ofsSong + 0xc 
+WRITE_LONG ofsDay  %songDay% // Day song
+WRITE_LONG ofsNight  %songNight% // Night song
+WRITE_LONG ofsBattle  %songBattle% // Battle music
+
+WRITE_ASCII ofsSong + 0x28 AR_0100D // Main day ambient 1
+WRITE_ASCII ofsSong + 0x30 AR_0100D // Main day ambient 2
+WRITE_LONG ofsSong + 0x38 25 // Main day ambient volume %
+WRITE_ASCII ofsSong + 0x3c AR_0100N // Main night ambient 1
+WRITE_ASCII ofsSong + 0x44 AR_0100N // Main night ambient 2
+WRITE_LONG ofsSong + 0x4c 25 // Main night ambient volume %
+WRITE_LONG ofsSong + 0x50 4 // Reverb
+
+ADD_MAP_NOTE #246 #254 ~gray~ @302008 // to vertical sea
+
+SET symbol = RESOLVE_STR_REF (@300468)
+LPF ALTER_AREA_REGION
+    INT_VAR 
+	info_point = symbol
+    STR_VAR 
+	region_name = "g-b3a"
+END
+
+COPY ~%MOD_FOLDER%/are/arg-09.are~ ~override~								// arg-09 - S. Falls
+
+// Type
+WRITE_LONG 0x14 BIT4 + BIT7 // AreaType/Flags
+WRITE_LONG 0x48 BIT0 + BIT10 // AreaType/Location
+
+// Script
+WRITE_ASCII 0x94 arg-09
+
+// Music
+SET songDay = IDS_OF_SYMBOL (~songs~ ~G-THE_DITCH~)
+SET songNight = IDS_OF_SYMBOL (~songs~ ~G-THE_DITCH_NIGHT~)
+SET songBattle = IDS_OF_SYMBOL (~songs~ ~G-THE_DITCH_BATTLE~)
+READ_LONG 0xbc ofsSong 
+SET ofsDay = ofsSong
+SET ofsNight = ofsSong + 4
+SET ofsBattle = ofsSong + 0xc 
+WRITE_LONG ofsDay  %songDay% // Day song
+WRITE_LONG ofsNight  %songNight% // Night song
+WRITE_LONG ofsBattle  %songBattle% // Battle music
+
+WRITE_ASCII ofsSong + 0x28 AR_0100D // Main day ambient 1
+WRITE_ASCII ofsSong + 0x30 AR_0100D // Main day ambient 2
+WRITE_LONG ofsSong + 0x38 75 // Main day ambient volume %
+WRITE_ASCII ofsSong + 0x3c AR_0100N // Main night ambient 1
+WRITE_ASCII ofsSong + 0x44 AR_0100N // Main night ambient 2
+WRITE_LONG ofsSong + 0x4c 75 // Main night ambient volume %
+WRITE_LONG ofsSong + 0x50 4 // Reverb
+
+SET blossom = RESOLVE_STR_REF (@300409)
+LPF ALTER_AREA_REGION
+    INT_VAR 
+	info_point = blossom
+    STR_VAR 
+	region_name = "g-flowers"
+END
+SET kaskade = RESOLVE_STR_REF (@300410)
+LPF ALTER_AREA_REGION
+    INT_VAR 
+	info_point = kaskade
+    STR_VAR 
+	region_name = "g-flow"
+END
+SET symbol = RESOLVE_STR_REF (@300416)
+LPF ALTER_AREA_REGION
+    INT_VAR 
+	info_point = symbol
+    STR_VAR 
+	region_name = "g-symbol"
+END
+
+ADD_MAP_NOTE #2601 #326 ~gray~ @302005 // to beachside
+
+COPY ~%MOD_FOLDER%/are/arg-10.are~ ~override~								// arg-10 Mt. Nemezia: Peak
+
+// Type
+WRITE_LONG 0x14 BIT4 + BIT8 // AreaType/Flags
+//WRITE_LONG 0x48 BIT5 // AreaType/Location
+// Script
+WRITE_ASCII 0x94 arg-10
+
+// Music
+SET songDay = IDS_OF_SYMBOL (~songs~ ~G-CANIA~)
+SET songNight = IDS_OF_SYMBOL (~songs~ ~G-CANIA~)
+SET songBattle = IDS_OF_SYMBOL (~songs~ ~G-CANIA_BATTLE~)
+READ_LONG 0xbc ofsSong 
+SET ofsDay = ofsSong
+SET ofsNight = ofsSong + 4
+SET ofsBattle = ofsSong + 0xc 
+WRITE_LONG ofsDay  %songDay% // Day song
+WRITE_LONG ofsNight  %songNight% // Night song
+WRITE_LONG ofsBattle  %songBattle% // Battle music
+
+WRITE_ASCII ofsSong + 0x28 g-_1100 // Main day ambient 1
+WRITE_ASCII ofsSong + 0x30 g-_1100 // Main day ambient 2
+WRITE_LONG ofsSong + 0x38 75 // Main day ambient volume %
+WRITE_ASCII ofsSong + 0x3c g-_1100 // Main night ambient 1
+WRITE_ASCII ofsSong + 0x44 g-_1100 // Main night ambient 2
+WRITE_LONG ofsSong + 0x4c 75 // Main night ambient volume %
+WRITE_LONG ofsSong + 0x50 4 // Reverb
+
+SET arch = RESOLVE_STR_REF (@300427)
+LPF ALTER_AREA_REGION
+    INT_VAR 
+	info_point = arch
+    STR_VAR 
+	region_name = "g-luk"
+END
+SET tower = RESOLVE_STR_REF (@300428)
+LPF ALTER_AREA_REGION
+    INT_VAR 
+	info_point = tower
+    STR_VAR 
+	region_name = "g-cos"
+END
+SET skull = RESOLVE_STR_REF (@300429)
+LPF ALTER_AREA_REGION
+    INT_VAR 
+	info_point = skull
+    STR_VAR 
+	region_name = "g-skull"
+END
+SET mephistar = RESOLVE_STR_REF (@300430)
+LPF ALTER_AREA_REGION
+    INT_VAR 
+	info_point = mephistar
+    STR_VAR 
+	region_name = "g-cos2"
+END
+
+//Notes
+//SAY 0xccb @302021 // to?
+
+SET fortepian = RESOLVE_STR_REF(@400096)
+COPY ~%MOD_FOLDER%/are/arg-e1.are~ ~override~								// arg-e1 - Kabatum res.
+
+// Type
+WRITE_LONG 0x14 BIT4 + BIT7 // AreaType/Flags
+
+// Script
+WRITE_ASCII 0x94 arg-e1
+
+// Music
+SET songDay = IDS_OF_SYMBOL (~songs~ ~G-ANGEL_IN_SLUMS~)
+SET songNight = IDS_OF_SYMBOL (~songs~ ~G-ANGEL_IN_SLUMS~)
+READ_LONG 0xbc ofsSong 
+SET ofsDay = ofsSong
+SET ofsNight = ofsSong + 4
+WRITE_LONG ofsDay  %songDay% // Day song
+WRITE_LONG ofsNight  %songNight% // Night song
+WRITE_LONG ofsSong + 0xc 28 // Battle music
+
+WRITE_ASCII ofsSong + 0x28 AR_0100D // Main day ambient 1
+WRITE_ASCII ofsSong + 0x30 AR_0100D // Main day ambient 2
+WRITE_LONG ofsSong + 0x38 25 // Main day ambient volume %
+WRITE_ASCII ofsSong + 0x3c AR_0100N // Main night ambient 1
+WRITE_ASCII ofsSong + 0x44 AR_0100N // Main night ambient 2
+WRITE_LONG ofsSong + 0x4c 25 // Main night ambient volume %
+WRITE_LONG ofsSong + 0x50 2 // Reverb
+
+SET gyr1 = RESOLVE_STR_REF (@300411)
+LPF ALTER_AREA_REGION
+    INT_VAR 
+	info_point = gyr1
+    STR_VAR 
+	region_name = "g-gyr1"
+END
+SET gyr2 = RESOLVE_STR_REF (@300412)
+LPF ALTER_AREA_REGION
+    INT_VAR 
+	info_point = gyr2
+    STR_VAR 
+	region_name = "g-gyr2"
+END
+
+SET inner = RESOLVE_STR_REF (@300449)
+LPF ALTER_AREA_REGION
+    INT_VAR 
+	info_point = inner
+    STR_VAR 
+	region_name = "g-inner"
+END
+
+ADD_MAP_NOTE #829 #1504 ~gray~ @302008 // to Courtyard
+
+  LPF fj_are_structure
+  INT_VAR
+  fj_type = 1
+  fj_cursor_idx	     = 8
+  fj_speaker_strref = %fortepian%
+  fj_flags = BIT9 + BIT10
+  fj_alt_x = 938
+  fj_alt_y = 1125
+  fj_loc_x = 893
+  fj_loc_y = 1084
+  fj_box_left     = 753
+  fj_box_top      = 1013
+  fj_box_right    = 928
+  fj_box_bottom   = 1169
+  fj_vertex_0         = 853 + (1150 << 16)
+  fj_vertex_1         = 877 + (1169 << 16)
+  fj_vertex_2         = 928 + (1079 << 16)
+  fj_vertex_3         = 915 + (1070 << 16)
+  fj_vertex_4         = 913 + (1057 << 16)
+  fj_vertex_5         = 879 + (1044 << 16)
+  fj_vertex_6         = 886 + (1025 << 16)
+  fj_vertex_7         = 860 + (1013 << 16)
+  fj_vertex_8         = 819 + (1035 << 16)
+  fj_vertex_9         = 752 + (1027 << 16)
+  fj_vertex_10         = 794 + (1055 << 16)
+  fj_vertex_11         = 820 + (1063 << 16)
+  fj_vertex_12         = 851 + (1087 << 16)
+  fj_vertex_13         = 857 + (1108 << 16)
+  fj_vertex_14         = 858 + (1133 << 16)
+  STR_VAR
+  fj_structure_type = ~region~
+  fj_name = ~g-piano~
+  fj_dialog = ~g-bbd158~
+  END 
+  BUT_ONLY
+
+COPY ~%MOD_FOLDER%/are/arg-e2.are~ ~override~								// arg-e2 - Rat temple
+
+// Type
+WRITE_LONG 0x14 BIT4 + BIT8 // AreaType/Flags
+WRITE_LONG 0x48 BIT0 // AreaType/Location
+
+// Script
+WRITE_ASCII 0x94 arg-e2
+
+// Music
+SET songDay = IDS_OF_SYMBOL (~songs~ ~G-WERETAT_CRYPT~)
+SET songNight = IDS_OF_SYMBOL (~songs~ ~G-WERETAT_CRYPT~)
+SET songBattle = IDS_OF_SYMBOL (~songs~ ~G-WERETAT_TEMPLE~)
+READ_LONG 0xbc ofsSong 
+SET ofsDay = ofsSong
+SET ofsNight = ofsSong + 4
+SET ofsBattle = ofsSong + 0xc 
+WRITE_LONG ofsDay  %songDay% // Day song
+WRITE_LONG ofsNight  %songNight% // Night song
+WRITE_LONG ofsBattle  %songBattle% // Battle music
+
+WRITE_LONG ofsSong + 0x50 2 // Reverb
+
+SET ratgod = RESOLVE_STR_REF (@300413)
+LPF ALTER_AREA_REGION
+    INT_VAR 
+	info_point = ratgod
+    STR_VAR 
+	region_name = "g-ratgod"
+END
+
+COPY ~%MOD_FOLDER%/are/arg-e3.are~ ~override~								// arg-e3 - Styx O. upper
+
+// Type
+WRITE_LONG 0x14 BIT4 + BIT7 // AreaType/Flags
+WRITE_LONG 0x48 BIT0 + BIT10 // AreaType/Location
+
+// Script
+WRITE_ASCII 0x94 arg-e3
+
+// Music
+SET songDay = IDS_OF_SYMBOL (~songs~ ~G-KNIFE_IN_THE_RIVER~)
+SET songNight = IDS_OF_SYMBOL (~songs~ ~G-STYX_OARSMAN~)
+SET songBattle = IDS_OF_SYMBOL (~songs~ ~G-THE_DITCH_BATTLE~)
+READ_LONG 0xbc ofsSong 
+SET ofsDay = ofsSong
+SET ofsNight = ofsSong + 4
+SET ofsBattle = ofsSong + 0xc 
+WRITE_LONG ofsDay  %songDay% // Day song
+WRITE_LONG ofsNight  %songNight% // Night song
+WRITE_LONG ofsBattle  %songBattle% // Battle music
+
+WRITE_ASCII ofsSong + 0x28 G-M08A // Main day ambient 1
+WRITE_ASCII ofsSong + 0x30 G-M08A // Main day ambient 2
+WRITE_LONG ofsSong + 0x38 75 // Main day ambient volume %
+WRITE_ASCII ofsSong + 0x3c G-M08A // Main night ambient 1
+WRITE_ASCII ofsSong + 0x44 G-M08A // Main night ambient 2
+WRITE_LONG ofsSong + 0x4c 75 // Main night ambient volume %
+WRITE_LONG ofsSong + 0x50 1 // Reverb
+
+SET sail = RESOLVE_STR_REF (@300414)
+LPF ALTER_AREA_REGION
+    INT_VAR 
+	info_point = sail
+    STR_VAR 
+	region_name = "g-sail"
+END
+
+ADD_MAP_NOTE #1399 #564 ~gray~ @302018 // styx oarsmen 1st floor
+
+COPY ~%MOD_FOLDER%/are/arg-e4.are~ ~override~								// arg-e4 - flooded house at ff
+
+// Type
+WRITE_LONG 0x14 BIT4 // AreaType/Flags
+
+// Script
+WRITE_ASCII 0x94 arg-e4
+
+// Music
+SET songDay = IDS_OF_SYMBOL (~songs~ ~G-FISH_PEOPLE~)
+SET songNight = IDS_OF_SYMBOL (~songs~ ~G-FISH_PEOPLE~)
+READ_LONG 0xbc ofsSong 
+SET ofsDay = ofsSong
+SET ofsNight = ofsSong + 4
+WRITE_LONG ofsDay  %songDay% // Day song
+WRITE_LONG ofsNight  %songNight% // Night song
+WRITE_LONG ofsSong + 0xc 28 // Battle music
+
+WRITE_ASCII ofsSong + 0x28 AM_0101G // Main day ambient 1
+WRITE_ASCII ofsSong + 0x30 AM_0101G // Main day ambient 2
+WRITE_LONG ofsSong + 0x38 75 // Main day ambient volume %
+WRITE_ASCII ofsSong + 0x3c AM_0101G // Main night ambient 1
+WRITE_ASCII ofsSong + 0x44 AM_0101G // Main night ambient 2
+WRITE_LONG ofsSong + 0x4c 75 // Main night ambient volume %
+WRITE_LONG ofsSong + 0x50 2 // Reverb
+
+ADD_MAP_NOTE #838 #190 ~gray~ @302011 // fooded area
+
+COPY ~%MOD_FOLDER%/are/arg-e5.are~ ~override~								// arg-e5 - Rat Splat (destroyed)
+
+// Type
+WRITE_LONG 0x14 BIT4 + BIT7 // AreaType/Flags
+WRITE_LONG 0x48 BIT0 // AreaType/Location
+
+// Script
+WRITE_ASCII 0x94 arg-e5
+
+// Music
+SET songDay = IDS_OF_SYMBOL (~songs~ ~G-KNIFE_IN_THE_RIVER~)
+SET songNight = IDS_OF_SYMBOL (~songs~ ~G-THE_BLACK_SAIL~)
+READ_LONG 0xbc ofsSong 
+SET ofsDay = ofsSong
+SET ofsNight = ofsSong + 4
+WRITE_LONG ofsDay  %songDay% // Day song
+WRITE_LONG ofsNight  %songNight% // Night song
+
+WRITE_ASCII ofsSong + 0x28 AM_0101O // Main day ambient 1
+WRITE_ASCII ofsSong + 0x30 AM_0101O // Main day ambient 2
+WRITE_LONG ofsSong + 0x38 70 // Main day ambient volume %
+WRITE_ASCII ofsSong + 0x3c AM_0101O // Main night ambient 1
+WRITE_ASCII ofsSong + 0x44 AM_0101O // Main night ambient 2
+WRITE_LONG ofsSong + 0x4c 70 // Main night ambient volume %
+WRITE_LONG ofsSong + 0x50 1 // Reverb
+
+SET fragilet = RESOLVE_STR_REF (@300450)
+LPF ALTER_AREA_REGION
+    INT_VAR 
+	info_point = fragilet
+    STR_VAR 
+	region_name = "g-fragilet"
+END
+
+
+ADD_MAP_NOTE #271 #1299 ~gray~ @302004 // to zaddfum trestle
+
+
+
+COPY ~%MOD_FOLDER%/are/arg-e6.are~ ~override~								// arg-e6 - Library
+
+// Type
+WRITE_LONG 0x14 BIT4 + BIT7 // AreaType/Flags
+
+// Script
+WRITE_ASCII 0x94 arg-e6
+
+// Music
+SET songDay = IDS_OF_SYMBOL (~songs~ ~G-FACTIONSP~)
+SET songNight = IDS_OF_SYMBOL (~songs~ ~G-FACTIONSP~)
+SET songBattle = IDS_OF_SYMBOL (~songs~ ~G-THE_DITCH_BATTLE~)
+READ_LONG 0xbc ofsSong 
+SET ofsDay = ofsSong
+SET ofsNight = ofsSong + 4
+SET ofsBattle = ofsSong + 0xc 
+WRITE_LONG ofsDay  %songDay% // Day song
+WRITE_LONG ofsNight  %songNight% // Night song
+WRITE_LONG ofsBattle  %songBattle% // Battle music
+
+WRITE_ASCII ofsSong + 0x28 AM_0205A // Main day ambient 1
+WRITE_ASCII ofsSong + 0x30 AM_0205B // Main day ambient 2
+WRITE_LONG ofsSong + 0x38 50 // Main day ambient volume %
+WRITE_ASCII ofsSong + 0x3c AM_0305 // Main night ambient 1
+WRITE_ASCII ofsSong + 0x44 AM_0305 // Main night ambient 2
+WRITE_LONG ofsSong + 0x4c 50 // Main night ambient volume %
+WRITE_LONG ofsSong + 0x50 1 // Reverb
+
+SET books = RESOLVE_STR_REF (@300415)
+LPF ALTER_AREA_REGION
+    INT_VAR 
+	info_point = books
+    STR_VAR 
+	region_name = "g-books"
+END
+
+ADD_MAP_NOTE #569 #1243 ~gray~ @302001 // residential area
+
+COPY ~%MOD_FOLDER%/are/arg-e7.are~ ~override~								// arg-e7 - Doomguard Ambush
+
+// Type
+WRITE_LONG 0x14 BIT4 + BIT7 // AreaType/Flags
+WRITE_LONG 0x48 BIT3 + BIT10 // AreaType/Location
+
+// Script
+WRITE_ASCII 0x94 arg-e7
+
+// Music
+SET songDay = IDS_OF_SYMBOL (~songs~ ~FACTIONS~)
+SET songNight = IDS_OF_SYMBOL (~songs~ ~FACTIONS~)
+READ_LONG 0xbc ofsSong 
+SET ofsDay = ofsSong
+SET ofsNight = ofsSong + 4
+WRITE_LONG ofsDay  %songDay% // Day song
+WRITE_LONG ofsNight  %songNight% // Night song
+
+
+WRITE_ASCII ofsSong + 0x28 AR_0900 // Main day ambient 1
+WRITE_ASCII ofsSong + 0x30 AR_0900 // Main day ambient 2
+WRITE_LONG ofsSong + 0x38 75 // Main day ambient volume %
+WRITE_ASCII ofsSong + 0x3c AR_0900 // Main night ambient 1
+WRITE_ASCII ofsSong + 0x44 AR_0900 // Main night ambient 2
+WRITE_LONG ofsSong + 0x4c 75 // Main night ambient volume %
+WRITE_LONG ofsSong + 0x50 1 // Reverb
+
+COPY ~%MOD_FOLDER%/are/arg-d1.are~ ~override~								// arg-d1 - Doomguard Ambush - aftermath
+
+//Type
+WRITE_LONG 0x14 BIT4 + BIT7 // AreaType/Flags
+WRITE_LONG 0x48 BIT3 + BIT10 // AreaType/Location
+
+//Script
+WRITE_ASCII 0x94 arg-d1
+
+//Music
+SET songDay = IDS_OF_SYMBOL (~songs~ ~G-FACTIONS1~)
+SET songNight = IDS_OF_SYMBOL (~songs~ ~G-FACTIONS1~)
+SET songBattle = IDS_OF_SYMBOL (~songs~ ~G-FACTIONS~)
+READ_LONG 0xbc ofsSong
+SET ofsDay = ofsSong
+SET ofsNight = ofsSong + 4
+SET ofsBattle = ofsSong + 0xc 
+WRITE_LONG ofsDay  %songDay% // Day song
+WRITE_LONG ofsNight  %songNight% // Night song
+WRITE_LONG ofsBattle  %songBattle% // Battle music
+
+WRITE_ASCII ofsSong + 0x28 AR_1501 // Main day ambient 1
+WRITE_ASCII ofsSong + 0x30 AR_1501 // Main day ambient 2
+WRITE_LONG ofsSong + 0x38 75 // Main day ambient volume %
+WRITE_ASCII ofsSong + 0x3c AR_1501 // Main night ambient 1
+WRITE_ASCII ofsSong + 0x44 AR_1501 // Main night ambient 2
+WRITE_LONG ofsSong + 0x4c 75 // Main night ambient volume %
+WRITE_LONG ofsSong + 0x50 1 // Reverb
+
+
+COPY ~%MOD_FOLDER%/are/arg-r1.are~ ~override~								// arg-r1 - enc.
+
+// Type
+WRITE_LONG 0x14 BIT0 + BIT1 + BIT4 + BIT8 // AreaType/Flags
+WRITE_LONG 0x48 BIT0 + BIT10 // AreaType/Location
+
+// Script
+WRITE_ASCII 0x94 arg-r1
+
+// Music
+SET songDay = IDS_OF_SYMBOL (~songs~ ~G-RIBCAGE~)
+SET songNight = IDS_OF_SYMBOL (~songs~ ~G-RIBCAGE~)
+SET songBattle = IDS_OF_SYMBOL (~songs~ ~G-THE_DITCH_BATTLE~)
+READ_LONG 0xbc ofsSong 
+SET ofsDay = ofsSong
+SET ofsNight = ofsSong + 4
+SET ofsBattle = ofsSong + 0xc 
+WRITE_LONG ofsDay  %songDay% // Day song
+WRITE_LONG ofsNight  %songNight% // Night song
+WRITE_LONG ofsBattle  %songBattle% // Battle music
+
+WRITE_ASCII ofsSong + 0x28 AM_0101I // Main day ambient 1
+WRITE_ASCII ofsSong + 0x30 AM_0101I // Main day ambient 2
+WRITE_LONG ofsSong + 0x38 75 // Main day ambient volume %
+WRITE_ASCII ofsSong + 0x3c AM_0101I // Main night ambient 1
+WRITE_ASCII ofsSong + 0x44 AM_0101I // Main night ambient 2
+WRITE_LONG ofsSong + 0x4c 75 // Main night ambient volume %
+WRITE_LONG ofsSong + 0x50 4 // Reverb
+
+COPY ~%MOD_FOLDER%/are/arg-r2.are~ ~override~								// arg-r2 - enc.
+
+// Type
+WRITE_LONG 0x14 BIT0 + BIT1 + BIT4 + BIT8 // AreaType/Flags
+WRITE_LONG 0x48 BIT0 + BIT10 // AreaType/Location
+
+// Script
+WRITE_ASCII 0x94 arg-r2
+
+// Music
+SET songDay = IDS_OF_SYMBOL (~songs~ ~G-RIBCAGE~)
+SET songNight = IDS_OF_SYMBOL (~songs~ ~G-RIBCAGE~)
+SET songBattle = IDS_OF_SYMBOL (~songs~ ~G-THE_DITCH_BATTLE~)
+READ_LONG 0xbc ofsSong 
+SET ofsDay = ofsSong
+SET ofsNight = ofsSong + 4
+SET ofsBattle = ofsSong + 0xc 
+WRITE_LONG ofsDay  %songDay% // Day song
+WRITE_LONG ofsNight  %songNight% // Night song
+WRITE_LONG ofsBattle  %songBattle% // Battle music
+
+WRITE_ASCII ofsSong + 0x28 AM_0101I // Main day ambient 1
+WRITE_ASCII ofsSong + 0x30 AM_0101I // Main day ambient 2
+WRITE_LONG ofsSong + 0x38 75 // Main day ambient volume %
+WRITE_ASCII ofsSong + 0x3c AM_0101I // Main night ambient 1
+WRITE_ASCII ofsSong + 0x44 AM_0101I // Main night ambient 2
+WRITE_LONG ofsSong + 0x4c 75 // Main night ambient volume %
+WRITE_LONG ofsSong + 0x50 4 // Reverb
+
+COPY ~%MOD_FOLDER%/are/arg-r3.are~ ~override~								// arg-r3 - enc.
+
+// Type
+WRITE_LONG 0x14 BIT0 + BIT1 + BIT4 + BIT8 // AreaType/Flags
+WRITE_LONG 0x48 BIT0 + BIT10 // AreaType/Location
+
+// Script
+WRITE_ASCII 0x94 arg-r3
+
+// Music
+SET songDay = IDS_OF_SYMBOL (~songs~ ~G-RIBCAGE~)
+SET songNight = IDS_OF_SYMBOL (~songs~ ~G-RIBCAGE~)
+SET songBattle = IDS_OF_SYMBOL (~songs~ ~G-THE_DITCH_BATTLE~)
+READ_LONG 0xbc ofsSong 
+SET ofsDay = ofsSong
+SET ofsNight = ofsSong + 4
+SET ofsBattle = ofsSong + 0xc 
+WRITE_LONG ofsDay  %songDay% // Day song
+WRITE_LONG ofsNight  %songNight% // Night song
+WRITE_LONG ofsBattle  %songBattle% // Battle music
+
+WRITE_ASCII ofsSong + 0x28 AM_0101I // Main day ambient 1
+WRITE_ASCII ofsSong + 0x30 AM_0101I // Main day ambient 2
+WRITE_LONG ofsSong + 0x38 75 // Main day ambient volume %
+WRITE_ASCII ofsSong + 0x3c AM_0101I // Main night ambient 1
+WRITE_ASCII ofsSong + 0x44 AM_0101I // Main night ambient 2
+WRITE_LONG ofsSong + 0x4c 75 // Main night ambient volume %
+WRITE_LONG ofsSong + 0x50 4 // Reverb
+
+COPY ~%MOD_FOLDER%/are/arg-r4.are~ ~override~								// arg-r4 - The Precarious Bridge
+
+// Type
+WRITE_LONG 0x14 BIT1 + BIT4 + BIT8 // AreaType/Flags
+WRITE_LONG 0x48 BIT0 + BIT10 // AreaType/Location
+
+// Script
+WRITE_ASCII 0x94 arg-e6
+
+// Music
+SET songDay = IDS_OF_SYMBOL (~songs~ ~RIBCAGE~)
+SET songNight = IDS_OF_SYMBOL (~songs~ ~RIBCAGE~)
+READ_LONG 0xbc ofsSong
+SET ofsDay = ofsSong
+SET ofsNight = ofsSong + 4
+WRITE_LONG ofsDay  %songDay% // Day song
+WRITE_LONG ofsNight  %songNight% // Night song
+
+
+WRITE_ASCII ofsSong + 0x28 AM_0101B // Main day ambient 1
+WRITE_ASCII ofsSong + 0x30 AM_0101C // Main day ambient 2
+WRITE_LONG ofsSong + 0x38 75 // Main day ambient volume %
+WRITE_ASCII ofsSong + 0x3c AM_0101N // Main night ambient 1
+WRITE_ASCII ofsSong + 0x44 AM_0101N // Main night ambient 2
+WRITE_LONG ofsSong + 0x4c 75 // Main night ambient volume %
+WRITE_LONG ofsSong + 0x50 1 // Reverb
+
+SET harm = RESOLVE_STR_REF (@300436)
+LPF ALTER_AREA_REGION
+    INT_VAR
+	info_point = harm
+    STR_VAR
+	region_name = "g-r4harm"
+END
+
+SET life = RESOLVE_STR_REF (@300437)
+LPF ALTER_AREA_REGION
+    INT_VAR
+	info_point = life
+    STR_VAR
+	region_name = "g-r4life"
+END
+
+SET cart = RESOLVE_STR_REF (@300438)
+LPF ALTER_AREA_REGION
+    INT_VAR
+	info_point = cart
+    STR_VAR
+	region_name = "g-r4cart"
+END
+
+SET waste = RESOLVE_STR_REF (@300439)
+LPF ALTER_AREA_REGION
+    INT_VAR
+	info_point = waste
+    STR_VAR
+	region_name = "g-r4waste"
+END
+
+COPY ~%MOD_FOLDER%/are/arg-ek.are~ ~override~								// arg-ek - Knife in the river
+
+// Type
+WRITE_LONG 0x14 BIT1 + BIT4 + BIT8 // AreaType/Flags
+WRITE_LONG 0x48 BIT0 + BIT10 // AreaType/Location
+
+// Script
+WRITE_ASCII 0x94 arg-ek
+
+// Music
+SET songDay = IDS_OF_SYMBOL (~songs~ ~G-THE_DITCH~)
+SET songNight = IDS_OF_SYMBOL (~songs~ ~G-THE_DITCH_NIGHT~)
+SET songBattle = IDS_OF_SYMBOL (~songs~ ~G-THE_DITCH_BATTLE~)
+READ_LONG 0xbc ofsSong
+SET ofsDay = ofsSong
+SET ofsNight = ofsSong + 4
+SET ofsBattle = ofsSong + 0xc 
+WRITE_LONG ofsDay  %songDay% // Day song
+WRITE_LONG ofsNight  %songNight% // Night song
+WRITE_LONG ofsBattle  %songBattle% // Battle music
+
+WRITE_ASCII ofsSong + 0x28 AM_0101B // Main day ambient 1
+WRITE_ASCII ofsSong + 0x30 AM_0101C // Main day ambient 2
+WRITE_LONG ofsSong + 0x38 75 // Main day ambient volume %
+WRITE_ASCII ofsSong + 0x3c AM_0101N // Main night ambient 1
+WRITE_ASCII ofsSong + 0x44 AM_0101N // Main night ambient 2
+WRITE_LONG ofsSong + 0x4c 75 // Main night ambient volume %
+WRITE_LONG ofsSong + 0x50 1 // Reverb
+
+SET knife = RESOLVE_STR_REF (@300463)
+LPF ALTER_AREA_REGION
+    INT_VAR
+	info_point = knife
+    STR_VAR
+	region_name = "g-ekknife"
+END
+
+COPY ~%MOD_FOLDER%/are/arg-ep.are~ ~override~								// arg-ep - Mad Wizard Pipeline
+
+// Type
+WRITE_LONG 0x14 BIT1 + BIT4 + BIT8 // AreaType/Flags
+WRITE_LONG 0x48 BIT0 + BIT10 // AreaType/Location
+
+// Script
+WRITE_ASCII 0x94 arg-ep
+
+// Music
+SET songDay = IDS_OF_SYMBOL (~songs~ ~G-WERETAT_CRYPT~)
+SET songNight = IDS_OF_SYMBOL (~songs~ ~G-WERETAT_CRYPT~)
+SET songBattle = IDS_OF_SYMBOL (~songs~ ~G-WERETAT_TEMPLE~)
+READ_LONG 0xbc ofsSong
+SET ofsDay = ofsSong
+SET ofsNight = ofsSong + 4
+SET ofsBattle = ofsSong + 0xc 
+WRITE_LONG ofsDay  %songDay% // Day song
+WRITE_LONG ofsNight  %songNight% // Night song
+WRITE_LONG ofsBattle  %songBattle% // Battle music
+
+WRITE_ASCII ofsSong + 0x28 AM_0101B // Main day ambient 1
+WRITE_ASCII ofsSong + 0x30 AM_0101C // Main day ambient 2
+WRITE_LONG ofsSong + 0x38 75 // Main day ambient volume %
+WRITE_ASCII ofsSong + 0x3c AM_0101N // Main night ambient 1
+WRITE_ASCII ofsSong + 0x44 AM_0101N // Main night ambient 2
+WRITE_LONG ofsSong + 0x4c 75 // Main night ambient volume %
+WRITE_LONG ofsSong + 0x50 1 // Reverb
+
+SET valve = RESOLVE_STR_REF (@300465)
+LPF ALTER_AREA_REGION
+    INT_VAR
+	info_point = valve
+    STR_VAR
+	region_name = "g-ekvalve"
+END
+
+SET machines = RESOLVE_STR_REF (@300464)
+LPF ALTER_AREA_REGION
+    INT_VAR
+	info_point = machines
+    STR_VAR
+	region_name = "ekmachines"
+END
+
+
+
+
+COPY ~%MOD_FOLDER%/are/arg-p1.are~ ~override~								// arg-p1 - The Fated Eartberg
+
+WRITE_LONG 0x14 BIT2 + BIT4 + BIT7 // AreaType/Flags
+WRITE_LONG 0x48 BIT10 // AreaType/Location
+
+// Music
+SET songDay = IDS_OF_SYMBOL (~songs~ ~G-FRIDUR~)
+SET songNight = IDS_OF_SYMBOL (~songs~ ~G-FRIDUR~)
+SET songBattle = IDS_OF_SYMBOL (~songs~ ~G-SUMARBUSTADIR~)
+READ_LONG 0xbc ofsSong 
+SET ofsDay = ofsSong
+SET ofsNight = ofsSong + 4
+SET ofsBattle = ofsSong + 0xc 
+WRITE_LONG ofsDay  %songDay% // Day song
+WRITE_LONG ofsNight  %songNight% // Night song
+WRITE_LONG ofsBattle  %songBattle% // Battle music
+
+WRITE_ASCII ofsSong + 0x28 AM_0401E // Main day ambient 1
+WRITE_ASCII ofsSong + 0x30 AM_0401E // Main day ambient 2
+WRITE_LONG ofsSong + 0x38 75 // Main day ambient volume %
+WRITE_ASCII ofsSong + 0x3c AM_0401J // Main night ambient 1
+WRITE_ASCII ofsSong + 0x44 AM_0401J // Main night ambient 2
+WRITE_LONG ofsSong + 0x4c 75 // Main night ambient volume %
+WRITE_LONG ofsSong + 0x50 4 // Reverb
+
+SET hborg = RESOLVE_STR_REF (@300417)
+LPF ALTER_AREA_REGION
+    INT_VAR 
+	info_point = hborg
+    STR_VAR 
+	region_name = "g-himinborg"
+END
+SET odin = RESOLVE_STR_REF (@300418)
+LPF ALTER_AREA_REGION
+    INT_VAR 
+	info_point = odin
+    STR_VAR 
+	region_name = "g-odin"
+END
+
+WRITE_ASCII 0x94 arg-p1
+
+ADD_MAP_NOTE #1417 #1466 ~gray~ @302019 // rowan hall
+
+COPY ~%MOD_FOLDER%/are/arg-p2.are~ ~override~								// arg-p2 - Rowan Hall
+
+WRITE_LONG 0x14 BIT2 + BIT4 + BIT7 + BIT8 // AreaType/Flags
+
+// Script
+WRITE_ASCII 0x94 arg-p2
+
+// Music
+SET songDay = IDS_OF_SYMBOL (~songs~ ~G-WANAHEIM~)
+SET songNight = IDS_OF_SYMBOL (~songs~ ~G-WANAHEIM~)
+SET songBattle = IDS_OF_SYMBOL (~songs~ ~G-SUMARBUSTADIR~)
+READ_LONG 0xbc ofsSong 
+SET ofsDay = ofsSong
+SET ofsNight = ofsSong + 4
+SET ofsBattle = ofsSong + 0xc 
+WRITE_LONG ofsDay  %songDay% // Day song
+WRITE_LONG ofsNight  %songNight% // Night song
+WRITE_LONG ofsBattle  %songBattle% // Battle music
+
+WRITE_ASCII ofsSong + 0x28  AM_403J // Main day ambient 1
+WRITE_ASCII ofsSong + 0x30  AM_403J // Main day ambient 2
+WRITE_LONG ofsSong + 0x38 75 // Main day ambient volume %
+WRITE_ASCII ofsSong + 0x3c  AM_403J // Main night ambient 1
+WRITE_ASCII ofsSong + 0x44  AM_403J // Main night ambient 2
+WRITE_LONG ofsSong + 0x4c 75 // Main night ambient volume %
+WRITE_LONG ofsSong + 0x50 3 // Reverb
+
+SET baner1 = RESOLVE_STR_REF (@300419)
+LPF ALTER_AREA_REGION
+    INT_VAR 
+	info_point = baner1
+    STR_VAR 
+	region_name = "g-baner1"
+END
+SET baner2 = RESOLVE_STR_REF (@300419)
+LPF ALTER_AREA_REGION
+    INT_VAR 
+	info_point = baner2
+    STR_VAR 
+	region_name = "g-baner2"
+END
+SET baner3 = RESOLVE_STR_REF (@300419)
+LPF ALTER_AREA_REGION
+    INT_VAR 
+	info_point = baner3
+    STR_VAR 
+	region_name = "g-baner3"
+END
+SET wtits = RESOLVE_STR_REF (@300420)
+LPF ALTER_AREA_REGION
+    INT_VAR 
+	info_point = wtits
+    STR_VAR 
+	region_name = "g-cycki_walkirii"
+END
+SET stone = RESOLVE_STR_REF (@300421)
+LPF ALTER_AREA_REGION
+    INT_VAR 
+	info_point = stone
+    STR_VAR 
+	region_name = "g-kamien"
+END
+SET stove = RESOLVE_STR_REF (@300422)
+LPF ALTER_AREA_REGION
+    INT_VAR 
+	info_point = stove
+    STR_VAR 
+	region_name = "g-piecyk"
+END
+SET shield = RESOLVE_STR_REF (@300423)
+LPF ALTER_AREA_REGION
+    INT_VAR 
+	info_point = shield
+    STR_VAR 
+	region_name = "g-tarcza"
+END
+
+ADD_MAP_NOTE #1911 #1269 ~gray~ @302020 // To Eartberg
+
+COPY ~%MOD_FOLDER%/are/arg-p3.are~ ~override~								// arg-p3 - Death hole
+
+WRITE_LONG 0x14 BIT2 + BIT4 + BIT7 // AreaType/Flags
+
+READ_LONG 0xbc ofsSong 
+WRITE_ASCII ofsSong + 0x28 AM_0401B // Main day ambient 1
+WRITE_ASCII ofsSong + 0x30 AM_0401B // Main day ambient 2
+WRITE_LONG ofsSong + 0x38 50 // Main day ambient volume %
+WRITE_ASCII ofsSong + 0x3c AM_0401B // Main night ambient 1
+WRITE_ASCII ofsSong + 0x44 AM_0401B // Main night ambient 2
+WRITE_LONG ofsSong + 0x4c 50 // Main night ambient volume %
+WRITE_LONG ofsSong + 0x50 1 // Reverb
+
+
+SET body1 = RESOLVE_STR_REF (@300424)
+LPF ALTER_AREA_REGION
+    INT_VAR 
+	info_point = body1
+    STR_VAR 
+	region_name = "g-body1"
+END
+
+SET clck = RESOLVE_STR_REF (@300425)
+LPF ALTER_AREA_REGION
+    INT_VAR 
+	info_point = clck
+    STR_VAR 
+	region_name = "g-clck"
+END
+SET body3 = RESOLVE_STR_REF (@300426)
+LPF ALTER_AREA_REGION
+    INT_VAR 
+	info_point = body3
+    STR_VAR 
+	region_name = "g-body3"
+END
+
+ADD_MAP_NOTE #311 #827 ~gray~ @302021 // 
+
+COPY ~%MOD_FOLDER%/are/arg-p4.are~ ~override~								// arg-p4 - Celestia
+
+WRITE_LONG 0x14 BIT4 + BIT7 // AreaType/Flags
+
+// Script
+WRITE_ASCII 0x94 arg-p4
+
+// Music
+SET songDay = IDS_OF_SYMBOL (~songs~ ~G-GLASS_TARN~)
+SET songNight = IDS_OF_SYMBOL (~songs~ ~G-GLASS_TARN~)
+READ_LONG 0xbc ofsSong 
+SET ofsDay = ofsSong
+SET ofsNight = ofsSong + 4
+WRITE_LONG ofsDay  %songDay% // Day song
+WRITE_LONG ofsNight  %songNight% // Night song
+WRITE_LONG ofsSong + 0xc 29 // Battle music
+
+WRITE_ASCII ofsSong + 0x28  g-argp4 // Main day ambient 1
+WRITE_ASCII ofsSong + 0x30  g-argp4 // Main day ambient 2
+WRITE_LONG ofsSong + 0x38 83 // Main day ambient volume %
+WRITE_ASCII ofsSong + 0x3c  g-argp4 // Main night ambient 1
+WRITE_ASCII ofsSong + 0x44  g-argp4 // Main night ambient 2
+WRITE_LONG ofsSong + 0x4c 83 // Main night ambient volume %
+WRITE_LONG ofsSong + 0x50 4 // Reverb
+
+SET statue = RESOLVE_STR_REF (@300435)
+LPF ALTER_AREA_REGION
+    INT_VAR 
+	info_point = statue
+    STR_VAR 
+	region_name = "g-statue"
+END
+
+COPY ~%MOD_FOLDER%/are/arg-p5.are~ ~override~								// arg-p5 - Alfheim
+
+WRITE_LONG 0x14 BIT4 // AreaType/Flags
+WRITE_LONG 0x48 BIT10 // AreaType/Location
+
+// Music
+SET songDay = IDS_OF_SYMBOL (~songs~ ~G-FRIDUR~)
+SET songNight = IDS_OF_SYMBOL (~songs~ ~G-FRIDUR~)
+SET songBattle = IDS_OF_SYMBOL (~songs~ ~G-SUMARBUSTADIR~)
+READ_LONG 0xbc ofsSong 
+SET ofsDay = ofsSong
+SET ofsNight = ofsSong + 4
+SET ofsBattle = ofsSong + 0xc 
+WRITE_LONG ofsDay  %songDay% // Day song
+WRITE_LONG ofsNight  %songNight% // Night song
+WRITE_LONG ofsBattle  %songBattle% // Battle music
+
+WRITE_ASCII ofsSong + 0x28 AM_0401E // Main day ambient 1
+WRITE_ASCII ofsSong + 0x30 AM_0401E // Main day ambient 2
+WRITE_LONG ofsSong + 0x38 75 // Main day ambient volume %
+WRITE_ASCII ofsSong + 0x3c AM_0401J // Main night ambient 1
+WRITE_ASCII ofsSong + 0x44 AM_0401J // Main night ambient 2
+WRITE_LONG ofsSong + 0x4c 75 // Main night ambient volume %
+WRITE_LONG ofsSong + 0x50 4 // Reverb
+
+// Script
+WRITE_ASCII 0x94 arg-p5
+
+SET baner1 = RESOLVE_STR_REF (@300458)
+LPF ALTER_AREA_REGION
+    INT_VAR 
+	info_point = baner1
+    STR_VAR 
+	region_name = "G-p5info1"
+END
+SET baner2 = RESOLVE_STR_REF (@300459)
+LPF ALTER_AREA_REGION
+    INT_VAR 
+	info_point = baner2
+    STR_VAR 
+	region_name = "G-p5info2"
+
+END
+
+SET baner3 = RESOLVE_STR_REF (@300459)
+LPF ALTER_AREA_REGION
+    INT_VAR 
+	info_point = baner3
+    STR_VAR 
+	region_name = "G-p5info3"
+
+END
+
+SET baner4 = RESOLVE_STR_REF (@300459)
+LPF ALTER_AREA_REGION
+    INT_VAR 
+	info_point = baner4
+    STR_VAR 
+	region_name = "G-p5info4"
+
+END
+
+SET baner5 = RESOLVE_STR_REF (@300459)
+LPF ALTER_AREA_REGION
+    INT_VAR 
+	info_point = baner5
+    STR_VAR 
+	region_name = "G-p5info5"
+
+END
+
+COPY ~%MOD_FOLDER%/are/arg-b1.are~ ~override~								// Battle graphic
+
+// Type
+WRITE_LONG 0x14 BIT4 + BIT7 // AreaType/Flags
+
+// Script
+WRITE_ASCII 0x94 arg-b1
+
+// Music
+SET songDay = IDS_OF_SYMBOL (~songs~ ~~)
+SET songNight = IDS_OF_SYMBOL (~songs~ ~~)
+SET songBattle = IDS_OF_SYMBOL (~songs~ ~~)
+READ_LONG 0xbc ofsSong
+SET ofsDay = ofsSong
+SET ofsNight = ofsSong + 4
+SET ofsBattle = ofsSong + 0xc
+WRITE_LONG ofsDay  %songDay% // Day song
+WRITE_LONG ofsNight  %songNight% // Night song
+WRITE_LONG ofsBattle  %songBattle% // Battle music
+WRITE_ASCII ofsSong + 0x28 AR_1300 // Main day ambient 1
+WRITE_ASCII ofsSong + 0x30 AR_1300 // Main day ambient 2
+WRITE_LONG ofsSong + 0x38 75 // Main day ambient volume %
+WRITE_ASCII ofsSong + 0x3c AR_1300 // Main night ambient 1
+WRITE_ASCII ofsSong + 0x44 AR_1300 // Main night ambient 2
+WRITE_LONG ofsSong + 0x4c 75 // Main night ambient volume %
+WRITE_LONG ofsSong + 0x50 4 // Reverb
+
+COPY ~%MOD_FOLDER%/are/arg-k1.are~ ~override~								// arg-k1 - Abandoned House
+
+// Type
+WRITE_LONG 0x14 BIT4 + BIT8 // AreaType/Flags
+WRITE_LONG 0x48 BIT0 // AreaType/Location
+
+// Script
+WRITE_ASCII 0x94 arg-k1
+
+// Music
+
+SET songDay = IDS_OF_SYMBOL (~songs~ ~G-FISH_PEOPLE~)
+SET songNight = IDS_OF_SYMBOL (~songs~ ~G-FISH_PEOPLE~)
+READ_LONG 0xbc ofsSong
+SET ofsDay = ofsSong
+SET ofsNight = ofsSong + 4
+WRITE_LONG ofsDay  %songDay% // Day song
+WRITE_LONG ofsNight  %songNight% // Night song
+WRITE_LONG ofsSong + 0xc 28 // Battle music
+
+WRITE_ASCII ofsSong + 0x28 AR_0101G // Main day ambient 1
+WRITE_ASCII ofsSong + 0x30 AR_0101G // Main day ambient 2
+WRITE_LONG ofsSong + 0x38 75 // Main day ambient volume %
+WRITE_ASCII ofsSong + 0x3c AR_0101G // Main night ambient 1
+WRITE_ASCII ofsSong + 0x44 AR_0101G // Main night ambient 2
+WRITE_LONG ofsSong + 0x4c 75 // Main night ambient volume %
+WRITE_LONG ofsSong + 0x50 2 // Reverb
+
+SET flood = RESOLVE_STR_REF (@300440)
+LPF ALTER_AREA_REGION
+    INT_VAR
+	info_point = flood
+    STR_VAR
+	region_name = "K1flood"
+END
+
+SET stair = RESOLVE_STR_REF (@300441)
+LPF ALTER_AREA_REGION
+    INT_VAR
+	info_point = stair
+    STR_VAR
+	region_name = "K1stair"
+END
+
+ADD_MAP_NOTE #545 #1429 ~gray~ @302011 // 
+ADD_MAP_NOTE #1267 #344 ~gray~ @302022 // 
+
+
+COPY ~%MOD_FOLDER%/are/arg-k2.are~ ~override~								// arg-k2 - Abandoned House (destroyed)
+
+// Type
+WRITE_LONG 0x14 BIT4 + BIT8 // AreaType/Flags
+WRITE_LONG 0x48 BIT0 // AreaType/Location
+
+// Script
+WRITE_ASCII 0x94 arg-k2
+
+// Music
+SET songDay = IDS_OF_SYMBOL (~songs~ ~G-FISH_PEOPLE~)
+SET songNight = IDS_OF_SYMBOL (~songs~ ~G-FISH_PEOPLE~)
+SET songBattle = IDS_OF_SYMBOL (~songs~ ~THE_DITCH_BATTLE~)
+READ_LONG 0xbc ofsSong 
+SET ofsDay = ofsSong
+SET ofsNight = ofsSong + 4
+SET ofsBattle = ofsSong + 0xc 
+WRITE_LONG ofsDay  %songDay% // Day song
+WRITE_LONG ofsNight  %songNight% // Night song
+WRITE_LONG ofsBattle  %songBattle% // Battle music
+
+WRITE_ASCII ofsSong + 0x28 AR_0101G // Main day ambient 1
+WRITE_ASCII ofsSong + 0x30 AR_0101G // Main day ambient 2
+WRITE_LONG ofsSong + 0x38 75 // Main day ambient volume %
+WRITE_ASCII ofsSong + 0x3c AR_0101G // Main night ambient 1
+WRITE_ASCII ofsSong + 0x44 AR_0101G // Main night ambient 2
+WRITE_LONG ofsSong + 0x4c 75 // Main night ambient volume %
+WRITE_LONG ofsSong + 0x50 2 // Reverb
+
+SET water = RESOLVE_STR_REF (@300442)
+LPF ALTER_AREA_REGION
+    INT_VAR
+	info_point = water
+    STR_VAR
+	region_name = "K2water"
+END
+ADD_MAP_NOTE #545 #1429 ~gray~ @302011
+
+COPY ~%MOD_FOLDER%/are/arg-kk.are~ ~override~								// arg-kk - KUO TOA LAIR
+
+// Type
+WRITE_LONG 0x14 BIT4 + BIT8 // AreaType/Flags
+WRITE_LONG 0x48 BIT0 // AreaType/Location
+
+// Script
+WRITE_ASCII 0x94 arg-kk
+
+// Music
+SET songDay = IDS_OF_SYMBOL (~songs~ ~G-FISH_PEOPLE~)
+SET songNight = IDS_OF_SYMBOL (~songs~ ~G-FISH_PEOPLE~)
+READ_LONG 0xbc ofsSong
+SET ofsDay = ofsSong
+SET ofsNight = ofsSong + 4
+WRITE_LONG ofsDay  %songDay% // Day song
+WRITE_LONG ofsNight  %songNight% // Night song
+WRITE_LONG ofsSong + 0xc 28 // Battle music
+WRITE_ASCII ofsSong + 0x28 AR_0101G // Main day ambient 1
+WRITE_ASCII ofsSong + 0x30 AR_0101G // Main day ambient 2
+WRITE_LONG ofsSong + 0x38 25 // Main day ambient volume %
+WRITE_ASCII ofsSong + 0x3c AR_0101G // Main night ambient 1
+WRITE_ASCII ofsSong + 0x44 AR_0101G // Main night ambient 2
+WRITE_LONG ofsSong + 0x4c 25 // Main night ambient volume %
+WRITE_LONG ofsSong + 0x50 2 // Reverb
+
+SET dirt = RESOLVE_STR_REF (@300443)
+LPF ALTER_AREA_REGION
+    INT_VAR
+	info_point = dirt
+    STR_VAR
+	region_name = "g-kkwater"
+END
+
+SET rubble = RESOLVE_STR_REF (@300444)
+LPF ALTER_AREA_REGION
+    INT_VAR
+	info_point = rubble
+    STR_VAR
+	region_name = "g-kkrubble"
+END
+
+SET boat = RESOLVE_STR_REF (@300445)
+LPF ALTER_AREA_REGION
+    INT_VAR
+	info_point = boat
+    STR_VAR
+	region_name = "g-kkboat"
+END
+
+SET statue = RESOLVE_STR_REF (@300446)
+LPF ALTER_AREA_REGION
+    INT_VAR
+	info_point = statue
+    STR_VAR
+	region_name = "g-kkstatue"
+END
+
+ADD_MAP_NOTE #262 #828 ~gray~ @302012 
+
+
+COPY ~%MOD_FOLDER%/are/arg-97.are~ ~override~								// arg-97 - Mephistar 1
+
+//TYPE
+WRITE_LONG 0x14 BIT4 // AreaType/Flags
+WRITE_LONG 0x48 BIT5 // AreaType/Location
+
+
+// Music
+SET songDay = IDS_OF_SYMBOL (~songs~ ~G-MEPHISTAR~)
+SET songNight = IDS_OF_SYMBOL (~songs~ ~G-MEPHISTAR~)
+READ_LONG 0xbc ofsSong 
+SET ofsDay = ofsSong
+SET ofsNight = ofsSong + 4
+WRITE_LONG ofsDay  %songDay% // Day song
+WRITE_LONG ofsNight  %songNight% // Night song
+WRITE_ASCII ofsSong + 0x28 g-_1100 // Main day ambient 1
+WRITE_ASCII ofsSong + 0x30 g-_1100 // Main day ambient 2
+WRITE_LONG ofsSong + 0x38 75 // Main day ambient volume %
+WRITE_ASCII ofsSong + 0x3c g-_1100 // Main night ambient 1
+WRITE_ASCII ofsSong + 0x44 g-_1100 // Main night ambient 2
+WRITE_LONG ofsSong + 0x4c 75 // Main night ambient volume %
+WRITE_LONG ofsSong + 0x50 4 // Reverb
+
+COPY ~%MOD_FOLDER%/are/arg-99.are~ ~override~								// arg-99 - Ribcage
+
+// Type
+WRITE_LONG 0x14 BIT4 // AreaType/Flags
+
+// Script
+WRITE_ASCII 0x94 arg-99
+
+// Music
+SET songDay = IDS_OF_SYMBOL (~songs~ ~G-RIBCAGE~)
+SET songNight = IDS_OF_SYMBOL (~songs~ ~G-RIBCAGE~)
+SET songBattle = IDS_OF_SYMBOL (~songs~ ~G-RIBCAGE~)
+READ_LONG 0xbc ofsSong 
+SET ofsDay = ofsSong
+SET ofsNight = ofsSong + 4
+WRITE_LONG ofsDay  %songDay% // Day song
+WRITE_LONG ofsNight  %songNight% // Night song
+WRITE_ASCII ofsSong + 0x28 AM_0101G // Main day ambient 1
+WRITE_ASCII ofsSong + 0x30 AM_0101G // Main day ambient 2
+WRITE_LONG ofsSong + 0x38 75 // Main day ambient volume %
+WRITE_ASCII ofsSong + 0x3c AM_0101G // Main night ambient 1
+WRITE_ASCII ofsSong + 0x44 AM_0101G // Main night ambient 2
+WRITE_LONG ofsSong + 0x4c 75 // Main night ambient volume %
+WRITE_LONG ofsSong + 0x50 4 // Reverb
+
+
+////////////////
+// ========== //    
+// World Maps //
+// ========== //
+////////////////
+
+// The Ditch
+
+INCLUDE ~%MOD_FOLDER%/utils/add_worldmap_tbl.tpa~
+
+LAF ADD_WORLDMAP_TBL
+  INT_VAR
+  inclSv = 0
+  verbose = 0
+  add_x = 0
+  add_y = 0
+  STR_VAR
+  path_to_areas = EVAL ~%MOD_FOLDER%/wmps/g-bb_ditch_areas.tbl~
+  path_to_links = EVAL ~%MOD_FOLDER%/wmps/g-bb_ditch_links.tbl~
+  path_to_trans = EVAL ~%MOD_FOLDER%/lang/%LANGUAGE%/g-blizzardinbaator.tra~
+  worldmap = ~g-ditch~
+  //areas_added
+  //links_added
+END
+
+// CANIA~
+
+COPY ~%MOD_FOLDER%/wmps/g-cania.wmp~ ~override~

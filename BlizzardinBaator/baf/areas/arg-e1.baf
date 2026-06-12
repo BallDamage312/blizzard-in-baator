@@ -1,0 +1,12 @@
+
+
+
+IF	
+	GlobalGT("g-pianoportal","GLOBAL",2)
+    !NearLocation([PC],770,1420,40)
+THEN
+	RESPONSE #100
+		SetPortalCursor("G-TOP4",PORTAL_CURSOR_VISIBLE,FALSE)
+        SetPortalCursor("G-TOP4",PORTAL_ENABLED,FALSE)	
+		SetGlobal("g-pianoportal","GLOBAL",0)
+END

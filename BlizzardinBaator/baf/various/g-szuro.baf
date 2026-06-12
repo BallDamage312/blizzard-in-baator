@@ -1,0 +1,31 @@
+// Squerrik's minions
+
+
+IF
+   Global("g-squerrikalert","GLOBAL",1)
+THEN
+    RESPONSE #100
+	RunningAttack(NearestEnemyOf(Myself))
+END
+
+
+IF
+    AttackedBy([PC],DEFAULT)
+	Global("g-squerrikalert3","LOCALS",0)
+THEN
+    RESPONSE #100
+		SetGlobal("g-squerrikalert","GLOBAL",1)
+		SetGlobal("g-squerrikalert3","LOCALS",1)
+        Enemy()
+		Help()
+        RunningAttack(NearestEnemyOf(Myself))
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+		Help()
+        RunningAttack(NearestEnemyOf(Myself))
+END
+

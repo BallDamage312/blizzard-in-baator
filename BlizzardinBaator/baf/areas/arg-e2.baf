@@ -1,0 +1,75 @@
+IF
+    Global("G-knowmimickey","GLOBAL",1)
+THEN
+    RESPONSE #100
+        Unlock("G-cont03")
+		SetGlobal("G-knowmimickey","GLOBAL",2)
+END
+
+IF
+     Global("G-rattemplequest","GLOBAL",5)
+THEN
+    RESPONSE #100
+        Unlock("G-cont03")
+		DisplayString(Player1, @100196)
+		PlaySound("NAM157")
+		SetGlobal("G-rattemplequest","GLOBAL",6)
+END
+
+IF
+    FailedToOpen("G-cont03")
+	Global("G-knowmimickey","GLOBAL",0)
+THEN
+    RESPONSE #100
+        ActionOverride(Protagonist,FloatMessage(Myself,@100184))	
+END
+
+IF
+    HarmlessOpened("G-cont03")
+	Global("G-knowmimickey","GLOBAL",2)
+THEN
+    RESPONSE #100
+    ActionOverride(Protagonist,FloatMessage(Myself,@100185))
+	SetGlobal("G-knowmimickey","GLOBAL",3)
+END
+
+IF
+    !NearLocation([PC],868,496,15)
+THEN
+	RESPONSE #100
+		SetPortalCursor("G-TO02",PORTAL_CURSOR_VISIBLE,FALSE)
+        SetPortalCursor("G-TO02",PORTAL_ENABLED,FALSE)
+		
+END
+
+IF
+    True()
+THEN
+    RESPONSE #100
+        SetWorldmap("G-DITCH")
+END
+
+IF
+    Global("G-knowmimickey","GLOBAL",1)
+THEN
+    RESPONSE #100
+        Unlock("G-cont03")
+		SetGlobal("G-knowmimickey","GLOBAL",2)
+END
+
+IF
+    FailedToOpen("G-cont03")
+	Global("G-knowmimickey","GLOBAL",0)
+THEN
+    RESPONSE #100
+        ActionOverride(Protagonist,FloatMessage(Myself,@100184))	
+END
+
+IF
+    HarmlessOpened("G-cont03")
+	Global("G-knowmimickey","GLOBAL",2)
+THEN
+    RESPONSE #100
+    ActionOverride(Protagonist,FloatMessage(Myself,@100185))
+	SetGlobal("G-knowmimickey","GLOBAL",3)
+END

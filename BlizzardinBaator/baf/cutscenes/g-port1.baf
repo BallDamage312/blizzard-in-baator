@@ -1,0 +1,29 @@
+IF
+     HarmlessEntered(Player1)
+	 Global("g-portcut1","GLOBAL",0)
+	 OR(2)
+	 Global("G-bbmain","GLOBAL",17)
+	 Global("G-bbmain","GLOBAL",19)
+	 
+THEN
+    RESPONSE #100
+        SetGlobal("g-portcut1","GLOBAL",1)
+		CreateCreature("g-bb238",[1812.248],0)
+		CreateCreature("g-bb238",[1644.169],15)
+		CreateCreature("g-bb238",[1381.308],13)
+		ActionOverride("g-bb238",StartDialog("g-bbd218",Player1))
+END
+
+
+IF
+    HarmlessEntered(Player1)
+	InParty("Nordom")
+	!StateCheck("Nordom",CD_STATE_NOTVALID)
+	Global("G-fakenrddial001triggered","GLOBAL",0) // one time trigger
+THEN
+    RESPONSE #100
+    SetGlobal("G-fakenrddial001triggered","GLOBAL",1) // one time trigger
+	SetGlobal("g-fakenrddialogue","GLOBAL",1) // fake dialog selection
+	CreateCreatureObject("g-bbnrd",Player1,0,0,0) // fake nrd creation
+	ActionOverride("g-bbnrd",StartDialog("g-bbdnrd",Player1)) // Fake nrd dialogue initiation
+END

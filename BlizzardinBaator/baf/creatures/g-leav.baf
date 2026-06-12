@@ -1,0 +1,6 @@
+IF
+	True()
+THEN
+	RESPONSE #100
+	EscapeArea()
+END

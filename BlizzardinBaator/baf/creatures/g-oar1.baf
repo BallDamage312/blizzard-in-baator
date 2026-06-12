@@ -1,0 +1,39 @@
+// Random, when attacked 
+
+IF
+    AttackedBy([ANYONE],DEFAULT)
+THEN
+    RESPONSE #100
+        Enemy()
+        Attack(NearestEnemyOf(Myself))
+   END
+
+IF
+    True()
+	!ActuallyInCombat()
+THEN
+    RESPONSE #100
+		ReturnToSavedPlace()
+		PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100038) 
+        WaitRandom(10,10)
+        Continue()
+	RESPONSE #100
+        ReturnToSavedPlace()
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100039) 
+		WaitRandom(10,10)
+        Continue()
+	RESPONSE #100
+        ReturnToSavedPlace()
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100040)
+		WaitRandom(10,10)
+        Continue()
+	RESPONSE #100
+        ReturnToSavedPlace()
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100041)
+		WaitRandom(10,10)
+        Continue()
+END

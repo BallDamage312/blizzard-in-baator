@@ -1,0 +1,322 @@
+// INI
+
+// SPECIAL GUESTS
+IF
+Global("g-kilthasreleased","GLOBAL",1) 
+THEN
+	RESPONSE #100
+	SetGlobal("g-kilthasreleased","GLOBAL",2) 
+		CreateCreature("g-bb016",[793.569],SE) // Kilthas
+		ActionOverride("g-bb016",ChangeAIScript("g-rgst",OVERRIDE))
+		ChangeDialog("bb016","") 
+
+END
+
+IF
+Global("g-regularguests","GLOBAL",0) 
+THEN
+	RESPONSE #100
+	SetGlobal("g-regularguests","GLOBAL",1) 
+		CreateCreature("g-bb193",[893.569],SE) // Artist
+		ActionOverride("g-bb193",ChangeAIScript("g-rgst",OVERRIDE))
+		//ChangeDialog("g-bb193","") 
+		CreateCreature("g-bb194",[893.569],E) // Artist
+		ActionOverride("g-bb194",ChangeAIScript("g-rgst",OVERRIDE))
+		//ChangeDialog("g-bb194","") 
+		CreateCreature("g-bb195",[873.599],S) // Artist
+		ActionOverride("g-bb195",ChangeAIScript("g-rgst",OVERRIDE))
+		//ChangeDialog("g-bb195","") 
+		CreateCreature("g-bb196",[993.509],SSE) // Artist
+		ActionOverride("g-bb196",ChangeAIScript("g-rgst",OVERRIDE))
+		//ChangeDialog("g-bb196","") 
+		//CreateCreature("g-bb197",[793.669],S) // Artist
+		//ActionOverride("g-bb197",ChangeAIScript("g-rgst",DEFAULT))
+		//ChangeDialog("g-bb197","") 
+		CreateCreature("g-bb198",[893.569],SW) // Artist
+		ActionOverride("g-bb198",ChangeAIScript("g-rgst",OVERRIDE))
+		//ChangeDialog("g-bb193","") 
+
+END
+
+
+
+//REGULAR GUESTS
+
+
+IF
+	Global("G-theaterraided","GLOBAL",0)
+THEN
+	RESPONSE #100
+		CutSceneId(Player1)
+		StartCutSceneMode()
+		StartCombatCounter()
+		SetGlobal("G-theaterraided","GLOBAL",1)
+				
+		//FATED
+		
+		CreateCreature("g-bb201",[695.842],NE)  // Ulfbrand Völgarrson Baunaætari
+		CreateCreatureObject("g-bb150","g-bb201",0,0,0)
+		ActionOverride("g-bb150",ChangeAIScript("g-raid",DEFAULT))
+		ActionOverride("g-bb150",ChangeTeam(Myself,G-FWRAID_F))
+		ActionOverride("g-bb201",ChangeEnemyAlly(Myself,NEUTRAL))
+		CreateCreature("g-bb200",[512.742],NE) // Bërserker
+		CreateCreature("g-bb200",[552.675],N) // Bërserker
+		CreateCreature("g-bb200",[461.832],NE) // Bërserker
+		CreateCreature("g-bb200",[421.719],E) // Bërserker
+		
+		CreateCreature("g-bb200",[427.663],N) // Bërserker
+		CreateCreature("g-bb200",[462.773],NW) // Bërserker
+		CreateCreature("g-bb200",[743.904],NW) // Bërserker
+		CreateCreature("g-bb200",[429.735],W) // Bërserker
+		
+	CreateCreature("g-bb200",[512.742],NE) // Bërserker
+		CreateCreature("g-bb200",[552.675],N) // Bërserker
+		CreateCreature("g-bb200",[461.832],NE) // Bërserker
+		CreateCreature("g-bb200",[421.719],E) // Bërserker
+		CreateCreature("g-bb200",[494.602],NW) // Bërserker
+		CreateCreature("g-bb200",[646.960],NW) // Bërserker
+		CreateCreature("g-bb200",[427.663],N) // Bërserker
+		CreateCreature("g-bb200",[462.773],NW) // Bërserker
+		CreateCreature("g-bb200",[743.904],NW) // Bërserker
+		CreateCreature("g-bb200",[429.735],W) // Bërserker
+		
+	
+
+		
+		CreateCreature("g-bb143",[835.1035],NE) // TEIK
+		ActionOverride("g-bb143",ChangeAIScript("g-raid",DEFAULT))
+		ChangeDialog("bb143","") 
+		
+		CreateCreature("g-bb184",[830.935],NW) // fated
+		ActionOverride("g-bb184",ChangeAIScript("g-raid",DEFAULT))
+		ChangeDialog("bb184","") 
+		
+		CreateCreature("g-bb185",[715.1135],NE) // fated
+		ActionOverride("g-bb185",ChangeAIScript("g-raid",DEFAULT))
+		ChangeDialog("bb185","") 
+		
+		//DOOMGuARD
+			
+		ActionOverride("g-bb200",ChangeEnemyAlly(Myself,NEUTRAL))
+		Wait(2)
+		CreateCreature("g-bb017",[997.609],NW)  // Haer'dalis
+		CreateCreature("g-bb054",[1141.621],NW)  // Raelis Shai
+		CreateCreature("g-bb141",[922.654],SSW)  // Vorrak Dismantle
+		ChangeDialog("bb141","") 
+		CreateCreature("g-bb142",[951.706],SW)  // Clausius
+		ChangeDialog("bb142","") 
+
+		CreateCreature("g-bb203",[889.608],NW)  // Strażnik Zagłady
+		CreateCreature("g-bb203",[944.633],NW)  // Strażnik Zagłady
+		CreateCreature("g-bb203",[979.666],NW)  // Strażnik Zagłady
+		  // Strażnik Zagłady
+		CreateCreature("g-bb203",[994.793],NW)  // Strażnik Zagłady
+		CreateCreature("g-bb203",[787.611],NW) // Strażnik Zagłady
+		CreateCreature("g-bb203",[889.608],NW)  // Strażnik Zagłady
+		CreateCreature("g-bb203",[944.633],NW)  // Strażnik Zagłady
+		CreateCreature("g-bb203",[979.666],NW)  // Strażnik Zagłady
+		
+		CreateCreature("g-bb203",[994.793],NW)  // Strażnik Zagłady
+
+		CreateCreature("g-bb203",[889.608],NW)  // Strażnik Zagłady
+		CreateCreature("g-bb203",[944.633],NW)  // Strażnik Zagłady
+		
+		CreateCreature("g-bb203",[994.793],NW)  // Strażnik Zagłady
+		CreateCreature("g-bb203",[787.611],NW) // Strażnik Zagłady
+		CreateCreature("g-bb203",[889.608],NW)  // Strażnik Zagłady
+		
+
+		ActionOverride("g-bb203",ChangeEnemyAlly(Myself,NEUTRAL))
+		Wait(2)
+		EndCutSceneMode()
+		CreateCreature("g-bb190",[675.812],S)  // Nalot Przeznaczonych
+		ActionOverride("G-bb190",StartDialogueNoSet("G-bbd190"))
+		Continue()
+END
+
+// SIDES RESOLUTION
+
+IF
+	Global("g-raidallegiances","GLOBAL",1) // CONTINUE AS  PLANNED
+	Global("G-theaterraided","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("G-theaterraided","GLOBAL",2)
+		ActionOverride("g-bb017",ChangeEnemyAlly(Myself,ENEMY))
+		ActionOverride("g-bb054",ChangeEnemyAlly(Myself,ENEMY))
+		ActionOverride("g-bb141",ChangeEnemyAlly(Myself,ENEMY))
+		ActionOverride("g-bb142",ChangeEnemyAlly(Myself,ENEMY))
+		
+		ActionOverride("g-bb201",ChangeEnemyAlly(Myself,NEUTRAL))
+		
+		Continue()
+END
+
+IF
+	Global("g-raidallegiances","GLOBAL",3) // JOIN DOOMGUARD LAST SECOND
+	Global("G-theaterraided","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("G-theaterraided","GLOBAL",2)
+		ActionOverride("g-bb017",ChangeEnemyAlly(Myself,NEUTRAL))
+		ActionOverride("g-bb054",ChangeEnemyAlly(Myself,NEUTRAL))
+		ActionOverride("g-bb141",ChangeEnemyAlly(Myself,NEUTRAL))
+		ActionOverride("g-bb142",ChangeEnemyAlly(Myself,NEUTRAL))
+		
+		ActionOverride("g-bb201",ChangeEnemyAlly(Myself,ENEMY))
+		Continue()
+END
+
+IF
+	Global("g-raidallegiances","GLOBAL",4) // fight everyone
+	Global("G-theaterraided","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("G-theaterraided","GLOBAL",2)
+		ActionOverride("g-bb017",ChangeEnemyAlly(Myself,ENEMY))
+		ActionOverride("g-bb054",ChangeEnemyAlly(Myself,ENEMY))
+		ActionOverride("g-bb141",ChangeEnemyAlly(Myself,ENEMY))
+		ActionOverride("g-bb142",ChangeEnemyAlly(Myself,ENEMY))
+		
+		ActionOverride("g-bb201",ChangeEnemyAlly(Myself,ENEMY))
+		Continue()
+END
+
+// CONFLICT END
+
+													//FATED - WE FIGHT only ACTORS
+//------------------------------------------------------------------------------------------------------------------------------------------------
+	// ####WIN
+IF
+	Global("g-raidallegiances","GLOBAL",1)
+	Global("G-theaterraided","GLOBAL",2)
+	Dead("g-bb017")
+	Dead("g-bb054")
+
+THEN
+	RESPONSE #100
+		TriggerActivation("g-down",TRUE)
+		TriggerActivation("g-up",TRUE)
+		SetGlobal("G-theaterraided","GLOBAL",3)
+		SetGlobal("G-ulfbrandwonraid","GLOBAL",1)
+		SetGlobal("G-raidcocluded","GLOBAL",1)
+		ActionOverride("G-bb201",StartDialogueNoSet("G-bbd156")) // variables 18 or 17 - depending on former heist
+		Continue()
+END
+	// ####LOSS
+IF
+	Global("g-raidallegiances","GLOBAL",1)
+	Global("G-theaterraided","GLOBAL",2)
+	Dead("g-bb201")
+
+THEN
+	RESPONSE #100
+	TriggerActivation("g-down",TRUE)
+	TriggerActivation("g-up",TRUE)
+		SetGlobal("G-theaterraided","GLOBAL",3)
+		SetGlobal("G-ulfbrandlostraid","GLOBAL",1)
+		SetGlobal("G-raidcocluded","GLOBAL",1)
+		ActionOverride("G-bb017",StartDialogueNoSet("G-bbd017")) // variables 19 or 20 - depending on former heist
+
+		Continue()
+END
+
+
+													//DOOMGUARD - WE FIGHT Ulfbrand
+//------------------------------------------------------------------------------------------------------------------------------------------------
+	// ####WIN
+IF
+	Global("g-raidallegiances","GLOBAL",3)
+	Global("G-theaterraided","GLOBAL",2)
+	Dead("g-bb201")
+THEN
+	RESPONSE #100
+	TriggerActivation("g-down",TRUE)
+	TriggerActivation("g-up",TRUE)
+		SetGlobal("G-theaterraided","GLOBAL",3)
+		SetGlobal("G-ulfbrandlostraid","GLOBAL",1)
+		SetGlobal("G-raidcocluded","GLOBAL",1)
+		ActionOverride("G-bb017",StartDialogueNoSet("G-bbd017")) // variables 19 or 20 - depending on former heist
+				Continue()
+END
+	// ####LOSS
+IF
+	Global("g-raidallegiances","GLOBAL",3)
+	Global("G-theaterraided","GLOBAL",2)
+	Dead("g-bb017")
+
+THEN
+	RESPONSE #100
+		TriggerActivation("g-down",TRUE)
+		TriggerActivation("g-up",TRUE)
+		SetGlobal("G-theaterraided","GLOBAL",3)
+		SetGlobal("G-ulfbrandwonagainstus","GLOBAL",1)
+		SetGlobal("G-raidcocluded","GLOBAL",1)
+		ActionOverride("g-bb054",EscapeArea())
+		ActionOverride("G-bb201",StartDialogueNoSet("G-bbd156")) // variables 13
+		Continue()
+END
+
+
+													//WE messed up - WE FIGHT EVERYONE
+//------------------------------------------------------------------------------------------------------------------------------------------------
+	// ####WIN
+
+IF
+	Global("g-raidallegiances","GLOBAL",4)
+	Global("G-theaterraided","GLOBAL",2)
+	Dead("g-bb201")
+	Dead("g-bb017")
+THEN
+	RESPONSE #100
+	TriggerActivation("g-down",TRUE)
+	TriggerActivation("g-up",TRUE)
+	SetGlobal("G-raidcocluded","GLOBAL",1)
+		SetGlobal("G-theaterraided","GLOBAL",3)
+		ActionOverride("g-bb054",EscapeArea())
+		Continue()
+END
+
+// ####FAILURE TO LIVE
+IF
+	Global("g-raidendedwhendead","GLOBAL",1)
+
+THEN
+	RESPONSE #100
+		Kill("g-bb017")
+		Kill("g-bb054")
+		Kill("g-bb141")
+		Kill("g-bb142")
+		ActionOverride("G-bb201",DestroySelf())
+		ActionOverride("G-bb150",DestroySelf())
+		ActionOverride("G-bb143",DestroySelf())
+		ActionOverride("G-bb184",DestroySelf())
+		ActionOverride("G-bb185",DestroySelf())
+		TriggerActivation("g-down",TRUE)
+		TriggerActivation("g-up",TRUE)
+		SetGlobal("g-raidendedwhendead","GLOBAL",2)
+		SetGlobal("G-theaterraided","GLOBAL",3)
+		SetGlobal("G-ulfbrandwonagainstus","GLOBAL",1)
+		CreateCreature("g-bb066",[979.666],NW)
+		Continue()
+END
+
+
+IF
+	Global("G-raidcocluded","GLOBAL",1)
+	Global("G-aereturn","GLOBAL",0)
+
+THEN
+	RESPONSE #100
+	SetGlobal("G-aereturn","GLOBAL",1)
+			TriggerActivation("g-down",TRUE)
+		TriggerActivation("g-up",TRUE)
+		CreateCreature("g-bb066",[979.666],NW)
+END
+
+
+
+
+
+
+

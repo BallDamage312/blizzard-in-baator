@@ -1,0 +1,18 @@
+IF
+    True()
+THEN
+    RESPONSE #100
+        CutSceneId(Player1)
+        PlaySound("KNOCK05")
+        ActionOverride("g-bb169",StickySinisterPoof("S056ICBM",Myself,1))
+        ActionOverride("g-bb169",DestroySelf())
+        Wait(1)
+        ActionOverride("g-bb170",RunToPoint([880.1250]))
+        ActionOverride("g-bb170",DestroySelf())
+        SetCursorState(TRUE)
+        Wait(7)
+        EndCutSceneMode()
+        StartCutSceneMode()
+        StartCutScene("g-bbc019")
+END
+

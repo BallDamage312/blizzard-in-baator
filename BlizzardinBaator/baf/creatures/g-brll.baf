@@ -1,0 +1,70 @@
+// Random See PC - Running Attack
+
+IF
+	Die()
+THEN
+    RESPONSE #100
+	SetGlobal("G-rivergatebarkeepreset","GLOBAL",1)		
+	Continue()
+END
+
+IF
+    AttackedBy([ANYONE],DEFAULT)
+THEN
+    RESPONSE #100
+        Enemy()
+        RunningAttack(LastAttackerOf(Myself))
+END
+
+IF
+	Die()
+THEN
+    RESPONSE #100
+	SetGlobal("G-rivergatebarkeepreset","GLOBAL",1)		
+	Continue()
+END
+
+
+IF
+    True()
+	!ActuallyInCombat()
+THEN
+    RESPONSE #100
+		ReturnToSavedPlace()
+		PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100022) 
+        WaitRandom(10,10)
+        Continue()
+	RESPONSE #100
+        ReturnToSavedPlace()
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100023) 
+		WaitRandom(10,10)
+        Continue()
+	RESPONSE #100
+        ReturnToSavedPlace()
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100024)
+		WaitRandom(10,10)
+        Continue()
+	RESPONSE #100
+        ReturnToSavedPlace()
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100025)
+		WaitRandom(10,10)
+        Continue()
+	RESPONSE #100
+        ReturnToSavedPlace()
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100026)
+		WaitRandom(10,10)
+        Continue()
+END
+
+IF
+	Die()
+THEN
+    RESPONSE #100
+	SetGlobal("G-rivergatebarkeepreset","GLOBAL",1)		
+	Continue()
+END

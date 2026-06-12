@@ -1,0 +1,44 @@
+// AE
+
+IF
+    AttackedBy([PC],DEFAULT)
+THEN
+    RESPONSE #100
+        PlaySequence(SEQ_CONJURE)
+        Kill(Player1)
+END
+
+		IF
+	!ActuallyInCombat()
+	!Global("G-raidcocluded","GLOBAL",1)
+	!GlobalGT("G-theaterraided","GLOBAL",0)
+THEN
+    RESPONSE #20
+		ReturnToSavedPlace()
+		PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100253) 
+        WaitRandom(6,16)
+        Continue()
+	RESPONSE #20
+        ReturnToSavedPlace()
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100256) 
+		WaitRandom(6,16)
+        Continue()
+	RESPONSE #20
+        ReturnToSavedPlace()
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100257)
+		WaitRandom(6,16)
+        Continue()
+	RESPONSE #20
+        ReturnToSavedPlace()
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100258)
+		WaitRandom(6,16)
+        Continue()
+	RESPONSE #20
+        ReturnToSavedPlace()
+		WaitRandom(10,21)
+        Continue()
+END

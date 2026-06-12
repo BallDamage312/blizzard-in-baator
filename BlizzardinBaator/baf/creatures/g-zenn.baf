@@ -1,0 +1,42 @@
+// Random, when attacked 
+
+IF
+    AttackedBy([ANYONE],DEFAULT)
+THEN
+    RESPONSE #100
+        Enemy()
+		Help()
+        Attack(NearestEnemyOf(Myself))
+   END
+IF
+    Help([ANYONE])
+    Team(LastTrigger,G-KUOTOAT)
+THEN
+    RESPONSE #100
+        Enemy()
+		Attack(NearestEnemyOf(Myself))
+END
+
+IF
+    True()
+	!ActuallyInCombat()
+THEN
+    RESPONSE #100
+		ReturnToSavedPlace()
+		PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100049) 
+        WaitRandom(10,10)
+        Continue()
+	RESPONSE #100
+        ReturnToSavedPlace()
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100050) 
+		WaitRandom(10,10)
+        Continue()
+	RESPONSE #100
+        ReturnToSavedPlace()
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100051)
+		WaitRandom(10,10)
+        Continue()
+END

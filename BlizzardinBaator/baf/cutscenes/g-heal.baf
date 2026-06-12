@@ -1,0 +1,19 @@
+IF
+    True()
+THEN
+    RESPONSE #100
+		StartCutSceneMode()
+        CutSceneId("GRACE")
+		ActionOverride("GRACE",MoveToObject("g-bb088"))
+		PlaySound("FFG158")
+		Wait(2)
+		ActionOverride("GRACE",SetAnimState(Myself,ANIM_MIMESPELL1))
+        PlaySound("SPE_05")
+		ActionOverride("GRACE",StickySinisterPoof("SP33HAND","GRACE",1))
+		Wait(2)
+		SetGlobal("G-STeffemSick","GLOBAL",2)
+		EndCutSceneMode()
+		//ActionOverride(Player1,StartDialog("g-bbd088","g-bb088"))
+		ActionOverride("g-bb088",StartDialogNoSet(Player1))
+END
+

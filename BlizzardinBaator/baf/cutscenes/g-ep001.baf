@@ -1,0 +1,14 @@
+IF
+        HarmlessEntered(Player1)
+        GlobalGT("G-stonerquest","GLOBAL",1)
+        Global("G-madmagespawn","GLOBAL",0) // one time trigger
+        
+THEN
+    RESPONSE #100
+    SetGlobal("G-madmagespawn","GLOBAL",1) // one time trigger
+		PlaySound("ABYSS07")
+        CreateCreature("g-bb246",[1338.870],1)
+		ActionOverride("g-bb246",StickySinisterPoof("EF01TPRT","g-bb246",1))
+		ActionOverride("g-bb246",FaceObject(Player1)) 
+		ActionOverride("g-bb246",StartDialogNoSet(Player1))
+END

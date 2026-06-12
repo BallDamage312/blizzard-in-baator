@@ -1,0 +1,28 @@
+// Random, when attacked 
+
+IF
+    AttackedBy([ANYONE],DEFAULT)
+THEN
+    RESPONSE #100
+        Enemy()
+        Attack(NearestEnemyOf(Myself))
+   END
+
+IF
+    True()
+	!ActuallyInCombat()
+	!Global("G-ADONISchill","GLOBAL",1)
+THEN
+    RESPONSE #100
+		
+		PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100055) 
+        WaitRandom(5,10)
+        Continue()
+	RESPONSE #100
+        
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100054) 
+		WaitRandom(10,10)
+        Continue()
+	END

@@ -1,0 +1,40 @@
+// Hive dwellers (1) walk
+
+IF
+    See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        RunAwayFrom(NearestEnemyOf(Myself),170)
+END
+IF
+    AttackedBy([PC],DEFAULT)
+THEN
+    RESPONSE #100
+        Enemy()
+        RunAwayFrom(NearestEnemyOf(Myself),170)
+END
+
+
+IF
+    True()
+	!ActuallyInCombat()
+THEN
+    RESPONSE #100
+		PlaySequence(ANIM_TALK)
+		PlaySound("MODRO02")
+        FloatMessage(Myself,@100176) 
+        WaitRandom(1,12)
+        Continue()
+		RESPONSE #100
+		PlaySequence(ANIM_TALK)
+		PlaySound("MODRO03")
+        FloatMessage(Myself,@100176) 
+        WaitRandom(1,12)
+        Continue()
+		RESPONSE #100
+		PlaySequence(ANIM_TALK)
+		PlaySound("MODRO07")
+        FloatMessage(Myself,@100176) 
+        WaitRandom(1,12)
+        Continue()
+	END

@@ -1,0 +1,103 @@
+@0=~You hold a set of parchments in your hands, destined to call on the factions of Sigil to take action. These are official documents bearing the seals of the Hall of Speakers. Distributing these documents will seal the fate of the conflict in which you have become involved.~
+@1=~Included with them is a separate parchment bearing a symbol depicting a head of a horse, which, according to the accompanying instruction, is meant to summon a messenger.~
+@2=~You have sided with the Doomguard: Haer'Dalis, Raelis Shai, and the entire Beneathmask theater. To prevent the destruction of this temple of the arts, you can call upon your allies to join the Doomguard ambush in a secluded alley behind the Great Foundry.~
+@3=~^NOTE: Use this item to initiate the resolution to the faction conflict.^-~
+@5=~It is time to call on your allies. Think about who you can send a message to.~
+@6=~Do not call on your allies yet.~
+@7=~Do not ride into to battle yet. You are not ready.~
+@8=~It is time to lead Ulfbrand into a trap. ^0xff8c6b69Let the march begin.^-~
+@10=~Which representatives of the factions would you like to call upon for help in turning against the Fated? Some factions do not play well with one another so you have to be careful.~
+@12=~Send a request to Emoric for the Dustmen's support.~
+@13=~Send a request to Keldor for the Godsmen's support.~
+@14=~Send a request to Splinter for the Sensates' support.~
+@15=~Send a request to Ebb Creakknees for the Anarchists' support.~
+@16=~Send a request to Ebb Creakknees for the Harmonium's support.~
+@17=~You do not have much hope, but send a request to Barking-Wilder for Xaositects' support.~
+@18=~You do not need anyone else. Touch the horse's head.~
+@19=~You do not need anyone to help me.~
+@21=~When you touch the symbol of the horse's head, there is no visible reaction. You begin to wonder if you understood the instructions correctly or if this parchment might just be a prank played on you by some particularly mischievous faction namer.~
+@22=~But a moment later, you hear what sounds like the clatter of hooves in the distance, growing louder and louder, as if a horse were galloping toward you, even though you do not see any such animal nearby. Suddenly, right in front of your face, a small, light-blue flame-like portal opens, and out of it... an orange horse's head peeks out. The clearly inter-dimensional horse snorts and opens its mouth wide.~
+@24=~Stick your letters into the horse's mouth.~
+@25=~"How can... I help you?"~
+@27=~The horse does not answer, but rolls its eyes in disapproval and snorts again, this time, however, you can clearly hear impatience in the sound.~
+@29=~Stick your letters into the horse's mouth.~
+@31=~The head retreats through the portal and disappears without a word of explanation, carrying your letters to your allies in its mouth. It looks like this will not take too long.~
+@33=~Wait for the horse to return.~
+@35=~Indeed, it did not take long. Soon, the sound of hooves echoes once more, and a moment later, the portal opens. A horse's head pokes out. this time blue, and spits the answers into your hands. The look the animal gives you before disappearing makes it seem as though, despite the different color, it was exactly the same horse.~
+@37=~Look through the responses.~
+@39=~Here are the letters that arrived.~
+@41=~Read Emoric's answer.~
+@42=~Read Emoric's answer.~
+@43=~Read Keldor's answer.~
+@44=~Read Splinter's answer.~
+@45=~Read Splinter's answer.~
+@46=~Read the anonymous answer.~
+@47=~Read the anonymous answer.~
+@48=~Read Ebb's answer.~
+@49=~Read Ebb's answer.~
+@50=~Read Ebb's answer.~
+@51=~Read Barking-Wilder's answer?!~
+@52=~Read Barking-Wilder's answer?!~
+@53=~That is all of them. You did not miss any.~
+@55=~"Nameless One,
+To avoid an escalation of the conflict in Sigil, we agree to help, especially since the Doomguard are our close allies. Of course, we will lend our mages.
+
+Sincerely,
+Emoric,
+Factor of the Dustmen Faction"~
+@57=~Check the other letters.~
+@59=~"Nameless One,
+We cannot help. You know what you did.
+
+Sincerely,
+Emoric,
+Factor of the Dustmen Faction"~
+@61=~Check the other letters.~
+@63=~"Hello, Comrade!
+
+It looks like the battle will take place right outside our walls. Remember, this is a test. We will treat it as such as well. We will send armed reinforcements.
+
+Sincerely,
+Keldor of Durian"~
+@65=~Check the other letters.~
+@67=~"Dear Sir,
+
+Unfortunately, we must decline your inquiry. Our response is based on the severance of cooperation upon your separation from our faction.
+
+Sincerely,
+Keldor of Durian"~
+@69=~Check the other letters.~
+@71=~"Dear Friend,
+
+Although the Doomguard are not close to us, you and your companions are. So we will help you in your time of need.
+
+Take care,
+Splinter,
+Son of Isahar and Priest-King of Ur"~
+@73=~Check the other letters.~
+@75=~"Dear Sir,
+
+We regretfully decline your inquiry. Our response is based on the severance of cooperation upon your separation from our faction.
+
+Sincerely,
+
+Splinter,
+Son of Isahar and Priest-King of Ur"~
+@77=~Check the other letters.~
+@79=~The letter is short. "AGREED."It must have come from the Anarchists.~
+@81=~Check the other letters.~
+@83=~The letter is short. "Not possible. You've offended someone. Take care of yourself."  It must have come from the Anarchists.~
+@85=~Check the other letters.~
+@87=~"We'll help. We can't let this kind of disorder happen on our streets. Hang in there.
+Ebb"~
+@89=~Check the other letters.~
+@91=~"Sorry, friend. I was unable to convince those above. Take care.
+Ebb"~
+@93=~Check the other letters.~
+@95=~"You are aware, that you are wanted, my friend? We cannot associate with you. Be grateful we will not send a patrol to intercept you.
+Ebb"~
+@97=~Check the other letters.~
+@99=~The letter is folded in such a way that if thrown it can fly like a paper bird. The writing is sloppy and barely legible. "BARKING CLAN STARVED DOGS HELP?! YOUR ALSO SOMEONE"~
+@101=~Check the other letters.~
+@103=~The letter is folded in such a way that if thrown it can fly like a paper bird. The writing is sloppy and barely legible. "DEAR SIR, CHAOS. TOO LITTLE. NEW OPENING."~
+@105=~Check the other letters.~

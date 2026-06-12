@@ -1,0 +1,127 @@
+@0=~It is an old, dusty book with a gray cover. After carefully examining and leafing through it, you realize it is a bestiary. It is partially written in a dialect you are not very familiar with, but it should be at least somewhat understandable.~
+@1=~Do you want to immerse yourself in reading?~
+@3=~Look at the table of contents.~
+@4=~Put away the book.~
+@6=~Do you want to immerse yourself in reading the Fiendango?~
+@8=~Yes. Look at the table of contents.~
+@9=~Put away the book.~
+@11=~Select the entry you want to read.~
+@13=~"On ranks of the baatezu."~
+@14=~"On castes of the yugoloths."~
+@15=~"On known kinds of tanar'ri."~
+@16=~"Tractatus de Tribus Daemonibus."~
+@17=~"Tractatus de Tribus Daemonibus."~
+@18=~Put away the book.~
+@20=~You come across the final pages, titled "Tractatus de Tribus Daemonibus." You wonder if you can understand this passage...~
+@22=~Try to read it.~
+@23=~Try to read it.~
+@24=~Return to the table of contents.~
+@25=~Put away the book.~
+@27=~It seems you are not well-read enough, and too many words do not make sense to you. What even is a tractate? Further reading will only cause a headache and lead nowhere.~
+@29=~Return to the table of contents.~
+@30=~Put away the book.~
+@32=~After a few attempts, you realize you understand. The title means "Treatise on the Three Demons" and seems to offer new, exciting knowledge.~
+@34=~Continue.~
+@35=~Return to the table of contents.~
+@36=~Put away the book.~
+@38=~"A Demonological Note on Four-Selves
+
+Four-Selves is the name given to a demon who deserted from the Blood War. He was stripped of most of his powers, his former personality was destroyed, and he was transformed into a madman with four completely different personalities.
+
+Personality facets of this renegade had distinct dispositions and phobias. Each of the cursed balor's four selves leaned toward chaos, good, law, or evil, respectively. Four-selves was simply at odds with the world and with himself, a creature unable to choose any clear and defined path.
+
+All aspects of Four-selves' personality take precedence over the creature's behavior for a period of time (for approximately 8 hours, after which a change to the next aspect occurs). This is usually cyclical, e.g., Good -> Law -> Chaos -> Evil -> Good, etc."~
+@40=~Continue.~
+@41=~Return to the table of contents.~
+@42=~Put away the book.~
+@44=~"A Demonological Note on Falsacral
+
+Falsacral was a master at tempting the devout and the knights of light, which was done by gradually distorting their worldview and leading them to evil in the name of a better cause. His motto, which he instilled in his victims, was the famous 'end justifies the means.'
+
+Falsacral altered his appearance, posing as good, noble, or in need of support. He could take on the appearance of a wounded, crying child, a paladin in shining armor, or even a beautiful deva surrounded by a heavenly glow."~
+@46=~Continue.~
+@47=~Return to the table of contents.~
+@48=~Put away the book.~
+@50=~"A Demonological Note on Hermafroccubus
+
+Hermafroccubus was a succubus of deviance, meretriciousness, and promiscuity. He decided to change his looks which was common among demons. However, he decided to stay a beautiful woman while possessing male..."
+
+Unfortunately, it looks like the following pages have been torn out. Whatever was on them clearly piqued someone's interest enough for them to take them home.~
+@52=~Return to the table of contents.~
+@53=~Put away the book.~
+@55=~"As lawful creatures, baatezu follow a strict hierarchy, and the promotion path has specific requirements. Each baatezu can also be demoted to a lower form."~
+@56=~On the opposite page, you see a diagram showing the names of the fiends, with numerous arrows between them. The bottom of the page is labeled "least baatezu" and lists two deformed human-like creatures called lemures and nupperibos. You have seen both of these in Baator not long ago.~
+@57=~Above them, a section called "lessser baatezu", starting with winged spinagons, with their many development paths. Then, draconic abishai, white, black, green, blue, and red. Above them, barbazu the bearded devils and kocrachons resembling cockroaches. Next, winged and beautiful erinyes, with promising development possibilities, and their male counterparts, seducers called falxugons. Above them, bone devils, osyluths, and above those, barbed devils, hamatulas. ~
+@58=~At the top, there's a section called "greater baatezu" which begins with two parallel groups: horned devils, cornugons and pleasure devils, brachinas. From there, the hierarchy becomes clear, with each subsequent fiend being placed higher than the next: amnesia devils amnizu, insectoid gelugons, and finally, winged giant pit fiends. It seems that, even with all its complexity, the diagram is simplified, and many less common varieties of baatezu are not taken into account.~
+@60=~Return to the table of contents.~
+@61=~Put away the book.~
+@63=~"The fiends of Gehenna, yugoloths, can be most easily divided into the very dangerous greater ones who are the leaders, and the lesser ones who serve as tools for spreading evil and fulfilling the greater yugoloths' plans." Below is a table listing which yugoloths belong to which category.~
+@64=~"Least yugoloths: 
+battleloths shaped like various weapons, such as arrows, axes, crossbows, maces, spiked chains, or swords;
+canoloths, the blind hounds of war;
+skeroloths, insectoid cannon fodder;
+voors, or tentacled flagellators."~
+@65=~"Lesser yugoloths:
+insectoid mezzoloths and dhergoloths;
+crustacean-like piscoloths;
+frog-like hydroloths;
+giant yagnoloths with one arm significantly bigger than the other;
+marraenoloths, the boatmen of the River Styx."~
+@66=~"Greater yugoloths:
+winged nycaloths;
+jackal-like arcanaloths;
+fearsome, faceless ultroloths."~
+@67=~"Others who occupy special places in the hierarchy:
+the goat-like baernaloths and oinoloths;
+the corruptors of fate;
+the crustacean-like echinoloths;
+the beastly gacholoths;
+the fox-like raavasta."~
+@69=~Return to the table of contents.~
+@70=~Put away the book.~
+@72=~"It is important to understand that the tanar'ri are chaotic evil. It is difficult to talk about a strict hierarchy here, at most one can try to compare the tanar'ri in terms of their power. What is more, we still have not explored all the tanar'ri species, just as we have not fully explored all the layers of the Abyss. Michil Kedell used to say there could be as many of them as there are portals in Sigil or gears on Mechanus. So let us focus on what we do know."~
+@73=~"Least tanar'ri:
+small, deformed beasts known as dretches;
+corrupted humanoid petitioners, manes;
+rutterkins, deformed aberrations."~
+@74=~"Lesser tanar'ri:
+centaur-like armanites;
+ape-like leaping demons, barlgurs, and bogannars;
+horned beastmen known as bulezau;
+winged humanoids called gadacro;
+carnally tempting incubi and succubi;
+undead demon-ghouls known as maurezhi;"~
+@75=~"Greater tanar'ri:
+skeletal humanlike babau;
+insectoid, winged chasme;
+enormous, bull-like goristro;
+gargoyle-like nabassu;
+monstrous, aquatic wastriliths."~
+@76=~"True tanar'ri:
+slime-like alkiliths;
+winged tanar'ri champions and generals, balors;
+giant dog-headed glabrezu;
+frog-like hezrou;
+lion-mawed jariliths;
+six-armed serpentine women, mariliths;
+winged boars, nalfeshnee;
+vulture-shaped vrocks.
+
+Guardian tanar'ri:
+two-headed humanoid serpent-dogs, molydeuses."~
+@77=~"Unspecified tanar'ri:
+adaru centipedes;
+giant psionics, cerebriliths;
+small red-handed jovoks;
+giant kastighurs;
+winged klurichirs;
+priest-tempters, lilitu;
+winged ice demons, mavawhans;
+aquatic myrmyxikus;
+winged flaming parlethee;
+gluttonous solamiths;
+arachnid-like spyder-fiends;
+rat-shaped uridezu;
+eerie yochlols, also known as Handmaidens of Lolth"~
+@79=~Return to the table of contents.~
+@80=~Put away the book.~

@@ -1,0 +1,25 @@
+IF
+    HarmlessEntered(Player1)
+    Global("G-alvirostartarea","Global",0)
+THEN
+    RESPONSE #100
+		SetGlobal("G-alvirostartarea","Global",1)
+		ClearAllActions()
+		StartCutSceneMode()
+        CutSceneId("g-bb087")
+		ActionOverride("g-bb087",Face(E))
+	ActionOverride("g-bb087",PlaySequence(ANIM_CAST))
+	Wait(6)
+    ActionOverride("g-bb087",MoveToPoint([1821.2115]))
+	ActionOverride("g-bb087",PlaySequence(ANIM_CAST))
+	FloatMessage("g-bb087",@100143)
+	Wait(6)
+	ActionOverride("g-bb087",MoveToPoint([1813.2950]))	
+	Face(E)
+	ActionOverride("g-bb087",PlaySequence(ANIM_CAST))
+	FloatMessage("g-bb087",@100139)
+	SetGlobal("G-alviroprequest","GLOBAL",1)	
+	DisplayString(Player1, @100196)
+	PlaySound("NAM157")
+	EndCutSceneMode()
+END

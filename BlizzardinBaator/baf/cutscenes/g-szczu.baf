@@ -1,0 +1,9 @@
+IF
+    HarmlessEntered(Player1)
+THEN
+    RESPONSE #100
+		CreateCreatureObject("g-bb223",Protagonist,0,0,0)
+		ActionOverride("g-bb223",StartDialogueNoSet("g-bbd100")
+		//ActionOverride("g-bb223",DestroySelf()
+		Continue()
+END

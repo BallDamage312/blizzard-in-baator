@@ -1,0 +1,54 @@
+// Thug of Black Joseph - walk
+
+IF
+    OnCreation()
+THEN
+    RESPONSE #100
+        ChangeTeam(Myself,g-THUGSCZ)
+END
+
+IF
+    AttackedBy([PC],DEFAULT)
+THEN
+    RESPONSE #100
+        Enemy()
+        Help()
+        RunningAttack(NearestEnemyOf(Myself))
+		SetGlobal("G-josephalert","GLOBAL",1)	
+END
+
+IF
+	Global("G-josephalert","GLOBAL",1)
+THEN
+    RESPONSE #100
+        Enemy()
+        Help()
+        RunningAttack(NearestEnemyOf(Myself))
+		SetGlobal("G-josephalert","GLOBAL",1)	
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        Help()
+       RunningAttack(NearestEnemyOf(Myself))
+		SetGlobal("G-josephalert","GLOBAL",1)
+END
+
+IF
+    Help([ANYONE])
+    Team(LastTrigger,g-THUGSCZ)
+THEN
+    RESPONSE #100
+        Enemy()
+        RunningAttack(NearestEnemyOf(Myself))
+END
+
+IF
+    True()
+	Global("G-ADONISchill","GLOBAL",0)
+THEN
+    RESPONSE #100
+        RandomWalk()
+END

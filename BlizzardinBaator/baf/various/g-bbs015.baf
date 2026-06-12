@@ -1,0 +1,19 @@
+// Portal to ARG-P4
+
+IF
+    HarmlessEntered("Nordom")
+THEN
+    RESPONSE #100
+        VerbalConstant("Nordom",NORDOM_PORTAL)
+        Continue()
+END
+
+IF	
+	True()
+	Global("g-pianoportal","GLOBAL",3)
+THEN
+	RESPONSE #100
+		SetPortalCursor("G-TOP4",PORTAL_CURSOR_VISIBLE,TRUE)
+        SetPortalCursor("G-TOP4",PORTAL_ENABLED,TRUE)
+		SetGlobal("g-pianoportal","GLOBAL",4)
+END

@@ -1,0 +1,64 @@
+// Kocachron 127
+
+IF
+    OnCreation()
+THEN
+    RESPONSE #100
+        FaceObject([PC])
+		Enemy()
+        Continue()
+END
+
+IF	
+	Global("G-Kocachron_Kombat_N025","LOCALS",1)
+	See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        ForceSpell(Myself,WIZARD_PAIN_MIRROR)
+		IncrementGlobal("G-Kocachron_Kombat_N025","LOCALS",1)
+END
+
+IF
+	Global("G-Kocachron_Kombat_N025","LOCALS",2)
+	See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        Spell([PC],WIZARD_ADDERS_KISS)
+		IncrementGlobal("G-Kocachron_Kombat_N025","LOCALS",1)
+END
+
+IF
+	Global("G-Kocachron_Kombat_N025","LOCALS",3)
+	See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        ForceSpell([PC],WIZARD_ADDERS_KISS)
+        Wait(1)
+		IncrementGlobal("G-Kocachron_Kombat_N025","LOCALS",1)
+END
+
+IF
+	GlobalGT("G-Kocachron_Kombat_N025","LOCALS",3)
+	See(NearestEnemyOf(Myself))
+   
+THEN
+    RESPONSE #100
+        RunningAttack(NearestEnemyOf(Myself))
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+    Enemy()
+	IncrementGlobal("G-Kocachron_Kombat_N025","LOCALS",1)
+END
+
+IF
+    AttackedBy([ANYONE],DEFAULT)
+THEN
+    RESPONSE #100
+		FaceObject([ANYONE])
+		Enemy()
+		SetGlobal("G-Kocachron_Kombat_N025","LOCALS",1)
+END

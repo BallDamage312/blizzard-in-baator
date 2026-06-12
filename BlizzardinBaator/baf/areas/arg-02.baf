@@ -1,0 +1,115 @@
+IF
+    True()
+THEN
+    RESPONSE #100
+        SetWorldmap("G-DITCH")
+		Continue()
+END
+
+IF
+    !NearLocation([PC],954,2500,15)
+THEN
+	RESPONSE #100
+		SetPortalCursor("G-TOE2",PORTAL_CURSOR_VISIBLE,FALSE)
+        SetPortalCursor("G-TOE2",PORTAL_ENABLED,FALSE)
+		Continue()
+END
+
+
+IF
+    Global("G-ActualCannibal","GLOBAL",1)
+	Global("G-CannibalStore","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("G-CannibalStore","GLOBAL",1)
+		AddStoreItem("g-bb#001","g-bbi083",1,1)
+		AddStoreItem("g-bb#001","g-bbi084",1,1)
+		AddStoreItem("g-bb#001","g-bbi085",1,1)
+		AddStoreItem("g-bb#006","g-bbi086",1,1)
+END
+
+
+IF
+    Global("G-ysgardadam","GLOBAL",1)
+	Global("G-AlfheimStore","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("G-AlfheimStore","GLOBAL",0)
+		AddStoreItem("g-bb#001","g-bbi092",1,1)
+		AddStoreItem("g-bb#001","g-bbi093",1,1)
+		AddStoreItem("g-bb#001","g-bbi094",1,1)
+		AddStoreItem("g-bb#001","g-bbi095",1,1)
+END
+
+
+IF
+    PartyRested()
+THEN
+    RESPONSE #100
+    SetGlobal("G-CroneUsedToday","GLOBAL",0)
+	Continue()
+END
+
+
+
+
+IF 
+	Global("G-agravalambush2","GLOBAL",0)
+	OR(3)
+    Global("G-agravalquest","GLOBAL",3)
+    Global("G-agravalquest","GLOBAL",12)
+    Global("G-agravalrun","GLOBAL",1)
+    
+THEN
+
+    RESPONSE #100
+		CreateCreature("g-bb101",[320.1863],11)
+		CreateCreature("g-bb178",[534.1692],0)
+		CreateCreature("g-bb179",[527.1977],9)
+		SetGlobal("G-agravalambush2","GLOBAL",1)
+		Continue()
+END
+
+
+
+IF
+    Global("g-kuotoaBB1","GLOBAL",1)
+    Global("g-kuotoafriends02","GLOBAL",0)
+THEN
+	RESPONSE #100
+	    SetGlobal("g-kuotoafriends02","GLOBAL",1)
+		CreateCreature("g-bb204",[1005.1653],11)
+		CreateCreature("g-bb204",[1396.2263],0)
+		CreateCreature("g-bb204",[1418.2864],9)
+		CreateCreature("g-bb204",[2979.3575],4)
+		CreateCreature("g-bb204",[3265.1030],5)
+		CreateCreature("g-bb204",[3104.2282],9)
+		CreateCreature("g-bb204",[4122.1342],4)
+		CreateCreature("g-bb204",[4429.3695],5)
+		Continue()
+END
+
+
+IF
+	Global("G-rivergatebarkeepreset","GLOBAL",1)
+THEN
+    RESPONSE #100
+    SetGlobal("G-rivergatebarkeepreset","GLOBAL",2)		
+	Continue()
+END
+
+IF
+	Global("G-oarsmanbarkeepreset","GLOBAL",1)
+THEN
+    RESPONSE #100
+    SetGlobal("G-oarsmanbarkeepreset","GLOBAL",2)		
+	Continue()
+END
+
+IF
+	Global("G-ratbarkeepreset","GLOBAL",1)
+THEN
+    RESPONSE #100
+    SetGlobal("G-ratbarkeepreset","GLOBAL",2)		
+	Continue()
+END

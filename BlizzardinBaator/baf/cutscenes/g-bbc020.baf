@@ -1,0 +1,16 @@
+// Troupe leaves
+
+
+IF
+    True()
+THEN
+    RESPONSE #100
+    CutSceneId(Player1)
+    ActionOverride("g-bb017",EscapeArea())
+    ActionOverride("g-bb054",EscapeArea())
+    ActionOverride("g-bb060",EscapeArea())
+    ActionOverride("g-bb141",EscapeArea())
+    ActionOverride("g-bb142",EscapeArea())
+    EndCutSceneMode()
+	
+END

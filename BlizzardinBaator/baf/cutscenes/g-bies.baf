@@ -1,0 +1,16 @@
+IF 
+    	HarmlessEntered(Player1)
+		Global("g-biessassin","GLOBAL",0)
+THEN
+	RESPONSE #100
+	CutSceneId(Player1)
+	StartCutSceneMode()
+	Wait(2)
+	ActionOverride("g-bb218",FloatMessage(Myself,@100214))
+	Wait(2)
+	ActionOverride("g-bb218",MoveToPoint([1315.379]))
+	ActionOverride("g-bb218",StartDialog("g-bbd218",Player1))
+	SetGlobal("g-biessassin","GLOBAL",1)
+	EndCutSceneMode()
+
+END

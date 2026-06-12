@@ -1,0 +1,45 @@
+@0=~Nordom wpatruje się uważnie w swoje kusze. Wydają różne szczękające dźwięki - najpierw jedna, potem druga, jakby ze sobą rozmawiały.~
+@2=~"Jak się masz?"~
+@3=~Odejdź.~
+@5=~"Rozpoczynam cykl introspektywny." Nordom ze *szczękiem* zamyka oczy i zaczyna *buczeć*.~
+@6=~"Ewaluacja Introspektywna: Percepcja stała się (1) mniejsza i (B) głośniejsza. Skrzydła zostały zastąpione ramionami: powód nieznany. Podejrzenie/hipoteza: skrzydła nielubiane? Spekulacja. Nordom był kiedyś -KIMŚ-, ale teraz jest mniejszy, głośniejszy! Zmiana nastąpiła w wyniku problemów w przetwarzaniu informacji."~
+@8=~"W porządku. Chodźmy już."~
+@11=~Wtem słyszysz głos większego modrona, który ci towarzyszy. "Nordom chce przemówić." ~ [NOR169]
+@13=~"Oczywiście, Nordomie. Nie musisz pytać mnie o pozwolenie. Co się stało?"~
+@14=~"Wyrażam pozwolenie. W czym rzecz?"~
+@15=~"Nie teraz, Nordomie. Nie przeszkadzaj mi."~
+@16=~Idź dalej.~
+@18=~"Zrozumiano. Nordom nie będzie przeszkadzał." ~ [NOR321B]
+@20=~Idź dalej.~
+@22=~"Przetwarzam." Nordom zmienia soczewkę i zaczyna recytować definicję. "Monodron. Jednozadaniowe modrony natywne dla Mechanusa, gdzie stanowią większość populacji, to jest około 300 milionów osobników. Umiejscowione najniżej w hierarchii modronów. Charakter: zawsze praworządny neutralny (nie licząc zbuntowanych modronów, u których wystąpił !BŁĄD!). Ich podstawowe uzbrojenie to: włócznie, dwusieczne halabardy lub kusze. Posiadają prawdziwe widzenie i są w stanie przejrzeć przez iluzje. Ich poczucie obowiązku jest niezachwiane i nie jest możliwe przekonanie ich do porzucenia rozkazów wydanych przez przełożonego duodrona. Są odporne na magię umysłu, strachu, negatywną i pozytywną energię. Są też wytrzymałe względem kwasu, zimna i ognia. Ich pamięć pozwala na przechowanie 48 słów." ~ [NOR067]
+@24=~"Ach, zakładam, że mówisz o tym robociku na promie?"~
+@25=~Idź dalej.~
+@27=~"Nie jest to robocik. To modron. Prawdopodobieństwo wykorzystania do usług związanych z portalami: wysokie. Powód takiego wykorzystania: NIEZNANY." Zwraca się w stronę monodrona.~
+@28=~"Monodronie. Czy doświadczasz trudności?"~
+@29=~Mały konstrukt obraca się raz wokół własnej osi i odpowiada: "Uwaga! Wykryto Demi-Mechanus-demi-Limbo *inna*. Wewnętrzna pustkowie. Nieskończone prawo zębatek błogosławione!"~
+@30=~"Słownictwo monodrona jest zaprogramowane nazwami miejsc, co ogranicza podstawowe programowanie komunikacyjne. Wykrywanie pochodzenia słów." ~ [MODRO02]
+@31=~"*Uwaga* i *wykryto* wydają się pochodzić od podstawowego oprogramowania działalności promowej.
+*Demi*, *inna* i *wewnętrzna* prawdopodobnie pochodzą z zasobów do opisania ogólnej kosmologii.
+*Mechanus* i *Limbo* są bezpośrednimi, krótkimi nazwami identyfikacyjnymi sfer.
+*Pustkowie* pochodzi od Szarego Pustkowia Hadesu.
+*Nieskończone* pochodzi od Nieskończonych Warstw Otchłani (30%) /LUB Nieskończonego Pola Bitwy Acheronu (50%) /LUB Nieskończonych Schodów (20%).
+*Prawo* pochodzi od Idealnego Prawa Arkadii.
+*Zębatek* pochodzi od Mechanicznej Nirwany Zębatek Mechanusa.
+*Błogosławione* pochodzi od Błogosławionych Pól Elizjum."~
+@32=~"Zezwolono! Przeskanuj sfery, przeskanuj portal."~
+@33=~"Monodronie. Czy jesteś zbuntowany, tak jak Nordom?"~
+@34=~Monodron przez chwilę brzęczy, a następnie odpowiada: "Nie." ~ [MODRO01]
+@35=~"Ło. Dla mnie to brzmiało to wrencz normalnie."~
+@36=~Nie-Sława chichocze. "Nordomie, myślę, że masz poważnego rywala w dziedzinie uroku."~
+@37=~"To wszystko bardzo miłe, ale czy możecie przestać dręczyć mojego nawigatora? Przyszliście kupić bilety?"~
+@38=~"Słownictwo monodrona jest zastanawiające."~
+@40=~"Czyli ten modron jest specjalistą w dziedzinie sfer? Co możesz mi powiedzieć o Canii, monodronie?"~
+@41=~"Już kończymy." Zwróć się do Nordoma: "Chodź, Nordomie. Pogadacie na łodzi."~
+@43=~"Jeśli potrzebujesz informacji o Canii, możesz zapytać Nor..."~
+@44=~"Sfera Zewnętrzna: Dziewięć Piekieł, Baator. UWAGA! Nieskończone *nie*." ~ [MODRO02]
+@45=~"No mówiem, normalnie brzmi. Rozsondnie przynajmniej."~
+@46=~"Zamarznięte Pustkowia Canii. Warstwa numer 8/9 w Sferze Zewnętrznej: Dziewięć Piekieł, Baator. Rozmiar: nieskończony. Typ: zimny (ekstremalnie). Skład: lite skały, góry z kości i lodu, gigantyczne, nienaturalnie szybko poruszające się lodowce. Porady dla podróżujących: unikać za wszelką cenę. Ryzyko śmierci: wysokie."~
+@48=~"Czyli podróż do Canii nie jest wskazana, Nordomie?"~
+@49=~"To... nie brzmi pocieszająco. Chodź, Nordomie. Musimy zdążyć na łódź."~
+@51=~"Nie mam zdecydowanej opinii w tej sprawie. Jest to niebezpieczne, ale ty też jesteś niebezpieczny. *My* jesteśmy niebezpieczni."~
+@53=~"Tego się trzymajmy. Chodź, Nordomie. Musimy zdążyć na łódź."~

@@ -1,0 +1,21 @@
+
+
+IF
+    !NearLocation([PC],657,671,15)
+THEN
+	RESPONSE #100
+		SetPortalCursor("G-TOE1",PORTAL_CURSOR_VISIBLE,FALSE)
+        SetPortalCursor("G-TOE1",PORTAL_ENABLED,FALSE)
+		Continue()		
+END
+
+IF
+    Exists(Player1)
+    !GlobalGT("G-Arg-p5","GLOBAL",0)
+THEN
+    RESPONSE #100
+        StartMovie("g-wdach")
+        SetGlobal("G-Arg-p5","GLOBAL",1)
+        Continue()
+END
+

@@ -1,0 +1,30 @@
+
+IF
+    !NearLocation([PC],700,300,15)
+THEN
+	RESPONSE #100
+		SetPortalCursor("G-P5TOP1",PORTAL_CURSOR_VISIBLE,FALSE)
+        SetPortalCursor("G-P5TOP1",PORTAL_ENABLED,FALSE)
+		Continue()
+END
+
+
+IF
+	Global("G-visited_alfheim","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("G-visited_alfheim","GLOBAL",1)
+		SetGlobal("G-ysgardadam","GLOBAL",1)
+		SetGlobal("G-triplerquest","GLOBAL",13)
+		DisplayString(Player1, @100196)
+		PlaySound("NAM157")
+		Continue()
+END
+
+IF
+    PartyRested()
+THEN
+    RESPONSE #100
+    SetGlobal("G-CroneUsedToday","GLOBAL",0)
+	Continue()
+END

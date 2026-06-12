@@ -1,0 +1,85 @@
+// Kocachron - the ditch arg-r2 fight with thug_r2
+
+IF
+    OnCreation()
+THEN
+    RESPONSE #100
+		FaceObject([0.0.0.0.G-THUG_R2])
+		ForceSpell(Myself,WIZARD_PAIN_MIRROR)
+        ForceSpell([0.0.0.0.G-THUG_R2],WIZARD_ADDERS_KISS)
+		RunningAttack([0.0.0.0.G-THUG_R2])
+		//Enemy()
+        Continue()
+END
+/*
+IF	
+	Global("G-Kocachron_Kombat_N028","LOCALS",1)
+	See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        ForceSpell(Myself,WIZARD_PAIN_MIRROR)
+		IncrementGlobal("G-Kocachron_Kombat_N028","LOCALS",1)
+END
+
+IF
+	Global("G-Kocachron_Kombat_N028","LOCALS",2)
+	See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        Spell([0.0.0.0.G-THUG_R2],WIZARD_ADDERS_KISS)
+		IncrementGlobal("G-Kocachron_Kombat_N028","LOCALS",1)
+END
+
+IF
+	Global("G-Kocachron_Kombat_N028","LOCALS",2)
+	See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        ForceSpell([0.0.0.0.G-THUG_R2],WIZARD_ADDERS_KISS)
+        Wait(1)
+		IncrementGlobal("G-Kocachron_Kombat_N028","LOCALS",1)
+END
+
+IF
+	GlobalGT("G-Kocachron_Kombat_N028","LOCALS",2)
+	See(NearestEnemyOf(Myself))
+   
+THEN
+    RESPONSE #100
+        RunningAttack(NearestEnemyOf(Myself))
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+    //Enemy()
+	IncrementGlobal("G-Kocachron_Kombat_N028","LOCALS",1)
+END
+*/
+IF
+    AttackedBy([PC],DEFAULT)
+THEN
+    RESPONSE #100
+		FaceObject([PC])
+		Enemy()
+		Help()
+		SetGlobal("G-Kocachron_Kombat_N028","LOCALS",1)
+END
+
+IF
+    Help([0.0.0.0.G-KOCACHRON_R2])
+THEN
+    RESPONSE #100
+        Enemy()
+		ForceSpell([PC],WIZARD_ADDERS_KISS)
+        RunningAttack(LastAttackerOf(LastHelp))
+END
+
+IF
+	True()
+THEN
+	RESPONSE #100
+		RandomWalk()
+		Continue()
+END

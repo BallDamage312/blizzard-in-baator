@@ -1,0 +1,70 @@
+// Beach Warden
+
+
+IF
+    OnCreation()
+THEN
+    RESPONSE #100
+        ChangeTeam(Myself,g-THUGSCZ)
+END
+
+
+IF
+    See(Protagonist)
+	Global("g-beachstatus","GLOBAL",1)
+	Global("g-beachintimid","GLOBAL",0)
+	Global("g-bouncertooweak","GLOBAL",0)
+THEN
+    RESPONSE #100
+        StartDialogueNoSet(Protagonist)
+		
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        Attack(NearestEnemyOf(Myself))
+END
+
+IF
+    AttackedBy([PC],DEFAULT)
+THEN
+    RESPONSE #100
+		SetGlobal("G-beachalert","GLOBAL",1)
+        Enemy()
+        RunningAttack(LastAttackerOf(Myself))
+END
+
+IF
+    !ActuallyInCombat()
+THEN
+    RESPONSE #100
+        Face(W)
+        PlaySequence(ANIM_TALK)
+        WaitRandom(3,5)
+        Face(NW)
+        PlaySequence(ANIM_TALK)
+        WaitRandom(3,5)
+END
+
+
+IF
+	Global("G-josephalert","GLOBAL",1)
+THEN
+    RESPONSE #100
+        Enemy()
+        Help()
+        RunningAttack(NearestEnemyOf(Myself))
+		SetGlobal("G-josephalert","GLOBAL",1)	
+END
+
+IF
+	Global("G-beachalert","GLOBAL",1)
+THEN
+    RESPONSE #100
+        Enemy()
+        Help()
+        RunningAttack(NearestEnemyOf(Myself))
+		
+END

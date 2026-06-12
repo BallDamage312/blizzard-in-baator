@@ -1,0 +1,9 @@
+IF
+  Global("g-cheatdakkon","GLOBAL",1)
+  AreaCheck("AR0402")
+THEN
+  RESPONSE #100
+  DestroySelf()
+  SetGlobal("g-cheatdakkon","GLOBAL",2)
+END
+

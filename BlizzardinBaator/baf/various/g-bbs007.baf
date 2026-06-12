@@ -1,0 +1,17 @@
+// teleport triggering dialog (1)
+
+IF
+    HarmlessEntered("Nordom")
+THEN
+    RESPONSE #100
+        VerbalConstant("Nordom",NORDOM_PORTAL)
+        Continue()
+END
+
+
+IF
+	HarmlessEntered(Player1)
+THEN
+	RESPONSE #100
+		Dialogue([PC])
+END

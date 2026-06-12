@@ -1,0 +1,59 @@
+// Dabus 1 (arg-02)
+
+IF
+    HPPercentLT(Myself,50)
+    Allegiance(Myself,ENEMY)
+THEN
+    RESPONSE #100
+        RunAwayFrom([PC],50)
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        Help()
+        Attack(NearestEnemyOf(Myself))
+END
+
+IF
+    AttackedBy([PC],DEFAULT)
+THEN
+    RESPONSE #100
+        SetGlobal("Enemy_Dabus","GLOBAL",1)
+        IncrementGlobal("Lady","GLOBAL",5)
+        Enemy()
+        Help()
+        Attack(LastAttackerOf(Myself))
+END
+
+IF
+    Help([0.0.DABUS])
+THEN
+    RESPONSE #100
+        Enemy()
+        Attack(LastAttackerOf(LastHelp))
+END
+
+IF
+    True()
+THEN
+    RESPONSE #100
+        SetAnimState(Myself,ANIM_MISC1)
+        SetAnimState(Myself,ANIM_MISC1)
+        SetAnimState(Myself,ANIM_MISC1)
+        Face(NE)
+        SetAnimState(Myself,ANIM_MISC1)
+        SetAnimState(Myself,ANIM_MISC1)
+        SetAnimState(Myself,ANIM_MISC1)
+        Face(NE)
+        SetAnimState(Myself,ANIM_MISC1)
+        SetAnimState(Myself,ANIM_MISC1)
+        SetAnimState(Myself,ANIM_MISC1)
+        Face(NE)
+        SetAnimState(Myself,ANIM_MISC1)
+        SetAnimState(Myself,ANIM_MISC1)
+        SetAnimState(Myself,ANIM_MISC1)
+        Face(N)
+END
+

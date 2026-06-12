@@ -1,0 +1,10 @@
+IF	
+    Global("g-clockmovie","GLOBAL",0)
+	Global("G-awareportal","GLOBAL",1)
+	HarmlessEntered(Player1)
+THEN
+    RESPONSE #100
+    StartMovie("g-clck")
+	SetGlobal("g-clockmovie","GLOBAL",1)
+	Continue()
+END

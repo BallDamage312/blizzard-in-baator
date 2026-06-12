@@ -1,0 +1,85 @@
+//KUO TOA FROM THE KK
+
+IF
+	OnCreation()
+THEN
+	RESPONSE #100
+		ChangeTeam(Myself,G-KUOTOAT)
+END
+
+// Random, when attacked 
+
+IF
+    AttackedBy([ANYONE],DEFAULT)
+THEN
+    RESPONSE #100
+        Enemy()
+        Attack(NearestEnemyOf(Myself))
+		SetGlobal("g-kuotoaangry","GLOBAL",1)
+   END
+
+IF
+    Help([ANYONE])
+    Team(LastTrigger,G-KUOTOAT)
+THEN
+    RESPONSE #100
+        Enemy()
+		Attack(NearestEnemyOf(Myself))
+		SetGlobal("g-kuotoaangry","GLOBAL",1)
+END
+
+
+IF
+    Global("G-kuotoaspare","GLOBAL",2)
+THEN
+    RESPONSE #100
+        ChangeEnemyAlly(Myself,NEUTRAL)
+		Wait(3)
+		SetGlobal("G-kuotoaspare","GLOBAL",3)
+		Continue()
+END
+
+IF
+    Global("g-kuotoaangry","GLOBAL",1)
+	//Global("g-iamangry","LOCAL",0)
+THEN
+    RESPONSE #100
+		//SetGlobal("g-iamangry","LOCAL",1)
+        Enemy()
+		Attack(NearestEnemyOf(Myself))
+END
+
+
+// Evacuation finish
+
+
+IF
+    Global("g-kuotoadead","GLOBAL",1)
+	Global("g-kuotoastillalive","GLOBAL",0)
+THEN
+    RESPONSE #100
+        Kill(Myself)
+END
+
+IF
+    Global("g-kuotoagone","GLOBAL",1)
+THEN
+    RESPONSE #100
+        EscapeArea()
+END
+
+IF
+    Global("g-kuotoaraid","GLOBAL",1)
+THEN
+    RESPONSE #100
+        EscapeArea()
+END
+		
+IF
+    Global("g-kuotoagod","GLOBAL",1)
+THEN
+    RESPONSE #100
+		ChangeEnemyAlly(Myself,ALLY)
+END
+
+

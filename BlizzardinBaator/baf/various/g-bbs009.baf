@@ -1,0 +1,8 @@
+// Trap water (g-bb00)
+
+IF
+    Entered([PC])
+THEN
+    RESPONSE #100
+        ForceSpell([PC],TRAP_ACID_RAIN)
+END

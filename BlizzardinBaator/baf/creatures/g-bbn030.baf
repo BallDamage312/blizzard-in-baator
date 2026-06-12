@@ -1,0 +1,58 @@
+// UVB Sit
+
+IF
+    Help([0.0.0.0.G-YSGARD_1])
+	Global("g-ulfwrechedchair","GLOBAL",0)
+THEN
+    RESPONSE #100
+		SetGlobal("g-ulfwrechedchair","GLOBAL",1)
+		StartCutScene("g-bbc005")
+END
+
+IF
+	AttackedBy([PC],DEFAULT)
+	Global("g-ulfwrechedchair","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("g-ulfwrechedchair","GLOBAL",1)
+		StartCutScene("g-bbc005")
+END
+
+IF
+    True()
+	!ActuallyInCombat()
+THEN
+    RESPONSE #100
+		PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100168) 
+        WaitRandom(7,12)
+        Continue()
+	RESPONSE #100
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100169) 
+		WaitRandom(10,10)
+        Continue()
+	RESPONSE #100
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100170) 
+		WaitRandom(10,10)
+        Continue()
+	RESPONSE #100
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100171) 
+		WaitRandom(10,10)
+        Continue()
+	RESPONSE #100
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100172) 
+		WaitRandom(12,16)
+        Continue()
+	RESPONSE #100
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100173) 
+		WaitRandom(10,10)
+        Continue()
+	END
+
+
+

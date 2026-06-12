@@ -1,0 +1,22 @@
+// cutsene bard ribcage 1
+
+IF 
+    True()
+THEN
+    RESPONSE #100
+    CutSceneId(Player1)
+	StorePartyLocations()
+	StartCutSceneMode()
+    DisableFogDither() 
+	DisableSpriteDither()
+	LeaveAreaLUAPanicEntry("arg-99","",[0.0],S)
+	LeaveAreaLUA("arg-99","",[0.0],S) 
+ 	ActionOverride(Player2,LeaveAreaLUA("arg-99","",[0.0],S))  
+    ActionOverride(Player3,LeaveAreaLUA("arg-99","",[0.0],S))  
+    ActionOverride(Player4,LeaveAreaLUA("arg-99","",[0.0],S))  
+    ActionOverride(Player5,LeaveAreaLUA("arg-99","",[0.0],S))  
+    ActionOverride(Player6,LeaveAreaLUA("arg-99","",[0.0],S))
+	MoveViewPoint([1280.1000],INSTANT)
+	SetZoomViewport([2300.1400]) 
+	StartCutScene("g-bbCr2")
+END

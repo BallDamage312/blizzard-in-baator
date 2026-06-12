@@ -1,0 +1,136 @@
+/* IF
+    //Global("G-bbmain","GLOBAL",2) // occasion
+	InParty("Dakkon")
+	!StateCheck("Dakkon",CD_STATE_NOTVALID)
+	Global("G-fakedkkdial001triggered","GLOBAL",0) // one time trigger
+THEN
+    RESPONSE #100
+    SetGlobal("G-fakedkkdial001triggered","GLOBAL",1) // one time trigger
+	SetGlobal("g-fakedkkdialogue","GLOBAL",1) // fake dialog selection
+	CreateCreatureObject("g-bbdkk",Player1,0,0,0) // fake dkk creation
+	ActionOverride("g-bbdkk",StartDialog("g-bbddkk",Player1)) // Fake dkk dialogue initiation
+END */
+
+
+IF
+  !Global("G-Arg-01","GLOBAL",2000)
+  NearLocation(Player1,1250,3555,15) // To 00
+THEN
+  RESPONSE #100
+    UndoExplore()
+    ExploreMapChunk([1250.3555],0,1050)
+    Continue()
+END
+
+IF
+  !Global("G-Arg-01","GLOBAL",2000)
+  NearLocation(Player1,1304,1445,15) // To 02
+THEN
+  RESPONSE #100
+    UndoExplore()
+    ExploreMapChunk([1304.1445],0,1050)
+    Continue()
+END
+
+IF
+  !Global("G-Arg-01","GLOBAL",2000)
+  NearLocation(Player1,3696,2254,15) // To 06
+THEN
+  RESPONSE #100
+    UndoExplore()
+    ExploreMapChunk([3696.2254],0,1050)
+    Continue()
+END
+
+IF
+  PartyHasItem("g-bbi100")
+  PartyHasItem("g-bbi115")
+THEN
+  RESPONSE #100
+    DestroyPartyItem("g-bbi100",0)
+    DestroyPartyItem("g-bbi115",0)
+    GiveItemCreate("g-bbi091",Protagonist,1,1,0)
+	ActionOverride(Protagonist,FloatMessage(Myself,@100237))
+	AddexperienceParty(60000)
+END
+
+IF
+    PartyRested()
+THEN
+    RESPONSE #100
+    SetGlobal("G-CroneUsedToday","GLOBAL",0)
+	Continue()
+END
+
+IF
+	GlobalGT("G-rivergatebarkeepreset","GLOBAL",0)
+	GlobalGT("G-brill_quest","GLOBAL",0)
+	GlobalLT("G-brill_quest","GLOBAL",21)
+THEN
+    RESPONSE #100
+    SetGlobal("G-brill_quest","GLOBAL",21)		
+	DisplayString(Player1, @100196)
+	PlaySound("NAM157")
+	SetGlobal("G-rivergatebarkeepreset","GLOBAL",1)		
+	Continue()
+END
+
+// BARKEEP RESETS
+
+IF
+	OR(2)
+	Died("g-bb008")
+	Dead("g-bb008")
+THEN
+    RESPONSE #100
+    SetGlobal("G-rivergatebarkeepreset","GLOBAL",1)		
+	Continue()
+END
+
+IF
+	OR(2)
+	Died("g-bb059")
+	Dead("g-bb059")
+THEN
+    RESPONSE #100
+    SetGlobal("G-oarsmanbarkeepreset","GLOBAL",1)		
+	Continue()
+END
+
+IF
+	OR(2)
+	Died("g-bb086")
+	Dead("g-bb086")
+THEN
+    RESPONSE #100
+    SetGlobal("G-ratbarkeepreset","GLOBAL",1)		
+	Continue()
+END
+
+
+IF
+	Global("G-rivergatebarkeepreset","GLOBAL",2)
+THEN
+    RESPONSE #100
+	CreateCreature("g-bb243",[1406.2968],SE)
+    SetGlobal("G-rivergatebarkeepreset","GLOBAL",3)		
+	Continue()
+END
+
+IF
+	Global("G-oarsmanbarkeepreset","GLOBAL",2)
+THEN
+    RESPONSE #100
+	CreateCreature("g-bb243",[589.930],SE)
+    SetGlobal("G-oarsmanbarkeepreset","GLOBAL",3)		
+	Continue()
+END
+
+IF
+	Global("G-ratbarkeepreset","GLOBAL",2)
+THEN
+    RESPONSE #100
+	CreateCreature("g-bb243",[4222.1721],SE)
+    SetGlobal("G-ratbarkeepreset","GLOBAL",3)		
+	Continue()
+END

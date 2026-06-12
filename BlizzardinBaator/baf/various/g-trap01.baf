@@ -1,0 +1,9 @@
+IF
+    Entered([PC])
+THEN
+    RESPONSE #100
+        StickySinisterPoof("S057BLAD",[PC],1)
+		PlaySound("PMIGN03")
+		ReallyForceSpellLevel([PC],WIZARD_ICE_KNIFE,15)
+		ApplyDamage([PC],21,MAGIC)
+END

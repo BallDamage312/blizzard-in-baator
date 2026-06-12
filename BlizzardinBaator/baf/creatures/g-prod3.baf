@@ -1,0 +1,11 @@
+IF
+    Entered(Protagonist)
+	Global("g-ProdCania3","GLOBAL",0)
+THEN
+    RESPONSE #100
+	SetGlobal("g-ProdCania3","GLOBAL",10)
+	PlaySound("g-00610")
+	SetGlobal("g-ProdCania","GLOBAL",3)
+    CreateCreatureObject("g-bb006",Protagonist,0,0,0)
+	ActionOverride("g-bb006",StartDialogNoSet(Protagonist))
+END

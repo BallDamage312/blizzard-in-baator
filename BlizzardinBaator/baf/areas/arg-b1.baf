@@ -1,0 +1,90 @@
+IF
+    Global("g-ambushmov","GLOBAL",0)
+	Global("g-FWAMBUSH","GLOBAL",1)
+THEN
+    RESPONSE #100
+    StartMovie("g-ambush")
+    SetGlobal("g-ambushmov","GLOBAL",1)
+	Continue()
+END
+
+IF
+    Global("g-raidmov","GLOBAL",0)
+	Global("g-FWRAID","GLOBAL",1)
+THEN
+    RESPONSE #100
+    StartMovie("g-raid")
+    SetGlobal("g-raidmov","GLOBAL",1)
+	Continue()
+END
+
+
+
+IF
+    Global("g-FWAMBUSH","GLOBAL",1)
+    Global("g-FWAMBUSHa1","GLOBAL",0)
+THEN
+    RESPONSE #100
+        CreateCreatureObject("g-bb189",Protagonist,0,0,0)
+        CreateCreatureObject("g-bb156",Protagonist,0,0,0)
+	ActionOverride("g-bb189",StartDialog("g-bbd189",Protagonist))
+	//ActionOverride("g-bb189",StartDialogNoSet(Player1))
+	StartCutSceneMode()
+	CutSceneId(Player1)
+	EndCutSceneMode()
+        SetGlobal("g-FWAMBUSHa1","GLOBAL",1)
+		Continue()
+END
+
+IF
+    Global("g-FWAMBUSH","GLOBAL",3)
+    Global("g-FWAMBUSHa1","GLOBAL",1)
+THEN
+    RESPONSE #100
+	//CreateCreatureObject("g-bb189",Protagonist,0,0,0)
+    //CreateCreatureObject("g-bb156",Protagonist,0,0,0)
+	ActionOverride("g-bb189",StartDialog("g-bbd189",Protagonist))
+	StartCutSceneMode()
+	CutSceneId(Player1)
+	EndCutSceneMode()
+        SetGlobal("g-FWAMBUSHa1","GLOBAL",2)
+		Continue()
+END
+
+IF
+    Global("g-FWAMBUSH","GLOBAL",4)
+    Global("g-FWAMBUSHa1","GLOBAL",2)
+THEN
+    RESPONSE #100
+	SetGlobal("g-FWAMBUSHa1","GLOBAL",3)
+	ActionOverride("g-bb189",DestroySelf())
+	ActionOverride("g-bb156",DestroySelf())
+	SetGlobal("G-D1cutscene","GLOBAL",1)
+	ActionOverride(Player1,LeaveAreaLUA("arg-d1","",[163.1420],S))
+	ActionOverride(Player2,LeaveAreaLUA("arg-d1","",[163.1420],S))
+	ActionOverride(Player3,LeaveAreaLUA("arg-d1","",[163.1420],S))
+	ActionOverride(Player4,LeaveAreaLUA("arg-d1","",[163.1420],S))
+	ActionOverride(Player5,LeaveAreaLUA("arg-d1","",[163.1420],S))
+	ActionOverride(Player6,LeaveAreaLUA("arg-d1","",[163.1420],S)) 
+	StartCutSceneMode()
+	CutSceneId(Player1)
+	EndCutSceneMode()
+	Continue()
+END
+
+
+
+IF
+    Global("g-FWRAID","GLOBAL",1)
+	Global("g-FWRAIDa","GLOBAL",0)
+THEN
+    RESPONSE #100
+        CreateCreatureObject("g-bb190",Protagonist,0,0,0)
+        CreateCreatureObject("g-bb156",Protagonist,0,0,0)
+	ActionOverride("g-bb190",StartDialog("g-bbd190",Protagonist))
+	StartCutSceneMode()
+	CutSceneId(Player1)
+	EndCutSceneMode()
+        SetGlobal("g-FWRAIDa","GLOBAL",1)
+		Continue()
+END

@@ -1,0 +1,8 @@
+IF
+  Global("g-cheatannah","GLOBAL",1)
+  Global("G-BB_M","GLOBAL",1)
+THEN
+  RESPONSE #100
+  DestroySelf()
+  SetGlobal("g-cheatannah","GLOBAL",2)
+END

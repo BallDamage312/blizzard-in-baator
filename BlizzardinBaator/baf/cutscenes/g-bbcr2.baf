@@ -1,0 +1,114 @@
+// cutsene bard ribcage 2
+
+IF
+    True()
+THEN
+    RESPONSE #100
+		CutSceneId("g-bb039") 
+		MoveToPointNoInterrupt([1008.1200])
+		Wait(2)
+		MoveToPointNoInterrupt([1008.696])
+		MoveToPointNoInterrupt([1178.969])
+		MoveToPointNoInterrupt([969.1028])
+		MoveToPointNoInterrupt([700.1169])
+		Wait(2)
+		MoveToPointNoInterrupt([900.1350])
+		MoveToPointNoInterrupt([955.766])
+		MoveToPointNoInterrupt([900.688])
+		MoveToPointNoInterrupt([691.1000])
+		Wait(2)
+		MoveToPointNoInterrupt([1104.1192])
+		MoveToPointNoInterrupt([955.766])
+		MoveToPointNoInterrupt([900.1317])
+
+END
+
+IF
+    True()
+THEN
+    RESPONSE #100
+		CutSceneId("g-bb037") 
+		MoveToPointNoInterrupt([1579.1397])
+		Face(W)
+		MoveToPointNoInterrupt([1061.1378])
+		Face(N)
+		MoveToPointNoInterrupt([1579.1397])
+		Face(W)
+		MoveToPointNoInterrupt([1061.1378])
+		Face(N)
+		MoveToPointNoInterrupt([1050.1375])
+		Wait(2)
+		MoveToPointNoInterrupt([1260.1000])
+		FaceObject("g-bb007")
+		Wait(1)
+		FloatMessage(Myself, @200008)
+		Wait(1)
+		MoveToPointNoInterrupt([1260.763])
+		Face(SE)
+END
+
+IF
+    True()
+THEN
+    RESPONSE #100
+		CutSceneId("g-bb038") 
+		MoveToPointNoInterrupt([908.987])
+		Wait(3)
+		MoveToPointNoInterrupt([889.998])
+		MoveToPointNoInterrupt([678.916])
+		Wait(3)
+		MoveToPointNoInterrupt([801.1164])
+		Wait(2)
+		MoveToPointNoInterrupt([908.987])
+		Face(E)
+	
+END
+
+IF
+    True()
+THEN
+    RESPONSE #100
+   	CutSceneId("g-bb007") 
+    	SetGlobal("g-ribcage","GLOBAL",1)
+    	MoveToPointNoInterrupt([1828.350])
+    	Wait(2)
+    	MoveToPointNoInterrupt([1234.890])
+    	MoveToPointNoInterrupt([1228.1249])
+    	Wait(1)
+    	Face("S")
+    	//SetAnimState(Myself,ANIM_MISC1)
+        //PlaySoundThroughVoice("wers1")
+        //DisplayString(Myself, @200000)
+        //SetAnimState(Myself,ANIM_MISC2)
+        //PlaySoundThroughVoice("wers2")
+        //DisplayString(Myself, @200001)
+        //SetAnimState(Myself,ANIM_MISC2)
+        //PlaySoundThroughVoice("wers3")
+        //DisplayString(Myself, @200002)
+        //SetAnimState(Myself,ANIM_MISC2)
+        //PlaySoundThroughVoice("wers4")
+        //DisplayString(Myself, @200003)
+        //SetAnimState(Myself,ANIM_MISC2)
+        //PlaySoundThroughVoice("wers5")
+        //DisplayString(Myself, @200004)
+        //SetAnimState(Myself,ANIM_MISC2)
+        //PlaySoundThroughVoice("wers6")
+        //DisplayString(Myself, @200005)
+        //SetAnimState(Myself,ANIM_MISC2)
+        PlaySoundThroughVoice("g-vrs7")
+        DisplayString(Myself, @200006)
+        SetAnimState(Myself,ANIM_MISC2)
+        PlaySoundThroughVoice("g-vrs8")
+        DisplayString(Myself, @200007)
+        SetAnimState(Myself,ANIM_MISC2)
+    	SetAnimState(Myself,ANIM_MISC3)
+    	SinisterPoof("S113SMOK",[1077.1070],1)
+		CreateCreature("g-bb067",[1077.1070],1)
+		PlaySound("AM_VORTX")
+		//EndCutSceneMode()
+		Wait(1)
+		StartCutScene("g-bbCr3")
+END
+
+
+

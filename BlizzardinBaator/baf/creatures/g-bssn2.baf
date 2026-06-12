@@ -1,0 +1,82 @@
+//Assassins at the pier after fragile tail
+
+IF
+    Global("g-portcut1","GLOBAL",1)
+	GlobalLT("g-bssn_gatespawn","GLOBAL",3)
+THEN
+    RESPONSE #100
+        Enemy()
+		Help()
+		ReallyForceSpell(NearestEnemyOf(Myself),WIZARD_MAGIC_MISSILE)
+        Attack(NearestEnemyOf(Myself))
+		SetGlobal("g-biessassinme","LOCAL",1)
+	RESPONSE #100
+        Enemy()
+		Help()
+		StickySinisterPoof("EF01TPRT",Myself,1)
+		CreateCreatureObject("g-bb218",Myself,0,0,0)
+		CreateCreatureObject("NUPPER",Protagonist,0,0,0)
+		StickySinisterPoof("EF01TPRT",Protagonist,1)
+        Attack(NearestEnemyOf(Myself))
+		SetGlobal("g-biessassinme","LOCAL",1)
+		IncrementGlobal("g-bssn_gatespawn","GLOBAL",1)
+	RESPONSE #100
+        Enemy()
+		Help()
+		Attack(NearestEnemyOf(Myself))
+		SetGlobal("g-biessassinme","LOCAL",1)
+	RESPONSE #100
+        Enemy()
+		Help()
+		ReallyForceSpell(NearestEnemyOf(Myself),WIZARD_HORROR)
+        Attack(NearestEnemyOf(Myself))
+		SetGlobal("g-biessassinme","LOCAL",1)
+	RESPONSE #100
+        Enemy()
+		Help()
+		StickySinisterPoof("EF01TPRT",Myself,1)
+		CreateCreatureObject("g-bb218",Myself,0,0,0)
+		CreateCreatureObject("LEMURE",Protagonist,0,0,0)
+		CreateCreatureObject("LEMURE",Protagonist,0,0,0)
+		StickySinisterPoof("EF01TPRT",Protagonist,1)
+        Attack(NearestEnemyOf(Myself))
+		SetGlobal("g-biessassinme","LOCAL",1)
+		IncrementGlobal("g-bssn_gatespawn","GLOBAL",1)
+	RESPONSE #100
+        Enemy()
+		Help()
+		Attack(NearestEnemyOf(Myself))
+		SetGlobal("g-biessassinme","LOCAL",1)
+   END
+   
+IF
+    Global("g-portcut1","GLOBAL",1)
+	!GlobalLT("g-bssn_gatespawn","GLOBAL",3)
+THEN
+    RESPONSE #100
+        Enemy()
+		Help()
+		ReallyForceSpell(NearestEnemyOf(Myself),WIZARD_MAGIC_MISSILE)
+        Attack(NearestEnemyOf(Myself))
+		SetGlobal("g-biessassinme","LOCAL",1)
+	RESPONSE #100
+        Enemy()
+		Help()
+		Attack(NearestEnemyOf(Myself))
+		SetGlobal("g-biessassinme","LOCAL",1)
+	RESPONSE #100
+        Enemy()
+		Help()
+		Attack(NearestEnemyOf(Myself))
+		SetGlobal("g-biessassinme","LOCAL",1)
+	RESPONSE #100
+        Enemy()
+		Help()
+		Attack(NearestEnemyOf(Myself))
+		SetGlobal("g-biessassinme","LOCAL",1)
+	RESPONSE #100
+        Enemy()
+		Help()
+		Attack(NearestEnemyOf(Myself))
+		SetGlobal("g-biessassinme","LOCAL",1)
+   END

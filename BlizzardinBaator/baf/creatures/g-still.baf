@@ -1,0 +1,12 @@
+// Hive dwellers (2) stone
+
+IF
+    OnCreation()
+THEN
+    RESPONSE #100
+        ChangeSpecifics(Myself,%G-DITCH_DWELLER%)
+END
+
+
+
+

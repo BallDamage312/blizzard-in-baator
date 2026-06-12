@@ -1,0 +1,125 @@
+// AttackedBy no walk Styx Oarsman 1
+
+IF
+	Die()
+THEN
+    RESPONSE #100
+	SetGlobal("G-ratbarkeepreset","GLOBAL",1)		
+	Continue()
+END
+
+
+IF
+    See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        Help()
+        RunningAttack(NearestEnemyOf(Myself))
+		SetGlobal("G-ratalarm","GLOBAL",1)
+END
+
+IF
+    AttackedBy([ANYONE],DEFAULT)
+THEN
+    RESPONSE #100
+        Enemy()
+         RunningAttack(NearestEnemyOf(Myself))
+		 Help()
+		 SetGlobal("G-ratalarm","GLOBAL",1)
+   END
+
+IF
+    Help([ANYONE])
+    Team(LastTrigger,G-ORVILLE)
+THEN
+    RESPONSE #100
+        Enemy()
+		 RunningAttack(NearestEnemyOf(Myself))
+END
+
+IF
+	Global("G-ratalarm","GLOBAL",1)
+THEN
+    RESPONSE #100
+        Enemy()
+		 RunningAttack(NearestEnemyOf(Myself))
+END
+
+IF
+    True()
+	!ActuallyInCombat()
+THEN
+    RESPONSE #100
+		ReturnToSavedPlace()
+		PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100126) 
+        WaitRandom(10,10)
+        Continue()
+	RESPONSE #100
+        ReturnToSavedPlace()
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100127) 
+		WaitRandom(10,10)
+        Continue()
+	RESPONSE #100
+        ReturnToSavedPlace()
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100128)
+		WaitRandom(10,10)
+        Continue()
+		RESPONSE #100
+        ReturnToSavedPlace()
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100129)
+		WaitRandom(10,10)
+        Continue()
+		 RESPONSE #100
+		ReturnToSavedPlace()
+		PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100130) 
+        WaitRandom(10,10)
+        Continue()
+	RESPONSE #100
+        ReturnToSavedPlace()
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100131) 
+		WaitRandom(10,10)
+        Continue()
+	RESPONSE #100
+        ReturnToSavedPlace()
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100132)
+		WaitRandom(10,10)
+        Continue()
+		RESPONSE #100
+        ReturnToSavedPlace()
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100133)
+		WaitRandom(10,10)
+        Continue()
+		 RESPONSE #100
+		ReturnToSavedPlace()
+		PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100134) 
+        WaitRandom(10,10)
+        Continue()
+	RESPONSE #100
+        ReturnToSavedPlace()
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100135) 
+		WaitRandom(10,10)
+        Continue()
+	RESPONSE #100
+        ReturnToSavedPlace()
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100137)
+		WaitRandom(10,10)
+        Continue()
+	RESPONSE #100
+        ReturnToSavedPlace()
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100138)
+		WaitRandom(10,15)
+        Continue()
+
+END

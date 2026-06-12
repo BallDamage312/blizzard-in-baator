@@ -1,0 +1,26 @@
+// Del Blast Past
+
+
+IF
+    Global("g-blastdelete","GLOBAL",1)
+THEN
+    RESPONSE #100
+        ActionOverride("g-bb000",DestroySelf())
+        SetGlobal("g-blastdelete","GLOBAL",2)
+END
+
+IF
+    Global("Trias_Redeem","GLOBAL",1)
+	Global("g-zombietrias","GLOBAL",0)
+	
+THEN
+    RESPONSE #100
+        AddStoreItem("g-bb#000","TTREDEEM",1,1)
+        SetGlobal("g-zombietrias","GLOBAL",1)
+END
+
+
+
+
+
+

@@ -1,0 +1,33 @@
+// Thug Attack See PC walk
+
+IF
+    See([PC])
+THEN
+    RESPONSE #100
+        Enemy()
+        RunningAttack(LastSeenBy(Myself))
+END
+
+IF
+    AttackedBy([PC],DEFAULT)
+THEN
+    RESPONSE #100
+        Enemy()
+		Help()
+        RunningAttack(LastSeenBy(Myself))
+END
+
+IF
+    Help([0.0.0.0.G-THUG_DITCH])
+THEN
+    RESPONSE #100
+        Enemy()
+        RunningAttack(LastAttackerOf(LastHelp))
+END
+
+IF
+	Global("G-ADONISchill","GLOBAL",0)
+THEN
+	RESPONSE #100
+		RandomWalk()
+END

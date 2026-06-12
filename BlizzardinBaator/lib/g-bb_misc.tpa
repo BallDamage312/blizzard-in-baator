@@ -1,0 +1,12 @@
+
+///////////
+// ===== //
+// Misc. //
+// ===== //
+///////////
+		
+//COPY ~%MOD_FOLDER%/mos/extras~ ~override~
+COPY ~%MOD_FOLDER%/bam/areas~ ~override~
+COPY ~%MOD_FOLDER%/bam/items~ ~override~
+COPY ~%MOD_FOLDER%/misc/items~ ~override~
+COPY ~%MOD_FOLDER%/misc/pro~ ~override~

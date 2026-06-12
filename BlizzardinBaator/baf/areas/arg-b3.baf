@@ -1,0 +1,17 @@
+IF
+ Global("g-raidberserk","GLOBAL",1) 
+ Global("g-raidendedwhendead","GLOBAL",0)
+ Global("G-raidcocluded","GLOBAL",0) 
+THEN
+	RESPONSE #100
+	SetGlobal("g-raidendedwhendead","GLOBAL",1)
+END
+
+IF
+ OR(2)
+  Global("G-raidcocluded","GLOBAL",1)
+	Global("G-aereturn","GLOBAL",1)  
+THEN
+	RESPONSE #100
+	TeleportParty("arg-09",[1200.2369],12)
+END

@@ -1,0 +1,174 @@
+IF
+	AttackedBy([PC],DEFAULT)
+THEN
+RESPONSE #100
+	Enemy()
+	Help()
+	ForceSpell(NearestEnemyOf(Myself),WIZARD_CONFUSION) 
+	Wait(3)
+	ForceSpell(NearestEnemyOf(Myself),WIZARD_MAGIC_MISSILE) 
+	RunningAttack(NearestEnemyOf(Myself))
+END
+
+
+
+
+IF
+GlobalGT("G-ulfbrandwonagainstus","GLOBAL",0)
+THEN
+	RESPONSE #100
+EscapeArea()
+END
+
+IF
+GlobalGT("G-ulfbrandlostraid","GLOBAL",0)
+THEN
+	RESPONSE #100
+EscapeArea()
+END
+
+IF
+GlobalGT("G-ulfbrandwonraid","GLOBAL",0)
+THEN
+	RESPONSE #100
+EscapeArea()
+END
+
+// Random, when attacked 
+
+IF
+    AttackedBy([ANYONE],DEFAULT)
+THEN
+    RESPONSE #100
+        Enemy()
+        Attack(NearestEnemyOf(Myself))
+   END
+   
+ // ALLEGIANCE SET  
+   
+IF
+		Global("G-allegianceset","LOCALS",0)
+		OR(2) Global("g-raidallegiances","GLOBAL",3) Global("g-raidallegiances","GLOBAL",1) 
+THEN
+	RESPONSE #50
+		ChangeEnemyAlly(Myself,NEUTRAL)
+		SetGlobal("G-allegianceset","LOCALS",1)
+		Continue()
+	RESPONSE #50
+		ChangeEnemyAlly(Myself,NEUTRAL)
+		SetGlobal("G-allegianceset","LOCALS",1)
+		Continue()
+	END
+
+IF
+		Global("G-allegianceset","LOCALS",0)
+		OR(2) Global("g-raidallegiances","GLOBAL",2) Global("g-raidallegiances","GLOBAL",4) 
+THEN
+	RESPONSE #30
+		Enemy()
+		SetGlobal("G-allegianceset","LOCALS",1)
+		Continue()
+	RESPONSE #20
+		Enemy()
+		SetGlobal("G-allegianceset","LOCALS",1)
+		Continue()
+	RESPONSE #50
+		Enemy()
+		SetGlobal("G-allegianceset","LOCALS",1)
+		Continue()
+	END
+
+
+
+//continuous combat
+ 
+IF
+		Global("G-allegianceset","LOCALS",1)
+		Global("g-raidallegiances","GLOBAL",3)
+THEN
+	RESPONSE #25
+		Wait(12)
+		ForceSpell("g-bb201",WIZARD_MAGIC_MISSILE)
+	RESPONSE #25
+		Wait(14)
+		ForceSpell("g-bb200",WIZARD_MAGIC_MISSILE)  
+	RESPONSE #25
+		RunToObject(NearestEnemyOf(MYSELF)) 
+		Wait(8)
+		ForceSpell("g-bb201",WIZARD_MAGIC_MISSILE)
+	RESPONSE #25
+		RunToObject(NearestEnemyOf(MYSELF)) 
+		Wait(16)
+		ForceSpell("g-bb200",WIZARD_CHROMATIC_ORB) 		
+		END 
+IF
+		Global("G-allegianceset","LOCALS",1)
+		Global("g-raidallegiances","GLOBAL",1)
+THEN
+	RESPONSE #33
+		Wait(12)
+		ForceSpell("g-bb017",WIZARD_MAGIC_MISSILE)
+	RESPONSE #33
+		Wait(14)
+		ForceSpell("g-bb017",WIZARD_MAGIC_MISSILE)  
+	RESPONSE #33
+	RunToObject(NearestEnemyOf(MYSELF)) 
+		Wait(8)
+		ForceSpell("g-bb017",WIZARD_MAGIC_MISSILE)
+		ForceSpell("g-bb017",WIZARD_MAGIC_MISSILE)   		
+		END 
+IF
+		Global("G-allegianceset","LOCALS",1)
+		Global("g-raidallegiances","GLOBAL",2)
+THEN
+	RESPONSE #33
+		Wait(12)
+		ForceSpell(Protagonist,WIZARD_MAGIC_MISSILE)
+	RESPONSE #33
+		Wait(14)
+		ForceSpell("g-bb201",WIZARD_MAGIC_MISSILE)  
+	RESPONSE #33
+	RunToObject(NearestEnemyOf(MYSELF)) 
+		Wait(8)
+		ForceSpell(Protagonist,WIZARD_MAGIC_MISSILE)  		
+		END 
+IF
+		Global("G-allegianceset","LOCALS",1)
+		Global("g-raidallegiances","GLOBAL",4)
+THEN
+	RESPONSE #33
+		Wait(12)
+		ForceSpell(Protagonist,WIZARD_MAGIC_MISSILE)
+	RESPONSE #33
+		Wait(14)
+		ForceSpell(Protagonist,WIZARD_MAGIC_MISSILE)  
+	RESPONSE #33
+	RunToObject(NearestEnemyOf(MYSELF)) 
+		Wait(8)
+		ForceSpell(Protagonist,WIZARD_MAGIC_MISSILE)  		
+		END 
+
+
+
+// Raid finish
+
+IF
+GlobalGT("G-ulfbrandwonagainstus","GLOBAL",0)
+THEN
+	RESPONSE #100
+EscapeArea()
+END
+
+IF
+GlobalGT("G-ulfbrandlostraid","GLOBAL",0)
+THEN
+	RESPONSE #100
+EscapeArea()
+END
+
+IF
+GlobalGT("G-ulfbrandwonraid","GLOBAL",0)
+THEN
+	RESPONSE #100
+EscapeArea()
+END

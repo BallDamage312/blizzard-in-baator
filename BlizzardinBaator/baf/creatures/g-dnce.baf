@@ -1,0 +1,49 @@
+// Hive dwellers (2) dance
+
+IF
+    OnCreation()
+THEN
+    RESPONSE #100
+        ChangeSpecifics(Myself,%G-DITCH_DWELLER%)
+END
+
+
+IF
+    See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        RunAwayFrom(NearestEnemyOf(Myself),170)
+END
+
+IF
+    HPPercentLT(Myself,50)
+    Allegiance(Myself,ENEMY)
+THEN
+    RESPONSE #100
+        EscapeArea()
+END
+
+IF
+    AttackedBy([PC],DEFAULT)
+THEN
+    RESPONSE #100
+        Enemy()
+        RunAwayFrom(NearestEnemyOf(Myself),170)
+END
+
+IF
+    True()
+	!ActuallyInCombat()
+THEN
+    RESPONSE #100
+        Face(W)
+        PlaySequence(ANIM_MIMEGETHIT)
+        Face(S)
+        PlaySequence(ANIM_MIMEGETHIT)
+       	Face(E)
+        PlaySequence(ANIM_MIMEGETHIT)
+        Face(N)
+        PlaySequence(ANIM_MIMEGETHIT)    		
+END
+
+

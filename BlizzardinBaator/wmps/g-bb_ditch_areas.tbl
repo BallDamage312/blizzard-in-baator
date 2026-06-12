@@ -1,0 +1,9 @@
+
+SHORT_NAME  CONTENT		LONG_NAME	FLAGS	BAM_ANIM	X_POS	Y_POS	NAME	TOOLTIP		LOAD_IM
+
+arg-00		arg-00		arg-00		15		0			550		175		@300300		@300300		N
+arg-02		arg-02		arg-02		6		1			480		110		@300302		@300302		N
+arg-ff		arg-ff		arg-ff		6		2			200		150		@300304		@300304		N
+arg-06		arg-06		arg-06		6		3			550		30		@300306		@300306		N
+arg-07		arg-07		arg-07		6		4			700		100		@300307		@300307		N
+arg-09		arg-09		arg-09		6		5			600		280		@300309		@300309		N

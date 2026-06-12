@@ -1,0 +1,213 @@
+BEGIN g-bbD031
+CHAIN IF~NumTimesTalkedTo(0)~THEN g-bbD031 g-bbD031.Start
+@0 /*By the bank of the Ditch, under the lamp, stands a wererat. He is impatiently explaining something to his companion. "Argh... Focus this time because I won't tell you again, understand?" */
+==g-bbD032 @1 /*"Right," the other one replies, staring at him vapidly with his blood-red eyes. */
+==g-bbD031 @2 /*"You can divide any distance between two objects in half, then into four quarters, tenths... You can keep dividing like that forever. Get it?" */
+==g-bbD032 @3 /*"Yeah. I guess." */
+==DMorte IF ~InParty("Morte") !StateCheck("Morte",CD_STATE_NOTVALID) NearbyDialog("DMorte")~ THEN @4 /*"Chief, are you sure we want to listen to this? I have a feeling that listening to this smart-ass rat might make my ears hurt... I mean, my skull. See that other one? I can tell from the look on his face that his brain hurts just from thinking about it." */
+==g-bbD031 @5 /*"For example, a bow shot. When I shoot an arrow, it has to travel a certain distance. Are you tumbling onto the dark of it, Elei?" */
+==g-bbD032 @6 /*"But... Zeno, you're not going to shoot in a public place, are you?" */
+==g-bbD031 @7 /*The wererat slaps his open hand over his muzzle. "Why do I even hang out with you... That's an example, an *abstract* one." */
+==g-bbD032 @8 /*"An abstra... What?" */
+==g-bbD031 @9 /*If a stare could kill, Zeno's companion would have long since crossed the waters of the Styx. At that moment, you notice that only one of the philosopher's eyes is red - the other is bright blue. "A thought experiment! Imagine it, you idiot, in that *dumb rat head* of yours!" */
+==g-bbD032 @10 /*Elei suddenly puffs up, then growls loudly at his companion. "I told you *not* to call me that!" */
+==g-bbD031 @11 /*"Alright..." Zeno replies, shaking his head in resignation. "Let's go further. The shooting distance is, let's say, forty feet..." */
+==g-bbD032 @12 /*"But rat feet or human feet? Because there's a difference, ya know." */
+==g-bbD031 @13 /*You get the impression that if Zeno was a human, he would blush with rage like an embarrassed Harmonium officer after a peak patrol on an unusually hot cycle. "*It does not matter!*" */
+==g-bbD031 @14 /*"Let me finish, will you?" He takes a moment to calm down. "You can divide that distance into two halves. Then into four quarters. And so on, ten equal parts, a hundred, a thousand..." */
+==g-bbD032 @15 /*"Alrighty. Why would you do that, though?" */
+==g-bbD031 @16 /*"For a hypothetical assumption. Now imagine that this arrow has an *infinite* number of finite distances to travel." */
+==g-bbD032 @17 /*He tilts his head to the side and scratches it with a claw. "I'm trying, Zeno. But my head hurts. Can't you think of something simpler?" */
+==g-bbD031 @18 /*He ignores his companion's discontent. "So, my premise is that the paradox is that the arrow will *never* hit its target. Do you understand?" */
+==g-bbD032 @19 /*Elei pauses for a moment, then replies in a disbelieving voice, "I think I understand." */
+==g-bbD031 @20 /*"So what do you think?" he asks with barely hidden excitement. */
+==g-bbD032 @21 /*"What a flam! I once saw some berk shoot a bow at my cousins and the arrow always hit the target." */
+==g-bbD031 @22 /*"It is not a flam! It is the absolute truth, and I can *empirically* prove it!" For the first time, the wererat lets you know that he has noticed your presence. "Hey, you!" */
+END
+IF~~THEN REPLY @24 /*"Who, me?" */ DO~SetGlobal("G-talkedtoZeno","GLOBAL",1)~ + g-bbD031.cont
+CHAIN IF~~THEN g-bbD031 g-bbD031.cont
+@26 /*"Yes, you. Sorry to interrupt, but could you help us resolve a dispute empirically?" */
+END
+IF~CheckStatGT(Protagonist,15,INT) Global("G-ZEempir","GLOBAL",0)~THEN REPLY @28 /*Bluff: "Empi... What?" */ DO~SetGlobal("G-ZEempir","GLOBAL",1)~ + g-bbD031.A1
+IF~!CheckStatGT(Protagonist,15,INT) Global("G-ZEempir","GLOBAL",0)~THEN REPLY @29 /*"Empi... What?" */ DO~SetGlobal("G-ZEempir","GLOBAL",1)~ + g-bbD031.A1
+IF~~THEN REPLY @31 /*"What should I do?" */ DO~~ + g-bbD031.C1
+IF~~THEN REPLY @32 /*"I don't have time for this nonsense." */ DO~SetGlobal("G-ZErefuse","GLOBAL",1)~ + g-bbD031.B1
+CHAIN IF~NumTimesTalkedToGT(0)~THEN g-bbD031 g-bbD031.Start2
+@34 /*"You again? Changed your mind about helping us out in the name of science?" */
+END
+IF~~THEN REPLY @36 /*"What should I do?" */ DO~~ + g-bbD031.C1
+IF~~THEN REPLY @37 /*"I don't have time for this nonsense." */ DO~SetGlobal("G-ZErefuse","GLOBAL",1)~ + g-bbD031.B1
+CHAIN IF~~THEN g-bbD031 g-bbD031.B1
+@39 /*"Argh. Oh well, maybe I'll find someone else. But do come back if you change your mind!" */
+EXIT
+CHAIN IF~~THEN g-bbD031 g-bbD031.A1
+@42 /*The wererat takes a deep breath and exhales, then answers with forced calm: "Empirical, that is, through real experience, the effect of which can be observed through the senses. In other words, I offer you to participate in an experiment." */
+END
+IF~~THEN REPLY @44 /*"What should I do?" */ DO~~ + g-bbD031.C1
+IF~Global("BBZenonGreed","GLOBAL",0)~THEN REPLY @45 /*"What do I get out of it?" */ DO~SetGlobal("BBZenonGreed","GLOBAL",1)~ + g-bbD031.C11
+IF~~THEN REPLY @46 /*"I don't have time for this nonsense." */ DO~SetGlobal("G-ZErefuse","GLOBAL",1)~ + g-bbD031.B1
+CHAIN IF~~THEN g-bbD031 g-bbD031.nego
+@48 /*"Do you mean jink?" */
+==DMorte IF ~InParty("Morte") !StateCheck("Morte",CD_STATE_NOTVALID) NearbyDialog("DMorte")~ THEN @49 /*"Chief, how about that blue sparkle lying in his eye socket?" */
+END
+IF~~THEN REPLY @51 /*"Ante up." */ DO~~ + g-bbD031.nego1
+IF~InParty("Morte") !StateCheck("Morte",CD_STATE_NOTVALID) NearbyDialog("DMorte")~THEN REPLY @52 /*"I want your blue eye." */ DO~SetGlobal("BBZenonGreed","GLOBAL",1)~ + g-bbD031.nego2
+CHAIN IF~~THEN g-bbD031 g-bbD031.nego1
+@54 /*"I can offer you two hundred copper pieces." */
+END
+IF~~THEN REPLY @56 /*"Fine. What should I do?" */ DO~SetGlobal("G-ZEreward","GLOBAL",200)~ + g-bbD031.C1
+IF~~THEN REPLY @57 /*"Sorry. I'm not interested." */ DO~SetGlobal("G-ZErefuse","GLOBAL",1)~ + g-bbD031.B1
+CHAIN IF~~THEN g-bbD031 g-bbD031.C11
+@59 /*"Hmm... A contribution to scientific research?" */
+END
+IF~!CheckStatGT(Protagonist,15,INT) Global("BBZenonGreed","GLOBAL",1)~THEN REPLY @61 /*"I'd prefer something tangible." */ DO~~ + g-bbD031.nego
+IF~CheckStatGT(Protagonist,15,INT) Global("BBZenonGreed","GLOBAL",1)~THEN REPLY @62 /*"I'd prefer something tangible. Something that can be observed through the senses." */ DO~~ + g-bbD031.nego
+IF~~THEN REPLY @63 /*"Fine. What should I do?" */ DO~~ + g-bbD031.C1
+IF~~THEN REPLY @64 /*"Sorry. I'm not interested." */ DO~SetGlobal("G-ZErefuse","GLOBAL",1)~ + g-bbD031.B1
+CHAIN IF~~THEN g-bbD031 g-bbD031.nego2
+@66 /*"What? No way, I can give you 300 coppers and this is my final offer." */
+END
+IF~~THEN REPLY @68 /*"Fine. What should I do?" */ DO~SetGlobal("G-ZEreward","GLOBAL",300)~ + g-bbD031.C1
+IF~~THEN REPLY @69 /*"Sorry. I'm not interested." */ DO~SetGlobal("G-ZErefuse","GLOBAL",1)~ + g-bbD031.B1
+CHAIN IF~~THEN g-bbD031 g-bbD031.C1
+@71 /*"Nothing. You just need to stand in one place and I will shoot you with a bo..." */
+==g-bbD032 @72 /*"Zeno...in a public place, just like that?" */
+==g-bbD031 @73 /*The wererat continues, ignoring his colleague. "... with a bow. In this way, I will prove to my friend here that my paradox is real." */
+END
+IF~CheckStatGT(Protagonist,18,INT) InParty("Nordom") !StateCheck("Nordom",CD_STATE_NOTVALID) NearbyDialog("DNordom")~THEN REPLY @75 /*"I have a better idea. If you're so sure of your hypothesis, then my companion, Nordom, will shoot *you* with his crossbow." */ DO~SetGlobal("G-ZErev1","GLOBAL",1)~ + g-bbD031.Nreverse
+IF~CheckStatGT(Protagonist,18,INT)~THEN REPLY @76 /*"I have a better idea. If you're so sure of your hypothesis, I will shoot *you* with your bow." */ DO~SetGlobal("G-ZErev1","GLOBAL",2)~ + g-bbD031.reverse
+IF~~THEN REPLY @77 /*"Ah, Hells, you only live once. Shoot." */ DO~~ + g-bbD031.shoot
+IF~~THEN REPLY @78 /*"How about you shoot yourself in your dumb face?" */ DO~~ + g-bbD031.taunt
+IF~~THEN REPLY @79 /*"I'm sorry, I don't have time for pseudoscience." */ DO~SetGlobal("G-ZErefuse","GLOBAL",1)~ + g-bbD031.B1
+CHAIN IF~~THEN g-bbD031 g-bbD031.taunt
+@81 /*He sighs. "My intellect is being wasted on the denizens of the Ditch. I should relocate to a place where it is more likely to meet sentient beings..." */
+==g-bbd032 @82 /*"Don't worry, Zeno. Your philosophy was going to bite you in the ass soon enough. It solves no problems but creates hundreds of new ones. Come, let's fish out some fresh waste and you'll be good as new." */
+END
+IF~~THEN REPLY @84 /*"Farewell." */ DO~ActionOverride("g-bb031",EscapeArea()) ActionOverride("g-bb032",EscapeArea()) AddexperienceParty(5000)~ EXIT
+CHAIN IF~~THEN g-bbD031 g-bbD031.shoot
+@86 /*Zeno is visibly surprised. His rat eyes widen and light up with excitement. */
+==DAnnah IF ~InParty("Annah") !StateCheck("Annah",CD_STATE_NOTVALID) NearbyDialog("DAnnah")~ THEN @87 /*"What an eejit..." */
+==DMorte IF ~InParty("Morte") !StateCheck("Morte",CD_STATE_NOTVALID) NearbyDialog("DMorte")~ THEN @88 /*"Chief, are we really going to waste time on this? His theory is nonsense." */
+==g-bbd031 @89 /*Zeno places you in a selected spot and moves away by a dozen or so feet, making sure that the line of sight between the two of you is clear. Finally, he raises his non-convincing bow, draws it all the way to his furry brow, takes a deep breath and releases. */
+END
+IF~~THEN REPLY @91 /*Observe the experiment. */ DO~FadeToColor([70.0],0) SetAnimState(Protagonist,ANIM_MIMEDIE) ~ + g-bbD031.shoot2
+CHAIN IF~~THEN g-bbD031 g-bbD031.shoot2
+@93 /*You awaken and see Zeno panicking above your body. "What did I do? I made a mistake in my calculations and killed an innocent..." [HIT_04A1] */
+==g-bbd032 @94 /*"Umm, Zeno... he is waking up," the other wererat says, pointing his finger at you. */
+==g-bbd031 @95 /*"*What?!* he shouts and turns to face you. "But... But I saw..." */
+END
+IF~~THEN REPLY @97 /*"It takes more than that to kill me. Let's just say I have some experience in dying." */ DO~SetAnimState(Protagonist,ANIM_MIMEGETUP) ~ + g-bbD031.shoot2a
+IF~~THEN REPLY @98 /*"It looks like your theory just went to Hells. It also looks like you owe me something for killing me." */ DO~SetAnimState(Protagonist,ANIM_MIMEGETUP) ~ + g-bbD031.shoot2a
+CHAIN IF~~THEN g-bbD031 g-bbD031.shoot2a
+@100 /*Zeno abruptly leans in to inspect the arrow sticking out of your chest. You notice that his blue, crystal eye falls out of its socket and starts rolling in your direction. You instinctively prepare to catch it so it does not roll down into the water. */
+END
+IF~~THEN REPLY @102 /*Catch it and return to Zeno. */ DO~~ + g-bbD031.eyeback
+IF~~THEN REPLY @103 /*Catch it. "This eye will suffice as payment, considering you just killed me." */ DO~~ + g-bbD031.keepeye
+IF~~THEN REPLY @104 /*Allow the eye to roll down into the water. */ DO~~ + g-bbD031.loseeye
+IF~~THEN REPLY @105 /*Kick the eye. */ DO~~ + g-bbD031.yeet
+CHAIN IF~~THEN g-bbD031 g-bbD031.reverse
+@107 /*Upon hearing it, the wererat's enthusiasm diminishes slightly. "Well... I don't know..." */
+END
+IF~~THEN REPLY @109 /*"If you believe in your hypothesis, you shouldn't be afraid. All in the name of science." */ DO~~ + g-bbD031.reverse2
+IF~~THEN REPLY @110 /*"Whatever. It may as well be me. Shoot!" */ DO~SetGlobal("G-ZErev1","GLOBAL",0)~ + g-bbD031.shoot
+IF~~THEN REPLY @111 /*"Bye, then. I don't have time for pseudoscience." */ DO~SetGlobal("G-ZErev1","GLOBAL",0)~ + g-bbD031.B1
+CHAIN IF~~THEN g-bbD031 g-bbD031.reverse2
+@113 /*Zeno hesitates for a while and eventually waves his hand. "You're right. As a proponent of science, I should give an example. Take my bow." */
+END
+IF~~THEN REPLY @115 /*Take Zeno's bow, pace a dozen feet away and aim... at his head. */ DO~IncrementGlobal("GOOD","GLOBAL",-1)~ + g-bbD031.reversehead
+IF~~THEN REPLY @116 /*Take Zeno's bow, pace a dozen feet away and aim... next to Zeno. */ DO~IncrementGlobal("GOOD","GLOBAL",1)~ + g-bbD031.reversemiss
+CHAIN IF~~THEN g-bbD031 g-bbD031.reversehead
+@118 /*Right after you release, Zeno chickens out at the last moment. He tries to duck, but... it is too late. The arrow hits him right in his good eye. The shot proves to be as lethal as you intended. Zeno falls to the ground with a thump. [HIT_04A1] */
+==g-bbd032 @119 /*"Hmm. I don't think it was supposed to go like this." */
+==DMorte IF ~InParty("Morte") !StateCheck("Morte",CD_STATE_NOTVALID) NearbyDialog("DMorte")~ THEN @120 /*"There goes the philosopher." */
+==DAnnah IF ~InParty("Annah") !StateCheck("Annah",CD_STATE_NOTVALID) NearbyDialog("DAnnah")~ THEN @121 /*"Aye. He was askin' for it." */
+==g-bbd031 @122 /*In this moment, you realize that upon Zeno's fall, his second, azure eye left its socket and started rolling towards the bank of the Ditch. Instinctively, you stoop and catch it before it falls into the water. */
+==g-bbd032 @123 /*"Poor Zeno, I always knew the abundance of brain would lead him to an early box." */
+END
+IF~~THEN REPLY @125 /*"One idiot less." */ DO~Kill("g-bb031") ActionOverride("g-bb032",EscapeArea()) AddexperienceParty(10000) IncrementGlobal("GOOD","GLOBAL",-1) GiveItemCreate("g-bbi022",Protagonist,1,1,0)~ EXIT
+IF~~THEN REPLY @126 /*"Indeed." */ DO~Kill("g-bb031") ActionOverride("g-bb032",EscapeArea()) AddexperienceParty(10000) GiveItemCreate("g-bbi022",Protagonist,1,1,0)~ EXIT
+CHAIN IF~~THEN g-bbD031 g-bbD031.reversemiss
+@128 /*Right after you release, Zeno chickens out at the last moment. He tries to duck, but... it is not necessary, as the arrow flies past him and into the thick, oily waters of the Ditch. In this moment, you realize that upon the jerky evasion, his azure eye left its socket, rolling out towards you. You instinctively prepare to catch it so it does not roll down into the water. */
+END
+IF~~THEN REPLY @130 /*Catch it and return to Zeno. */ DO~~ + g-bbD031.eyeback
+IF~~THEN REPLY @131 /*Catch it. "This eye will suffice as payment, considering you were about to shoot me." */ DO~~ + g-bbD031.keepeye
+IF~~THEN REPLY @132 /*Allow the eye to roll down into the water. */ DO~~ + g-bbD031.loseeye
+IF~~THEN REPLY @133 /*Kick the eye. */ DO~~ + g-bbD031.yeet
+CHAIN IF~~THEN g-bbD031 g-bbD031.Nreverse
+@135 /*Upon hearing it, the wererat's enthusiasm diminishes slightly. "Well... I don't know..." */
+END
+IF~~THEN REPLY @137 /*"If you believe in your hypothesis, you shouldn't be afraid. All in the name of science." */ DO~~ + g-bbD031.Nreverse2
+IF~~THEN REPLY @138 /*"Whatever. It may as well be me. Shoot!" */ DO~SetGlobal("G-ZErev1","GLOBAL",0)~ + g-bbD031.shoot
+IF~~THEN REPLY @139 /*"Bye, then. I don't have time for pseudoscience." */ DO~SetGlobal("G-ZErev1","GLOBAL",0)~ + g-bbD031.B1
+CHAIN IF~~THEN g-bbD031 g-bbD031.Nreverse2
+@141 /*Zeno hesitates for a while and eventually waves his hand. "You're right. As a proponent of science, I should give an example. Everything in the name of science. Let him shoot!" Saying this, he plants himself in front of Nordom, ensuring a clear line of sight. */
+END
+IF~~THEN REPLY @143 /*Whisper to Nordom: "Aim to kill." */ DO~IncrementGlobal("GOOD","GLOBAL",-1)~ + g-bbD031.Nreversehead
+IF~~THEN REPLY @144 /*Whisper to Nordom: "Aim next to Zeno. Let him learn from this lesson." */ DO~IncrementGlobal("GOOD","GLOBAL",1)~ + g-bbD031.Nreversemiss
+CHAIN IF~~THEN g-bbD031 g-bbD031.Nreversehead
+@146 /*Hearing you whisper something to Nordom, Zeno swallows loudly. */
+==DNordom IF ~InParty("Nordom") !StateCheck("Nordom",CD_STATE_NOTVALID) NearbyDialog("DNordom")~ THEN @147 /*"Affirmative." [NOR089] */
+==g-bbd031 @148 /*Right after you release, Zeno chickens out at the last moment. He tries to duck, but... it is too late. The bolt hits him right in his good eye. The shot proves to be as lethal as you intended. Zeno falls to the ground with a thump. [HIT_04A1] */
+==g-bbd032 @149 /*"Hmm. I don't think it was supposed to go like this." */
+==DMorte IF ~InParty("Morte") !StateCheck("Morte",CD_STATE_NOTVALID) NearbyDialog("DMorte")~ THEN @150 /*"There goes the philosopher." */
+==DAnnah IF ~InParty("Annah") !StateCheck("Annah",CD_STATE_NOTVALID) NearbyDialog("DAnnah")~ THEN @151 /*"Aye. He was askin' for it." */
+==g-bbd031 @152 /*In this moment, you realize that upon Zeno's fall, his second, azure eye left its socket and started rolling towards the bank of the Ditch. Instinctively, you stoop and catch it before it falls into the water. */
+==g-bbd032 @153 /*"Poor Zeno, I always knew the abundance of brain would lead him to an early box." */
+END
+IF~~THEN REPLY @155 /*"One idiot less." */ DO~Kill("g-bb031") ActionOverride("g-bb032",EscapeArea()) AddexperienceParty(10000) IncrementGlobal("GOOD","GLOBAL",-1) GiveItemCreate("g-bbi022",Protagonist,1,1,0)~ EXIT
+IF~~THEN REPLY @156 /*"Indeed." */ DO~Kill("g-bb031") ActionOverride("g-bb032",EscapeArea()) AddexperienceParty(1000) GiveItemCreate("g-bbi022",Protagonist,1,1,0)~ EXIT
+CHAIN IF~~THEN g-bbD031 g-bbD031.Nreversemiss
+@158 /*Hearing you whisper something to Nordom, Zeno swallows loudly. [INT_12E] */
+==DNordom IF ~InParty("Nordom") !StateCheck("Nordom",CD_STATE_NOTVALID) NearbyDialog("DNordom")~ THEN @159 /*"Affirmative." [NOR089] */
+==g-bbd031 @160 /*Right after Nordom releases, Zeno chickens out at the last moment. He tries to duck, but... it is not necessary, as the bolt flies past him and into the thick, oily water of the Ditch. In this moment, you realize that upon the jerky evasion, his azure eye left its socket, rolling out towards you. You instinctively prepare to catch it so it does not roll down into the water. */
+END
+IF~~THEN REPLY @162 /*Catch it and return to Zeno. */ DO~~ + g-bbD031.eyeback
+IF~~THEN REPLY @163 /*Catch it. "This eye will suffice as payment, considering you were about to shoot me." */ DO~~ + g-bbD031.keepeye
+IF~~THEN REPLY @164 /*Allow the eye to roll down into the water. */ DO~~ + g-bbD031.loseeye
+IF~~THEN REPLY @165 /*Kick the eye. */ DO~~ + g-bbD031.yeet
+CHAIN IF~~THEN g-bbD031 g-bbD031.eyeback
+@167 /*You place the eye in his hand. He wipes off the sand and inserts it back into his eye socket. "Thank you." [INT_12L1] */
+==DMorte IF ~InParty("Morte") !StateCheck("Morte",CD_STATE_NOTVALID) NearbyDialog("DMorte")~ THEN @168 /*"Chief... why did you do that?" */
+==g-bbd031 @169 /*"Right. It would seem that my theory was blasted to the Hells. What do I do now?" */
+END
+IF~GlobalGT("G-ZEreward","GLOBAL",0)~THEN REPLY @171 /*"First, you give me my promised jink." */ DO~GiveObjectGoldGlobal("G-ZEreward","GLOBAL",Protagonist) ~ + g-bbD031.eyeback2
+IF~Global("G-ZEreward","GLOBAL",0)~THEN REPLY @172 /*"Time for a new hypothesis?" */ DO~~ + g-bbD031.eyeback2a
+CHAIN IF~~THEN g-bbD031 g-bbD031.eyeback2
+@174 /*"Oh, right. Here you go." As he says this, he reaches behind his back and produces a pouch. "To make things even worse, I'm broke." */
+==g-bbd032 @175 /*"Don't worry, Zeno. Your philosophy was going to bite you in the ass soon enough. It solves no problems but creates hundreds of new ones. Come, let's fish out some fresh waste and you'll be good as new." */
+END
+IF~~THEN REPLY @177 /*"Farewell." */ DO~ActionOverride("g-bb031",EscapeArea()) ActionOverride("g-bb032",EscapeArea()) AddexperienceParty(10000)~ EXIT
+CHAIN IF~~THEN g-bbD031 g-bbD031.eyeback2a
+@179 /*"I don't know if I have another one in me at the moment..." The wererat looks around, looking a bit lost, but his gaze is met by his trusty friend, Elei. */
+==g-bbd032 @180 /*"Don't worry, Zeno. Your philosophy was going to bite you in the ass soon enough. It solves no problems but creates hundreds of new ones. Come, let's fish out some fresh waste and you'll be good as new." */
+END
+IF~~THEN REPLY @182 /*"Farewell." */ DO~ActionOverride("g-bb031",EscapeArea()) ActionOverride("g-bb032",EscapeArea()) AddexperienceParty(10000)~ EXIT
+CHAIN IF~~THEN g-bbD031 g-bbD031.keepeye
+@184 /*Zeno immediately resorts to anger. "Give it back, now!" [WERER02] */
+END
+IF~CheckStatGT(Protagonist,18,INT) Global("G-ZErev1","GLOBAL",1)~THEN REPLY @186 /*"You should be thankful I did not aim at you. Let this be an expression of gratitude." */ DO~GiveItemCreate("g-bbi022",Protagonist,1,1,0)~ + g-bbD031.keepeyeS
+IF~CheckStatGT(Protagonist,18,INT) Global("G-ZErev1","GLOBAL",2)~THEN REPLY @187 /*"You should be thankful Nordom did not aim at you. Let this be an expression of gratitude." */ DO~GiveItemCreate("g-bbi022",Protagonist,1,1,0)~ + g-bbD031.keepeyeS
+IF~~THEN REPLY @188 /*Give the eye back to Zeno. */ DO~~ + g-bbD031.eyeback
+IF~~THEN REPLY @189 /*"Try and take it." */ DO~Enemy() Attack(Protagonist) ActionOverride("g-bb032",Enemy()) GiveItemCreate("g-bbi022",Protagonist,1,1,0)~ EXIT
+CHAIN IF~~THEN g-bbD031 g-bbD031.loseeye
+@191 /*The eye rolls through the sloped land with increasing speed and ends up in the thick waters of the Ditch. */
+=@192 /*"My eye! Why didn't you catch it! Are you blind?" */
+END
+IF~~THEN REPLY @194 /*Lie: "I have trouble seeing at such light levels." */ DO~IncrementGlobal("LAW","GLOBAL",-1)~ + g-bbD031.broken
+IF~~THEN REPLY @195 /*Lie: "My reaction time isn't what it used to be." */ DO~IncrementGlobal("LAW","GLOBAL",-1)~ + g-bbD031.broken
+IF~~THEN REPLY @196 /*"It just happened..." */ DO~~ + g-bbD031.broken
+IF~~THEN REPLY @197 /*"Pike your eye." */ DO~Enemy() Attack(Protagonist) ActionOverride("g-bb032",Enemy())~ EXIT
+CHAIN IF~~THEN g-bbD031 g-bbD031.yeet
+@199 /*The eye flies through the air with a swooshing sound and ends up in the water with a sound that would require a lot of imagination to be called a splash. */
+=@200 /*"*What have you done! Do you know how much that was worth?*" [WERER02] */
+END
+IF~~THEN REPLY @202 /*"Pike your eye." */ DO~Enemy() Attack(Protagonist) ActionOverride("g-bb032",Enemy())~ EXIT
+CHAIN IF~~THEN g-bbD031 g-bbD031.broken
+@204 /*"Oh... my eye. My theory. All gone." */
+==g-bbd032 @205 /*"Don't worry, Zeno. Your philosophy was going to bite you in the ass soon enough. It solves no problems but creates hundreds of new ones. Come, let's fish out some fresh waste and you'll be good as new." */
+END
+IF~~THEN REPLY @207 /*"Farewell." */ DO~ActionOverride("g-bb031",EscapeArea()) ActionOverride("g-bb032",EscapeArea()) AddexperienceParty(10000)~ EXIT
+CHAIN IF~~THEN g-bbD031 g-bbD031.keepeyeS
+@209 /*The wererat takes this under serious consideration and finally responds with a great doze of resignation. "Well... I guess you are right... unfortunately." */
+END
+IF~~THEN REPLY @211 /*"So?" */ DO~~ + g-bbD031.broken

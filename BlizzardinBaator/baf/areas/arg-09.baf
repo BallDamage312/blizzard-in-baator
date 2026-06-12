@@ -1,0 +1,44 @@
+IF
+    True()
+THEN
+    RESPONSE #100
+        //SetWorldmap("G-DITCH")
+        RevealAreaOnMap("arg-09")
+        Continue()
+END
+
+IF 	
+	Global("G-pimpekfound","GLOBAL",0)
+	OR(2)
+    Global("G-agravalquest","GLOBAL",2)
+    Global("G-agravalquest","GLOBAL",13)
+THEN
+    RESPONSE #100
+		ActionOverride("g-bb175",JumpToPoint([1700.2000]))
+		CreateCreatureObject("g-bb101","G-bb175",0,0,0)
+		DisableAI("g-bb175",TRUE)
+		SetGlobal("G-pimpekfound","GLOBAL",1)
+		Continue()
+END
+
+IF
+    PartyRested()
+THEN
+    RESPONSE #100
+    SetGlobal("G-CroneUsedToday","GLOBAL",0)
+	Continue()
+END
+
+
+
+IF
+    Global("G-kidscatter","GLOBAL",1)
+	    Global("G-rattemplequest","GLOBAL",2)
+THEN
+    RESPONSE #100
+	SetGlobal("G-kidscatter","GLOBAL",2)
+    CreateCreature("g-bb241",[2305.601],SE)
+	CreateCreature("g-bb241",[2342.586],SE)
+	Continue()
+END
+

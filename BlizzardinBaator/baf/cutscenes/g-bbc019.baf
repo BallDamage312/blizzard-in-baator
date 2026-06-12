@@ -1,0 +1,34 @@
+IF
+    True()
+THEN
+    RESPONSE #100
+        CutSceneId(Player1)
+        CreateCreature("g-bb171",[804.624],SWW)  // Antilla
+        ActionOverride("g-bb171",StickySinisterPoof("S075DROP",Myself,1))
+        PlaySound("ABYSS07")
+        Wait(3)
+        ActionOverride("g-bb171",FloatMessage(Myself,@100195))  // "Interesujące..."
+		PlaySound("g-17101")
+        Wait(3)
+        ActionOverride("g-bb171",MoveToPoint([650.760]))
+        Wait(3)
+        ActionOverride("g-bb171",FaceObject(Protagonist))
+        Wait(2)
+        ActionOverride("g-bb171",StickySinisterPoof("S075DROP",Myself,1))
+        SmallWait(4)
+        PlaySound("ABYSS07")
+        ActionOverride("g-bb171",DestroySelf())
+        Wait(3)
+        RestorePartyLocations()
+        EnableFogDither()
+        EnableSpriteDither()
+        SetRenderable(Player1,TRUE)
+        ActionOverride(Player2,SetRenderable(Player2,TRUE))
+        ActionOverride(Player3,SetRenderable(Player3,TRUE))
+        ActionOverride(Player4,SetRenderable(Player4,TRUE))
+        ActionOverride(Player5,SetRenderable(Player5,TRUE))
+        ActionOverride(Player6,SetRenderable(Player6,TRUE))
+        EndCutSceneMode()
+        TextScreen("g-bbs01")
+END
+

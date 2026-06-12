@@ -1,0 +1,44 @@
+// Thug - the ditch arg-r2 fight with kocachron
+
+IF
+    OnCreation()
+THEN
+    RESPONSE #100
+		FaceObject([0.0.0.0.G-KOCACHRON_R2])
+        RunningAttack([0.0.0.0.G-KOCACHRON_R2])
+		//Enemy()
+        Continue()
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+    RunningAttack(NearestEnemyOf(Myself))
+END
+
+IF
+    AttackedBy([PC],DEFAULT)
+THEN
+    RESPONSE #100
+		FaceObject([PC])
+		Enemy()
+		Help()
+		RunningAttack(NearestEnemyOf(Myself))
+END
+
+IF
+    Help([0.0.0.0.G-THUG_R2])
+THEN
+    RESPONSE #100
+        Enemy()
+        RunningAttack(LastAttackerOf(LastHelp))
+END
+
+IF
+	True()
+THEN
+	RESPONSE #100
+		RandomWalk()
+		Continue()
+END

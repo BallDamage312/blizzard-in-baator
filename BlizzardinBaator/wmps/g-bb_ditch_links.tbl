@@ -1,0 +1,12 @@
+
+SRC_AREA	SRC_NWSE	TARGET_ARE		ENTRY_NAME		TRV_TIME		DEF_ENTRY		ENC1         ENC2         ENC3         ENC4         ENC5         ENC_PROB
+arg-00		N			arg-02			g-ent00			0				1				N			 N            N            N            N       	 0     
+arg-00		S			arg-09			g-ent00			0				4				arg-r3       arg-r4       N            N            N            10
+arg-02		N			arg-00			g-ent02			0				1				N            N            N            N            N            0
+arg-02		W			arg-ff			g-ent02			0				8				N            N            N            N            N            0
+arg-02		N			arg-06			g-ent02			1				1				arg-r2       arg-r1       arg-r4       N            N            10
+arg-02		E			arg-07			g-ent02			1				2				arg-r1       arg-r3       arg-r4       N            N            10
+arg-ff		E			arg-02			g-ent04			0				2				N            N            N            N            N            0
+arg-06		S			arg-02			g-ent06			1				4				arg-r1       arg-r4       N            N            N            10
+arg-07		S			arg-02			g-ent07			1				4				N            N            N            N            N            0
+arg-09		N			arg-00			g-ent09			0				1				arg-r2       arg-r4       N            N            N            10

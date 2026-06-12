@@ -1,0 +1,31 @@
+// Random, when attacked 
+
+IF
+    AttackedBy([ANYONE],DEFAULT)
+THEN
+    RESPONSE #100
+        EscapeArea()
+     END
+
+
+IF
+!ActuallyInCombat()
+THEN
+RESPONSE #100
+	Face(1)
+	PlaySequence(ANIM_TALK)
+	WaitRandom(5,25)
+RESPONSE #100
+	Face(3)
+	PlaySequence(ANIM_TALK)
+	WaitRandom(5,25)
+RESPONSE #100
+	Face(9)
+	PlaySequence(ANIM_TALK)
+	WaitRandom(5,25)
+RESPONSE #100
+	Face(9)
+	PlaySequence(ANIM_TALK)
+	WaitRandom(5,25)
+	
+END

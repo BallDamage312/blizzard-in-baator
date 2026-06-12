@@ -1,0 +1,30 @@
+// Fated Member
+
+IF
+    AttackedBy([PC],DEFAULT)
+THEN
+    RESPONSE #100
+		FaceObject([PC])
+		Enemy()
+		Help()
+		RunningAttack(NearestEnemyOf(Myself))
+		SetGlobal("g-debtpeoplealert","GLOBAL",1)
+END
+
+IF
+	Global("g-debtpeoplealert","GLOBAL",1)
+	Global("g-alerted","LOCALS",0)
+THEN
+    RESPONSE #100
+		SetGlobal("g-alerted","LOCALS",1)
+        Enemy()
+		RunningAttack(NearestEnemyOf(Myself))
+END
+
+IF
+	!ActuallyInCombat()
+	True()
+THEN
+	RESPONSE #100
+		RandomWalk()
+END

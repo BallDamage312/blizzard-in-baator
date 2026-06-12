@@ -1,0 +1,18 @@
+// portal from ysgard to the ditch
+
+IF
+    HarmlessEntered("Nordom")
+THEN
+    RESPONSE #100
+        VerbalConstant("Nordom",NORDOM_PORTAL)
+        Continue()
+END
+
+IF
+	HarmlessEntered(Player1)
+	PartyHasItem("g-bbi078")
+THEN
+	RESPONSE #100
+		SetPortalCursor("G-TO00",PORTAL_CURSOR_VISIBLE,TRUE)
+        SetPortalCursor("G-TO00",PORTAL_ENABLED,TRUE)
+END

@@ -1,0 +1,8 @@
+IF
+    Entered([PC])
+	Global("g-beachstatus","GLOBAL",1)
+THEN
+    RESPONSE #100
+        ActionOverride("G-bb044",StartDialogueNoSet(Protagonist))
+		
+END

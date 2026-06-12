@@ -1,0 +1,10 @@
+IF
+    Global("g-slimequestline","GLOBAL",7)
+	PartyHasItem("g-bbi032")
+THEN
+    RESPONSE #100
+        SetGlobal("g-slimequestline","GLOBAL",8)
+		PlaySound("NAM157")
+		ActionOverride(Protagonist,FloatMessage(Myself,@100196))
+		Continue()
+END

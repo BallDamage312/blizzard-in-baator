@@ -1,0 +1,81 @@
+// Haer'Dallis
+
+
+IF
+	OR(2)
+	Global("G-theatrealert","GLOBAL",1)
+	AttackedBy([PC],DEFAULT)
+THEN
+RESPONSE #100
+	Enemy()
+	Help()
+	SetGlobal("G-theatrealert","GLOBAL",1)
+	ForceSpell(NearestEnemyOf(Myself),WIZARD_CONFUSION) 
+	Wait(3)
+	ForceSpell(NearestEnemyOf(Myself),WIZARD_MAGIC_MISSILE) 
+	RunningAttack(NearestEnemyOf(Myself))
+END
+
+IF
+	GlobalGT("G-theaterraided","GLOBAL",0)
+THEN
+RESPONSE #100
+	ChangeTeam(Myself,G-FWRAID_F)
+	Help()
+	ForceSpell(NearestEnemyOf(Myself),WIZARD_CONFUSION) 
+	Wait(3)
+	ForceSpell(NearestEnemyOf(Myself),WIZARD_MAGIC_MISSILE)
+	ForceSpell(SecondNearestEnemyOf(Myself),WIZARD_MAGIC_MISSILE) 	
+	RunningAttack(NearestEnemyOf(Myself))
+END
+
+IF
+	AttackedBy([PC],DEFAULT)
+	Global("g-ulf_mad_in_ysgard","GLOBAL",1)
+	AreaCheck("arg-08")
+THEN
+RESPONSE #100
+	SetGlobal("Game_Over","GLOBAL",3)
+END
+
+IF
+    True()
+	!ActuallyInCombat()
+THEN
+    RESPONSE #100
+		ReturnToSavedPlace()
+		PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100002) 
+        WaitRandom(5,10)
+        Continue()
+	RESPONSE #100
+        ReturnToSavedPlace()
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100003) 
+		WaitRandom(10,10)
+        Continue()
+	RESPONSE #100
+        ReturnToSavedPlace()
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100004)
+		WaitRandom(10,10)
+        Continue()
+	RESPONSE #100
+        ReturnToSavedPlace()
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100005)
+		WaitRandom(10,10)
+        Continue()
+	RESPONSE #100
+        ReturnToSavedPlace()
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100006)
+		WaitRandom(10,10)
+        Continue()
+	RESPONSE #100
+        ReturnToSavedPlace()
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100007)
+		WaitRandom(10,10)
+        Continue()
+END

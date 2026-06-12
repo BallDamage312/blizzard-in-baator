@@ -1,0 +1,11 @@
+// UVB Dlg
+
+IF
+	AttackedBy([PC],DEFAULT)
+THEN
+	RESPONSE #100
+		SetGlobal("G-doomvsfatevsKEY","GLOBAL",5)
+		StartCutScene("g-bbc005")
+		
+END
+

@@ -1,0 +1,80 @@
+// Hive dwellers (2) no walk
+
+IF
+    OnCreation()
+THEN
+    RESPONSE #100
+        ChangeSpecifics(Myself,%G-DITCH_DWELLER%)
+END
+
+
+IF
+    See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        RunAwayFrom(NearestEnemyOf(Myself),170)
+END
+
+IF
+	Global("G-beachalert","GLOBAL",1)
+THEN
+    RESPONSE #100
+        EscapeArea()
+END
+
+IF
+    HPPercentLT(Myself,50)
+    Allegiance(Myself,ENEMY)
+THEN
+    RESPONSE #100
+        EscapeArea()
+END
+
+IF
+    AttackedBy([PC],DEFAULT)
+THEN
+    RESPONSE #100
+        Enemy()
+        RunAwayFrom(NearestEnemyOf(Myself),170)
+END
+
+IF
+    True()
+	!ActuallyInCombat()
+THEN
+    RESPONSE #100
+		ReturnToSavedPlace()
+		FaceObject(Player1)
+		PlaySequence(ANIM_STANDFIDGET1)
+        FloatMessage(Myself,@100186) 
+        WaitRandom(10,10)
+        Continue()
+	RESPONSE #100
+        ReturnToSavedPlace()
+		FaceObject(Player1)
+		PlaySequence(ANIM_STANDFIDGET1)
+        FloatMessage(Myself,@100187) 
+		WaitRandom(10,10)
+        Continue()
+	RESPONSE #100
+        ReturnToSavedPlace()
+		FaceObject(Player1)
+		PlaySequence(ANIM_STANDFIDGET1)
+        FloatMessage(Myself,@100188)
+		WaitRandom(10,10)
+        Continue()
+	RESPONSE #100
+        ReturnToSavedPlace()
+		FaceObject(Player1)
+		PlaySequence(ANIM_STANDFIDGET1)
+        FloatMessage(Myself,@100189)
+		WaitRandom(10,10)
+        Continue()
+	RESPONSE #100
+        ReturnToSavedPlace()
+		FaceObject(Player1)
+		PlaySequence(ANIM_STANDFIDGET1)
+        FloatMessage(Myself,@100190)
+		WaitRandom(10,10)
+        Continue()
+END

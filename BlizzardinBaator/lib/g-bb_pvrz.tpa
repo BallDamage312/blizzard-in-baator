@@ -1,0 +1,1207 @@
+
+// *** Code author: Argent77 ***
+
+////////////
+// ====== //
+//  WMPS  //
+// ====== //
+////////////
+
+ACTION_IF GAME_IS ~pstee~ BEGIN
+// Installing BAM resource
+// the ditch
+COPY ~%MOD_FOLDER%/bam/bam+pvrz/wmps_icons/ditch/g-ditch.bam~ ~override~
+  LPF UPDATE_PVRZ_INDICES
+    RET
+      original_base_index
+      new_base_index
+  END
+
+// It is strongly recommended to check the return values of "UPDATE_PVRZ_INDICES".
+// the ditch
+ACTION_IF (new_base_index >= 0) BEGIN
+  // Installing associated PVRZ resources
+  ACTION_FOR_EACH file IN ~MOS1000.pvrz~ BEGIN
+    LAF INSTALL_PVRZ
+      INT_VAR
+        original_base_index
+        new_base_index
+      STR_VAR
+        source_file = EVAL ~%MOD_FOLDER%/bam/bam+pvrz/wmps_icons/ditch/%file%~
+      RET
+        success
+        /*DEST_FILE
+    END
+    ACTION_IF (success) BEGIN
+      PRINT ~Successfully installed file %file% as %DEST_FILE%.~*/
+	  END
+	     ACTION_IF (NOT success) BEGIN 
+      WARN ~Could not install file %file%!~
+    END
+  END
+END
+END
+
+// Installing MOS
+// the ditch
+ACTION_IF GAME_IS ~pstee~ BEGIN
+COPY ~%MOD_FOLDER%/mos/v2/wmps/ditch/g-ditch.mos~ ~override~
+  LPF UPDATE_PVRZ_INDICES
+    RET
+      original_base_index
+      new_base_index
+  END
+
+ACTION_IF (new_base_index >= 0) BEGIN
+  // Installing PVRZ resources
+  ACTION_FOR_EACH file IN ~MOS0000.pvrz~ ~MOS0001.pvrz~ BEGIN
+    LAF INSTALL_PVRZ
+      INT_VAR
+        original_base_index
+        new_base_index
+      STR_VAR
+        source_file = EVAL ~%MOD_FOLDER%/mos/v2/wmps/ditch/%file%~
+      RET
+        success
+		
+    END
+    ACTION_IF (NOT success) BEGIN 
+      WARN ~Could not install file %file%!~
+    END
+  END
+END
+END
+
+ACTION_IF GAME_IS ~pstee~ BEGIN
+// Installing BAM resource
+// cania
+COPY ~%MOD_FOLDER%/bam/bam+pvrz/wmps_icons/cania/g-cania.bam~ ~override~
+  LPF UPDATE_PVRZ_INDICES
+    RET
+      original_base_index
+      new_base_index
+  END
+
+// It is strongly recommended to check the return values of "UPDATE_PVRZ_INDICES".
+// cania
+ACTION_IF (new_base_index >= 0) BEGIN
+  // Installing associated PVRZ resources
+  ACTION_FOR_EACH file IN ~MOS1000.pvrz~ BEGIN
+    LAF INSTALL_PVRZ
+      INT_VAR
+        original_base_index
+        new_base_index
+      STR_VAR
+        source_file = EVAL ~%MOD_FOLDER%/bam/bam+pvrz/wmps_icons/cania/%file%~
+      RET
+        success
+        /*DEST_FILE
+    END
+    ACTION_IF (success) BEGIN
+      PRINT ~Successfully installed file %file% as %DEST_FILE%.~*/
+	  END
+	     ACTION_IF (NOT success) BEGIN 
+      WARN ~Could not install file %file%!~
+    END
+  END
+END
+END
+
+// Installing MOS
+// cania
+ACTION_IF GAME_IS ~pstee~ BEGIN
+COPY ~%MOD_FOLDER%/mos/v2/wmps/cania/g-cania.mos~ ~override~
+  LPF UPDATE_PVRZ_INDICES
+    RET
+      original_base_index
+      new_base_index
+  END
+
+ACTION_IF (new_base_index >= 0) BEGIN
+  // Installing PVRZ resources
+  ACTION_FOR_EACH file IN ~MOS0000.pvrz~ ~MOS0001.pvrz~ BEGIN
+    LAF INSTALL_PVRZ
+      INT_VAR
+        original_base_index
+        new_base_index
+      STR_VAR
+        source_file = EVAL ~%MOD_FOLDER%/mos/v2/wmps/cania/%file%~
+      RET
+        success
+		
+    END
+    ACTION_IF (NOT success) BEGIN 
+      WARN ~Could not install file %file%!~
+    END
+  END
+END
+END
+
+/////////////////
+// =========== //
+// Ambush Arts //
+// =========== //
+/////////////////
+
+// Installing MOS
+ACTION_IF GAME_IS ~pstee~ BEGIN
+COPY ~%MOD_FOLDER%/mos/v2/ambusharts/g-abart1.mos~ ~override~
+  LPF UPDATE_PVRZ_INDICES
+    RET
+      original_base_index
+      new_base_index
+  END
+
+ACTION_IF (new_base_index >= 0) BEGIN
+  // Installing PVRZ resources
+  ACTION_FOR_EACH file IN ~MOS0000.pvrz~ ~MOS0001.pvrz~ BEGIN
+    LAF INSTALL_PVRZ
+      INT_VAR
+        original_base_index
+        new_base_index
+      STR_VAR
+        source_file = EVAL ~%MOD_FOLDER%/mos/v2/ambusharts/%file%~
+      RET
+        success
+		
+    END
+    ACTION_IF (NOT success) BEGIN 
+      WARN ~Could not install file %file%!~
+    END
+  END
+END
+END
+
+// Installing MOS
+ACTION_IF GAME_IS ~pstee~ BEGIN
+COPY ~%MOD_FOLDER%/mos/v2/ambusharts/g-abart2.mos~ ~override~
+  LPF UPDATE_PVRZ_INDICES
+    RET
+      original_base_index
+      new_base_index
+  END
+
+ACTION_IF (new_base_index >= 0) BEGIN
+  // Installing PVRZ resources
+  ACTION_FOR_EACH file IN ~MOS0002.pvrz~ ~MOS0003.pvrz~ BEGIN
+    LAF INSTALL_PVRZ
+      INT_VAR
+        original_base_index
+        new_base_index
+      STR_VAR
+        source_file = EVAL ~%MOD_FOLDER%/mos/v2/ambusharts/%file%~
+      RET
+        success
+		
+    END
+    ACTION_IF (NOT success) BEGIN 
+      WARN ~Could not install file %file%!~
+    END
+  END
+END
+END
+
+// Installing MOS
+ACTION_IF GAME_IS ~pstee~ BEGIN
+COPY ~%MOD_FOLDER%/mos/v2/ambusharts/g-abart3.mos~ ~override~
+  LPF UPDATE_PVRZ_INDICES
+    RET
+      original_base_index
+      new_base_index
+  END
+
+ACTION_IF (new_base_index >= 0) BEGIN
+  // Installing PVRZ resources
+  ACTION_FOR_EACH file IN ~MOS0004.pvrz~ ~MOS0005.pvrz~ BEGIN
+    LAF INSTALL_PVRZ
+      INT_VAR
+        original_base_index
+        new_base_index
+      STR_VAR
+        source_file = EVAL ~%MOD_FOLDER%/mos/v2/ambusharts/%file%~
+      RET
+        success
+		
+    END
+    ACTION_IF (NOT success) BEGIN 
+      WARN ~Could not install file %file%!~
+    END
+  END
+END
+END
+
+// Installing MOS
+ACTION_IF GAME_IS ~pstee~ BEGIN
+COPY ~%MOD_FOLDER%/mos/v2/ambusharts/g-abart4.mos~ ~override~
+  LPF UPDATE_PVRZ_INDICES
+    RET
+      original_base_index
+      new_base_index
+  END
+
+ACTION_IF (new_base_index >= 0) BEGIN
+  // Installing PVRZ resources
+  ACTION_FOR_EACH file IN ~MOS0006.pvrz~ ~MOS0007.pvrz~ BEGIN
+    LAF INSTALL_PVRZ
+      INT_VAR
+        original_base_index
+        new_base_index
+      STR_VAR
+        source_file = EVAL ~%MOD_FOLDER%/mos/v2/ambusharts/%file%~
+      RET
+        success
+		
+    END
+    ACTION_IF (NOT success) BEGIN 
+      WARN ~Could not install file %file%!~
+    END
+  END
+END
+END
+
+// Installing MOS
+ACTION_IF GAME_IS ~pstee~ BEGIN
+COPY ~%MOD_FOLDER%/mos/v2/ambusharts/g-abart5.mos~ ~override~
+  LPF UPDATE_PVRZ_INDICES
+    RET
+      original_base_index
+      new_base_index
+  END
+
+ACTION_IF (new_base_index >= 0) BEGIN
+  // Installing PVRZ resources
+  ACTION_FOR_EACH file IN ~MOS0008.pvrz~ ~MOS0009.pvrz~ BEGIN
+    LAF INSTALL_PVRZ
+      INT_VAR
+        original_base_index
+        new_base_index
+      STR_VAR
+        source_file = EVAL ~%MOD_FOLDER%/mos/v2/ambusharts/%file%~
+      RET
+        success
+		
+    END
+    ACTION_IF (NOT success) BEGIN 
+      WARN ~Could not install file %file%!~
+    END
+  END
+END
+END
+
+// Installing MOS
+ACTION_IF GAME_IS ~pstee~ BEGIN
+COPY ~%MOD_FOLDER%/mos/v2/ambusharts/g-abart6.mos~ ~override~
+  LPF UPDATE_PVRZ_INDICES
+    RET
+      original_base_index
+      new_base_index
+  END
+
+ACTION_IF (new_base_index >= 0) BEGIN
+  // Installing PVRZ resources
+  ACTION_FOR_EACH file IN ~MOS0010.pvrz~ ~MOS0011.pvrz~ BEGIN
+    LAF INSTALL_PVRZ
+      INT_VAR
+        original_base_index
+        new_base_index
+      STR_VAR
+        source_file = EVAL ~%MOD_FOLDER%/mos/v2/ambusharts/%file%~
+      RET
+        success
+		
+    END
+    ACTION_IF (NOT success) BEGIN 
+      WARN ~Could not install file %file%!~
+    END
+  END
+END
+END
+
+// Installing MOS
+ACTION_IF GAME_IS ~pstee~ BEGIN
+COPY ~%MOD_FOLDER%/mos/v2/ambusharts/g-abart7.mos~ ~override~
+  LPF UPDATE_PVRZ_INDICES
+    RET
+      original_base_index
+      new_base_index
+  END
+
+ACTION_IF (new_base_index >= 0) BEGIN
+  // Installing PVRZ resources
+  ACTION_FOR_EACH file IN ~MOS0012.pvrz~ ~MOS0013.pvrz~ BEGIN
+    LAF INSTALL_PVRZ
+      INT_VAR
+        original_base_index
+        new_base_index
+      STR_VAR
+        source_file = EVAL ~%MOD_FOLDER%/mos/v2/ambusharts/%file%~
+      RET
+        success
+		
+    END
+    ACTION_IF (NOT success) BEGIN 
+      WARN ~Could not install file %file%!~
+    END
+  END
+END
+END
+
+// Installing MOS
+ACTION_IF GAME_IS ~pstee~ BEGIN
+COPY ~%MOD_FOLDER%/mos/v2/ambusharts/g-abart8.mos~ ~override~
+  LPF UPDATE_PVRZ_INDICES
+    RET
+      original_base_index
+      new_base_index
+  END
+
+ACTION_IF (new_base_index >= 0) BEGIN
+  // Installing PVRZ resources
+  ACTION_FOR_EACH file IN ~MOS0014.pvrz~ ~MOS0015.pvrz~ BEGIN
+    LAF INSTALL_PVRZ
+      INT_VAR
+        original_base_index
+        new_base_index
+      STR_VAR
+        source_file = EVAL ~%MOD_FOLDER%/mos/v2/ambusharts/%file%~
+      RET
+        success
+		
+    END
+    ACTION_IF (NOT success) BEGIN 
+      WARN ~Could not install file %file%!~
+    END
+  END
+END
+END
+
+/////////////
+// ======= //
+// Avatars //
+// ======= //
+/////////////
+
+// Installing MOS
+// glabrezu ivp
+
+ACTION_IF GAME_IS ~pstee~ BEGIN
+COPY ~%MOD_FOLDER%/mos/v2/avatars/gla/ivpgla.mos~ ~override~
+  LPF UPDATE_PVRZ_INDICES
+    RET
+      original_base_index
+      new_base_index
+  END
+
+ACTION_IF (new_base_index >= 0) BEGIN
+  // Installing PVRZ resources
+  //glabrezu ivp
+  ACTION_FOR_EACH file IN ~MOS0000.pvrz~ BEGIN
+    LAF INSTALL_PVRZ
+      INT_VAR
+        original_base_index
+        new_base_index
+      STR_VAR
+        source_file = EVAL ~%MOD_FOLDER%/mos/v2/avatars/gla/%file%~
+      RET
+        success
+		
+    END
+	ACTION_IF (NOT success) BEGIN	 
+      WARN ~Could not install file %file%!~
+    END
+  END
+END
+END
+
+// Installing MOS
+// glabrezu stp
+ACTION_IF GAME_IS ~pstee~ BEGIN
+COPY ~%MOD_FOLDER%/mos/v2/avatars/gla/stpgla.mos~ ~override~
+  LPF UPDATE_PVRZ_INDICES
+    RET
+      original_base_index
+      new_base_index
+  END
+
+ACTION_IF (new_base_index >= 0) BEGIN
+  // Installing PVRZ resources
+  //glabrezu stp
+  ACTION_FOR_EACH file IN ~MOS0001.pvrz~ BEGIN
+    LAF INSTALL_PVRZ
+      INT_VAR
+        original_base_index
+        new_base_index
+      STR_VAR
+        source_file = EVAL ~%MOD_FOLDER%/mos/v2/avatars/gla/%file%~
+      RET
+        success
+		
+    END
+    ACTION_IF (NOT success) BEGIN 
+      WARN ~Could not install file %file%!~
+    END
+  END
+END
+END
+
+//////////////
+// ======== //
+// Bestiary //
+// ======== //
+//////////////
+
+// Prod
+
+// Installing MOS
+ACTION_IF GAME_IS ~pstee~ BEGIN
+COPY ~%MOD_FOLDER%/mos/v2/bestiary/001.prod/g-bbj001.mos~ ~override~
+  LPF UPDATE_PVRZ_INDICES
+    RET
+      original_base_index
+      new_base_index
+  END
+
+ACTION_IF (new_base_index >= 0) BEGIN
+  // Installing PVRZ resources
+  ACTION_FOR_EACH file IN ~MOS0000.pvrz~ ~MOS0001.pvrz~ ~MOS0002.pvrz~ BEGIN
+    LAF INSTALL_PVRZ
+      INT_VAR
+        original_base_index
+        new_base_index
+      STR_VAR
+        source_file = EVAL ~%MOD_FOLDER%/mos/v2/bestiary/001.prod/%file%~
+      RET
+        success
+		
+    END
+    ACTION_IF (NOT success) BEGIN 
+      WARN ~Could not install file %file%!~
+    END
+  END
+END
+END
+
+
+// Word Archon
+
+// Installing MOS
+ACTION_IF GAME_IS ~pstee~ BEGIN
+COPY ~%MOD_FOLDER%/mos/v2/bestiary/002.warchon/g-bbj002.mos~ ~override~
+  LPF UPDATE_PVRZ_INDICES
+    RET
+      original_base_index
+      new_base_index
+  END
+
+ACTION_IF (new_base_index >= 0) BEGIN
+  // Installing PVRZ resources
+  ACTION_FOR_EACH file IN ~MOS0000.pvrz~ ~MOS0001.pvrz~ ~MOS0002.pvrz~ BEGIN
+    LAF INSTALL_PVRZ
+      INT_VAR
+        original_base_index
+        new_base_index
+      STR_VAR
+        source_file = EVAL ~%MOD_FOLDER%/mos/v2/bestiary/002.warchon/%file%~
+      RET
+        success
+		
+    END
+    ACTION_IF (NOT success) BEGIN	 
+      WARN ~Could not install file %file%!~
+    END
+  END
+END
+END
+
+// Ulfhild Volgarsson
+
+// Installing MOS
+ACTION_IF GAME_IS ~pstee~ BEGIN
+COPY ~%MOD_FOLDER%/mos/v2/bestiary/003.uvb/g-bbj003.mos~ ~override~
+  LPF UPDATE_PVRZ_INDICES
+    RET
+      original_base_index
+      new_base_index
+  END
+
+ACTION_IF (new_base_index >= 0) BEGIN
+  // Installing PVRZ resources
+  ACTION_FOR_EACH file IN ~MOS0000.pvrz~ ~MOS0001.pvrz~ ~MOS0002.pvrz~ BEGIN
+    LAF INSTALL_PVRZ
+      INT_VAR
+        original_base_index
+        new_base_index
+      STR_VAR
+        source_file = EVAL ~%MOD_FOLDER%/mos/v2/bestiary/003.uvb/%file%~
+      RET
+        success
+		
+    END
+    ACTION_IF (NOT success) BEGIN	 	 
+      WARN ~Could not install file %file%!~
+    END
+  END
+END
+END
+
+
+// Brill (Slaad)
+
+// Installing MOS
+ACTION_IF GAME_IS ~pstee~ BEGIN
+COPY ~%MOD_FOLDER%/mos/v2/bestiary/004.slaad/g-bbj004.mos~ ~override~
+  LPF UPDATE_PVRZ_INDICES
+    RET
+      original_base_index
+      new_base_index
+  END
+
+ACTION_IF (new_base_index >= 0) BEGIN
+  // Installing PVRZ resources
+  ACTION_FOR_EACH file IN ~MOS0000.pvrz~ ~MOS0001.pvrz~ ~MOS0002.pvrz~ BEGIN
+    LAF INSTALL_PVRZ
+      INT_VAR
+        original_base_index
+        new_base_index
+      STR_VAR
+        source_file = EVAL ~%MOD_FOLDER%/mos/v2/bestiary/004.slaad/%file%~
+      RET
+        success
+		
+    END
+    ACTION_IF (NOT success) BEGIN
+      WARN ~Could not install file %file%!~
+    END
+  END
+END
+END
+
+// Mimik
+
+// Installing MOS
+ACTION_IF GAME_IS ~pstee~ BEGIN
+COPY ~%MOD_FOLDER%/mos/v2/bestiary/005.mimik/g-bbj005.mos~ ~override~
+  LPF UPDATE_PVRZ_INDICES
+    RET
+      original_base_index
+      new_base_index
+  END
+
+ACTION_IF (new_base_index >= 0) BEGIN
+  // Installing PVRZ resources
+  ACTION_FOR_EACH file IN ~MOS0000.pvrz~ ~MOS0001.pvrz~ ~MOS0002.pvrz~ BEGIN
+    LAF INSTALL_PVRZ
+      INT_VAR
+        original_base_index
+        new_base_index
+      STR_VAR
+        source_file = EVAL ~%MOD_FOLDER%/mos/v2/bestiary/005.mimik/%file%~
+      RET
+        success
+		
+    END
+    ACTION_IF (NOT success) BEGIN 
+      WARN ~Could not install file %file%!~
+    END
+  END
+END
+END
+
+// Marilith
+
+// Installing MOS
+ACTION_IF GAME_IS ~pstee~ BEGIN
+COPY ~%MOD_FOLDER%/mos/v2/bestiary/006.marilith/g-bbj006.mos~ ~override~
+  LPF UPDATE_PVRZ_INDICES
+    RET
+      original_base_index
+      new_base_index
+  END
+
+ACTION_IF (new_base_index >= 0) BEGIN
+  // Installing PVRZ resources
+  ACTION_FOR_EACH file IN ~MOS0000.pvrz~ ~MOS0001.pvrz~ ~MOS0002.pvrz~ BEGIN
+    LAF INSTALL_PVRZ
+      INT_VAR
+        original_base_index
+        new_base_index
+      STR_VAR
+        source_file = EVAL ~%MOD_FOLDER%/mos/v2/bestiary/006.marilith/%file%~
+      RET
+        success
+		
+    END
+    ACTION_IF (NOT success) BEGIN 
+      WARN ~Could not install file %file%!~
+    END
+  END
+END
+END
+
+// Elvra (Kocrachon)
+
+// Installing MOS
+ACTION_IF GAME_IS ~pstee~ BEGIN
+COPY ~%MOD_FOLDER%/mos/v2/bestiary/007.kocrachon/g-bbj007.mos~ ~override~
+  LPF UPDATE_PVRZ_INDICES
+    RET
+      original_base_index
+      new_base_index
+  END
+
+ACTION_IF (new_base_index >= 0) BEGIN
+  // Installing PVRZ resources
+  ACTION_FOR_EACH file IN ~MOS0000.pvrz~ ~MOS0001.pvrz~ ~MOS0002.pvrz~ BEGIN
+    LAF INSTALL_PVRZ
+      INT_VAR
+        original_base_index
+        new_base_index
+      STR_VAR
+        source_file = EVAL ~%MOD_FOLDER%/mos/v2/bestiary/007.kocrachon/%file%~
+      RET
+        success
+		
+    END
+    ACTION_IF (NOT success) BEGIN 
+      WARN ~Could not install file %file%!~
+    END
+  END
+END
+END
+
+// Yagnoloth
+
+// Installing MOS
+ACTION_IF GAME_IS ~pstee~ BEGIN
+COPY ~%MOD_FOLDER%/mos/v2/bestiary/008.yagn/g-bbj008.mos~ ~override~
+  LPF UPDATE_PVRZ_INDICES
+    RET
+      original_base_index
+      new_base_index
+  END
+
+ACTION_IF (new_base_index >= 0) BEGIN
+  // Installing PVRZ resources
+  ACTION_FOR_EACH file IN ~MOS0000.pvrz~ ~MOS0001.pvrz~ ~MOS0002.pvrz~ BEGIN
+    LAF INSTALL_PVRZ
+      INT_VAR
+        original_base_index
+        new_base_index
+      STR_VAR
+        source_file = EVAL ~%MOD_FOLDER%/mos/v2/bestiary/008.yagn/%file%~
+      RET
+        success
+		
+    END
+    ACTION_IF (NOT success) BEGIN	 
+      WARN ~Could not install file %file%!~
+    END
+  END
+END
+END
+
+// Maer
+
+// Installing MOS
+ACTION_IF GAME_IS ~pstee~ BEGIN
+COPY ~%MOD_FOLDER%/mos/v2/bestiary/009.maer/g-bbj009.mos~ ~override~
+  LPF UPDATE_PVRZ_INDICES
+    RET
+      original_base_index
+      new_base_index
+  END
+
+ACTION_IF (new_base_index >= 0) BEGIN
+  // Installing PVRZ resources
+  ACTION_FOR_EACH file IN ~MOS0000.pvrz~ ~MOS0001.pvrz~ ~MOS0002.pvrz~ BEGIN
+    LAF INSTALL_PVRZ
+      INT_VAR
+        original_base_index
+        new_base_index
+      STR_VAR
+        source_file = EVAL ~%MOD_FOLDER%/mos/v2/bestiary/009.maer/%file%~
+      RET
+        success
+		
+    END
+    ACTION_IF (NOT success) BEGIN	 
+      WARN ~Could not install file %file%!~
+    END
+  END
+END
+END
+
+// Bladeling
+
+// Installing MOS
+ACTION_IF GAME_IS ~pstee~ BEGIN
+COPY ~%MOD_FOLDER%/mos/v2/bestiary/010.bladeling/g-bbj010.mos~ ~override~
+  LPF UPDATE_PVRZ_INDICES
+    RET
+      original_base_index
+      new_base_index
+  END
+
+ACTION_IF (new_base_index >= 0) BEGIN
+  // Installing PVRZ resources
+  ACTION_FOR_EACH file IN ~MOS0000.pvrz~ ~MOS0001.pvrz~ ~MOS0002.pvrz~ BEGIN
+    LAF INSTALL_PVRZ
+      INT_VAR
+        original_base_index
+        new_base_index
+      STR_VAR
+        source_file = EVAL ~%MOD_FOLDER%/mos/v2/bestiary/010.bladeling/%file%~
+      RET
+        success
+		
+    END
+    ACTION_IF (NOT success) BEGIN  
+      WARN ~Could not install file %file%!~
+    END
+  END
+END
+END
+
+// Kabatum
+
+// Installing MOS
+ACTION_IF GAME_IS ~pstee~ BEGIN
+COPY ~%MOD_FOLDER%/mos/v2/bestiary/011.kabatum/g-bbj011.mos~ ~override~
+  LPF UPDATE_PVRZ_INDICES
+    RET
+      original_base_index
+      new_base_index
+  END
+
+ACTION_IF (new_base_index >= 0) BEGIN
+  // Installing PVRZ resources
+  ACTION_FOR_EACH file IN ~MOS0000.pvrz~ ~MOS0001.pvrz~ ~MOS0002.pvrz~ BEGIN
+    LAF INSTALL_PVRZ
+      INT_VAR
+        original_base_index
+        new_base_index
+      STR_VAR
+        source_file = EVAL ~%MOD_FOLDER%/mos/v2/bestiary/011.kabatum/%file%~
+      RET
+        success
+		
+    END
+    ACTION_IF (NOT success) BEGIN 
+      WARN ~Could not install file %file%!~
+    END
+  END
+END
+END
+
+// Slime
+
+// Installing MOS
+ACTION_IF GAME_IS ~pstee~ BEGIN
+COPY ~%MOD_FOLDER%/mos/v2/bestiary/012.slime/g-bbj012.mos~ ~override~
+  LPF UPDATE_PVRZ_INDICES
+    RET
+      original_base_index
+      new_base_index
+  END
+
+ACTION_IF (new_base_index >= 0) BEGIN
+  // Installing PVRZ resources
+  ACTION_FOR_EACH file IN ~MOS0000.pvrz~ ~MOS0001.pvrz~ ~MOS0002.pvrz~ BEGIN
+    LAF INSTALL_PVRZ
+      INT_VAR
+        original_base_index
+        new_base_index
+      STR_VAR
+        source_file = EVAL ~%MOD_FOLDER%/mos/v2/bestiary/012.slime/%file%~
+      RET
+        success
+		
+    END
+    ACTION_IF (NOT success) BEGIN 
+      WARN ~Could not install file %file%!~
+    END
+  END
+END
+END
+
+// Antilla
+
+// Installing MOS
+ACTION_IF GAME_IS ~pstee~ BEGIN
+COPY ~%MOD_FOLDER%/mos/v2/bestiary/013.antilla/g-bbj013.mos~ ~override~
+  LPF UPDATE_PVRZ_INDICES
+    RET
+      original_base_index
+      new_base_index
+  END
+
+ACTION_IF (new_base_index >= 0) BEGIN
+  // Installing PVRZ resources
+  ACTION_FOR_EACH file IN ~MOS0000.pvrz~ ~MOS0001.pvrz~ ~MOS0002.pvrz~ BEGIN
+    LAF INSTALL_PVRZ
+      INT_VAR
+        original_base_index
+        new_base_index
+      STR_VAR
+        source_file = EVAL ~%MOD_FOLDER%/mos/v2/bestiary/013.antilla/%file%~
+      RET
+        success
+		
+    END
+    ACTION_IF (NOT success) BEGIN	 
+      WARN ~Could not install file %file%!~
+    END
+  END
+END
+END
+
+// Haer'Dalis
+
+// Installing MOS
+ACTION_IF GAME_IS ~pstee~ BEGIN
+COPY ~%MOD_FOLDER%/mos/v2/bestiary/014.haer/g-bbj014.mos~ ~override~
+  LPF UPDATE_PVRZ_INDICES
+    RET
+      original_base_index
+      new_base_index
+  END
+
+ACTION_IF (new_base_index >= 0) BEGIN
+  // Installing PVRZ resources
+  ACTION_FOR_EACH file IN ~MOS0000.pvrz~ ~MOS0001.pvrz~ ~MOS0002.pvrz~ BEGIN
+    LAF INSTALL_PVRZ
+      INT_VAR
+        original_base_index
+        new_base_index
+      STR_VAR
+        source_file = EVAL ~%MOD_FOLDER%/mos/v2/bestiary/014.haer/%file%~
+      RET
+        success
+		
+    END
+    ACTION_IF (NOT success) BEGIN
+      WARN ~Could not install file %file%!~
+    END
+  END
+END
+END
+
+// Gelugon
+
+// Installing MOS
+ACTION_IF GAME_IS ~pstee~ BEGIN
+COPY ~%MOD_FOLDER%/mos/v2/bestiary/015.gelugon/g-bbj015.mos~ ~override~
+  LPF UPDATE_PVRZ_INDICES
+    RET
+      original_base_index
+      new_base_index
+  END
+
+ACTION_IF (new_base_index >= 0) BEGIN
+  // Installing PVRZ resources
+  ACTION_FOR_EACH file IN ~MOS0000.pvrz~ ~MOS0001.pvrz~ ~MOS0002.pvrz~ BEGIN
+    LAF INSTALL_PVRZ
+      INT_VAR
+        original_base_index
+        new_base_index
+      STR_VAR
+        source_file = EVAL ~%MOD_FOLDER%/mos/v2/bestiary/015.gelugon/%file%~
+      RET
+        success
+		
+    END
+    ACTION_IF (NOT success) BEGIN
+      WARN ~Could not install file %file%!~
+    END
+  END
+END
+END
+
+// alviro
+
+// Installing MOS
+ACTION_IF GAME_IS ~pstee~ BEGIN
+COPY ~%MOD_FOLDER%/mos/v2/bestiary/016.alviro/g-bbj016.mos~ ~override~
+  LPF UPDATE_PVRZ_INDICES
+    RET
+      original_base_index
+      new_base_index
+  END
+
+ACTION_IF (new_base_index >= 0) BEGIN
+  // Installing PVRZ resources
+  ACTION_FOR_EACH file IN ~MOS0000.pvrz~ ~MOS0001.pvrz~ ~MOS0002.pvrz~ BEGIN
+    LAF INSTALL_PVRZ
+      INT_VAR
+        original_base_index
+        new_base_index
+      STR_VAR
+        source_file = EVAL ~%MOD_FOLDER%/mos/v2/bestiary/016.alviro/%file%~
+      RET
+        success
+		
+    END
+    ACTION_IF (NOT success) BEGIN
+      WARN ~Could not install file %file%!~
+    END
+  END
+END
+END
+
+// Bard A
+
+// Installing MOS
+ACTION_IF GAME_IS ~pstee~ BEGIN
+COPY ~%MOD_FOLDER%/mos/v2/bestiary/017.barda/g-bbj017.mos~ ~override~
+  LPF UPDATE_PVRZ_INDICES
+    RET
+      original_base_index
+      new_base_index
+  END
+
+ACTION_IF (new_base_index >= 0) BEGIN
+  // Installing PVRZ resources
+  ACTION_FOR_EACH file IN ~MOS0000.pvrz~ ~MOS0001.pvrz~ ~MOS0002.pvrz~ BEGIN
+    LAF INSTALL_PVRZ
+      INT_VAR
+        original_base_index
+        new_base_index
+      STR_VAR
+        source_file = EVAL ~%MOD_FOLDER%/mos/v2/bestiary/017.barda/%file%~
+      RET
+        success
+		
+    END
+    ACTION_IF (NOT success) BEGIN
+      WARN ~Could not install file %file%!~
+    END
+  END
+END
+END
+
+// Kuo Toa
+
+// Installing MOS
+ACTION_IF GAME_IS ~pstee~ BEGIN
+COPY ~%MOD_FOLDER%/mos/v2/bestiary/018.kuo/g-bbj018.mos~ ~override~
+  LPF UPDATE_PVRZ_INDICES
+    RET
+      original_base_index
+      new_base_index
+  END
+
+ACTION_IF (new_base_index >= 0) BEGIN
+  // Installing PVRZ resources
+  ACTION_FOR_EACH file IN ~MOS0000.pvrz~ ~MOS0001.pvrz~ ~MOS0002.pvrz~ BEGIN
+    LAF INSTALL_PVRZ
+      INT_VAR
+        original_base_index
+        new_base_index
+      STR_VAR
+        source_file = EVAL ~%MOD_FOLDER%/mos/v2/bestiary/018.kuo/%file%~
+      RET
+        success
+		
+    END
+    ACTION_IF (NOT success) BEGIN
+      WARN ~Could not install file %file%!~
+    END
+  END
+END
+END
+
+// Baer
+
+// Installing MOS
+ACTION_IF GAME_IS ~pstee~ BEGIN
+COPY ~%MOD_FOLDER%/mos/v2/bestiary/019.baer/g-bbj019.mos~ ~override~
+  LPF UPDATE_PVRZ_INDICES
+    RET
+      original_base_index
+      new_base_index
+  END
+
+ACTION_IF (new_base_index >= 0) BEGIN
+  // Installing PVRZ resources
+  ACTION_FOR_EACH file IN ~MOS0000.pvrz~ ~MOS0001.pvrz~ ~MOS0002.pvrz~ BEGIN
+    LAF INSTALL_PVRZ
+      INT_VAR
+        original_base_index
+        new_base_index
+      STR_VAR
+        source_file = EVAL ~%MOD_FOLDER%/mos/v2/bestiary/019.baer/%file%~
+      RET
+        success
+		
+    END
+    ACTION_IF (NOT success) BEGIN
+      WARN ~Could not install file %file%!~
+    END
+  END
+END
+END
+
+// Raelis
+
+// Installing MOS
+ACTION_IF GAME_IS ~pstee~ BEGIN
+COPY ~%MOD_FOLDER%/mos/v2/bestiary/020.raelis/g-bbj020.mos~ ~override~
+  LPF UPDATE_PVRZ_INDICES
+    RET
+      original_base_index
+      new_base_index
+  END
+
+ACTION_IF (new_base_index >= 0) BEGIN
+  // Installing PVRZ resources
+  ACTION_FOR_EACH file IN ~MOS0000.pvrz~ ~MOS0001.pvrz~ ~MOS0002.pvrz~ BEGIN
+    LAF INSTALL_PVRZ
+      INT_VAR
+        original_base_index
+        new_base_index
+      STR_VAR
+        source_file = EVAL ~%MOD_FOLDER%/mos/v2/bestiary/020.raelis/%file%~
+      RET
+        success
+		
+    END
+    ACTION_IF (NOT success) BEGIN
+      WARN ~Could not install file %file%!~
+    END
+  END
+END
+END
+
+// Holler
+
+// Installing MOS
+ACTION_IF GAME_IS ~pstee~ BEGIN
+COPY ~%MOD_FOLDER%/mos/v2/bestiary/021.holler/g-bbj021.mos~ ~override~
+  LPF UPDATE_PVRZ_INDICES
+    RET
+      original_base_index
+      new_base_index
+  END
+
+ACTION_IF (new_base_index >= 0) BEGIN
+  // Installing PVRZ resources
+  ACTION_FOR_EACH file IN ~MOS0000.pvrz~ ~MOS0001.pvrz~ ~MOS0002.pvrz~ BEGIN
+    LAF INSTALL_PVRZ
+      INT_VAR
+        original_base_index
+        new_base_index
+      STR_VAR
+        source_file = EVAL ~%MOD_FOLDER%/mos/v2/bestiary/021.holler/%file%~
+      RET
+        success
+		
+    END
+    ACTION_IF (NOT success) BEGIN
+      WARN ~Could not install file %file%!~
+    END
+  END
+END
+END
+
+// Mezzoloth
+
+// Installing MOS
+ACTION_IF GAME_IS ~pstee~ BEGIN
+COPY ~%MOD_FOLDER%/mos/v2/bestiary/022.mezzoloth/g-bbj022.mos~ ~override~
+  LPF UPDATE_PVRZ_INDICES
+    RET
+      original_base_index
+      new_base_index
+  END
+
+ACTION_IF (new_base_index >= 0) BEGIN
+  // Installing PVRZ resources
+  ACTION_FOR_EACH file IN ~MOS0000.pvrz~ ~MOS0001.pvrz~ ~MOS0002.pvrz~ BEGIN
+    LAF INSTALL_PVRZ
+      INT_VAR
+        original_base_index
+        new_base_index
+      STR_VAR
+        source_file = EVAL ~%MOD_FOLDER%/mos/v2/bestiary/022.mezzoloth/%file%~
+      RET
+        success
+		
+    END
+    ACTION_IF (NOT success) BEGIN
+      WARN ~Could not install file %file%!~
+    END
+  END
+END
+END
+
+
+// Monodrone
+
+// Installing MOS
+ACTION_IF GAME_IS ~pstee~ BEGIN
+COPY ~%MOD_FOLDER%/mos/v2/bestiary/023.monodrone/g-bbj023.mos~ ~override~
+  LPF UPDATE_PVRZ_INDICES
+    RET
+      original_base_index
+      new_base_index
+  END
+
+ACTION_IF (new_base_index >= 0) BEGIN
+  // Installing PVRZ resources
+  ACTION_FOR_EACH file IN ~MOS0000.pvrz~ ~MOS0001.pvrz~ ~MOS0002.pvrz~ BEGIN
+    LAF INSTALL_PVRZ
+      INT_VAR
+        original_base_index
+        new_base_index
+      STR_VAR
+        source_file = EVAL ~%MOD_FOLDER%/mos/v2/bestiary/023.monodrone/%file%~
+      RET
+        success
+		
+    END
+    ACTION_IF (NOT success) BEGIN
+      WARN ~Could not install file %file%!~
+    END
+  END
+END
+END
+
+
+
+/////////////
+// ======= //
+// CHAPTER //
+// ======= //
+/////////////
+
+// Installing MOS
+// Act1
+
+ACTION_IF GAME_IS ~pstee~ BEGIN
+COPY ~%MOD_FOLDER%/mos/v2/chapterscreen/g-bbs01.mos~ ~override~
+  LPF UPDATE_PVRZ_INDICES
+    RET
+      original_base_index
+      new_base_index
+  END
+
+ACTION_IF (new_base_index >= 0) BEGIN
+  // Installing PVRZ resources
+  //glabrezu ivp
+  ACTION_FOR_EACH file IN ~MOS1000.pvrz~ BEGIN
+    LAF INSTALL_PVRZ
+      INT_VAR
+        original_base_index
+        new_base_index
+      STR_VAR
+        source_file = EVAL ~%MOD_FOLDER%/mos/v2/chapterscreen/%file%~
+      RET
+        success
+        
+    END
+    ACTION_IF (NOT success) BEGIN     
+      WARN ~Could not install file %file%!~
+    END
+  END
+END
+END

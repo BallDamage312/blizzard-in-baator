@@ -1,0 +1,9 @@
+IF
+  Global("g-cheatignus","GLOBAL",1)
+  AreaCheck("AR0402")
+THEN
+  RESPONSE #100
+    DestroySelf()
+    SetGlobal("g-cheatignus","GLOBAL",2)
+END
+

@@ -1,0 +1,18 @@
+IF
+    HarmlessEntered(Player1)
+    Global("G-demoend","Global",0)
+THEN
+    RESPONSE #100
+        StorePartyLocations()
+        DisableFogDither()
+        DisableSpriteDither()
+        LeaveAreaLUA("arg-97","",[800.1270],S)  // Mefistar
+        ActionOverride(Player1,LeaveAreaLUA("arg-97","",[965.1049],S))  // Mefistar
+        ActionOverride(Player2,LeaveAreaLUA("arg-97","",[965.1049],S))  // Mefistar
+        ActionOverride(Player3,LeaveAreaLUA("arg-97","",[965.1049],S))  // Mefistar
+        ActionOverride(Player4,LeaveAreaLUA("arg-97","",[965.1049],S))  // Mefistar
+        ActionOverride(Player5,LeaveAreaLUA("arg-97","",[965.1049],S))  // Mefistar
+        ActionOverride(Player6,LeaveAreaLUA("arg-97","",[965.1049],S))  // Mefistar
+        SetGlobal("G-demoend","Global",1)
+END
+

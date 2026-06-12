@@ -1,0 +1,60 @@
+// Random, when attacked 
+
+IF
+    AttackedBy([ANYONE],DEFAULT)
+THEN
+    RESPONSE #100
+        Enemy()
+        Attack(NearestEnemyOf(Myself))
+   END
+
+IF
+    Help([ANYONE])
+    Team(LastTrigger,G-KUOTOAT)
+THEN
+    RESPONSE #100
+        Enemy()
+		Attack(NearestEnemyOf(Myself))
+END
+
+IF
+	True()
+THEN
+	RESPONSE #100
+		RandomWalk()
+		Continue()
+END
+
+IF
+    True()
+THEN
+    RESPONSE #100
+        Face(W)
+        PlaySequence(ANIM_TALK)
+        WaitRandom(3,5)
+        Face(NW)
+        PlaySequence(ANIM_TALK)
+        WaitRandom(3,5)
+END
+
+
+IF
+	Global("G-kuotoakiaran","GLOBAL",1)
+THEN
+	RESPONSE #100
+		DestroySelf()
+END
+
+IF
+	Global("G-kuotoabhaal","GLOBAL",1)
+THEN
+	RESPONSE #100
+		DestroySelf()
+END
+
+IF
+	Global("G-kuotoadead","GLOBAL",1)
+THEN
+	RESPONSE #100
+		DestroySelf()
+END

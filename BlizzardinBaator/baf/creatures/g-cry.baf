@@ -1,0 +1,43 @@
+// Hive dwellers (2) miner
+
+IF
+    OnCreation()
+THEN
+    RESPONSE #100
+        ChangeSpecifics(Myself,%G-DITCH_DWELLER%)
+END
+
+
+IF
+    See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        EscapeArea()
+END
+
+
+IF
+    AttackedBy([PC],DEFAULT)
+THEN
+    RESPONSE #100
+   EscapeArea()
+   
+END
+
+IF
+	!ActuallyInCombat()
+THEN
+    RESPONSE #100
+		FloatMessage(Myself,@100247) 
+        WaitRandom(5,15)
+        Continue()
+	RESPONSE #100
+        FloatMessage(Myself,@100248) 
+		WaitRandom(5,15)
+        Continue()
+	RESPONSE #100
+		FloatMessage(Myself,@100249) 
+		WaitRandom(5,15)
+        Continue()
+END
+

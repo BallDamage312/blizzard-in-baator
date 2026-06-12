@@ -1,0 +1,19 @@
+IF
+	Global("g-party_alert","GLOBAL",1)
+	
+THEN
+	RESPONSE #100
+		Enemy()
+		Help()
+		RunningAttack(NearestEnemyOf(Myself))
+END
+
+IF
+    AttackedBy([PC],DEFAULT)
+	
+THEN
+	RESPONSE #100
+		Enemy()
+		Help()
+		RunningAttack(NearestEnemyOf(Myself))
+END

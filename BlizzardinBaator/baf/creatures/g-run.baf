@@ -1,0 +1,26 @@
+IF
+	True()
+THEN
+	RESPONSE #20
+		FloatMessage(Myself,@100203)
+		Wait(1)		
+		EscapeArea()
+	RESPONSE #20
+		FloatMessage(Myself,@100204) 
+		Wait(1)		
+		EscapeArea()
+	RESPONSE #20
+		FloatMessage(Myself,@100205) 
+		Wait(1)		
+		EscapeArea()
+	RESPONSE #20
+		FloatMessage(Myself,@100206) 
+		Wait(1)		
+		EscapeArea()
+	RESPONSE #20
+		FloatMessage(Myself,@100207) 
+		Wait(1)		
+		EscapeArea()
+END
+
+

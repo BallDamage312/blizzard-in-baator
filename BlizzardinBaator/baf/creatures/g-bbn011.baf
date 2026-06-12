@@ -1,0 +1,47 @@
+// Blacksmith Adam
+
+IF
+    AttackedBy([PC],DEFAULT)
+THEN
+    RESPONSE #100
+        Enemy()
+        Attack(LastSeenBy(Myself))
+END
+
+IF
+    HPPercentLT(Myself,50)
+    Allegiance(Myself,ENEMY)
+THEN
+    RESPONSE #100
+        RunAwayFrom([PC],50)
+END
+
+IF
+    Die()
+THEN
+    RESPONSE #100
+        Help()
+END
+
+IF
+    !Allegiance(Myself,ENEMY)
+THEN
+    RESPONSE #100
+        ReturnToSavedPlace()
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,31970)  
+        WaitRandom(5,10)
+        Continue()
+    RESPONSE #100
+        ReturnToSavedPlace()
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,31974)  
+        WaitRandom(5,10)
+        Continue()
+    RESPONSE #100
+        ReturnToSavedPlace()
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,31976)
+        WaitRandom(5,10)
+        Continue()
+END

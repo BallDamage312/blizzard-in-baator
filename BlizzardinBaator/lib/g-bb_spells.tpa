@@ -1,0 +1,241 @@
+
+////////////
+// ====== //
+// Spells //
+// ====== //
+////////////
+
+INCLUDE ~%MOD_FOLDER%/utils/functions.tph~
+
+LAF ADD_IDS_ENTRY STR_VAR idsFile = "splstate.ids" identifier = "G-TNO_INTO_GLABREZU" RET value END
+OUTER_SET "transform_into_glabrezu" = %value%
+
+COPY ~%MOD_FOLDER%/spl/res/2da/~ ~override~
+
+COPY ~%MOD_FOLDER%/spl/res/g-bbgm1(blessofset)/~ ~override~
+COPY ~%MOD_FOLDER%/spl/res/g-bbgm2(amonset)/~ ~override~
+COPY ~%MOD_FOLDER%/spl/res/g-bbgm3(reptilespit)/~ ~override~
+COPY ~%MOD_FOLDER%/spl/res/g-bbgm4(fromcold)/~ ~override~
+COPY ~%MOD_FOLDER%/spl/res/g-bb665(trap)/~ ~override~
+COPY ~%MOD_FOLDER%/spl/res/g-bb668(fireball)/~ ~override~
+COPY ~%MOD_FOLDER%/spl/res/g-bb669(horridwilting)/~ ~override~
+COPY ~%MOD_FOLDER%/spl/res/g-bb670(thornsoftorment)/~ ~override~
+COPY ~%MOD_FOLDER%/spl/res/g-bb672(zerthfist)/~ ~override~
+COPY ~%MOD_FOLDER%/spl/res/g-bb674(disintegrate)/~ ~override~
+COPY ~%MOD_FOLDER%/spl/res/g-bb675(lowerresis)/~ ~override~
+COPY ~%MOD_FOLDER%/spl/res/g-bb676(banshee)/~ ~override~
+//COPY ~%MOD_FOLDER%/spl/res/g-bb678+679(intoglabrezu)/~ ~override~
+COPY ~%MOD_FOLDER%/spl/res/g-bb681+682(tornado)/~ ~override~
+COPY ~%MOD_FOLDER%/spl/res/g-bb683+684(mrune)/~ ~override~
+COPY ~%MOD_FOLDER%/spl/res/g-bb686(haste)/~ ~override~
+COPY ~%MOD_FOLDER%/spl/res/g-bb687(summon001)/~ ~override~
+COPY ~%MOD_FOLDER%/spl/res/g-bb690(summon002)/~ ~override~
+COPY ~%MOD_FOLDER%/spl/res/g-bb692(vrobe)/~ ~override~
+
+COPY ~%MOD_FOLDER%/spl/g-bbgm1.spl~ ~override~
+  SAY NAME1 @600001 // Czarne Błogosławieństwo Seta / Black Bless Of Seth 
+  SAY NAME2 @600001
+  SAY UNIDENTIFIED_DESC @600002
+
+COPY ~%MOD_FOLDER%/spl/g-bbgm2.spl~ ~override~
+  SAY NAME1 @600003 // Amonset
+  SAY NAME2 @600003
+  SAY UNIDENTIFIED_DESC @600004
+
+COPY ~%MOD_FOLDER%/spl/g-bbgm4.spl~ ~override~
+  SAY NAME1 @600007 // Ochrona przed zimnem / Protect from Cold 
+  SAY NAME2 @600007
+  SAY UNIDENTIFIED_DESC @600008
+
+COPY ~%MOD_FOLDER%/spl/g-bb665.spl~ ~override/g-bb665.spl~
+COPY ~%MOD_FOLDER%/spl/g-bb666.spl~ ~override/g-bb666.spl~
+  SAY NAME1 @600011	// Pułapka / Trap
+  SAY NAME2 @600011
+  SAY UNIDENTIFIED_DESC @600012
+
+COPY ~%MOD_FOLDER%/spl/g-bb672.spl~ ~override/g-bb672.spl~
+COPY ~%MOD_FOLDER%/spl/g-bb673.spl~ ~override/g-bb673.spl~
+  SAY NAME1 @600015	// Pięść Zerthimona / Fist of Zerthimon  
+  SAY NAME2 @600015
+  SAY UNIDENTIFIED_DESC @600016
+
+ADD_PROJECTILE ~%MOD_FOLDER%/spl/res/pro/g-dummy1.pro~
+COPY ~%MOD_FOLDER%/spl/g-dummy1.spl~ ~override/g-dummy1.spl~
+  WRITE_SHORT   0x098 ~%g-dummy1%~
+
+  
+ADD_PROJECTILE ~%MOD_FOLDER%/spl/res/pro/g-dummy2.pro~
+COPY ~%MOD_FOLDER%/spl/g-dummy2.spl~ ~override/g-dummy2.spl~
+  WRITE_SHORT   0x098 ~%g-dummy2%~
+
+ADD_PROJECTILE ~%MOD_FOLDER%/spl/res/pro/g-fbal.pro~
+COPY ~%MOD_FOLDER%/spl/g-bb668.spl~ ~override/g-bb668.spl~
+  WRITE_SHORT   0x098 ~%g-fbal%~
+  LPF ALTER_SPELL_HEADER INT_VAR projectile = %g-fbal% END
+  SAY NAME1 @600009	// Ognista Kula / Fireball 
+  SAY NAME2 @600009
+  SAY UNIDENTIFIED_DESC @600010
+  
+ADD_PROJECTILE ~%MOD_FOLDER%/spl/res/pro/g-kult.pro~
+COPY ~%MOD_FOLDER%/spl/g-bbgm3.spl~ ~override/g-bbgm3.spl~
+  WRITE_SHORT   0x098 ~%g-kult%~
+  LPF ALTER_SPELL_HEADER INT_VAR projectile = %g-kult% END
+  SAY NAME1 @600005	// Gadzie splunięcie / Reptile Spit  
+  SAY NAME2 @600005
+  SAY UNIDENTIFIED_DESC @600006
+  
+ADD_PROJECTILE ~%MOD_FOLDER%/spl/res/pro/g-atp.pro~
+COPY ~%MOD_FOLDER%/spl/g-bb667.spl~ ~override/g-bb667.spl~
+  WRITE_SHORT   0x098 ~%g-atp%~
+  LPF ALTER_SPELL_HEADER INT_VAR projectile = %g-atp% END
+ 
+COPY ~%MOD_FOLDER%/spl/g-bb670.spl~ ~override/g-bb670.spl~
+ 
+ADD_PROJECTILE ~%MOD_FOLDER%/spl/res/pro/g-cuts.pro~
+COPY ~%MOD_FOLDER%/spl/g-bb671.spl~ ~override/g-bb671.spl~
+  WRITE_SHORT   0x098 ~%g-cuts%~
+  LPF ALTER_SPELL_HEADER INT_VAR projectile = %g-cuts% END
+  SAY NAME1 @600013	// Ciernie Udręki / Thorns of Torment  
+  SAY NAME2 @600013
+  SAY UNIDENTIFIED_DESC @600014
+  
+ADD_PROJECTILE ~%MOD_FOLDER%/spl/res/pro/g-pwilt.pro~
+COPY ~%MOD_FOLDER%/spl/g-bb669.spl~ ~override/g-bb669.spl~
+  WRITE_SHORT   0x098 ~%g-pwilt%~
+  LPF ALTER_SPELL_HEADER INT_VAR projectile = %g-pwilt% END
+  SAY NAME1 @600017	// Plugawy Uwiąd / Horrid Wilting  
+  SAY NAME2 @600017
+  SAY UNIDENTIFIED_DESC @600018
+ 
+ADD_PROJECTILE ~%MOD_FOLDER%/spl/res/pro/g-greorb.pro~
+COPY ~%MOD_FOLDER%/spl/g-bb674.spl~ ~override/g-bb674.spl~
+  WRITE_SHORT   0x098 ~%g-greorb%~
+  LPF ALTER_SPELL_HEADER INT_VAR projectile = %g-greorb% END
+  SAY NAME1 @600019	// Dezintegracja / Disintegration 
+  SAY NAME2 @600019
+  SAY UNIDENTIFIED_DESC @600020
+ 
+ADD_PROJECTILE ~%MOD_FOLDER%/spl/res/pro/g-attck2.pro~
+COPY ~%MOD_FOLDER%/spl/g-bb675.spl~ ~override/g-bb675.spl~
+  WRITE_SHORT   0x098 ~%g-attck2%~
+  LPF ALTER_SPELL_HEADER INT_VAR projectile = %g-attck2% END
+  SAY NAME1 @600021	// Obniżenie odporności / Lower Resistance  
+  SAY NAME2 @600021
+  SAY UNIDENTIFIED_DESC @600022
+ 
+ADD_PROJECTILE ~%MOD_FOLDER%/spl/res/pro/g-areanp.pro~
+COPY ~%MOD_FOLDER%/spl/g-bb676.spl~ ~override/g-bb676.spl~
+  WRITE_SHORT   0x098 ~%g-areanp%~
+  LPF ALTER_SPELL_HEADER INT_VAR projectile = %g-areanp% END
+  SAY NAME1 @600023	// Zawodzenie Banshee / Wail of the Banshee 
+  SAY NAME2 @600023
+  SAY UNIDENTIFIED_DESC @600024
+ 
+COPY ~%MOD_FOLDER%/spl/g-bb677.spl~ ~override/g-bb677.spl~ /* Upojenie drinkami / Drinks intoxication */
+/*
+COPY ~%MOD_FOLDER%/spl/g-bb678.spl~ ~override/g-bb678.spl~
+  SAY NAME1 @600025	// Przemiana w biesa / Transformation into fiend 
+  SAY NAME2 @600025
+  SAY UNIDENTIFIED_DESC @600026
+  //LPF ALTER_SPELL_HEADER INT_VAR target = 5 END
+  LPF ADD_SPELL_EFFECT INT_VAR opcode = 328 target = 1 parameter2 = %transform_into_glabrezu% timing = 9  resist_dispel = 2 special = 1 END
+  
+COPY ~%MOD_FOLDER%/spl/g-bb679.spl~ ~override/g-bb679.spl~
+  SAY NAME1 @600027	// Powrót do ludzkiej formy / Return to human form
+  SAY NAME2 @600027
+  SAY UNIDENTIFIED_DESC @600028
+  //LPF ALTER_SPELL_HEADER INT_VAR target = 5 END
+  LPF ADD_SPELL_EFFECT INT_VAR opcode = 337 target = 2 parameter1 = %transform_into_glabrezu% parameter2 = 328 timing = 9  resist_dispel = 2 END
+
+COPY ~%MOD_FOLDER%/spl/g-bb680.spl~ ~override/g-bb680.spl~ // Give innate: Turn into fiend (Glabrezu)
+*/ 
+COPY ~%MOD_FOLDER%/spl/g-bb681.spl~ ~override/g-bb681.spl~ // Give innate: Tornado
+
+COPY ~%MOD_FOLDER%/spl/g-bb682.spl~ ~override/g-bb682.spl~
+SAY NAME1 @600029	// Tornado 
+  SAY NAME2 @600029
+  SAY UNIDENTIFIED_DESC @600030
+  
+ADD_PROJECTILE ~%MOD_FOLDER%/spl/res/pro/g-mrn2.pro~  
+
+ADD_PROJECTILE ~%MOD_FOLDER%/spl/res/pro/g-mrun.pro~
+COPY ~%MOD_FOLDER%/spl/g-bb683.spl~ ~override/g-bb683.spl~
+  WRITE_SHORT   0x098 ~%g-mrun%~
+  LPF ALTER_SPELL_HEADER INT_VAR projectile = %g-mrun% END
+  SAY NAME1 @600031	// Runa Muspelheimu / Muspelheim Rune 
+  SAY NAME2 @600031
+  SAY UNIDENTIFIED_DESC @600032
+    
+  
+COPY_EXISTING ~g-mrun.pro~ ~override~
+WRITE_SHORT   0x21a ~%g-mrn2%~
+
+ADD_PROJECTILE ~%MOD_FOLDER%/spl/res/pro/g-spk.pro~  
+
+ADD_PROJECTILE ~%MOD_FOLDER%/spl/res/pro/g-haste.pro~
+COPY ~%MOD_FOLDER%/spl/g-bb686.spl~ ~override/g-bb686.spl~
+  WRITE_SHORT   0x098 ~%g-haste%~
+  LPF ALTER_SPELL_HEADER INT_VAR projectile = %g-haste% END
+  SAY NAME1 @600033	// Przyspieszenie ruchów / Haste  
+  SAY NAME2 @600033
+  SAY UNIDENTIFIED_DESC @600034
+  
+COPY_EXISTING ~g-haste.pro~ ~override~
+WRITE_SHORT   0x21a ~%g-spk%~
+
+COPY ~%MOD_FOLDER%/spl/g-bb684.spl~ ~override/g-bb684.spl~ // Muspelheim Rune, cast paralyze
+
+COPY ~%MOD_FOLDER%/spl/g-bb685.spl~ ~override/g-bb685.spl~ // Give innate: Muspelheim Rune
+
+COPY ~%MOD_FOLDER%/spl/g-bb687.spl~ ~override/g-bb687.spl~ // Summon001 - 6x skeletons
+
+COPY ~%MOD_FOLDER%/spl/g-bb688.spl~ ~override/g-bb688.spl~ // Give innate, mimi'r babble.
+
+COPY ~%MOD_FOLDER%/spl/g-bb690.spl~ ~override/g-bb690.spl~ // Summon002 - 3x kocrachons
+
+COPY ~%MOD_FOLDER%/spl/g-bb691.spl~ ~override/g-bb691.spl~ // Clear fog of war
+
+COPY ~%MOD_FOLDER%/spl/g-bb692.spl~ ~override/g-bb692.spl~ 
+ SAY NAME1 @600035	// "Szata Pokonanych" / "Robe of the Vanquished"
+ SAY NAME2 @600035
+
+ADD_PROJECTILE ~%MOD_FOLDER%/spl/res/pro/g-mimir.pro~
+COPY ~%MOD_FOLDER%/spl/g-bb689.spl~ ~override/g-bb689.spl~
+  WRITE_SHORT   0x098 ~%g-mimir%~
+  LPF ALTER_SPELL_HEADER INT_VAR projectile = %g-mimir% END
+  SAY NAME1 @600036	// Bełkot Mimira / Mimir's Babble 
+  SAY NAME2 @600036
+  SAY UNIDENTIFIED_DESC @600037
+
+COPY ~%MOD_FOLDER%/spl/g-bb693.spl~ ~override~ // Priest, paralyze
+
+COPY ~%MOD_FOLDER%/spl/g-bb694.spl~ ~override~ // Priest, Magic Missle
+
+COPY ~%MOD_FOLDER%/spl/g-bb695.spl~ ~override~ // Priest, Wind Buffet
+
+COPY ~%MOD_FOLDER%/spl/g-bb696.spl~ ~override~ // Priest, Blur
+
+COPY ~%MOD_FOLDER%/spl/g-bb697.spl~ ~override~ // Pierst, Word: Blindness
+
+COPY ~%MOD_FOLDER%/spl/g-bb698.spl~ ~override~ // Priest, Word: Die (?)
+
+COPY ~%MOD_FOLDER%/spl/g-bb699.spl~ ~override~ // Priest, Teleport (?)
+
+COPY ~%MOD_FOLDER%/spl/g-bb700.spl~ ~override~ // Mirror Image
+
+COPY ~%MOD_FOLDER%/spl/g-fatig.spl~ ~override~ // Exhaustion
+
+COPY_EXISTING ~projectl.ids~ ~override~
+REPLACE_TEXTUALLY ~g-kult~ ~g-kult		// reptile spit - used by g-bbgm3~
+REPLACE_TEXTUALLY ~g-atp~ ~g-atp		// trap - used by g-bb667~
+REPLACE_TEXTUALLY ~g-fbal~ ~g-fbal		// fireball - used by g-bb668~
+REPLACE_TEXTUALLY ~g-pwilt~ ~g-pwilt	// horrid wilting - used by g-bb669~
+REPLACE_TEXTUALLY ~g-cuts~ ~g-cuts		// thorns of torment - used by g-bb671~
+REPLACE_TEXTUALLY ~g-greorb~ ~g-greorb	// disintegrate - used by g-bb674~
+REPLACE_TEXTUALLY ~g-attck2~ ~g-attck2	// lower resistance - used by g-bb675~
+REPLACE_TEXTUALLY ~g-areanp~ ~g-areanp	// wall of the banshee - used by g-bb676~
+REPLACE_TEXTUALLY ~g-mrun~ ~g-mrun		// muspelheim rune - used by g-bb683~
+REPLACE_TEXTUALLY ~g-mrn2~ ~g-mrn2		// muspelheim rune - used by g-bb683 (explosive)~
+REPLACE_TEXTUALLY ~g-haste~ ~g-haste	// haste - used by g-bb686~
+REPLACE_TEXTUALLY ~g-spk~ ~g-spk		// haste - used by g-bb686 (explosive)~
+REPLACE_TEXTUALLY ~g-mimir~ ~g-mimir	// mimir's babble - used by g-bb689~

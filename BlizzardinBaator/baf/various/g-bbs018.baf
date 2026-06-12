@@ -1,0 +1,10 @@
+IF
+    Global("G-BB_KNOCKDOWN_SCRIPT_1","GLOBAL",1)
+THEN
+    RESPONSE #100
+        PlaySequence(ANIM_GETUP)
+        MoveToObject(NearestEnemyOf(Myself))
+        SetGlobal("G-BB_KNOCKDOWN_SCRIPT_1","GLOBAL",2)
+        Continue()
+END
+

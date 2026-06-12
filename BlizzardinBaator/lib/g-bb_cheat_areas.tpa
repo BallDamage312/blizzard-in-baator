@@ -1,0 +1,80 @@
+
+// Adds new areas to the console menu listing (from top)
+ OUTER_SET arg-in_desc = RESOLVE_STR_REF (@300326)
+ OUTER_SET arg-00_desc = RESOLVE_STR_REF (@300300)
+ OUTER_SET arg-0w_desc = RESOLVE_STR_REF (@300328)
+ OUTER_SET arg-01_desc = RESOLVE_STR_REF (@300301)
+ OUTER_SET arg-02_desc = RESOLVE_STR_REF (@300302)
+ OUTER_SET arg-03_desc = RESOLVE_STR_REF (@300303)
+ OUTER_SET arg-ff_desc = RESOLVE_STR_REF (@300304)
+ OUTER_SET arg-kk_desc = RESOLVE_STR_REF (@300305)
+ OUTER_SET arg-06_desc = RESOLVE_STR_REF (@300306)
+ OUTER_SET arg-07_desc = RESOLVE_STR_REF (@300307)
+ OUTER_SET arg-08_desc = RESOLVE_STR_REF (@300308)
+ OUTER_SET arg-bs_desc = RESOLVE_STR_REF (@300325)
+ OUTER_SET arg-09_desc = RESOLVE_STR_REF (@300309)
+ OUTER_SET arg-e1_desc = RESOLVE_STR_REF (@300310)
+ OUTER_SET arg-e2_desc = RESOLVE_STR_REF (@300311)
+ OUTER_SET arg-e3_desc = RESOLVE_STR_REF (@300312)
+ OUTER_SET arg-e4_desc = RESOLVE_STR_REF (@300313)
+ OUTER_SET arg-e5_desc = RESOLVE_STR_REF (@300314)
+ OUTER_SET arg-e6_desc = RESOLVE_STR_REF (@300315)
+ 
+ OUTER_SET arg-ek_desc = RESOLVE_STR_REF (@300329)
+ OUTER_SET arg-ep_desc = RESOLVE_STR_REF (@300330)
+   
+ OUTER_SET arg-r1_desc = RESOLVE_STR_REF (@300316)
+ OUTER_SET arg-r2_desc = RESOLVE_STR_REF (@300316)
+ OUTER_SET arg-r3_desc = RESOLVE_STR_REF (@300316)
+ OUTER_SET arg-r4_desc = RESOLVE_STR_REF (@300316)
+ OUTER_SET arg-p1_desc = RESOLVE_STR_REF (@300317)
+ OUTER_SET arg-p2_desc = RESOLVE_STR_REF (@300318)
+ OUTER_SET arg-p3_desc = RESOLVE_STR_REF (@300319)
+ OUTER_SET arg-p4_desc = RESOLVE_STR_REF (@300320)
+ OUTER_SET arg-p5_desc = RESOLVE_STR_REF (@300327)
+ OUTER_SET arg-10_desc = RESOLVE_STR_REF (@300321)
+ OUTER_SET arg-97_desc = RESOLVE_STR_REF (@300397)
+ OUTER_SET arg-99_desc = RESOLVE_STR_REF (@300399)
+COPY_EXISTING ~bgee.lua~ ~override~
+REPLACE_TEXTUALLY ~cheatAreas = {[%TAB%%LNL%%MNL%%WNL%]+{"AR0100",  22079},~ 
+~cheatAreas = { 
+	-- Blizzard in Baator
+		{"arg-in", %arg-in_desc%}, 
+		{"arg-00", %arg-00_desc%}, 
+		{"arg-0w", %arg-0w_desc%},
+		{"arg-01", %arg-01_desc%},
+		{"arg-02", %arg-02_desc%},
+		{"arg-03", %arg-03_desc%},
+		{"arg-ff", %arg-ff_desc%},
+		{"arg-kk", %arg-kk_desc%},
+		{"arg-06", %arg-06_desc%},
+		{"arg-07", %arg-07_desc%},
+		{"arg-08", %arg-08_desc%}, 
+		{"arg-bs", %arg-bs_desc%}, 
+		{"arg-09", %arg-09_desc%},
+		{"arg-10", %arg-10_desc%},
+		{"arg-e1", %arg-e1_desc%},
+		{"arg-e2", %arg-e2_desc%},
+		{"arg-e3", %arg-e3_desc%},
+		{"arg-e4", %arg-e4_desc%},
+		{"arg-e5", %arg-e5_desc%},
+		{"arg-ek", %arg-ek_desc%},
+		{"arg-ep", %arg-ep_desc%},
+		{"arg-e6", %arg-e6_desc%},
+		{"arg-p1", %arg-p1_desc%},
+		{"arg-p2", %arg-p2_desc%},
+		{"arg-p3", %arg-p3_desc%},
+		{"arg-p4", %arg-p4_desc%},
+		{"arg-p5", %arg-p5_desc%},
+		{"arg-r1", %arg-r1_desc%},
+		{"arg-r2", %arg-r2_desc%},
+		{"arg-r3", %arg-r3_desc%},
+		{"arg-r4", %arg-r4_desc%},
+		{"arg-97", %arg-97_desc%},
+		{"arg-99", %arg-99_desc%},
+	-- PST
+		{"AR0202",  22090},
+		{"AR0402",  22100},
+		{"AR0508",  22118},
+		{"AR0601",  22128},~
+		

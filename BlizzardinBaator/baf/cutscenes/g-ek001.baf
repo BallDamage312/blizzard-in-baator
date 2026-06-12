@@ -1,0 +1,27 @@
+IF
+        HarmlessEntered(Player1)
+        InParty("Annah")
+        !StateCheck("Annah",CD_STATE_NOTVALID)
+        Global("G-fakeanndial002triggered","GLOBAL",0) // one time trigger
+        
+THEN
+    RESPONSE #100
+    SetGlobal("G-fakeanndial002triggered","GLOBAL",1) // one time trigger
+        SetGlobal("g-fakeanndialogue","GLOBAL",2) // fake dialog selection
+        CreateCreatureObject("g-bbann",Player1,0,0,0) // fake ann creation
+        ActionOverride("g-bbann",StartDialog("g-bbdann",Player1)) // FakeannMRT dialogue initiation
+END
+
+IF
+        HarmlessEntered(Player1)
+		NearbyDialog("DAnnah")
+        Global("G-testtrigger","GLOBAL",0) // one time trigger
+        
+THEN
+    RESPONSE #100
+    SetGlobal("G-testtrigger","GLOBAL",1) // one time trigger
+	   SetGlobal("g-fakeanndialogue","GLOBAL",2) // fake dialog selection
+        CreateCreatureObject("g-bbann",Player1,0,0,0) // fake ann creation
+        ActionOverride("g-bbann",StartDialog("g-bbdann",Player1)) // FakeannMRT dialogue initiation
+        
+END

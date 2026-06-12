@@ -1,0 +1,24 @@
+IF
+	Global("G-marilithslay","GLOBAL",0)
+THEN
+	RESPONSE #100
+		ClearAllActions()
+		SetGlobal("G-marilithslay","GLOBAL",1)
+		StartCutSceneMode()
+        CutSceneId("g-bb121")
+		DisplayString("g-bb161",@100096)
+		Wait(3)
+		PlaySound("ABISH10")
+        StickySinisterPoof("S002DMML",Myself,1)
+		ActionOverride("g-bb121",JumpToObject("g-bb161"))
+		StickySinisterPoof("S002DMML",Myself,1)
+		PlaySound("ABISH10")
+		PlaySound("ABISH10")
+		ActionOverride("g-bb121",SetAnimState(Myself,ANIM_MIMEATTACK1))
+		ActionOverride("g-bb121",SetAnimState(Myself,ANIM_MIMEATTACK1))
+		Wait(1)
+		StickySinisterPoof("S029GLOW","g-bb161",1)
+		ActionOverride("g-bb161",ApplyDamage(MYSELF,257,MAGIC))
+		Wait(3)
+		EndCutSceneMode()
+	END

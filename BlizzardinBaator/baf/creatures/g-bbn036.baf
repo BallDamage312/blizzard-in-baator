@@ -1,0 +1,28 @@
+// AttackedBy walk Styx Oarsman 1
+
+IF
+    See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        Help()
+        RunningAttack(NearestEnemyOf(Myself))
+END
+
+IF
+    AttackedBy([ANYONE],DEFAULT)
+THEN
+    RESPONSE #100
+        Enemy()
+        Help()
+		SetGlobal("G-styxhostile","GLOBAL",1)
+        RunningAttack(NearestEnemyOf(Myself))
+END
+
+IF
+    Help([ANYONE])
+    Team(LastTrigger,G-STYXO_1)
+THEN
+    RESPONSE #100
+        Enemy()
+        RunningAttack(NearestEnemyOf(Myself))
+END

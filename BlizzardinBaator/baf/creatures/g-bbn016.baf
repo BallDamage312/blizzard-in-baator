@@ -1,0 +1,61 @@
+// Middle-class lady 1, beach
+IF
+   Global("G-beachest","GLOBAL",1)
+THEN
+    RESPONSE #100
+    StartDialogNoSet(Player1)
+END
+
+IF
+	Global("G-beachalert","GLOBAL",1)
+THEN
+    RESPONSE #100
+        EscapeArea()
+END
+
+
+IF
+    True()
+THEN
+    RESPONSE #100
+    Face(E)
+    Wait(6)
+    Face(W)
+	FloatMessage(Myself,@100008) 
+	Wait(8)
+	Face(E)
+	FloatMessage(Myself,@100009)
+	Face(W)
+	Wait(6)
+	FloatMessage(Myself,@100010) 
+	Face(N)
+    Wait(8)
+END
+
+IF
+    HPPercentLT(Myself,50)
+    Allegiance(Myself,ENEMY)
+THEN
+    RESPONSE #100
+        EscapeArea()
+END
+
+IF
+    AttackedBy([PC],DEFAULT)
+THEN
+    RESPONSE #100
+        Enemy()
+        Attack(LastAttackerOf(Myself))
+END
+
+IF
+    True()
+THEN
+    RESPONSE #100
+        Face(W)
+        PlaySequence(ANIM_TALK)
+        WaitRandom(3,5)
+        Face(NW)
+        PlaySequence(ANIM_TALK)
+        WaitRandom(3,5)
+END

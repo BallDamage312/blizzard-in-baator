@@ -1,0 +1,143 @@
+IF
+    True()
+THEN
+    RESPONSE #100
+        SetWorldmap("G-DITCH")
+		Explore()
+		Continue()
+END
+
+IF
+    Global("G-AmbushGraceDead","GLOBAL",1)
+THEN
+    RESPONSE #100
+		Kill("GRACE")
+		SetGlobal("G-AmbushGraceDead","GLOBAL",0)
+		Continue()
+END
+
+IF
+    Global("G-AmbushNordomDead","GLOBAL",1)
+THEN
+    RESPONSE #100
+		Kill("NORDOM")
+		SetGlobal("G-AmbushNordomDead","GLOBAL",0)
+		Continue()
+END
+
+IF
+    Global("G-AmbushDakkonDead","GLOBAL",1)
+THEN
+    RESPONSE #100
+		Kill("DAKKON")
+		SetGlobal("G-AmbushDakkonDead","GLOBAL",0)
+		Continue()
+END
+
+IF
+    Global("G-AmbushIgnusDead","GLOBAL",1)
+THEN
+    RESPONSE #100
+		Kill("IGNUS")
+		SetGlobal("G-AmbushIgnusDead","GLOBAL",0)
+		Continue()
+END
+
+IF
+    Global("G-D1cutscene","GLOBAL",2)
+THEN
+    RESPONSE #100
+		CreateCreature("g-bb201",[786.936],0)
+		CreateCreature("Lady",[786.936],0)
+		Wait(2)
+		Kill("g-bb201")
+		ActionOverride("Lady",EscapeArea())
+        SetGlobal("G-D1cutscene","GLOBAL",0)
+		Continue()
+END
+
+IF
+    Global("G-D1cutscene","GLOBAL",3)
+THEN
+    RESPONSE #100
+CreateCreature("g-bb182",[990.1052],0)
+ActionOverride("g-bb182",SetDialogue(""))
+ActionOverride("g-bb182",ChangeAIScript("g-leav",OVERRIDE)
+CreateCreature("g-bb183",[1000.1000],0)
+ActionOverride("g-bb183",SetDialogue(""))
+ActionOverride("g-bb183",ChangeAIScript("g-leav",OVERRIDE)
+CreateCreature("g-bb184",[1050.1040],0)
+ActionOverride("g-bb184",SetDialogue(""))
+ActionOverride("g-bb184",ChangeAIScript("g-leav",OVERRIDE)
+CreateCreature("g-bb185",[950.900],0)
+ActionOverride("g-bb185",SetDialogue(""))
+ActionOverride("g-bb185",ChangeAIScript("g-leav",OVERRIDE)
+CreateCreature("g-bb186",[941.885],0)
+ActionOverride("g-bb186",SetDialogue(""))
+ActionOverride("g-bb186",ChangeAIScript("g-leav",OVERRIDE)
+CreateCreature("g-bb187",[1157.827],0)
+ActionOverride("g-bb187",SetDialogue(""))
+
+ActionOverride("g-bb187",ChangeAIScript("g-leav",OVERRIDE)
+CreateCreature("g-bb227",[1070.1170],0)
+ActionOverride("g-bb227",SetDialogue(""))
+ActionOverride("g-bb227",ChangeAIScript("g-leav",OVERRIDE)
+CreateCreature("g-bb227",[1410.722],0)
+ActionOverride("g-bb227",SetDialogue(""))
+ActionOverride("g-bb227",ChangeAIScript("g-leav",OVERRIDE)
+CreateCreature("g-bb227",[1327.709],0)
+ActionOverride("g-bb227",SetDialogue(""))
+ActionOverride("g-bb227",ChangeAIScript("g-leav",OVERRIDE)
+CreateCreature("g-bb227",[889.881],0)
+ActionOverride("g-bb227",SetDialogue(""))
+ActionOverride("g-bb227",ChangeAIScript("g-leav",OVERRIDE)
+
+CreateCreature("g-bb207",[1226.984],0)
+ActionOverride("g-bb207",SetDialogue(""))
+ActionOverride("g-bb207",ChangeAIScript("g-leav",OVERRIDE)
+
+		CreateCreature("g-bb017",[1351.971],0)
+		Kill("g-bb017")
+       
+		
+        SetGlobal("G-D1cutscene","GLOBAL",0)
+		Continue()
+END
+
+
+
+
+IF
+    Global("G-D1cutscene","GLOBAL",1)
+THEN
+    RESPONSE #100
+
+        SetGlobal("g-trapvictoryloop","GLOBAL",3)
+		CreateCreature("g-bb017",[147.1478],0)
+        CreateCreature("g-bb054",[235.1557],0)
+        CreateCreature("g-bb201",[531.1334],0)
+		ActionOverride("g-bb201",SetDialogue("g-bbd156"))
+        ActionOverride("g-bb201",ChangeEnemyAlly(Myself,NEUTRAL))
+		//CreateCreature("g-bb189",[531.1334],0)
+        //StartDialog("g-bbd189",Player1)
+        ActionOverride("g-bb201",StartDialogNoSet("g-bbd156"))
+        SetGlobal("G-D1cutscene","GLOBAL",0)
+		ActionOverride("g-bb201",ChangeEnemyAlly(Myself,ENEMY))
+		//ActionOverride("g-bb189",DestroySelf())
+        Continue()
+END
+
+
+IF
+    Dead("g-bb201")
+    Global("g-trapvictoryloop","GLOBAL",3)
+THEN
+    RESPONSE #100
+        SetGlobal("G-doomvsfatevsKEY","GLOBAL",10)
+		SetGlobal("G-ulfbrandlostambush","GLOBAL",1)
+		DisplayString(Player1, @100196)
+		PlaySound("NAM157")
+        ActionOverride("g-bb017",StartDialogNoSet("g-bbd017"))
+        SetGlobal("g-trapvictoryloop","GLOBAL",1)
+		Continue()
+END

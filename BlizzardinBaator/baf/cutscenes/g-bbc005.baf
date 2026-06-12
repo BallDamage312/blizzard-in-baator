@@ -1,0 +1,26 @@
+IF 
+    True()
+THEN
+	RESPONSE #100
+		CutSceneId(Player1)
+		StartCutSceneMode()
+		ActionOverride("g-bb156",DestroySelf())
+		ActionOverride("g-bb154",PlaySequence(ANIM_STANDTOSTANCE))
+		SmallWait(5)
+		ActionOverride("g-bb154",DestroySelf())
+		CreateCreature("g-bb155",[530.893],14)
+		PlaySound("g-chaird")
+		Kill("g-bb152")
+		//ActionOverride("g-bb152",PlaySequence(SEQ_DIE))
+		//ScreenShake([530.893],7) 
+		SmallWait(5)
+		SetGlobal("g-ulf_mad_in_ysgard","GLOBAL",1)
+		ActionOverride("g-bb152",DestroySelf())
+		ActionOverride("g-bb156",DestroySelf())
+		Kill("g-bb156")
+		CreateCreature("g-bb153",[533.866],0)
+		ActionOverride("g-bb150",Enemy())
+		ActionOverride("g-bb150",RunningAttack([PC]))
+		SetGlobal("g-debtpeoplealert","GLOBAL",1)
+		EndCutSceneMode()
+END

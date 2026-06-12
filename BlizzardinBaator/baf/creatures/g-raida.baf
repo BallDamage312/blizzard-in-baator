@@ -1,0 +1,127 @@
+IF
+GlobalGT("G-ulfbrandwonagainstus","GLOBAL",0)
+THEN
+	RESPONSE #100
+EscapeArea()
+END
+
+IF
+GlobalGT("G-ulfbrandlostraid","GLOBAL",0)
+THEN
+	RESPONSE #100
+EscapeArea()
+END
+
+IF
+GlobalGT("G-ulfbrandwonraid","GLOBAL",0)
+THEN
+	RESPONSE #100
+EscapeArea()
+END
+
+// Random, when attacked 
+
+
+
+
+IF
+    AttackedBy([ANYONE],DEFAULT)
+THEN
+    RESPONSE #100
+        Enemy()
+        Attack(NearestEnemyOf(Myself))
+   END
+   
+ // ALLEGIANCE SET  
+   
+IF
+		Global("G-allegianceset","LOCALS",0)
+		OR(2) Global("g-raidallegiances","GLOBAL",3) Global("g-raidallegiances","GLOBAL",1) 
+THEN
+	RESPONSE #50
+		ChangeEnemyAlly(Myself,NEUTRAL)
+		Attack("g-bb201")
+		SetGlobal("G-allegianceset","LOCALS",1)
+		Continue()
+	RESPONSE #50
+		ChangeEnemyAlly(Myself,NEUTRAL)
+		Attack("g-bb200")
+		SetGlobal("G-allegianceset","LOCALS",1)
+		Continue()
+	END
+
+IF
+		Global("G-allegianceset","LOCALS",0)
+		OR(2) Global("g-raidallegiances","GLOBAL",2) Global("g-raidallegiances","GLOBAL",4) 
+THEN
+	RESPONSE #30
+		Enemy()
+		Attack("g-bb201")
+		SetGlobal("G-allegianceset","LOCALS",1)
+		Continue()
+	RESPONSE #20
+		Enemy()
+		Attack("g-bb200")
+		SetGlobal("G-allegianceset","LOCALS",1)
+		Continue()
+	RESPONSE #50
+		Enemy()
+		Attack(Protagonist)
+		SetGlobal("G-allegianceset","LOCALS",1)
+		Continue()
+	END
+
+
+
+//continuous combat
+ 
+IF
+		Global("G-allegianceset","LOCALS",1)
+		Global("g-raidallegiances","GLOBAL",3)
+THEN
+	RESPONSE #100
+		Attack("g-bb201")  
+		END 
+IF
+		Global("G-allegianceset","LOCALS",1)
+		Global("g-raidallegiances","GLOBAL",1)
+THEN
+	RESPONSE #100
+		Attack("g-bb017")    END
+IF
+		Global("G-allegianceset","LOCALS",1)
+		Global("g-raidallegiances","GLOBAL",2)
+THEN
+	RESPONSE #100
+		Attack(Protagonist)   END
+IF
+		Global("G-allegianceset","LOCALS",1)
+		Global("g-raidallegiances","GLOBAL",4)
+THEN
+	RESPONSE #100
+		Attack(Protagonist)  END
+
+
+
+// Raid finish
+
+IF
+GlobalGT("G-ulfbrandwonagainstus","GLOBAL",0)
+THEN
+	RESPONSE #100
+EscapeArea()
+END
+
+IF
+GlobalGT("G-ulfbrandlostraid","GLOBAL",0)
+THEN
+	RESPONSE #100
+EscapeArea()
+END
+
+IF
+GlobalGT("G-ulfbrandwonraid","GLOBAL",0)
+THEN
+	RESPONSE #100
+EscapeArea()
+END

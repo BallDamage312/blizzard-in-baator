@@ -1,0 +1,79 @@
+// Random, when attacked 
+
+IF
+    AttackedBy([ANYONE],DEFAULT)
+THEN
+    RESPONSE #100
+        Enemy()
+        Attack(NearestEnemyOf(Myself))
+   END
+
+IF
+    Help([ANYONE])
+    Team(LastTrigger,G-KUOTOAT)
+THEN
+    RESPONSE #100
+        Enemy()
+		Attack(NearestEnemyOf(Myself))
+END
+
+IF
+
+Global("G-kuotoacutscenen","GLOBAL",2)
+
+THEN
+    RESPONSE #100
+      FloatMessage(Myself,100241)
+	  Wait(4)
+END
+
+IF
+    Global("G-kuotoaspare","GLOBAL",2)
+THEN
+    RESPONSE #100
+        ChangeEnemyAlly(Myself,NEUTRAL)
+		Wait(3)
+		SetGlobal("G-kuotoaspare","GLOBAL",3)
+		Continue()
+END
+
+IF
+    Global("g-kuotoaangry","GLOBAL",1)
+THEN
+    RESPONSE #100
+		SetGlobal("g-kuotoaangry","GLOBAL",2)
+        Enemy()
+		Attack(NearestEnemyOf(Myself))
+END
+
+
+// Evacuation finish
+
+
+IF
+    Global("g-kuotoadead","GLOBAL",1)
+THEN
+    RESPONSE #100
+        Kill(Myself)
+END
+
+IF
+    Global("g-kuotoagone","GLOBAL",1)
+THEN
+    RESPONSE #100
+        EscapeArea()
+END
+
+IF
+    Global("g-kuotoaraid","GLOBAL",1)
+THEN
+    RESPONSE #100
+        EscapeArea()
+END
+		
+IF
+    Global("g-kuotoagod","GLOBAL",1)
+THEN
+    RESPONSE #100
+		ChangeEnemyAlly(Myself,ALLY)
+END

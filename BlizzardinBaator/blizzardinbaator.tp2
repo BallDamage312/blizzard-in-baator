@@ -1,0 +1,77 @@
+BACKUP ~BlizzardInBaator_backup~
+SUPPORT ~cania.believe.it@gmail.com~
+VERSION ~Release 1.0.0~
+
+README ~BlizzardInBaator/docs/readme-%LANGUAGE%.html~
+       ~BlizzardInBaator/docs/readme.html~
+
+AUTO_TRA ~BlizzardInBaator/lang/%s~
+	
+LANGUAGE ~English~
+	~english~
+	~BlizzardInBaator/lang/english/g-bb_setup.tra~
+	~BlizzardInBaator/lang/english/g-bb_quests.tra~
+	~BlizzardInBaator/lang/english/g-bb_journal.tra~
+	~BlizzardInBaator/lang/english/g-blizzardinbaator.tra~
+	
+
+LANGUAGE ~Polski (Polish)~
+	~polish~
+	~BlizzardInBaator/lang/polish/g-bb_setup.tra~
+	~BlizzardInBaator/lang/polish/g-bb_quests.tra~
+	~BlizzardInBaator/lang/polish/g-bb_journal.tra~
+	~BlizzardInBaator/lang/polish/g-blizzardinbaator.tra~
+
+// Blizzard in Baator	
+BEGIN @0
+REQUIRE_PREDICATE GAME_IS ~pstee~ @1  
+	
+	INCLUDE ~BlizzardInBaator/lib/g-bb_2da+ids.tpa~
+	INCLUDE ~BlizzardInBaator/lib/g-bb_anim.tpa~
+	INCLUDE ~BlizzardInBaator/lib/g-bb_audio.tpa~
+	INCLUDE ~BlizzardInBaator/lib/g-bb_spells.tpa~
+	INCLUDE ~BlizzardInBaator/lib/g-bb_items.tpa~
+	INCLUDE ~BlizzardInBaator/lib/g-bb_creatures.tpa~
+	INCLUDE ~BlizzardInBaator/lib/g-bb_compile.tpa~
+	INCLUDE ~BlizzardInBaator/lib/g-bb_misc.tpa~
+	INCLUDE ~BlizzardInBaator/lib/g-bb_maps.tpa~
+	INCLUDE ~BlizzardInBaator/lib/g-bb_stores.tpa~
+	INCLUDE ~BlizzardInBaator/lib/g-bb_pvrz.tpa~
+	INCLUDE ~BlizzardInBaator/lib/g-bb_quests.tpa~
+	INCLUDE ~BlizzardInBaator/lib/g-bb_ui.tpa~
+	INCLUDE ~BlizzardInBaator/lib/g-bb_movies.tpa~
+
+// VO
+BEGIN @3
+SUBCOMPONENT @2
+COPY ~BlizzardInBaator/media/audio/voices/npc/english~ ~override~
+
+BEGIN @4
+SUBCOMPONENT @2
+COPY ~BlizzardInBaator/media/audio/voices/npc/polish~ ~override~
+
+// Videos
+BEGIN @6
+SUBCOMPONENT @5
+	COPY ~BlizzardInBaator/media/videos/eng~ ~override~
+	COPY ~BlizzardInBaator/media/videos/shared~ ~override~
+	
+BEGIN @7
+SUBCOMPONENT @5
+	COPY ~BlizzardInBaator/media/videos/pl~ ~override~
+	COPY ~BlizzardInBaator/media/videos/shared~ ~override~
+	
+BEGIN @9
+SUBCOMPONENT @5
+	COPY ~BlizzardInBaator/media/videosr/eng~ ~override~
+	COPY ~BlizzardInBaator/media/videosr/shared~ ~override~
+	
+BEGIN @10
+SUBCOMPONENT @5
+	COPY ~BlizzardInBaator/media/videosr/pl~ ~override~
+	COPY ~BlizzardInBaator/media/videosr/shared~ ~override~
+	
+// Footsteps
+BEGIN @8
+	COPY ~BlizzardInBaator/media/audio/sounds/footsteps~ ~override~
+	

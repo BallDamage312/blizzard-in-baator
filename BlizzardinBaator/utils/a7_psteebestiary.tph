@@ -1,0 +1,36 @@
+
+// *** PSTEE-specific code to install entries to the bestiary. Code author: Argent77 ***
+
+  // Adding a new bestiary entry to bgee.lua. This is somewhat complicated, as WeiDU doesn't 
+  // provide an easy way to parse Lua code. We do a search for the start and end offsets of the 
+  // bestiary definition block and scan each entry to determine the highest occupied bestiary 
+  // index. Afterwards we simply append the structure by another entry.
+  
+COPY_EXISTING ~bgee.lua~ ~override~
+    // Determine start and end offset of bestiary definition block
+    SET ofs_start = INDEX_BUFFER(~^[ %TAB%]*bestiary[ %TAB%]*=[ %TAB%%WNL%]*{~)
+    PATCH_IF (ofs_start > 0) BEGIN
+      SET ofs_end = INDEX_BUFFER(~[ %TAB%]*},[ %TAB%%WNL%]*}~ ofs_start)
+      PATCH_IF (ofs_end > ofs_start) BEGIN
+        SET ofs1 = ofs_start
+        SET ofs2 = ofs1
+        // Determine highest occupied bestiary index
+        SET max_index = 0
+        WHILE (ofs1 >= ofs_start && ofs1 < ofs_end) BEGIN
+          SET ofs1 = INDEX_BUFFER(~index[ %TAB%]*=~ ofs2)
+          PATCH_IF (ofs1 >= 0) BEGIN
+            SET ofs2 = INDEX_BUFFER(~,~ ofs1)
+            PATCH_IF (ofs2 > ofs1 && ofs2 < ofs_end) BEGIN
+              READ_ASCII ofs1 entry (ofs2 - ofs1)
+              INNER_PATCH_SAVE entry ~%entry%~ BEGIN
+                REPLACE_TEXTUALLY ~.+=[ %TAB%]*\([0-9]+\).*~ ~\1~
+              END
+              PATCH_IF (IS_AN_INT "entry" && entry > max_index) BEGIN
+                SET max_index = entry
+              END
+            END
+            SET ofs2 = ofs1 + 1
+          END
+        END
+	END
+	END

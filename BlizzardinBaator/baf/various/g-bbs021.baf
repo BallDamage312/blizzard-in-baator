@@ -1,0 +1,41 @@
+// portal from ysgard to the alfheil
+
+IF
+    HarmlessEntered("Nordom")
+THEN
+    RESPONSE #100
+        VerbalConstant("Nordom",NORDOM_PORTAL)
+        Continue()
+END
+
+IF
+	HarmlessEntered(Player1)
+	PartyHasItem("g-bbi091")
+	AreaCheck("arg-P1")
+THEN
+	RESPONSE #100
+		SetPortalCursor("G-toP5",PORTAL_CURSOR_VISIBLE,TRUE)
+		SetPortalCursor("G-toP5",PORTAL_ENABLED,TRUE)
+END
+
+
+IF
+	HarmlessEntered(Player1)
+	PartyHasItem("g-bbi091")
+	AreaCheck("arg-P5")
+THEN
+	RESPONSE #100
+		SetPortalCursor("G-P5toP1",PORTAL_CURSOR_VISIBLE,TRUE)
+        SetPortalCursor("G-P5toP1",PORTAL_ENABLED,TRUE)
+END
+
+
+IF
+
+		Global("G-triplerquest","GLOBAL",13)
+		Global("G-skaldtalk","GLOBAL",0)
+	THEN
+	RESPONSE #100
+		ActionOverride("g-bb226",StartDialogNoSet(Player1))
+		SetGlobal("G-skaldtalk","GLOBAL",1)
+END

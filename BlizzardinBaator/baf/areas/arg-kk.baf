@@ -1,0 +1,108 @@
+IF
+    OR(2)
+	Died("g-bb010")
+	Dead("g-bb010")
+	Global("g-dopilpdied","GLOBAL",0)
+THEN
+    RESPONSE #100
+		SetGlobal("g-dopilpdied","GLOBAL",1)
+END
+
+
+IF
+    OR(2)
+	Died("g-bb016")
+	Dead("g-bb016")
+	Global("g-kilthasdied","GLOBAL",0)
+THEN
+    RESPONSE #100
+		SetGlobal("g-kilthasdied","GLOBAL",1)
+END
+
+
+// KILLING THE KUO TOA - BROKEN
+
+IF
+	Global("g-kuotoabhaal","GLOBAL",0)
+	Global("g-dopilpdied","GLOBAL",1)
+	Global("g-kuotoadead","GLOBAL",0)
+    Global("G-dopilpdiedpeacefully","GLOBAL",0)
+	Global("G-BBmain","GLOBAL",13)
+THEN
+    RESPONSE #100
+		SetGlobal("g-kuotoastillalive","GLOBAL",1)
+        SetGlobal("g-kuotoadead","GLOBAL",1)
+		SetGlobal("G-BBmain","GLOBAL",14)
+		DisplayString(Player1, @100196)
+		PlaySound("NAM157")
+		Continue()
+END
+
+// MAP UPDATE
+
+IF
+    True()
+	Global("ARG-KK_visited","GLOBAL",0)
+THEN
+    RESPONSE #100
+        SetWorldmap("G-DITCH")
+		SetGlobal("ARG-KK_visited","GLOBAL",1)
+		Continue()
+END
+
+// FINDING THE LAIR - ENTIRES FOR MAIN QUEST - works?
+
+IF
+    Global("G-BBmain","GLOBAL",12)
+THEN
+    RESPONSE #100
+        SetGlobal("G-BBmain","GLOBAL",13)
+		DisplayString(Player1, @100196)
+		PlaySound("NAM157")
+		Continue()
+END
+
+// GETTING RID OF THE KUO TOA
+// Done in dialogue
+
+// SOLVING HORROR
+
+IF
+	OR(4)
+	Global("G-kuotoaprisonersfree","GLOBAL",1)
+	Global("g-kuotoadead","GLOBAL",1)
+	Global("g-kuotoagone","GLOBAL",1)
+	Global("g-kuotoaraid","GLOBAL",1)
+THEN
+    RESPONSE #100
+		ActionOverride("g-bb170",EscapeArea())
+		Continue()
+END
+
+IF
+    !Global("G-kuotoaquestline","GLOBAL",15)
+	OR(2)
+	Global("g-kuotoadead","GLOBAL",1)
+	Global("g-kuotoagone","GLOBAL",1)
+	
+THEN
+    RESPONSE #100
+        SetGlobal("G-kuotoaquestline","GLOBAL",15)
+        DisplayString(Player1, @100196)
+		PlaySound("NAM157")
+		Continue()
+END
+
+// KILLIN KILTHAS AND HIS NEW CULT
+
+IF
+    Global("g-kuotoabhaal","GLOBAL",1)
+	Global("g-dopilpdied","GLOBAL",1)
+	Global("g-kilthasdied","GLOBAL",1)
+THEN
+    RESPONSE #100
+        SetGlobal("G-kuotoaquestline","GLOBAL",16)
+        DisplayString(Player1, @100196)
+		PlaySound("NAM157")
+		SetGlobal("g-kuotoabhaal","GLOBAL",0)
+END

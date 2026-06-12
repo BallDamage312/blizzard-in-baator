@@ -1,0 +1,78 @@
+// Random, See PC - normal attack
+
+IF
+	HPPercentLT("g-bb163",50)
+	Global("G-mimicgaveup","GLOBAL",0) 
+THEN
+	RESPONSE #100
+		SetGlobal("G-mimicgaveup","GLOBAL",1) 
+		ActionOverride("g-bb163",StartDialogNoSet(Player1))
+		
+END
+
+IF
+    OnCreation()
+THEN
+    RESPONSE #100
+        FaceObject([PC])
+        Continue()
+END
+
+IF
+	HPPercentLT("g-bb163",50)
+	Global("G-mimicgaveup","GLOBAL",0) 
+THEN
+	RESPONSE #100
+		SetGlobal("G-mimicgaveup","GLOBAL",1) 
+		ActionOverride("g-bb163",StartDialogNoSet(Player1))
+		
+END
+
+IF
+    AttackedBy([PC],DEFAULT)
+	Global("G-mimicgaveup","GLOBAL",0)
+THEN
+    RESPONSE #20
+        FaceObject(LastAttackerOf(Myself))
+        PlaySequence(ANIM_ATTACK)
+		PlaySequence(ANIM_ATTACK)
+		ActionOverride(LastAttackerOf(Myself),ApplyDamage(MYSELF,12,PIERCING))
+        WaitRandom(3,4)
+	RESPONSE #20
+        FaceObject(LastAttackerOf(Myself))
+        PlaySequence(ANIM_ATTACK)
+		PlaySequence(ANIM_ATTACK)
+        WaitRandom(3,4)
+	RESPONSE #20
+        FaceObject(LastAttackerOf(Myself))
+        PlaySequence(ANIM_ATTACK)
+		PlaySequence(ANIM_ATTACK)
+		ActionOverride(LastAttackerOf(Myself),ApplyDamage(MYSELF,11,PIERCING))
+        WaitRandom(3,4)
+	RESPONSE #20
+        FaceObject(LastAttackerOf(Myself))
+        PlaySequence(ANIM_ATTACK)
+		PlaySequence(ANIM_ATTACK)
+        WaitRandom(3,4)
+		RESPONSE #20
+    FaceObject(LastAttackerOf(Myself))
+        PlaySequence(ANIM_ATTACK)
+		PlaySequence(ANIM_ATTACK)
+		ActionOverride(LastAttackerOf(Myself),ApplyDamage(MYSELF,15,PIERCING))
+        WaitRandom(3,4)
+	RESPONSE #20
+        FaceObject(LastAttackerOf(Myself))
+        PlaySequence(ANIM_ATTACK)
+		PlaySequence(ANIM_ATTACK)
+        WaitRandom(3,4)
+END
+
+IF
+	HPPercentLT("g-bb163",50)
+	Global("G-mimicgaveup","GLOBAL",0) 
+THEN
+	RESPONSE #100
+		SetGlobal("G-mimicgaveup","GLOBAL",1) 
+		ActionOverride("g-bb163",StartDialogNoSet(Player1))
+		
+END

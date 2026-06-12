@@ -1,0 +1,311 @@
+
+/////////////////
+// =========== //
+// Audio(misc) //
+// =========== //
+/////////////////
+
+COPY ~%MOD_FOLDER%/media/audio/sounds/ambient~ ~override~
+COPY ~%MOD_FOLDER%/media/audio/sounds/extras~ ~override~
+COPY ~%MOD_FOLDER%/media/audio/voices/npc/others~ ~override~
+COPY ~%MOD_FOLDER%/media/audio/items~ ~override~
+
+///////////
+// ===== //
+// Music //
+// ===== //
+///////////
+
+// Cania (g-bb01)
+
+COPY ~%MOD_FOLDER%/media/audio/music/g-bb01.mus~ ~Music/g-bb01.mus~
+COPY ~%MOD_FOLDER%/media/audio/music/g-bb01~ ~Music/g-bb01~
+
+ACTION_IF GAME_IS ~pstee~ BEGIN
+  ADD_MUSIC ~G-CANIA~ ~Music/g-bb01.mus~
+  APPEND ~SONGLIST.IDS~ ~%G-CANIA% g-bb01~ UNLESS ~g-bb01~
+END
+APPEND_OUTER ~Music/songlist.txt~ ~g-bb01.mus	 // %G-CANIA% G-Cania~ UNLESS ~g-bb01.mus~
+APPEND ~SONGS.IDS~ ~%G-CANIA% G-CANIA~ UNLESS ~G-CANIA~
+
+// The Ditch (g-bb02)
+
+COPY ~%MOD_FOLDER%/media/audio/music/g-bb02.mus~ ~Music/g-bb02.mus~
+COPY ~%MOD_FOLDER%/media/audio/music/g-bb02~ ~Music/g-bb02~
+
+ACTION_IF GAME_IS ~pstee~ BEGIN
+  ADD_MUSIC ~G-THE_DITCH~ ~Music/g-bb02.mus~
+  APPEND ~SONGLIST.IDS~ ~%G-THE_DITCH% g-bb02~ UNLESS ~g-bb02~
+END
+APPEND_OUTER ~Music/songlist.txt~ ~g-bb02.mus	 // %G-THE_DITCH% G-The Ditch~ UNLESS ~g-bb02.mus~
+APPEND ~SONGS.IDS~ ~%G-THE_DITCH% G-THE_DITCH~ UNLESS ~G-THE_DITCH~
+
+
+// Knife in the River (g-bb03)
+
+COPY ~%MOD_FOLDER%/media/audio/music/g-bb03.mus~ ~Music/g-bb03.mus~
+COPY ~%MOD_FOLDER%/media/audio/music/g-bb03~ ~Music/g-bb03~
+
+ACTION_IF GAME_IS ~pstee~ BEGIN
+  ADD_MUSIC ~G-KNIFE_IN_THE_RIVER~ ~Music/g-bb03.mus~
+  APPEND ~SONGLIST.IDS~ ~%G-KNIFE_IN_THE_RIVER% g-bb03~ UNLESS ~g-bb03~
+END
+APPEND_OUTER ~Music/songlist.txt~ ~g-bb03.mus	 // %G-KNIFE_IN_THE_RIVER% G-Knife In The River~ UNLESS ~g-bb03.mus~
+APPEND ~SONGS.IDS~ ~%G-KNIFE_IN_THE_RIVER% G-KNIFE_IN_THE_RIVER~ UNLESS ~G-KNIFE_IN_THE_RIVER~
+
+
+// The Black Sail (g-bb04)
+
+COPY ~%MOD_FOLDER%/media/audio/music/g-bb04.mus~ ~Music/g-bb04.mus~
+COPY ~%MOD_FOLDER%/media/audio/music/g-bb04~ ~Music/g-bb04~
+
+ACTION_IF GAME_IS ~pstee~ BEGIN
+  ADD_MUSIC ~G-THE_BLACK_SAIL~ ~Music/g-bb04.mus~
+  APPEND ~SONGLIST.IDS~ ~%G-THE_BLACK_SAIL% g-bb04~ UNLESS ~g-bb04~
+END
+APPEND_OUTER ~Music/songlist.txt~ ~g-bb04.mus	 // %G-THE_BLACK_SAIL% G-The Black Sail~ UNLESS ~g-bb04.mus~
+APPEND ~SONGS.IDS~ ~%G-THE_BLACK_SAIL% G-THE_BLACK_SAIL~ UNLESS ~G-THE_BLACK_SAIL~
+
+
+// Ribcage (g-bb05)
+
+COPY ~%MOD_FOLDER%/media/audio/music/g-bb05.mus~ ~Music/g-bb05.mus~
+COPY ~%MOD_FOLDER%/media/audio/music/g-bb05~ ~Music/g-bb05~
+
+ACTION_IF GAME_IS ~pstee~ BEGIN
+  ADD_MUSIC ~G-RIBCAGE~ ~Music/g-bb05.mus~
+  APPEND ~SONGLIST.IDS~ ~%G-RIBCAGE% g-bb05~ UNLESS ~g-bb05~
+END
+APPEND_OUTER ~Music/songlist.txt~ ~g-bb05.mus	 // %G-RIBCAGE% G-Ribcage~ UNLESS ~g-bb05.mus~
+APPEND ~SONGS.IDS~ ~%G-RIBCAGE% G-RIBCAGE~ UNLESS ~G-RIBCAGE~
+
+
+// Angel in Slums (g-bb06)
+
+COPY ~%MOD_FOLDER%/media/audio/music/g-bb06.mus~ ~Music/g-bb06.mus~
+COPY ~%MOD_FOLDER%/media/audio/music/g-bb06~ ~Music/g-bb06~
+
+ACTION_IF GAME_IS ~pstee~ BEGIN
+  ADD_MUSIC ~G-ANGEL_IN_SLUMS~ ~Music/g-bb06.mus~
+  APPEND ~SONGLIST.IDS~ ~%G-ANGEL_IN_SLUMS% g-bb06~ UNLESS ~g-bb06~
+END
+APPEND_OUTER ~Music/songlist.txt~ ~g-bb06.mus	 // %G-ANGEL_IN_SLUMS% G-Angel in Slums~ UNLESS ~g-bb06.mus~
+APPEND ~SONGS.IDS~ ~%G-ANGEL_IN_SLUMS% G-ANGEL_IN_SLUMS~ UNLESS ~G-ANGEL_IN_SLUMS~
+
+
+// Fish People (g-bb07)
+
+COPY ~%MOD_FOLDER%/media/audio/music/g-bb07.mus~ ~Music/g-bb07.mus~
+COPY ~%MOD_FOLDER%/media/audio/music/g-bb07~ ~Music/g-bb07~
+
+ACTION_IF GAME_IS ~pstee~ BEGIN
+  ADD_MUSIC ~G-FISH_PEOPLE~ ~Music/g-bb07.mus~
+  APPEND ~SONGLIST.IDS~ ~%G-FISH_PEOPLE% g-bb07~ UNLESS ~g-bb07~
+END
+APPEND_OUTER ~Music/songlist.txt~ ~g-bb07.mus	 // %G-FISH_PEOPLE% G-Fish People~ UNLESS ~g-bb07.mus~
+APPEND ~SONGS.IDS~ ~%G-FISH_PEOPLE% G-FISH_PEOPLE~ UNLESS ~G-FISH_PEOPLE~
+
+
+// Theatergoing (g-bb08)
+
+COPY ~%MOD_FOLDER%/media/audio/music/g-bb08.mus~ ~Music/g-bb08.mus~
+COPY ~%MOD_FOLDER%/media/audio/music/g-bb08~ ~Music/g-bb08~
+
+ACTION_IF GAME_IS ~pstee~ BEGIN
+  ADD_MUSIC ~G-THEATERGOING~ ~Music/g-bb08.mus~
+  APPEND ~SONGLIST.IDS~ ~%G-THEATERGOING% g-bb08~ UNLESS ~g-bb08~
+END
+APPEND_OUTER ~Music/songlist.txt~ ~g-bb08.mus	 // %G-THEATERGOING% G-Theatergoing~ UNLESS ~g-bb08.mus~
+APPEND ~SONGS.IDS~ ~%G-THEATERGOING% G-THEATERGOING~ UNLESS ~G-THEATERGOING~
+
+// Fridur (g-bb09)
+
+COPY ~%MOD_FOLDER%/media/audio/music/g-bb09.mus~ ~Music/g-bb09.mus~
+COPY ~%MOD_FOLDER%/media/audio/music/g-bb09~ ~Music/g-bb09~
+
+ACTION_IF GAME_IS ~pstee~ BEGIN
+  ADD_MUSIC ~G-FRIDUR~ ~Music/g-bb09.mus~
+  APPEND ~SONGLIST.IDS~ ~%G-FRIDUR% g-bb09~ UNLESS ~g-bb09~
+END
+APPEND_OUTER ~Music/songlist.txt~ ~g-bb09.mus	 // %G-FRIDUR% G-Fridur~ UNLESS ~g-bb09.mus~
+APPEND ~SONGS.IDS~ ~%G-FRIDUR% G-FRIDUR~ UNLESS ~G-FRIDUR~
+
+// Wanaheim (g-bb10)
+
+COPY ~%MOD_FOLDER%/media/audio/music/g-bb10.mus~ ~Music/g-bb10.mus~
+COPY ~%MOD_FOLDER%/media/audio/music/g-bb10~ ~Music/g-bb10~
+
+ACTION_IF GAME_IS ~pstee~ BEGIN
+  ADD_MUSIC ~G-WANAHEIM~ ~Music/g-bb10.mus~
+  APPEND ~SONGLIST.IDS~ ~%G-WANAHEIM% g-bb10~ UNLESS ~g-bb10~
+END
+APPEND_OUTER ~Music/songlist.txt~ ~g-bb10.mus	 // %G-WANAHEIM% G-Wanaheim~ UNLESS ~g-bb10.mus~
+APPEND ~SONGS.IDS~ ~%G-WANAHEIM% G-WANAHEIM~ UNLESS ~G-WANAHEIM~
+
+// Sumarbustadir - Battle (g-bb11)
+
+COPY ~%MOD_FOLDER%/media/audio/music/g-bb11.mus~ ~Music/g-bb11.mus~
+COPY ~%MOD_FOLDER%/media/audio/music/g-bb11~ ~Music/g-bb11~
+
+ACTION_IF GAME_IS ~pstee~ BEGIN
+  ADD_MUSIC ~G-SUMARBUSTADIR~ ~Music/g-bb11.mus~
+  APPEND ~SONGLIST.IDS~ ~%G-SUMARBUSTADIR% g-bb11~ UNLESS ~g-bb11~
+END
+APPEND_OUTER ~Music/songlist.txt~ ~g-bb11.mus	 // %G-SUMARBUSTADIR% G-Sumarbustadir - Battle~ UNLESS ~g-bb11.mus~
+APPEND ~SONGS.IDS~ ~%G-SUMARBUSTADIR% G-SUMARBUSTADIR~ UNLESS ~G-SUMARBUSTADIR~
+
+// The Ditch - Battle (g-bb12)
+
+COPY ~%MOD_FOLDER%/media/audio/music/g-bb12.mus~ ~Music/g-bb12.mus~
+COPY ~%MOD_FOLDER%/media/audio/music/g-bb12~ ~Music/g-bb12~
+
+ACTION_IF GAME_IS ~pstee~ BEGIN
+  ADD_MUSIC ~G-THE_DITCH_BATTLE~ ~Music/g-bb12.mus~
+  APPEND ~SONGLIST.IDS~ ~%G-THE_DITCH_BATTLE% g-bb12~ UNLESS ~g-bb12~
+END
+APPEND_OUTER ~Music/songlist.txt~ ~g-bb12.mus	 // %G-THE_DITCH_BATTLE% G-The Ditch - Battle~ UNLESS ~g-bb12.mus~
+APPEND ~SONGS.IDS~ ~%G-THE_DITCH_BATTLE% G-THE_DITCH_BATTLE~ UNLESS ~G-THE_DITCH_BATTLE~
+
+// The Ditch - Night (g-bb13)
+
+COPY ~%MOD_FOLDER%/media/audio/music/g-bb13.mus~ ~Music/g-bb13.mus~
+COPY ~%MOD_FOLDER%/media/audio/music/g-bb13~ ~Music/g-bb13~
+
+ACTION_IF GAME_IS ~pstee~ BEGIN
+  ADD_MUSIC ~G-THE_DITCH_NIGHT~ ~Music/g-bb13.mus~
+  APPEND ~SONGLIST.IDS~ ~%G-THE_DITCH_NIGHT% g-bb13~ UNLESS ~g-bb13~
+END
+APPEND_OUTER ~Music/songlist.txt~ ~g-bb13.mus	 // %G-THE_DITCH_NIGHT% G-The Ditch - Night~ UNLESS ~g-bb13.mus~
+APPEND ~SONGS.IDS~ ~%G-THE_DITCH_NIGHT% G-THE_DITCH_NIGHT~ UNLESS ~G-THE_DITCH_NIGHT~
+
+// Glass Tarn (g-bb14)
+
+COPY ~%MOD_FOLDER%/media/audio/music/g-bb14.mus~ ~Music/g-bb14.mus~
+COPY ~%MOD_FOLDER%/media/audio/music/g-bb14~ ~Music/g-bb14~
+
+ACTION_IF GAME_IS ~pstee~ BEGIN
+  ADD_MUSIC ~G-GLASS_TARN~ ~Music/g-bb14.mus~
+  APPEND ~SONGLIST.IDS~ ~%G-GLASS_TARN% g-bb14~ UNLESS ~g-bb14~
+END
+APPEND_OUTER ~Music/songlist.txt~ ~g-bb14.mus	 // %G-GLASS_TARN% G-Glass Tarn~ UNLESS ~g-bb14.mus~
+APPEND ~SONGS.IDS~ ~%G-GLASS_TARN% G-GLASS_TARN~ UNLESS ~G-GLASS_TARN~
+
+// Factions (g-bb15)
+
+COPY ~%MOD_FOLDER%/media/audio/music/g-bb15.mus~ ~Music/g-bb15.mus~
+COPY ~%MOD_FOLDER%/media/audio/music/g-bb15~ ~Music/g-bb15~
+
+ACTION_IF GAME_IS ~pstee~ BEGIN
+  ADD_MUSIC ~G-FACTIONS~ ~Music/g-bb15.mus~
+  APPEND ~SONGLIST.IDS~ ~%G-FACTIONS% g-bb15~ UNLESS ~g-bb15~
+END
+APPEND_OUTER ~Music/songlist.txt~ ~g-bb15.mus	 // %G-FACTIONS% G-Factions~ UNLESS ~g-bb15.mus~
+APPEND ~SONGS.IDS~ ~%G-FACTIONS% G-FACTIONS~ UNLESS ~G-FACTIONS~
+
+// Wererat Crypt Fight (g-bb16)
+
+COPY ~%MOD_FOLDER%/media/audio/music/g-bb16.mus~ ~Music/g-bb16.mus~
+COPY ~%MOD_FOLDER%/media/audio/music/g-bb16~ ~Music/g-bb16~
+
+ACTION_IF GAME_IS ~pstee~ BEGIN
+  ADD_MUSIC ~G-WERETAT_TEMPLE~ ~Music/g-bb16.mus~
+  APPEND ~SONGLIST.IDS~ ~%G-WERETAT_TEMPLE% g-bb16~ UNLESS ~g-bb16~
+END
+APPEND_OUTER ~Music/songlist.txt~ ~g-bb16.mus	 // %G-WERETAT_TEMPLE% G-Wererat_Temple~ UNLESS ~g-bb16.mus~
+APPEND ~SONGS.IDS~ ~%G-WERETAT_TEMPLE% G-WERETAT_TEMPLE~ UNLESS ~G-WERETAT_TEMPLE~
+
+// Factions Piano (g-bb17)
+
+COPY ~%MOD_FOLDER%/media/audio/music/g-bb17.mus~ ~Music/g-bb17.mus~
+COPY ~%MOD_FOLDER%/media/audio/music/g-bb17~ ~Music/g-bb17~
+
+ACTION_IF GAME_IS ~pstee~ BEGIN
+  ADD_MUSIC ~G-FACTIONSP~ ~Music/g-bb17.mus~
+  APPEND ~SONGLIST.IDS~ ~%G-FACTIONSP% g-bb17~ UNLESS ~g-bb17~
+END
+APPEND_OUTER ~Music/songlist.txt~ ~g-bb17.mus	 // %G-FACTIONSP% G-FactionsP~ UNLESS ~g-bb17.mus~
+APPEND ~SONGS.IDS~ ~%G-FACTIONSP% G-FACTIONSP~ UNLESS ~G-FACTIONSP~
+
+// Wererat Crypt (g-bb18)
+
+COPY ~%MOD_FOLDER%/media/audio/music/g-bb18.mus~ ~Music/g-bb18.mus~
+COPY ~%MOD_FOLDER%/media/audio/music/g-bb18~ ~Music/g-bb18~
+
+ACTION_IF GAME_IS ~pstee~ BEGIN
+  ADD_MUSIC ~G-WERETAT_CRYPT~ ~Music/g-bb18.mus~
+  APPEND ~SONGLIST.IDS~ ~%G-WERETAT_CRYPT% g-bb18~ UNLESS ~g-bb18~
+END
+APPEND_OUTER ~Music/songlist.txt~ ~g-bb18.mus	 // %G-WERETAT_CRYPT% G-Wererat_Crypt~ UNLESS ~g-bb18.mus~
+APPEND ~SONGS.IDS~ ~%G-WERETAT_CRYPT% G-WERETAT_CRYPT~ UNLESS ~G-WERETAT_CRYPT~
+
+//  (g-bb19)
+
+COPY ~%MOD_FOLDER%/media/audio/music/g-bb19.mus~ ~Music/g-bb19.mus~
+COPY ~%MOD_FOLDER%/media/audio/music/g-bb19~ ~Music/g-bb19~
+
+ACTION_IF GAME_IS ~pstee~ BEGIN
+  ADD_MUSIC ~G-MEPHISTAR~ ~Music/g-bb19.mus~
+  APPEND ~SONGLIST.IDS~ ~%G-MEPHISTAR% g-bb19~ UNLESS ~g-bb19~
+END
+APPEND_OUTER ~Music/songlist.txt~ ~g-bb19.mus	 // %G-MEPHISTAR% G-Mephistar~ UNLESS ~g-bb19.mus~
+APPEND ~SONGS.IDS~ ~%G-MEPHISTAR% G-MEPHISTAR~ UNLESS ~G-MEPHISTAR~
+
+// Factions Segment INTRO (g-bb20)
+
+COPY ~%MOD_FOLDER%/media/audio/music/g-bb20.mus~ ~Music/g-bb20.mus~
+COPY ~%MOD_FOLDER%/media/audio/music/g-bb20~ ~Music/g-bb20~
+
+ACTION_IF GAME_IS ~pstee~ BEGIN
+  ADD_MUSIC ~G-Factions1~ ~Music/g-bb20.mus~
+  APPEND ~SONGLIST.IDS~ ~%G-Factions1% g-bb20~ UNLESS ~g-bb20~
+END
+APPEND_OUTER ~Music/songlist.txt~ ~g-bb20.mus	 // %G-Factions1% G-Factions 1~ UNLESS ~g-bb20.mus~
+APPEND ~SONGS.IDS~ ~%G-Factions1% G-Factions1~ UNLESS ~G-Factions1~
+
+// Factions Segment MAIN (g-bb21)
+
+COPY ~%MOD_FOLDER%/media/audio/music/g-bb21.mus~ ~Music/g-bb21.mus~
+COPY ~%MOD_FOLDER%/media/audio/music/g-bb21~ ~Music/g-bb21~
+
+ACTION_IF GAME_IS ~pstee~ BEGIN
+  ADD_MUSIC ~G-Factions2~ ~Music/g-bb21.mus~
+  APPEND ~SONGLIST.IDS~ ~%G-Factions2% g-bb21~ UNLESS ~g-bb21~
+END
+APPEND_OUTER ~Music/songlist.txt~ ~g-bb21.mus	 // %G-Factions2% G-Factions 2~ UNLESS ~g-bb21.mus~
+APPEND ~SONGS.IDS~ ~%G-Factions2% G-Factions2~ UNLESS ~G-Factions2~
+
+// Factions Segment OUTRO (g-bb22)
+
+COPY ~%MOD_FOLDER%/media/audio/music/g-bb22.mus~ ~Music/g-bb22.mus~
+COPY ~%MOD_FOLDER%/media/audio/music/g-bb22~ ~Music/g-bb22~
+
+ACTION_IF GAME_IS ~pstee~ BEGIN
+  ADD_MUSIC ~G-Factions3~ ~Music/g-bb22.mus~
+  APPEND ~SONGLIST.IDS~ ~%G-Factions3% g-bb22~ UNLESS ~g-bb22~
+END
+APPEND_OUTER ~Music/songlist.txt~ ~g-bb22.mus	 // %G-Factions3% G-Factions 3~ UNLESS ~g-bb22.mus~
+APPEND ~SONGS.IDS~ ~%G-Factions3% G-Factions3~ UNLESS ~G-Factions3~
+
+// Cania battle (g-bb23)
+
+COPY ~%MOD_FOLDER%/media/audio/music/g-bb23.mus~ ~Music/g-bb23.mus~
+COPY ~%MOD_FOLDER%/media/audio/music/g-bb23~ ~Music/g-bb23~
+
+ACTION_IF GAME_IS ~pstee~ BEGIN
+  ADD_MUSIC ~G-CANIA_BATTLE~ ~Music/g-bb23.mus~
+  APPEND ~SONGLIST.IDS~ ~%G-CANIA_BATTLE% g-bb23~ UNLESS ~g-bb23~
+END
+APPEND_OUTER ~Music/songlist.txt~ ~g-bb23.mus	 // %G-CANIA_BATTLE% G-CANIA_BATTLE~ UNLESS ~g-bb23.mus~
+APPEND ~SONGS.IDS~ ~%G-CANIA_BATTLE% G-CANIA_BATTLE~ UNLESS ~G-CANIA_BATTLE~
+
+// Styx Oarsman (g-bb24)
+
+COPY ~%MOD_FOLDER%/media/audio/music/g-bb24.mus~ ~Music/g-bb24.mus~
+COPY ~%MOD_FOLDER%/media/audio/music/g-bb24~ ~Music/g-bb24~
+
+ACTION_IF GAME_IS ~pstee~ BEGIN
+  ADD_MUSIC ~G-STYX_OARSMAN~ ~Music/g-bb24.mus~
+  APPEND ~SONGLIST.IDS~ ~%G-STYX_OARSMAN% g-bb24~ UNLESS ~g-bb24~
+END
+APPEND_OUTER ~Music/songlist.txt~ ~g-bb24.mus	 // %G-STYX_OARSMAN% G-STYX_OARSMAN~ UNLESS ~g-bb24.mus~
+APPEND ~SONGS.IDS~ ~%G-STYX_OARSMAN% G-STYX_OARSMAN~ UNLESS ~G-STYX_OARSMAN~

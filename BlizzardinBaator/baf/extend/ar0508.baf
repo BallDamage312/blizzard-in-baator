@@ -1,0 +1,13 @@
+// Blizzard in Baator - Ghoul Golem
+
+IF
+    Global("G-BB_GGOLEM2","GLOBAL",0)
+	Global("G-golemreturned","GLOBAL",1)
+THEN
+    RESPONSE #100
+        CreateCreature("g-bb102",[1354.1844],S)
+        SetGlobal("G-BB_GGOLEM2","GLOBAL",1)
+END
+
+
+

@@ -1,0 +1,3333 @@
+
+// *** PSTEE-specific code to install journal quests (Active, Completed), comes from UB-mod. Code author: Argent77 ***
+
+// This patch function converts a classic PST quest definition into a PSTEE quest definition and 
+// adds it to the current file. The file is expected to be of LUA type (e.g. bgee.lua).
+  // title           = 0   // quest title (strref)
+  // descAssigned    = 0   // active quest description (strref)
+  // possibleEndings = 1   // number of available "completed quest" entries (range: 0 to 5, default: 1)
+  // descCompleted   = 0   // first completed quest description (strref), processed when possibleEndings >= 1
+  // descCompletedB  = 0   // second completed quest description (strref), processed when possibleEndings >= 2
+  // descCompletedC  = 0   // third completed quest description (strref), processed when possibleEndings >= 3
+  // descCompletedD  = 0   // fourth completed quest description (strref), processed when possibleEndings >= 4
+  // descCompletedE  = 0   // fifth completed quest description (strref), processed when possibleEndings >= 5
+  // assignedChecks  = 0   // number of conditions for active quest stage (see aXXXn variable definitions below)
+  // completeChecks  = 0   // number of conditions to check for first completed quest entry (see cXXXn variable definitions below)
+  // completeChecksB = 0   // number of conditions to check for second completed quest entry (see cXXXBn variable definitions below)
+  // completeChecksC = 0   // number of conditions to check for third completed quest entry (see cXXXCn variable definitions below)
+  // completeChecksD = 0   // number of conditions to check for fourth completed quest entry (see cXXXDn variable definitions below)
+  // completeChecksE = 0   // number of conditions to check for fifth completed quest entry (see cXXXEn variable definitions below)
+  // comment         = ~~  // optional comment that can be added to the quest entries (not used in-game)
+  // Active quest: aVar1 (string), aValue1 (int), aCondition1 (string), aVar2, ... depending on "assignedChecks"
+  // Completed quest #1: cVar1 (string), cValue1 (int), cCondition1 (string), cVar2, ... depending on "completeChecks"
+  // Completed quest #2: cVarB1 (string), cValueB1 (int), cConditionB1 (string), cVarB2 ... depending on "completeChecksB"
+  // Use C, D and E for completed quest #3, #4 and #5
+
+  // Active and completed quest entries are defined by variable names, values and conditions
+  // Variable names are always assumed to be of "GLOBAL" scope.
+  // Value can be any signed number in 32 bit range.
+  // Condition can be one of the following keywords (translation in parentheses): EQ (==), GT (>), LT (<), NE (!=)
+  // Classic PST supports a scope keyword as well, but it was never used by the unmodded game. It doesn't appear to be 
+  // supported by PST:EE.
+
+INCLUDE ~%MOD_FOLDER%/utils/A7_PSTEEFunctions.tph~
+WITH_TRA ~%MOD_FOLDER%/lang/%LANGUAGE%/g-bb_quests.tra~
+ 
+BEGIN
+COPY_EXISTING ~bgee.lua~ ~override~
+																												// ========= //
+																												// Messenger //
+																												// ========= //
+																												
+ LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20003)
+    descAssigned    = RESOLVE_STR_REF(@20004)
+    descCompleted   = RESOLVE_STR_REF(@20004)
+    assignedChecks  = 1
+    aValue1         = 1 
+    completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-BBMainBegin_Messenger~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~A: SEGMENT ASSIGNED: Do pierwszego zaakceptowania. =1~ 
+END					
+						
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20003)
+    descAssigned    = RESOLVE_STR_REF(@20005)
+    descCompleted   = RESOLVE_STR_REF(@20003)
+    assignedChecks  = 1
+    aValue1         = 2
+    completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-BBMainBegin_Messenger~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~B: SEGMENT PROGRESS: Do progresu. =2~ 
+END						
+						
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20003)
+    descAssigned    = RESOLVE_STR_REF(@20004)
+    descCompleted   = RESOLVE_STR_REF(@20006)
+    assignedChecks  = 1
+    aValue1         = 99999
+    completeChecks  = 1
+    cValue1         = 3
+        STR_VAR
+    aVar1           = ~impossibe~
+    aCondition1     = ~EQ~
+    cVar1           = ~G-BBMainBegin_Messenger~
+    cCondition1     = ~EQ~
+    comment         = ~C: SEGMENT COMPLETED: Do zakańczania questów. =3~ 
+END		
+																												// ====================== //
+																												// Modron Librarian Books //
+																												// ====================== //
+																												
+  LPF A7_ADD_QUEST_PSTEE
+  INT_VAR
+    title           = RESOLVE_STR_REF(@20075)
+    descAssigned    = RESOLVE_STR_REF(@20076)
+    descCompleted   = RESOLVE_STR_REF(@20077)
+    assignedChecks  = 1
+    aValue1         = 1
+    completeChecks  = 1
+    cValue1         = 2
+  STR_VAR
+    aVar1           = ~g-modlibquest~
+    aCondition1     = ~EQ~
+    cVar1           = ~g-modlibquest~
+    cCondition1     = ~EQ~
+    comment         = ~Modron Librarian quest~
+  END
+																												// ===== //
+																												// Brill //
+																												// ===== //
+																												
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20068)
+    descAssigned    = RESOLVE_STR_REF(@20069)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 1 
+    completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-brill_quest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20068)
+    descAssigned    = RESOLVE_STR_REF(@20070)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 2
+    completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-brill_quest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20068)
+    descAssigned    = RESOLVE_STR_REF(@20071)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 3
+    completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-brill_quest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20068)
+    descAssigned    = RESOLVE_STR_REF(@20072)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 4
+    completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-brill_quest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20068)
+    descAssigned    = RESOLVE_STR_REF(@20073)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 5
+    completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-brill_quest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20068)
+    descAssigned    = RESOLVE_STR_REF(@20079)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 11
+    completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-brill_quest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20068)
+    descAssigned    = RESOLVE_STR_REF(@20080)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 12
+    completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-brill_quest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20068)
+    descAssigned    = RESOLVE_STR_REF(@20081)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 13
+    completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-brill_quest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20068)
+    descAssigned    = RESOLVE_STR_REF(@20082)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 14
+    completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-brill_quest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20068)
+    descAssigned    = RESOLVE_STR_REF(@20083)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 15
+    completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-brill_quest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20068)
+    descAssigned    = RESOLVE_STR_REF(@20000)
+    descCompleted   = RESOLVE_STR_REF(@20084)
+    assignedChecks  = 1
+    aValue1         = 99999
+    completeChecks  = 1
+    cValue1         = 20
+        STR_VAR
+    aVar1           = ~impossible~
+    aCondition1     = ~EQ~
+    cVar1           = ~G-brill_quest~
+    cCondition1     = ~EQ~
+    comment         = ~C: SEGMENT COMPLETED: Do zakańczania questów.~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20068)
+    descAssigned    = RESOLVE_STR_REF(@20000)
+    descCompleted   = RESOLVE_STR_REF(@20085)
+    assignedChecks  = 1
+    aValue1         = 99999
+    completeChecks  = 1
+    cValue1         = 21
+        STR_VAR
+    aVar1           = ~impossible~
+    aCondition1     = ~EQ~
+    cVar1           = ~G-brill_quest~
+    cCondition1     = ~EQ~
+    comment         = ~C: SEGMENT COMPLETED: Do zakańczania questów.~ 
+END		
+																												// =============== //
+																												// Blacksmith Adam //
+																												// =============== //
+																												
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20062)
+    descAssigned    = RESOLVE_STR_REF(@20063)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 1 
+    completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-adamquest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~A: SEGMENT ASSIGNED: Do pierwszego zaakceptowania.~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20062)
+    descAssigned    = RESOLVE_STR_REF(@20064)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 2 
+	completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-adamquest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~B: SEGMENT PROGRESS: Do progresu.~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20062)
+    descAssigned    = RESOLVE_STR_REF(@20065)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 3 
+	completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-adamquest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~B: SEGMENT PROGRESS: Do progresu.~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20062)
+    descAssigned    = RESOLVE_STR_REF(@20066)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 4 
+	completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-adamquest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~B: SEGMENT PROGRESS: Do progresu.~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20062)
+    descAssigned    = RESOLVE_STR_REF(@20000)
+    descCompleted   = RESOLVE_STR_REF(@20067)
+    assignedChecks  = 1
+    aValue1         = 99999
+    completeChecks  = 1
+    cValue1         = 5
+        STR_VAR
+    aVar1           = ~impossibe~
+    aCondition1     = ~EQ~
+    cVar1           = ~G-adamquest~
+    cCondition1     = ~EQ~
+    comment         = ~C: SEGMENT COMPLETED: Do zakańczania questów.~ 
+END
+
+																												// ================ //
+																												// Fiend and Friend //
+																												// ================ //
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20120)
+    descAssigned    = RESOLVE_STR_REF(@20121)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 1 
+    completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-agravalquest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~A: SEGMENT ASSIGNED: Do pierwszego zaakceptowania.~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20120)
+    descAssigned    = RESOLVE_STR_REF(@20122)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 2 
+	completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-agravalquest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~B: SEGMENT PROGRESS: Do progresu.~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20120)
+    descAssigned    = RESOLVE_STR_REF(@20123)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 3 
+	completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-agravalquest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~B: SEGMENT PROGRESS: Do progresu.~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20120)
+    descAssigned    = RESOLVE_STR_REF(@20125)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 5 
+	completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-agravalquest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~B: SEGMENT PROGRESS: Do progresu.~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20120)
+    descAssigned    = RESOLVE_STR_REF(@20126)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 6 
+	completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-agravalquest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~B: SEGMENT PROGRESS: Do progresu.~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20120)
+    descAssigned    = RESOLVE_STR_REF(@20127)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 7 
+	completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-agravalquest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~B: SEGMENT PROGRESS: Do progresu.~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20120)
+    descAssigned    = RESOLVE_STR_REF(@20000)
+    descCompleted   = RESOLVE_STR_REF(@20128)
+    assignedChecks  = 1
+    aValue1         = 99999
+    completeChecks  = 1
+    cValue1         = 9
+        STR_VAR
+    aVar1           = ~impossibe~
+    aCondition1     = ~EQ~
+    cVar1           = ~G-agravalquest~
+    cCondition1     = ~EQ~
+    comment         = ~C: SEGMENT COMPLETED: Do zakańczania questów.~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20120)
+    descAssigned    = RESOLVE_STR_REF(@20000)
+    descCompleted   = RESOLVE_STR_REF(@20129)
+    assignedChecks  = 1
+    aValue1         = 99999
+    completeChecks  = 1
+    cValue1         = 10
+        STR_VAR
+    aVar1           = ~impossibe~
+    aCondition1     = ~EQ~
+    cVar1           = ~G-agravalquest~
+    cCondition1     = ~EQ~
+    comment         = ~C: SEGMENT COMPLETED: Do zakańczania questów.~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20120)
+    descAssigned    = RESOLVE_STR_REF(@20131)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 12 
+	completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-agravalquest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~B: SEGMENT PROGRESS: Do progresu.~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20120)
+    descAssigned    = RESOLVE_STR_REF(@20132)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 13 
+	completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-agravalquest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~B: SEGMENT PROGRESS: Do progresu.~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20120)
+    descAssigned    = RESOLVE_STR_REF(@20000)
+    descCompleted   = RESOLVE_STR_REF(@20133)
+    assignedChecks  = 1
+    aValue1         = 99999
+    completeChecks  = 1
+    cValue1         = 14
+        STR_VAR
+    aVar1           = ~impossibe~
+    aCondition1     = ~EQ~
+    cVar1           = ~G-agravalquest~
+    cCondition1     = ~EQ~
+    comment         = ~C: SEGMENT COMPLETED: Do zakańczania questów.~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20120)
+    descAssigned    = RESOLVE_STR_REF(@20000)
+    descCompleted   = RESOLVE_STR_REF(@20134)
+    assignedChecks  = 1
+    aValue1         = 99999
+    completeChecks  = 1
+    cValue1         = 15
+        STR_VAR
+    aVar1           = ~impossibe~
+    aCondition1     = ~EQ~
+    cVar1           = ~G-agravalquest~
+    cCondition1     = ~EQ~
+    comment         = ~C: SEGMENT COMPLETED: Do zakańczania questów.~ 
+END	
+
+
+																												// ================ //
+																												//  Main questline  //
+																												// ================ //
+
+
+LPF A7_ADD_QUEST_PSTEE
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20007)
+    descAssigned    = RESOLVE_STR_REF(@20008)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 2
+    completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-BBmain~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~
+END
+LPF A7_ADD_QUEST_PSTEE
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20007)
+    descAssigned    = RESOLVE_STR_REF(@20009)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 3
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-BBmain~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~
+END
+LPF A7_ADD_QUEST_PSTEE
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20007)
+    descAssigned    = RESOLVE_STR_REF(@20010)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 4
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-BBmain~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~
+END
+LPF A7_ADD_QUEST_PSTEE
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20007)
+    descAssigned    = RESOLVE_STR_REF(@20011)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 5
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-BBmain~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~
+END
+LPF A7_ADD_QUEST_PSTEE
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20007)
+    descAssigned    = RESOLVE_STR_REF(@20012)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 6
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-BBmain~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~
+END
+LPF A7_ADD_QUEST_PSTEE
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20007)
+    descAssigned    = RESOLVE_STR_REF(@20013)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 7
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-BBmain~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~
+END
+LPF A7_ADD_QUEST_PSTEE
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20007)
+    descAssigned    = RESOLVE_STR_REF(@20014)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 8
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-BBmain~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~
+END
+LPF A7_ADD_QUEST_PSTEE
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20007)
+    descAssigned    = RESOLVE_STR_REF(@20015)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 9
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-BBmain~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~
+END
+LPF A7_ADD_QUEST_PSTEE
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20007)
+    descAssigned    = RESOLVE_STR_REF(@20016)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 10
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-BBmain~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~
+END
+LPF A7_ADD_QUEST_PSTEE
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20007)
+    descAssigned    = RESOLVE_STR_REF(@20017)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 11
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-BBmain~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~
+END
+LPF A7_ADD_QUEST_PSTEE
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20007)
+    descAssigned    = RESOLVE_STR_REF(@20018)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 12
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-BBmain~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~
+END
+LPF A7_ADD_QUEST_PSTEE
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20007)
+    descAssigned    = RESOLVE_STR_REF(@20019)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 13
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-BBmain~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~
+END
+LPF A7_ADD_QUEST_PSTEE
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20007)
+    descAssigned    = RESOLVE_STR_REF(@20020)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 14
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-BBmain~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~
+END
+LPF A7_ADD_QUEST_PSTEE
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20007)
+    descAssigned    = RESOLVE_STR_REF(@20021)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 15
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-BBmain~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~
+END
+LPF A7_ADD_QUEST_PSTEE
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20007)
+    descAssigned    = RESOLVE_STR_REF(@20022)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 16
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-BBmain~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~
+END
+LPF A7_ADD_QUEST_PSTEE
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20007)
+    descAssigned    = RESOLVE_STR_REF(@20023)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 17
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-BBmain~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~
+END
+LPF A7_ADD_QUEST_PSTEE
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20007)
+    descAssigned    = RESOLVE_STR_REF(@20024)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 18
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-BBmain~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~
+END
+LPF A7_ADD_QUEST_PSTEE
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20007)
+    descAssigned    = RESOLVE_STR_REF(@20025)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 19
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-BBmain~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~
+END
+LPF A7_ADD_QUEST_PSTEE
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20007)
+    descAssigned    = RESOLVE_STR_REF(@20026)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 20
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-BBmain~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~
+END
+LPF A7_ADD_QUEST_PSTEE
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20007)
+    descAssigned    = RESOLVE_STR_REF(@20027)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 21
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-BBmain~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~
+END
+LPF A7_ADD_QUEST_PSTEE
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20007)
+    descAssigned    = RESOLVE_STR_REF(@20028)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 22
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-BBmain~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~
+END // ---------------------------------------------
+// KEYQUESTS
+
+LPF A7_ADD_QUEST_PSTEE
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20086)
+    descAssigned    = RESOLVE_STR_REF(@20087)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 1
+    completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-keyquest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~
+END
+LPF A7_ADD_QUEST_PSTEE
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20086)
+    descAssigned    = RESOLVE_STR_REF(@20088)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 2
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-keyquest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~
+END
+LPF A7_ADD_QUEST_PSTEE
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20086)
+    descAssigned    = RESOLVE_STR_REF(@20089)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 3
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-keyquest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~
+END
+LPF A7_ADD_QUEST_PSTEE
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20086)
+    descAssigned    = RESOLVE_STR_REF(@20000)
+    descCompleted   = RESOLVE_STR_REF(@20090)
+    assignedChecks  = 1
+    aValue1         = 99999
+    completeChecks  = 1
+    cValue1         = 4
+        STR_VAR
+    aVar1           = ~impossibe~
+    aCondition1     = ~EQ~
+    cVar1           = ~G-keyquest~
+    cCondition1     = ~EQ~
+    comment         = ~~
+END
+LPF A7_ADD_QUEST_PSTEE
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20086)
+    descAssigned    = RESOLVE_STR_REF(@20000)
+    descCompleted   = RESOLVE_STR_REF(@20119)
+    assignedChecks  = 1
+    aValue1         = 99999
+    completeChecks  = 1
+    cValue1         = 23
+        STR_VAR
+    aVar1           = ~impossibe~
+    aCondition1     = ~EQ~
+    cVar1           = ~G-keyquest~
+    cCondition1     = ~EQ~
+    comment         = ~~
+END
+LPF A7_ADD_QUEST_PSTEE
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20086)
+    descAssigned    = RESOLVE_STR_REF(@20000)
+    descCompleted   = RESOLVE_STR_REF(@20124)
+    assignedChecks  = 1
+    aValue1         = 99999
+    completeChecks  = 1
+    cValue1         = 24
+        STR_VAR
+    aVar1           = ~impossibe~
+    aCondition1     = ~EQ~
+    cVar1           = ~G-keyquest~
+    cCondition1     = ~EQ~
+    comment         = ~~
+END	// ----------------------------------------------------------------------
+
+LPF A7_ADD_QUEST_PSTEE
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20096)
+    descAssigned    = RESOLVE_STR_REF(@20091)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 1
+    completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-doomvsfate~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~
+END
+LPF A7_ADD_QUEST_PSTEE
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20096)
+    descAssigned    = RESOLVE_STR_REF(@20092)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 2
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-doomvsfate~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~
+END
+LPF A7_ADD_QUEST_PSTEE
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20096)
+    descAssigned    = RESOLVE_STR_REF(@20093)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 3
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-doomvsfate~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~
+END
+LPF A7_ADD_QUEST_PSTEE
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20096)
+    descAssigned    = RESOLVE_STR_REF(@20094)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 4
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-doomvsfate~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~
+END
+LPF A7_ADD_QUEST_PSTEE
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20096)
+    descAssigned    = RESOLVE_STR_REF(@20000)
+    descCompleted   = RESOLVE_STR_REF(@20095)
+    assignedChecks  = 1
+    aValue1         = 99999
+    completeChecks  = 1
+    cValue1         = 5
+        STR_VAR
+    aVar1           = ~impossibe~
+    aCondition1     = ~EQ~
+    cVar1           = ~G-doomvsfate~
+    cCondition1     = ~EQ~
+    comment         = ~~
+END	// ----------------------------------------------------------------------
+
+LPF A7_ADD_QUEST_PSTEE
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20096)
+    descAssigned    = RESOLVE_STR_REF(@20097)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 1
+    completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-doomvsfatevsKEY~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~
+END
+LPF A7_ADD_QUEST_PSTEE
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20096)
+    descAssigned    = RESOLVE_STR_REF(@20098)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 2
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-doomvsfatevsKEY~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~
+END
+LPF A7_ADD_QUEST_PSTEE
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20096)
+    descAssigned    = RESOLVE_STR_REF(@20000)
+    descCompleted   = RESOLVE_STR_REF(@20099)
+    assignedChecks  = 1
+    aValue1         = 99999
+    completeChecks  = 1
+    cValue1         = 3
+        STR_VAR
+    aVar1           = ~impossibe~
+    aCondition1     = ~EQ~
+    cVar1           = ~G-doomvsfatevsKEY~
+    cCondition1     = ~EQ~
+    comment         = ~~
+END
+LPF A7_ADD_QUEST_PSTEE
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20096)
+    descAssigned    = RESOLVE_STR_REF(@20000)
+    descCompleted   = RESOLVE_STR_REF(@20100)
+    assignedChecks  = 1
+    aValue1         = 99999
+    completeChecks  = 1
+    cValue1         = 4
+        STR_VAR
+    aVar1           = ~impossibe~
+    aCondition1     = ~EQ~
+    cVar1           = ~G-doomvsfatevsKEY~
+    cCondition1     = ~EQ~
+    comment         = ~~
+END
+LPF A7_ADD_QUEST_PSTEE
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20096)
+    descAssigned    = RESOLVE_STR_REF(@20101)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 5
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-doomvsfatevsKEY~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~
+END
+LPF A7_ADD_QUEST_PSTEE
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20096)
+    descAssigned    = RESOLVE_STR_REF(@20102)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 6
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-doomvsfatevsKEY~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~
+END
+LPF A7_ADD_QUEST_PSTEE
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20096)
+    descAssigned    = RESOLVE_STR_REF(@20103)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 7
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-doomvsfatevsKEY~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~
+END
+LPF A7_ADD_QUEST_PSTEE
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20096)
+    descAssigned    = RESOLVE_STR_REF(@20104)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 8
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-doomvsfatevsKEY~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~
+END
+LPF A7_ADD_QUEST_PSTEE
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20096)
+    descAssigned    = RESOLVE_STR_REF(@20105)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 9
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-doomvsfatevsKEY~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~
+END
+LPF A7_ADD_QUEST_PSTEE
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20096)
+    descAssigned    = RESOLVE_STR_REF(@20000)
+    descCompleted   = RESOLVE_STR_REF(@20106)
+    assignedChecks  = 1
+    aValue1         = 99999
+    completeChecks  = 1
+    cValue1         = 10
+        STR_VAR
+    aVar1           = ~impossibe~
+    aCondition1     = ~EQ~
+    cVar1           = ~G-doomvsfatevsKEY~
+    cCondition1     = ~EQ~
+    comment         = ~~
+END
+LPF A7_ADD_QUEST_PSTEE
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20096)
+    descAssigned    = RESOLVE_STR_REF(@20000)
+    descCompleted   = RESOLVE_STR_REF(@20107)
+    assignedChecks  = 1
+    aValue1         = 99999
+    completeChecks  = 1
+    cValue1         = 11
+        STR_VAR
+    aVar1           = ~impossibe~
+    aCondition1     = ~EQ~
+    cVar1           = ~G-doomvsfatevsKEY~
+    cCondition1     = ~EQ~
+    comment         = ~~
+END
+LPF A7_ADD_QUEST_PSTEE
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20096)
+    descAssigned    = RESOLVE_STR_REF(@20108)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 12
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-doomvsfatevsKEY~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~
+END
+LPF A7_ADD_QUEST_PSTEE
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20096)
+    descAssigned    = RESOLVE_STR_REF(@20000)
+    descCompleted   = RESOLVE_STR_REF(@20109)
+    assignedChecks  = 1
+    aValue1         = 99999
+    completeChecks  = 1
+    cValue1         = 13
+        STR_VAR
+    aVar1           = ~impossibe~
+    aCondition1     = ~EQ~
+    cVar1           = ~G-doomvsfatevsKEY~
+    cCondition1     = ~EQ~
+    comment         = ~~
+END
+LPF A7_ADD_QUEST_PSTEE
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20096)
+    descAssigned    = RESOLVE_STR_REF(@20110)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 14
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-doomvsfatevsKEY~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~
+END
+LPF A7_ADD_QUEST_PSTEE
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20096)
+    descAssigned    = RESOLVE_STR_REF(@20111)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 15
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-doomvsfatevsKEY~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~
+END
+LPF A7_ADD_QUEST_PSTEE
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20096)
+    descAssigned    = RESOLVE_STR_REF(@20112)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 16
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-doomvsfatevsKEY~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~
+END
+LPF A7_ADD_QUEST_PSTEE
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20096)
+    descAssigned    = RESOLVE_STR_REF(@20000)
+    descCompleted   = RESOLVE_STR_REF(@20113)
+    assignedChecks  = 1
+    aValue1         = 99999
+    completeChecks  = 1
+    cValue1         = 17
+        STR_VAR
+    aVar1           = ~impossibe~
+    aCondition1     = ~EQ~
+    cVar1           = ~G-doomvsfatevsKEY~
+    cCondition1     = ~EQ~
+    comment         = ~~
+END
+LPF A7_ADD_QUEST_PSTEE
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20096)
+    descAssigned    = RESOLVE_STR_REF(@20000)
+    descCompleted   = RESOLVE_STR_REF(@20114)
+    assignedChecks  = 1
+    aValue1         = 99999
+    completeChecks  = 1
+    cValue1         = 18
+        STR_VAR
+    aVar1           = ~impossibe~
+    aCondition1     = ~EQ~
+    cVar1           = ~G-doomvsfatevsKEY~
+    cCondition1     = ~EQ~
+    comment         = ~~
+END
+LPF A7_ADD_QUEST_PSTEE
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20096)
+    descAssigned    = RESOLVE_STR_REF(@20000)
+    descCompleted   = RESOLVE_STR_REF(@20115)
+    assignedChecks  = 1
+    aValue1         = 99999
+    completeChecks  = 1
+    cValue1         = 19
+        STR_VAR
+    aVar1           = ~impossibe~
+    aCondition1     = ~EQ~
+    cVar1           = ~G-doomvsfatevsKEY~
+    cCondition1     = ~EQ~
+    comment         = ~~
+END
+LPF A7_ADD_QUEST_PSTEE
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20096)
+    descAssigned    = RESOLVE_STR_REF(@20000)
+    descCompleted   = RESOLVE_STR_REF(@20116)
+    assignedChecks  = 1
+    aValue1         = 99999
+    completeChecks  = 1
+    cValue1         = 20
+        STR_VAR
+    aVar1           = ~impossibe~
+    aCondition1     = ~EQ~
+    cVar1           = ~G-doomvsfatevsKEY~
+    cCondition1     = ~EQ~
+    comment         = ~~
+END
+LPF A7_ADD_QUEST_PSTEE
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20096)
+    descAssigned    = RESOLVE_STR_REF(@20117)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 21
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-doomvsfatevsKEY~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~
+END
+LPF A7_ADD_QUEST_PSTEE
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20096)
+    descAssigned    = RESOLVE_STR_REF(@20000)
+    descCompleted   = RESOLVE_STR_REF(@20118)
+    assignedChecks  = 1
+    aValue1         = 99999
+    completeChecks  = 1
+    cValue1         = 22
+        STR_VAR
+    aVar1           = ~impossibe~
+    aCondition1     = ~EQ~
+    cVar1           = ~G-doomvsfatevsKEY~
+    cCondition1     = ~EQ~
+    comment         = ~~
+END
+LPF A7_ADD_QUEST_PSTEE
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20096)
+    descAssigned    = RESOLVE_STR_REF(@20000)
+    descCompleted   = RESOLVE_STR_REF(@20119)
+    assignedChecks  = 1
+    aValue1         = 99999
+    completeChecks  = 1
+    cValue1         = 23
+        STR_VAR
+    aVar1           = ~impossibe~
+    aCondition1     = ~EQ~
+    cVar1           = ~G-doomvsfatevsKEY~
+    cCondition1     = ~EQ~
+    comment         = ~~
+END
+LPF A7_ADD_QUEST_PSTEE
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20096)
+    descAssigned    = RESOLVE_STR_REF(@20000)
+    descCompleted   = RESOLVE_STR_REF(@20124)
+    assignedChecks  = 1
+    aValue1         = 99999
+    completeChecks  = 1
+    cValue1         = 24
+        STR_VAR
+    aVar1           = ~impossibe~
+    aCondition1     = ~EQ~
+    cVar1           = ~G-doomvsfatevsKEY~
+    cCondition1     = ~EQ~
+    comment         = ~~
+END	// ----------------------------------------------------------------------
+
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20176)
+    descAssigned    = RESOLVE_STR_REF(@20177)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 1 
+    completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-alviroprequest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20176)
+    descAssigned    = RESOLVE_STR_REF(@20178)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 2
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-alviroprequest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20176)
+    descAssigned    = RESOLVE_STR_REF(@20179)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 3
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-alviroprequest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20176)
+    descAssigned    = RESOLVE_STR_REF(@20180)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 4
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-alviroprequest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20176)
+    descAssigned    = RESOLVE_STR_REF(@20181)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 5
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-alviroprequest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20176)
+    descAssigned    = RESOLVE_STR_REF(@20182)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 6
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-alviroprequest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20176)
+    descAssigned    = RESOLVE_STR_REF(@20000)
+    descCompleted   = RESOLVE_STR_REF(@20183)
+    assignedChecks  = 1
+    aValue1         = 99999
+    completeChecks  = 1
+    cValue1         = 10
+        STR_VAR
+    aVar1           = ~impossibe~
+    aCondition1     = ~EQ~
+    cVar1           = ~G-alviroprequest~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20176)
+    descAssigned    = RESOLVE_STR_REF(@20000)
+    descCompleted   = RESOLVE_STR_REF(@20184)
+    assignedChecks  = 1
+    aValue1         = 99999
+    completeChecks  = 1
+    cValue1         = 11
+        STR_VAR
+    aVar1           = ~impossibe~
+    aCondition1     = ~EQ~
+    cVar1           = ~G-alviroprequest~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+
+//-----------------------------------------------------
+
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20166)
+    descAssigned    = RESOLVE_STR_REF(@20167)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 1 
+    completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-alviroquest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20166)
+    descAssigned    = RESOLVE_STR_REF(@20168)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 2
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-alviroquest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20166)
+    descAssigned    = RESOLVE_STR_REF(@20169)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 3 
+    completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-alviroquest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20166)
+    descAssigned    = RESOLVE_STR_REF(@20170)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 4
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-alviroquest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20166)
+    descAssigned    = RESOLVE_STR_REF(@20171)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 5
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-alviroquest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20166)
+    descAssigned    = RESOLVE_STR_REF(@20000)
+    descCompleted   = RESOLVE_STR_REF(@20172)
+    assignedChecks  = 1
+    aValue1         = 99999
+    completeChecks  = 1
+    cValue1         = 6
+        STR_VAR
+    aVar1           = ~impossibe~
+    aCondition1     = ~EQ~
+    cVar1           = ~G-alviroquest~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20166)
+    descAssigned    = RESOLVE_STR_REF(@20000)
+    descCompleted   = RESOLVE_STR_REF(@20173)
+    assignedChecks  = 1
+    aValue1         = 99999
+    completeChecks  = 1
+    cValue1         = 7
+        STR_VAR
+    aVar1           = ~impossibe~
+    aCondition1     = ~EQ~
+    cVar1           = ~G-alviroquest~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20166)
+    descAssigned    = RESOLVE_STR_REF(@20000)
+    descCompleted   = RESOLVE_STR_REF(@20174)
+    assignedChecks  = 1
+    aValue1         = 99999
+    completeChecks  = 1
+    cValue1         = 8
+        STR_VAR
+    aVar1           = ~impossibe~
+    aCondition1     = ~EQ~
+    cVar1           = ~G-alviroquest~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20166)
+    descAssigned    = RESOLVE_STR_REF(@20000)
+    descCompleted   = RESOLVE_STR_REF(@20175)
+    assignedChecks  = 1
+    aValue1         = 99999
+    completeChecks  = 1
+    cValue1         = 9
+        STR_VAR
+    aVar1           = ~impossibe~
+    aCondition1     = ~EQ~
+    cVar1           = ~G-alviroquest~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+// ---------------------------------------------------------------------- KUOTOA
+
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20185)
+    descAssigned    = RESOLVE_STR_REF(@20186)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 1 
+    completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-kuotoaquestline~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20185)
+    descAssigned    = RESOLVE_STR_REF(@20187)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 2
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-kuotoaquestline~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20185)
+    descAssigned    = RESOLVE_STR_REF(@20188)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 3
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-kuotoaquestline~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20185)
+    descAssigned    = RESOLVE_STR_REF(@20189)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 4
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-kuotoaquestline~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20185)
+    descAssigned    = RESOLVE_STR_REF(@20190)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 5
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-kuotoaquestline~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20185)
+    descAssigned    = RESOLVE_STR_REF(@20191)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 6
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-kuotoaquestline~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20185)
+    descAssigned    = RESOLVE_STR_REF(@20192)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 7
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-kuotoaquestline~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20185)
+    descAssigned    = RESOLVE_STR_REF(@20193)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 8
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-kuotoaquestline~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20185)
+    descAssigned    = RESOLVE_STR_REF(@20194)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 9
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-kuotoaquestline~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20185)
+    descAssigned    = RESOLVE_STR_REF(@20000)
+    descCompleted   = RESOLVE_STR_REF(@20195)
+    assignedChecks  = 1
+    aValue1         = 99999
+    completeChecks  = 1
+    cValue1         = 10
+        STR_VAR
+    aVar1           = ~impossibe~
+    aCondition1     = ~EQ~
+    cVar1           = ~G-kuotoaquestline~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20185)
+    descAssigned    = RESOLVE_STR_REF(@20196)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 11
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-kuotoaquestline~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20185)
+    descAssigned    = RESOLVE_STR_REF(@20197)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 12
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-kuotoaquestline~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20185)
+    descAssigned    = RESOLVE_STR_REF(@20198)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 13
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-kuotoaquestline~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20185)
+    descAssigned    = RESOLVE_STR_REF(@20000)
+    descCompleted   = RESOLVE_STR_REF(@20199)
+    assignedChecks  = 1
+    aValue1         = 99999
+    completeChecks  = 1
+    cValue1         = 14
+        STR_VAR
+    aVar1           = ~impossibe~
+    aCondition1     = ~EQ~
+    cVar1           = ~G-kuotoaquestline~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20185)
+    descAssigned    = RESOLVE_STR_REF(@20000)
+    descCompleted   = RESOLVE_STR_REF(@20200)
+    assignedChecks  = 1
+    aValue1         = 99999
+    completeChecks  = 1
+    cValue1         = 15
+        STR_VAR
+    aVar1           = ~impossibe~
+    aCondition1     = ~EQ~
+    cVar1           = ~G-kuotoaquestline~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20185)
+    descAssigned    = RESOLVE_STR_REF(@20000)
+    descCompleted   = RESOLVE_STR_REF(@20201)
+    assignedChecks  = 1
+    aValue1         = 99999
+    completeChecks  = 1
+    cValue1         = 16
+        STR_VAR
+    aVar1           = ~impossibe~
+    aCondition1     = ~EQ~
+    cVar1           = ~G-kuotoaquestline~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+
+//-------------------------------------------------------- MIMIC QUEST
+
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20202)
+    descAssigned    = RESOLVE_STR_REF(@20203)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 1 
+    completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-rattemplequest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20202)
+    descAssigned    = RESOLVE_STR_REF(@20204)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 2
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-rattemplequest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20202)
+    descAssigned    = RESOLVE_STR_REF(@20205)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 3
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-rattemplequest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20202)
+    descAssigned    = RESOLVE_STR_REF(@20206)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 4
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-rattemplequest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20202)
+    descAssigned    = RESOLVE_STR_REF(@20207)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 5
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-rattemplequest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20202)
+    descAssigned    = RESOLVE_STR_REF(@20208)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 6
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-rattemplequest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20202)
+    descAssigned    = RESOLVE_STR_REF(@20000)
+    descCompleted   = RESOLVE_STR_REF(@20209)
+    assignedChecks  = 1
+    aValue1         = 99999
+    completeChecks  = 1
+    cValue1         = 7
+        STR_VAR
+    aVar1           = ~impossibe~
+    aCondition1     = ~EQ~
+    cVar1           = ~G-rattemplequest~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+
+// Pale Woman QUEST
+
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20210)
+    descAssigned    = RESOLVE_STR_REF(@20211)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 1 
+    completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-pale_woman_quest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20210)
+    descAssigned    = RESOLVE_STR_REF(@20212)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 2
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-pale_woman_quest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20210)
+    descAssigned    = RESOLVE_STR_REF(@20213)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 3
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-pale_woman_quest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20210)
+    descAssigned    = RESOLVE_STR_REF(@20214)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 4
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-pale_woman_quest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20210)
+    descAssigned    = RESOLVE_STR_REF(@20215)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 5
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-pale_woman_quest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20210)
+    descAssigned    = RESOLVE_STR_REF(@20216)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 6
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-pale_woman_quest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20210)
+    descAssigned    = RESOLVE_STR_REF(@20000)
+    descCompleted   = RESOLVE_STR_REF(@20217)
+    assignedChecks  = 1
+    aValue1         = 99999
+    completeChecks  = 1
+    cValue1         = 7
+        STR_VAR
+    aVar1           = ~impossibe~
+    aCondition1     = ~EQ~
+    cVar1           = ~G-pale_woman_quest~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20210)
+    descAssigned    = RESOLVE_STR_REF(@20218)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 8
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-pale_woman_quest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20210)
+    descAssigned    = RESOLVE_STR_REF(@20000)
+    descCompleted   = RESOLVE_STR_REF(@20119)
+    assignedChecks  = 1
+    aValue1         = 99999
+    completeChecks  = 1
+    cValue1         = 23
+        STR_VAR
+    aVar1           = ~impossibe~
+    aCondition1     = ~EQ~
+    cVar1           = ~G-pale_woman_quest~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20210)
+    descAssigned    = RESOLVE_STR_REF(@20000)
+    descCompleted   = RESOLVE_STR_REF(@20124)
+    assignedChecks  = 1
+    aValue1         = 99999
+    completeChecks  = 1
+    cValue1         = 24
+        STR_VAR
+    aVar1           = ~impossibe~
+    aCondition1     = ~EQ~
+    cVar1           = ~G-pale_woman_quest~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+
+//-----------------------------------------------------------tripler quest
+
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20227)
+    descAssigned    = RESOLVE_STR_REF(@20228)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 1 
+    completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-triplerquest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20227)
+    descAssigned    = RESOLVE_STR_REF(@20229)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 2
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-triplerquest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20227)
+    descAssigned    = RESOLVE_STR_REF(@20230)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 3
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-triplerquest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20227)
+    descAssigned    = RESOLVE_STR_REF(@20231)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 4
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-triplerquest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20227)
+    descAssigned    = RESOLVE_STR_REF(@20232)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 5
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-triplerquest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20227)
+    descAssigned    = RESOLVE_STR_REF(@20233)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 6
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-triplerquest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20227)
+    descAssigned    = RESOLVE_STR_REF(@20234)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 7
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-triplerquest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20227)
+    descAssigned    = RESOLVE_STR_REF(@20235)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 8
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-triplerquest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20227)
+    descAssigned    = RESOLVE_STR_REF(@20236)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 9
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-triplerquest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20227)
+    descAssigned    = RESOLVE_STR_REF(@20237)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 10
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-triplerquest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20227)
+    descAssigned    = RESOLVE_STR_REF(@20000)
+    descCompleted   = RESOLVE_STR_REF(@20238)
+    assignedChecks  = 1
+    aValue1         = 99999
+    completeChecks  = 1
+    cValue1         = 11
+        STR_VAR
+    aVar1           = ~impossibe~
+    aCondition1     = ~EQ~
+    cVar1           = ~G-triplerquest~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20227)
+    descAssigned    = RESOLVE_STR_REF(@20239)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 12
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-triplerquest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20227)
+    descAssigned    = RESOLVE_STR_REF(@20240)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 13
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-triplerquest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20227)
+    descAssigned    = RESOLVE_STR_REF(@20000)
+    descCompleted   = RESOLVE_STR_REF(@20241)
+    assignedChecks  = 1
+    aValue1         = 99999
+    completeChecks  = 1
+    cValue1         = 14
+        STR_VAR
+    aVar1           = ~impossibe~
+    aCondition1     = ~EQ~
+    cVar1           = ~G-triplerquest~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20227)
+    descAssigned    = RESOLVE_STR_REF(@20000)
+    descCompleted   = RESOLVE_STR_REF(@20242)
+    assignedChecks  = 1
+    aValue1         = 99999
+    completeChecks  = 1
+    cValue1         = 15
+        STR_VAR
+    aVar1           = ~impossibe~
+    aCondition1     = ~EQ~
+    cVar1           = ~G-triplerquest~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20227)
+    descAssigned    = RESOLVE_STR_REF(@20000)
+    descCompleted   = RESOLVE_STR_REF(@20265)
+    assignedChecks  = 1
+    aValue1         = 99999
+    completeChecks  = 1
+    cValue1         = 16
+        STR_VAR
+    aVar1           = ~impossibe~
+    aCondition1     = ~EQ~
+    cVar1           = ~G-triplerquest~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+
+//---------------------------- red dress
+
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20243)
+    descAssigned    = RESOLVE_STR_REF(@20244)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 1 
+    completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~g-redwomanquestline~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20243)
+    descAssigned    = RESOLVE_STR_REF(@20245)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 2
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~g-redwomanquestline~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20243)
+    descAssigned    = RESOLVE_STR_REF(@20246)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 3
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~g-redwomanquestline~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20243)
+    descAssigned    = RESOLVE_STR_REF(@20247)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 4
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~g-redwomanquestline~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20243)
+    descAssigned    = RESOLVE_STR_REF(@20248)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 6
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~g-redwomanquestline~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20243)
+    descAssigned    = RESOLVE_STR_REF(@20249)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 7
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~g-redwomanquestline~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20243)
+    descAssigned    = RESOLVE_STR_REF(@20250)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 8
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~g-redwomanquestline~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20243)
+    descAssigned    = RESOLVE_STR_REF(@20000)
+    descCompleted   = RESOLVE_STR_REF(@20251)
+    assignedChecks  = 1
+    aValue1         = 99999
+    completeChecks  = 1
+    cValue1         = 9
+        STR_VAR
+    aVar1           = ~impossibe~
+    aCondition1     = ~EQ~
+    cVar1           = ~g-redwomanquestline~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20243)
+    descAssigned    = RESOLVE_STR_REF(@20000)
+    descCompleted   = RESOLVE_STR_REF(@20252)
+    assignedChecks  = 1
+    aValue1         = 99999
+    completeChecks  = 1
+    cValue1         = 10
+        STR_VAR
+    aVar1           = ~impossibe~
+    aCondition1     = ~EQ~
+    cVar1           = ~g-redwomanquestline~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20243)
+    descAssigned    = RESOLVE_STR_REF(@20000)
+    descCompleted   = RESOLVE_STR_REF(@20253)
+    assignedChecks  = 1
+    aValue1         = 99999
+    completeChecks  = 1
+    cValue1         = 11
+        STR_VAR
+    aVar1           = ~impossibe~
+    aCondition1     = ~EQ~
+    cVar1           = ~g-redwomanquestline~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20243)
+    descAssigned    = RESOLVE_STR_REF(@20000)
+    descCompleted   = RESOLVE_STR_REF(@20254)
+    assignedChecks  = 1
+    aValue1         = 99999
+    completeChecks  = 1
+    cValue1         = 12
+        STR_VAR
+    aVar1           = ~impossibe~
+    aCondition1     = ~EQ~
+    cVar1           = ~g-redwomanquestline~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+
+
+
+// --------------------------------- SLIME QUEST
+
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20255)
+    descAssigned    = RESOLVE_STR_REF(@20256)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 1 
+    completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~g-slimequestline~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20255)
+    descAssigned    = RESOLVE_STR_REF(@20257)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 2
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~g-slimequestline~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20255)
+    descAssigned    = RESOLVE_STR_REF(@20258)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 3
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~g-slimequestline~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20255)
+    descAssigned    = RESOLVE_STR_REF(@20298)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 4
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~g-slimequestline~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20255)
+    descAssigned    = RESOLVE_STR_REF(@20299)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 5
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~g-slimequestline~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20255)
+    descAssigned    = RESOLVE_STR_REF(@20300)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 6
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~g-slimequestline~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20255)
+    descAssigned    = RESOLVE_STR_REF(@20301)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 7
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~g-slimequestline~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20255)
+    descAssigned    = RESOLVE_STR_REF(@20302)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 8
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~g-slimequestline~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20255)
+    descAssigned    = RESOLVE_STR_REF(@20303)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 9
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~g-slimequestline~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20255)
+    descAssigned    = RESOLVE_STR_REF(@20000)
+    descCompleted   = RESOLVE_STR_REF(@20260)
+    assignedChecks  = 1
+    aValue1         = 99999
+    completeChecks  = 1
+    cValue1         = 10
+        STR_VAR
+    aVar1           = ~impossibe~
+    aCondition1     = ~EQ~
+    cVar1           = ~g-slimequestline~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+
+//------------------------------- Mantuok Kill QUEST
+
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20261)
+    descAssigned    = RESOLVE_STR_REF(@20262)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 1 
+    completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~g-killmantuok~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20261)
+    descAssigned    = RESOLVE_STR_REF(@20000)
+    descCompleted   = RESOLVE_STR_REF(@20263)
+    assignedChecks  = 1
+    aValue1         = 99999
+    completeChecks  = 1
+    cValue1         = 2
+        STR_VAR
+    aVar1           = ~impossibe~
+    aCondition1     = ~EQ~
+    cVar1           = ~g-killmantuok~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20261)
+    descAssigned    = RESOLVE_STR_REF(@20000)
+    descCompleted   = RESOLVE_STR_REF(@20264)
+    assignedChecks  = 1
+    aValue1         = 99999
+    completeChecks  = 1
+    cValue1         = 3
+        STR_VAR
+    aVar1           = ~impossibe~
+    aCondition1     = ~EQ~
+    cVar1           = ~g-killmantuok~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+
+//---------------------------------------- ISHTAR QUEST
+
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20135)
+    descAssigned    = RESOLVE_STR_REF(@20136)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 1 
+    completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-ishtarquest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20135)
+    descAssigned    = RESOLVE_STR_REF(@20137)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 2
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-ishtarquest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20135)
+    descAssigned    = RESOLVE_STR_REF(@20138)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 3
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-ishtarquest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20135)
+    descAssigned    = RESOLVE_STR_REF(@20139)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 4
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-ishtarquest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20135)
+    descAssigned    = RESOLVE_STR_REF(@20140)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 5
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-ishtarquest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20135)
+    descAssigned    = RESOLVE_STR_REF(@20141)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 6
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-ishtarquest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20135)
+    descAssigned    = RESOLVE_STR_REF(@20142)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 7
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-ishtarquest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20135)
+    descAssigned    = RESOLVE_STR_REF(@20143)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 8
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-ishtarquest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+
+//--------------------------------------------------- AYRYN QUEST
+
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20266)
+    descAssigned    = RESOLVE_STR_REF(@20267)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 1 
+    completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~g-ayrynquest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20266)
+    descAssigned    = RESOLVE_STR_REF(@20268)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 2
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~g-ayrynquest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+
+//--------------------------------------------------- KIARANSALEE'S QUEST
+
+
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20288)
+    descAssigned    = RESOLVE_STR_REF(@20289)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 1 
+    completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-kiaransaleequest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20288)
+    descAssigned    = RESOLVE_STR_REF(@20000)
+    descCompleted   = RESOLVE_STR_REF(@20290)
+    assignedChecks  = 1
+    aValue1         = 99999
+    completeChecks  = 1
+    cValue1         = 2
+        STR_VAR
+    aVar1           = ~impossibe~
+    aCondition1     = ~EQ~
+    cVar1           = ~G-kiaransaleequest~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20288)
+    descAssigned    = RESOLVE_STR_REF(@20000)
+    descCompleted   = RESOLVE_STR_REF(@20291)
+    assignedChecks  = 1
+    aValue1         = 99999
+    completeChecks  = 1
+    cValue1         = 3
+        STR_VAR
+    aVar1           = ~impossibe~
+    aCondition1     = ~EQ~
+    cVar1           = ~G-kiaransaleequest~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20288)
+    descAssigned    = RESOLVE_STR_REF(@20000)
+    descCompleted   = RESOLVE_STR_REF(@20292)
+    assignedChecks  = 1
+    aValue1         = 99999
+    completeChecks  = 1
+    cValue1         = 4
+        STR_VAR
+    aVar1           = ~impossibe~
+    aCondition1     = ~EQ~
+    cVar1           = ~G-kiaransaleequest~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+
+//--------------------------------------------------- PICKLEMASTER'S QUEST
+
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20305)
+    descAssigned    = RESOLVE_STR_REF(@20305)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 1 
+    completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~g-picklemaster~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20305)
+    descAssigned    = RESOLVE_STR_REF(@20306)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 2
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~g-picklemaster~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20305)
+    descAssigned    = RESOLVE_STR_REF(@20307)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 3
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~g-picklemaster~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20305)
+    descAssigned    = RESOLVE_STR_REF(@20000)
+    descCompleted   = RESOLVE_STR_REF(@20308)
+    assignedChecks  = 1
+    aValue1         = 99999
+    completeChecks  = 1
+    cValue1         = 4
+        STR_VAR
+    aVar1           = ~impossibe~
+    aCondition1     = ~EQ~
+    cVar1           = ~g-picklemaster~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20305)
+    descAssigned    = RESOLVE_STR_REF(@20000)
+    descCompleted   = RESOLVE_STR_REF(@20309)
+    assignedChecks  = 1
+    aValue1         = 99999
+    completeChecks  = 1
+    cValue1         = 5
+        STR_VAR
+    aVar1           = ~impossibe~
+    aCondition1     = ~EQ~
+    cVar1           = ~g-picklemaster~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+
+//--------------------------------------------------- ULFBRAND'S EARRING QUEST - post hell
+
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20293)
+    descAssigned    = RESOLVE_STR_REF(@20294)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 1 
+    completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-ulfbrandquest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20293)
+    descAssigned    = RESOLVE_STR_REF(@20295)
+    descCompleted   = RESOLVE_STR_REF(@20000)
+    assignedChecks  = 1
+    aValue1         = 2
+ completeChecks  = 1
+    cValue1         = 99999
+        STR_VAR
+    aVar1           = ~G-ulfbrandquest~
+    aCondition1     = ~EQ~
+    cVar1           = ~impossible~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+LPF A7_ADD_QUEST_PSTEE 
+    INT_VAR
+    title           = RESOLVE_STR_REF(@20293)
+    descAssigned    = RESOLVE_STR_REF(@20000)
+    descCompleted   = RESOLVE_STR_REF(@20296)
+    assignedChecks  = 1
+    aValue1         = 99999
+    completeChecks  = 1
+    cValue1         = 3
+        STR_VAR
+    aVar1           = ~impossibe~
+    aCondition1     = ~EQ~
+    cVar1           = ~G-ulfbrandquest~
+    cCondition1     = ~EQ~
+    comment         = ~~ 
+END
+
+BUT_ONLY
+END
+
+

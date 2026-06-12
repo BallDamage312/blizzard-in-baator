@@ -1,0 +1,130 @@
+// AttackedBy no walk Styx Oarsman 1
+
+IF
+	Die()
+THEN
+    RESPONSE #100
+	SetGlobal("G-oarsmanbarkeepreset","GLOBAL",1)		
+	Continue()
+END
+
+
+IF
+    See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        Help()
+        RunningAttack(NearestEnemyOf(Myself))
+END
+
+IF
+    AttackedBy([ANYONE],DEFAULT)
+THEN
+    RESPONSE #100
+        Enemy()
+		SetGlobal("G-styxhostile","GLOBAL",1)
+        Help()
+        RunningAttack(NearestEnemyOf(Myself))
+END
+
+IF
+    Help([ANYONE])
+    Team(LastTrigger,G-STYXO_1)
+THEN
+    RESPONSE #100
+        Enemy()
+        RunningAttack(NearestEnemyOf(Myself))
+END
+
+
+IF
+    Global("G-styxhostile","GLOBAL",1)
+THEN
+    RESPONSE #100
+        Enemy()
+        RunningAttack(NearestEnemyOf(Myself))
+END
+
+IF
+    True()
+	!ActuallyInCombat()
+THEN
+    RESPONSE #100
+		ReturnToSavedPlace()
+		PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100070) 
+        WaitRandom(10,10)
+        Continue()
+	RESPONSE #100
+        ReturnToSavedPlace()
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100071) 
+		WaitRandom(10,10)
+        Continue()
+	RESPONSE #100
+        ReturnToSavedPlace()
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100073)
+		WaitRandom(10,10)
+        Continue()
+		RESPONSE #100
+        ReturnToSavedPlace()
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100072)
+		WaitRandom(10,10)
+        Continue()
+		 RESPONSE #100
+		ReturnToSavedPlace()
+		PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100074) 
+        WaitRandom(10,10)
+        Continue()
+	RESPONSE #100
+        ReturnToSavedPlace()
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100075) 
+		WaitRandom(10,10)
+        Continue()
+	RESPONSE #100
+        ReturnToSavedPlace()
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100076)
+		WaitRandom(10,10)
+        Continue()
+		RESPONSE #100
+        ReturnToSavedPlace()
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100077)
+		WaitRandom(10,10)
+        Continue()
+		 RESPONSE #100
+		ReturnToSavedPlace()
+		PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100078) 
+        WaitRandom(10,10)
+        Continue()
+	RESPONSE #100
+        ReturnToSavedPlace()
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100079) 
+		WaitRandom(10,10)
+        Continue()
+	RESPONSE #100
+        ReturnToSavedPlace()
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100080)
+		WaitRandom(10,10)
+        Continue()
+		RESPONSE #100
+        ReturnToSavedPlace()
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100081)
+		WaitRandom(10,10)
+        Continue()
+		RESPONSE #100
+        ReturnToSavedPlace()
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100082)
+		WaitRandom(10,10)
+        Continue()
+END

@@ -1,0 +1,722 @@
+
+///////////
+// ===== //
+// Items //
+// ===== //
+///////////
+
+/*
+COPY ~%MOD_FOLDER%/itm/2da/rndtres.2da~ ~override~
+INCLUDE ~%MOD_FOLDER%/utils/functions.tph~
+
+LAF DEFINE_RANDOM_TREASURE_EX INT_VAR chance_0 = 25 chance_1 = 25 chance_2 = 25 chance_3 = 25 STR_VAR treasure = EVAL ~g-tre001~ defItem = EVAL ~defItem~ item_0 = EVAL ~TTAC1~ item_1 = EVAL ~TTAC2~ item_2 = EVAL ~TTWIS2~ item_3 = EVAL ~TTWIS1~ RET success END
+*/
+
+COPY_EXISTING aclue.itm ~override/g-bbi000.itm~
+ SAY NAME1 @500000 
+ SAY NAME2 @500000
+ SAY UNIDENTIFIED_DESC @500001
+ SAY IDENTIFIED_DESC @500001
+
+COPY ~%MOD_FOLDER%/itm/g-bbi001.itm~ ~override~
+ SAY NAME1 @500002 // Belty Stygijskiej Lodowej Nawalnicy / Bolts of Stygian Ice Storm 
+ SAY NAME2 @500002
+ SAY UNIDENTIFIED_DESC @500003
+ SAY IDENTIFIED_DESC @500003
+
+COPY ~%MOD_FOLDER%/itm/g-bbi002.itm~ ~override~
+ SAY NAME1 @500004 // Kolczyk ochrony przed chłodem / Earring of Protection From Cold 
+ SAY NAME2 @500004
+ SAY UNIDENTIFIED_DESC @500005
+
+COPY ~%MOD_FOLDER%/itm/g-bbi003.itm~ ~override~
+ SAY NAME1 @500006 // Kościany gwizdek / Bone Whistle 
+ SAY NAME2 @500006
+ SAY UNIDENTIFIED_DESC @500007
+
+COPY ~%MOD_FOLDER%/itm/g-bbi004.itm~ ~override~
+ SAY NAME1 @500008 // Ognista kula Bezimiennego / Nameless One's Fireball 
+ SAY NAME2 @500008
+ SAY UNIDENTIFIED_DESC @500009
+
+COPY ~%MOD_FOLDER%/itm/g-bbi005.itm~ ~override~
+ SAY NAME1 @500010 // Oko Biesa / Fiend's Eye 
+ SAY NAME2 @500010
+ SAY UNIDENTIFIED_DESC @500011
+
+COPY ~%MOD_FOLDER%/itm/g-bbi006.itm~ ~override~
+ SAY NAME1 @500148 // Pierścień Baator / Ring of Baator 
+ SAY NAME2 @500012
+ SAY UNIDENTIFIED_DESC @500013
+ SAY IDENTIFIED_DESC @500014
+
+COPY ~%MOD_FOLDER%/itm/g-bbi007.itm~ ~override~
+ SAY NAME1 @500015 // Przeklęta Pięść Pulpitu / Cursed Fist of Desktop 
+ SAY NAME2 @500015
+ SAY IDENTIFIED_DESC @500016
+
+COPY ~%MOD_FOLDER%/itm/g-bbi008.itm~ ~override~
+ SAY NAME1 @500017 // Kajdany Uwolnienia Nie-Sławy / Shackles of Fall-From-Grace's Freedom 
+ SAY NAME2 @500132
+ SAY UNIDENTIFIED_DESC @500018
+ SAY IDENTIFIED_DESC @500019
+
+COPY ~%MOD_FOLDER%/itm/g-bbi009.itm~ ~override~
+ SAY NAME1 @500020 // Kielich z Rzecznej Bramy / A goblet from Rivergate 
+ SAY NAME2 @500020
+ SAY UNIDENTIFIED_DESC @500021
+ SAY IDENTIFIED_DESC @500021
+
+COPY ~%MOD_FOLDER%/itm/g-bbi010.itm~ ~override~
+ SAY NAME1 @500022 // Kielich z Rzecznej Bramy / A goblet from Rivergate 
+ SAY NAME2 @500022
+ SAY UNIDENTIFIED_DESC @500023
+ SAY IDENTIFIED_DESC @500023
+
+COPY ~%MOD_FOLDER%/itm/g-bbi011.itm~ ~override~ // 
+SAY NAME1 @500063 // Klucz do zaplecza Szczura i Sznura / Key to the Rat & Splat Backrooms 
+ SAY NAME2 @500063
+ SAY UNIDENTIFIED_DESC @500064
+ SAY IDENTIFIED_DESC @500064
+
+COPY ~%MOD_FOLDER%/itm/g-bbi012.itm~ ~override~
+ SAY NAME1 @500024 // Klucz do mieszkania Ikss'odesa / The key to Ikss'odesa's apartment 
+ SAY NAME2 @500024
+ SAY UNIDENTIFIED_DESC @500025
+ SAY IDENTIFIED_DESC @500025
+
+COPY ~%MOD_FOLDER%/itm/g-bbi013.itm~ ~override~
+ SAY IDENTIFIED_DESC @500026
+
+COPY ~%MOD_FOLDER%/itm/g-bbi014.itm~ ~override~
+ SAY NAME1 @500027 // Grimuar Sferowca / The Planeswalker's Grimoire 
+ SAY NAME2 @500027
+ SAY IDENTIFIED_DESC @500028
+
+COPY ~%MOD_FOLDER%/itm/g-bbi015.itm~ ~override~
+ SAY NAME1 @500029 // Prawda o Sferach / The Plane Truth 
+ SAY NAME2 @500029
+ SAY IDENTIFIED_DESC @500030
+
+COPY ~%MOD_FOLDER%/itm/g-bbi016.itm~ ~override~
+ SAY NAME1 @500031 // Ogień i Pył / Fire and Dust 
+ SAY NAME2 @500031
+ SAY IDENTIFIED_DESC @500032
+
+COPY ~%MOD_FOLDER%/itm/g-bbi017.itm~ ~override~
+ SAY NAME1 @500033 // Łuk Żeglarza albo Ostatni Port Pośredni / The Seafarer's Arch or Final Port-of-Call 
+ SAY NAME2 @500033
+ SAY IDENTIFIED_DESC @500034
+ 
+COPY ~%MOD_FOLDER%/itm/g-bbi018.itm~ ~override~
+ SAY NAME1 @500035 // Kanał. Pomiędzy Sigil a morzami / The Ditch - Of Sigil and the sea 
+ SAY NAME2 @500035
+ SAY IDENTIFIED_DESC @500036
+
+COPY ~%MOD_FOLDER%/itm/g-bbi019.itm~ ~override~
+ SAY NAME1 @500037 // Dzień Łaski / The Day of Grace 
+ SAY NAME2 @500037
+ SAY IDENTIFIED_DESC @500038
+
+COPY ~%MOD_FOLDER%/itm/g-bbi020.itm~ ~override~
+ SAY NAME1 @500039 // Analekta Sigilijskie / The Analects of Sigil 
+ SAY NAME2 @500039
+ SAY IDENTIFIED_DESC @500040
+
+COPY ~%MOD_FOLDER%/itm/g-bbi021.itm~ ~override~
+ SAY NAME1 @500041 // Siedem Cudów Wieloświata / The Seven Wonders of the Multiverse 
+ SAY NAME2 @500041
+ SAY IDENTIFIED_DESC @500042
+
+COPY ~%MOD_FOLDER%/itm/g-bbi022.itm~ ~override~
+ SAY NAME1 @500043 // Niebieska Proteza / Blue prosthesis 
+ SAY NAME2 @500044 // Oko filozofa / Philosopher's eye 
+ SAY UNIDENTIFIED_DESC @500045
+ SAY IDENTIFIED_DESC @500046
+
+COPY ~%MOD_FOLDER%/itm/g-bbi023.itm~ ~override~
+ SAY NAME1 @500047 // Entropia +2 / Entropy +2 
+ SAY NAME2 @500047 // Entropia +2 / Entropy +2 
+ SAY UNIDENTIFIED_DESC @500048
+ SAY IDENTIFIED_DESC @500048
+
+COPY ~%MOD_FOLDER%/itm/g-bbi024.itm~ ~override~
+ SAY NAME1 @500049 // Prod 
+ SAY NAME2 @500049 // Prod 
+ SAY UNIDENTIFIED_DESC @500050
+ SAY IDENTIFIED_DESC @500050
+
+COPY ~%MOD_FOLDER%/itm/g-bbi025.itm~ ~override~
+ SAY NAME1 @500051 // Fiolka Karachu / A Vial of Karach 
+ SAY NAME2 @500051 // Fiolka Karachu / A Vial of Karach 
+ SAY UNIDENTIFIED_DESC @500052
+ SAY IDENTIFIED_DESC @500052
+ 
+COPY ~%MOD_FOLDER%/itm/g-bbi026.itm~ ~override~ 
+SAY NAME1 @500143 // Płomień Ładu / Flame of Order
+ SAY NAME2 @500145
+ SAY UNIDENTIFIED_DESC @500144
+ SAY IDENTIFIED_DESC @500146
+
+COPY ~%MOD_FOLDER%/itm/g-bbi027.itm~ ~override~
+ SAY NAME1 @500053 // Zwój Ognistej Kuli / Scroll of Fireball 
+ SAY NAME2 @500053 
+ SAY UNIDENTIFIED_DESC @500054
+ SAY IDENTIFIED_DESC @500054
+ 
+COPY ~%MOD_FOLDER%/itm/g-bbi028.itm~ ~override~
+ SAY NAME1 @500055 // Zwój Plugawego Uwiądu / Scroll of Horrid Wilting 
+ SAY NAME2 @500055 
+ SAY UNIDENTIFIED_DESC @500056
+ SAY IDENTIFIED_DESC @500056
+  
+COPY ~%MOD_FOLDER%/itm/g-bbi029.itm~ ~override~
+ SAY NAME1 @500057 // Zwój Dezintegracji / Scroll of Disintegrate 
+ SAY NAME2 @500057 
+ SAY UNIDENTIFIED_DESC @500058
+ SAY IDENTIFIED_DESC @500058
+
+COPY ~%MOD_FOLDER%/itm/g-bbi030.itm~ ~override~
+ SAY NAME1 @500059 // Zwój Obniżenia odporności / Scroll of Lower Resitance 
+ SAY NAME2 @500059 
+ SAY UNIDENTIFIED_DESC @500060
+ SAY IDENTIFIED_DESC @500060
+ 
+COPY ~%MOD_FOLDER%/itm/g-bbi031.itm~ ~override~
+ SAY NAME1 @500061 // Zwój Zawodzenia Banshee / Scroll of Wail of the Banshee 
+ SAY NAME2 @500061 
+ SAY UNIDENTIFIED_DESC @500062
+ SAY IDENTIFIED_DESC @500062
+ 
+COPY ~%MOD_FOLDER%/itm/g-bbi032.itm~ ~override~
+ SAY NAME1 @500069 // Odłamek golema / Golem shard 
+ SAY NAME2 @500069 
+ SAY UNIDENTIFIED_DESC @500070
+ SAY IDENTIFIED_DESC @500070
+ 
+COPY ~%MOD_FOLDER%/itm/g-bbi033.itm~ ~override~
+ SAY NAME1 @500067 // Dziennik Kruchego Ogona / Fragile Tail's Journal 
+ SAY NAME2 @500067 
+ SAY UNIDENTIFIED_DESC @500068
+ SAY IDENTIFIED_DESC @500068
+ 
+COPY ~%MOD_FOLDER%/itm/g-bbi034.itm~ ~override~
+ SAY NAME1 @500065 // Bezdenny kieł Manilla / The bottomless fang of Manill 
+ SAY NAME2 @500065 
+ SAY UNIDENTIFIED_DESC @500066
+ SAY IDENTIFIED_DESC @500066
+  
+COPY ~%MOD_FOLDER%/itm/g-bbi035.itm~ ~override~
+ SAY NAME1 @500079 // Wskazowki chaosyty? / Xaositect guidens? 
+ SAY NAME2 @500079 
+ SAY UNIDENTIFIED_DESC @500080
+ SAY IDENTIFIED_DESC @500080
+ 
+COPY ~%MOD_FOLDER%/itm/g-bbi037.itm~ ~override~
+ SAY NAME1 @500071 // Mleko Shina-Tsu-Hiko / Shina-Tsu-Hiko Milk
+ SAY NAME2 @500071 
+ SAY UNIDENTIFIED_DESC @500265
+ SAY IDENTIFIED_DESC @500072
+ 
+COPY ~%MOD_FOLDER%/itm/g-bbi038.itm~ ~override~
+ SAY NAME1 @500073	// Różdzka magicznych pocisków / Wand of mystical globe of magical energy  
+ SAY NAME2 @500073
+ SAY UNIDENTIFIED_DESC @500074
+ SAY IDENTIFIED_DESC @500074
+  
+COPY ~%MOD_FOLDER%/itm/g-bbi039.itm~ ~override~ // igla i nitka   
+ SAY UNIDENTIFIED_DESC @500076
+ SAY IDENTIFIED_DESC @500076
+  
+COPY ~%MOD_FOLDER%/itm/g-bbi040.itm~ ~override~
+ SAY NAME1 @500077	// Zwój przyśpieszenia ruchów / Scroll of haste   
+ SAY NAME2 @500077
+ SAY UNIDENTIFIED_DESC @500078
+ SAY IDENTIFIED_DESC @500078
+  
+COPY ~%MOD_FOLDER%/itm/g-bbi041.itm~ ~override~
+ SAY NAME1 @500081	// Szata Pokonanych / Robe of the Vanquished  
+ SAY NAME2 @500081
+ SAY UNIDENTIFIED_DESC @500082
+ SAY IDENTIFIED_DESC @500082
+ //LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 53 target = 1 parameter1 = IDS_OF_SYMBOL (~animate~ ~~) parameter2 = 0 timing = 2  resist_dispel = 2 END
+  
+COPY ~%MOD_FOLDER%/itm/g-bbi042.itm~ ~override~
+ SAY NAME1 @500083	// Naszyjnik ze szczurów / Necklace of rats  
+ SAY NAME2 @500083
+ SAY UNIDENTIFIED_DESC @500084
+ SAY IDENTIFIED_DESC @500084
+  
+COPY ~%MOD_FOLDER%/itm/g-bbi043.itm~ ~override~
+ SAY NAME1 @500085	// Niezarejestrowany kamien doznań / Unregistered sensory stone  
+ SAY NAME2 @500085
+ SAY UNIDENTIFIED_DESC @500086
+ SAY IDENTIFIED_DESC @500086
+  
+COPY ~%MOD_FOLDER%/itm/g-bbi036.itm~ ~override~
+ SAY NAME1 @500087	// Zniewolony tancerz / Captive dancer  
+ SAY NAME2 @500087
+ SAY UNIDENTIFIED_DESC @500088
+ SAY IDENTIFIED_DESC @500088
+  
+COPY ~%MOD_FOLDER%/itm/g-bbi044.itm~ ~override~
+ SAY NAME1 @500091	// Uświęcony sygnet Archona / Archon's hallowed sigil  
+ SAY NAME2 @500092
+ SAY UNIDENTIFIED_DESC @500093
+ SAY IDENTIFIED_DESC @500251
+  
+COPY ~%MOD_FOLDER%/itm/g-bbi045.itm~ ~override~
+SAY NAME1 @500094	// Kościany Kolczyk Ulfhilda Völgarrsona Baunaætari / Bone Earring of Ulfhild Völgarrson Baunaætari
+SAY NAME2 @500094
+SAY UNIDENTIFIED_DESC @500095
+SAY IDENTIFIED_DESC @500095
+
+COPY ~%MOD_FOLDER%/itm/g-bbi046.itm~ ~override~
+ SAY NAME1 @500089	// Ostatnia strona z pamiętnika / Last page from diary  
+ SAY NAME2 @500089
+ SAY UNIDENTIFIED_DESC @500090
+ SAY IDENTIFIED_DESC @500090
+
+COPY ~%MOD_FOLDER%/itm/g-bbi047.itm~ ~override~
+ SAY NAME1 @500096	// Pieczęć Archona / Archon Seal  
+ SAY NAME2 @500096
+ SAY UNIDENTIFIED_DESC @500097
+ SAY IDENTIFIED_DESC @500097
+
+COPY ~%MOD_FOLDER%/itm/g-bbi048.itm~ ~override~
+SAY NAME1 @500098	// Kościany Kolczyk / Bone Earring
+SAY NAME2 @500098
+SAY UNIDENTIFIED_DESC @500099
+SAY IDENTIFIED_DESC @500099
+
+COPY ~%MOD_FOLDER%/itm/g-bbi049.itm~ ~override~
+ SAY NAME1 @500100	// Obietnica / The Promise
+ SAY NAME2 @500100
+ SAY UNIDENTIFIED_DESC @500101
+ SAY IDENTIFIED_DESC @500101
+
+COPY_EXISTING ~%MOD_FOLDER%/itm/g-bbi050.itm~ ~override~
+ SAY NAME1 @500102  // Notatka Kabatuma / Kabatum note 
+ SAY NAME2 @500102
+ SAY UNIDENTIFIED_DESC @500103
+ SAY IDENTIFIED_DESC @500103
+
+COPY_EXISTING ~%MOD_FOLDER%/itm/g-bbi051.itm~ ~override~
+ SAY NAME1 @500104  // Flet Marraenolotha / Marraenoloth's Flute
+ SAY NAME2 @500104
+ SAY UNIDENTIFIED_DESC @500105
+ SAY IDENTIFIED_DESC @500105
+
+COPY_EXISTING ~%MOD_FOLDER%/itm/g-bbi052.itm~ ~override~ 
+ SAY NAME1 @500106  // "Ostatnie Słowo" / "The Last Word"
+ SAY NAME2 @500106
+ SAY UNIDENTIFIED_DESC @500107
+ SAY IDENTIFIED_DESC @500107
+ 
+COPY_EXISTING ~%MOD_FOLDER%/itm/g-bbi053.itm~ ~override~ 
+ SAY NAME1 @500108  // Rękawice Krwi Io / Knuckles of Io's Blood
+ SAY NAME2 @500109
+ SAY UNIDENTIFIED_DESC @500110
+ SAY IDENTIFIED_DESC @500111
+ 
+COPY_EXISTING ~%MOD_FOLDER%/itm/g-bbi054.itm~ ~override~ 
+ SAY NAME1 @500112  // Sierp Południcy / Noonwraith's Sickle
+ SAY NAME2 @500113
+ SAY UNIDENTIFIED_DESC @500114
+ SAY IDENTIFIED_DESC @500115
+ 
+COPY_EXISTING ~%MOD_FOLDER%/itm/g-bbi055.itm~ ~override~ 
+ SAY NAME1 @500116  // Okular badacza Piekieł / Lens of Hells Explorer
+ SAY NAME2 @500116
+ SAY UNIDENTIFIED_DESC @500117
+ SAY IDENTIFIED_DESC @500117
+ 
+COPY_EXISTING ~%MOD_FOLDER%/itm/g-bbi056.itm~ ~override~ 
+ SAY NAME1 @500118  // Tajemniczy zwój / Mysterious scroll
+ SAY NAME2 @500118
+ SAY UNIDENTIFIED_DESC @500119
+ SAY IDENTIFIED_DESC @500119
+ 
+COPY_EXISTING ~%MOD_FOLDER%/itm/g-bbi057.itm~ ~override~ 
+ SAY NAME1 @500120  // Wezwanie do bitwy / Call to battle
+ SAY NAME2 @500120
+ SAY UNIDENTIFIED_DESC @500121
+ SAY IDENTIFIED_DESC @500121
+ 
+COPY_EXISTING ~%MOD_FOLDER%/itm/g-bbi058.itm~ ~override~ 
+ SAY NAME1 @500122  // Dziwaczna książka / Bizzare book
+ SAY NAME2 @500122
+ SAY UNIDENTIFIED_DESC @500123
+ SAY IDENTIFIED_DESC @500123
+ 
+COPY_EXISTING ~%MOD_FOLDER%/itm/g-bbi059.itm~ ~override~ 
+ SAY NAME1 @500124  // Maczuga Straży Zagłady / Mace of the Doomguard
+ SAY NAME2 @500125
+ SAY UNIDENTIFIED_DESC @500126
+ SAY IDENTIFIED_DESC @500127
+
+COPY_EXISTING ~%MOD_FOLDER%/itm/g-bbi060.itm~ ~override~ 
+ SAY NAME1 @500128  // Topór Przeznaczonych / Axe of the Fated
+ SAY NAME2 @500129
+ SAY UNIDENTIFIED_DESC @500130
+ SAY IDENTIFIED_DESC @500131
+ 
+COPY_EXISTING ~%MOD_FOLDER%/itm/g-bbi061.itm~ ~override~ 
+ SAY NAME1 @500133  // Amulet ciała / Body Charm
+ SAY NAME2 @500133
+ SAY UNIDENTIFIED_DESC @500134
+ SAY IDENTIFIED_DESC @500134
+
+// i062-i069 Tatuaże
+
+COPY_EXISTING ~%MOD_FOLDER%/itm/g-bbi070.itm~ ~override~ 
+ SAY NAME1 @500135  // "Anulus Demonis"
+ SAY NAME2 @500135
+ SAY UNIDENTIFIED_DESC @500136
+ SAY IDENTIFIED_DESC @500136
+ LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 328 target = 1 parameter2 = %transform_into_glabrezu% timing = 2  resist_dispel = 2 special = 1 END
+ 
+COPY_EXISTING ~%MOD_FOLDER%/itm/g-bbi071.itm~ ~override~ 
+ SAY NAME1 @500137  // Cukierek Mocy dla Morte / Candy of Might for Morte
+ SAY NAME2 @500137
+ SAY UNIDENTIFIED_DESC @500138
+ SAY IDENTIFIED_DESC @500138
+ 
+COPY_EXISTING ~%MOD_FOLDER%/itm/g-bbi072.itm~ ~override~ 
+ SAY NAME1 @500139  // Mapa
+ SAY NAME2 @500139
+ SAY UNIDENTIFIED_DESC @500140
+ SAY IDENTIFIED_DESC @500140
+ 
+COPY_EXISTING ~%MOD_FOLDER%/itm/g-bbi073.itm~ ~override~ 
+ SAY NAME1 @500141  // Trzonowiec Agravala / Agraval's molar
+ SAY NAME2 @500141
+ SAY UNIDENTIFIED_DESC @500142
+ SAY IDENTIFIED_DESC @500142
+ 
+COPY ~%MOD_FOLDER%/itm/g-bbi074.itm~ ~override~ 
+ SAY NAME1 @500147 // Kolczyk królowej aniołów / Angelic queen's earring
+ SAY NAME2 @500147 
+ SAY UNIDENTIFIED_DESC @500149
+ SAY IDENTIFIED_DESC @500149
+ 
+COPY ~%MOD_FOLDER%/itm/g-bbi077.itm~ ~override~ 
+ SAY NAME1 @500151 // Szataniec / Satan Folio
+ SAY NAME2 @500151 
+ SAY UNIDENTIFIED_DESC @500152
+ SAY IDENTIFIED_DESC @500152
+
+ COPY ~%MOD_FOLDER%/itm/g-bbi078.itm~ ~override~
+ SAY NAME1 @500153 // A Fated Coin
+ SAY NAME2 @500153
+ SAY UNIDENTIFIED_DESC @500154
+ SAY IDENTIFIED_DESC @500154
+ 
+ COPY ~%MOD_FOLDER%/itm/g-bbi079.itm~ ~override~
+ SAY NAME1 @500156 // Maska Agape
+ SAY NAME2 @500155
+ SAY UNIDENTIFIED_DESC @500157
+ SAY IDENTIFIED_DESC @500158
+ 
+  COPY ~%MOD_FOLDER%/itm/g-bbi080.itm~ ~override~
+ SAY NAME1 @500159 // Wanted notice
+ SAY NAME2 @500159
+ SAY UNIDENTIFIED_DESC @500160
+ SAY IDENTIFIED_DESC @500160
+ 
+  COPY ~%MOD_FOLDER%/itm/g-bbi081.itm~ ~override~
+ SAY NAME1 @500161 // Razorvine garrote
+ SAY NAME2 @500161
+ SAY UNIDENTIFIED_DESC @500162
+ SAY IDENTIFIED_DESC @500162
+ 
+  COPY ~%MOD_FOLDER%/itm/g-bbi082.itm~ ~override~
+ SAY NAME1 @500163 // Vagrants' Spit
+ SAY NAME2 @500163
+ SAY UNIDENTIFIED_DESC @500164
+ SAY IDENTIFIED_DESC @500164
+ 
+  COPY ~%MOD_FOLDER%/itm/g-bbi083.itm~ ~override~
+ SAY NAME1 @500165 // Cannibal's fork                      ggd
+ SAY NAME2 @500165
+ SAY UNIDENTIFIED_DESC @500166
+ SAY IDENTIFIED_DESC @500166
+ 
+  COPY ~%MOD_FOLDER%/itm/g-bbi084.itm~ ~override~
+ SAY NAME1 @500167 //Cannibal's knife
+ SAY NAME2 @500167
+ SAY UNIDENTIFIED_DESC @500168
+ SAY IDENTIFIED_DESC @500168
+ WRITE_LONG 0x1c 2500
+ 
+  COPY ~%MOD_FOLDER%/itm/g-bbi085.itm~ ~override~
+ SAY NAME1 @500169 // Meat mallet
+ SAY NAME2 @500169
+ SAY UNIDENTIFIED_DESC @500170
+ SAY IDENTIFIED_DESC @500170
+ 
+  COPY ~%MOD_FOLDER%/itm/g-bbi086.itm~ ~override~
+ SAY NAME1 @500171 // Cannibal's bib
+ SAY NAME2 @500171
+ SAY UNIDENTIFIED_DESC @500172
+ SAY IDENTIFIED_DESC @500172
+ 
+ COPY ~%MOD_FOLDER%/itm/g-bbi087.itm~ ~override~
+ SAY NAME1 @500173 // Kintyrean Memory
+ SAY NAME2 @500174
+ SAY UNIDENTIFIED_DESC @500175
+ SAY IDENTIFIED_DESC @500176
+ 
+  COPY ~%MOD_FOLDER%/itm/g-bbi076.itm~ ~override~
+ SAY NAME1 @500179 // Skin of devil's dread
+ SAY NAME2 @500179
+ SAY UNIDENTIFIED_DESC @500180
+ SAY IDENTIFIED_DESC @500180
+ 
+  COPY ~%MOD_FOLDER%/itm/g-bbi075.itm~ ~override~
+ SAY NAME1 @500177 // Axe of Real Wrath
+ SAY NAME2 @500177
+ SAY UNIDENTIFIED_DESC @500178
+ SAY IDENTIFIED_DESC @500178
+ 
+ COPY ~%MOD_FOLDER%/itm/g-bbi088.itm~ ~override~
+ SAY NAME1 @500181 // Mawu's Journal
+ SAY NAME2 @500181
+ SAY UNIDENTIFIED_DESC @500182
+ SAY IDENTIFIED_DESC @500182
+ 
+ COPY ~%MOD_FOLDER%/itm/g-bbi089.itm~ ~override~
+ SAY NAME1 @500183 // Decrepid Holy Symbol
+ SAY NAME2 @500185
+ SAY UNIDENTIFIED_DESC @500184
+ SAY IDENTIFIED_DESC @500186
+ 
+  COPY ~%MOD_FOLDER%/itm/g-bbi090.itm~ ~override~
+ SAY NAME1 @500187 // Madness Stone
+ SAY NAME2 @500187
+ SAY UNIDENTIFIED_DESC @500188
+ SAY IDENTIFIED_DESC @500188
+ 
+   COPY ~%MOD_FOLDER%/itm/g-bbi091.itm~ ~override~
+ SAY NAME1 @500197 // JADE SKULL
+ SAY NAME2 @500197
+ SAY UNIDENTIFIED_DESC @500198
+ SAY IDENTIFIED_DESC @500198
+ 
+   COPY ~%MOD_FOLDER%/itm/g-bbi092.itm~ ~override~
+ SAY NAME1 @500189 // BOLTS
+ SAY NAME2 @500189
+ SAY UNIDENTIFIED_DESC @500190
+ SAY IDENTIFIED_DESC @500190
+ 
+   COPY ~%MOD_FOLDER%/itm/g-bbi093.itm~ ~override~
+ SAY NAME1 @500191 // BOLTS
+ SAY NAME2 @500191
+ SAY UNIDENTIFIED_DESC @500192
+ SAY IDENTIFIED_DESC @500192
+ 
+   COPY ~%MOD_FOLDER%/itm/g-bbi094.itm~ ~override~
+ SAY NAME1 @500193 // BOLTS
+ SAY NAME2 @500193
+ SAY UNIDENTIFIED_DESC @500194
+ SAY IDENTIFIED_DESC @500194
+ 
+   COPY ~%MOD_FOLDER%/itm/g-bbi095.itm~ ~override~
+ SAY NAME1 @500195 // BOLTS
+ SAY NAME2 @500195
+ SAY UNIDENTIFIED_DESC @500196
+ SAY IDENTIFIED_DESC @500196
+ 
+    COPY ~%MOD_FOLDER%/itm/g-bbi096.itm~ ~override~
+ SAY NAME1 @500199 // CAN GHOSTS BLEED
+ SAY NAME2 @500199
+ SAY UNIDENTIFIED_DESC @500200
+ SAY IDENTIFIED_DESC @500200
+ 
+    COPY ~%MOD_FOLDER%/itm/g-bbi097.itm~ ~override~
+ SAY NAME1 @500201 // The Paths of Destiny
+ SAY NAME2 @500201
+ SAY UNIDENTIFIED_DESC @500202
+ SAY IDENTIFIED_DESC @500202
+ 
+     COPY ~%MOD_FOLDER%/itm/g-bbi098.itm~ ~override~
+ SAY NAME1 @500203 // Priestess note
+ SAY NAME2 @500203
+ SAY UNIDENTIFIED_DESC @500204
+ SAY IDENTIFIED_DESC @500204
+ 
+ COPY ~%MOD_FOLDER%/itm/g-bbi099.itm~ ~override~
+ SAY NAME1 @500205 // Greater Coin of Fate
+ SAY NAME2 @500206
+ SAY UNIDENTIFIED_DESC @500207
+ SAY IDENTIFIED_DESC @500208
+ 
+    COPY ~%MOD_FOLDER%/itm/g-bbi100.itm~ ~override~
+ SAY NAME1 @500298 // JADE SKULL
+ SAY NAME2 @500298
+ SAY UNIDENTIFIED_DESC @500299
+ SAY IDENTIFIED_DESC @500299
+ 
+ COPY ~%MOD_FOLDER%/itm/g-bbi101.itm~ ~override~
+ SAY NAME1 @500209 // Axe of Ragnarök
+ SAY NAME2 @500210
+ SAY UNIDENTIFIED_DESC @500211
+ SAY IDENTIFIED_DESC @500212
+ 
+  COPY ~%MOD_FOLDER%/itm/g-bbi102.itm~ ~override~
+ SAY NAME1 @500213 // Axe of ultimate despair
+ SAY NAME2 @500214
+ SAY UNIDENTIFIED_DESC @500215
+ SAY IDENTIFIED_DESC @500216
+ 
+   COPY ~%MOD_FOLDER%/itm/g-bbi103.itm~ ~override~
+ SAY NAME1 @500217 // Rotting axe of corruption
+ SAY NAME2 @500218
+ SAY UNIDENTIFIED_DESC @500219
+ SAY IDENTIFIED_DESC @500220
+ 
+ COPY ~%MOD_FOLDER%/itm/g-bbi104.itm~ ~override~
+ SAY NAME1 @500221 // Wind axe of Aaqa
+ SAY NAME2 @500222
+ SAY UNIDENTIFIED_DESC @500223
+ SAY IDENTIFIED_DESC @500224
+ 
+  COPY ~%MOD_FOLDER%/itm/g-bbi105.itm~ ~override~
+ SAY NAME1 @500225 // Cerebral parasite earring
+ SAY NAME2 @500225
+ SAY UNIDENTIFIED_DESC @500226
+ SAY IDENTIFIED_DESC @500226
+ 
+  COPY ~%MOD_FOLDER%/itm/g-bbi106.itm~ ~override~
+ SAY NAME1 @500227 // Clockroach earring
+ SAY NAME2 @500227
+ SAY UNIDENTIFIED_DESC @500228
+ SAY IDENTIFIED_DESC @500228
+ 
+   COPY ~%MOD_FOLDER%/itm/g-bbi107.itm~ ~override~
+ SAY NAME1 @500229 // Figurine of wondrous power: frog
+ SAY NAME2 @500230
+ SAY UNIDENTIFIED_DESC @500231
+ SAY IDENTIFIED_DESC @500232
+ 
+   COPY ~%MOD_FOLDER%/itm/g-bbi108.itm~ ~override~
+ SAY NAME1 @500233 // Serpent skin wallet
+ SAY NAME2 @500233
+ SAY UNIDENTIFIED_DESC @500234
+ SAY IDENTIFIED_DESC @500234
+ 
+    COPY ~%MOD_FOLDER%/itm/g-bbi109.itm~ ~override~
+ SAY NAME1 @500235 // Earring of a tormented soul
+ SAY NAME2 @500235
+ SAY UNIDENTIFIED_DESC @500236
+ SAY IDENTIFIED_DESC @500236
+ 
+     COPY ~%MOD_FOLDER%/itm/g-bbi110.itm~ ~override~
+ SAY NAME1 @500237 // Blood fly charm (troll)
+ SAY NAME2 @500237
+ SAY UNIDENTIFIED_DESC @500238
+ SAY IDENTIFIED_DESC @500238
+ 
+ COPY ~%MOD_FOLDER%/itm/g-bbi111.itm~ ~override~
+ SAY NAME1 @500239 // Blood fly charm (corn)
+ SAY NAME2 @500239
+ SAY UNIDENTIFIED_DESC @500240
+ SAY IDENTIFIED_DESC @500240
+ 
+  COPY ~%MOD_FOLDER%/itm/g-bbi112.itm~ ~override~
+ SAY NAME1 @500241 // Blood fly charm (gel)
+ SAY NAME2 @500241
+ SAY UNIDENTIFIED_DESC @500242
+ SAY IDENTIFIED_DESC @500242
+ 
+ COPY ~%MOD_FOLDER%/itm/g-bbi113.itm~ ~override~
+ SAY NAME1 @500243 //Mint earring
+ SAY NAME2 @500243
+ SAY UNIDENTIFIED_DESC @500244
+ SAY IDENTIFIED_DESC @500244
+ 
+  COPY ~%MOD_FOLDER%/itm/g-bbi114.itm~ ~override~
+ SAY NAME1 @500245 //loot
+ SAY NAME2 @500245
+ SAY UNIDENTIFIED_DESC @500246
+ SAY IDENTIFIED_DESC @500246
+ 
+  COPY ~%MOD_FOLDER%/itm/g-bbi115.itm~ ~override~
+ SAY NAME1 @500247 //JADE JAW
+ SAY NAME2 @500247
+ SAY UNIDENTIFIED_DESC @500248
+ SAY IDENTIFIED_DESC @500248
+ 
+  COPY ~%MOD_FOLDER%/itm/g-bbi116.itm~ ~override~
+ SAY NAME1 @500249 //clothes
+ SAY NAME2 @500249
+ SAY UNIDENTIFIED_DESC @500250
+ SAY IDENTIFIED_DESC @500250
+ 
+   COPY ~%MOD_FOLDER%/itm/g-bbi117.itm~ ~override~
+ SAY NAME1 @500252 //prorokini
+ SAY NAME2 @500252
+ SAY UNIDENTIFIED_DESC @500253
+ SAY IDENTIFIED_DESC @500253
+ 
+    COPY ~%MOD_FOLDER%/itm/g-bbi118.itm~ ~override~
+ SAY NAME1 @500256 //crone bone
+ SAY NAME2 @500256
+ SAY UNIDENTIFIED_DESC @500257
+ SAY IDENTIFIED_DESC @500257
+  
+ 
+ COPY ~%MOD_FOLDER%/itm/g-bbi119.itm~ ~override~
+ SAY NAME1 @500254 //bleakers
+ SAY NAME2 @500254
+ SAY UNIDENTIFIED_DESC @500255
+ SAY IDENTIFIED_DESC @500255
+ 
+  COPY ~%MOD_FOLDER%/itm/g-bbi120.itm~ ~override~
+ SAY NAME1 @500258 //bleakers
+ SAY NAME2 @500258
+ SAY UNIDENTIFIED_DESC @500259
+ SAY IDENTIFIED_DESC @500259
+ 
+  COPY ~%MOD_FOLDER%/itm/g-bbi121.itm~ ~override~
+ SAY NAME1 @500260 //Limbo
+ SAY NAME2 @500260
+ SAY UNIDENTIFIED_DESC @500261
+ SAY IDENTIFIED_DESC @500261
+ 
+COPY ~%MOD_FOLDER%/itm/g-bbi122.itm~ ~override~ SAY NAME1 @500262 SAY IDENTIFIED_DESC @500263 //Elemental Plane Kieran 
+SAY NAME2 @500262 SAY UNIDENTIFIED_DESC @500263
+
+COPY ~%MOD_FOLDER%/itm/g-bbi123.itm~ ~override~ SAY NAME1 @500268 SAY IDENTIFIED_DESC @500269 //FREE ACTION 
+SAY NAME2 @500268 SAY UNIDENTIFIED_DESC @500269
+
+COPY ~%MOD_FOLDER%/itm/g-bbi124.itm~ ~override~ SAY NAME1 @500268 SAY IDENTIFIED_DESC @500269 //A piece of string covered in saliva
+SAY NAME2 @500268 SAY UNIDENTIFIED_DESC @500269
+
+COPY ~%MOD_FOLDER%/itm/g-bbi125.itm~ ~override~ SAY NAME1 @500270 SAY IDENTIFIED_DESC @500271 //A note from the priestess of Istishia
+SAY NAME2 @500270 SAY UNIDENTIFIED_DESC @500271
+
+COPY ~%MOD_FOLDER%/itm/g-bbi126.itm~ ~override~ SAY NAME1 @500272 SAY IDENTIFIED_DESC @500275 //Vudran water
+SAY NAME2 @500274 SAY UNIDENTIFIED_DESC @500273
+ 
+COPY ~%MOD_FOLDER%/itm/g-bbi127.itm~ ~override~ SAY NAME1 @500276 SAY IDENTIFIED_DESC @500279 //Bone of Lies
+SAY NAME2 @500278 SAY UNIDENTIFIED_DESC @500277
+
+COPY ~%MOD_FOLDER%/itm/g-bbi128.itm~ ~override~ SAY NAME1 @500282 SAY IDENTIFIED_DESC @500283 //Devil's Bane
+SAY NAME2 @500280 SAY UNIDENTIFIED_DESC @500281
+
+COPY ~%MOD_FOLDER%/itm/g-bbi129.itm~ ~override~ SAY NAME1 @500284 SAY IDENTIFIED_DESC @500285 SAY NAME2 @500284 //Empyrean Diamond
+
+COPY ~%MOD_FOLDER%/itm/g-bbi130.itm~ ~override~ SAY NAME1 @500286 SAY IDENTIFIED_DESC @500287 SAY NAME2 @500286 //Rope
+
+COPY ~%MOD_FOLDER%/itm/g-bbi131.itm~ ~override~ SAY NAME1 @500288 SAY IDENTIFIED_DESC @500289 SAY NAME2 @500288 //Worse to Ask the Way than to Go Astray
+ 
+COPY ~%MOD_FOLDER%/itm/g-bbi132.itm~ ~override~ SAY NAME1 @500290 SAY IDENTIFIED_DESC @500291 SAY NAME2 @500290 //Manifesto?
+ 
+COPY ~%MOD_FOLDER%/itm/g-bbi133.itm~ ~override~ SAY NAME1 @500292 SAY IDENTIFIED_DESC @500293 SAY NAME2 @500292 //Ode to Entropy
+
+COPY ~%MOD_FOLDER%/itm/g-bbi134.itm~ ~override~ //Gemariel's UI Claws
+
+COPY ~%MOD_FOLDER%/itm/g-bbi135.itm~ ~override~ SAY NAME1 @500294 SAY IDENTIFIED_DESC @500295 SAY NAME2 @500294 //Haer'Dalis' head
+
+COPY ~%MOD_FOLDER%/itm/g-bbi136.itm~ ~override~ SAY NAME1 @500296 SAY IDENTIFIED_DESC @500297 SAY NAME2 @500296 //Scroll Case

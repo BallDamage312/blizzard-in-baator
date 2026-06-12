@@ -1,0 +1,27 @@
+IF
+    Global("g-fiendpanic","GLOBAL",1)
+THEN
+    RESPONSE #100
+        Enemy()
+        RunningAttack(LastAttackerOf(LastHelp))
+END
+
+IF
+    AttackedBy([PC],DEFAULT)
+THEN
+    RESPONSE #100
+		SetGlobal("g-fiendpanic","GLOBAL",1)
+        Help()
+        Enemy()
+        RunningAttack(LastAttackerOf(Myself))
+		
+END
+
+IF
+    Global("REGRET","GLOBAL",1)
+    Global("G-tegarreset","GLOBAL",1)
+THEN
+    RESPONSE #100
+        SetGlobal("G-tegarreset","GLOBAL",2)
+        DestroySelf()
+END

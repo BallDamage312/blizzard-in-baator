@@ -1,0 +1,38 @@
+// To Cania
+
+IF 
+	IsOverMe(Player1)
+    TimeLT(1) 
+	PartyHasItem("g-bbi045")
+	OR(2) 
+	Global("G-BBmain","GLOBAL",17) 	
+	GlobalGT("G-BBmain","GLOBAL",18)
+THEN
+	RESPONSE #100
+	Wait(2)
+	CreateCreatureObject("g-bb064",Protagonist,0,0,0)
+	ActionOverride("g-bb064",StartDialog("g-bbd064",Protagonist))
+	StartCutSceneMode()
+	CutSceneId(Player1)
+	PlaySound("AM_VORTX")
+    SinisterPoof("EF01TPRT",[2037.3223],1)
+    Wait(3)
+	EndCutSceneMode()
+END
+
+IF 
+	IsOverMe(Player1)
+	Global("G-nokey","GLOBAL",0) 
+    !PartyHasItem("g-bbi045")
+	OR(2) 
+	Global("G-BBmain","GLOBAL",17) 	
+	GlobalGT("G-BBmain","GLOBAL",18)
+THEN
+	RESPONSE #100
+	Wait(2)
+	SetGlobal("G-nokey","GLOBAL",1) 
+	CreateCreatureObject("g-bb064",Protagonist,0,0,0)
+	ActionOverride("g-bb064",StartDialog("g-bbd064",Protagonist))
+	
+	
+END

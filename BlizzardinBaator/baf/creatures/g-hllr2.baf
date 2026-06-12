@@ -1,0 +1,45 @@
+// Port TOUTS children
+ 
+IF
+    Die()
+	Global("G-BBPHoller_DiedX","GLOBAL",0)
+	AreaCheckObject("ARG-IN",Player1)
+THEN
+    RESPONSE #100
+		SetGlobalTimerRandom("G-BBPHoller_Died","GLOBAL",179,180) // tour was killed
+		SetGlobal("G-BBPHoller_DiedX","GLOBAL",1)
+END 
+ 
+IF
+  	!ActuallyInCombat()
+THEN
+    RESPONSE #33
+		ReturnToSavedPlace()
+		FaceObject([PC])
+		PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100234) 
+        WaitRandom(10,10)
+        Continue()
+	RESPONSE #33
+        ReturnToSavedPlace()
+		FaceObject([PC])
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100235) 
+		WaitRandom(10,10)
+        Continue()
+	RESPONSE #33
+        ReturnToSavedPlace()
+		FaceObject([PC])
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100236)
+		WaitRandom(10,10)
+        Continue()
+END
+
+IF
+    AttackedBy([ANYONE],DEFAULT)
+THEN
+    RESPONSE #100
+        Enemy()
+        //EscapeArea()
+END

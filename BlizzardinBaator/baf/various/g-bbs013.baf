@@ -1,0 +1,18 @@
+// portal to ysgard
+
+IF
+    HarmlessEntered("Nordom")
+THEN
+    RESPONSE #100
+        VerbalConstant("Nordom",NORDOM_PORTAL)
+        Continue()
+END
+
+IF
+	HarmlessEntered(Player1)
+	PartyHasItem("g-bbi078")
+THEN
+	RESPONSE #100
+		SetPortalCursor("G-TOP1",PORTAL_CURSOR_VISIBLE,TRUE)
+        SetPortalCursor("G-TOP1",PORTAL_ENABLED,TRUE)
+END

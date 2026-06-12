@@ -1,0 +1,120 @@
+IF
+    Global("g-ysgmov","GLOBAL",0)
+THEN
+    RESPONSE #100
+    StartMovie("g-ysg")
+    SetGlobal("g-ysgmov","GLOBAL",1)
+	Continue()
+END
+
+IF
+    !NearLocation([PC],2287,1402,15)
+THEN
+	RESPONSE #100
+		SetPortalCursor("G-TO00",PORTAL_CURSOR_VISIBLE,FALSE)
+        SetPortalCursor("G-TO00",PORTAL_ENABLED,FALSE)
+		Continue()
+END
+
+
+IF
+    !NearLocation([PC],1229,1611,15)
+THEN
+	RESPONSE #100
+		SetPortalCursor("G-TOP5",PORTAL_CURSOR_VISIBLE,FALSE)
+        SetPortalCursor("G-TOP5",PORTAL_ENABLED,FALSE)
+		Continue()
+END
+
+IF
+Global("G-postwarX","GLOBAL",0)
+OR(4)
+GlobalGT("G-ulfbrandwonambush","GLOBAL",0)
+GlobalGT("G-ulfbrandwonraid","GLOBAL",0)
+GlobalGT("G-ulfbrandwonagainstus","GLOBAL",0)
+THEN
+	RESPONSE #100
+SetGlobal("G-postwarX","GLOBAL",1)	
+SetGlobal("G-partyinYsgard","GLOBAL",1)	
+SetGlobal("g-party_alert","GLOBAL",0)
+
+
+CreateCreature("g-bb182",[1311.1968],0)
+ActionOverride("g-bb182",SetDialogue("g-bbDo01"))
+ActionOverride("g-bb182",ChangeAIScript("g-YSprt",DEFAULT) ActionOverride("g-bb182",ChangeAIScript("g-YSprt",OVERRIDE)
+CreateCreature("g-bb183",[1863.1641],0)
+ActionOverride("g-bb183",SetDialogue("g-bbDo01"))
+ActionOverride("g-bb183",ChangeAIScript("g-YSprt",DEFAULT)
+CreateCreature("g-bb184",[1900.1661],0)
+ActionOverride("g-bb184",SetDialogue("g-bbDo01"))
+ActionOverride("g-bb183",ChangeAIScript("g-YSprt",DEFAULT)
+CreateCreature("g-bb185",[1880.1691],0)
+ActionOverride("g-bb185",SetDialogue("g-bbDo01"))
+ActionOverride("g-bb183",ChangeAIScript("g-YSprt",DEFAULT)
+CreateCreature("g-bb186",[2142.1631],0)
+ActionOverride("g-bb186",SetDialogue("g-bbDo01"))
+ActionOverride("g-bb186",ChangeAIScript("g-YSprt",DEFAULT)
+CreateCreature("g-bb187",[2090.1682],0)
+ActionOverride("g-bb187",SetDialogue("g-bbDo01"))
+ActionOverride("g-bb187",ChangeAIScript("g-YSprt",DEFAULT)
+CreateCreature("g-bb227",[20190.1782],0)
+ActionOverride("g-bb227",SetDialogue("g-bbDo01"))
+ActionOverride("g-bb227",ChangeAIScript("g-YSprt",DEFAULT)
+CreateCreature("g-bb227",[1643.1937],0)
+ActionOverride("g-bb227",SetDialogue("g-bbDo01"))
+ActionOverride("g-bb227",ChangeAIScript("g-YSprt",DEFAULT)
+CreateCreature("g-bb227",[1700.1900],0)
+ActionOverride("g-bb227",SetDialogue("g-bbDo01"))
+ActionOverride("g-bb227",ChangeAIScript("g-YSprt",DEFAULT)
+CreateCreature("g-bb227",[1720.1950],0)
+ActionOverride("g-bb227",SetDialogue("g-bbDo01"))
+ActionOverride("g-bb227",ChangeAIScript("g-YSprt",DEFAULT)
+
+CreateCreature("g-bb227",[1052.1542],0)
+ActionOverride("g-bb227",SetDialogue("g-bbDo01"))
+ActionOverride("g-bb227",ChangeAIScript("g-YSprt",DEFAULT)
+CreateCreature("g-bb227",[959.1513],0)
+ActionOverride("g-bb227",SetDialogue("g-bbDo01"))
+ActionOverride("g-bb227",ChangeAIScript("g-YSprt",DEFAULT)
+CreateCreature("g-bb227",[1063.1639],0)
+ActionOverride("g-bb227",SetDialogue("g-bbDo01"))
+ActionOverride("g-bb227",ChangeAIScript("g-YSprt",DEFAULT)
+
+
+Wait(1)
+CreateCreature("g-bb207",[1234.1840],0)
+ActionOverride("g-bb207",ChangeAIScript("g-U-PRT",DEFAULT)
+
+
+END
+
+IF
+	
+	!Dead("g-bb150")
+	Global("G-sharikirarespawn","GLOBAL",0)
+	OR(4)
+GlobalGT("G-ulfbrandwonambush","GLOBAL",0)
+GlobalGT("G-ulfbrandwonraid","GLOBAL",0)
+GlobalGT("G-ulfbrandwonagainstus","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("G-sharikirarespawn","GLOBAL",1)
+		CreateCreatureObject("g-bb150","g-bb207",0,0,0)
+		ActionOverride("g-bb150",ChangeAIScript("bbn031",DEFAULT)
+END
+
+
+
+IF
+	Global("G-doomvsfate_check","GLOBAL",0)
+	OR(2)
+	Global("G-doomvsfate","GLOBAL",4)
+	Global("G-doomvsfate","GLOBAL",5)
+THEN
+	RESPONSE #100
+		SetGlobal("G-doomvsfate","GLOBAL",6)
+		SetGlobal("G-doomvsfate_check","GLOBAL",1)
+		DisplayString(Player1, @100196)
+		PlaySound("NAM157")	
+		
+END

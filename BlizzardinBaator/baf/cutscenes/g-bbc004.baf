@@ -1,0 +1,29 @@
+// 1st cut in residental area
+
+IF 
+    	HarmlessEntered(Player1)
+		Global("G-1st_Cutscene_Residental_Area","GLOBAL",0)
+THEN
+	RESPONSE #100
+	CutSceneId(Player1)
+	StartCutSceneMode()
+	MoveViewPoint([4789.1811],VERY_FAST)
+	ActionOverride("g-bb143",RunToPoint([4765.1918]))
+	ActionOverride("g-bb141",RunToPoint([4780.1785]))
+	ActionOverride("g-bb142",RunToPoint([4698.1828]))
+	ActionOverride("g-bb141",FloatMessage(Myself,48082))
+	Wait(5)
+	ActionOverride("g-bb143",StartDialog("g-bbd143",Player1))
+	Wait(3)
+	//SetGlobal("G-doomvsfate","GLOBAL",1)
+	SetGlobal("G-1st_Cutscene_Residental_Area","GLOBAL",1)
+	IncrementGlobal("G-fatedpower","GLOBAL",8)
+	ActionOverride("g-bb141",RunToPoint([4980.1080]))
+	ActionOverride("g-bb141",EscapeArea())
+	ActionOverride("g-bb142",EscapeArea())
+	
+	ActionOverride("g-bb143",RunToPoint([4848.3126]))
+	ActionOverride("g-bb143",EscapeArea())
+	EndCutSceneMode()
+
+END

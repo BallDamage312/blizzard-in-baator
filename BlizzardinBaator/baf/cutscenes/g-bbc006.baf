@@ -1,0 +1,31 @@
+// Cania
+
+IF 
+	HarmlessEntered(Player1)
+	OR(2) 
+	Global("G-BBmain","GLOBAL",17) 	
+	GlobalGT("G-BBmain","GLOBAL",18)
+THEN
+	RESPONSE #100
+	StartCutSceneMode()
+	CutSceneId(Player1)
+	PlaySound("AM_VORTX")
+    SinisterPoof("EF01TPRT",[1100.630],1)
+    Wait(3)
+	EndCutSceneMode()
+	SetGlobal("G-Dummy_Cania_Portal_2","GLOBAL",1)	
+END
+
+//IF
+	//HarmlessEntered(Player1)
+	//Global("G-BBfreezing","GLOBAL",1)
+//THEN
+	//RESPONSE #100
+	//StartCutSceneMode()
+	//CutSceneId(Player1)
+	//PlaySound("AM_VORTX")
+    //SinisterPoof("EF01TPRT",[1100.630],1)
+    //Wait(3)
+	//SetGlobal("Game_Over","GLOBAL",2)
+	//EndCutSceneMode()
+//END

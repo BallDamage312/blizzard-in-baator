@@ -1,0 +1,10 @@
+// Mawu
+
+IF
+    Global("G-Blast_From_Past","GLOBAL",1)
+    Global("G-przbtk","GLOBAL",0)
+THEN
+    RESPONSE #100
+    SetGlobal("G-przbtk","GLOBAL",1)
+END
+

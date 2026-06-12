@@ -1,0 +1,90 @@
+// Narthuul
+
+
+IF	
+	See(NearestEnemyOf(Myself))
+	Global("G-Narthuul_Kombat_N035","LOCALS",1)
+THEN
+    RESPONSE #100
+		ForceSpell([PC],WIZARD_HORROR)
+		IncrementGlobal("G-Narthuul_Kombat_N035","LOCALS",1)
+END
+
+IF	
+	See(NearestEnemyOf(Myself))
+	Global("G-Narthuul_Kombat_N035","LOCALS",2)
+THEN
+    RESPONSE #100
+		ForceSpell([PC],WIZARD_SEEKING_FLAMES)
+		IncrementGlobal("G-Narthuul_Kombat_N035","LOCALS",1)
+END
+
+IF	
+	See(NearestEnemyOf(Myself))
+	Global("G-Narthuul_Kombat_N035","LOCALS",3)
+THEN
+    RESPONSE #100
+		ForceSpell([PC],WIZARD_TONGUES_OF_FLAME)
+		IncrementGlobal("G-Narthuul_Kombat_N035","LOCALS",1)
+END
+
+IF	
+	See(NearestEnemyOf(Myself))
+	Global("G-Narthuul_Kombat_N035","LOCALS",4)
+THEN
+    RESPONSE #100
+		ForceSpell([PC],WIZARD_SEEKING_FLAMES)
+		IncrementGlobal("G-Narthuul_Kombat_N035","LOCALS",1)
+END
+
+IF	
+	See(NearestEnemyOf(Myself))
+	GlobalGT("G-Narthuul_Kombat_N035","LOCALS",4)
+THEN
+    RESPONSE #100
+		RunningAttack(NearestEnemyOf(Myself))
+END
+
+IF
+    AttackedBy([PC],DEFAULT)
+THEN
+    RESPONSE #100
+		FaceObject([PC])
+		Enemy()
+		SetGlobal("G-Narthuul_Kombat_N035","LOCALS",1)
+END
+
+IF
+	!ActuallyInCombat()
+	!See(NearestEnemyOf(Myself))
+THEN
+	RESPONSE #50
+		RandomWalk()
+	RESPONSE #50
+		NoAction() 
+END
+
+
+
+IF
+	Global("G-narthulyagnobrawl","GLOBAL",1) 
+THEN
+	RESPONSE #100
+		StartCutSceneMode()
+        CutSceneId("g-bb161")
+		RunningAttack("g-bb119")
+		SetAnimState(Myself,ANIM_MIMEATTACK1) 
+		ApplyDamage("g-bb119",55,SLASHING)
+		Wait(1)
+		SetAnimState(Myself,ANIM_MIMEATTACK1) 
+		ApplyDamage("g-bb119",65,SLASHING)
+		Wait(1)
+		SetAnimState(Myself,ANIM_MIMEATTACK1) 
+		ApplyDamage("g-bb119",74,SLASHING)
+		Wait(1)
+		SetGlobal("G-narthulyagnobrawl","GLOBAL",2)
+		Wait(4)
+		EndCutSceneMode()
+		ActionOverride(Player1,StartDialog("g-bbd161","g-bb161"))
+END
+

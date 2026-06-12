@@ -1,0 +1,62 @@
+// Elvra Syne
+
+IF	
+	Global("G-Elvra_Kombat_N038","LOCALS",1)
+	See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        ForceSpell(Myself,WIZARD_PAIN_MIRROR)
+		IncrementGlobal("G-Elvra_Kombat_N038","LOCALS",1)
+END
+
+IF
+	Global("G-Elvra_Kombat_N038","LOCALS",2)
+	See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        ForceSpell([PC],WIZARD_ADDERS_KISS)
+        Wait(1)
+		IncrementGlobal("G-Elvra_Kombat_N038","LOCALS",1)
+END
+
+IF
+	GlobalGT("G-Elvra_Kombat_N038","LOCALS",2)
+	See(NearestEnemyOf(Myself))
+   
+THEN
+    RESPONSE #100
+        RunningAttack(NearestEnemyOf(Myself))
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+    Enemy()
+	IncrementGlobal("G-Elvra_Kombat_N038","LOCALS",1)
+END
+
+IF
+    AttackedBy([PC],DEFAULT)
+THEN
+    RESPONSE #100
+		FaceObject([PC])
+		Enemy()
+		SetGlobal("G-Elvra_Kombat_N038","LOCALS",1)
+END
+
+IF
+    True()
+	!ActuallyInCombat()
+THEN
+    RESPONSE #100
+		PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100174) 
+        WaitRandom(5,10)
+        Continue()
+	RESPONSE #100
+        PlaySequence(ANIM_TALK)
+        FloatMessage(Myself,@100175) 
+		WaitRandom(10,10)
+        Continue()		
+	END

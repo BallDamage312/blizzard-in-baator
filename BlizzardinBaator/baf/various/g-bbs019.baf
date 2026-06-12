@@ -1,0 +1,25 @@
+// Black Abishai Styx O, Upper
+
+IF
+    See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+        RunningAttack(NearestEnemyOf(Myself))
+END
+
+IF
+    Help([0.0.ABISHAI_BLACK])
+THEN
+    RESPONSE #100
+        Enemy()
+        RunningAttack(LastAttackerOf(LastHelp))
+END
+
+IF
+    AttackedBy([PC],DEFAULT)
+THEN
+    RESPONSE #100
+        Help()
+        Enemy()
+        RunningAttack(LastAttackerOf(Myself))
+END

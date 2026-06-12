@@ -1,0 +1,61 @@
+// Yagnoloth
+
+IF	
+	See(NearestEnemyOf(Myself))
+	Global("G-Yagnoloth_Kombat_N023","LOCALS",1)
+THEN
+    RESPONSE #100
+		ForceSpell([PC],WIZARD_VAMPIRIC_TOUCH)
+		IncrementGlobal("G-Yagnoloth_Kombat_N023","LOCALS",1)
+END
+
+IF	
+	See(NearestEnemyOf(Myself))
+	Global("G-Yagnoloth_Kombat_N023","LOCALS",2)
+THEN
+    RESPONSE #100
+		ForceSpell([PC],WIZARD_SEEKING_FLAMES)
+		IncrementGlobal("G-Yagnoloth_Kombat_N023","LOCALS",1)
+END
+
+IF	
+	See(NearestEnemyOf(Myself))
+	Global("G-Yagnoloth_Kombat_N023","LOCALS",3)
+THEN
+    RESPONSE #100
+		ForceSpell([PC],WIZARD_VAMPIRIC_TOUCH)
+		IncrementGlobal("G-Yagnoloth_Kombat_N023","LOCALS",1)
+END
+
+IF	
+	See(NearestEnemyOf(Myself))
+	Global("G-Yagnoloth_Kombat_N023","LOCALS",4)
+THEN
+    RESPONSE #100
+		ForceSpell([PC],WIZARD_BALL_LIGHTNING)
+		IncrementGlobal("G-Yagnoloth_Kombat_N023","LOCALS",1)
+END
+
+IF	
+	See(NearestEnemyOf(Myself))
+	GlobalGT("G-Yagnoloth_Kombat_N023","LOCALS",4)
+THEN
+    RESPONSE #100
+		Attack(NearestEnemyOf(Myself))
+END
+
+IF
+    AttackedBy([PC],DEFAULT)
+THEN
+    RESPONSE #100
+		FaceObject([PC])
+		Enemy()
+		SetGlobal("G-Yagnoloth_Kombat_N023","LOCALS",1)
+END
+
+IF
+	True()
+THEN
+	RESPONSE #100
+		RandomWalk()
+END

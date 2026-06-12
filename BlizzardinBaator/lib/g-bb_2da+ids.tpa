@@ -1,0 +1,207 @@
+
+///////////////
+// ========= //
+// 2da & ids //
+// ========= //
+///////////////
+
+INCLUDE ~%MOD_FOLDER%/utils/functions.tph~
+
+// Maps
+
+APPEND ~MASTAREA.2da~ ~arg-00	value~
+APPEND ~MASTAREA.2da~ ~arg-01	value~
+APPEND ~MASTAREA.2da~ ~arg-02	value~
+APPEND ~MASTAREA.2da~ ~arg-03	value~
+APPEND ~MASTAREA.2da~ ~arg-ff	value~
+APPEND ~MASTAREA.2da~ ~arg-05	value~
+APPEND ~MASTAREA.2da~ ~arg-06	value~
+APPEND ~MASTAREA.2da~ ~arg-07	value~
+APPEND ~MASTAREA.2da~ ~arg-08	value~
+APPEND ~MASTAREA.2da~ ~arg-09	value~
+
+APPEND ~MASTAREA.2da~ ~arg-e1	value~
+APPEND ~MASTAREA.2da~ ~arg-e2	value~
+APPEND ~MASTAREA.2da~ ~arg-e3	value~
+APPEND ~MASTAREA.2da~ ~arg-e4	value~
+APPEND ~MASTAREA.2da~ ~arg-e5	value~
+APPEND ~MASTAREA.2da~ ~arg-e6	value~
+APPEND ~MASTAREA.2da~ ~arg-e7	value~
+
+APPEND ~MASTAREA.2da~ ~arg-in	value~
+APPEND ~MASTAREA.2da~ ~arg-ek	value~
+APPEND ~MASTAREA.2da~ ~arg-ep	value~
+
+APPEND ~MASTAREA.2da~ ~arg-r1	value~
+APPEND ~MASTAREA.2da~ ~arg-r2	value~
+APPEND ~MASTAREA.2da~ ~arg-r3	value~
+APPEND ~MASTAREA.2da~ ~arg-r4	value~
+
+APPEND ~MASTAREA.2da~ ~arg-p1	value~
+APPEND ~MASTAREA.2da~ ~arg-p2	value~
+APPEND ~MASTAREA.2da~ ~arg-p3	value~
+APPEND ~MASTAREA.2da~ ~arg-p4	value~
+APPEND ~MASTAREA.2da~ ~arg-p5	value~
+
+APPEND ~MASTAREA.2da~ ~arg-10	value~
+
+APPEND ~MASTAREA.2da~ ~arg-k1	value~
+APPEND ~MASTAREA.2da~ ~arg-k2	value~
+APPEND ~MASTAREA.2da~ ~arg-kk	value~
+
+APPEND ~MASTAREA.2da~ ~arg-b1	value~
+APPEND ~MASTAREA.2da~ ~arg-d1	value~
+
+APPEND ~MASTAREA.2da~ ~arg-97	value~
+APPEND ~MASTAREA.2da~ ~arg-99	value~
+
+APPEND ~WMAPLAY.2da~ ~arg-00 		0~
+APPEND ~WMAPLAY.2da~ ~arg-02 		1~
+APPEND ~WMAPLAY.2da~ ~arg-03 		1~
+APPEND ~WMAPLAY.2da~ ~arg-ff 		2~
+APPEND ~WMAPLAY.2da~ ~arg-05 		2~
+APPEND ~WMAPLAY.2da~ ~arg-06 		3~
+APPEND ~WMAPLAY.2da~ ~arg-07 		4~
+APPEND ~WMAPLAY.2da~ ~arg-08 		4~
+APPEND ~WMAPLAY.2da~ ~arg-e1 		4~
+APPEND ~WMAPLAY.2da~ ~arg-e3 		1~
+APPEND ~WMAPLAY.2da~ ~arg-e4 		2~
+APPEND ~WMAPLAY.2da~ ~arg-e5 		1~
+APPEND ~WMAPLAY.2da~ ~arg-e6 		1~
+APPEND ~WMAPLAY.2da~ ~arg-09 		5~
+APPEND ~WMAPLAY.2da~ ~arg-10        0~
+
+// Items
+
+OUTER_SET i014_name = RESOLVE_STR_REF (@500027) // GS
+APPEND ~ITEMDIAL.2da~ ~g-bbi014  4251  g-bbd063 %i014_name%~
+OUTER_SET i033_name = RESOLVE_STR_REF (@500067) // F. T. Journal
+APPEND ~ITEMDIAL.2da~ ~g-bbi033  4251  g-bbd124 %i033_name%~
+OUTER_SET i043_name = RESOLVE_STR_REF (@500085) // Unreg. Sens. Stone
+APPEND ~ITEMDIAL.2da~ ~g-bbi043  4251  g-bbd151 %i043_name%~
+OUTER_SET i056_name = RESOLVE_STR_REF (@500118) // Myster. Scroll
+APPEND ~ITEMDIAL.2da~ ~g-bbi056  4251  g-bbd160 %i056_name%~
+OUTER_SET i057_name = RESOLVE_STR_REF (@500120) // Call To Battle
+APPEND ~ITEMDIAL.2da~ ~g-bbi057  4251  g-bbd162 %i057_name%~
+OUTER_SET i058_name = RESOLVE_STR_REF (@500122) // Bizzare book
+APPEND ~ITEMDIAL.2da~ ~g-bbi058  4251  g-bbd163 %i058_name%~
+OUTER_SET i072_name = RESOLVE_STR_REF (@500139) // Map Blast from past
+APPEND ~ITEMDIAL.2da~ ~g-bbi072  4251  g-bbd172 %i072_name%~
+OUTER_SET i077_name = RESOLVE_STR_REF (@500151) // Satan Folio
+APPEND ~ITEMDIAL.2da~ ~g-bbi077  4251  g-bbd180 %i077_name%~
+OUTER_SET i024_name = RESOLVE_STR_REF (@500049) // Prod
+APPEND ~ITEMDIAL.2da~ ~g-bbi024  4251  g-bbd006 %i024_name%~
+OUTER_SET i088_name = RESOLVE_STR_REF (@500181) // Mawu's Journal
+APPEND ~ITEMDIAL.2da~ ~g-bbi088  4251  g-bbd213 %i088_name%~
+OUTER_SET i090_name = RESOLVE_STR_REF (@500187) // Forbiddeb. Sens. Stone
+APPEND ~ITEMDIAL.2da~ ~g-bbi090  4251  g-bbd222 %i090_name%~
+
+OUTER_SET i114_name = RESOLVE_STR_REF (@500245) // lootbox
+APPEND ~ITEMDIAL.2da~ ~g-bbi114  4251  g-bbd228 %i114_name%~
+OUTER_SET i118_name = RESOLVE_STR_REF (@500256) // crone bone
+APPEND ~ITEMDIAL.2da~ ~g-bbi118  4251  g-bbd235 %i118_name%~
+
+
+APPEND ~time.ids~ ~23 ELEVEN~
+
+// GODS
+
+LAF ADD_IDS_ENTRY STR_VAR idsFile = "diety.ids" identifier = "G-KIARANSALEE" RET value END
+ OUTER_SET "kiaransalee" = %value%
+LAF ADD_IDS_ENTRY STR_VAR idsFile = "diety.ids" identifier = "G-MOANDER" RET value END
+ OUTER_SET "moander" = %value%
+ LAF ADD_IDS_ENTRY STR_VAR idsFile = "diety.ids" identifier = "G-SET" RET value END
+ OUTER_SET "set" = %value%
+ LAF ADD_IDS_ENTRY STR_VAR idsFile = "diety.ids" identifier = "G-TYMORA" RET value END
+ OUTER_SET "tymora" = %value%
+ LAF ADD_IDS_ENTRY STR_VAR idsFile = "diety.ids" identifier = "G-BESHABA" RET value END
+ OUTER_SET "beshaba" = %value%
+ LAF ADD_IDS_ENTRY STR_VAR idsFile = "diety.ids" identifier = "G-EILISTRAEE" RET value END
+ OUTER_SET "eilistraee" = %value%
+  LAF ADD_IDS_ENTRY STR_VAR idsFile = "diety.ids" identifier = "G-ISIS" RET value END
+ OUTER_SET "isis" = %value%
+  LAF ADD_IDS_ENTRY STR_VAR idsFile = "diety.ids" identifier = "G-moander" RET value END
+ OUTER_SET "moander" = %value%
+//RACES and SPECIFICS
+
+//APPEND ~race.ids~ ~0~
+//APPEND ~specific.ids~ ~0~
+APPEND ~race.ids~ ~0 DUMMY_ZERO~ UNLESS ~^0~
+APPEND ~specific.ids~ ~0 DUMMY_ZERO~ UNLESS ~^0~
+
+// Teams
+
+LAF ADD_IDS_ENTRY STR_VAR idsFile = "team.ids" identifier = "G-THUGSCZ" RET value END
+ OUTER_SET "thugscz" = %value%
+LAF ADD_IDS_ENTRY STR_VAR idsFile = "team.ids" identifier = "G-KUOTOAT" RET value END
+ OUTER_SET "kuotoa" = %value%
+LAF ADD_IDS_ENTRY STR_VAR idsFile = "team.ids" identifier = "G-STYXO_1" RET value END
+ OUTER_SET "styxo_1" = %value%
+LAF ADD_IDS_ENTRY STR_VAR idsFile = "team.ids" identifier = "G-BRILL" RET value END
+ OUTER_SET "brill" = %value%
+LAF ADD_IDS_ENTRY STR_VAR idsFile = "team.ids" identifier = "G-PIMPEK" RET value END
+ OUTER_SET "pimpek" = %value%
+ LAF ADD_IDS_ENTRY STR_VAR idsFile = "team.ids" identifier = "G-FWRAID_DG" RET value END
+ OUTER_SET "fwraid_dg" = %value%
+ LAF ADD_IDS_ENTRY STR_VAR idsFile = "team.ids" identifier = "G-FWRAID_F" RET value END
+ OUTER_SET "fwraid_f" = %value%
+ LAF ADD_IDS_ENTRY STR_VAR idsFile = "team.ids" identifier = "G-orville" RET value END
+ OUTER_SET "orville" = %value%
+ LAF ADD_IDS_ENTRY STR_VAR idsFile = "team.ids" identifier = "G-RAID_DOOM" RET value END
+ OUTER_SET "raid_doom" = %value%
+LAF ADD_IDS_ENTRY STR_VAR idsFile = "team.ids" identifier = "G-RAID_FATED" RET value END
+ OUTER_SET "raid_fated" = %value% 
+//WRITE_BYTE 0x90 %"..."%
+
+// Races
+
+LAF ADD_IDS_ENTRY STR_VAR idsFile = "race.ids" identifier = "G-SPIDERLIKE" RET value END
+ OUTER_SET "spiderlike" = %value%
+//WRITE_BYTE 0x272 %...%
+
+// Specifics
+
+LAF ADD_IDS_ENTRY STR_VAR idsFile = "specific.ids" identifier = "G-DITCH_DWELLER" RET value END
+ OUTER_SET "ditch_dweller" = %value%
+LAF ADD_IDS_ENTRY STR_VAR idsFile = "specific.ids" identifier = "G-KOCACHRON" RET value END
+ OUTER_SET "kocachron" = %value%
+LAF ADD_IDS_ENTRY STR_VAR idsFile = "specific.ids" identifier = "G-KOCACHRON_R2" RET value END
+ OUTER_SET "kocachron_r2" = %value%
+LAF ADD_IDS_ENTRY STR_VAR idsFile = "specific.ids" identifier = "G-THUG_DITCH" RET value END
+ OUTER_SET "thug_ditch" = %value%
+LAF ADD_IDS_ENTRY STR_VAR idsFile = "specific.ids" identifier = "G-THUG_R2" RET value END
+ OUTER_SET "thug_r2" = %value%
+LAF ADD_IDS_ENTRY STR_VAR idsFile = "specific.ids" identifier = "G-YSGARD_1" RET value END
+ OUTER_SET "ysgard_1" = %value%
+LAF ADD_IDS_ENTRY STR_VAR idsFile = "specific.ids" identifier = "G-YSGARD_2" RET value END
+ OUTER_SET "ysgard_2" = %value%
+LAF ADD_IDS_ENTRY STR_VAR idsFile = "specific.ids" identifier = "G-RAID_DOOM" RET value END
+ OUTER_SET "raid_doom" = %value%
+LAF ADD_IDS_ENTRY STR_VAR idsFile = "specific.ids" identifier = "G-RAID_FATED" RET value END
+ OUTER_SET "raid_fated" = %value% 
+ 
+//WRITE_BYTE 0x274 %...%
+
+COPY_EXISTING ~race.ids~ ~override~
+    REPLACE_TEXTUALLY ~^0[ \t]+DUMMY_ZERO[%LNL%%MNL%%WNL%]+~ ~~
+BUT_ONLY
+
+COPY_EXISTING ~specific.ids~ ~override~
+    REPLACE_TEXTUALLY ~^0[ \t]+DUMMY_ZERO[%LNL%%MNL%%WNL%]+~ ~~
+BUT_ONLY
+
+/*
+OUTER_SET gemariel_race = RESOLVE_STR_REF(@400002)
+APPEND ~PSTCHAR.2DA~ ~Gemariel %gemariel_race%~
+OUTER_SET fury_race = RESOLVE_STR_REF(@400005)
+APPEND ~PSTCHAR.2DA~ ~Fury %fury_race%~
+*/
+
+//COPY_EXISTING ~songlist.2da~ ~override~
+//SET_2DA_ENTRY 0 2 3 ~g-bb01.MUS~
+
+
+
+
+
+

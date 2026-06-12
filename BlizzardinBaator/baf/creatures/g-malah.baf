@@ -1,0 +1,17 @@
+// Random, when attacked 
+
+IF
+    AttackedBy([ANYONE],DEFAULT)
+THEN
+    RESPONSE #100
+        Enemy()
+        Attack(NearestEnemyOf(Myself))
+   END
+IF
+    Global("g-malahaicut","GLOBAL",1)
+THEN
+    RESPONSE #100
+        Wait(1)
+        StartDialogueNoSet(Protagonist)
+   END
+

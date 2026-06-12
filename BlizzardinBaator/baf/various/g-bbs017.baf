@@ -1,0 +1,13 @@
+IF	
+	HarmlessEntered(Player1)
+	Global("g-bbmain","GLOBAL",4)
+	Global("g-seeprod_bbmain","GLOBAL",0)
+THEN
+	RESPONSE #100
+		ActionOverride("g-bb006",StartDialogueNoSet(Player1))
+		//ActionOverride("g-bb006",StartDialogue(Player1))
+
+		//StartDialog("g-bbd006",[PC])
+		//Dialog([PC])
+		SetGlobal("g-seeprod_bbmain","GLOBAL",1)
+END

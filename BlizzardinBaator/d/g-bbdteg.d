@@ -1,0 +1,8 @@
+BEGIN g-bbDteg
+CHAIN IF~Global("g-killedangryboys","GLOBAL",1)~THEN g-bbDteg g-bbDteg.start
+@0 /*Tegar'in seems less chatty that his usual self. He stares at you for a long time, as if expecting you to speak up first. */
+=@1 /*"Yes, we're back. You thought yourself able to get rid of us so easily?" he eventually hisses through clenched teeth. "'Tis fortunate that we have a deal to make here, or this could have gone very differently." He points to the red abishai beside him with his lizardlike snout. "Tergush'tekhn is the one you should be speaking to." */
+EXIT
+CHAIN IF~Global("g-killedangryboys","GLOBAL",0)~THEN g-bbDteg g-bbDteg.2
+@4 /*"Nameless one. Good to see you made it back and the planes did not CONSUME you. Yes..." He points to the red abishai beside him with his lizardlike snout. "Tergush'tekhn is the one you should be speaking to." */
+EXIT

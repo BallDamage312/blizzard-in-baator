@@ -1,0 +1,49 @@
+// Random, when attacked 
+
+
+/*
+IF
+    ActuallyInCombat()
+	See(Player1)
+THEN
+    RESPONSE #100
+		SetGlobal("g-skpprgone","GLOBAL",1)
+		ActionOverride("g-bb209",EscapeArea())
+		ActionOverride("g-bb210",EscapeArea())
+		TriggerActivation("G-skppr1",TRUE)
+        TriggerActivation("G-spkkr2",TRUE)
+END
+
+IF
+    Die()
+	Global("G-skpprdead","GLOBAL",0)
+	//AreaCheckObject("AR0400",Player1)
+THEN
+    RESPONSE #100
+		//SetGlobalTimerRandom("G-BBSholler_Died","GLOBAL",179,180) // mortal was killed
+		SetGlobal("g-skpprdead","GLOBAL",1)
+END
+
+*/
+
+IF
+    AttackedBy([ANYONE],DEFAULT)
+THEN
+    RESPONSE #100
+        Enemy()
+        Attack(NearestEnemyOf(Myself))
+   END
+/*
+IF
+    ActuallyInCombat()
+	See(Player1)
+THEN
+    RESPONSE #100
+		SetGlobal("g-skpprgone","GLOBAL",1)
+		ActionOverride("g-bb209",EscapeArea())
+		ActionOverride("g-bb210",EscapeArea())
+		TriggerActivation("G-skppr1",TRUE)
+        TriggerActivation("G-spkkr2",TRUE)
+END
+
+*/

@@ -1,0 +1,140 @@
+// ALLEGIANCE SET  
+
+
+IF
+	OnCreation()
+THEN
+	RESPONSE #100
+		SetGlobal("G-allegianceset","LOCALS",0)
+		SetGlobal("G-rgstWORKS","GLOBAL",1)
+END
+  
+IF
+		Global("G-allegianceset","LOCALS",0)
+		Global("g-raidallegiances","GLOBAL",3)
+THEN
+	RESPONSE #50
+		ChangeEnemyAlly(Myself,NEUTRAL)
+		Attack("g-bb201")
+		SetGlobal("G-allegianceset","LOCALS",1)
+		Continue()
+	RESPONSE #50
+		ChangeEnemyAlly(Myself,NEUTRAL)
+		Attack("g-bb150")
+		SetGlobal("G-allegianceset","LOCALS",1)
+		Continue()
+	END
+
+IF
+		Global("G-allegianceset","LOCALS",0)
+		Global("g-raidallegiances","GLOBAL",4)
+THEN
+	RESPONSE #30
+		Enemy()
+		Attack("g-bb201")
+		SetGlobal("G-allegianceset","LOCALS",1)
+		Continue()
+	RESPONSE #20
+		Enemy()
+		Attack("g-bb150")
+		SetGlobal("G-allegianceset","LOCALS",1)
+		Continue()
+	RESPONSE #50
+		Enemy()
+		Attack(Protagonist)
+		SetGlobal("G-allegianceset","LOCALS",1)
+		Continue()
+	END
+
+IF
+		Global("G-allegianceset","LOCALS",0)
+		Global("g-raidallegiances","GLOBAL",1)
+THEN
+	RESPONSE #35
+		Enemy()
+		Attack("g-bb201")
+		SetGlobal("G-allegianceset","LOCALS",1)
+		Continue()
+	RESPONSE #15
+		Enemy()
+		Attack("g-bb150")
+		SetGlobal("G-allegianceset","LOCALS",1)
+		Continue()
+	RESPONSE #50
+		Enemy()
+		Attack(Protagonist)
+		SetGlobal("G-allegianceset","LOCALS",1)
+		Continue()	
+END
+
+//continuous combat
+ 
+IF
+		Global("G-allegianceset","LOCALS",1)
+		Global("g-raidallegiances","GLOBAL",3)
+THEN
+	RESPONSE #100
+		Attack("g-bb201") END
+IF
+		Global("G-allegianceset","LOCALS",1)
+		Global("g-raidallegiances","GLOBAL",1)
+THEN
+	RESPONSE #100
+		Attack("g-bb201") END
+IF
+		Global("G-allegianceset","LOCALS",1)
+		Global("g-raidallegiances","GLOBAL",2)
+THEN
+	RESPONSE #100
+		Attack("g-bb201") END
+IF
+		Global("G-allegianceset","LOCALS",1)
+		Global("g-raidallegiances","GLOBAL",4)
+THEN
+	RESPONSE #100
+		Attack("g-bb201") END
+
+// Raid finish
+
+IF
+GlobalGT("G-ulfbrandwonagainstus","GLOBAL",0)
+THEN
+	RESPONSE #100
+EscapeArea()
+END
+
+IF
+GlobalGT("G-ulfbrandlostraid","GLOBAL",0)
+THEN
+	RESPONSE #100
+EscapeArea()
+END
+
+IF
+GlobalGT("G-ulfbrandwonraid","GLOBAL",0)
+THEN
+	RESPONSE #100
+EscapeArea()
+END
+
+IF
+	Global("g-raidendedwhendead","GLOBAL",1)
+
+THEN
+	RESPONSE #100
+		DestroySelf()
+END
+IF
+
+Global("g-raidberserk","GLOBAL",1) 
+Global("g-aggromode","LOCALS",0)
+THEN
+    RESPONSE #25
+	RunningAttack("g-bb201")
+	RESPONSE #25
+	RunningAttack("g-bb201")
+	RESPONSE #25
+	RunningAttack("g-bb201")
+	RESPONSE #25
+	RunningAttack("g-bb150")
+END

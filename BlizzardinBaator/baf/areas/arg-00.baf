@@ -1,0 +1,103 @@
+IF
+    True()
+THEN
+    RESPONSE #100
+        SetWorldmap("G-DITCH")
+	Continue()
+END
+
+IF
+    PartyRested()
+THEN
+    RESPONSE #100
+    SetGlobal("G-CroneUsedToday","GLOBAL",0)
+	Continue()
+END
+
+IF
+    Global("g-ditchmov","GLOBAL",0)
+THEN
+    RESPONSE #100
+    StartMovie("g-ditch")
+    SetGlobal("g-ditchmov","GLOBAL",1)
+	CreateCreature("g-bb040",[843.1967],NE)
+	Continue()
+END
+
+IF
+    !NearLocation([PC],3918,1408,15)
+THEN
+	RESPONSE #100
+	SetPortalCursor("G-TOP1",PORTAL_CURSOR_VISIBLE,FALSE)
+        SetPortalCursor("G-TOP1",PORTAL_ENABLED,FALSE)
+	Continue()
+END
+
+// PORTAL TRAP
+
+IF	
+    Global("g-intowater","GLOBAL",1)
+THEN
+    RESPONSE #100
+        PlaySoundNotRanged("NAM153")
+	SetGlobal("g-intowater","GLOBAL",2)
+	Continue()
+END
+
+// TOUT RESPAWB
+
+IF
+    //Dead("g-bb040")
+	//Global("G-BBBcaptain_DiedX","GLOBAL",0)
+THEN
+    RESPONSE #100
+		//SetGlobalTimer("G-BBBcaptain_Died","GLOBAL",180) // captain was killed
+		//SetGlobal("G-BBBcaptain_DiedX","GLOBAL",1)
+END
+
+IF
+    PartyRested()
+	Global("G-BBBcaptain_Died","GLOBAL",1)
+THEN
+    RESPONSE #100
+		SetGlobal("G-CroneUsedToday","GLOBAL",0)
+		//SetGlobalTimer("G-BBBcaptain_Died","GLOBAL",1)
+		Continue()
+END
+
+IF
+    Global("G-BBBcaptain_DiedX","GLOBAL",1)
+	GlobalTimerExpired("G-BBBcaptain_Died","GLOBAL")
+THEN
+    RESPONSE #100
+		SetGlobal("G-BBBcaptain_DiedX","GLOBAL",0)
+		CreateCreature("g-bb040",[843.1967],NE) // new captain hired
+		Continue()
+END
+
+// END OF RESPAWN
+
+// KUO TOA SHENANIGANS
+
+IF
+    Global("g-kuotoaBB1","GLOBAL",1)
+    Global("g-kuotoafriends00","GLOBAL",0)
+THEN
+	RESPONSE #100
+	    SetGlobal("g-kuotoafriends00","GLOBAL",1)
+		CreateCreature("g-bb204",[3703.1106],11)
+		CreateCreature("g-bb204",[4209.899],0)
+		CreateCreature("g-bb204",[4388.1425],9)
+		CreateCreature("g-bb204",[4685.1702],4)
+		Continue()
+END
+
+IF
+    GlobalGT("G-kuotoaquestline","GLOBAL",0)
+    Global("g-kuocreepswpaned","GLOBAL",0)
+THEN
+	RESPONSE #100
+	    SetGlobal("g-kuocreepswpaned","GLOBAL",1)
+		CreateCreature("g-bb015",[767.1291],4)
+		Continue()
+END

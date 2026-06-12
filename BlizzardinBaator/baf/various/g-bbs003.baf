@@ -1,0 +1,27 @@
+// Random, See PC - normal attack
+
+
+IF
+    OnCreation()
+THEN
+    RESPONSE #100
+        FaceObject([PC])
+        Continue()
+END
+
+IF
+    See([PC])
+THEN
+    RESPONSE #100
+        Enemy()
+        Attack(LastSeenBy(Myself))
+END
+
+
+IF
+    AttackedBy([PC],DEFAULT)
+THEN
+    RESPONSE #100
+        Enemy()
+        Attack(LastAttackerOf(Myself))
+END

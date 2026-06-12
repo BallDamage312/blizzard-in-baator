@@ -1,0 +1,18 @@
+// teleport triggering dialog (2) with item g-kbril
+
+IF
+    HarmlessEntered("Nordom")
+THEN
+    RESPONSE #100
+        VerbalConstant("Nordom",NORDOM_PORTAL)
+        Continue()
+END
+
+IF
+	HarmlessEntered(Player1)
+	Global("g-bbprodforgold","GLOBAL",0) 
+	Global("g-josephmet","GLOBAL",0)
+THEN
+	RESPONSE #100
+		ActionOverride("g-bb005",StartDialogueNoSet(Player1))
+END
