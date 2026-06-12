@@ -62,6 +62,18 @@ Szczegółowy przewodnik zawierający zadania, lokalizacje i znaczniki na mapie 
 
 Sztuczna inteligencja służyła wyłącznie jako pomoc przy programowaniu — głównie do modyfikowania elementów interfejsu użytkownika napisanych w języku Lua. Mod nie zawiera żadnej generatywnej sztucznej inteligencji w grafice, tekstach ani udźwiękowieniu. Wszystko, co widzisz, czytasz i słyszysz, zostało stworzone przez ludzi, biesów i diabelstwa.
 
+## Inne mody
+
+Blizzard in Baator powinien poprawnie działać z wszystkimi innymi modami do PSTEE.
+
+W przypadku modyfikacji Book of Torment, należy najpierw zainstalować BoT (zgodnie z instrukcjami), następnie Blizzard in Baator.
+
+Podobnie z Journal Portrait Conversation osobne (jako pierwszy).
+
+DialogTags powinno być instalowane na samym końcu wszystkich modów.
+
+Zadania z modyfikacji "Unfinished Business" częściowo pokrywają się z częsciami naszej modyfikacji, dlatego zaleca się wykonanie wszystkich zadań z "Unfinished Busisness" przed opuszczeniem Sigil.
+
 ## Prawa Autorskie
 
 Blizzard in Baator to nieoficjalna modyfikacja stworzona przez fanów do gry Planescape: Torment: Enhanced Edition. Jest to nieoficjalna treść fanowska, na którą zezwala Polityka dotycząca treści fanowskich. Nie została zatwierdzona ani poparta przez Wizards of the Coast, Beamdog ani żadnego z właścicieli praw. Część wykorzystanych materiałów stanowi własność Wizards of the Coast. ©Wizards of the Coast LLC.
