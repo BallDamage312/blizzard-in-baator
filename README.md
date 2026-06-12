@@ -2,9 +2,9 @@
 
 <img width="1920" height="353" alt="obraz" src="https://github.com/user-attachments/assets/cb0be4c0-071c-4a86-84ec-bac2d60442f7" />
 
-The Nameless One still holds some undiscovered secrets from his past that may yet return to change his nature. One such lead to his original identity will take him on a dangerous rescue mission to a whole new region of Sigil and into the depths of the Nine Hells, all the way to the 8th layer: The Frozen Wastes of Cania, and then... beyond? The danger is not only the inhospitable winter but also getting tangled between Lords of The Nine in their everlasting cold war - Blizzard in Baator.
+The past of the Nameless One still holds many undiscovered secrets. Some of them may even change his nature. The one regarding his original identity will take him on a dangerous rescue mission to a whole new region of Sigil and into the depths of the Nine Hells, all the way to the 8th layer – the Frozen Wastes of Cania – and then... beyond? The inhospitable winter is not the only peril there. Even more dangerous can be getting tangled between Lords of The Nine in their everlasting cold war – Blizzard in Baator.
 
-This mod (or, as we like to call it, an "expansion") features 25+ unique locations, over 100 NPCs, 100 items, and 20 original music tracks, alongside over 1,000 pages of dialogue and lore (written without AI). Currently available in both Polish and English, it delivers a non-linear story set in a previously unexplored district of the City of Doors, complete with custom cinematics and voice acting for select characters.
+The expansion features 25+ unique locations, over 100 NPCs, 100 items, and 20 original music tracks, alongside over 1,000 pages of dialogue and lore (written without the use of AI). Currently available in both Polish and English, it delivers a non-linear story set in a previously unexplored district of the City of Doors, complete with custom cinematics and voice acting for select characters.
 
 The mod officially launched on June 12, 2026, with the release of its first act.
 
@@ -60,7 +60,7 @@ A detailed walkthrough with quests, locations and map markers can be found <a hr
 
 ## A Note on AI
 
-AI was used only as a coding aid — mainly for modifying UI elements written in Lua. The mod contains no generative AI in its graphics, writing, or sound design. Everything you see, read, and hear was made by humans, fiends, aasimars and tieflings.
+AI was used only as a coding aid — mainly for modifying UI elements written in Lua. The mod contains no generative AI in its graphics, writing, or sound design. Everything you see, read, and hear was made by humans, fiends, angels, and everyone in between.
 
 ## Compatibility with other PST:EE mods
 

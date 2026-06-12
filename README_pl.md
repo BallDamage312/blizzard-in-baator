@@ -2,11 +2,13 @@
 
 <img width="1920" height="353" alt="obraz" src="https://github.com/user-attachments/assets/cb0be4c0-071c-4a86-84ec-bac2d60442f7" />
 
-Bezimienny wciąż skrywa pewne nieodkryte tajemnice ze swojej przeszłości, które mogą powrócić i zmienić jego naturę. Jedna z nich, dotycząca jego prawdziwej tożsamości, zaprowadzi go na niebezpieczną misję ratunkową do zupełnie nowego regionu Sigil i w głąb Dziewięciu Piekieł, aż do ósmej warstwy: Zamarzniętego Pustkowia Canii, a potem... jeszcze dalej? Niebezpieczeństwo stanowi nie tylko niegościnny klimat, ale także uwikłanie się w niekończącą się zimną wojnę między Władcami Dziewięciu Piekieł – Blizzard in Baator. 
+Przeszłość Bezimiennego wciąż skrywa wiele tajemnic, które czekają na odkrycie. Niektóre z nich mogą nawet zmienić jego naturę. Jedna, ta dotycząca prawdziwej tożsamości, wyśle go na niebezpieczną misję ratunkową do zupełnie nowego regionu Sigil i w głąb Dziewięciu Piekieł, aż do ich ósmej warstwy – Zamarzniętego Pustkowia Canii – a potem... jeszcze dalej? 
 
-Ten mod (lub, jak lubimy go nazywać, "rozszerzenie") zawiera ponad 25 unikalnych lokacji, ponad 100 nowych postaci, 100 przedmiotów i 20 oryginalnych utworów muzycznych, a także ponad 1000 stron dialogów i fabuły (napisanych bez udziału sztucznej inteligencji). Obecnie dostępny jest w języku polskim i angielskim. Oferuje nieliniową fabułę osadzoną w nieodkrytej dotąd dzielnicy Miasta Drzwi, wraz z niestandardowymi przerywnikami filmowymi i udźwiękowieniem wybranych postaci.
+Niegościnny klimat tego miejsca to nie jedyne zagrożenie. O wiele groźniejsze będzie uwikłanie się w niekończącą się zimną wojnę między Władcami Dziewięciu Piekieł – Blizzard in Baator. 
 
-Mod został oficjalnie wydany 12 czerwca 2026 r. wraz z premierą pierwszego aktu.
+Rozszerzenie zawiera ponad 25 unikalnych lokacji, ponad 100 nowych postaci, 100 przedmiotów i 20 oryginalnych utworów muzycznych, a także ponad 1000 stron dialogów i fabuły (napisanych bez udziału sztucznej inteligencji). Obecnie dostępny jest w języku polskim i angielskim. Oferuje nieliniową fabułę osadzoną w specjalnie przygotowanej dzielnicy Miasta Drzwi oraz niestandardowe przerywniki filmowe i udźwiękowienie wybranych postaci. 
+
+Mod został oficjalnie wydany 12 czerwca 2026 r. (premiera pierwszego aktu).
 
 Zapraszamy do dzielenia się opiniami i pomysłami pod adresem caniabelieveit@gmail.com lub do dyskusji z nami na <a href="https://discord.com/invite/c6Bn2Fc">Discordzie</a>.
 
@@ -17,7 +19,7 @@ Zapraszamy do dzielenia się opiniami i pomysłami pod adresem caniabelieveit@gm
 1. <a href="https://github.com/BallDamage312/blizzard-in-baator/archive/refs/heads/main.zip">Pobierz pakiet instalacyjny modyfikacji</a> i rozpakuj go do folderu z grą. Upewnij się, że rozpakowujesz go do głównego katalogu gry (jest to folder zawierający plik chitin.key).
 2. Uruchom plik Setup-BlizzardInBaator.exe.
 3. Wybierz preferowany język dialogów i dźwięku, a następnie zakończ proces instalacji.
-4. Rozpocznij nową grę lub kontynuuj grę z istniejącego pliku zapisu.
+4. Rozpocznij nową grę lub kontynuuj ją z istniejącego pliku zapisu.
 
 Po rozpakowaniu główny katalog gry powinien wyglądać następująco:
 
@@ -42,17 +44,17 @@ Obecnie niedostępny. Jeśli chcesz pomóc w realizacji tego wydania, skontaktuj
 
 ## Jak rozpocząć przygodę
 
-Po prawidłowym zainstalowaniu modyfikacji istnieją dwa sposoby rozpoczęcia gry:
+Po prawidłowym zainstalowaniu modyfikacji istnieją dwa sposoby rozpoczęcia rozszerzenia:
 
 **1. Kontynuuj grę od istniejącego zapisu (lub rozpocznij grę od początku)**
 
-Po pokonaniu Triasa w Klątwie  i powrocie do Sigil, w pobliżu obsydianowego obelisku przed Kostnicą pojawi się posłaniec, który cię poszukuje. Porozmawiaj z nim, aby rozpocząć nowe zadanie, które zaprowadzi cię do Kanału — i znacznie dalej.
+Po pokonaniu Triasa w Klątwie i powrocie do Sigil, w pobliżu obsydianowego obelisku przed Kostnicą pojawi się posłaniec, który cię poszukuje. Porozmawiaj z nim, aby rozpocząć nowe zadanie, które zaprowadzi cię do Kanału — i znacznie dalej.
 
 **2. Rozpocznij nową grę i skorzystaj ze skrótu**
 
-Na początku nowej gry poszukaj 'Zombie #000' stojącego w pobliżu kamienia, na którym się obudziłeś w Kostnicy. Rozmowa z nim może natychmiast podnieść poziom Bezimiennego i pozwala wybrać klasę, statystyki, charakter, frakcję, towarzyszy oraz przedmioty. Zombie wręczy ci również magiczny pergamin – użyj go, aby udać się do Ula, gdzie czeka na ciebie wspomniany posłaniec.
+Na początku nowej gry poszukaj 'Zombie #000' stojącego w pobliżu stołu, na którym się obudziłeś w Kostnicy. Rozmowa z nim może natychmiast podnieść poziom Bezimiennego i pozwala wybrać klasę, statystyki, charakter, frakcję, towarzyszy oraz przedmioty. Zombie wręczy ci również magiczny pergamin – użyj go, aby udać się do Ula, gdzie czeka na ciebie posłaniec, który cię poszukuje.
 
-Mod jest zbalansowany dla Bezimiennego na poziomie około 16.
+Mod jest przeznaczony dla Bezimiennego na około 16 poziomie.
 
 ## Solucja
 
@@ -64,7 +66,7 @@ Sztuczna inteligencja służyła wyłącznie jako pomoc przy programowaniu — g
 
 ## Kompatybilność z innymi modami
 
-#### Modyfikacja Blizzard in Baator współpracuje z poniższymi modami do Planescape: Torment Enhanced Edition, pod warunkiem zachowania odpowiedniej kolejności instalacji:
+#### Modyfikacja Blizzard in Baator współpracuje z poniższymi modami do Planescape: Torment Enhanced Edition – pod warunkiem zachowania odpowiedniej kolejności instalacji.
 Book of Torment – należy zainstalować w pierwszej kolejności (zgodnie z jego instrukcją), a dopiero potem zainstalować Blizzard in Baator.
 Journal Portrait Conversation – obowiązuje ta sama zasada, co przy Book of Torment (instalacja przed naszym modem).
 DialogTags – ta modyfikacja powinna zostać zainstalowana na samym końcu, czyli już po instalacji Blizzard in Baator.
@@ -78,5 +80,7 @@ Blizzard in Baator is an unofficial, fan-made modification for Planescape: Torme
 Pełna lista twórców zaangażowanych w projekt <a href=https://github.com/BallDamage312/blizzard-in-baator/blob/main/authors.md>authors.md.</a>
 
 Pełna lista atrybucji i użytych materiałów <a href=https://github.com/BallDamage312/blizzard-in-baator/blob/main/attributions.md>attributions.md.</a>
+
+
 
 
