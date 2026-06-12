@@ -43,10 +43,10 @@ Victor "Winnie Gotmilk" Gautschi: music composer and voiceover sourcing/sound de
 The soundtrack is available via
 
 Kamil Kwiatkowski (Wrathu)<br>
-wrathu.bandcamp.com<br>
-linktr.ee/wrathu<br>
+[wrathu.bandcamp.com](https://wrathu.bandcamp.com/)<br>
+[linktr.ee/wrathu](http://linktr.ee/wrathu)<br>
 Victor Gautschi (Winnie Gotmilk)<br>
-winniegotmilk.com<br>
+[winniegotmilk.com](https://winniegotmilk.com/)<br>
 
 "Friður" is from the album "Sólin" (2016) by Wrathu.
 
