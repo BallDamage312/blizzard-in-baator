@@ -62,6 +62,18 @@ A detailed walkthrough with quests, locations and map markers can be found <a hr
 
 AI was used only as a coding aid — mainly for modifying UI elements written in Lua. The mod contains no generative AI in its graphics, writing, or sound design. Everything you see, read, and hear was made by humans, fiends, and tieflings.
 
+## Other Mods
+
+Blizzard in Baator should work correctly with all other mods for PSTEE.
+
+In the case of the Book of Torment modification, you should install BoT first (following its instructions), then Blizzard in Baator.
+
+Similarly, with the Journal Portrait Conversation alone (as the first one).
+
+DialogTags should be installed at the very end of all mods.
+
+Unfinished Business has a minor overlap and it is reccommended to finish all its quests before leaving Sigil.
+
 ## Copyrights
 
 “Blizzard in Baator” is an unofficial, fan-made modification for Planescape: Torment. This is unofficial Fan Content permitted under the Fan Content Policy. Not approved/endorsed by Wizards of the Coast, Beamdog, or any rights holders. Portions of the materials used are property of Wizards of the Coast. ©Wizards of the Coast LLC.
