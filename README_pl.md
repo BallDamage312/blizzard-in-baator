@@ -58,25 +58,22 @@ Mod jest zbalansowany dla Bezimiennego na poziomie około 16.
 
 Szczegółowy przewodnik zawierający zadania, lokalizacje i znaczniki na mapie można znaleźć <a href="https://grimuar.pl/blizzardinbaator/poradnik/">tutaj</a>
 
-## Notka on AI
+## Notka o AI
 
-Sztuczna inteligencja służyła wyłącznie jako pomoc przy programowaniu — głównie do modyfikowania elementów interfejsu użytkownika napisanych w języku Lua. Mod nie zawiera żadnej generatywnej sztucznej inteligencji w grafice, tekstach ani udźwiękowieniu. Wszystko, co widzisz, czytasz i słyszysz, zostało stworzone przez ludzi, biesów i diabelstwa.
+Sztuczna inteligencja służyła wyłącznie jako pomoc przy programowaniu — głównie do modyfikowania elementów interfejsu użytkownika napisanych w języku Lua. Mod nie zawiera żadnej generatywnej AI w grafice, tekstach ani udźwiękowieniu. Wszystko, co widzisz, czytasz i słyszysz, zostało stworzone przez ludzi, biesy, anioły i wszystko pomiędzy.
 
-## Inne mody
+## Kompatybilność z innymi modami
 
-Blizzard in Baator powinien poprawnie działać z wszystkimi innymi modami do PSTEE.
+#### Modyfikacja Blizzard in Baator współpracuje z poniższymi modami do Planescape: Torment Enhanced Edition, pod warunkiem zachowania odpowiedniej kolejności instalacji:
+Book of Torment – należy zainstalować w pierwszej kolejności (zgodnie z jego instrukcją), a dopiero potem zainstalować Blizzard in Baator.
+Journal Portrait Conversation – obowiązuje ta sama zasada, co przy Book of Torment (instalacja przed naszym modem).
+DialogTags – ta modyfikacja powinna zostać zainstalowana na samym końcu, czyli już po instalacji Blizzard in Baator.
+Unfinished Business (UB) – zadania z obu modyfikacji częściowo się pokrywają. Aby uniknąć konfliktów i w pełni cieszyć się zawartością, stanowczo zaleca się ukończenie wszystkich zadań z Unfinished Business przed opuszczeniem Miasta Drzwi (Sigil).
 
-W przypadku modyfikacji Book of Torment, należy najpierw zainstalować BoT (zgodnie z instrukcjami), następnie Blizzard in Baator.
-
-Podobnie z Journal Portrait Conversation osobne (jako pierwszy).
-
-DialogTags powinno być instalowane na samym końcu wszystkich modów.
-
-Zadania z modyfikacji "Unfinished Business" częściowo pokrywają się z częsciami naszej modyfikacji, dlatego zaleca się wykonanie wszystkich zadań z "Unfinished Busisness" przed opuszczeniem Sigil.
 
 ## Prawa Autorskie
 
-Blizzard in Baator to nieoficjalna modyfikacja stworzona przez fanów do gry Planescape: Torment: Enhanced Edition. Jest to nieoficjalna treść fanowska, na którą zezwala Polityka dotycząca treści fanowskich. Nie została zatwierdzona ani poparta przez Wizards of the Coast, Beamdog ani żadnego z właścicieli praw. Część wykorzystanych materiałów stanowi własność Wizards of the Coast. ©Wizards of the Coast LLC.
+Blizzard in Baator is an unofficial, fan-made modification for Planescape: Torment. This is unofficial Fan Content permitted under the Fan Content Policy. Not approved/endorsed by Wizards of the Coast, Beamdog, or any rights holders. Portions of the materials used are property of Wizards of the Coast. ©Wizards of the Coast LLC.
 
 Pełna lista twórców zaangażowanych w projekt <a href=https://github.com/BallDamage312/blizzard-in-baator/blob/main/authors.md>authors.md.</a>
 
