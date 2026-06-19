@@ -38,9 +38,9 @@ Follow the same instructions as for Windows, except run the setup-blizzardinbaat
 
 <b>Android</b>
 
-It is possible, though through a complicated process discovered by u/winglessbuzzard on reddit
+It is apparently possible, though through a complicated process discovered by u/winglessbuzzard on reddit
 
-https://chatgpt.com/s/t_6a3216297224819191cacdb7aac8f539
+https://www.reddit.com/r/planescape/comments/1tspfro/comment/os1po9v/?context=1&screen_view_count=2
 
 https://drive.google.com/file/d/1vOZGEuYOmWaVVQHgzcTqnN5os7MeFKdn/view?usp=sharing
 
