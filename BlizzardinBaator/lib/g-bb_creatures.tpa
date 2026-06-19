@@ -34,6 +34,14 @@ COPY_EXISTING  // Tegarrin
 	WRITE_ASCII DEATHVAR ~Tegarin~ #32
 	WRITE_ASCII 0x280 ~Tegarin~ #32
 	 WRITE_ASCII 0x34 ~JRABSKN~
+	 
+COPY ~%MOD_FOLDER%/cre/g-bbteg.cre~ ~override~ /*Tegarrin 2*/
+ SAY NAME1 @400180 SAY NAME2 @400180
+ WRITE_LONG 0x96 BIT4 + BIT5 + BIT6 // Atrtributes/Flags
+ WRITE_ASCII SCRIPT_OVERRIDE ~g-bbteg~ #8
+ WRITE_ASCII DIALOG ~DTEGARIN~ #8
+ WRITE_ASCII DEATHVAR ~g-bbteg~ #32
+ WRITE_ASCII 0x34 ~0402tegr~
 
 COPY_EXISTING  // Aethelgrin
  ~AETHEL.cre~ ~override/AETHEL.cre~

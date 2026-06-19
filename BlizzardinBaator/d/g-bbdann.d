@@ -84,7 +84,7 @@ CHAIN IF~~THEN g-bbDANN g-bbDANN.C2
 END
 IF~~THEN REPLY @83 /*"That's settled then. Let's go." */ DO~DestroySelf() SetGlobal("g-fakeanndialogue","GLOBAL",0)~ EXIT
 CHAIN IF~Global("g-fakeanndialogue","GLOBAL",2)~THEN g-bbDANN g-bbDANN.start2
-@86 /*As you stand in the shadow of the gigantic piece of metal, Anna steps up to the edge and reaches out to touch its rough surface. */
+@86 /*As you stand in the shadow of the gigantic piece of metal, Annah steps up to the edge and reaches out to touch its rough surface. */
 =@87 /*"I've never seen it from this close. The window of me childhood bedroom looked out onto it. Well, I say window, but I mean the wee hole in the wall of that crumblin' attic where I slept." Her hand pulls back and she sighs heavily. */
 =@88 /*"Me pals and I used to scare each other with stories 'bout where it came from, I mind. I said it was the sword o'some giant knight from Acheron, and Naiwa had this daft story that..." The tiefling falls silent, and it seems her monologue has ended. */
 =@89 /*"Naiwa said it was a bit o'Sigil itself, and if any berk pulled it out, the whole city'd fall apart." Silence settles on the pier again. "Naiwa's gone. None of them are 'ere anymore. Let's get outta 'ere, aye." */

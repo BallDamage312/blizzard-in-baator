@@ -1,5 +1,5 @@
 IF
-    HarmlessEntered(Player1)
+    HarmlessEntered([PC])
 	Global("G-squerriccutscenen","GLOBAL",0)
 THEN
     RESPONSE #100

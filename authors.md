@@ -98,6 +98,7 @@ especially:<br>
 Argent77 - For consultation and help with bestiary, quest logic and invaluable help across all fields of expertise. This project would not be the same without you.<br>
 CamDawg <br>
 Jastey<br>
+Lava Del'Vortel <br>
 
 ### Additional Thanks to:
 
@@ -108,7 +109,6 @@ Spellhold Studios<br>
 Children of Bhaal<br>
 Zenblack<br>
 dark0dave<br>
-Lavalamp<br>
 Udiknedormin<br>
 Kamila Regel<br>
 Brian Crenshaw<br>

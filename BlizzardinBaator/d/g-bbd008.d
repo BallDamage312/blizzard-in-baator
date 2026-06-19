@@ -11,7 +11,7 @@ CHAIN IF~CheckSpellState(Protagonist,"G-TNO_INTO_GLABREZU") ~THEN g-bbD008 g-bbD
 @8 /*"Pike oooaf, demon. Go to the Oooarsman, where you're welcome. */
 EXIT
 CHAIN IF~NumTimesTalkedTo(0) Global("G-brill_attention","GLOBAL",0)~THEN g-bbD008 g-bbD008.start
-@14 /*Behind the counter of the Rivergate tavern stands a tall, broad, toad-like humanoid. His skin is a wet, deep swamp green, covered with many colorful warts. He is busy wiping a bronze beer mug with a greasy rag. He doesn't seem to be paying you any attention. There is a dirty wooden plaque on the bar. */
+@14 /*Behind the counter of the Rivergate tavern stands a tall, broad, toad-like humanoid. His skin is a wet, deep swamp green, covered with many colorful warts. He is busy wiping a bronze beer mug with a greasy rag. He does not seem to be paying you any attention. There is a dirty wooden plaque on the bar. */
 ==DDakkon IF ~InParty("Dakkon") !StateCheck("Dakkon",CD_STATE_NOTVALID) NearbyDialog("DDakkon")~ THEN @15 /*"I urge you not to interact with this one... The slaadi do not *know* themselves and only bring destruction to the multiverse." */
 END
 IF~~THEN REPLY @17 /*"Hey, can I get some service?" */ DO~~ + g-bbD008.servf
@@ -24,7 +24,7 @@ IF~!CheckStatGT(Protagonist,14,INT) !InParty("Dakkon")~THEN REPLY @23 /*"Hey, yo
 IF~!CheckStatGT(Protagonist,14,INT) !InParty("Dakkon")~THEN REPLY @24 /*"Hey, you're a hydroloth, aren't you?" */ DO~SetGlobal("G-brill_attention","GLOBAL",1) IncrementGlobal("G-brill_approve","GLOBAL",-2)~ + g-bbD008.bullywug
 IF~GlobalLT("LAW","GLOBAL",-5)~THEN REPLY @25 /*You feel the essence of chaos emanating from the creature. You know it is a slaad. "Brother in chaos, nice to meet you." */ DO~SetGlobal("G-brill_attention","GLOBAL",1) IncrementGlobal("G-brill_approve","GLOBAL",2)~ + g-bbD008.chaos
 CHAIN IF~NumTimesTalkedToGT(0) Global("G-brill_attention","GLOBAL",0)~THEN g-bbD008 g-bbD008.startgt
-@27 /*Behind the counter of the Rivergate tavern, just as before, stands a tall, broad, toad-like humanoid. His skin is a wet, deep swamp green, covered with many colorful warts. He is busy wiping another beer mug. He doesn't seem to be paying you any attention. There is a dirty wooden plaque on the bar. */
+@27 /*Behind the counter of the Rivergate tavern, just as before, stands a tall, broad, toad-like humanoid. His skin is a wet, deep swamp green, covered with many colorful warts. He is busy wiping another beer mug. He does not seem to be paying you any attention. There is a dirty wooden plaque on the bar. */
 ==DDakkon IF ~InParty("Dakkon") !StateCheck("Dakkon",CD_STATE_NOTVALID) NearbyDialog("DDakkon")~ THEN @28 /*"I urge you not to interact with this one... The slaadi do not *know* themselves and only bring destruction to the multiverse." */
 END
 IF~~THEN REPLY @30 /*"Hey, can I get some service?" */ DO~~ + g-bbD008.servf
@@ -53,7 +53,7 @@ IF~~THEN REPLY @52 /*"I have some questions." */ DO~~ + g-bbD008.q
 IF~Global("G-grillrooms","GLOBAL",1)~THEN REPLY @54 /*"I would like to rest on your couch."  */ DO~StartStore("g-bb#007",LastTalkedToBy()) ~ EXIT
 IF~~THEN REPLY @55 /*Leave the counter. */ DO~~ EXIT
 CHAIN IF~~THEN g-bbD008 g-bbD008.servf
-@57 /*He doesn't answer. Instead, he bumps his elbow against a wooden plaque on the counter. */
+@57 /*He does not answer. Instead, he bumps his elbow against a wooden plaque on the counter. */
 END
 IF~~THEN REPLY @59 /*Inspect the wooden plaque on the counter. */ DO~~ + g-bbD008.plaque
 IF~OR(2) CheckStatGT(Protagonist,14,INT) InParty("Dakkon")~THEN REPLY @60 /*Truth: "Hey, you're a slaad, aren't you?" */ DO~SetGlobal("G-brill_attention","GLOBAL",1) IncrementGlobal("G-brill_approve","GLOBAL",1)~ + g-bbD008.slaad

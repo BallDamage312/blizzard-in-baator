@@ -78,6 +78,7 @@ END
 // BARKEEP RESETS
 
 IF
+	Global("G-rivergatebarkeepreset","GLOBAL",0)
 	OR(2)
 	Died("g-bb008")
 	Dead("g-bb008")
@@ -88,6 +89,7 @@ THEN
 END
 
 IF
+    Global("G-oarsmanbarkeepreset","GLOBAL",0)	
 	OR(2)
 	Died("g-bb059")
 	Dead("g-bb059")
@@ -98,6 +100,7 @@ THEN
 END
 
 IF
+	Global("G-ratbarkeepreset","GLOBAL",0)	
 	OR(2)
 	Died("g-bb086")
 	Dead("g-bb086")

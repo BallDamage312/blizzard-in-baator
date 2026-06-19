@@ -16,7 +16,7 @@ Zapraszamy do dzielenia się opiniami i pomysłami pod adresem caniabelieveit@gm
 
 <b>Windows</b>
 
-1. <a href="https://github.com/BallDamage312/blizzard-in-baator/archive/refs/heads/main.zip">Pobierz pakiet instalacyjny modyfikacji</a> i rozpakuj go do folderu z grą. Upewnij się, że rozpakowujesz go do głównego katalogu gry (jest to folder zawierający plik chitin.key).
+1. <a href="https://github.com/BallDamage312/blizzard-in-baator/releases/latest">Pobierz pakiet instalacyjny modyfikacji</a> i rozpakuj go do folderu z grą. Upewnij się, że rozpakowujesz go do głównego katalogu gry (jest to folder zawierający plik chitin.key).
 2. Uruchom plik Setup-BlizzardInBaator.exe.
 3. Wybierz preferowany język dialogów i dźwięku, a następnie zakończ proces instalacji.
 4. Rozpocznij nową grę lub kontynuuj ją z istniejącego pliku zapisu.
@@ -40,7 +40,13 @@ Postępuj zgodnie z instrukcjami dla systemu Windows, z tą różnicą, że zami
 
 <b>Android</b>
 
-Obecnie niedostępny. Jeśli chcesz pomóc w realizacji tego wydania, skontaktuj się z nami.
+Jest to możliwe, choć jest to skomplikowanegy proces, który odkrył użytkownik u/winglessbuzzard na Reddicie
+
+https://chatgpt.com/s/t_6a3216297224819191cacdb7aac8f539
+
+https://drive.google.com/file/d/1vOZGEuYOmWaVVQHgzcTqnN5os7MeFKdn/view?usp=sharing
+Nie gwarantujemy, że ten proces zakończy się sukcesem. Być może w przyszłości pojawi się bardziej przyjazna wersja.
+
 
 ## Jak rozpocząć przygodę
 

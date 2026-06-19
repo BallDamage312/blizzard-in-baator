@@ -13,7 +13,7 @@
 @14=~The dwarf bows slightly. "You're here again, traveler. Is there something you need?"~
 @15=~"Something's changed... The Sensate badge? Gone? Could it be that the prospect of my sauna finally convinced you to leave them? In such case, a warm welcome to you!"~
 @17=~"Yes, I've left their faction, but I only have a few questions today."~
-@18=~"Yes, I left their faction, can I rest here?"~
+@18=~"Yes, I've left their faction. Can I rest here?"~
 @19=~"Exactly. I'd like to finally book that sauna session."~
 @20=~Leave.~
 @22=~The dwarf bows slightly. "You're here again, traveler. Is there something you need?"~
@@ -52,7 +52,7 @@
 @66=~"What can you tell me about Ulfbrand?"~
 @67=~"I have some questions."~
 @68=~"Never mind, goodbye."~
-@70=~"These vials contain aromatic oils. They enhance the overall experience, relax, and help clear the respiratory tract."~
+@70=~"These vials contain aromatic oils. They enhance the overall experience, aid in relaxation, and help clear the respiratory tract."~
 @72=~"What else is on your tray?"~
 @73=~"I have some questions."~
 @74=~"Never mind, goodbye."~
@@ -69,7 +69,7 @@
 @91=~"What else is on your tray?"~
 @92=~"I have some questions."~
 @93=~"Never mind, goodbye."~
-@95=~"These birch whisks are for lashing the body." She makes a sharp movement with her hand. "They improve circulation and blood flow to the hit areas. The pain cleanses the body, which makes you feel better. I hope you're not afraid of a little pain? Although, looking at you... I highly doubt it."~
+@95=~"These birch whisks are for lashing the body." He makes a sharp movement with his hand. "They improve circulation and blood flow to the hit areas. The pain cleanses the body, which makes you feel better. I hope you're not afraid of a little pain? Although, looking at you... I highly doubt it."~
 @97=~"What else is on your tray?"~
 @98=~"I have some questions."~
 @99=~"Never mind, goodbye."~
@@ -125,7 +125,7 @@
 @175=~"They call him the Soul Forger or the Dwarffather. He is a good and wise god, specializing in blacksmithing, and his symbols are the hammer and the anvil. My clan may have turned to saunas, but that doesn't change the fact that Moradin remains our chief deity. Even here in Ysgard, where Odin's pantheon reigns supreme, our identity is closely tied to the Morndinsamman." The dwarf falls silent and ponders for a moment, then asks, "And you? Do you have a god of your own?"~
 @177=~"Gods seem to have forsaken me."~
 @178=~"No, I don't."~
-@179=~"I do in fact... The Lady of the Dead, Kiaransalee."~
+@179=~"I do, in fact... The Lady of the Dead, Kiaransalee."~
 @180=~"I have some questions."~
 @181=~Leave.~
 @183=~"Oh, right. Well..." The man looks gloomy. "Maybe you'll find it someday, maybe not. Faith isn't the key to happiness for everyone. I wish you well either way."~

@@ -1,4 +1,4 @@
-@1=~As you travel alongside Ulfbrand and his forces toward a towering corridor behind the high walls of the Great Foundry, you cannot help but wonder about two things. First, just how large a force did the Fated Factor manage to assemble on such short notice? You can only hope the Doomguard are prepared at the site of their ambush. The other thing that keeps drawing your attention is the notion of... consequence..~
+@1=~As you travel alongside Ulfbrand and his forces toward a towering corridor behind the high walls of the Great Foundry, you cannot help but wonder about two things. First, just how large a force did the Fated Factor manage to assemble on such short notice? You can only hope the Doomguard are prepared at the site of their ambush. The other thing that keeps drawing your attention is the notion of... consequence.~
 @2=~Your choices put this in motion. Could the Doomguard have hidden away? Could Ulfbrand have gotten distracted? Could Rowan Darkwood have changed his mind about this? Could Haer'Dalis and his troop have sneaked out of the City of Doors unseen, to some quaint Prime Material world to have more adventures of their own? All of these peaceful options are now off the table. This is going to get violent, and you helped it reach this point.~
 @3=~How does it make you feel?~
 @5=~Very good. The carnage will be wonderful.~
@@ -587,26 +587,17 @@
 @716=~The battlefield eventually empties, leaving you alone in this scene of destruction, devastation and desolation.~
 @717=~The battlefield eventually empties, leaving you alone in this scene of destruction, devastation and desolation.~
 @719=~"It's time to go..."~
-@721=~A clone of Ulfbrand's statement from dialogue 156 - sometimes one fires up, sometimes the other, no one knows why :)~
-@722=~There are only a handful of you left. The Fated have gone away or died, and the Doomguard are keeping a safe distance. Ulfbrand, covered in post-battle gore, stands in front of you, tired, breathing heavily, but his spirit not yet broken.~
-@723=~"Well done, little one. You had me fooled, well done. I shan't stand down, though."~
-@725=~"There is no reason to battle. This is no place to die."~
-@726=~"Come on then, let's finish this.~
-@727=~"It's over, Ulfbrand."~
-@728=~A clone of Ulfbrand's statement from dialogue 156 - sometimes one fires up, sometimes the other, no one knows why :)~
-@729=~"You gotta die someplace. Permanently. This is not a bad place." He speaks calmly, looking around and then, all of a sudden, lunges towards you with his bare hands clenched in deadly fists. ~ [g-15601]
-@731=~Defend yourself.~
-@735=~As the battle between the Fated and Doomguard reaches its fever pitch: Ysgardian berserkers clash with the last remaining entropy beasts, rust clouds chokes the skies, and powerful magic rips open cracks in the planes. The very fabric of Sigil begins to strain. Reality flickers. Portals destabilize. Spells begin to fail or double back. Both sides ignore the warning signs, too consumed by the momentum to notice what their war is doing. But you do. You step back, retreat from the fighting, feeling that something is about to happen. You do not know what tips the balance. There is so much happening all at once. But someone, somewhere... takes a step too far.~
-@736=~The Greater Coin of Fate falls onto the bloodstained square with a soft clink and crumbles to dust. ~ [KNOCK05]
-@737=~Then:
+@722=~As the battle between the Fated and Doomguard reaches its fever pitch: Ysgardian berserkers clash with the last remaining entropy beasts, rust clouds chokes the skies, and powerful magic rips open cracks in the planes. The very fabric of Sigil begins to strain. Reality flickers. Portals destabilize. Spells begin to fail or double back. Both sides ignore the warning signs, too consumed by the momentum to notice what their war is doing. But you do. You step back, retreat from the fighting, feeling that something is about to happen. You do not know what tips the balance. There is so much happening all at once. But someone, somewhere... takes a step too far.~
+@723=~The Greater Coin of Fate falls onto the bloodstained square with a soft clink and crumbles to dust. ~ [KNOCK05]
+@724=~Then:
 
 Shadows lengthen. All sound ceases. ~ [AM_SM028]
-@738=~She arrives.~
-@739=~
+@725=~She arrives.~
+@726=~
 She does not speak.~
-@740=~
+@727=~
 She does not give warnings.~
-@741=~She simply floats through the battlefield, and as her gaze passes over the combatants, they vanish, souls erased, existence revoked. Both Doomguard and Fated are unmade in waves of absolute silence. Berserkers fall still mid-swing and crumble into dust. Constructs collapse into screaming rust.~
-@743=~Step out of the shadow.~
-@745=~By the end, nothing remains but scorched stone, silent wind, and the memory of pain etched into the walls. The Lady is gone. Haer'Dalis is gone, Ulfbrand is gone. Everyone is gone. Perhaps the earring you are looking for is still around among the ashes?~
-@747=~"It's time to go..."~
+@728=~She simply floats through the battlefield, and as her gaze passes over the combatants, they vanish, souls erased, existence revoked. Both Doomguard and Fated are unmade in waves of absolute silence. Berserkers fall still mid-swing and crumble into dust. Constructs collapse into screaming rust.~
+@730=~Step out of the shadow.~
+@732=~By the end, nothing remains but scorched stone, silent wind, and the memory of pain etched into the walls. The Lady is gone. Haer'Dalis is gone, Ulfbrand is gone. Everyone is gone. Perhaps the earring you are looking for is still around among the ashes?~
+@734=~"It's time to go..."~

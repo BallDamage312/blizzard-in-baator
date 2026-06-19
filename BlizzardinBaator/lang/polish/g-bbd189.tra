@@ -589,26 +589,16 @@
 @716=~W końcu plac pustoszeje, a ty zostajesz sam wśród obrazu zniszczenia i rozpaczy.~
 @717=~W końcu plac pustoszeje, a wy zostajecie sami wśród obrazu zniszczenia i rozpaczy.~
 @719=~"Czas się ruszyć..."~
-@720=~VICTORY~
-@721=~klon wypowiedzi Ulfbranda z dialogu 156 - czasami sie odpala jeden, czasami drugi, nie wiadomo dlaczemu :)~
-@722=~Została was zaledwie garstka. Przeznaczeni pouciekali lub poginęli, a Strażnicy Zagłady trzymają się na bezpieczną odległość. Ulfbrand, cały wymazany krwią po bitwie, stoi zmęczony i ciężko oddycha. Jeszcze się nie poddał.~
-@723=~"Nieźle, mały. Nabrałeś mnie, naprawdę nieźle. No, ale nie poddam się."~
-@725=~"Nie ma już powodu do walki. Nie ma po co umierać."~
-@726=~"W takim razie skończmy to."~
-@727=~"To koniec, Ulfbrandzie."~
-@728=~klon wypowiedzi Ulfbranda z dialogu 156 - czasami sie odpala jeden, czasami drugi, nie wiadomo dlaczemu :)~
-@729=~"Gdzieś trzeba umrzeć. Na stałe. To miejsce... nie jest takie najgorsze." Mówi Ulfbrand ze spokojem, rozglądając się po okolicy, i wnet bez ostrzeżenia rzuca się na ciebie z gołymi rękami zaciśniętymi we wściekłe pięści. ~ [g-15601]
-@731=~Broń się.~
-@733=~DRAW~
-@735=~Gdy walka między Przeznaczonym i Strażnikami osiąga punkt kulminacyjny, berserkerzy z Ysgardu ścierają się z ostatnimi pozostałymi bestiami entropii, chmury rdzy zasłaniają niebo, a potężna magia otwiera szczeliny w Sferach... sama struktura Sigil niemal zaczyna pękać. Rzeczywistość migocze. Portale tracą stabilność. Zaklęcia zaczynają zawodzić lub działać z odwrotnym skutkiem. Obie strony ignorują znaki ostrzegawcze, zbyt pochłonięte walką, by dostrzec skutki swoich działań. Ale ty to dostrzegasz. Cofasz się instynktownie, czując, że coś się zaraz wydarzy. Nie wiesz, co przechyla szalę; dzieje się tyle naraz. Ale ktoś, gdzieś, stawia o jeden krok... za daleko.~
-@736=~Potężna Moneta Losu upada z cichym brzdękiem na zakrwawiony bruk i rozpada się w pył. ~ [KNOCK05]
-@737=~Wtedy:
+@720=~DRAW~
+@722=~Gdy walka między Przeznaczonym i Strażnikami osiąga punkt kulminacyjny, berserkerzy z Ysgardu ścierają się z ostatnimi pozostałymi bestiami entropii, chmury rdzy zasłaniają niebo, a potężna magia otwiera szczeliny w Sferach... sama struktura Sigil niemal zaczyna pękać. Rzeczywistość migocze. Portale tracą stabilność. Zaklęcia zaczynają zawodzić lub działać z odwrotnym skutkiem. Obie strony ignorują znaki ostrzegawcze, zbyt pochłonięte walką, by dostrzec skutki swoich działań. Ale ty to dostrzegasz. Cofasz się instynktownie, czując, że coś się zaraz wydarzy. Nie wiesz, co przechyla szalę; dzieje się tyle naraz. Ale ktoś, gdzieś, stawia o jeden krok... za daleko.~
+@723=~Potężna Moneta Losu upada z cichym brzdękiem na zakrwawiony bruk i rozpada się w pył. ~ [KNOCK05]
+@724=~Wtedy:
 
 Cienie się wydłużają. Wszystkie dźwięki cichną. ~ [AM_SM028]
-@738=~Pojawia się ona.~
-@739=~Nie mówi nic.~
-@740=~O niczym nie ostrzega.~
-@741=~Po prostu unosi się nad polem bitwy, a gdy jej spojrzenie zatrzymuje się na walczących, jeden po drugim zaczynają oni znikać. Ich dusze zostają wymazane, a istnienie unieważnione. Zarówno Strażnicy Zagłady, jak i Przeznaczeni zostają unicestwieni w fali absolutnej ciszy. Berserkerzy zamierają w połowie ruchu i rozpadają się w pył. Konstrukty zamieniają się w krzyczącą rdzę.~
-@743=~Wyjdź z cieni.~
-@745=~Na koniec pozostaje tylko spalony kamień, cichy wiatr i pamięć bólu wyryta w ścianach. Pani zniknęła. Haer'Dalis zniknął. Ulfbrand zniknął. Wszyscy zniknęli. Być może kolczyk, którego poszukujesz, nadal znajduje się wśród popiołów?~
-@747=~"Czas się ruszyć..."~
+@725=~Pojawia się ona.~
+@726=~Nie mówi nic.~
+@727=~O niczym nie ostrzega.~
+@728=~Po prostu unosi się nad polem bitwy, a gdy jej spojrzenie zatrzymuje się na walczących, jeden po drugim zaczynają oni znikać. Ich dusze zostają wymazane, a istnienie unieważnione. Zarówno Strażnicy Zagłady, jak i Przeznaczeni zostają unicestwieni w fali absolutnej ciszy. Berserkerzy zamierają w połowie ruchu i rozpadają się w pył. Konstrukty zamieniają się w krzyczącą rdzę.~
+@730=~Wyjdź z cieni.~
+@732=~Na koniec pozostaje tylko spalony kamień, cichy wiatr i pamięć bólu wyryta w ścianach. Pani zniknęła. Haer'Dalis zniknął. Ulfbrand zniknął. Wszyscy zniknęli. Być może kolczyk, którego poszukujesz, nadal znajduje się wśród popiołów?~
+@734=~"Czas się ruszyć..."~

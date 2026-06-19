@@ -7,7 +7,7 @@ IF~~THEN REPLY @3 /*"What are *you*?" */ DO~SetGlobal("knowTasslewick","GLOBAL",
 IF~~THEN REPLY @4 /*"I think I was a human." */ DO~SetGlobal("knowTasslewick","GLOBAL",1)~ + g-bbD181.human
 IF~~THEN REPLY @5 /*"I am... leaving. Farewell." */ DO~~ EXIT
 CHAIN IF~NumTimesTalkedToGT(0) Global("knowTasslewick","GLOBAL",1)~THEN g-bbD181 g-bbD181.start2
-@7 /*Tasslewick Drohm is still enjoying the clean, mountain air of Ysgard. This time, he notices you much more quickly. "You are back! How can I help you?" */
+@7 /*Tasselwick Drohm is still enjoying the clean, mountain air of Ysgard. This time, he notices you much more quickly. "You are back! How can I help you?" */
 END
 IF~~THEN REPLY @9 /*"I have some questions." */ DO~~ + g-bbD181.q
 IF~~THEN REPLY @10 /*"I was just checking on you. I'll be on my way." */ DO~~ EXIT
@@ -17,17 +17,17 @@ END
 IF~~THEN REPLY @14 /*"I think we got off on the wrong foot. Don't you?" */ DO~~ + g-bbD181.reknow
 IF~~THEN REPLY @15 /*"I was just checking on you. You're still a twat. I'll be on my way." */ DO~~ EXIT
 CHAIN IF~NumTimesTalkedToGT(5) Global("knowTasslewick","GLOBAL",0)~THEN g-bbD181 g-bbD181.start4
-@17 /*"Alright, alright. I get it," the man yells. He then bows down and announces loudly: "Good day, sir. My name is Tasslewick Drohm. I work for the Census Archive at the Hall of Records. And who might *you* be, fine gentleman?" */
+@17 /*"Alright, alright. I get it," the man yells. He then bows down and announces loudly: "Good day, sir. My name is Tasselwick Drohm. I work for the Census Archive at the Hall of Records. And who might *you* be, fine gentleman?" */
 END
 IF~~THEN REPLY @19 /*"That's better! However... I don't know my name..." */ DO~SetGlobal("G-knowTasslewick","GLOBAL",1) AddexperienceParty(10000)~ + g-bbD181.name
 IF~~THEN REPLY @20 /*Lie: "That's better! I am Adahn." */ DO~IncrementGlobal("Adahn","GLOBAL",1) IncrementGlobal("LAW","GLOBAL",-1) SetGlobal("G-knowTasslewick","GLOBAL",1) AddexperienceParty(10000)~ + g-bbD181.adahn
 CHAIN IF~~THEN g-bbD181 g-bbD181.scold
-@22 /*"Oh, my bad." The man bows down and announces: "Good day, sir. My name is Tasslewick Drohm. I work for the Census Archive at the Hall of Records. And who might *you* be, fine gentleman?" */
+@22 /*"Oh, my bad." The man bows down and announces: "Good day, sir. My name is Tasselwick Drohm. I work for the Census Archive at the Hall of Records. And who might *you* be, fine gentleman?" */
 END
 IF~~THEN REPLY @24 /*"That's better! However... I don't know my name..." */ DO~~ + g-bbD181.name
 IF~~THEN REPLY @25 /*Lie: "That's better! I am Adahn." */ DO~IncrementGlobal("Adahn","GLOBAL",1) IncrementGlobal("LAW","GLOBAL",-1) SetGlobal("G-knowTasslewick","GLOBAL",1)~ + g-bbD181.adahn
 CHAIN IF~~THEN g-bbD181 g-bbD181.scold2
-@27 /*"Excuse me?" The man blinks in surprise. "I am Tasslewick Drohm. I work for the Census Archive at the Hall of Records, but... ah... I see. I apologize if I was rude, it's my work speaking through me, I reckon. And you, fine gentleman? Who might you be?" */
+@27 /*"Excuse me?" The man blinks in surprise. "I am Tasselwick Drohm. I work for the Census Archive at the Hall of Records, but... ah... I see. I apologize if I was rude, it's my work speaking through me, I reckon. And you, fine gentleman? Who might you be?" */
 END
 IF~~THEN REPLY @29 /*"That's better! However... I don't know my name..." */ DO~~ + g-bbD181.name
 IF~~THEN REPLY @30 /*Lie: "That's better! I am Adahn." */ DO~IncrementGlobal("Adahn","GLOBAL",1) IncrementGlobal("LAW","GLOBAL",-1)~ + g-bbD181.adahn
@@ -37,17 +37,17 @@ END
 IF~~THEN REPLY @34 /*"I don't really remember." */ DO~~ + g-bbD181.namealt
 IF~~THEN REPLY @35 /*Joke: "I briefly dated a night hag." */ DO~IncrementGlobal("LAW","GLOBAL",-1)~ + g-bbD181.hagjoke
 CHAIN IF~~THEN g-bbD181 g-bbD181.hagjoke
-@37 /*The man coughs in surprise. "That's... *cough* umm... quite extraordinary..." He composes himself after a moment, but the expression of shock still lingers. "I am Tasslewick Drohm. I work for the Census Archive at the Hall of Records. And who might *you* be, fine gentleman?" */
+@37 /*The man coughs in surprise. "That's... *cough* umm... quite extraordinary..." He composes himself after a moment, but the expression of shock still lingers. "I am Tasselwick Drohm. I work for the Census Archive at the Hall of Records. And who might *you* be, fine gentleman?" */
 END
 IF~~THEN REPLY @39 /*"I don't know my name..." */ DO~~ + g-bbD181.name
 IF~~THEN REPLY @40 /*Lie: "I am Adahn." */ DO~IncrementGlobal("Adahn","GLOBAL",1) IncrementGlobal("LAW","GLOBAL",-1)~ + g-bbD181.adahn
 CHAIN IF~~THEN g-bbD181 g-bbD181.reknow
-@42 /*"Yes. I suppose so. I guess it is my fault." The man bows down and announces: "Good day, sir. My name is Tasslewick Drohm. I work for the Census Archive at the Hall of Records. And who might *you* be?" */
+@42 /*"Yes. I suppose so. I guess it is my fault." The man bows down and announces: "Good day, sir. My name is Tasselwick Drohm. I work for the Census Archive at the Hall of Records. And who might *you* be?" */
 END
 IF~~THEN REPLY @44 /*"I don't know my name..." */ DO~~ + g-bbD181.name
 IF~~THEN REPLY @45 /*Lie: "I am Adahn." */ DO~IncrementGlobal("Adahn","GLOBAL",1) IncrementGlobal("LAW","GLOBAL",-1)~ + g-bbD181.adahn
 CHAIN IF~~THEN g-bbD181 g-bbD181.namealt
-@47 /*"Oh. Amnesia? It just so happens that I work for the Census Archive at the Hall of Records. I can look up your information. Are you a citizen of Sigil?" He seems revitalized by the prospect. "Ah, where are my manners! Tasslewick Drohm, at your service." */
+@47 /*"Oh. Amnesia? It just so happens that I work for the Census Archive at the Hall of Records. I can look up your information. Are you a citizen of Sigil?" He seems revitalized by the prospect. "Ah, where are my manners! Tasselwick Drohm, at your service." */
 END
 IF~~THEN REPLY @49 /*"I don't think that you'll find much... but I do have some questions." */ DO~~ + g-bbD181.q
 CHAIN IF~~THEN g-bbD181 g-bbD181.name
@@ -57,9 +57,9 @@ IF~~THEN REPLY @53 /*"I don't think that you'll find much... but I do have some 
 CHAIN IF~~THEN g-bbD181 g-bbD181.adahn
 @55 /*"Well, hello Adahn. How can I help you?" */
 END
-IF~~THEN REPLY @57 /*"I have some questions for you, Tasslewick." */ DO~~ + g-bbD181.q
+IF~~THEN REPLY @57 /*"I have some questions for you, Tasselwick." */ DO~~ + g-bbD181.q
 CHAIN IF~~THEN g-bbD181 g-bbD181.q
-@59 /*"Go ahead and ask." Tasslewick seems pleased with the concept of providing information. */
+@59 /*"Go ahead and ask." Tasselwick seems pleased with the concept of providing information. */
 END
 IF~Global("G-doomvsfatevsKEY","GLOBAL",1)~THEN REPLY @61 /*"Tell me more about yourself." */ DO~~ + g-bbD181.self
 IF~Global("G-doomvsfatevsKEY","GLOBAL",0)~THEN REPLY @62 /*"You work for the Hall of Records? Do you know about any frost giants in Sigil?" */ DO~~ + g-bbD181.quest
@@ -145,7 +145,7 @@ IF~Global("g-TassleMember","GLOBAL",1) Global("g-TassleDoubt","GLOBAL",1) !Globa
 IF~~THEN REPLY @142 /*"I have another question." */ DO~~ + g-bbD181.q
 IF~~THEN REPLY @143 /*"I have no more questions. Farewell." */ DO~~ EXIT
 CHAIN IF~~THEN g-bbD181 g-bbD181.fated2
-@145 /*"Hmm." Tasslewick seems to need to think for a second. "Well, I used to be a member of the Fraternity of Order. I always liked arranging documents and keeping track of things. The Fated do pretty much the same... but pay a lot better. So, here I am!"  */
+@145 /*"Hmm." Tasselwick seems to need to think for a second. "Well, I used to be a member of the Fraternity of Order. I always liked arranging documents and keeping track of things. The Fated do pretty much the same... but pay a lot better. So, here I am!"  */
 ==DNordom IF ~InParty("Nordom") !StateCheck("Nordom",CD_STATE_NOTVALID) NearbyDialog("DNordom")~ THEN @146 /*"Function: Sorting; is among the most satisfying in terms of EFFORT to EFFECT ratio. Conclusion: Reaction to; sorting; estimated within *parameters*." */
 END
 IF~Global("g-TassleDoubt","GLOBAL",0)  ~THEN REPLY @148 /*"It's good to have order. You're doing important things." */ DO~SetGlobal("g-TassleDoubt","GLOBAL",2) IncrementGlobal("g-FatedPower","GLOBAL",1)~ + g-bbD181.fated8
@@ -164,7 +164,7 @@ IF~Global("g-TassleMember","GLOBAL",1) Global("g-TassleDoubt","GLOBAL",1) !Globa
 IF~~THEN REPLY @161 /*"I have another question." */ DO~~ + g-bbD181.q
 IF~~THEN REPLY @162 /*"I have no more questions. Farewell." */ DO~~ EXIT
 CHAIN IF~~THEN g-bbD181 g-bbD181.fated5
-@164 /*"It's... well. It's not *NOT* true..." Tasslewick seems a bit lost in thought. */
+@164 /*"It's... well. It's not *NOT* true..." Tasselwick seems a bit lost in thought. */
 END
 IF~Global("g-TassleMember","GLOBAL",1) !Global("g-TassleDoubt","GLOBAL",1) ~THEN REPLY @166 /*"Just between us, I hate this faction. Aren't we all just selfish berks?" */ DO~~ + g-bbD181.fated3
 IF~Global("g-TassleMember","GLOBAL",1) Global("g-TassleDoubt","GLOBAL",1) !Global("g-TassleQuit","GLOBAL",1) ~THEN REPLY @167 /*"Just between us, I hate this faction. Aren't we all just selfish berks?" */ DO~IncrementGlobal("g-FatedPower","GLOBAL",-2) SetGlobal("g-TassleQuit","GLOBAL",1) AddexperienceParty(12000)~ + g-bbD181.fateddone
@@ -176,12 +176,12 @@ END
 IF~~THEN REPLY @173 /*"I have another question." */ DO~~ + g-bbD181.q
 IF~~THEN REPLY @174 /*"I have no more questions. Farewell." */ DO~~ EXIT
 CHAIN IF~~THEN g-bbD181 g-bbD181.fated8
-@176 /*Tasslewick smiles. He clearly needed to hear this.  */
+@176 /*Tasselwick smiles. He clearly needed to hear this.  */
 END
 IF~~THEN REPLY @178 /*"I have another question." */ DO~~ + g-bbD181.q
 IF~~THEN REPLY @179 /*"I have no more questions. Farewell." */ DO~~ EXIT
 CHAIN IF~~THEN g-bbD181 g-bbD181.fateddone
-@181 /*The man hangs his head in shame. "Gods, yes. We certainly are... What have I done with my life? When I get back to the office, I will pack my things... and make some pamphlets too. I know at least a couple cutters who would see that..." Tasslewick seems miserable but also somewhat happy to discover a newfound purpose in life. */
+@181 /*The man hangs his head in shame. "Gods, yes. We certainly are... What have I done with my life? When I get back to the office, I will pack my things... and make some pamphlets too. I know at least a couple cutters who would see that..." Tasselwick seems miserable but also somewhat happy to discover a newfound purpose in life. */
 END
 IF~~THEN REPLY @183 /*"I have another question." */ DO~~ + g-bbD181.q
 IF~~THEN REPLY @184 /*"I have no more questions. Farewell." */ DO~~ EXIT
@@ -193,7 +193,7 @@ IF~ Global("g-TassleDoubt","GLOBAL",0) CheckStatGT(Protagonist,13,INT)~THEN REPL
 IF~~THEN REPLY @190 /*"I have another question." */ DO~~ + g-bbD181.q
 IF~~THEN REPLY @191 /*"I have no more questions. Farewell." */ DO~~ EXIT
 CHAIN IF~~THEN g-bbD181 g-bbD181.education
-@193 /*"Well... it was necessary that we have the proper offices to run our administrative processes. Taxation is important, it funds most of the services here in Sigil..." Tasslewick says, his confidence wavering. */
+@193 /*"Well... it was necessary that we have the proper offices to run our administrative processes. Taxation is important, it funds most of the services here in Sigil..." Tasselwick says, his confidence wavering. */
 ==DGrace IF ~InParty("Grace") !StateCheck("Grace",CD_STATE_NOTVALID) NearbyDialog("DGrace")~ THEN @194 /*"As a teacher, I find this quite upsetting." */
 END
 IF~CheckStatGT(Protagonist,15,INT)~THEN REPLY @196 /*"Services like... education? Which you took away from the people of Sigil? Were there no alternative locations in the whole city?" */ DO~IncrementGlobal("g-FatedPower","GLOBAL",-1) SetGlobal("g-TassleDoubt","GLOBAL",1) AddexperienceParty(7000)~ + g-bbD181.education2
@@ -220,7 +220,7 @@ IF~Global("G-TassleEarring","GLOBAL",1)~THEN REPLY @216 /*"Can you tell me about
 IF~~THEN REPLY @217 /*"I have another question." */ DO~~ + g-bbD181.q
 IF~~THEN REPLY @218 /*"I have no more questions. Farewell." */ DO~~ EXIT
 CHAIN IF~~THEN g-bbD181 g-bbD181.ulfbrandkill
-@220 /*"You know, I am not sure. I have never seen him destroyed, so it's likely that he has some additional protections beyond his abilities as a petitioner." Tasslewick ponders for a moment, tapping his foot on the grass. "I have no clue what that would be, though." */
+@220 /*"You know, I am not sure. I have never seen him destroyed, so it's likely that he has some additional protections beyond his abilities as a petitioner." Tasselwick ponders for a moment, tapping his foot on the grass. "I have no clue what that would be, though." */
 END
 IF~~THEN REPLY @222 /*"But outside Asgard, he should be fallible?" */ DO~SetGlobal("G-TassleEarring","GLOBAL",1)~ + g-bbD181.ulfbrandsigil
 IF~~THEN REPLY @223 /*"Do you know about his quest to kill an actor?" */ DO~~ + g-bbD181.heardalis
@@ -236,7 +236,7 @@ IF~Global("G-TassleEarring","GLOBAL",1)~THEN REPLY @232 /*"Can you tell me about
 IF~~THEN REPLY @233 /*"I have another question." */ DO~~ + g-bbD181.q
 IF~~THEN REPLY @234 /*"I have no more questions. Farewell." */ DO~~ EXIT
 CHAIN IF~~THEN g-bbD181 g-bbD181.heardalis
-@236 /*Tasslewick seems a bit put off by this question. "I..." he laughs nervously, "I do not deal with debt collection. I merely work in the Census Archive. If you wish to talk about his business, he is inside." */
+@236 /*Tasselwick seems a bit put off by this question. "I..." he laughs nervously, "I do not deal with debt collection. I merely work in the Census Archive. If you wish to talk about his business, he is inside." */
 END
 IF~~THEN REPLY @238 /*"Let me get one thing straight: he will be revived after dying or can he not be killed at all?" */ DO~~ + g-bbD181.ulfbrandkill
 IF~~THEN REPLY @239 /*"But outside Asgard, he should be fallible?" */ DO~~ + g-bbD181.ulfbrandsigil
@@ -293,17 +293,17 @@ IF~!CheckStatGT(Protagonist,15,CHR)~THEN REPLY @290 /*Lie: "Frost giants are way
 IF~~THEN REPLY @291 /*"Never mind, I have another question." */ DO~~ + g-bbD181.q
 IF~~THEN REPLY @292 /*"Never mind, I have no more questions. Farewell." */ DO~~ EXIT
 CHAIN IF~~THEN g-bbD181 g-bbD181.good
-@294 /*"Of course." Tasslewick smiles. "What was I thinking? Well, there are no frost giants in Sigil at the moment, but Ulfbrand's earring is certainly a frost giant bone. He probably wouldn't part with it though..." */
+@294 /*"Of course." Tasselwick smiles. "What was I thinking? Well, there are no frost giants in Sigil at the moment, but Ulfbrand's earring is certainly a frost giant bone. He probably wouldn't part with it though..." */
 END
 IF~~THEN REPLY @296 /*"Then I better talk to him about it. In the meantime, I have another question." */ DO~~ + g-bbD181.q
 IF~~THEN REPLY @297 /*"Then I better talk to him about it. I have no more questions. Farewell." */ DO~~ EXIT
 CHAIN IF~~THEN g-bbD181 g-bbD181.bad
-@299 /*Tasslewick laughs nervously, visibly happy to *not* be a frost giant. "Well, there are no frost giants in Sigil at the moment, but Ulfbrand's earring is certainly a frost giant bone. He probably wouldn't part with it though..." */
+@299 /*Tasselwick laughs nervously, visibly happy to *not* be a frost giant. "Well, there are no frost giants in Sigil at the moment, but Ulfbrand's earring is certainly a frost giant bone. He probably wouldn't part with it though..." */
 END
 IF~~THEN REPLY @301 /*"Then I better talk to him about it. In the meantime, I have another question." */ DO~~ + g-bbD181.q
 IF~~THEN REPLY @302 /*"Then I better talk to him about it. I have no more questions. Farewell." */ DO~~ EXIT
 CHAIN IF~~THEN g-bbD181 g-bbD181.joke
-@304 /*Tasslewick laughs nervously, unsure of your intentions. "Well, there are no frost giants in Sigil at the moment, but Ulfbrand's earring is certainly a frost giant bone. He probably wouldn't part with it though..." */
+@304 /*Tasselwick laughs nervously, unsure of your intentions. "Well, there are no frost giants in Sigil at the moment, but Ulfbrand's earring is certainly a frost giant bone. He probably wouldn't part with it though..." */
 END
 IF~~THEN REPLY @306 /*"Then I better talk to him about it. In the meantime, I have another question." */ DO~~ + g-bbD181.q
 IF~~THEN REPLY @307 /*"Then I better talk to him about it. I have no more questions. Farewell." */ DO~~ EXIT
@@ -314,21 +314,21 @@ IF~CheckStatGT(Protagonist,15,WIS) Global("G-TasslleSights","GLOBAL",0)~THEN REP
 IF~~THEN REPLY @313 /*"I have another question." */ DO~~ + g-bbD181.q
 IF~~THEN REPLY @314 /*"I have no more questions. Farewell." */ DO~~ EXIT
 CHAIN IF~~THEN g-bbD181 g-bbD181.sel2
-@316 /*Tasslewick does not say anything. He breathes in and takes a step towards the edge. The view in front of him is astonishing, and he seems to be trying to see it, as if it is the first time ever it has become visible to his mortal eyes. The high winds create visible waves in the fir canopies of the massive forests covering the sloped surfaces in front of you. You, too, are captured in the moment and stand there, alongside Tasslewick, in silence. */
+@316 /*Tasselwick does not say anything. He breathes in and takes a step towards the edge. The view in front of him is astonishing, and he seems to be trying to see it, as if it is the first time ever it has become visible to his mortal eyes. The high winds create visible waves in the fir canopies of the massive forests covering the sloped surfaces in front of you. You, too, are captured in the moment and stand there, alongside Tasselwick, in silence. */
 ==DMorte IF ~InParty("Morte") !StateCheck("Morte",CD_STATE_NOTVALID) NearbyDialog("DMorte")~ THEN @317 /*The skull floats in the air, his expressive eyes, tracing the large birds piercing the sky in the distance. He does not say anything, even when the silence is prolonged. It is unusual for him. */
 ==DAnnah IF ~InParty("Annah") !StateCheck("Annah",CD_STATE_NOTVALID) NearbyDialog("DAnnah")~ THEN @318 /*The tiefling seems intent, at first, to use this opportunity to steal the man's purse, but the charm of such an awesome sight is not lost, even on a child of hideous streets and shacks. She likes the waterfalls, you think. There is simply no comparison between their natural purity and the putrid stench of the Ditch she grew up with. */
-==DGrace IF ~InParty("Grace") !StateCheck("Grace",CD_STATE_NOTVALID) NearbyDialog("DGrace")~ THEN @319 /*The succubus was long captivated by the view before Tasslewick started admiring it anew. What memories and experiences from her rich and mysterious past did it conjure? Her beautiful face holds the delicate smile of deeper understanding.  */
+==DGrace IF ~InParty("Grace") !StateCheck("Grace",CD_STATE_NOTVALID) NearbyDialog("DGrace")~ THEN @319 /*The succubus was long captivated by the view before Tasselwick started admiring it anew. What memories and experiences from her rich and mysterious past did it conjure? Her beautiful face holds the delicate smile of deeper understanding.  */
 ==DDakkon IF ~InParty("Dakkon") !StateCheck("Dakkon",CD_STATE_NOTVALID) NearbyDialog("DDakkon")~ THEN @320 /*The githzerai stands to the side, enveloped more in apparent longing than awe. Could it be that Ysgard's floating earthbergs remind him a bit too much of his home realm, a neighboring plane in the grand order of things. He is most focused on the clouds collapsing into the mountains and dispersing into complex streams. Perhaps, in them he sees the chaos matter of his home.  */
 ==DVhail IF ~InParty("Vhail") !StateCheck("Vhail",CD_STATE_NOTVALID) NearbyDialog("DVhail")~ THEN @321 /*The armor stands motionless. His head is not even facing the landscape. He is watching you. Just you. */
-==DIgnus IF ~InParty("Ignus") !StateCheck("Ignus",CD_STATE_NOTVALID) NearbyDialog("DIgnus")~ THEN @322 /*The wizard floats as usual, his face covered in flames. He has directed himself towards the view, but it is impossible to tell what he is thinking. You swear you can hear a whisper from his direction that just repeats *"Burn it.... burn it...."* but it may simply be the hypnotic sound produced by the the flames enveloping him.  */
+==DIgnus IF ~InParty("Ignus") !StateCheck("Ignus",CD_STATE_NOTVALID) NearbyDialog("DIgnus")~ THEN @322 /*The wizard floats as usual, his face covered in flames. He has directed himself towards the view, but it is impossible to tell what he is thinking. You swear you can hear a whisper from his direction that just repeats *"Burn it... burn it..."* but it may simply be the hypnotic sound produced by the the flames enveloping him.  */
 ==DNordom IF ~InParty("Nordom") !StateCheck("Nordom",CD_STATE_NOTVALID) NearbyDialog("DNordom")~ THEN @323 /*Nordom seems to study the terrain and run some errant calculations, disturbing the silence with his usual whirs and clicks. What is he calculating? Gravity, perhaps? Figuring it out for this scenery would likely take a lot more than what even a fully functioning quadrone can do. */
 ==g-bbd181 @324 /*"Thank you," he says, after a couple minutes. "I guess I have more than I thought I did. I don't have much to give in thanks, but take this book... at least." */
 END
 IF~~THEN REPLY @326 /*"Thanks. I have another question." */ DO~AddexperienceParty(10000) ActionOverride("g-bb181",GiveItem("g-bbi020",Protagonist) )~ + g-bbD181.q
 IF~~THEN REPLY @327 /*"I have no more questions. Farewell." */ DO~AddexperienceParty(10000) ActionOverride("g-bb181",GiveItem("g-bbi020",Protagonist) )~ EXIT
 CHAIN IF~~THEN g-bbD181 g-bbD181.sel2b
-@329 /*Tasslewick does not say anything.  */
-==DGrace IF ~InParty("Grace") !StateCheck("Grace",CD_STATE_NOTVALID) NearbyDialog("DGrace")~ THEN @330 /*"He did not mean that, dear Tasslewick!" Fall-from-Grace cuts in and holds his hand. She then turns to you with a stone cold neutral expression: "He is clearly out of his mind." */
+@329 /*Tasselwick does not say anything.  */
+==DGrace IF ~InParty("Grace") !StateCheck("Grace",CD_STATE_NOTVALID) NearbyDialog("DGrace")~ THEN @330 /*"He did not mean that, dear Tasselwick!" Fall-from-Grace cuts in and holds his hand. She then turns to you with a stone cold neutral expression: "He is clearly out of his mind." */
 ==g-bbd181 @331 /*"I think you should go." */
 END
 IF~~THEN REPLY @333 /*"But wait, I have another question." */ DO~EscapeArea() IncrementGlobal("g-FatedPower","GLOBAL",1)~ EXIT

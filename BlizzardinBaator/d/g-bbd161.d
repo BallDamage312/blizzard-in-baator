@@ -110,7 +110,7 @@ CHAIN IF~~THEN g-bbD161 g-bbD161.mara2c
 END
 IF~~THEN REPLY @103 /*Watch. */ DO~SetGlobal("G-narthulyagnobrawl","GLOBAL",1) AddexperienceParty(20000) IncrementGlobal("LAW","GLOBAL",-1) StartCutScene("g-brawl")  ~ EXIT
 CHAIN IF~~THEN g-bbD161 g-bbD161.baer
-@105 /*"Ugh. What a strange species. Some say they are yugoloths, others say they are not. And that lackey... that pet... of his is stranger still. Regardless, this one here is just a big weakling. Yes... that sums him up best.... He does have his uses though..." Narthuul sighs and falls silent, as if something were stopping him from continuing his rant. */
+@105 /*"Ugh. What a strange species. Some say they are yugoloths, others say they are not. And that lackey... that pet... of his is stranger still. Regardless, this one here is just a big weakling. Yes... that sums him up best... He does have his uses though..." Narthuul sighs and falls silent, as if something were stopping him from continuing his rant. */
 END
 IF~~THEN REPLY @107 /*"What uses?" */ DO~~ + g-bbD161.baer2
 IF~~THEN REPLY @108 /*"I have other questions." */ DO~~ + g-bbD161.q

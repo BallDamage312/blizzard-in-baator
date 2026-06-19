@@ -1,0 +1,10 @@
+IF
+    Global("G-Join_Godsmen","GLOBAL",1)
+	Global("G-forgedoor","GLOBAL",0)
+THEN
+RESPONSE #1
+SetGlobal("G-forgedoor","GLOBAL",1)
+SetDoorLocked("ar0500d1",FALSE)
+OpenDoor("ar0500d1")
+
+END

@@ -287,7 +287,7 @@ IF~CheckStatGT(Protagonist,16,DEX) CheckStatGT(Protagonist,16,STR)~THEN REPLY @2
 IF~CheckStatGT(Protagonist,16,DEX) CheckStatGT(Protagonist,16,STR)~THEN REPLY @282 /*Allow it to happen. */ DO~~ + g-bbD050.falltogether
 CHAIN IF~~THEN g-bbD050 g-bbD050.falltogether
 @284 /*The dark-clad woman pulls you over the edge. Although everything is happening in an instant, time seems to slow down and your memory fills with pictures. The woman's laughing face as you both start to fall. Her eyes staring at you without a shadow of malice. Perfect bliss. */
-=@285 /*With a loud splat, both of you land in the thick, almost gelatinous water. The water closes in on your, preventing you from breaching the surface. Your eyes start to burn, as if you were swimming in acid. You cannot see the woman anymore, but you still feel her touch. */
+=@285 /*With a loud splat, both of you land in the thick, almost gelatinous water. The water closes in on you, preventing you from breaching the surface. Your eyes start to burn, as if you were swimming in acid. You cannot see the woman anymore, but you still feel her touch. */
 =@286 /*It only lasts for a moment. Suddenly, a wave of warmth envelops your body, and the woman is gone. As is the amulet. */
 END
 IF~CheckStatGT(Protagonist,20,INT) Class(Protagonist,Mage)~THEN REPLY @288 /*Try to recreate the spell and transport yourself back on land. */ DO~SetAnimState(Myself,ANIM_MIMEDIE) SetAnimState(Protagonist,ANIM_MIMEDIE) TakePartyItem("g-bbi089") ActionOverride("g-bb050",DestroySelf()) PlaySound("AM_VORTX")   StickySinisterPoof("EF01TPRT",Protagonist,1) AddexperienceParty(60000)  SetGlobal("g-pale_woman_quest","GLOBAL",6) ~ SOLVED_JOURNAL @20216 EXIT
@@ -445,283 +445,299 @@ CHAIN IF~~THEN g-bbD050 g-bbD050.conflict
 @441 /*"Ah. The two factions have been at odds since I first came here. But recently, Rowan Darkwood has been waging a personal war against Haer'Dalis, a Doomguard actor. I think it's just a ruse - a pretext to escalate the whole thing - so that Darkwood can expand his own influence. */
 END
 IF~~THEN REPLY @443 /*"That's... a very astute observation. Did you share that with someone who could intervene?" */ DO~~ + g-bbD050.conflict1
-IF~~THEN REPLY @444 /*"Interesting. What can you tell me about Darkwood?" */ DO~~ + g-bbD050.rowan
-IF~~THEN REPLY @445 /*"So you know Haer'Dalis?" */ DO~~ + g-bbD050.haerdalis
-IF~~THEN REPLY @446 /*"Why are the factions in conflict in the first place?" */ DO~~ + g-bbD050.politics
-IF~~THEN REPLY @447 /*"Right... I want to tackle another aspect of philosophy." */ DO~~ + g-bbD050.philoini
-IF~~THEN REPLY @448 /*"Right... I want to ask a more general question." */ DO~~ + g-bbD050.q
-IF~~THEN REPLY @449 /*"Right... I have to go now." */ DO~~ EXIT
+IF~Global("G-paletutorial","GLOBAL",0)~THEN REPLY @444 /*"So... how would *you* resolve this?" */ DO~SetGlobal("G-paletutorial","GLOBAL",1)~ + g-bbD050.tutorial
+IF~~THEN REPLY @445 /*"Interesting. What can you tell me about Darkwood?" */ DO~~ + g-bbD050.rowan
+IF~~THEN REPLY @446 /*"So you know Haer'Dalis?" */ DO~~ + g-bbD050.haerdalis
+IF~~THEN REPLY @447 /*"Why are the factions in conflict in the first place?" */ DO~~ + g-bbD050.politics
+IF~~THEN REPLY @448 /*"Right... I want to tackle another aspect of philosophy." */ DO~~ + g-bbD050.philoini
+IF~~THEN REPLY @449 /*"Right... I want to ask a more general question." */ DO~~ + g-bbD050.q
+IF~~THEN REPLY @450 /*"Right... I have to go now." */ DO~~ EXIT
+CHAIN IF~~THEN g-bbD050 g-bbD050.tutorial
+@452 /*"Me? I would shit-talk Rowan and his goons to oblivion. In fact, I do. Nothing beats a rising reputation better than slandering every step of the way." */
+END
+IF~~THEN REPLY @454 /*"That's... a very astute observation. Did you share that someone with more reach?" */ DO~~ + g-bbD050.conflict1
+IF~~THEN REPLY @455 /*"Did you hear that Darkwood steals and eats kittens?" */ DO~IncrementGlobal("G-fatedpower","GLOBAL",-1)~ + g-bbD050.tutorial2
+IF~~THEN REPLY @456 /*"Right... I want to tackle another aspect of philosophy." */ DO~~ + g-bbD050.philoini
+IF~~THEN REPLY @457 /*"Right... I want to ask a more general question." */ DO~~ + g-bbD050.q
+IF~~THEN REPLY @458 /*"Right... I have to go now." */ DO~~ EXIT
+CHAIN IF~~THEN g-bbD050 g-bbD050.tutorial2
+@460 /*The Pale woman nods seriously. "Yes. I did." */
+END
+IF~~THEN REPLY @462 /*"Right... I want to tackle another aspect of philosophy." */ DO~~ + g-bbD050.philoini
+IF~~THEN REPLY @463 /*"Right... I want to ask a more general question." */ DO~~ + g-bbD050.q
+IF~~THEN REPLY @464 /*"Right... I have to go now." */ DO~~ EXIT
 CHAIN IF~~THEN g-bbD050 g-bbD050.conflict1
-@451 /*"No, not really. The systems here in Sigil were made to eventually dissolve. That is the natural order of things." */
+@466 /*"No, not really. The systems here in Sigil were made to eventually dissolve. That is the natural order of things." */
 END
-IF~~THEN REPLY @453 /*"Do you think all Doomguard share that sentiment?" */ DO~SetGlobal("G-knowpent","GLOBAL",1)~ + g-bbD050.conflict2
-IF~~THEN REPLY @454 /*"Right... I want to tackle another aspect of philosophy." */ DO~~ + g-bbD050.philoini
-IF~~THEN REPLY @455 /*"Right... I want to ask a more general question." */ DO~~ + g-bbD050.q
-IF~~THEN REPLY @456 /*"Right... I have to go now." */ DO~~ EXIT
+IF~~THEN REPLY @468 /*"Do you think all Doomguard share that sentiment?" */ DO~SetGlobal("G-knowpent","GLOBAL",1)~ + g-bbD050.conflict2
+IF~~THEN REPLY @469 /*"Right... I want to tackle another aspect of philosophy." */ DO~~ + g-bbD050.philoini
+IF~~THEN REPLY @470 /*"Right... I want to ask a more general question." */ DO~~ + g-bbD050.q
+IF~~THEN REPLY @471 /*"Right... I have to go now." */ DO~~ EXIT
 CHAIN IF~~THEN g-bbD050 g-bbD050.conflict2
-@458 /*"All of them? Probably not. But I'm sure our factol, Pentar, loves the threat of dissolution, so why would I stand in her way?" She gives you a helpless smile. */
+@473 /*"All of them? Probably not. But I'm sure our factol, Pentar, loves the threat of dissolution, so why would I stand in her way?" She gives you a helpless smile. */
 END
-IF~~THEN REPLY @460 /*"What do you think of Pentar?" */ DO~~ + g-bbD050.pentar
-IF~GlobalLT("G-bellerowan","GLOBAL",1)~THEN REPLY @461 /*"Interesting. What can you tell me about Darkwood?" */ DO~SetGlobal("G-knowRowan","GLOBAL",1) SetGlobal("G-bellerowan","GLOBAL",1)~ + g-bbD050.rowan
-IF~~THEN REPLY @462 /*"So you know Haer'Dalis?" */ DO~~ + g-bbD050.haerdalis
-IF~~THEN REPLY @463 /*"Why are the two factions in conflict in the first place?" */ DO~~ + g-bbD050.politics
+IF~~THEN REPLY @475 /*"What do you think of Pentar?" */ DO~~ + g-bbD050.pentar
+IF~GlobalLT("G-bellerowan","GLOBAL",1)~THEN REPLY @476 /*"Interesting. What can you tell me about Darkwood?" */ DO~SetGlobal("G-knowRowan","GLOBAL",1) SetGlobal("G-bellerowan","GLOBAL",1)~ + g-bbD050.rowan
+IF~~THEN REPLY @477 /*"So you know Haer'Dalis?" */ DO~~ + g-bbD050.haerdalis
+IF~~THEN REPLY @478 /*"Why are the two factions in conflict in the first place?" */ DO~~ + g-bbD050.politics
 CHAIN IF~~THEN g-bbD050 g-bbD050.rowan
-@465 /*"Darkwood is a cynical old berk with an inflated opinion of himself, misguided beliefs, and a willingness to exploit a young girl to get ahead of the other factions. Many respect him, but I think he's a dangerous man who's been given too much power." */
+@480 /*"Darkwood is a cynical old berk with an inflated opinion of himself, misguided beliefs, and a willingness to exploit a young girl to get ahead of the other factions. Many respect him, but I think he's a dangerous man who's been given too much power." */
 END
-IF~~THEN REPLY @467 /*"A young girl?" */ DO~~ + g-bbD050.alisohn
+IF~~THEN REPLY @482 /*"A young girl?" */ DO~~ + g-bbD050.alisohn
 CHAIN IF~~THEN g-bbD050 g-bbD050.alisohn
-@469 /*"Alisohn Nilesia. It was because of her that the execution laws in Sigil were simplified. She's a Mercykiller, and they want those laws to be as simple as possible, which isn't necessarily a good thing. This doesn't change the fact that she's a hot-headed young girl, being deliberately exploited by a cynical bastard more than three times her age. You may not follow the local chant, but their affair is obvious. I'm sure Alisohn will pay dearly for it, even though it is Rowan who is the guilty party here." */
+@484 /*"Alisohn Nilesia. It was because of her that the execution laws in Sigil were simplified. She's a Mercykiller, and they want those laws to be as simple as possible, which isn't necessarily a good thing. This doesn't change the fact that she's a hot-headed young girl, being deliberately exploited by a cynical bastard more than three times her age. You may not follow the local chant, but their affair is obvious. I'm sure Alisohn will pay dearly for it, even though it is Rowan who is the guilty party here." */
 END
-IF~~THEN REPLY @471 /*"I agree with you. Rowan Darkwood is definitely not blameless." */ DO~IncrementGlobal("GOOD","GLOBAL",1) IncrementGlobal("G-Belle_curious","GLOBAL",1) IncrementGlobal("G-FatedPower","GLOBAL",-1)~ + g-bbD050.alisohn1
-IF~~THEN REPLY @472 /*"He didn't do anything illegal. Law is the ultimate guide as to what is right. At least, until a more perfect one is invented." */ DO~IncrementGlobal("LAW","GLOBAL",1) IncrementGlobal("G-FatedPower","GLOBAL",1)~ + g-bbD050.alisohn2
+IF~~THEN REPLY @486 /*"I agree with you. Rowan Darkwood is definitely not blameless." */ DO~IncrementGlobal("GOOD","GLOBAL",1) IncrementGlobal("G-Belle_curious","GLOBAL",1) IncrementGlobal("G-FatedPower","GLOBAL",-1)~ + g-bbD050.alisohn1
+IF~~THEN REPLY @487 /*"He didn't do anything illegal. Law is the ultimate guide as to what is right. At least, until a more perfect one is invented." */ DO~IncrementGlobal("LAW","GLOBAL",1) IncrementGlobal("G-FatedPower","GLOBAL",1)~ + g-bbD050.alisohn2
 CHAIN IF~~THEN g-bbD050 g-bbD050.alisohn1
-@474 /*"I'm glad we agree." She smiles softly. "I hope they lock up Darkwood before he truly hurts that girl." */
+@489 /*"I'm glad we agree." She smiles softly. "I hope they lock up Darkwood before he truly hurts that girl." */
 END
-IF~~THEN REPLY @476 /*"Right... I want to tackle another aspect of philosophy." */ DO~~ + g-bbD050.philoini
-IF~~THEN REPLY @477 /*"Right... I want to ask a more general question." */ DO~~ + g-bbD050.q
-IF~~THEN REPLY @478 /*"Right... I have to go now." */ DO~~ EXIT
+IF~~THEN REPLY @491 /*"Right... I want to tackle another aspect of philosophy." */ DO~~ + g-bbD050.philoini
+IF~~THEN REPLY @492 /*"Right... I want to ask a more general question." */ DO~~ + g-bbD050.q
+IF~~THEN REPLY @493 /*"Right... I have to go now." */ DO~~ EXIT
 CHAIN IF~~THEN g-bbD050 g-bbD050.alisohn2
-@480 /*The woman looks disappointed. "Well then, we have a different opinion on this matter." */
+@495 /*The woman looks disappointed. "Well then, we have a different opinion on this matter." */
 END
-IF~~THEN REPLY @482 /*"Right... I want to tackle another aspect of philosophy." */ DO~~ + g-bbD050.philoini
-IF~~THEN REPLY @483 /*"Right... I want to ask a more general question." */ DO~~ + g-bbD050.q
-IF~~THEN REPLY @484 /*"Right... I have to go now." */ DO~~ EXIT
+IF~~THEN REPLY @497 /*"Right... I want to tackle another aspect of philosophy." */ DO~~ + g-bbD050.philoini
+IF~~THEN REPLY @498 /*"Right... I want to ask a more general question." */ DO~~ + g-bbD050.q
+IF~~THEN REPLY @499 /*"Right... I have to go now." */ DO~~ EXIT
 CHAIN IF~~THEN g-bbD050 g-bbD050.pentar
-@486 /*"When I first came here, Rozvank was factol. Keldrar was next, but he died five years ago in his own slave revolt. Then, Pentar, a ranger from Xaos, took over. She is excited by the prospect of her faction falling apart, I may have mentioned that already. She dreams of disrupting the Great Modron March or even stopping it. I also heard she survived a volcanic eruption. A fascinating individual. I respect her." */
+@501 /*"When I first came here, Rozvank was factol. Keldrar was next, but he died five years ago in his own slave revolt. Then, Pentar, a ranger from Xaos, took over. She is excited by the prospect of her faction falling apart, I may have mentioned that already. She dreams of disrupting the Great Modron March or even stopping it. I also heard she survived a volcanic eruption. A fascinating individual. I respect her." */
 END
-IF~Global("G-sinkpen","GLOBAL",0)~THEN REPLY @488 /*"You're right. She sounds like a pretty interesting person. I'd also like to leave a mark on the planes by changing what seems permanent." */ DO~SetGlobal("G-knowpent","GLOBAL",1) IncrementGlobal("LAW","GLOBAL",-1) SetGlobal("G-sinkpen","GLOBAL",1) IncrementGlobal("G-Belle_curious","GLOBAL",1)~ + g-bbD050.pentar1
-IF~Global("G-sinkpen","GLOBAL",0)~THEN REPLY @489 /*"Sounds like someone who isn't very reasonable. Trying to change phenomena so fundamental to the planes can only lead to death. Personally, I respect more orderly people." */ DO~SetGlobal("G-knowpent","GLOBAL",1) IncrementGlobal("LAW","GLOBAL",1) SetGlobal("G-sinkpen","GLOBAL",1)~ + g-bbD050.pentar2
-IF~~THEN REPLY @490 /*"Right... I want to tackle another aspect of philosophy." */ DO~SetGlobal("G-knowpent","GLOBAL",1)~ + g-bbD050.philoini
-IF~~THEN REPLY @491 /*"Right... I want to ask a more general question." */ DO~SetGlobal("G-knowpent","GLOBAL",1)~ + g-bbD050.q
-IF~~THEN REPLY @492 /*"Right... I have to go now." */ DO~SetGlobal("G-knowpent","GLOBAL",1)~ EXIT
+IF~Global("G-sinkpen","GLOBAL",0)~THEN REPLY @503 /*"You're right. She sounds like a pretty interesting person. I'd also like to leave a mark on the planes by changing what seems permanent." */ DO~SetGlobal("G-knowpent","GLOBAL",1) IncrementGlobal("LAW","GLOBAL",-1) SetGlobal("G-sinkpen","GLOBAL",1) IncrementGlobal("G-Belle_curious","GLOBAL",1)~ + g-bbD050.pentar1
+IF~Global("G-sinkpen","GLOBAL",0)~THEN REPLY @504 /*"Sounds like someone who isn't very reasonable. Trying to change phenomena so fundamental to the planes can only lead to death. Personally, I respect more orderly people." */ DO~SetGlobal("G-knowpent","GLOBAL",1) IncrementGlobal("LAW","GLOBAL",1) SetGlobal("G-sinkpen","GLOBAL",1)~ + g-bbD050.pentar2
+IF~~THEN REPLY @505 /*"Right... I want to tackle another aspect of philosophy." */ DO~SetGlobal("G-knowpent","GLOBAL",1)~ + g-bbD050.philoini
+IF~~THEN REPLY @506 /*"Right... I want to ask a more general question." */ DO~SetGlobal("G-knowpent","GLOBAL",1)~ + g-bbD050.q
+IF~~THEN REPLY @507 /*"Right... I have to go now." */ DO~SetGlobal("G-knowpent","GLOBAL",1)~ EXIT
 CHAIN IF~~THEN g-bbD050 g-bbD050.pentar1
-@494 /*"Do you really think so?" The pale woman smiles. "I appreciate that." */
+@509 /*"Do you really think so?" The pale woman smiles. "I appreciate that." */
 END
-IF~~THEN REPLY @496 /*"I am glad... I want to tackle another aspect of philosophy." */ DO~~ + g-bbD050.philoini
-IF~~THEN REPLY @497 /*"I am glad... I want to ask a more general question." */ DO~~ + g-bbD050.q
-IF~~THEN REPLY @498 /*"I am glad... but I have to go now." */ DO~~ EXIT
+IF~~THEN REPLY @511 /*"I am glad... I want to tackle another aspect of philosophy." */ DO~~ + g-bbD050.philoini
+IF~~THEN REPLY @512 /*"I am glad... I want to ask a more general question." */ DO~~ + g-bbD050.q
+IF~~THEN REPLY @513 /*"I am glad... but I have to go now." */ DO~~ EXIT
 CHAIN IF~~THEN g-bbD050 g-bbD050.pentar2
-@500 /*"Well, different people find different things appealing." She shrugs. "I don't think of her as my idol, or anything like that." */
+@515 /*"Well, different people find different things appealing." She shrugs. "I don't think of her as my idol, or anything like that." */
 END
-IF~~THEN REPLY @502 /*"Right... I want to tackle another aspect of philosophy." */ DO~~ + g-bbD050.philoini
-IF~~THEN REPLY @503 /*"Right... I want to ask a more general question." */ DO~~ + g-bbD050.q
-IF~~THEN REPLY @504 /*"Right... I have to go now." */ DO~~ EXIT
+IF~~THEN REPLY @517 /*"Right... I want to tackle another aspect of philosophy." */ DO~~ + g-bbD050.philoini
+IF~~THEN REPLY @518 /*"Right... I want to ask a more general question." */ DO~~ + g-bbD050.q
+IF~~THEN REPLY @519 /*"Right... I have to go now." */ DO~~ EXIT
 CHAIN IF~~THEN g-bbD050 g-bbD050.haerdalis
-@506 /*"Well, we're both theoretically under factol Pentar. Sometimes we'll meet for a beer in one of the inns. He's a tiefling of many talents, good at swinging those swords of his, not just pretending. Quite handsome as well. Shame about all the Fated persecution." */
+@521 /*"Well, we're both theoretically under factol Pentar. Sometimes we'll meet for a beer in one of the inns. He's a tiefling of many talents, good at swinging those swords of his, not just pretending. Quite handsome as well. Shame about all the Fated persecution." */
 END
-IF~~THEN REPLY @509 /*"Right... I want to tackle another aspect of philosophy." */ DO~~ + g-bbD050.philoini
-IF~~THEN REPLY @510 /*"Right... I want to ask a more general question." */ DO~~ + g-bbD050.q
-IF~~THEN REPLY @511 /*"Right... I have to go now." */ DO~~ EXIT
+IF~~THEN REPLY @524 /*"Right... I want to tackle another aspect of philosophy." */ DO~~ + g-bbD050.philoini
+IF~~THEN REPLY @525 /*"Right... I want to ask a more general question." */ DO~~ + g-bbD050.q
+IF~~THEN REPLY @526 /*"Right... I have to go now." */ DO~~ EXIT
 CHAIN IF~~THEN g-bbD050 g-bbD050.politics
-@513 /*"I don't follow the exact philosophy of the Fated... I just know that they are very materialistic. I guess coveting things goes against watching those things fall apart? Other than that, Darkwood is causing unrest as well as he can, but for what reason... I don't know. Maybe he'll challenge the Lady next." */
+@528 /*"I don't follow the exact philosophy of the Fated... I just know that they are very materialistic. I guess coveting things goes against watching those things fall apart? Other than that, Darkwood is causing unrest as well as he can, but for what reason... I don't know. Maybe he'll challenge the Lady next." */
 END
-IF~~THEN REPLY @516 /*"Right... I want to tackle another aspect of philosophy." */ DO~~ + g-bbD050.philoini
-IF~~THEN REPLY @517 /*"Right... I want to ask a more general question." */ DO~~ + g-bbD050.q
-IF~~THEN REPLY @518 /*"Right... I have to go now." */ DO~~ EXIT
+IF~~THEN REPLY @531 /*"Right... I want to tackle another aspect of philosophy." */ DO~~ + g-bbD050.philoini
+IF~~THEN REPLY @532 /*"Right... I want to ask a more general question." */ DO~~ + g-bbD050.q
+IF~~THEN REPLY @533 /*"Right... I have to go now." */ DO~~ EXIT
 CHAIN IF~~THEN g-bbD050 g-bbD050.sincoax
-@520 /*"He does some great work. And he knows all about Entropy. I personally only visit him when I need to buy a weapon, as the area isn't particularly beautiful. I much prefer spending time by the water, you see." */
+@535 /*"He does some great work. And he knows all about Entropy. I personally only visit him when I need to buy a weapon, as the area isn't particularly beautiful. I much prefer spending time by the water, you see." */
 END
-IF~~THEN REPLY @522 /*"Right... I want to tackle another aspect of philosophy." */ DO~~ + g-bbD050.philoini
-IF~~THEN REPLY @523 /*"Right... I want to ask a more general question." */ DO~~ + g-bbD050.q
-IF~~THEN REPLY @524 /*"Right... I have to go now." */ DO~~ EXIT
+IF~~THEN REPLY @537 /*"Right... I want to tackle another aspect of philosophy." */ DO~~ + g-bbD050.philoini
+IF~~THEN REPLY @538 /*"Right... I want to ask a more general question." */ DO~~ + g-bbD050.q
+IF~~THEN REPLY @539 /*"Right... I have to go now." */ DO~~ EXIT
 CHAIN IF~~THEN g-bbD050 g-bbD050.boring
-@526 /*"That is... dull. Sure, the multiverse is dying, but it's no reason to put yourself down and just pretend it's already over. Get yourself out of that cult, there are much better... cults." */
+@541 /*"That is... dull. Sure, the multiverse is dying, but it's no reason to put yourself down and just pretend it's already over. Get yourself out of that cult, there are much better... cults." */
 END
-IF~~THEN REPLY @528 /*"Do you think I could become a Doomguard?" */ DO~~ + g-bbD050.join
-IF~~THEN REPLY @529 /*"Right... I want to tackle another aspect of philosophy." */ DO~~ + g-bbD050.philoini
-IF~~THEN REPLY @530 /*"Right... I want to ask a more general question." */ DO~~ + g-bbD050.q
-IF~~THEN REPLY @531 /*"Right... I have to go now." */ DO~~ EXIT
+IF~~THEN REPLY @543 /*"Do you think I could become a Doomguard?" */ DO~~ + g-bbD050.join
+IF~~THEN REPLY @544 /*"Right... I want to tackle another aspect of philosophy." */ DO~~ + g-bbD050.philoini
+IF~~THEN REPLY @545 /*"Right... I want to ask a more general question." */ DO~~ + g-bbD050.q
+IF~~THEN REPLY @546 /*"Right... I have to go now." */ DO~~ EXIT
 CHAIN IF~~THEN g-bbD050 g-bbD050.join
-@533 /*"I hope *not* just to impress me.... but I don't know. Maybe?" She shrugs. "I am not a recruiter. I don't even know who does recruiting. If you're ever by the Armory, hop in and ask." */
+@548 /*"I hope *not* just to impress me... but I don't know. Maybe?" She shrugs. "I am not a recruiter. I don't even know who does recruiting. If you're ever by the Armory, hop in and ask." */
 END
-IF~~THEN REPLY @535 /*"Right... I want to tackle another aspect of philosophy." */ DO~~ + g-bbD050.philoini
-IF~~THEN REPLY @536 /*"Right... I want to ask a more general question." */ DO~~ + g-bbD050.q
-IF~~THEN REPLY @537 /*"Right... I have to go now." */ DO~~ EXIT
+IF~~THEN REPLY @550 /*"Right... I want to tackle another aspect of philosophy." */ DO~~ + g-bbD050.philoini
+IF~~THEN REPLY @551 /*"Right... I want to ask a more general question." */ DO~~ + g-bbD050.q
+IF~~THEN REPLY @552 /*"Right... I have to go now." */ DO~~ EXIT
 CHAIN IF~~THEN g-bbD050 g-bbD050.great
-@539 /*"Oh. If you want me to berate you on account of your faction or something, I'm not doing it. It's great that you have some convictions, congratulations." */
+@554 /*"Oh. If you want me to berate you on account of your faction or something, I'm not doing it. It's great that you have some convictions, congratulations." */
 END
-IF~~THEN REPLY @541 /*"Do you think I could become a Doomguard?" */ DO~~ + g-bbD050.join
-IF~~THEN REPLY @542 /*"Right... I want to tackle another aspect of philosophy." */ DO~~ + g-bbD050.philoini
-IF~~THEN REPLY @543 /*"Right... I want to ask a more general question." */ DO~~ + g-bbD050.q
-IF~~THEN REPLY @544 /*"Right... I have to go now." */ DO~~ EXIT
+IF~~THEN REPLY @556 /*"Do you think I could become a Doomguard?" */ DO~~ + g-bbD050.join
+IF~~THEN REPLY @557 /*"Right... I want to tackle another aspect of philosophy." */ DO~~ + g-bbD050.philoini
+IF~~THEN REPLY @558 /*"Right... I want to ask a more general question." */ DO~~ + g-bbD050.q
+IF~~THEN REPLY @559 /*"Right... I have to go now." */ DO~~ EXIT
 CHAIN IF~~THEN g-bbD050 g-bbD050.qmoa
-@546 /*"My... tattoo? You have many more than I do, and they seem a lot more interesting." */
+@561 /*"My... tattoo? You have many more than I do, and they seem a lot more interesting." */
 END
-IF~Global("G-AkRigus","GLOBAL",0)~THEN REPLY @548 /*"I wish I could tell you about them, but the truth is that I don't remember getting any of them, apart from a few Fell did recently." */ DO~~ + g-bbD050.aww
-IF~Global("G-AkRigus","GLOBAL",1) Global("g-pale_woman_quest","GLOBAL",1)~THEN REPLY @549 /*"I wish I could tell you about them, but the truth is that I don't remember getting any of them, apart from a few Fell did recently. I recently remembered that I had one from Rigus, but that one was destroyed." */ DO~IncrementGlobal("G-Belle_curious","GLOBAL",3)~ + g-bbD050.rigus
-IF~CheckStatGT(Protagonist,15,CHR) Global("g-pale_woman_quest","GLOBAL",1)~THEN REPLY @550 /*"The fact that there is just one, and that it's so small, is why I believe it carries meaning. A single flower blooming on a rose bush draws more attention than one hidden among an army of other flowers." */ DO~IncrementGlobal("G-Belle_curious","GLOBAL",1)~ + g-bbD050.tattooexplainALT
-IF~!CheckStatGT(Protagonist,15,CHR)~THEN REPLY @551 /*"Tattoos don't look half as good on me as they do on such a pretty lady." */ DO~~ + g-bbD050.lady2
-IF~~THEN REPLY @552 /*"I have another question." */ DO~~ + g-bbD050.q
-IF~~THEN REPLY @553 /*"I have to go now." */ DO~~ EXIT
+IF~Global("G-AkRigus","GLOBAL",0)~THEN REPLY @563 /*"I wish I could tell you about them, but the truth is that I don't remember getting any of them, apart from a few Fell did recently." */ DO~~ + g-bbD050.aww
+IF~Global("G-AkRigus","GLOBAL",1) Global("g-pale_woman_quest","GLOBAL",1)~THEN REPLY @564 /*"I wish I could tell you about them, but the truth is that I don't remember getting any of them, apart from a few Fell did recently. I recently remembered that I had one from Rigus, but that one was destroyed." */ DO~IncrementGlobal("G-Belle_curious","GLOBAL",3)~ + g-bbD050.rigus
+IF~CheckStatGT(Protagonist,15,CHR) Global("g-pale_woman_quest","GLOBAL",1)~THEN REPLY @565 /*"The fact that there is just one, and that it's so small, is why I believe it carries meaning. A single flower blooming on a rose bush draws more attention than one hidden among an army of other flowers." */ DO~IncrementGlobal("G-Belle_curious","GLOBAL",1)~ + g-bbD050.tattooexplainALT
+IF~!CheckStatGT(Protagonist,15,CHR)~THEN REPLY @566 /*"Tattoos don't look half as good on me as they do on such a pretty lady." */ DO~~ + g-bbD050.lady2
+IF~~THEN REPLY @567 /*"I have another question." */ DO~~ + g-bbD050.q
+IF~~THEN REPLY @568 /*"I have to go now." */ DO~~ EXIT
 CHAIN IF~~THEN g-bbD050 g-bbD050.aww
-@555 /*The woman openly feigns concern. "Oh, poor you. Well Fell is pretty good. Mine isn't from Sigil." */
+@570 /*The woman openly feigns concern. "Oh, poor you. Well Fell is pretty good. Mine isn't from Sigil." */
 END
-IF~CheckStatGT(Protagonist,15,CHR) Global("g-pale_woman_quest","GLOBAL",1)~THEN REPLY @557 /*"Wherever it's from, it has to be meaningful if one as interesting and mysterious as you decided to get it." */ DO~IncrementGlobal("G-Belle_curious","GLOBAL",1)~ + g-bbD050.tattooexplain
-IF~!CheckStatGT(Protagonist,15,CHR)~THEN REPLY @558 /*"Wherever it's from, it looks great on such a pretty lady." */ DO~~ + g-bbD050.lady2
-IF~~THEN REPLY @559 /*"I have another question." */ DO~~ + g-bbD050.q
-IF~~THEN REPLY @560 /*"I have to go now." */ DO~~ EXIT
+IF~CheckStatGT(Protagonist,15,CHR) Global("g-pale_woman_quest","GLOBAL",1)~THEN REPLY @572 /*"Wherever it's from, it has to be meaningful if one as interesting and mysterious as you decided to get it." */ DO~IncrementGlobal("G-Belle_curious","GLOBAL",1)~ + g-bbD050.tattooexplain
+IF~!CheckStatGT(Protagonist,15,CHR)~THEN REPLY @573 /*"Wherever it's from, it looks great on such a pretty lady." */ DO~~ + g-bbD050.lady2
+IF~~THEN REPLY @574 /*"I have another question." */ DO~~ + g-bbD050.q
+IF~~THEN REPLY @575 /*"I have to go now." */ DO~~ EXIT
 CHAIN IF~~THEN g-bbD050 g-bbD050.rigus
-@562 /*"Oh?" The mention of Rigus seems to pique her interest. */
+@577 /*"Oh?" The mention of Rigus seems to pique her interest. */
 END
-IF~~THEN REPLY @564 /*Recount what you can remember about the bladeling woman from Rigus.  */ DO~~ + g-bbD050.rigus2
+IF~~THEN REPLY @579 /*Recount what you can remember about the bladeling woman from Rigus.  */ DO~~ + g-bbD050.rigus2
 CHAIN IF~~THEN g-bbD050 g-bbD050.rigus2
-@566 /*You describe your vague memory of arrival in Rigus, its raw, geometrical structure, the everpresent influence of hierarchy and perfectionism. And then the perfection of the tattoo. You show her where it once was on your back, now just a large burn scar. She examines the spot with fascination. */
-=@567 /*"I heard about her, the Rigus bladeling. She died many years before I ended up in the planes, but people in my circles still talk about her to this day. She was from Acheron, and yet she hated baatezu, archons, and other ultra-law-abiding snobs." She stares off into the water, sighing. "I heard she was a cartographer, that she tried to map the Outlands. But the Outlands are constantly changing... so after years of trial and error, she settled in Rigus. She had experience mapping impossible places, so she began creating... impossible tattoos. I wish I'd known her." */
-=@568 /*She looks back to you and smiles softly. "Even if you don't recall it, I envy the experience." */
+@581 /*You describe your vague memory of arrival in Rigus, its raw, geometrical structure, the everpresent influence of hierarchy and perfectionism. And then the perfection of the tattoo. You show her where it once was on your back, now just a large burn scar. She examines the spot with fascination. */
+=@582 /*"I heard about her, the Rigus bladeling. She died many years before I ended up in the planes, but people in my circles still talk about her to this day. She was from Acheron, and yet she hated baatezu, archons, and other ultra-law-abiding snobs." She stares off into the water, sighing. "I heard she was a cartographer, that she tried to map the Outlands. But the Outlands are constantly changing... so after years of trial and error, she settled in Rigus. She had experience mapping impossible places, so she began creating... impossible tattoos. I wish I'd known her." */
+=@583 /*She looks back to you and smiles softly. "Even if you don't recall it, I envy the experience." */
 END
-IF~~THEN REPLY @570 /*"So, what does your tattoo mean? Surely it's at least as interesting?" */ DO~~ + g-bbD050.tattooexplain
+IF~~THEN REPLY @585 /*"So, what does your tattoo mean? Surely it's at least as interesting?" */ DO~~ + g-bbD050.tattooexplain
 CHAIN IF~~THEN g-bbD050 g-bbD050.tattooexplain
-@572 /*She smiles and blushes slightly, which has a striking effect on her pale complexion. "Funny that you should use that particular comparison... Both a single rose and that hand are symbols of my god. I got that tattoo years ago, back in Yulash, from a fellow believer. That was before my dear patron deity was assaulted back in their home plane and our people so persecuted that I had to flee. Eventually, I fled the whole Material Plane and found my way here." */
+@587 /*She smiles and blushes slightly, which has a striking effect on her pale complexion. "Funny that you should use that particular comparison... Both a single rose and that hand are symbols of my god. I got that tattoo years ago, back in Yulash, from a fellow believer. That was before my dear patron deity was assaulted back in their home plane and our people so persecuted that I had to flee. Eventually, I fled the whole Material Plane and found my way here." */
 END
-IF~~THEN REPLY @574 /*"Who is your patron deity?" */ DO~~ + g-bbD050.tattooexplain2
-IF~GlobalGT("G-Belle_curious","GLOBAL",3)~THEN REPLY @575 /*"You were persecuted for your beliefs? That's awful." */ DO~SetGlobal("G-Belle_sympahtetic","GLOBAL",1)~ + g-bbD050.tattooexplainS
-IF~!GlobalGT("G-Belle_curious","GLOBAL",3)~THEN REPLY @576 /*"You were persecuted for your beliefs? That's awful." */ DO~~ + g-bbD050.tattooexplainF
+IF~~THEN REPLY @589 /*"Who is your patron deity?" */ DO~~ + g-bbD050.tattooexplain2
+IF~GlobalGT("G-Belle_curious","GLOBAL",3)~THEN REPLY @590 /*"You were persecuted for your beliefs? That's awful." */ DO~SetGlobal("G-Belle_sympahtetic","GLOBAL",1)~ + g-bbD050.tattooexplainS
+IF~!GlobalGT("G-Belle_curious","GLOBAL",3)~THEN REPLY @591 /*"You were persecuted for your beliefs? That's awful." */ DO~~ + g-bbD050.tattooexplainF
 CHAIN IF~~THEN g-bbD050 g-bbD050.tattooexplainALT
-@578 /*She smiles and blushes slightly, which has a striking effect on her pale complexion. "Funny that you should use that particular comparison... Both a single rose and that hand are symbols of my god. I got that tattoo years ago, back in Yulash, from a fellow believer. That was before my dear patron deity was assaulted back in their home plane and our people so persecuted that I had to flee. Eventually, I fled the whole Material Plane and found my way here." */
+@593 /*She smiles and blushes slightly, which has a striking effect on her pale complexion. "Funny that you should use that particular comparison... Both a single rose and that hand are symbols of my god. I got that tattoo years ago, back in Yulash, from a fellow believer. That was before my dear patron deity was assaulted back in their home plane and our people so persecuted that I had to flee. Eventually, I fled the whole Material Plane and found my way here." */
 END
-IF~~THEN REPLY @580 /*"Who is your patron deity?" */ DO~~ + g-bbD050.tattooexplain2
-IF~GlobalGT("G-Belle_curious","GLOBAL",3)~THEN REPLY @581 /*"You were persecuted for your beliefs? That's awful." */ DO~SetGlobal("G-Belle_sympahtetic","GLOBAL",1)~ + g-bbD050.tattooexplainS
-IF~!GlobalGT("G-Belle_curious","GLOBAL",3)~THEN REPLY @582 /*"You were persecuted for your beliefs? That's awful." */ DO~~ + g-bbD050.tattooexplainF
+IF~~THEN REPLY @595 /*"Who is your patron deity?" */ DO~~ + g-bbD050.tattooexplain2
+IF~GlobalGT("G-Belle_curious","GLOBAL",3)~THEN REPLY @596 /*"You were persecuted for your beliefs? That's awful." */ DO~SetGlobal("G-Belle_sympahtetic","GLOBAL",1)~ + g-bbD050.tattooexplainS
+IF~!GlobalGT("G-Belle_curious","GLOBAL",3)~THEN REPLY @597 /*"You were persecuted for your beliefs? That's awful." */ DO~~ + g-bbD050.tattooexplainF
 CHAIN IF~~THEN g-bbD050 g-bbD050.tattooexplain2
-@584 /*Her expression grows stern. "I'd rather not say. I've found it's better not to - they are not the most *popular* power." */
+@599 /*Her expression grows stern. "I'd rather not say. I've found it's better not to - they are not the most *popular* power." */
 END
-IF~GlobalGT("G-kiaransaleeworship","GLOBAL",8000)~THEN REPLY @586 /*"I follow Kiaransalee, is your god 'worse' than that?" */ DO~SetGlobal("G-Belle_sympahtetic","GLOBAL",1) AddexperienceParty(80000) ~ + g-bbD050.kiaran
-IF~GlobalGT("G-Belle_curious","GLOBAL",3)~THEN REPLY @587 /*"I see. So you were persecuted for your beliefs? That's awful." */ DO~SetGlobal("G-Belle_sympahtetic","GLOBAL",1) AddexperienceParty(50000)~ + g-bbD050.tattooexplainS
-IF~!GlobalGT("G-Belle_curious","GLOBAL",3)~THEN REPLY @588 /*"I see. So you were persecuted for your beliefs? That's awful." */ DO~~ + g-bbD050.tattooexplainF
+IF~GlobalGT("G-kiaransaleeworship","GLOBAL",8000)~THEN REPLY @601 /*"I follow Kiaransalee, is your god 'worse' than that?" */ DO~SetGlobal("G-Belle_sympahtetic","GLOBAL",1) AddexperienceParty(80000) ~ + g-bbD050.kiaran
+IF~GlobalGT("G-Belle_curious","GLOBAL",3) Global("G-Belle_pity","GLOBAL",0)~THEN REPLY @602 /*"I see. So you were persecuted for your beliefs? That's awful." */ DO~SetGlobal("G-Belle_sympahtetic","GLOBAL",1) AddexperienceParty(50000)  SetGlobal("G-Belle_pity","GLOBAL",1)~ + g-bbD050.tattooexplainS
+IF~Global("G-Belle_pity","GLOBAL",1)~THEN REPLY @603 /*"I see. So you were persecuted for your beliefs? That's awful." */ DO~~ + g-bbD050.tattooexplainS
+IF~!GlobalGT("G-Belle_curious","GLOBAL",3)~THEN REPLY @604 /*"I see. So you were persecuted for your beliefs? That's awful." */ DO~~ + g-bbD050.tattooexplainF
 CHAIN IF~~THEN g-bbD050 g-bbD050.tattooexplainS
-@590 /*It is clear that nobody has ever expressed this kind of concern for her, and hearing such a statement causes a mild shock. Her stern and cold mask of irony slips for a second, and you see a sensitive, lost soul. She quickly regains her composure. "Indeed, it was awful. Maybe in the future we can discuss this further..." */
+@606 /*It is clear that nobody has ever expressed this kind of concern for her, and hearing such a statement causes a mild shock. Her stern and cold mask of irony slips for a second, and you see a sensitive, lost soul. She quickly regains her composure. "Indeed, it was awful. Maybe in the future we can discuss this further..." */
 END
-IF~Global("G-know_moander","GLOBAL",1) GlobalGT("G-Belle_sympahtetic","GLOBAL",0)~THEN REPLY @592 /*"How about now? Tell me about your god, Moander." */ DO~SetGlobal("G-belle_talk_moander","GLOBAL",1) SetGlobal("g-pale_woman_quest","GLOBAL",3)~ SOLVED_JOURNAL @20213 + g-bbD050.qmoa1
-IF~~THEN REPLY @593 /*"I have another question." */ DO~SetGlobal("g-pale_woman_quest","GLOBAL",3)~ SOLVED_JOURNAL @20213 + g-bbD050.q
-IF~~THEN REPLY @594 /*"I have to go now." */ DO~SetGlobal("g-pale_woman_quest","GLOBAL",3)~ SOLVED_JOURNAL @20213 EXIT
+IF~Global("G-know_moander","GLOBAL",1) GlobalGT("G-Belle_sympahtetic","GLOBAL",0)~THEN REPLY @608 /*"How about now? Tell me about your god, Moander." */ DO~SetGlobal("G-belle_talk_moander","GLOBAL",1) SetGlobal("g-pale_woman_quest","GLOBAL",3)~ SOLVED_JOURNAL @20213 + g-bbD050.qmoa1
+IF~~THEN REPLY @609 /*"I have another question." */ DO~SetGlobal("g-pale_woman_quest","GLOBAL",3)~ SOLVED_JOURNAL @20213 + g-bbD050.q
+IF~~THEN REPLY @610 /*"I have to go now." */ DO~SetGlobal("g-pale_woman_quest","GLOBAL",3)~ SOLVED_JOURNAL @20213 EXIT
 CHAIN IF~~THEN g-bbD050 g-bbD050.kiaran
-@596 /*"Kiaransalee?" The woman seems shocked at first, but then curious. "That is... *bad*." She laughs, with actual joy. "I jest, of course. She is a formidable power, good for you, so brave to openly admit it. Maybe... in the future we can talk more about worship..." */
+@612 /*"Kiaransalee?" The woman seems shocked at first, but then curious. "That is... *bad*." She laughs, with actual joy. "I jest, of course. She is a formidable power, good for you, so brave to openly admit it. Maybe... in the future we can talk more about worship..." */
 END
-IF~Global("G-know_moander","GLOBAL",1) GlobalGT("G-Belle_sympahtetic","GLOBAL",0)~THEN REPLY @598 /*"How about now? Tell me about your god, Moander." */ DO~SetGlobal("G-belle_talk_moander","GLOBAL",1) SetGlobal("g-pale_woman_quest","GLOBAL",3)~ SOLVED_JOURNAL @20213 + g-bbD050.qmoa1
-IF~~THEN REPLY @599 /*"I have another question." */ DO~SetGlobal("g-pale_woman_quest","GLOBAL",3)~ SOLVED_JOURNAL @20213 + g-bbD050.q
-IF~~THEN REPLY @600 /*"I have to go now." */ DO~SetGlobal("g-pale_woman_quest","GLOBAL",3)~ SOLVED_JOURNAL @20213 EXIT
+IF~Global("G-know_moander","GLOBAL",1) GlobalGT("G-Belle_sympahtetic","GLOBAL",0)~THEN REPLY @614 /*"How about now? Tell me about your god, Moander." */ DO~SetGlobal("G-belle_talk_moander","GLOBAL",1) SetGlobal("g-pale_woman_quest","GLOBAL",3)~ SOLVED_JOURNAL @20213 + g-bbD050.qmoa1
+IF~~THEN REPLY @615 /*"I have another question." */ DO~SetGlobal("g-pale_woman_quest","GLOBAL",3)~ SOLVED_JOURNAL @20213 + g-bbD050.q
+IF~~THEN REPLY @616 /*"I have to go now." */ DO~SetGlobal("g-pale_woman_quest","GLOBAL",3)~ SOLVED_JOURNAL @20213 EXIT
 CHAIN IF~~THEN g-bbD050 g-bbD050.tattooexplainF
-@602 /*"I don't need your pity, rotten man. It's in the past." She scoffs. "Good talk, though. You got any other interesting topics left? Or just screed?" */
+@618 /*"I don't need your pity, rotten man. It's in the past." She scoffs. "Good talk, though. You got any other interesting topics left? Or just screed?" */
 END
-IF~~THEN REPLY @604 /*"Yes, I have another question." */ DO~~ + g-bbD050.q
-IF~~THEN REPLY @605 /*"Just screed. I have to go now." */ DO~~ EXIT
+IF~~THEN REPLY @620 /*"Yes, I have another question." */ DO~~ + g-bbD050.q
+IF~~THEN REPLY @621 /*"Just screed. I have to go now." */ DO~~ EXIT
 CHAIN IF~~THEN g-bbD050 g-bbD050.lady2
-@607 /*"Lady?" The woman sounds offended. "I am nobody's lady. This conversation is over." */
+@623 /*"Lady?" The woman sounds offended. "I am nobody's lady. This conversation is over." */
 END
-IF~~THEN REPLY @609 /*"But... I have more questions...." */ DO~SetGlobal("G-ask_monader","GLOBAL",2)~ + g-bbD050.pikeoff
-IF~~THEN REPLY @610 /*"Fine... farewell." */ DO~SetGlobal("G-ask_monader","GLOBAL",2)~ EXIT
+IF~~THEN REPLY @625 /*"But... I have more questions..." */ DO~SetGlobal("G-ask_monader","GLOBAL",2)~ + g-bbD050.pikeoff
+IF~~THEN REPLY @626 /*"Fine... farewell." */ DO~SetGlobal("G-ask_monader","GLOBAL",2)~ EXIT
 CHAIN IF~~THEN g-bbD050 g-bbD050.pikeoff
-@612 /*"Pike off, rotten man." */
+@628 /*"Pike off, rotten man." */
 EXIT
 CHAIN IF~~THEN g-bbD050 g-bbD050.qmoaalt
-@615 /*"My tiny tattoo? You're covered in them, and surely they possess a lot more stories. Why don't we talk about *them*, huh?" */
+@631 /*"My tiny tattoo? You're covered in them, and surely they possess a lot more stories. Why don't we talk about *them*, huh?" */
 END
-IF~Global("G-AkRigus","GLOBAL",0) ~THEN REPLY @617 /*"I wish I could tell you about them, but the truth is that I don't remember getting any of them, apart from a few Fell did recently." */ DO~~ + g-bbD050.aww
-IF~Global("G-AkRigus","GLOBAL",1)~THEN REPLY @618 /*"I wish I could tell you about them, but the truth is that I don't remember getting any of them, apart from a few Fell did recently. I recently remembered that I had one from Rigus, but that one was destroyed." */ DO~IncrementGlobal("G-Belle_curious","GLOBAL",3)~ + g-bbD050.rigus
-IF~CheckStatGT(Protagonist,15,CHR)~THEN REPLY @619 /*"The fact that there is just one, and that it's so small, is why I believe it carries meaning. A single flower blooming on a rose bush draws more attention than one hidden among an army of other flowers." */ DO~IncrementGlobal("G-Belle_curious","GLOBAL",1)~ + g-bbD050.tattooexplainALT
-IF~!CheckStatGT(Protagonist,15,CHR)~THEN REPLY @620 /*"Tattoos don't look half as good on me as they do on such a pretty lady." */ DO~~ + g-bbD050.lady2
-IF~~THEN REPLY @621 /*"Maybe another time. I want to ask you about something else." */ DO~~ + g-bbD050.q
-IF~~THEN REPLY @622 /*"Maybe another time... I have to go now." */ DO~~ EXIT
+IF~Global("G-AkRigus","GLOBAL",0) ~THEN REPLY @633 /*"I wish I could tell you about them, but the truth is that I don't remember getting any of them, apart from a few Fell did recently." */ DO~~ + g-bbD050.aww
+IF~Global("G-AkRigus","GLOBAL",1)~THEN REPLY @634 /*"I wish I could tell you about them, but the truth is that I don't remember getting any of them, apart from a few Fell did recently. I recently remembered that I had one from Rigus, but that one was destroyed." */ DO~IncrementGlobal("G-Belle_curious","GLOBAL",3)~ + g-bbD050.rigus
+IF~CheckStatGT(Protagonist,15,CHR)~THEN REPLY @635 /*"The fact that there is just one, and that it's so small, is why I believe it carries meaning. A single flower blooming on a rose bush draws more attention than one hidden among an army of other flowers." */ DO~IncrementGlobal("G-Belle_curious","GLOBAL",1)~ + g-bbD050.tattooexplainALT
+IF~!CheckStatGT(Protagonist,15,CHR)~THEN REPLY @636 /*"Tattoos don't look half as good on me as they do on such a pretty lady." */ DO~~ + g-bbD050.lady2
+IF~~THEN REPLY @637 /*"Maybe another time. I want to ask you about something else." */ DO~~ + g-bbD050.q
+IF~~THEN REPLY @638 /*"Maybe another time... I have to go now." */ DO~~ EXIT
 CHAIN IF~~THEN g-bbD050 g-bbD050.qmoa1
-@624 /*"Oh. Is it time to have *that* discussion?" The pale woman seems excited, but also a bit apprehensive. She may be afraid of what you will think of her after this exchange. */
-==DMorte IF ~InParty("Morte") !StateCheck("Morte",CD_STATE_NOTVALID) NearbyDialog("DMorte")~ THEN @625 /*"Chief, your questions are draining all the color from her cheeks. Oh wait..." */
+@640 /*"Oh. Is it time to have *that* discussion?" The pale woman seems excited, but also a bit apprehensive. She may be afraid of what you will think of her after this exchange. */
+==DMorte IF ~InParty("Morte") !StateCheck("Morte",CD_STATE_NOTVALID) NearbyDialog("DMorte")~ THEN @641 /*"Chief, your questions are draining all the color from her cheeks. Oh wait..." */
 END
-IF~~THEN REPLY @627 /*"Let's talk. You have nothing to worry about." */ DO~~ + g-bbD050.qmoa1ini
-IF~~THEN REPLY @628 /*"I have to see if you pose any danger to the city." */ DO~SetGlobal("G-Belle_curious","GLOBAL",0) SetGlobal("G-Belle_sympahtetic","GLOBAL",0) EscapeArea()~ + g-bbD050.pikeoffhard
-IF~~THEN REPLY @629 /*"Maybe not... Let's talk about something else." */ DO~~ + g-bbD050.q
+IF~~THEN REPLY @643 /*"Let's talk. You have nothing to worry about." */ DO~~ + g-bbD050.qmoa1ini
+IF~~THEN REPLY @644 /*"I have to see if you pose any danger to the city." */ DO~SetGlobal("G-Belle_curious","GLOBAL",0) SetGlobal("G-Belle_sympahtetic","GLOBAL",0) EscapeArea()~ + g-bbD050.pikeoffhard
+IF~~THEN REPLY @645 /*"Maybe not... Let's talk about something else." */ DO~~ + g-bbD050.q
 CHAIN IF~~THEN g-bbD050 g-bbD050.pikeoffhard
-@631 /*"Oh, what? Are you piking serious?! Be gone." */
+@647 /*"Oh, what? Are you piking serious?! Be gone." */
 EXIT
 CHAIN IF~~THEN g-bbD050 g-bbD050.qmoa1ini
-@634 /*"All right..." I guess I never truly told the story of myself and Moander to anyone. Not even to my Doomguard friends. They are too blinded by Entropy. But you seem... different." */
-==g-bbd050 IF~Global("G-Belle_name","GLOBAL",0)~THEN @635 /*"My name is Belle, by the way... I guess I am telling you that, too." */
-=@636 /*"Moander is a deity worshiped by my people back on the Prime Material plane. Moander is a god of rot and decay, older than any other god. My people's tales say that when gods first came to the planes, Moander was already there. And, at the end of time, when the multiverse dissolves as the Doomguard anticipate, Moander will be all that's left." */
+@650 /*"All right..." I guess I never truly told the story of myself and Moander to anyone. Not even to my Doomguard friends. They are too blinded by Entropy. But you seem... different." */
+==g-bbd050 IF~Global("G-Belle_name","GLOBAL",0)~THEN @651 /*"My name is Belle, by the way... I guess I am telling you that, too." */
+=@652 /*"Moander is a deity worshiped by my people back on the Prime Material plane. Moander is a god of rot and decay, older than any other god. My people's tales say that when gods first came to the planes, Moander was already there. And, at the end of time, when the multiverse dissolves as the Doomguard anticipate, Moander will be all that's left." */
 END
-IF~~THEN REPLY @639 /*Listen. */ DO~SetGlobal("G-Belle_name","GLOBAL",1)~ + g-bbD050.qmoa1inicont
-IF~Global("G-kiaran_moander_conflict","GLOBAL",0) GlobalGT("G-kiaransaleeworship","GLOBAL",3000)~THEN REPLY @640 /*"My goddess and her army is what's going to be left in the end. The unity of the multiverse will be that of undeath, rather than a pile of rotting garbage." */ DO~SetGlobal("G-Belle_name","GLOBAL",1) SetGlobal("G-kiaran_moander_conflict","GLOBAL",1)  SetGlobal("g-pale_woman_quest","GLOBAL",7)~ SOLVED_JOURNAL @20217 + g-bbD050.worshipconflict
+IF~~THEN REPLY @655 /*Listen. */ DO~SetGlobal("G-Belle_name","GLOBAL",1)~ + g-bbD050.qmoa1inicont
+IF~Global("G-kiaran_moander_conflict","GLOBAL",0) GlobalGT("G-kiaransaleeworship","GLOBAL",3000)~THEN REPLY @656 /*"My goddess and her army is what's going to be left in the end. The unity of the multiverse will be that of undeath, rather than a pile of rotting garbage." */ DO~SetGlobal("G-Belle_name","GLOBAL",1) SetGlobal("G-kiaran_moander_conflict","GLOBAL",1)  SetGlobal("g-pale_woman_quest","GLOBAL",7)~ SOLVED_JOURNAL @20217 + g-bbD050.worshipconflict
 CHAIN IF~~THEN g-bbD050 g-bbD050.worshipconflict
-@642 /*"Then we have nothing to talk about. Ever." */
+@658 /*"Then we have nothing to talk about. Ever." */
 EXIT
 CHAIN IF~~THEN g-bbD050 g-bbD050.qmoa1inicont
-@645 /*"Of course... Moander's avatars and depictions are ugly to the unschooled eye. Their latest efforts to unite us all in their image were deemed to be some evil, destructive plan, while in reality it was an act of creation. And in that misunderstanding, a conspiracy against their following was born." */
-=@646 /*"As a result, some upstart demigod supposedly killed Moander in their home in the Abyss, but I cannot believe that. You cannot kill the Darkbringer. They are inevitable. They went into hiding and they will return, when the time is right. This amulet is a sign that this time might be approaching." */
-=@647 /*"I am in hiding, too. I am deemed a criminal throughout my original world, just for worshiping the only god that makes sense. My tattoo is a testament to my conviction. Luckily, I was born a tiefling, so the planes accepted me and Sigil can be my refuge while I bide my time and await Moander's return." */
+@661 /*"Of course... Moander's avatars and depictions are ugly to the unschooled eye. Their latest efforts to unite us all in their image were deemed to be some evil, destructive plan, while in reality it was an act of creation. And in that misunderstanding, a conspiracy against their following was born." */
+=@662 /*"As a result, some upstart demigod supposedly killed Moander in their home in the Abyss, but I cannot believe that. You cannot kill the Darkbringer. They are inevitable. They went into hiding and they will return, when the time is right. This amulet is a sign that this time might be approaching." */
+=@663 /*"I am in hiding, too. I am deemed a criminal throughout my original world, just for worshiping the only god that makes sense. My tattoo is a testament to my conviction. Luckily, I was born a tiefling, so the planes accepted me and Sigil can be my refuge while I bide my time and await Moander's return." */
 END
-IF~~THEN REPLY @649 /*"Thank you for your trust. It won't change my opinion of you." */ DO~SetGlobal("G-Belle_sympahtetic","GLOBAL",3)~ + g-bbD050.qmoa1inifinale
-IF~~THEN REPLY @650 /*"Thank you for that. Unfortunately, you are a danger to this city, so you *do* have to die." */ DO~IncrementGlobal("LAW","GLOBAL",1) Enemy()
+IF~~THEN REPLY @665 /*"Thank you for your trust. It won't change my opinion of you." */ DO~SetGlobal("G-Belle_sympahtetic","GLOBAL",3)~ + g-bbD050.qmoa1inifinale
+IF~~THEN REPLY @666 /*"Thank you for that. Unfortunately, you are a danger to this city, so you *do* have to die." */ DO~IncrementGlobal("LAW","GLOBAL",1) Enemy()
 ForceAttack(Protagonist,Myself)  SetGlobal("g-pale_woman_quest","GLOBAL",7)~ SOLVED_JOURNAL @20217 EXIT
-IF~Global("G-kiaran_moander_conflict","GLOBAL",0) GlobalGT("G-kiaransaleeworship","GLOBAL",3000)~THEN REPLY @651 /*"Claiming that only your god makes sense is heresy to the Lady of the Dead, who is the bravest and most just in the planes." */ DO~SetGlobal("G-Belle_name","GLOBAL",1) SetGlobal("G-kiaran_moander_conflict","GLOBAL",1)  SetGlobal("g-pale_woman_quest","GLOBAL",7)~ SOLVED_JOURNAL @20217 + g-bbD050.worshipconflict
+IF~Global("G-kiaran_moander_conflict","GLOBAL",0) GlobalGT("G-kiaransaleeworship","GLOBAL",3000)~THEN REPLY @667 /*"Claiming that only your god makes sense is heresy to the Lady of the Dead, who is the bravest and most just in the planes." */ DO~SetGlobal("G-Belle_name","GLOBAL",1) SetGlobal("G-kiaran_moander_conflict","GLOBAL",1)  SetGlobal("g-pale_woman_quest","GLOBAL",7)~ SOLVED_JOURNAL @20217 + g-bbD050.worshipconflict
 CHAIN IF~~THEN g-bbD050 g-bbD050.qmoa1inifinale
-@653 /*Belle grasps your hand in hers. Her skin is cold to the touch - not icy like the undead, but cold for a humanoid. */
-==g-bbd050 IF~Global("g-belleknowsourname","GLOBAL",2)~THEN @654 /*"Thank you, that means a lot to me. And I don't even know your name, although... you don't know it either, so there's nothing we can do about it." */
-==g-bbd050 IF~Global("g-belleknowsourname","GLOBAL",1)~THEN @655 /*"Thank you, that means a lot to me. And you haven't even told me your real name..." */
-==g-bbd050 IF~Global("G-know_moander_pilgrimage","GLOBAL",1)~THEN @656 /*"I should get ready to leave. Me and some of my old friends are off to Offalmound soon. Your amulet will be a centerpiece of our ceremonies." */
-==g-bbd050 IF~!Global("G-know_moander_pilgrimage","GLOBAL",1)~THEN @657 /*"I should get ready to leave. Me and some of my old friends are off to Offalmound, the home realm of Moander in the Abyss. Your amulet will be a centerpiece of our ceremonies." */
-==g-bbd050 @658 /*The woman gazes at the water flowing slowly at the foot of the cliff. "It's a shame that it's time for me to leave. This could have been an interesting acquaintanceship..." */
+@669 /*Belle grasps your hand in hers. Her skin is cold to the touch - not icy like the undead, but cold for a humanoid. */
+==g-bbd050 IF~Global("g-belleknowsourname","GLOBAL",2)~THEN @670 /*"Thank you, that means a lot to me. And I don't even know your name, although... you don't know it either, so there's nothing we can do about it." */
+==g-bbd050 IF~Global("g-belleknowsourname","GLOBAL",1)~THEN @671 /*"Thank you, that means a lot to me. And you haven't even told me your real name..." */
+==g-bbd050 IF~Global("G-know_moander_pilgrimage","GLOBAL",1)~THEN @672 /*"I should get ready to leave. Me and some of my old friends are off to Offalmound soon. Your amulet will be a centerpiece of our ceremonies." */
+==g-bbd050 IF~!Global("G-know_moander_pilgrimage","GLOBAL",1)~THEN @673 /*"I should get ready to leave. Me and some of my old friends are off to Offalmound, the home realm of Moander in the Abyss. Your amulet will be a centerpiece of our ceremonies." */
+==g-bbd050 @674 /*The woman gazes at the water flowing slowly at the foot of the cliff. "It's a shame that it's time for me to leave. This could have been an interesting acquaintanceship..." */
 END
-IF~Global("g-belleknowsourname","GLOBAL",1)~THEN REPLY @660 /*"Oh... In truth, I don't know my name. That's why I didn't tell you." */ DO~SetGlobal("g-belleknowsourname","GLOBAL",1)~ + g-bbD050.quicknameupdate
-IF~~THEN REPLY @661 /*"Will I see you again?" */ DO~SetGlobal("G-know_moander_pilgrimage","GLOBAL",1) AddexperienceParty(60000)  SetGlobal("g-pale_woman_quest","GLOBAL",8)~ SOLVED_JOURNAL @20218 + g-bbD050.qmoa1inifinale2
-IF~~THEN REPLY @662 /*"Have a pleasant journey, Belle." */ DO~AddexperienceParty(60000) EscapeArea() SetGlobal("g-pale_woman_quest","GLOBAL",8)~ SOLVED_JOURNAL @20218 EXIT
+IF~Global("g-belleknowsourname","GLOBAL",1)~THEN REPLY @676 /*"Oh... In truth, I don't know my name. That's why I didn't tell you." */ DO~SetGlobal("g-belleknowsourname","GLOBAL",1)~ + g-bbD050.quicknameupdate
+IF~~THEN REPLY @677 /*"Will I see you again?" */ DO~SetGlobal("G-know_moander_pilgrimage","GLOBAL",1) AddexperienceParty(60000)  SetGlobal("g-pale_woman_quest","GLOBAL",8)~ SOLVED_JOURNAL @20218 + g-bbD050.qmoa1inifinale2
+IF~~THEN REPLY @678 /*"Have a pleasant journey, Belle." */ DO~AddexperienceParty(60000) EscapeArea() SetGlobal("g-pale_woman_quest","GLOBAL",8)~ SOLVED_JOURNAL @20218 EXIT
 CHAIN IF~~THEN g-bbD050 g-bbD050.quicknameupdate
-@664 /*She looks amused. "Rotten on the outside, *and* the inside. At least the cover faithfully represents the contents of this book. Well... Nameless One..." Belle begins, but then falls silent, taking a deep breath. "It's time to say goodbye." */
+@680 /*She looks amused. "Rotten on the outside, *and* the inside. At least the cover faithfully represents the contents of this book. Well... Nameless One..." Belle begins, but then falls silent, taking a deep breath. "It's time to say goodbye." */
 END
-IF~~THEN REPLY @666 /*"Will I see you again?" */ DO~SetGlobal("G-know_moander_pilgrimage","GLOBAL",1) AddexperienceParty(60000)  SetGlobal("g-pale_woman_quest","GLOBAL",8)~ SOLVED_JOURNAL @20218 + g-bbD050.qmoa1inifinale2
-IF~~THEN REPLY @667 /*"Have a pleasant journey, Belle." */ DO~AddexperienceParty(60000) EscapeArea() SetGlobal("g-pale_woman_quest","GLOBAL",8)~ SOLVED_JOURNAL @20218 EXIT
+IF~~THEN REPLY @682 /*"Will I see you again?" */ DO~SetGlobal("G-know_moander_pilgrimage","GLOBAL",1) AddexperienceParty(60000)  SetGlobal("g-pale_woman_quest","GLOBAL",8)~ SOLVED_JOURNAL @20218 + g-bbD050.qmoa1inifinale2
+IF~~THEN REPLY @683 /*"Have a pleasant journey, Belle." */ DO~AddexperienceParty(60000) EscapeArea() SetGlobal("g-pale_woman_quest","GLOBAL",8)~ SOLVED_JOURNAL @20218 EXIT
 CHAIN IF~~THEN g-bbD050 g-bbD050.qmoa1inifinale2
-@669 /*She smiles. "Who knows, friend? What we know for sure is that our matter will be eventually reunited in the body of Moander. If we don't see each other before that, I will meet you there." */
+@685 /*She smiles. "Who knows, friend? What we know for sure is that our matter will be eventually reunited in the body of Moander. If we don't see each other before that, I will meet you there." */
 END
-IF~~THEN REPLY @671 /*"What a lovely sentiment. Have a pleasant journey, Belle." */ DO~AddexperienceParty(60000) EscapeArea()~ EXIT
+IF~~THEN REPLY @687 /*"What a lovely sentiment. Have a pleasant journey, Belle." */ DO~AddexperienceParty(60000) EscapeArea()~ EXIT
 CHAIN IF~~THEN g-bbD050 g-bbD050.confreso1
-@673 /*"Of course I heard. Let them live. I wonder where they'll end up. I'm sure they will still get themselves in trouble somehow." */
+@689 /*"Of course I heard. Let them live. I wonder where they'll end up. I'm sure they will still get themselves in trouble somehow." */
 END
-IF~~THEN REPLY @675 /*"Aren't you happy?" */ DO~~ + g-bbD050.confreso1a
-IF~~THEN REPLY @676 /*"Right... I have another question." */ DO~~ + g-bbD050.q
-IF~~THEN REPLY @677 /*"Right... I have to go now." */ DO~~ EXIT
-CHAIN IF~~THEN g-bbD050 g-bbD050.confreso1a
-@679 /*The pale woman shrugs. "I am not *UN*happy. They're going to get themselves killed eventually." */
-END
-IF~~THEN REPLY @681 /*"Right... I have another question." */ DO~~ + g-bbD050.q
-IF~~THEN REPLY @682 /*"Right... I have to go now." */ DO~~ EXIT
-CHAIN IF~~THEN g-bbD050 g-bbD050.confreso2
-@684 /*"Of course I heard. Shame, but Haer'Dalis had it coming. He loved to make people's blood boil. Raelis is a different story. She's a real loss."  */
-END
-IF~~THEN REPLY @686 /*"You don't seem very upset about his death." */ DO~~ + g-bbD050.confreso2a
-IF~~THEN REPLY @687 /*"Right... I have another question." */ DO~~ + g-bbD050.q
-IF~~THEN REPLY @688 /*"Right... I have to go now." */ DO~~ EXIT
-CHAIN IF~~THEN g-bbD050 g-bbD050.confreso2a
-@690 /*The pale woman shrugs. "I am not *happy* that he's dead. But he was going to get himself killed one way or another." */
-END
+IF~~THEN REPLY @691 /*"Aren't you happy?" */ DO~~ + g-bbD050.confreso1a
 IF~~THEN REPLY @692 /*"Right... I have another question." */ DO~~ + g-bbD050.q
 IF~~THEN REPLY @693 /*"Right... I have to go now." */ DO~~ EXIT
+CHAIN IF~~THEN g-bbD050 g-bbD050.confreso1a
+@695 /*The pale woman shrugs. "I am not *UN*happy. They're going to get themselves killed eventually." */
+END
+IF~~THEN REPLY @697 /*"Right... I have another question." */ DO~~ + g-bbD050.q
+IF~~THEN REPLY @698 /*"Right... I have to go now." */ DO~~ EXIT
+CHAIN IF~~THEN g-bbD050 g-bbD050.confreso2
+@700 /*"Of course I heard. Shame, but Haer'Dalis had it coming. He loved to make people's blood boil. Raelis is a different story. She's a real loss."  */
+END
+IF~~THEN REPLY @702 /*"You don't seem very upset about his death." */ DO~~ + g-bbD050.confreso2a
+IF~~THEN REPLY @703 /*"Right... I have another question." */ DO~~ + g-bbD050.q
+IF~~THEN REPLY @704 /*"Right... I have to go now." */ DO~~ EXIT
+CHAIN IF~~THEN g-bbD050 g-bbD050.confreso2a
+@706 /*The pale woman shrugs. "I am not *happy* that he's dead. But he was going to get himself killed one way or another." */
+END
+IF~~THEN REPLY @708 /*"Right... I have another question." */ DO~~ + g-bbD050.q
+IF~~THEN REPLY @709 /*"Right... I have to go now." */ DO~~ EXIT
 CHAIN IF~~THEN g-bbD050 g-bbD050.confreso3
-@695 /*"Oh. I haven't actually. There was no big showdown? That's odd." */
+@711 /*"Oh. I haven't actually. There was no big showdown? That's odd." */
 END
-IF~~THEN REPLY @697 /*"Yes. I killed him quietly." */ DO~~ + g-bbD050.confreso3a
-IF~~THEN REPLY @698 /*"It is... I have another question." */ DO~~ + g-bbD050.q
-IF~~THEN REPLY @699 /*"It is... I have to go now." */ DO~~ EXIT
+IF~~THEN REPLY @713 /*"Yes. I killed him quietly." */ DO~~ + g-bbD050.confreso3a
+IF~~THEN REPLY @714 /*"It is... I have another question." */ DO~~ + g-bbD050.q
+IF~~THEN REPLY @715 /*"It is... I have to go now." */ DO~~ EXIT
 CHAIN IF~~THEN g-bbD050 g-bbD050.confreso3a
-@701 /*"I can't believe it... and you just came to confess to me?" She prepares for a fight. "So be it. If you put it that way, I guess I'll have to kill you in return. Faction loyalties are still important to me." */
+@717 /*"I can't believe it... and you just came to confess to me?" She prepares for a fight. "So be it. If you put it that way, I guess I'll have to kill you in return. Faction loyalties are still important to me." */
 END
-IF~~THEN REPLY @703 /*Defend yourself. */ DO~Enemy()
+IF~~THEN REPLY @719 /*Defend yourself. */ DO~Enemy()
 ForceAttack(Protagonist,Myself)~ EXIT
 CHAIN IF~~THEN g-bbD050 g-bbD050.confreso4
-@706 /*"Who didn't hear about it! It's a shame that no one survived to tell the tale. If only I could have seen it..." */
+@722 /*"Who didn't hear about it! It's a shame that no one survived to tell the tale. If only I could have seen it..." */
 END
-IF~~THEN REPLY @708 /*"I was there. I saw everything." */ DO~~ + g-bbD050.confreso4a
-IF~~THEN REPLY @709 /*"I have another question." */ DO~~ + g-bbD050.q
-IF~~THEN REPLY @710 /*"I have to go now." */ DO~~ EXIT
+IF~~THEN REPLY @724 /*"I was there. I saw everything." */ DO~~ + g-bbD050.confreso4a
+IF~~THEN REPLY @725 /*"I have another question." */ DO~~ + g-bbD050.q
+IF~~THEN REPLY @726 /*"I have to go now." */ DO~~ EXIT
 CHAIN IF~~THEN g-bbD050 g-bbD050.confreso4a
-@712 /*Her eyes open wide. "You were? You have to tell me everything!" */
+@728 /*Her eyes open wide. "You were? You have to tell me everything!" */
 END
-IF~GlobalLT("G-Belle_sympahtetic","GLOBAL",1) GlobalLT("g-pale_woman_quest","GLOBAL",3)~THEN REPLY @714 /*Recount the experience. */ DO~SetGlobal("G-Belle_sympahtetic","GLOBAL",1) SetGlobal("g-pale_woman_quest","GLOBAL",3) AddexperienceParty(60000) FadeToColor([20.0],0)~ SOLVED_JOURNAL @20213 + g-bbD050.confreso4b
-IF~GlobalGT("G-Belle_sympahtetic","GLOBAL",0)~THEN REPLY @715 /*Recount the experience. */ DO~FadeToColor([20.0],0)~ + g-bbD050.confreso4b
-IF~Global("g-pale_woman_quest","GLOBAL",3)~THEN REPLY @716 /*Recount the experience. */ DO~FadeToColor([20.0],0)~ + g-bbD050.confreso4b
-IF~~THEN REPLY @717 /*"Right... I have another question." */ DO~~ + g-bbD050.q
-IF~~THEN REPLY @718 /*"Right... I have to go now." */ DO~~ EXIT
+IF~GlobalLT("G-Belle_sympahtetic","GLOBAL",1) GlobalLT("g-pale_woman_quest","GLOBAL",3)~THEN REPLY @730 /*Recount the experience. */ DO~SetGlobal("G-Belle_sympahtetic","GLOBAL",1) SetGlobal("g-pale_woman_quest","GLOBAL",3) AddexperienceParty(60000) FadeToColor([20.0],0)~ SOLVED_JOURNAL @20213 + g-bbD050.confreso4b
+IF~GlobalGT("G-Belle_sympahtetic","GLOBAL",0)~THEN REPLY @731 /*Recount the experience. */ DO~FadeToColor([20.0],0)~ + g-bbD050.confreso4b
+IF~Global("g-pale_woman_quest","GLOBAL",3)~THEN REPLY @732 /*Recount the experience. */ DO~FadeToColor([20.0],0)~ + g-bbD050.confreso4b
+IF~~THEN REPLY @733 /*"Right... I have another question." */ DO~~ + g-bbD050.q
+IF~~THEN REPLY @734 /*"Right... I have to go now." */ DO~~ EXIT
 CHAIN IF~~THEN g-bbD050 g-bbD050.confreso4b
-@720 /*You describe best you can the strange event you observed from the shadows - the Lady arriving, everything turning silent and then the complete disintegration of both sides. The event itself was only a fraction of a second, so you focus on the inner thoughts you had while witnessing it. */
-=@721 /*The pale woman listens with utmost fascination, and is a little sad when your story comes to a conclusion.  */
-=@722 /*"Thank you," she says eventually. "That was exhilarating. Excellent perspective too. You're lucky you're alright." */
+@736 /*You describe best you can the strange event you observed from the shadows - the Lady arriving, everything turning silent and then the complete disintegration of both sides. The event itself was only a fraction of a second, so you focus on the inner thoughts you had while witnessing it. */
+=@737 /*The pale woman listens with utmost fascination, and is a little sad when your story comes to a conclusion.  */
+=@738 /*"Thank you," she says eventually. "That was exhilarating. Excellent perspective too. You're lucky you're alright." */
 END
-IF~~THEN REPLY @724 /*"Great... I have another question." */ DO~~ + g-bbD050.q
-IF~~THEN REPLY @725 /*"Great... I have to go now." */ DO~~ EXIT
+IF~~THEN REPLY @740 /*"Great... I have another question." */ DO~~ + g-bbD050.q
+IF~~THEN REPLY @741 /*"Great... I have to go now." */ DO~~ EXIT

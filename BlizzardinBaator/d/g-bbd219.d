@@ -88,7 +88,7 @@ END
 IF~~THEN REPLY @85 /*"I understand. I have another question." */ DO~~ + g-bbD219.q
 IF~~THEN REPLY @86 /*"I understand. I don't have any more questions. I'll be off." */ DO~~ EXIT
 CHAIN IF~~THEN g-bbD219 g-bbD219.travel
-@88 /*"Oh, sure. There are plenty of ferry captains available to take you. They cut one down and two more rise in his place. They're like the heads on a wyvern... or hydra... one of these two... I can never remember which is which. If there isn't anyone there, they'll probably appear within a couple of minutes. You should be able to travel easily, especially now with the whole beach craze. It's very good for business." */
+@88 /*"Oh, sure. There are plenty of ferry captains available to take you. They cut one down and two more rise in his place. They're like the heads on a wyvern... or a hydra... one of these two... I can never remember which is which. If there isn't anyone there, they'll probably appear within a couple of minutes. You should be able to travel easily, especially now with the whole beach craze. It's very good for business." */
 END
 IF~~THEN REPLY @90 /*"What's the story with this beach?" */ DO~~ + g-bbD219.beach
 IF~~THEN REPLY @91 /*"I see. I have another question." */ DO~~ + g-bbD219.q

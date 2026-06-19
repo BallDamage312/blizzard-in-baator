@@ -8,7 +8,7 @@ IF~PartyGoldLT(10)~THEN REPLY @4 /*"I don't have that much money." */ DO~~ + g-b
 IF~CheckStatGT(Protagonist,18,DEX)~THEN REPLY @5 /*Wait until the guide leaves and follow him at a safe distance. */ DO~TeleportParty("ar0400",[2320.1820],12)~ EXIT
 IF~~THEN REPLY @6 /*"Not today." */ DO~~ EXIT
 CHAIN IF~~THEN g-bbD216 g-bbD216.poor
-@8 /*"Ah. I'm going there anyway.... come along." */
+@8 /*"Ah. I'm going there anyway... Come along." */
 END
 IF~~THEN REPLY @10 /*Follow the tout. */ DO~TeleportParty("ar0400",[2320.1820],12)~ EXIT
 IF~~THEN REPLY @11 /*"Not today." */ DO~~ EXIT

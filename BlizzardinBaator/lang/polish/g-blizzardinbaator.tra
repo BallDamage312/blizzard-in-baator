@@ -598,6 +598,7 @@
 @400177 = ~Slaad~
 @400178 = ~Mieszkaniec Ula~
 @400179 = ~Baernaloth~
+@400180 = ~Tegar'in~
 
 ///////////
 // ===== //
@@ -1275,9 +1276,9 @@ To dość starannie wycięty kawałek pergaminu, na którym widać zestawienie d
 
 "Pieśń Pochwalna (Uniesienie)"
 
-"Solar w służbie Corellona Larethiana | | |
-Lashrael imię jego | |
-Siwa jego aura mądrości | |"~
+"Solar w służbie Corellona Larethiana
+Lashrael imię jego
+Siwa jego aura mądrości"~
 @500104 = ~Flet marraenolotha~
 @500105 = ~FLET MARRAENOLOTHA
 Waga: 1
@@ -1314,7 +1315,7 @@ Mogą być używane jedynie przez Wojowników i Złodziei
 Te kolczaste rękawice wyglądają, jakby należały niegdyś do jakiegoś podróżnika. Sprawiają wrażenie unurzanych we krwi - jej zastygłe pozostałości z łatwością da się odróżnić od rdzy, której można by się spodziewać na leżącym tu nie wiadomo jak długo kawałku metalu.~
 @500111 = ~RĘKAWICE KRWI IO
 Obrażenia: 3-18, obuchowe
-Umagicznienie: +3
+Umagicznienie: +4
 Specjalne właściwości:
  +10 do obrażeń od ognia
  +25% do odporności na ogień
@@ -1933,7 +1934,7 @@ Obrażenia: 3-18, sieczne
 Umagicznienie: +3
 Specjalne właściwości:
  +2 do klasy pancerza
- +20 do obrażeń od magicznego chłodu
+ +10 do obrażeń od magicznego chłodu
  +20% do odporności na chłód
  +20% do odporności na magiczny chłód
 TraK0: +3
@@ -1959,7 +1960,7 @@ Umagicznienie: +3
 Specjalne właściwości:
  Zatruwa przeciwnika
  +2 do klasy pancerza
- +20 do obrażeń od kwasu
+ +10 do obrażeń od kwasu
  +20% do odporności na kwas
  Odporność na trucizny
  +2 do rzutów obronnych przeciw śmierci
@@ -1986,7 +1987,7 @@ Obrażenia: 3-18, sieczne
 Umagicznienie: +3
 Specjalne właściwości:
  +2 do klasy pancerza
- +20 do obrażeń od elektryczności
+ +10 do obrażeń od elektryczności
  +20% do odporności na elektryczność
 TraK0: +1
 Szybkość: 2
@@ -2487,6 +2488,17 @@ W tym mocnym pojemniku można umieścić tuziny zwojów, zabezpieczając je w te
 Waga: 2
 
 Czaszka zrobiona z cennego kamienia. Jest niewielka i brakuje jej żuchwy.~
+@500300 = ~SSzczura zbroja ze sfer niższych~
+@500301 = ~SZCZURZA ZBROJA ZE SFER NIŻSZYCH
+Klasa Pancerza: 3
+Specjalne właściwości:
++15% do Krycia się
+Waga: 10
+Może być używana jedynie przez Annę
+
+Zbroja ta została uszyta ze skór różnych szkodników żyjących w Otchłani. Nić użyta do szycia to pojedynczy, długi, biały włos (choć nie wiadomo z jakiego stworzenia pochodzi). Nie ma tu żadnych metalowych elementów, ćwieków czy sprzączek. Zrobiona jest w całości z pozostałości po żywych stworzeniach.
+
+~
 
 ////////////
 // ====== //
@@ -2898,6 +2910,7 @@ a zwłaszcza:
 Argent77 – za konsultacje i pomoc przy tworzeniu bestiariusza oraz logiki questów, a także za nieocenione wsparcie we wszystkich dziedzinach. Bez Ciebie ten projekt nie wyglądałby tak samo.
 CamDawg 
 Jastey
+Lava Del'Vortel
 
 PODZIĘKOWANIA:
 
@@ -2908,7 +2921,6 @@ Spellhold Studios
 Children of Bhaal
 Zenblack
 dark0dave
-Lavalamp
 Udiknedormin
 Kamila Regel
 Brian Crenshaw

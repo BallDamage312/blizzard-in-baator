@@ -14,7 +14,7 @@ Feel free to share your feedback and ideas at caniabelieveit@gmail.com or join t
 
 <b>Windows</b>
 
-1. <a href="https://github.com/BallDamage312/blizzard-in-baator/archive/refs/heads/main.zip">Download the mod's installation package</a> and extract it into your game folder. Make sure you are extracting it into the root/main game directory (this is the folder that contains the chitin.key file).
+1. <a href="https://github.com/BallDamage312/blizzard-in-baator/releases/latest">Download the mod's installation package</a> and extract it into your game folder. Make sure you are extracting it into the root/main game directory (this is the folder that contains the chitin.key file).
 2. Run the Setup-BlizzardInBaator.exe file.
 3. Select your preferred language for dialogues and audio, then finish the installation process.
 4. Start a new game or continue from an existing save file.
@@ -30,7 +30,7 @@ After extraction, the game's root folder should look like this:
 
 <b>Linux</b>
 
-Follow the same instructions as for Windows, except run the Setup-BlizzardInBaator.exe file using Wine.
+Follow the same instructions as for Windows, except run the Setup-BlizzardInBaator.sh.
 
 <b>Mac</b>
 
@@ -38,7 +38,13 @@ Follow the same instructions as for Windows, except run the setup-blizzardinbaat
 
 <b>Android</b>
 
-Not available right now. If you'd like to help make this happen, feel free to contact us.
+It is possible, though through a complicated process discovered by u/winglessbuzzard on reddit
+
+https://chatgpt.com/s/t_6a3216297224819191cacdb7aac8f539
+
+https://drive.google.com/file/d/1vOZGEuYOmWaVVQHgzcTqnN5os7MeFKdn/view?usp=sharing
+
+We do not guarantee this installation process to be succesful. A more friendly version may become available in the future.
 
 ## How to Start the Journey
 

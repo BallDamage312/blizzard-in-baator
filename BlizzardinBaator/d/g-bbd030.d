@@ -7,7 +7,7 @@ END
 IF~~THEN REPLY @4 /*"Hello." */ DO~~ + g-bbD030.start2
 IF~~THEN REPLY @5 /*Leave without a word. */ DO~~ EXIT
 CHAIN IF~True()~THEN g-bbD030 g-bbD030.start2
-@7 /*"Do you have a question?" The creature gets to the point. */
+@7 /*The creature gets to the point. "Do you have a question?" */
 END
 IF~Global("G-modlib1","GLOBAL",1)~THEN REPLY @9 /*"I've got some books for your collection..." */ DO~~ + g-bbD030.books
 IF~~THEN REPLY @10 /*"Yes, I have some questions..." */ DO~~ + g-bbD030.questions
@@ -21,7 +21,7 @@ IF~Global("G-modlib1","GLOBAL",1)~THEN REPLY @17 /*"Tell me again, what is your 
 IF~Global("G-modlib1","GLOBAL",1) Global("G-modlib_list","GLOBAL",0)~THEN REPLY @18 /*"Do you have a list of titles you're looking for?" */ DO~SetGlobal("G-modlib_list","GLOBAL",1)~ JOURNAL @6008 + g-bbD030.modronlist
 IF~Global("G-modlib1","GLOBAL",1)~THEN REPLY @19 /*"I've got some books for your collection..." */ DO~~ + g-bbD030.books
 IF~GlobalGT("g-book","GLOBAL",6) Global("G-modlib1","GLOBAL",1) Global("G-modlib2","GLOBAL",0)~THEN REPLY @20 /*"It seems you already have quite a collection of books. Am I now worthy of communion with this grimoire you guard so carefully?" */ DO~SetGlobal("G-modlib_revard","GLOBAL",2)~ + g-bbD030.bookreward
-IF~Global("AR0605_Visited","GLOBAL",1)~THEN REPLY @21 /*"Do you know anything about modrons in Brothel for Slaking Intellectual Lusts?" */ DO~~ + g-bbD030.modron3
+IF~Global("AR0605_Visited","GLOBAL",1)~THEN REPLY @21 /*"Do you know anything about modrons in the Brothel for Slaking Intellectual Lusts?" */ DO~~ + g-bbD030.modron3
 IF~Global("AR13EN_Visited","GLOBAL",1)~THEN REPLY @22 /*"Do you know anything about the Modron Maze?" */ DO~~ + g-bbD030.modron4
 IF~~THEN REPLY @23 /*"I have to go. Goodbye." */ DO~~ EXIT
 CHAIN IF~~THEN g-bbD030 g-bbD030.modron1
@@ -41,7 +41,7 @@ IF~~THEN REPLY @37 /*"I have to go. Goodbye." */ DO~SetGlobal("G-modlib1","GLOBA
 CHAIN IF~~THEN g-bbD030 g-bbD030.modron3
 @39 /*"We are modron. We are one. The task of the modrons located in location called 'The Brothel for Slaking Intellectual Lusts' is different from this modron's. Due to their position - quadron - we are equal in terms of hierarchy, but since they do not fall under the same pentadron as this modron, their task is beyond the knowledge of this modron." */
 END
-IF~~THEN REPLY @41 /*"Aright, I have other questions." */ DO~~ + g-bbD030.questions
+IF~~THEN REPLY @41 /*"Alright, I have other questions." */ DO~~ + g-bbD030.questions
 IF~~THEN REPLY @42 /*"I have to go. Goodbye." */ DO~~ EXIT
 CHAIN IF~~THEN g-bbD030 g-bbD030.modron4
 @44 /*"The Rubikon Testing Grounds were an experiment conducted by the modrons in the chaotic plane of Limbo. The goal was to understand what draws adventurers to dungeons. This is a common phenomenon." */
@@ -53,7 +53,7 @@ CHAIN IF~~THEN g-bbD030 g-bbD030.books
 END
 IF~PartyHasItem("CHEATS")~THEN REPLY @51 /*"The Tome o' Cheats. It turns out I don't need it and I want to get rid of it." */ DO~IncrementGlobal("g-book","GLOBAL",1) AddexperienceParty(10000) DestroyPartyItem("CHEATS",TRUE) GiveItemCreate("MASLOW",Protagonist,0,0,0) GiveItemCreate("MAGITM",Protagonist,0,0,0)~ + g-bbD030.bookgive1
 IF~PartyHasItem("CODEXI")~THEN REPLY @52 /*"Codex of the Inconceivable. It's better to leave it in responsible hands." */ DO~IncrementGlobal("g-book","GLOBAL",1) AddexperienceParty(50000) DestroyPartyItem("CODEXI",TRUE)~ + g-bbD030.bookgive2
-IF~PartyHasItem("LOGBOOK")~THEN REPLY @53 /*"The Receiving Room Logbook. The last page is missing but I guess it's a small loss." */ DO~IncrementGlobal("g-book","GLOBAL",1) AddexperienceParty(10000) DestroyPartyItem("LOGBOOK",TRUE) GiveItemCreate("BONECHRM",Protagonist,0,0,0) GiveItemCreate("BLOODFLY",Protagonist,0,0,0) GiveItemCreate("CFLYCHRM",Protagonist,0,0,0)  GiveItemCreate("DRATCHRM",Protagonist,0,0,0) GiveItemCreate("HEARCHRM",Protagonist,0,0,0)~ + g-bbD030.bookgive3
+IF~PartyHasItem("LOGBOOK")~THEN REPLY @53 /*"The Receiving Room Logbook. The last page is missing, but I guess it's a small loss." */ DO~IncrementGlobal("g-book","GLOBAL",1) AddexperienceParty(10000) DestroyPartyItem("LOGBOOK",TRUE) GiveItemCreate("BONECHRM",Protagonist,0,0,0) GiveItemCreate("BLOODFLY",Protagonist,0,0,0) GiveItemCreate("CFLYCHRM",Protagonist,0,0,0)  GiveItemCreate("DRATCHRM",Protagonist,0,0,0) GiveItemCreate("HEARCHRM",Protagonist,0,0,0)~ + g-bbD030.bookgive3
 IF~PartyHasItem("PESTIL")~THEN REPLY @54 /*"The Grimoire of Pestilential Thought. I don't think I want to have anything more to do with this." */ DO~IncrementGlobal("g-book","GLOBAL",1) AddexperienceParty(20000) DestroyPartyItem("PESTIL",TRUE) IncrementGlobal("GOOD","GLOBAL",3)~ + g-bbD030.bookgive4
 IF~PartyHasItem("STRDIARY")~THEN REPLY @55 /*"The diary of Strahan Runeshadow, the mage that had been harassing the Mausoleum." */ DO~IncrementGlobal("g-book","GLOBAL",1) AddexperienceParty(10000) DestroyPartyItem("STRDIARY",TRUE) GiveItemCreate("WWARD.ITM",Protagonist,0,0,0)~ + g-bbD030.bookgive5
 IF~PartyHasItem("TOMEBA")~THEN REPLY @56 /*"The beautifully illustrated Tome of Bone and Ash written by the Dustmen." */ DO~IncrementGlobal("g-book","GLOBAL",1) AddexperienceParty(10000) DestroyPartyItem("TOMEBA",TRUE) GiveItemCreate("EMBCHRM2",Protagonist,0,0,0) GiveItemCreate("SPWI103",Protagonist,0,0,0) GiveItemCreate("SPWI205",Protagonist,0,0,0)~ + g-bbD030.bookgive6
@@ -130,7 +130,7 @@ CHAIN IF~~THEN g-bbD030 g-bbD030.bookgive8
 ==DGrace IF ~InParty("Grace") !StateCheck("Grace",CD_STATE_NOTVALID) NearbyDialog("DGrace")~ THEN @127 /*"I respect your decision. Publishing a book takes a lot of courage. It is interesting that it was written by one of your earlier versions, but... It is still you, right?" */
 ==DGrace IF ~InParty("Grace") !StateCheck("Grace",CD_STATE_NOTVALID) NearbyDialog("DGrace")~ THEN @128 /*"Nevertheless, you are quite literally offering yourself to an audience you may never meet. It is a rewarding experience, and I am glad to experience it beside you in time." */
 END
-IF~!InParty("Morte") !StateCheck("Morte",CD_STATE_NOTVALID)~THEN REPLY @130 /*"I've got another book to donate." */ DO~~ + g-bbD030.books
+IF~~THEN REPLY @130 /*"I've got another book to donate." */ DO~~ + g-bbD030.books
 IF~~THEN REPLY @131 /*"Thank you. I have other questions." */ DO~~ + g-bbD030.questions
 IF~~THEN REPLY @132 /*"Thank you. Goodbye." */ DO~~ EXIT
 CHAIN IF~~THEN g-bbD030 g-bbD030.bookreward
@@ -150,9 +150,9 @@ CHAIN IF~~THEN g-bbD030 g-bbD030.bbbok1
 ==DGrace IF ~InParty("Grace") !StateCheck("Grace",CD_STATE_NOTVALID) NearbyDialog("DGrace")~ THEN @147 /*"Did you notice how in the third part of the book Ambran abandons his god, name and kingdom to stay in the Outer Planes? It's an important lesson. The longer we stay somewhere, the more we change. *Planes* change you." */
 ==DGrace IF ~InParty("Grace") !StateCheck("Grace",CD_STATE_NOTVALID) NearbyDialog("DGrace")~ THEN @148 /*"Through observation, sensation and experience, the truth of the multiverse shall be revealed." [FFG104] */
 END
-IF~~THEN REPLY @150 /*"I've got another book to give you." */ DO~IncrementGlobal("BD_GRACE_MORALE","GLOBAL",1) IncrementGlobal("G-ffgrom","GLOBAL",1)~ + g-bbD030.books
-IF~~THEN REPLY @151 /*"Thank you. I have other questions." */ DO~IncrementGlobal("BD_GRACE_MORALE","GLOBAL",1) IncrementGlobal("G-ffgrom","GLOBAL",1)~ + g-bbD030.questions
-IF~~THEN REPLY @152 /*"Thank you. Goodbye." */ DO~IncrementGlobal("BD_GRACE_MORALE","GLOBAL",1) IncrementGlobal("G-ffgrom","GLOBAL",1)~ EXIT
+IF~~THEN REPLY @150 /*"I've got another book to give you." */ DO~~ + g-bbD030.books
+IF~~THEN REPLY @151 /*"Thank you. I have other questions." */ DO~~ + g-bbD030.questions
+IF~~THEN REPLY @152 /*"Thank you. Goodbye." */ DO~~ EXIT
 CHAIN IF~~THEN g-bbD030 g-bbD030.bbbok2
 @154 /*"Thank you. Your gift will help reduce illiteracy in Sigil. 'Fire and Dust'..." */
 ==DIgnus IF ~InParty("Ignus") !StateCheck("Ignus",CD_STATE_NOTVALID) NearbyDialog("DIgnus")~ THEN @155 /**"The flames await."* [IGN094] */
@@ -182,25 +182,25 @@ CHAIN IF~~THEN g-bbD030 g-bbD030.bbbok5
 ==DAnnah IF ~InParty("Annah") !StateCheck("Annah",CD_STATE_NOTVALID) NearbyDialog("DAnnah")~ THEN @179 /*"I think Pharod might have read me this very book when I was a wee lass. That is, until he sent me searchin' the ditches in the Hive for deaders. And he did that bloody quickly." */
 ==DAnnah IF ~InParty("Annah") !StateCheck("Annah",CD_STATE_NOTVALID) NearbyDialog("DAnnah")~ THEN @180 /* "Ol' stutter crutch be tallyin' his copper 'bout now." She smiles sadly. "Would be." [ANA009] */
 END
-IF~~THEN REPLY @182 /*"I've got another book to give you." */ DO~IncrementGlobal("BD_ANNAH_MORALE","GLOBAL",1) IncrementGlobal("G-annrom","GLOBAL",1)~ + g-bbD030.books
-IF~~THEN REPLY @183 /*"Don't worry, Annah. Sorry but I have other questions for the modron." */ DO~IncrementGlobal("BD_ANNAH_MORALE","GLOBAL",1) IncrementGlobal("G-annrom","GLOBAL",1)~ + g-bbD030.questions
+IF~~THEN REPLY @182 /*"I've got another book to give you." */ DO~~ + g-bbD030.books
+IF~InParty("Annah") !StateCheck("Annah",CD_STATE_NOTVALID)~THEN REPLY @183 /*"Don't worry, Annah. Sorry, but I have other questions for the modron." */ DO~~ + g-bbD030.questions
 IF~~THEN REPLY @184 /*"Let's go." */ DO~~ EXIT
 CHAIN IF~~THEN g-bbD030 g-bbD030.bbbok6
 @186 /*"Thank you. Your gift will help reduce illiteracy in Sigil." */
 ==DVhail IF ~InParty("Vhail") !StateCheck("Vhail",CD_STATE_NOTVALID) NearbyDialog("DVhail")~ THEN @187 /**Jerak the Mercykiller was not wrong. The punishment was imposed. The guilty have been punished.* You see justice burning in his eyes. */
 ==DVhail IF ~InParty("Vhail") !StateCheck("Vhail",CD_STATE_NOTVALID) NearbyDialog("DVhail")~ THEN @188 /**JUSTICE purges evil. Once all have been CLEANSED, the multiverse achieves PERFECTION.* [VHA083] */
 END
-IF~~THEN REPLY @190 /*"I've got another book to give you." */ DO~IncrementGlobal("BD_VHAIL_MORALE","GLOBAL",1)~ + g-bbD030.books
-IF~~THEN REPLY @191 /*"Thank you. I have other questions." */ DO~IncrementGlobal("BD_VHAIL_MORALE","GLOBAL",1)~ + g-bbD030.questions
-IF~~THEN REPLY @192 /*"Thank you. Goodbye." */ DO~IncrementGlobal("BD_VHAIL_MORALE","GLOBAL",1)~ EXIT
+IF~~THEN REPLY @190 /*"I've got another book to give you." */ DO~~ + g-bbD030.books
+IF~~THEN REPLY @191 /*"Thank you. I have other questions." */ DO~~ + g-bbD030.questions
+IF~~THEN REPLY @192 /*"Thank you. Goodbye." */ DO~~ EXIT
 CHAIN IF~~THEN g-bbD030 g-bbD030.bbbok7
 @194 /*"Thank you. Your gift will help reduce illiteracy in Sigil." The modron takes your worn copy of 'The Seven Wonders of the Multiverse'. */
 ==DGrace IF ~InParty("Grace") !StateCheck("Grace",CD_STATE_NOTVALID) NearbyDialog("DGrace")~ THEN @195 /*"My dream as a Sensate is to see all the Wonders of the Multiverse in my lifetime. The Bridge That Spans Worlds is impressive, but looking up into the vault of the Modron Cathedral offers experiences unknown to most of the living. The hardest to reach would probably be those in the Prime Material Plane. Perhaps we will get to see them someday... Once we've sorted out your horrid affliction, of course." */
 ==DGrace IF ~InParty("Grace") !StateCheck("Grace",CD_STATE_NOTVALID) NearbyDialog("DGrace")~ THEN @196 /*"It is good to be journeying again. The brothel was a learning experience, but I think it was time I moved on." [FFG011] */
 END
-IF~~THEN REPLY @198 /*"I've got another book to give you." */ DO~IncrementGlobal("BD_GRACE_MORALE","GLOBAL",1) IncrementGlobal("G-ffgrom","GLOBAL",1)~ + g-bbD030.books
-IF~~THEN REPLY @199 /*"Thank you. I have other questions." */ DO~IncrementGlobal("BD_GRACE_MORALE","GLOBAL",1) IncrementGlobal("G-ffgrom","GLOBAL",1)~ + g-bbD030.questions
-IF~~THEN REPLY @200 /*"Thank you. Goodbye." */ DO~IncrementGlobal("BD_GRACE_MORALE","GLOBAL",1) IncrementGlobal("G-ffgrom","GLOBAL",1)~ EXIT
+IF~~THEN REPLY @198 /*"I've got another book to give you." */ DO~~ + g-bbD030.books
+IF~~THEN REPLY @199 /*"Thank you. I have other questions." */ DO~~ + g-bbD030.questions
+IF~~THEN REPLY @200 /*"Thank you. Goodbye." */ DO~~ EXIT
 CHAIN IF~~THEN g-bbD030 g-bbD030.modronlist
 @202 /*Below is a list of books sought by the modron librarian:
 

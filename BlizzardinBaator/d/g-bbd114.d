@@ -121,7 +121,7 @@ IF~Global("G-knowennead","GLOBAL",0)~THEN REPLY @118 /*"That sounds like a scam.
 IF~!Global("G-knowennead","GLOBAL",0)~THEN REPLY @119 /*Allow him to continue. */ DO~~ + g-bbD114.interloper2
 IF~!Global("G-knowennead","GLOBAL",0)~THEN REPLY @120 /*"That sounds like a scam." */ DO~~ + g-bbD114.interinter
 CHAIN IF~~THEN g-bbD114 g-bbD114.interinter
-@122 /*Vinrogé opens his mouth and lets out a sigh. "Well, that's one point of view. The local Athar faction has been trying to prove that this is the right way forward. I admit that it sounds feasible from a technical standpoint, but I disagree with it in general. If we stop 'supporting' the scam, entities that don't feed on belief will have the upper hand. While the likes of the Lady of Pain can seemingly handle power well, fiends, fey, and elementals could wreak havoc in the multiverse...." */
+@122 /*Vinrogé opens his mouth and lets out a sigh. "Well, that's one point of view. The local Athar faction has been trying to prove that this is the right way forward. I admit that it sounds feasible from a technical standpoint, but I disagree with it in general. If we stop 'supporting' the scam, entities that don't feed on belief will have the upper hand. While the likes of the Lady of Pain can seemingly handle power well, fiends, fey, and elementals could wreak havoc in the multiverse..." */
 END
 IF~~THEN REPLY @124 /*"All right. Continue, please." */ DO~~ + g-bbD114.interloper2
 CHAIN IF~~THEN g-bbD114 g-bbD114.interloper2
@@ -256,7 +256,7 @@ END
 IF~~THEN REPLY @250 /*"I see. I have a few other questions." */ DO~~ + g-bbD114.q
 IF~~THEN REPLY @251 /*"I need to go. Goodbye." */ DO~~ EXIT
 CHAIN IF~~THEN g-bbD114 g-bbD114.qmephistar
-@253 /*"A great collection of ancient tablets was apparently stolen from Inanna's realm in the Nine Hells. Mephistopheles stole them centuries ago, looking for some ancient power to rewrite the planes. He didn't find any power, but now all of these precious tablets full of knowledge sit in Mephistar, not even locked away. The problem is that people just do not get to go to Mephistar...." */
+@253 /*"A great collection of ancient tablets was apparently stolen from Inanna's realm in the Nine Hells. Mephistopheles stole them centuries ago, looking for some ancient power to rewrite the planes. He didn't find any power, but now all of these precious tablets full of knowledge sit in Mephistar, not even locked away. The problem is that people just do not get to go to Mephistar..." */
 END
 IF~Global("G-ishtarquest","GLOBAL",5)~THEN REPLY @255 /*"I'm going to Mephistar soon. I may be on the lookout for these tablets for you." */ DO~SetGlobal("G-ishtarquest","GLOBAL",6) AddexperienceParty(15000)~ SOLVED_JOURNAL @20141 + g-bbD114.helphell2
 IF~~THEN REPLY @256 /*"I see. I have a few other questions." */ DO~~ + g-bbD114.q
@@ -276,7 +276,7 @@ IF~PartyHasItem("g-bbi026") GlobalGT("G-alviroquest","GLOBAL",1)~THEN REPLY @269
 IF~~THEN REPLY @270 /*"I see. I have a few other questions." */ DO~~ + g-bbD114.q
 IF~~THEN REPLY @271 /*"I need to go. Goodbye." */ DO~~ EXIT
 CHAIN IF~~THEN g-bbD114 g-bbD114.qimpossible
-@273 /*The man pouts his mouth in confusion. "Gods are not welcome in Sigil. Ishtar would certainly face consequences for placing a holy symbol here with her own hands...." */
+@273 /*The man pouts his mouth in confusion. "Gods are not welcome in Sigil. Ishtar would certainly face consequences for placing a holy symbol here with her own hands..." */
 END
 IF~~THEN REPLY @275 /*"I see. I have a few other questions." */ DO~~ + g-bbD114.q
 IF~~THEN REPLY @276 /*"I need to go. Goodbye." */ DO~~ EXIT

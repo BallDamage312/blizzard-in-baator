@@ -3,7 +3,7 @@ CHAIN IF~True()~THEN g-bbD162 g-bbD162.start1
 @0 /*You hold a set of parchments in your hands, destined to call on the factions of Sigil to take action. These are official documents bearing the seals of the Hall of Speakers. Distributing these documents will seal the fate of the conflict in which you have become involved. */
 ==g-bbd162 IF~Global("g-alliesgathered","GLOBAL",0)~THEN @1 /*Included with them is a separate parchment bearing a symbol depicting a head of a horse, which, according to the accompanying instruction, is meant to summon a messenger. */
 ==g-bbd162 IF~Global("g-alliesgathered","GLOBAL",0)~THEN @2 /*You have sided with the Doomguard: Haer'Dalis, Raelis Shai, and the entire Beneathmask theater. To prevent the destruction of this temple of the arts, you can call upon your allies to join the Doomguard ambush in a secluded alley behind the Great Foundry. */
-==g-bbd162 @3 /*^NOTE: Use this item to initiate the resolution to the faction conflict.^- */
+==g-bbd162 @3 /*^NNOTE: Use this item to initiate the resolution to the faction conflict.^- */
 END
 IF~OR(2) Global("G-doomvsfatevsKEY","GLOBAL",8)  Global("G-doomvsfatevsKEY","GLOBAL",9) Global("g-alliesgathered","GLOBAL",0)~THEN REPLY @5 /*It is time to call on your allies. Think about who you can send a message to. */ DO~~ + g-bbD162.doomside
 IF~Global("g-alliesgathered","GLOBAL",0)~THEN REPLY @6 /*Do not call on your allies yet. */ DO~~ EXIT
@@ -112,11 +112,11 @@ Son of Isahar and Priest-King of Ur" */
 END
 IF~~THEN REPLY @77 /*Check the other letters. */ DO~SetGlobal("g-batsen","GLOBAL",-2)~ + g-bbD162.answers1
 CHAIN IF~~THEN g-bbD162 g-bbD162.anarchistsYES
-@79 /*The letter is short. "AGREED."It must have come from the Anarchists. */
+@79 /*The letter is short. "AGREED." It must have come from the Anarchists. */
 END
 IF~~THEN REPLY @81 /*Check the other letters. */ DO~SetGlobal("g-batana","GLOBAL",2)~ + g-bbD162.answers1
 CHAIN IF~~THEN g-bbD162 g-bbD162.anarchistsNO
-@83 /*The letter is short. "Not possible. You've offended someone. Take care of yourself."  It must have come from the Anarchists. */
+@83 /*The letter is short. "Not possible. You've offended someone. Take care of yourself." It must have come from the Anarchists. */
 END
 IF~~THEN REPLY @85 /*Check the other letters. */ DO~SetGlobal("g-batana","GLOBAL",-2)~ + g-bbD162.answers1
 CHAIN IF~~THEN g-bbD162 g-bbD162.harmoniumYES

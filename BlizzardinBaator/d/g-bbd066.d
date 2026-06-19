@@ -96,7 +96,7 @@ IF~Global("G-knowaewhy","GLOBAL",0) Global("G-aeforcedtotalk","GLOBAL",1)~THEN R
 IF~Global("Know_Ravel","GLOBAL",1) GlobalLT("G-aehorror","GLOBAL",1) GlobalLT("G-aenope","GLOBAL",1)~THEN REPLY @91 /*"What do you know of the hag, Ravel Puzzlewell?" */ DO~~ + g-bbD066.aeravel
 IF~GlobalGT("Regret","GLOBAL",0)~THEN REPLY @92 /*"Do you know anything about the Fortress of Regrets?" */ DO~~ + g-bbD066.aeregret
 IF~Global("Know_O","GLOBAL",1)~THEN REPLY @93 /*"I feel you may have something in common with O, whom I met in the Smoldering Corpse. Are you from the Great Beyond too?" */ DO~~ + g-bbD066.aeo
-IF~NumInPartyGT(1) Global("Join_Chaosmen","GLOBAL",1) Global("G-companionsquestions","GLOBAL",1)~THEN REPLY @94 /*"What do you think of my precious little party of misfits?" */ DO~~ + g-bbD066.companions
+IF~NumInPartyGT(1) Global("G-companionsquestions","GLOBAL",1)~THEN REPLY @94 /*"What do you think of my precious little party of misfits?" */ DO~~ + g-bbD066.companions
 IF~Class(Protagonist,Mage)~THEN REPLY @95 /*"I sense great power in you. Can you teach me anything?" */ DO~~ + g-bbD066.aepower3
 IF~Global("G-aeknowaltern","GLOBAL",1)~THEN REPLY @96 /*"Can you really see alternate versions of events?" */ DO~~ + g-bbD066.aealternate
 IF~Global("G-aewitch","GLOBAL",1)~THEN REPLY @97 /*"Are you a witch?" */ DO~~ + g-bbD066.aewitch
@@ -134,7 +134,7 @@ IF~~THEN REPLY @128 /*"You wanted to meet me?" */ DO~~ + g-bbD066.aetalk
 IF~~THEN REPLY @129 /*"I don't want to touch such difficult topics. I have other questions." */ DO~~ + g-bbD066.questions
 IF~~THEN REPLY @130 /*"I'll leave now." */ DO~~ EXIT
 CHAIN IF~~THEN g-bbD066 g-bbD066.aetalk
-@132 /*"Yes, I wanted to meet you to see if your torment, your extraordinary role in this multiverse, would make our conversation interesting." Æ sighs. "The problem with existing outside of time is that I know every conversation as if I had written the words myself. Because of this, sometimes I feel as if people are merely puppets I can manipulate. I *long* for a conversation with someone on my level. However.... I see that even you, an immortal destroyer, are not destined to escape these patterns. Though in the end...  at the end of your journey, there is a possibility that you might, for a moment, attain something akin to omnipotence. Perhaps we should talk then." */
+@132 /*"Yes, I wanted to meet you to see if your torment, your extraordinary role in this multiverse, would make our conversation interesting." Æ sighs. "The problem with existing outside of time is that I know every conversation as if I had written the words myself. Because of this, sometimes I feel as if people are merely puppets I can manipulate. I *long* for a conversation with someone on my level. However... I see that even you, an immortal destroyer, are not destined to escape these patterns. Though in the end...  at the end of your journey, there is a possibility that you might, for a moment, attain something akin to omnipotence. Perhaps we should talk then." */
 END
 IF~Global("Regret","GLOBAL",0)~THEN REPLY @134 /*"I don't know what you're talking about but I'm not interested in power." */ DO~~ + g-bbD066.aepower1
 IF~Global("Regret","GLOBAL",0)~THEN REPLY @135 /*"I don't know what you're talking about but I want to know how to gain that power." */ DO~~ + g-bbD066.aepower2

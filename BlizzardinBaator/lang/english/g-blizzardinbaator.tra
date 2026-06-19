@@ -315,7 +315,7 @@
 // ========= //
 ///////////////
 
-@300400 = ~The water here is so dirty that you're not sure if you'll emerge from a swim unscathed. Everything floats here, literally.~
+@300400 = ~The water here is so dirty that you are not sure if you will emerge from a swim unscathed. Everything floats here, literally.~
 @300401 = ~An object of unknown purpose. Although there is no water in it, something makes you think it is a... fountain.~
 @300402 = ~Whatever it used to be... is long gone.~
 @300403 = ~A large, stone statue of a beautiful, but elegant and wise-looking goddess. She rests her hand on a magnificent shield.~
@@ -323,8 +323,8 @@
 @300405 = ~The sign before you marks the entrance to an inn called The Styx Oarsman.~
 @300406 = ~A mysterious statue.~
 @300407 = ~This bloody, intricate altar is dedicated to Blibdoolpoolp, the Sea Mother. Scattered shards of gems and pearls lie among the dark stains, but the blood leaves no doubt about what truly transpired here. The priests of this cult do not shy away from human sacrifice.~
-@300408 = ~This is a system of aquariums arranged in a vertical wooden structure. Inside, you can see fish, crabs, snails and other creatures. It's an unusual and impractical design.~
-@300409 = ~Two beautiful flowers grow from a rock that juts out of the rancid water. You can't quite decide whether the sight is beautiful or macabre.~
+@300408 = ~This is a system of aquariums arranged in a vertical wooden structure. Inside, you can see fish, crabs, snails and other creatures. It is an unusual and impractical design.~
+@300409 = ~Two beautiful flowers grow from a rock that juts out of the rancid water. You cannot quite decide whether the sight is beautiful or macabre.~
 @300410 = ~In eerie silence, water spills over the edge of Sigil. There is no easier route to the Cage's edge, but a jump from here would likely mean disappearing forever. The implication offers a grim explanation for the name of this place.~
 @300411 = ~This machine illustrates the relationship between crystal balls in the Prime Material Plane. The knowledge is entirely useless in Sigil, unless one is attempting to summon something from the Prime.~
 @300412 = ~A machine powered by gears hidden beneath the floor. You have no idea what it's used for.~
@@ -598,6 +598,7 @@
 @400177 = ~Slaad~
 @400178 = ~Hive Dweller~
 @400179 = ~Baernaloth~
+@400180 = ~Tegar'in~
 
 ///////////
 // ===== //
@@ -1267,9 +1268,9 @@ A carefully cut piece of parchment showing the octave notes alongside their solm
 
 "Hymn of Ascendancy"
 
-"Solar in the service of Corellon Larethian | | |
-Lashrael is his name | |
-Sign of his wisdom, a gray aura | |"~
+"Solar in the service of Corellon Larethian
+Lashrael is his name
+Sign of his wisdom, a gray aura"~
 @500104 = ~Marraenoloth's Flute~
 @500105 = ~MARRAENOLOTH'S FLUTE
 Weight: 1
@@ -1306,7 +1307,7 @@ Usable only by Fighters and Thieves
 These spiked gloves look as if they were lost by a traveler. They appear to have been soaked in blood, and the hardened residue is easily distinguished from the rust one would expect on a piece of metal that has been lying around for an unknown length of time.~
 @500111 = ~IO'S BLOOD KNUCKLES
 Damage: 3-18, crushing
-Enchantment: +3
+Enchantment: +4
 Special:
  +10 Fire Damage
  +25% Fire Damage Resistance
@@ -1910,9 +1911,8 @@ Damage: 3-18 Slashing
 Enchanted: +3
 Special:
  +2 to Armor Class
- +20 Magical Fire Damage
+ +10 Magical Fire Damage
  +20% Resistance to Fire and Magical Fire
- +20% Resistance to Magical Fire
 THAC0: +2
 Speed: 3
 Weight: 5
@@ -1935,7 +1935,7 @@ Damage: 3-18 Slashing
 Enchanted: +3
 Special:
  +2 to Armor Class
- +20 Magical Cold Damage
+ +10 Magical Cold Damage
  +20% Resistance to Cold and Magical Cold
 THAC0: +3
 Speed: 4
@@ -1960,7 +1960,7 @@ Enchanted: +2
 Special:
  Poisons the opponent
  +2 to Armor Class
- +20 Acid Damage
+ +10 Acid Damage
  +20% Resistance to Acid
  Immunity to Poison
  +2 Save vs. Death
@@ -1986,7 +1986,7 @@ Damage: 3-18 Slashing
 Enchanted: +2
 Special:
  +2 to Armor Class
- +20 Fire Damage
+ +10 Electrical Damage
  +20% Resistance to Electricity
 THAC0: +1
 Speed: 2
@@ -2490,6 +2490,15 @@ This sturdy container allows dozens of scrolls to be placed inside it, protectin
 Weight: 2
 
 A cranium carved from a precious jade stone. The lower jaw is missing, leaving only the smooth, polished contours of the skull.~
+@500300 = ~Lower Planes Vermin Armor~
+@500301 = ~LOWER PLANES VERMIN ARMOR
+Armor Class: 3
+Special:
++15% Hide In Shadows
+Weight: 10
+Usable only by Annah
+
+This armor has been woven from the hides of various Abyssal vermin. The stitching thread appears to be a single white hair (though the type of creature is unknown). There are no metal fixtures, studs, of buckles anywhere on the armor... it is composed solely from the remains of living creatures.~
 
 ////////////
 // ====== //
@@ -2906,6 +2915,7 @@ Especially:
 Argent77 - For consultation and help with bestiary, quest logic and invaluable help across all fields of expertise. This project would not be the same without you.
 CamDawg 
 Jastey
+Lava Del'Vortel
 
 Additional Thanks to:
 
@@ -2916,7 +2926,6 @@ Spellhold Studios
 Children of Bhaal
 Zenblack
 dark0dave
-Lavalamp
 Udiknedormin
 Kamila Regel
 Brian Crenshaw

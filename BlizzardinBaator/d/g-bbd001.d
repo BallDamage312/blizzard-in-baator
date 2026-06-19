@@ -1,6 +1,6 @@
 BEGIN g-bbD001
 CHAIN IF~NumTimesTalkedTo(0)~THEN g-bbD001 g-bbD001.start
-@0 /*When you appear by the obelisk in front of the Mortuary, a strange-looking man rushes toward you. You cannot quite put your finger on what is wrong with him. He seems both annoyed and terrified, his face shifting between the two states, as if two forces are fighting for control. "FINALLY, you're here! I've been standing here for Hells know how long. I was... sure I was going to perish..." */
+@0 /*Near the obelisk in front of the Mortuary, a strange-looking man rushes toward you. You cannot quite put your finger on what is wrong with him. He seems both annoyed and terrified, his face shifting between the two states, as if two forces are fighting for control. "FINALLY, you're here! I've been standing here for Hells know how long. I was... sure I was going to perish..." */
 =@1 /*He takes another look at you, as if to make sure he has the right person. He sniffs and continues, "You are the amnesia ridden sod with no name, friend of Aethelgrin and Tegar'in? I have a message for you." He pats himself down, shivering with fear, searching for a possible note. */
 END
 IF~~THEN REPLY @3 /*"Is that so? I'm listening." */ DO~~ + g-bbD001.yes.message

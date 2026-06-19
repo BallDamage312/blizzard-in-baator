@@ -48,7 +48,7 @@ END
 IF~~THEN REPLY @47 /*"No, I'm not interested." */ DO~~ + g-bbD120.H1
 IF~~THEN REPLY @48 /*"Sounds... interesting. Show me the contract." */ DO~~ + g-bbD120.I1
 IF~~THEN REPLY @49 /*"People like you are the cause of the moral rot that is eating away at this city. It's you who will go to the land of angels today... although, to be honest, you seem to be heading towards the Lower Planes." */ DO~Enemy() EscapeArea() IncrementGlobal("LAW","GLOBAL",1) IncrementGlobal("g-fatedpower","GLOBAL",-1)~ JOURNAL @6030 EXIT
-IF~InParty("Vhail") !StateCheck("!Vhail",CD_STATE_NOTVALID) ~THEN REPLY @50 /*"Vhailor, don't you think a great injustice has been done here?" */ DO~IncrementGlobal("LAW","GLOBAL",1) IncrementGlobal("g-fatedpower","GLOBAL",-1)~ JOURNAL @6030 + g-bbD120.V1
+IF~InParty("Vhail") !StateCheck("!Vhail",CD_STATE_NOTVALID)~THEN REPLY @50 /*"Vhailor, don't you think a great injustice has been done here?" */ DO~IncrementGlobal("LAW","GLOBAL",1) IncrementGlobal("g-fatedpower","GLOBAL",-1)~ JOURNAL @6030 + g-bbD120.V1
 IF~~THEN REPLY @51 /*Attack."Maybe I'll relieve the burden of this mortal coil from your shoulders?" */ DO~Enemy() EscapeArea() IncrementGlobal("g-fatedpower","GLOBAL",-1)~ JOURNAL @6030 EXIT
 IF~~THEN REPLY @52 /*"I think you lost your mind. Farewell." */ DO~~ EXIT
 CHAIN IF~~THEN g-bbD120 g-bbD120.H1

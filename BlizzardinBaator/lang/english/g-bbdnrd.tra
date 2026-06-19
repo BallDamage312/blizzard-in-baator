@@ -5,7 +5,7 @@
 @6=~"Introspective Evaluation: Perceptions have become (1) smaller and (B) louder. Wings have been replaced with arms: reason unknown. Suspicion/hypothesis: not liked wings? Speculation. Nordom was once -ONE- but is now smaller, louder -ONE! - Change has resulted in information-processing difficulties."~
 @8=~"Fine. Let's go."~
 @9=~NPC INITIATED DIALOGUE~
-@11=~Suddenly you hear the larger modron that accompanies you. "Nordom wishes to speak." ~ [NOR169]
+@11=~Suddenly you hear the modron that accompanies you. "Nordom wishes to speak." ~ [NOR169]
 @13=~"Of course, Nordom. You don't have to ask my permission. Is everything alright?"~
 @14=~"I consent. What's the matter?"~
 @15=~"Not now, Nordom. Don't bother me now."~
@@ -26,7 +26,7 @@
 *Waste* sourced from The Grey Waste.
 *Infinite* sourced from either Infinite Layers of Abyss (30%) /OR Infinite Battlefield of Acheron (50%) /OR The Infinite Staircase (20%).
 *Clockwork* sourced from Clockwork Nirvana of Mechanus.
-*Blessed* sourced from The Blessed Fields of Elysium.~
+*Blessed* sourced from The Blessed Fields of Elysium."~
 @32=~"Granted! Plane review granted."~
 @33=~"Monodrone. Are you rogue, like Nordom?"~
 @34=~The monodrone whirrs for a moment and then answers with: "No." ~ [MODRO01]
@@ -34,8 +34,8 @@
 @36=~Grace giggles. "Nordom, I think you have a solid rival in cuteness."~
 @37=~"It's all nice, but can you stop pestering my navigator? Are you here to buy tickets?"~
 @38=~"The monodrone's vocabulary is confusing."~
-@40=~"So is this modron a specialist in the field of the planes. What can you tell me of Cania, monodrone?"~
-@41=~"I'm sorry sir, we'll be with you in a moment." Turn to Nordom. "Come on, Nordom. You two can catch up on the boat."~
+@40=~"So this modron is a specialist in the field of the planes? What can you tell me of Cania, monodrone?"~
+@41=~"I'm sorry, sir, we'll be with you in a moment." Turn to Nordom. "Come on, Nordom. You two can catch up on the boat."~
 @43=~"If you need information about Cania. You could ask Nor-"~
 @44=~"Outer Plane: Nine Hells of Baator. WARNING! Infinite *no*." ~ [MODRO02]
 @45=~"Again, *pretty* normal. Reasonable enough for me."~

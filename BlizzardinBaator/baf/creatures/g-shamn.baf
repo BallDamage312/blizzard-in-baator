@@ -1,19 +1,18 @@
-
 IF
     See([PC])
     Global("G-Ratshaman_Kombat_001","LOCALS",1)
 THEN
     RESPONSE #100
-        ForceSpell([PC],CLERIC_CURSE) 
+        ForceSpell([PC],CLERIC_CURSE)
         IncrementGlobal("G-Ratshaman_Kombat_001","LOCALS",1)
 END
 
 IF
-     See([PC])
+    See([PC])
     Global("G-Ratshaman_Kombat_001","LOCALS",2)
 THEN
     RESPONSE #100
-        ForceSpell([PC],WIZARD_VAMPIRIC_TOUCH)
+        ForceSpell(NearestEnemyOf(Myself),WIZARD_VAMPIRIC_TOUCH)
         IncrementGlobal("G-Ratshaman_Kombat_001","LOCALS",1)
 END
 
@@ -59,10 +58,8 @@ IF
 THEN
     RESPONSE #100
         ForceSpell(NearestAllyOf(Myself),WIZARD_BLOOD_BRIDGE)
-        //RunningAttack(NearestEnemyOf(Myself))
         IncrementGlobal("G-Ratshaman_Kombat_001","LOCALS",1)
 END
-
 
 IF
     See([PC])
@@ -70,21 +67,48 @@ IF
 THEN
     RESPONSE #100
         ForceSpell([PC],WIZARD_IGNUS_FORCE_MISSILES)
-        //RunningAttack(NearestEnemyOf(Myself))
         IncrementGlobal("G-Ratshaman_Kombat_001","LOCALS",1)
 END
 
 IF
     See([PC])
-    GlobalGT("G-Ratshaman_Kombat_001","LOCALS",8)
+    Global("G-Ratshaman_Kombat_001","LOCALS",9)
 THEN
     RESPONSE #100
         ForceSpell(NearestAllyOf(Myself),CLERIC_PRAYER)
+        IncrementGlobal("G-Ratshaman_Kombat_001","LOCALS",1)
+END
+
+IF
+    See([PC])
+    GlobalGT("G-Ratshaman_Kombat_001","LOCALS",9)
+THEN
+    RESPONSE #100
         RunningAttack(NearestEnemyOf(Myself))
 END
 
 IF
+    HPPercentLT(Myself,50)
+THEN
+    RESPONSE #100
+        ClearAllActions()
+        ForceSpell(Myself,CLERIC_CURE_SERIOUS_WOUNDS)
+        RunningAttack(NearestEnemyOf(Myself))
+END
+
+IF
+    AttackedBy([PC],DEFAULT)
+    Global("G-Ratshaman_Kombat_001","LOCALS",0)
+THEN
+    RESPONSE #100
+        Enemy()
+        FaceObject(LastAttackerOf(Myself))
+        SetGlobal("G-Ratshaman_Kombat_001","LOCALS",1)
+END
+
+IF
     Global("g-squerrikalert","GLOBAL",1)
+    Global("G-Ratshaman_Kombat_001","LOCALS",0)
 THEN
     RESPONSE #100
         FaceObject([PC])
@@ -94,10 +118,10 @@ THEN
 END
 
 IF
-    HPPercentLT("g-bb242",50)
+    See(NearestEnemyOf(Myself))
+    Global("G-Ratshaman_Kombat_001","LOCALS",0)
 THEN
     RESPONSE #100
-        ForceSpell(Myself,CLERIC_CURE_SERIOUS_WOUNDS)
-        RunningAttack(NearestEnemyOf(Myself))
-        IncrementGlobal("G-Ratshaman_Kombat_001","LOCALS",1)
+        Enemy()
+        SetGlobal("G-Ratshaman_Kombat_001","LOCALS",1)
 END

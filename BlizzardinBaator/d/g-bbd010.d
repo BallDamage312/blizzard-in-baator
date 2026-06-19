@@ -23,7 +23,7 @@ IF~~THEN REPLY @20 /*"Uhh... I think I got the wrong basement. Please continue. 
 CHAIN IF~Global("G-kuotoaspare","GLOBAL",1)~THEN g-bbD010 g-bbD010.startafterspare
 @22 /*"Oh, yes-yes, how strong and mighty you are! Mightier than Istishia! Mightier than any power! Spare us, O Scarred One, and we will serve you faithfully!" */
 END
-IF~~THEN REPLY @24 /*"Hmm, fine. Know my mercy. I shall spare you." */ DO~SetGlobal("G-kuotoaspare","GLOBAL",2) ~ + g-bbD010.W1
+IF~~THEN REPLY @24 /*"Hmm, fine. Know my mercy. I shall spare you." */ DO~SetGlobal("G-kuotoaspare","GLOBAL",2) SetGlobal("g-kuotoaangry","GLOBAL",0)~ + g-bbD010.W1
 IF~Global("G-killkuotoa","GLOBAL",0)~THEN REPLY @25 /*"I don't think so. Die." */ DO~SetGlobal("G-kuotoaspare","GLOBAL",2) Enemy() ForceAttack(Protagonist,Myself) Help()~ EXIT
 IF~Global("G-killkuotoa","GLOBAL",1)~THEN REPLY @26 /*"Orville had a pretty straightforward idea. Death to Dopilp." */ DO~SetGlobal("G-kuotoaspare","GLOBAL",2) Enemy() ForceAttack(Protagonist,Myself) Help()~ EXIT
 CHAIN IF~NumTimesTalkedToGT(0) Global("G-kuotoabhaal","GLOBAL",0) Global("G-kuotoagod","GLOBAL",1) Global("G-kuotoakiaran","GLOBAL",0)~THEN g-bbD010 g-bbD010.startscar

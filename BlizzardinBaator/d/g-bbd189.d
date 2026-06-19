@@ -1,6 +1,6 @@
 BEGIN g-bbD189
 CHAIN IF~Global("g-FWAMBUSH","GLOBAL",1) ~THEN g-bbD189 g-bbD189.chain1
-@1 /*As you travel alongside Ulfbrand and his forces toward a towering corridor behind the high walls of the Great Foundry, you cannot help but wonder about two things. First, just how large a force did the Fated Factor manage to assemble on such short notice? You can only hope the Doomguard are prepared at the site of their ambush. The other thing that keeps drawing your attention is the notion of... consequence.. */
+@1 /*As you travel alongside Ulfbrand and his forces toward a towering corridor behind the high walls of the Great Foundry, you cannot help but wonder about two things. First, just how large a force did the Fated Factor manage to assemble on such short notice? You can only hope the Doomguard are prepared at the site of their ambush. The other thing that keeps drawing your attention is the notion of... consequence. */
 =@2 /*Your choices put this in motion. Could the Doomguard have hidden away? Could Ulfbrand have gotten distracted? Could Rowan Darkwood have changed his mind about this? Could Haer'Dalis and his troop have sneaked out of the City of Doors unseen, to some quaint Prime Material world to have more adventures of their own? All of these peaceful options are now off the table. This is going to get violent, and you helped it reach this point. */
 =@3 /*How does it make you feel? */
 END
@@ -850,20 +850,20 @@ CHAIN IF~~THEN g-bbD189 g-bbD189.earringnegotiator2
 END
 IF~~THEN REPLY @719 /*"It's time to go..." */ DO~FadeFromColor([30.0],0) SetGlobal("G-D1cutscene","GLOBAL",0) TeleportParty("ARG-D1",[1442.996],0) Explore()~ EXIT
 CHAIN IF~~THEN g-bbD189 g-bbD189.ladyofpain
-@735 /*As the battle between the Fated and Doomguard reaches its fever pitch: Ysgardian berserkers clash with the last remaining entropy beasts, rust clouds chokes the skies, and powerful magic rips open cracks in the planes. The very fabric of Sigil begins to strain. Reality flickers. Portals destabilize. Spells begin to fail or double back. Both sides ignore the warning signs, too consumed by the momentum to notice what their war is doing. But you do. You step back, retreat from the fighting, feeling that something is about to happen. You do not know what tips the balance. There is so much happening all at once. But someone, somewhere... takes a step too far. */
-==g-bbd189 IF~Global("g-usedcoinonambush","GLOBAL",1)~THEN @736 /*The Greater Coin of Fate falls onto the bloodstained square with a soft clink and crumbles to dust. [KNOCK05] */
-==g-bbd189 @737 /*Then:
+@722 /*As the battle between the Fated and Doomguard reaches its fever pitch: Ysgardian berserkers clash with the last remaining entropy beasts, rust clouds chokes the skies, and powerful magic rips open cracks in the planes. The very fabric of Sigil begins to strain. Reality flickers. Portals destabilize. Spells begin to fail or double back. Both sides ignore the warning signs, too consumed by the momentum to notice what their war is doing. But you do. You step back, retreat from the fighting, feeling that something is about to happen. You do not know what tips the balance. There is so much happening all at once. But someone, somewhere... takes a step too far. */
+==g-bbd189 IF~Global("g-usedcoinonambush","GLOBAL",1)~THEN @723 /*The Greater Coin of Fate falls onto the bloodstained square with a soft clink and crumbles to dust. [KNOCK05] */
+==g-bbd189 @724 /*Then:
 
 Shadows lengthen. All sound ceases. [AM_SM028] */
-==g-bbd189 @738 /*She arrives. */
-==g-bbd189 @739 /*
+==g-bbd189 @725 /*She arrives. */
+==g-bbd189 @726 /*
 She does not speak. */
-==g-bbd189 @740 /*
+==g-bbd189 @727 /*
 She does not give warnings. */
-==g-bbd189 @741 /*She simply floats through the battlefield, and as her gaze passes over the combatants, they vanish, souls erased, existence revoked. Both Doomguard and Fated are unmade in waves of absolute silence. Berserkers fall still mid-swing and crumble into dust. Constructs collapse into screaming rust. */
+==g-bbd189 @728 /*She simply floats through the battlefield, and as her gaze passes over the combatants, they vanish, souls erased, existence revoked. Both Doomguard and Fated are unmade in waves of absolute silence. Berserkers fall still mid-swing and crumble into dust. Constructs collapse into screaming rust. */
 END
-IF~~THEN REPLY @743 /*Step out of the shadow. */ DO~FadeFromColor([30.0],0) SetGlobal("G-D1cutscene","GLOBAL",2) SetGlobal("G-doomvsfatevsKEY","GLOBAL",14) TeleportParty("ARG-D1",[1393.629],0) SetGlobal("G-ulfbrandlady","GLOBAL",1) SetGlobal("g-ambush_art","GLOBAL",9)~ SOLVED_JOURNAL @20110 + g-bbD189.lady2
+IF~~THEN REPLY @730 /*Step out of the shadow. */ DO~FadeFromColor([30.0],0) SetGlobal("G-D1cutscene","GLOBAL",2) SetGlobal("G-doomvsfatevsKEY","GLOBAL",14) TeleportParty("ARG-D1",[1393.629],0) SetGlobal("G-ulfbrandlady","GLOBAL",1) SetGlobal("g-ambush_art","GLOBAL",9)~ SOLVED_JOURNAL @20110 + g-bbD189.lady2
 CHAIN IF~~THEN g-bbD189 g-bbD189.lady2
-@745 /*By the end, nothing remains but scorched stone, silent wind, and the memory of pain etched into the walls. The Lady is gone. Haer'Dalis is gone, Ulfbrand is gone. Everyone is gone. Perhaps the earring you are looking for is still around among the ashes? */
+@732 /*By the end, nothing remains but scorched stone, silent wind, and the memory of pain etched into the walls. The Lady is gone. Haer'Dalis is gone, Ulfbrand is gone. Everyone is gone. Perhaps the earring you are looking for is still around among the ashes? */
 END
-IF~~THEN REPLY @747 /*"It's time to go..." */ DO~~ EXIT
+IF~~THEN REPLY @734 /*"It's time to go..." */ DO~~ EXIT

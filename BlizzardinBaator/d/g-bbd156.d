@@ -326,12 +326,12 @@ IF~~THEN REPLY @322 /*"Thank you for your trust, Ulfbrand. I'll tell them the ne
 CHAIN IF~~THEN g-bbD156 g-bbD156.bigchoice
 @324 /*"Ah, so now you stand in front of a choice. You may work for me instead, or you may die. Give me the location of where the troupe hides, so me and my men can raid it and bathe it in blood." */
 END
-IF~~THEN REPLY @326 /*^0xff8c6b69Side with Doomguard.^-^0xff212eff "I was told to use force if peace was not an option, and I will do so."^- */ DO~~ + g-bbD156.quest5
-IF~~THEN REPLY @327 /*^0xff8c6b69Side with Doomguard.^-^0xff212eff Lie: "I will do you one better. There is no need to risk an open battle under the Lady's eye. I will bring you the actor's head myself."^- */ DO~IncrementGlobalOnceEx("LAW","GLOBAL",-1) SetGlobal("G-doomvsfatevsKEY","GLOBAL",7)
+IF~~THEN REPLY @326 /*^0xff8c6b69Side with the Doomguard.^-^0xff212eff "I was told to use force if peace was not an option, and I will do so."^- */ DO~~ + g-bbD156.quest5
+IF~~THEN REPLY @327 /*^0xff8c6b69Side with the Doomguard.^-^0xff212eff Lie: "I will do you one better. There is no need to risk an open battle under the Lady's eye. I will bring you the actor's head myself."^- */ DO~IncrementGlobalOnceEx("LAW","GLOBAL",-1) SetGlobal("G-doomvsfatevsKEY","GLOBAL",7)
 IncrementGlobal("G-FatedPower","GLOBAL",-1)~ SOLVED_JOURNAL @20103 + g-bbD156.war7
-IF~~THEN REPLY @328 /*^0xff39bbe1Side with Fated.^-^0xff212eff Truth: "I will do you one better. There is no need to risk an open battle under the Lady's eye. I will bring you the actor's head myself."^- */ DO~SetGlobal("G-doomvsfatevsKEY","GLOBAL",15) IncrementGlobal("G-FatedPower","GLOBAL",3)~ SOLVED_JOURNAL @20111 + g-bbD156.war7
-IF~~THEN REPLY @329 /*^0xff39bbe1Side with Fated.^-^0xff212eff Truth: "They are hiding in the theater by the Vertical Sea. We can raid them easily."^- */ DO~SetGlobal("G-doomvsfatevsKEY","GLOBAL",16) IncrementGlobal("G-FatedPower","GLOBAL",5)~ SOLVED_JOURNAL @20112 + g-bbD156.war16
-IF~~THEN REPLY @330 /*^0xff8c6b69Side with Doomguard.^-^0xff212eff Lie: "I guess I have no choice. I do not know where they are now, but they trust me enough to take me there. I will return with the location."^- */ DO~IncrementGlobalOnceEx("LAW","GLOBAL",-1) SetGlobal("G-doomvsfatevsKEY","GLOBAL",6)
+IF~~THEN REPLY @328 /*^0xff39bbe1Side with the Fated.^-^0xff212eff Truth: "I will do you one better. There is no need to risk an open battle under the Lady's eye. I will bring you the actor's head myself."^- */ DO~SetGlobal("G-doomvsfatevsKEY","GLOBAL",15) IncrementGlobal("G-FatedPower","GLOBAL",3)~ SOLVED_JOURNAL @20111 + g-bbD156.war7
+IF~~THEN REPLY @329 /*^0xff39bbe1Side with the Fated.^-^0xff212eff Truth: "They are hiding in the theater by the Vertical Sea. We can raid them easily."^- */ DO~SetGlobal("G-doomvsfatevsKEY","GLOBAL",16) IncrementGlobal("G-FatedPower","GLOBAL",5)~ SOLVED_JOURNAL @20112 + g-bbD156.war16
+IF~~THEN REPLY @330 /*^0xff8c6b69Side with the Doomguard.^-^0xff212eff Lie: "I guess I have no choice. I do not know where they are now, but they trust me enough to take me there. I will return with the location."^- */ DO~IncrementGlobalOnceEx("LAW","GLOBAL",-1) SetGlobal("G-doomvsfatevsKEY","GLOBAL",6)
 IncrementGlobal("G-FatedPower","GLOBAL",-2)~ SOLVED_JOURNAL @20102 + g-bbD156.war7
 CHAIN IF~~THEN g-bbD156 g-bbD156.war7
 @332 /*"A fine decision. Go now and make me proud of your actions, my new soldier. Disappoint me, and you will feel the wrath of the entire Debt Collection Division and my own," Ulfbrand says in a confident tone. [g-15608] */

@@ -389,7 +389,7 @@ END
 IF~~THEN REPLY @395 /*"I find the basic definition most appealing. Meaning is a mental representation evoked by signs. Further levels are a matter of interpretation, and thus involve transforming the original meaning into something else." */ DO~~ + g-bbD159.language5a
 IF~~THEN REPLY @396 /*"The relationship of the meaning of an expression to other expressions should be its main determinant." */ DO~~ + g-bbD159.language5b
 IF~~THEN REPLY @397 /*"Meaning is largely determined by external factors. Two people with different experiences will have two different things in mind when they say the same words." */ DO~~ + g-bbD159.language5c
-IF~~THEN REPLY @398 /*"I like the idea of ​​meaning as a method of verifying or falsifying something." */ DO~~ + g-bbD159.language5d
+IF~~THEN REPLY @398 /*"I like the idea of meaning as a method of verifying or falsifying something." */ DO~~ + g-bbD159.language5d
 IF~~THEN REPLY @399 /*"Meaning is understanding, that is, the ability to recognize the truth of a sentence." */ DO~~ + g-bbD159.language5d
 IF~~THEN REPLY @400 /*"Meaning comes from the consequences of its application." */ DO~~ + g-bbD159.language5f
 IF~~THEN REPLY @401 /*"These definitions are not mutually exclusive, they can all be true at the same time" */ DO~~ + g-bbD159.language5g

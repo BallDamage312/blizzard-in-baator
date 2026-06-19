@@ -149,7 +149,7 @@ CHAIN IF~~THEN g-bbD055 g-bbD055.finale1a
 ==g-bbD055 @146 /*"I'm leaving, Sonne. I must atone in the Mortuary for my impure thoughts." */
 ==g-bbD056 @147 /*"Too bad. Then I'll keep looking." The mask on the woman's face does not waver. "Goodbye." */
 END
-IF~~THEN REPLY @149 /*Leave. */ DO~AddexperienceParty(32000) ActionOverride("g-bb056",EscapeArea()) SetGlobal("g-lovers4","GLOBAL",1)~ EXIT
+IF~~THEN REPLY @149 /*Leave. */ DO~AddexperienceParty(32000) ActionOverride("g-bb056",EscapeArea()) SetGlobal("g-lovers4","GLOBAL",1) SetGlobal("g-sonnelefbehind","GLOBAL",1)~ EXIT
 CHAIN IF~~THEN g-bbD055 g-bbD055.finale1
 ~~ ==g-bbD056 @151 /*"Too bad. Then I'll keep looking." The mask on the woman's face does not waver. "Goodbye." */
 END

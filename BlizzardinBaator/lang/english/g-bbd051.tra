@@ -32,7 +32,7 @@
 @46=~"I'm sorry, but would you believe I walked in here by accident yet again?"~
 @48=~In the back room of The Smoldering Corpse Bar, beside two familiar abishai, stands another in dark crimson scales. He is more grizzled and hunched, but his gaze makes it clear that his condition should not be mistaken for weakness.~
 @49=~"You came..." he growls at you. "I was starting to think you aren't cut out for this after all, amnesiac." ~ [g-05101]
-@50=~"I told you he would come, Tergush'tekhn! Blood's word is good.... when he remembers who's who."~
+@50=~"I told you he would come, Tergush'tekhn! Blood's word is good... when he remembers who's who."~
 @51=~"He could have come *a bit* sooner..."~
 @53=~"I came as soon as I heard."~
 @54=~"Was I... supposed to come?"~
@@ -206,7 +206,7 @@
 @301=~"You won't regret it. I am a man of my word."~
 @303=~"Great news, Nameless One. As for the devils... well, you know how baatezu can be. Whatever they wanted, they will surely not follow you to Cania." Tergush'tekhn pats your shoulder reassuringly.~
 @304=~"How about the key?"~
-@306=~"I am working on it.... I should go work on it some more, right now."~
+@306=~"I am working on it... I should go work on it some more, right now."~
 @307=~"I have that also. It was a whole *other* ordeal..."~
 @308=~"I have some questions first."~
 @310=~"So what are you still doing here? You have the key, you have the portal, go!" ~ [g-05105]
@@ -258,7 +258,7 @@
 @383=~"How would I get there?"~
 @384=~"That is... pretty deep down in the Hells."~
 @385=~"Tell me about the financial benefits."~
-@386=~"So we know each other? Fury can really help me?"~
+@386=~"So we know each other? Can Fury really help me?"~
 @387=~"Who is her superior?"~
 @388=~"Why me?"~
 @389=~"Baator? I'm sorry, I am actually not interested after all."~
@@ -266,7 +266,7 @@
 @392=~"We have a very useful robe that can help you... not freeze. Its aura extends over several people as well."~
 @394=~"How would I get there?"~
 @395=~"Tell me about the financial benefits."~
-@396=~"So we know each other? Fury can really help me?"~
+@396=~"So we know each other? Can Fury really help me?"~
 @397=~"Who is Fury's superior?"~
 @398=~"Why me?"~
 @399=~"I'm sorry, I am actually not interested after all."~
@@ -284,7 +284,7 @@
 @414=~"Möbius! Yes, please!"~
 @416=~"Where was Fury last seen?"~
 @417=~"All right, what's next? How would I get to Cania?"~
-@418=~"So we know each other? Fury can really help me?"~
+@418=~"So we know each other? Can Fury really help me?"~
 @419=~"Who is Fury's superior?"~
 @420=~"Why me?"~
 @421=~"I'm sorry, I am actually not interested after all."~
@@ -292,14 +292,14 @@
 @425=~"Where was Fury last seen?"~
 @426=~"All right, what next? How would I get to Cania?"~
 @427=~"Tell me about the financial benefits."~
-@428=~"So we know each other? Fury can really help me?"~
+@428=~"So we know each other? Can Fury really help me?"~
 @430=~"Why me?"~
 @432=~"I'm sorry, I am actually not interested after all."~
-@434=~The devils exchange knowing glances. "We have seen what you can do. We know you are trustworthy. You will be the right person in the right place, I have no doubt of that. And after all... Fury was your best friend."~
+@434=~The devils exchange knowing glances. "We have seen what you can do. We know you are trustworthy. You will be the right person in the right place, I have no doubt of that. And after all... Fury was your closest confidant."~
 @436=~"Where was Fury last seen?"~
 @437=~"All right, what next? How would I get to Cania?"~
 @438=~"Tell me about the financial benefits."~
-@439=~"So we know each other? Fury can really help me?"~
+@439=~"So we know each other? Can Fury really help me?"~
 @440=~"Who is Fury's superior?"~
 @441=~"I'm sorry, I am actually not interested after all."~
 @443=~"Wait a minute." The fiend bares his fangs in a mockery of a smile. "Before we tell you the next part... you have to declare whether you're in... Bindingly." A contract materializes in his claws.  ~ [g-05103]
@@ -399,6 +399,6 @@
 @574=~"Archons may hate fiends more than other fiends."~
 @575=~"Well, all right. Nobody hates fiends more than archons and other fiends."
 ~
-@576=~"I think eladrin too...."~
+@576=~"I think eladrin too..."~
 @577=~"Enough! Yes, we have a *lot* of enemies. It is nothing to worry about."~
 @579=~"I certainly hope so. I have other questions."~
