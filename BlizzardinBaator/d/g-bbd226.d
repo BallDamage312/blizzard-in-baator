@@ -37,12 +37,12 @@ IF~~THEN REPLY @33 /*"I have some questions." */ DO~~ + g-bbD226.q
 IF~Global("g-skald_watch","GLOBAL",1)~THEN REPLY @34 /*Point at the entrance. "Where does it lead to?" */ DO~SetGlobal("g-skald_hovel","GLOBAL",1)~ + g-bbD226.where2
 IF~~THEN REPLY @35 /*"I need to go. Farewell." */ DO~~ EXIT
 CHAIN IF~~THEN g-bbD226 g-bbD226.where
-@37 /*The man wakes up from his strange stupor, but his face still resembles a mask of longing. "Oh... novhere no more.... Afsakið, I vas not paying attention. Vat do ye need?" */
+@37 /*The man wakes up from his strange stupor, but his face still resembles a mask of longing. "Oh... novhere no more... Afsakið, I vas not paying attention. Vat do ye need?" */
 END
 IF~~THEN REPLY @39 /*"I have some questions." */ DO~~ + g-bbD226.q
 IF~~THEN REPLY @40 /*"I need to go. Farewell." */ DO~~ EXIT
 CHAIN IF~~THEN g-bbD226 g-bbD226.where2
-@42 /*"Oh... no-vere no more...." */
+@42 /*"Oh... no-vere no more..." */
 END
 IF~~THEN REPLY @44 /*"I have some questions." */ DO~~ + g-bbD226.q
 IF~~THEN REPLY @45 /*"I need to go. Farewell." */ DO~~ EXIT

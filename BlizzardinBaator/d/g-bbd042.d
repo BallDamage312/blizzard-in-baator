@@ -129,11 +129,11 @@ CHAIN IF~~THEN g-bbD042 g-bbD042.darek5
 ==DMorte IF ~InParty("Morte") !StateCheck("Morte",CD_STATE_NOTVALID) NearbyDialog("DMorte")~ THEN @129 /*"We definitely haven't seen a bar like that yet..." */
 ==DAnnah IF ~InParty("Annah") !StateCheck("Annah",CD_STATE_NOTVALID) NearbyDialog("DAnnah")~ THEN @130 /*"There's one by that smelly gutter of a 'river', The Ditch." */
 END
-IF~~THEN REPLY @132 /*"Thank you. I have to relate that to the fiends. I have some more questions, Mawu." */ DO~SetGlobal("G-keyquest","GLOBAL",1)~ SOLVED_JOURNAL @20087 + g-bbD042.q
-IF~~THEN REPLY @133 /*"Thank you. I have to relate that to the fiends. I have to go now." */ DO~SetGlobal("G-keyquest","GLOBAL",1)~ SOLVED_JOURNAL @20087 + g-bbD042.f1
-IF~~THEN REPLY @134 /*"Thank you. I have to relate that to the fiends. I have to go now, Mawu. I'm sorry for your loss." */ DO~SetGlobal("G-keyquest","GLOBAL",1)~ SOLVED_JOURNAL @20087 + g-bbD042.f1
+IF~~THEN REPLY @132 /*"Thank you. I have some more questions, Mawu." */ DO~SetGlobal("G-keyquest","GLOBAL",1)~ SOLVED_JOURNAL @20087 + g-bbD042.q
+IF~~THEN REPLY @133 /*"Thank you. I have to go now." */ DO~SetGlobal("G-keyquest","GLOBAL",1)~ SOLVED_JOURNAL @20087 + g-bbD042.f1
+IF~~THEN REPLY @134 /*"Thank you. I have to go now, Mawu. I'm sorry for your loss." */ DO~SetGlobal("G-keyquest","GLOBAL",1)~ SOLVED_JOURNAL @20087 + g-bbD042.f1
 CHAIN IF~~THEN g-bbD042 g-bbD042.modron
-@136 /*"Hmmm." She ponders deeply but quickly. "I suppose it depends on whether he is sensitive to astral conduits or the energy they produce. If it is the energy, then perhaps, as it can leave behind residual magic when it... hops away" */
+@136 /*"Hmmm." She ponders deeply but quickly. "I suppose it depends on whether he is sensitive to astral conduits or the energy they produce. If it is the energy, then perhaps, as it can leave behind residual magic when it... hops away." */
 =@137 /*"But if it's the connection he senses, then he will be of no help. If the portal isn't currently there... the connection is not available." */
 ==DNordom IF ~InParty("Nordom") !StateCheck("Nordom",CD_STATE_NOTVALID) NearbyDialog("DNordom")~ THEN @138 /*"Query unclear, function parameters unknown." */
 ==g-bbd042 @139 /*Mawu gives you a slightly uneasy smile. "Mawu would still like to know... what evidence is there that such a portal exists in Sigil?" */

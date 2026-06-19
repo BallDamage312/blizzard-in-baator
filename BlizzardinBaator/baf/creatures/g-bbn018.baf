@@ -1,123 +1,125 @@
-// Kabatum
-
-
 IF
     OnCreation()
 THEN
     RESPONSE #100
         FaceObject([PC])
-        SetItemFlags("COPPER",NONSTEALABLE,TRUE)
-        SetItemFlags("HEARCHRM",NONSTEALABLE,TRUE)
+        SetItemFlags("COPPER",NONSTEALABLE,TRUE)  
+        SetItemFlags("HEARCHRM",NONSTEALABLE,TRUE) 
         Continue()
 END
 
 IF
-    //See(NearestEnemyOf(Myself))
+    Allegiance(Myself,ENEMY)
+    Global("G-Kabatum_Kombat_N018","LOCALS",0)
+    OR(2)
+        See(NearestEnemyOf(Myself))
+        Range([PC],25)
+THEN
+    RESPONSE #100
+        FaceObject([PC])             
+        SetGlobal("G-Kabatum_Kombat_N018","LOCALS",1) 
+END
+
+IF
+    AttackedBy([PC],DEFAULT)
+    Global("G-Kabatum_Kombat_N018","LOCALS",0)
+THEN
+    RESPONSE #100
+        Enemy()
+        FaceObject(LastAttackerOf(Myself))           
+        FloatMessage(Myself,@100012)
+        SetGlobal("G-Kabatum_Kombat_N018","LOCALS",1)
+END
+
+IF
     HPPercentLT(Myself,55)
-    HasItem("HEARCHRM",Myself)
-
+    HasItem("HEARCHRM",Myself) 
 THEN
     RESPONSE #100
-        UseItem("HEARCHRM",Myself)  
-        FloatMessage(Myself,30539)
-		FaceObject([PC])
-		RunningAttack(NearestEnemyOf(Myself))
-END
-
-IF	
-	See(NearestEnemyOf(Myself))
-	Global("G-Kabatum_Kombat_N018","LOCALS",1)
-THEN
-    RESPONSE #100
-        ForceSpell(Myself,WIZARD_CLOAK_OF_WARDING)
-		Wait(1)
-		IncrementGlobal("G-Kabatum_Kombat_N018","LOCALS",1)
+        DisplayStringHead(Myself,30539)
+        UseItem("HEARCHRM",Myself) 
+        FaceObject([PC])
 END
 
 IF
-	See(NearestEnemyOf(Myself))
-	Global("G-Kabatum_Kombat_N018","LOCALS",2)
+    Allegiance(Myself,ENEMY)
+    See(NearestEnemyOf(Myself))
+    GlobalGT("G-Kabatum_Kombat_N018","LOCALS",0)
+    !StateCheck(Myself,STATE_BLUR)
 THEN
     RESPONSE #100
-        Spell([PC],WIZARD_MAGIC_MISSILE)
-        Wait(1)
-		IncrementGlobal("G-Kabatum_Kombat_N018","LOCALS",1)
+        ReallyForceSpell(Myself,WIZARD_BLUR)
+        Continue()
 END
 
 IF
-	See(NearestEnemyOf(Myself))
-	Global("G-Kabatum_Kombat_N018","LOCALS",3)
+    See(NearestEnemyOf(Myself))
+    Global("G-Kabatum_Kombat_N018","LOCALS",1)
 THEN
     RESPONSE #100
-        Spell([PC],WIZARD_MISSILE_OF_PATIENCE)
-        Wait(1)
-		IncrementGlobal("G-Kabatum_Kombat_N018","LOCALS",1)
+        ReallyForceSpellRES("g-bb686",Myself)
+        ReallyForceSpell(Myself,WIZARD_CLOAK_OF_WARDING)
+        IncrementGlobal("G-Kabatum_Kombat_N018","LOCALS",1)
 END
 
 IF
-	See(NearestEnemyOf(Myself))
-	Global("G-Kabatum_Kombat_N018","LOCALS",4)
+    See(NearestEnemyOf(Myself))
+    Global("G-Kabatum_Kombat_N018","LOCALS",2)
+THEN
+    RESPONSE #100
+        Spell([PC],WIZARD_MISSILE_OF_PATIENCE) 
+        IncrementGlobal("G-Kabatum_Kombat_N018","LOCALS",1)
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+    Global("G-Kabatum_Kombat_N018","LOCALS",3)
 THEN
     RESPONSE #100
         Spell([PC],WIZARD_BLINDNESS)
-        Wait(1)
-		IncrementGlobal("G-Kabatum_Kombat_N018","LOCALS",1)
+        IncrementGlobal("G-Kabatum_Kombat_N018","LOCALS",1)
 END
 
 IF
-	See(NearestEnemyOf(Myself))
-	Global("G-Kabatum_Kombat_N018","LOCALS",5)
+    See(NearestEnemyOf(Myself))
+    Global("G-Kabatum_Kombat_N018","LOCALS",4)
 THEN
     RESPONSE #100
-        Spell([PC],WIZARD_HORROR)
-        Wait(1)
-		IncrementGlobal("G-Kabatum_Kombat_N018","LOCALS",1)
+        Spell([PC],WIZARD_HORROR) 
+        IncrementGlobal("G-Kabatum_Kombat_N018","LOCALS",1)
 END
 
 IF
-	See(NearestEnemyOf(Myself))
-	Global("G-Kabatum_Kombat_N018","LOCALS",6)
+    See(NearestEnemyOf(Myself))
+    Global("G-Kabatum_Kombat_N018","LOCALS",5)
 THEN
     RESPONSE #100
-		FloatMessage(Myself,@100013)
-        Spell([PC],WIZARD_FORCE_MISSILES)
-        Wait(1)
-		IncrementGlobal("G-Kabatum_Kombat_N018","LOCALS",1)
+        FloatMessage(Myself,@100011)
+        Spell([PC],WIZARD_FORCE_MISSILES) 
+        IncrementGlobal("G-Kabatum_Kombat_N018","LOCALS",1)
 END
 
 IF
-	See(NearestEnemyOf(Myself))
-	Global("G-Kabatum_Kombat_N018","LOCALS",7)
+    See(NearestEnemyOf(Myself))
+    Global("G-Kabatum_Kombat_N018","LOCALS",6)
 THEN
     RESPONSE #100
-        Spell([PC],WIZARD_TONGUES_OF_FLAME)
-		Wait(1)
-		IncrementGlobal("G-Kabatum_Kombat_N018","LOCALS",1)
+        Spell([PC],WIZARD_TONGUES_OF_FLAME) 
+        IncrementGlobal("G-Kabatum_Kombat_N018","LOCALS",1)
 END
 
 IF
-	See(NearestEnemyOf(Myself))
-	Global("G-Kabatum_Kombat_N018","LOCALS",8)
+    See(NearestEnemyOf(Myself))
+    Global("G-Kabatum_Kombat_N018","LOCALS",7)
 THEN
     RESPONSE #100
-        Spell([PC],WIZARD_FORCE_MISSILES)
-        Wait(1)
-		IncrementGlobal("G-Kabatum_Kombat_N018","LOCALS",1)
+        Spell([PC],WIZARD_FORCE_MISSILES) 
+        IncrementGlobal("G-Kabatum_Kombat_N018","LOCALS",1)
 END
-/*
+
 IF
-	See(NearestEnemyOf(Myself))
-	Global("G-Kabatum_Kombat_N018","LOCALS",9)
-THEN
-    RESPONSE #100
-        Spell([PC],WIZARD_FIRE_AND_ICE)
-        Wait(1)
-		IncrementGlobal("G-Kabatum_Kombat_N018","LOCALS",1)
-END
-*/
-IF
-	See(NearestEnemyOf(Myself))
-	Global("G-Kabatum_Kombat_N018","LOCALS",9)
+    See(NearestEnemyOf(Myself))
+    Global("G-Kabatum_Kombat_N018","LOCALS",8)
 THEN
     RESPONSE #100
         ForceSpellRES("g-bb668",NearestEnemyOf(Myself))
@@ -125,49 +127,29 @@ THEN
 END
 
 IF
-	See(NearestEnemyOf(Myself))
-	Global("G-Kabatum_Kombat_N018","LOCALS",10)
+    See(NearestEnemyOf(Myself))
+    Global("G-Kabatum_Kombat_N018","LOCALS",9)
 THEN
     RESPONSE #100
-		FloatMessage(Myself,@100011)
-        ReallyForceSpell(Myself,WIZARD_BLUR)
-		IncrementGlobal("G-Kabatum_Kombat_N018","LOCALS",1)
-END
-
-IF
-	See(NearestEnemyOf(Myself))
-	Global("G-Kabatum_Kombat_N018","LOCALS",11)
-THEN
-    RESPONSE #100
-        Spell(Myself,WIZARD_STRENGTH)
-		ForceSpellRES("g-bb686",Myself)
-		IncrementGlobal("G-Kabatum_Kombat_N018","LOCALS",1)
-END
-
-IF
-	See(NearestEnemyOf(Myself))
-    GlobalGT("G-Kabatum_Kombat_N018","LOCALS",11)
-THEN
-    RESPONSE #100
-        RunningAttack(NearestEnemyOf(Myself))
+        FloatMessage(Myself,@100013)
+        ReallyForceSpell(Myself,WIZARD_BLUR)  
+        IncrementGlobal("G-Kabatum_Kombat_N018","LOCALS",1)
 END
 
 IF
     See(NearestEnemyOf(Myself))
+    Global("G-Kabatum_Kombat_N018","LOCALS",10)
 THEN
     RESPONSE #100
-    Enemy()
-	RunningAttack(NearestEnemyOf(Myself))
-	IncrementGlobal("G-Kabatum_Kombat_N018","LOCALS",1)
+        ReallyForceSpell(Myself,WIZARD_STRENGTH) 
+        Spell([PC],WIZARD_MAGIC_MISSILE)          
+        IncrementGlobal("G-Kabatum_Kombat_N018","LOCALS",1) 
 END
 
 IF
-    AttackedBy([PC],DEFAULT)
+    See(NearestEnemyOf(Myself))
+    GlobalGT("G-Kabatum_Kombat_N018","LOCALS",10) 
 THEN
     RESPONSE #100
-		FaceObject([PC])
-		FloatMessage(Myself,@100012)
-		Enemy()
-		Wait(1)
-		SetGlobal("G-Kabatum_Kombat_N018","LOCALS",1)
+        RunningAttack(NearestEnemyOf(Myself))
 END

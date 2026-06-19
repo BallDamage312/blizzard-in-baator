@@ -15,12 +15,10 @@
 @18=~"I am not a follower of Istishia. I am your doom. I was sent by the wererats to end your bloody campaign."~
 @19=~"I am not a follower of Istishia. I was sent by the wererats to end your bloody campaign, but I would rather resolve this peacefully."~
 @20=~"Uhh... I think I got the wrong basement. Please continue. Farewell."~
-@21=~Script for ARG-05 - if dopilp health falls below 25% SetGlobal("G-kuotoaspare","GLOBAL",1) force start dialogue~
 @22=~"Oh, yes-yes, how strong and mighty you are! Mightier than Istishia! Mightier than any power! Spare us, O Scarred One, and we will serve you faithfully!"~
 @24=~"Hmm, fine. Know my mercy. I shall spare you."~
 @25=~"I don't think so. Die."~
 @26=~"Orville had a pretty straightforward idea. Death to Dopilp."~
-@27=~Script for ARG-05 - if Global("G-kuotoaprisonersfree","GLOBAL",1) force start dialogue - with a one-time condition~
 @28=~"What now, what now, O Scarred One?" Dopilp asks, bowing slightly.~
 @30=~"I have some commandments for you."~
 @31=~"I don't have any more tasks that I would like you to do. Go and do my bidding."~

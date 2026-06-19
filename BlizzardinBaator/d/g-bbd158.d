@@ -14,7 +14,7 @@ END
 IF~~THEN REPLY @11 /*Run your fingers through the instrument's teeth. */ DO~~ + g-bbD158.play0
 IF~~THEN REPLY @12 /*Leave. */ DO~~ EXIT
 CHAIN IF~~THEN g-bbD158 g-bbD158.play0
-@14 /*You run your fingers from the left side, producing a series of increasingly higher-pitched sounds that resonate pleasantly throughout the living room. The unpressed teeth appear to be split in half, judging by the symbols engraved above them. Both halves are marked with the letters C, D, E, F, G, A, H, and C, but differ in the numbers at the end. */
+@14 /*You run your fingers from the left side, producing a series of increasingly higher-pitched sounds that resonate pleasantly throughout the living room. The unpressed teeth appear to be split in half, judging by the symbols engraved above them. Both halves are marked with the letters C, D, E, F, G, A, B, and C, but differ in the numbers at the end. */
 END
 IF~~THEN REPLY @16 /*Focus on the first half, marked with the symbols C1 through C2. */ DO~SetGlobal("g-pianoportal","GLOBAL",0)~ + g-bbD158.octave1
 IF~~THEN REPLY @17 /*Focus on the second half, marked with the symbols C2 through C3. */ DO~SetGlobal("g-pianoportal","GLOBAL",0)~ + g-bbD158.octave2

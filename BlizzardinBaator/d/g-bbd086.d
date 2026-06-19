@@ -20,10 +20,10 @@ IF~Global("G-BBmain","GLOBAL",9)~THEN REPLY @16 /*"Are you harboring the bandits
 IF~Global("G-BBmain","GLOBAL",10)~THEN REPLY @17 /*"Is there anything I can do to talk to Fragile-Tail?" */ DO~~ + g-bbD086.10quest
 IF~Global("G-BBmain","GLOBAL",11)~THEN REPLY @18 /*"Do you still need to deal with the fish people? I've decided to help." */ DO~SetGlobal("G-BBmain","GLOBAL",12)~ SOLVED_JOURNAL @20018 + g-bbD086.11quest
 IF~Global("G-BBmain","GLOBAL",12)~THEN REPLY @19 /*"Can you tell me again what I need to do about the kuo-toa?" */ DO~~ + g-bbD086.12quest
-IF~Global("G-kuotoakiaran","GLOBAL",1)~THEN REPLY @20 /*"The kuo-toa now follow Kiaransalee, so they will only bring you *more* trouble." */ DO~~ + g-bbD086.kiaransalee
-IF~Global("G-kuotoabhaal","GLOBAL",1)~THEN REPLY @21 /*"The kuo-toa now follow Bhaal, so they will only bring you *more* trouble." */ DO~~ + g-bbD086.bhaal
-IF~Global("G-kuotoagod","GLOBAL",1) GlobalLT("G-BBmain","GLOBAL",15)~THEN REPLY @22 /*"The kuo-toa now follow me, so they will no longer pester you." */ DO~SetGlobal("G-BBmain","GLOBAL",15)~ SOLVED_JOURNAL @20021 + g-bbD086.14quest
-IF~OR(3) Global("G-BBmain","GLOBAL",14) Global("G-kuotoagone","GLOBAL",1) Global("G-kuotoadead","GLOBAL",1)~THEN REPLY @23 /*"Dopilp and his minions are gone. Can I see Fragile-Tail now?" */ DO~SetGlobal("G-BBmain","GLOBAL",15)~ SOLVED_JOURNAL @20021 + g-bbD086.14quest
+IF~Global("G-kuotoakiaran","GLOBAL",1) Global("G-killkuotoa","GLOBAL",1)~THEN REPLY @20 /*"The kuo-toa now follow Kiaransalee, so they will only bring you *more* trouble." */ DO~~ + g-bbD086.kiaransalee
+IF~Global("G-kuotoabhaal","GLOBAL",1) Global("G-killkuotoa","GLOBAL",1)~THEN REPLY @21 /*"The kuo-toa now follow Bhaal, so they will only bring you *more* trouble." */ DO~~ + g-bbD086.bhaal
+IF~Global("G-kuotoagod","GLOBAL",1) GlobalLT("G-BBmain","GLOBAL",15) Global("G-Orvillekeyrecieved","GLOBAL",0)~THEN REPLY @22 /*"The kuo-toa now follow me, so they will no longer pester you." */ DO~SetGlobal("G-BBmain","GLOBAL",15)~ SOLVED_JOURNAL @20021 + g-bbD086.14quest
+IF~Global("G-Orvillekeyrecieved","GLOBAL",0) OR(3) Global("G-BBmain","GLOBAL",14) Global("G-kuotoagone","GLOBAL",1) Global("G-kuotoadead","GLOBAL",1)~THEN REPLY @23 /*"Dopilp and his minions are gone. Can I see Fragile-Tail now?" */ DO~SetGlobal("G-BBmain","GLOBAL",15)~ SOLVED_JOURNAL @20021 + g-bbD086.14quest
 IF~~THEN REPLY @24 /*"I have some questions." */ DO~~ + g-bbD086.questions
 IF~~THEN REPLY @25 /*"I want to order something." */ DO~~ + g-bbD086.order
 IF~~THEN REPLY @26 /*"Do you have any rooms?" */ DO~StartStore("g-bb#011",LastTalkedToBy())~ EXIT
@@ -66,8 +66,8 @@ IF~Global("G-BBmain","GLOBAL",11)~THEN REPLY @62 /*"Do you still need to deal wi
 IF~Global("G-BBmain","GLOBAL",12)~THEN REPLY @63 /*"Can you tell me again what I need to do about the kuo-toa?" */ DO~~ + g-bbD086.12quest
 IF~Global("G-kuotoakiaran","GLOBAL",1)~THEN REPLY @64 /*"The kuo-toa now follow Kiaransalee, so they will only bring you *more* trouble." */ DO~~ + g-bbD086.kiaransalee
 IF~Global("G-kuotoabhaal","GLOBAL",1)~THEN REPLY @65 /*"The kuo-toa now follow Bhaal, so they will only bring you *more* trouble." */ DO~~ + g-bbD086.bhaal
-IF~Global("G-kuotoagod","GLOBAL",1) GlobalLT("G-BBmain","GLOBAL",15)~THEN REPLY @66 /*"The kuo-toa now follow me, so they will no longer pester you." */ DO~SetGlobal("G-BBmain","GLOBAL",15)~ SOLVED_JOURNAL @20021 + g-bbD086.14quest
-IF~OR(3) Global("G-BBmain","GLOBAL",14) Global("G-kuotoagone","GLOBAL",1) Global("G-kuotoadead","GLOBAL",1)~THEN REPLY @67 /*"Dopilp and his minions are gone. Can I see Fragile-Tail now?" */ DO~SetGlobal("G-BBmain","GLOBAL",15)~ SOLVED_JOURNAL @20021 + g-bbD086.14quest
+IF~Global("G-kuotoagod","GLOBAL",1) GlobalLT("G-BBmain","GLOBAL",15) Global("G-Orvillekeyrecieved","GLOBAL",0)~THEN REPLY @66 /*"The kuo-toa now follow me, so they will no longer pester you." */ DO~SetGlobal("G-BBmain","GLOBAL",15)~ SOLVED_JOURNAL @20021 + g-bbD086.14quest
+IF~Global("G-Orvillekeyrecieved","GLOBAL",0) OR(3) Global("G-BBmain","GLOBAL",14) Global("G-kuotoagone","GLOBAL",1) Global("G-kuotoadead","GLOBAL",1)~THEN REPLY @67 /*"Dopilp and his minions are gone. Can I see Fragile-Tail now?" */ DO~SetGlobal("G-BBmain","GLOBAL",15)~ SOLVED_JOURNAL @20021 + g-bbD086.14quest
 IF~~THEN REPLY @68 /*"I also want to order something." */ DO~~ + g-bbD086.order
 IF~OR(2) Global("G-triplerquest","GLOBAL",2) Global("G-triplerquest","GLOBAL",3) ~THEN REPLY @69 /*"Do you know anything more about that strange skeleton hanging around the local taverns?" */ DO~~ + g-bbD086.triplerquest
 IF~Global("G-rattemplequest","GLOBAL",1)~THEN REPLY @70 /*"Are there any temples to a wererat power around here?" */ DO~~ + g-bbD086.templequest
@@ -315,7 +315,7 @@ IF~~THEN REPLY @312 /*"Never mind. Goodbye." */ DO~~ EXIT
 CHAIN IF~~THEN g-bbD086 g-bbD086.bribe
 @314 /*Orville smiles, revealing a slightly gapped row of sharp, slender fangs. "You're aiming at the right cage, but you're shooting at a cat that's too skinny. I can't afford to cover potential losses for a thousand copper. Give me *ten* thousand, and I'll tell you where Fragile-Tail is." */
 END
-IF~PartyGoldGT(9999)~THEN REPLY @316 /*"That's steep, but... fine." */ DO~SetGlobal("G-BBmain","GLOBAL",10)~ + g-bbD086.bribe2
+IF~PartyGoldGT(9999) Global("G-Orvillekeyrecieved","GLOBAL",0)~THEN REPLY @316 /*"That's steep, but... fine." */ DO~SetGlobal("G-BBmain","GLOBAL",10)~ + g-bbD086.bribe2
 IF~CheckStatGT(Protagonist,15,CHR)~THEN REPLY @317 /*"I have no intention of handing him over to the fiends. I just need to talk to the one with a frostbitten tail." */ DO~SetGlobal("G-BBmain","GLOBAL",10)~ + g-bbD086.persu
 IF~!CheckStatGT(Protagonist,15,CHR)~THEN REPLY @318 /*"I have no intention of handing him over to the fiends. I just need to talk to the one with a frostbitten tail." */ DO~~ + g-bbD086.FAILL
 IF~CheckStatGT(Protagonist,12,CHR) CheckStatGT(Protagonist,12,INT)~THEN REPLY @319 /*"You know... nothing stops me from giving you up to the yugoloths either way." */ DO~IncrementGlobal("GOOD","GLOBAL",-1) SetGlobal("G-BBmain","GLOBAL",10)~ + g-bbD086.intim
@@ -351,7 +351,7 @@ IF~Global("G-BBmain","GLOBAL",10)~THEN REPLY @348 /*"Is there anything I can do 
 IF~~THEN REPLY @349 /*"Never mind. I have some questions." */ DO~~ + g-bbD086.questions
 IF~~THEN REPLY @350 /*"Never mind. Goodbye." */ DO~~ EXIT
 CHAIN IF~~THEN g-bbD086 g-bbD086.pastF
-@352 /*"That's correct, but you cannot rely on that forever. This will take a bit *more* work...." Orville taps the counter with a thin finger. */
+@352 /*"That's correct, but you cannot rely on that forever. This will take a bit *more* work..." Orville taps the counter with a thin finger. */
 END
 IF~Global("G-BBmain","GLOBAL",10)~THEN REPLY @354 /*"Is there anything I can do to talk to Fragile-Tail?" */ DO~~ + g-bbD086.10quest
 IF~~THEN REPLY @355 /*"Never mind. I have some questions." */ DO~~ + g-bbD086.questions
@@ -381,9 +381,9 @@ CHAIN IF~~THEN g-bbD086 g-bbD086.10questCONF
 @379 /*"Apparently, they have a leader, a cleric called Dopilp. He seems to be at the center of their so-called 'community.' Get rid of him and the rest should scatter." */
 END
 IF~~THEN REPLY @381 /*"All right, I'll do it." */ DO~SetGlobal("G-BBmain","GLOBAL",12) SetGlobal("G-killkuotoa","GLOBAL",1)~ SOLVED_JOURNAL @20018 + g-bbD086.11quest
-IF~~THEN REPLY @382 /*"What exactly did the poor fish people do to you?" */ DO~~ + g-bbD086.10questMORE
-IF~~THEN REPLY @383 /*"Sorry, I'm not going to exterminate the poor fish people just because they're causing problems in your underworld. I have other questions." */ DO~~ + g-bbD086.questions
-IF~~THEN REPLY @384 /*"Sorry, I'm not going to exterminate the poor fish people just because they're causing problems in your underworld. Goodbye." */ DO~~ EXIT
+IF~~THEN REPLY @382 /*"What exactly did the poor fish people do to you?" */ DO~SetGlobal("G-killkuotoa","GLOBAL",1)~ + g-bbD086.10questMORE
+IF~~THEN REPLY @383 /*"Sorry, I'm not going to exterminate the poor fish people just because they're causing problems in your underworld. I have other questions." */ DO~SetGlobal("G-killkuotoa","GLOBAL",1)~ + g-bbD086.questions
+IF~~THEN REPLY @384 /*"Sorry, I'm not going to exterminate the poor fish people just because they're causing problems in your underworld. Goodbye." */ DO~SetGlobal("G-killkuotoa","GLOBAL",1)~ EXIT
 CHAIN IF~~THEN g-bbD086 g-bbD086.10questMORE
 @386 /*"They're *hunting* us and the people living near the Ditch. We... I mean, my friends, with whom I have no legal ties... they just move certain goods around. In contrast, the kuo-toa sacrifice people on their bloody altars. Do they still sound like poor fish people to you?" */
 END
@@ -393,8 +393,8 @@ IF~~THEN REPLY @390 /*"Sorry, I won't do it. Goodbye." */ DO~~ EXIT
 CHAIN IF~~THEN g-bbD086 g-bbD086.11quest
 @392 /*Orville beams with excitement. "Oh, hairy be thy mane! When Dopilp is dead, I'll lead you to Fragile-Tail and you can talk to him about whatever you want." */
 END
-IF~~THEN REPLY @394 /*"I'll be back with his head. In the meantime, I have other questions." */ DO~~ + g-bbD086.questions
-IF~~THEN REPLY @395 /*"I'll be back with his head. Goodbye." */ DO~~ EXIT
+IF~~THEN REPLY @394 /*"I'll be back with his head. In the meantime, I have other questions." */ DO~SetGlobal("G-killkuotoa","GLOBAL",1)~ + g-bbD086.questions
+IF~~THEN REPLY @395 /*"I'll be back with his head. Goodbye." */ DO~SetGlobal("G-killkuotoa","GLOBAL",1)~ EXIT
 CHAIN IF~~THEN g-bbD086 g-bbD086.12quest
 @397 /*The wererat barkeep sighs and seems disappointed with your short memory. "There is a kuo-toa lair somewhere in the flooded settlement. Their murderous congregation is led by a priest, Dopilp. Get rid of him for us and you will be granted access to Fragile-Tail." */
 END
@@ -403,7 +403,7 @@ IF~~THEN REPLY @400 /*"I'll be back with his head. Goodbye." */ DO~~ EXIT
 CHAIN IF~~THEN g-bbD086 g-bbD086.14quest
 @402 /*Orville smiles, revealing his ratty but still sharp teeth. "Fragile-Tail is in the back, just up the stairs." He takes a key from his apron pocket and hands it to you. "Here's the key, biped." */
 END
-IF~~THEN REPLY @404 /*Take the key. "Thank you, Orville." */ DO~GiveItemCreate("G-bbi011",Protagonist,0,0,0)~ EXIT
+IF~~THEN REPLY @404 /*Take the key. "Thank you, Orville." */ DO~GiveItemCreate("G-bbi011",Protagonist,0,0,0) SetGlobal("G-Orvillekeyrecieved","GLOBAL",1)~ EXIT
 CHAIN IF~~THEN g-bbD086 g-bbD086.again
 @406 /*"What do you mean, 'biped'?" */
 END

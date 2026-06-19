@@ -41,6 +41,7 @@ END
 IF
     True()
 	!ActuallyInCombat()
+	!AreaCheck("arg-d1")
 THEN
     RESPONSE #100
 		ReturnToSavedPlace()

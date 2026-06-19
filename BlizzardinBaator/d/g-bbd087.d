@@ -273,125 +273,125 @@ IF~OR(2) !GlobalGT("LAW","GLOBAL",10) !GlobalGT("GOOD","GLOBAL",10)~THEN REPLY @
 CHAIN IF~~THEN g-bbD087 g-bbD087.diss2
 @274 /*"Is that so? Every being should be aware of the consequences of their actions, especially ones as momentous as the taking of a life. Kabatum certainly was not. I see he met his match." */
 END
-IF~OR(2) !GlobalGT("LAW","GLOBAL",10) !GlobalGT("GOOD","GLOBAL",10)~THEN REPLY @277 /*"And so..." */ DO~~ + g-bbD087.conclusion
+IF~~THEN REPLY @276 /*"And so..." */ DO~~ + g-bbD087.conclusion
 CHAIN IF~~THEN g-bbD087 g-bbD087.diss3
-@279 /*"Yes. Your words are wise. It is astounding how some people confound neutrality with indifference, and bringing balance with chaos, when both inevitably lead to evil. Kabatum thought he was maintaining balance in the Great Wheel, but in fact he succumbed to the whispers of his fiendish blood." */
+@278 /*"Yes. Your words are wise. It is astounding how some people confound neutrality with indifference, and bringing balance with chaos, when both inevitably lead to evil. Kabatum thought he was maintaining balance in the Great Wheel, but in fact he succumbed to the whispers of his fiendish blood." */
 END
-IF~GlobalGT("LAW","GLOBAL",10) GlobalGT("GOOD","GLOBAL",10)~THEN REPLY @281 /*"And so..." */ DO~~ + g-bbD087.conclusionLG
-IF~OR(2) !GlobalGT("LAW","GLOBAL",10) !GlobalGT("GOOD","GLOBAL",10)~THEN REPLY @282 /*"And so..." */ DO~~ + g-bbD087.conclusion
+IF~GlobalGT("LAW","GLOBAL",10) GlobalGT("GOOD","GLOBAL",10)~THEN REPLY @280 /*"And so..." */ DO~~ + g-bbD087.conclusionLG
+IF~OR(2) !GlobalGT("LAW","GLOBAL",10) !GlobalGT("GOOD","GLOBAL",10)~THEN REPLY @281 /*"And so..." */ DO~~ + g-bbD087.conclusion
 CHAIN IF~~THEN g-bbD087 g-bbD087.harmony
-@284 /*The angel contemplates your words for a few moments. "Interesting. Many highly intelligent individuals I know treat the adaptability of mortals as a weakness. Now, however, you prove to me that it can be a strength. I shall reflect upon this." */
+@283 /*The angel contemplates your words for a few moments. "Interesting. Many highly intelligent individuals I know treat the adaptability of mortals as a weakness. Now, however, you prove to me that it can be a strength. I shall reflect upon this." */
 END
-IF~~THEN REPLY @286 /*"This is one of the principles of harmony that Kabatum adheres to. Not everything is as certain as it seems, and what is considered a weakness can be made into strength." */ DO~~ + g-bbD087.harmony1
+IF~~THEN REPLY @285 /*"This is one of the principles of harmony that Kabatum adheres to. Not everything is as certain as it seems, and what is considered a weakness can be made into strength." */ DO~~ + g-bbD087.harmony1
 CHAIN IF~~THEN g-bbD087 g-bbD087.harmony1
-@288 /*"I do not know if I can agree with that. Your words sound like a rebellion against the natural laws of the multiverse." */
-=@289 /*"But never mind. Let us put philosophical disputes aside. I came here for the planetar's sword, not as some proselytizing missionary. Although I do hope you will convert one day." */
+@287 /*"I do not know if I can agree with that. Your words sound like a rebellion against the natural laws of the multiverse." */
+=@288 /*"But never mind. Let us put philosophical disputes aside. I came here for the planetar's sword, not as some proselytizing missionary. Although I do hope you will convert one day." */
 END
-IF~OR(2) !GlobalGT("LAW","GLOBAL",10) !GlobalGT("GOOD","GLOBAL",10)~THEN REPLY @292 /*"And so..." */ DO~~ + g-bbD087.conclusion
+IF~~THEN REPLY @290 /*"And so..." */ DO~~ + g-bbD087.conclusion
 CHAIN IF~~THEN g-bbD087 g-bbD087.legal
-@294 /*The angel looks at you suspiciously. "Very well," he finally replies. "I will take your word for it. I see that you have not tarnished my honor with wickedness. And if I am wrong, my mistake will bring me shame." */
+@292 /*The angel looks at you suspiciously. "Very well," he finally replies. "I will take your word for it. I see that you have not tarnished my honor with wickedness. And if I am wrong, my mistake will bring me shame." */
 END
-IF~OR(2) !GlobalGT("LAW","GLOBAL",10) !GlobalGT("GOOD","GLOBAL",10)~THEN REPLY @297 /*"And so..." */ DO~~ + g-bbD087.conclusion
+IF~~THEN REPLY @294 /*"And so..." */ DO~~ + g-bbD087.conclusion
 CHAIN IF~~THEN g-bbD087 g-bbD087.conclusionLG
-@299 /*"And so it is done. The Flame of Order returns to the Heavens once more. I know it is disgraceful, but the only reward I can offer you is the money I brought with me..." */
-=@300 /*"Although..." The angel pauses for a moment and then whispers one incomprehensible word, examining you intently. His eyes emit a soft glow. You feel as if someone is peering into your thoughts and your soul.  */
+@296 /*"And so it is done. The Flame of Order returns to the Heavens once more. I know it is disgraceful, but the only reward I can offer you is the money I brought with me..." */
+=@297 /*"Although..." The angel pauses for a moment and then whispers one incomprehensible word, examining you intently. His eyes emit a soft glow. You feel as if someone is peering into your thoughts and your soul.  */
 END
-IF~~THEN REPLY @302 /*"I don't know what you're doing to me, but stop it at once!"  */ DO~~ + g-bbD087.conclusionLGa
-IF~~THEN REPLY @303 /*Let him continue. */ DO~~ + g-bbD087.conclusionLGa
-IF~Class(Protagonist,Mage)~THEN REPLY @304 /*The celestial is definitely using some kind of magic. Focus and try to recognize what kind. */ DO~~ + g-bbD087.conclusionLGb
+IF~~THEN REPLY @299 /*"I don't know what you're doing to me, but stop it at once!"  */ DO~~ + g-bbD087.conclusionLGa
+IF~~THEN REPLY @300 /*Let him continue. */ DO~~ + g-bbD087.conclusionLGa
+IF~Class(Protagonist,Mage)~THEN REPLY @301 /*The celestial is definitely using some kind of magic. Focus and try to recognize what kind. */ DO~~ + g-bbD087.conclusionLGb
 CHAIN IF~~THEN g-bbD087 g-bbD087.conclusionLGb
-@306 /*You identify the spell - it is alignment detection, which probes the psyche of living beings. The celestial is screening you for some purpose and he finishes just as you have realized it. */
+@303 /*You identify the spell - it is alignment detection, which probes the psyche of living beings. The celestial is screening you for some purpose and he finishes just as you have realized it. */
 END
-IF~~THEN REPLY @308 /*Continue. */ DO~~ + g-bbD087.conclusionLGa
+IF~~THEN REPLY @305 /*Continue. */ DO~~ + g-bbD087.conclusionLGa
 CHAIN IF~~THEN g-bbD087 g-bbD087.conclusionLGa
-@310 /*"Forgive me for this test, mortal. I thought you deserved a better reward than gold, but I was not sure... Now I am." */
-=@311 /*"You bear many scars. You have gone through much chaos and temptation... and yet I see that in all this physical and spiritual filth that surrounds us, even though your appearance suggests terrible experiences, you are guided by law and virtue." */
-=@312 /*"That is why I want to offer you something more valuable these soulless copper disks." */
+@307 /*"Forgive me for this test, mortal. I thought you deserved a better reward than gold, but I was not sure... Now I am." */
+=@308 /*"You bear many scars. You have gone through much chaos and temptation... and yet I see that in all this physical and spiritual filth that surrounds us, even though your appearance suggests terrible experiences, you are guided by law and virtue." */
+=@309 /*"That is why I want to offer you something more valuable these soulless copper disks." */
 END
-IF~~THEN REPLY @314 /*"You honor me. I am listening." */ DO~~ + g-bbD087.conclusionLGa1
-IF~~THEN REPLY @315 /*"I am open to suggestions, but do not try to make me an errand boy exploring the alleys of Sigil on noble missions..." */ DO~~ + g-bbD087.conclusionLGa1
+IF~~THEN REPLY @311 /*"You honor me. I am listening." */ DO~~ + g-bbD087.conclusionLGa1
+IF~~THEN REPLY @312 /*"I am open to suggestions, but do not try to make me an errand boy exploring the alleys of Sigil on noble missions..." */ DO~~ + g-bbD087.conclusionLGa1
 CHAIN IF~~THEN g-bbD087 g-bbD087.conclusionLGa1
-@317 /*"The Flame of Order, the holy sword I was supposed to recover... I did not really receive any specific instructions to whom I should give it. I just had to make sure it ended up in worthy hands..." */
-=@318 /*"... And I think that has already happened, the moment you took it from the concordant killer." */
-=@319 /*"I want to say that the Flame of Order should be your reward... as long as you swear to use it for noble purposes." As he utters the words, Alviro straightens up. His expression grows serious, and his voice sounds almost binding. */
+@314 /*"The Flame of Order, the holy sword I was supposed to recover... I did not really receive any specific instructions to whom I should give it. I just had to make sure it ended up in worthy hands..." */
+=@315 /*"... And I think that has already happened, the moment you took it from the concordant killer." */
+=@316 /*"I want to say that the Flame of Order should be your reward... as long as you swear to use it for noble purposes." As he utters the words, Alviro straightens up. His expression grows serious, and his voice sounds almost binding. */
 END
-IF~~THEN REPLY @321 /*"I can't promise you that. Although it is difficult to explain, my nature... is changing. I am not always the same person I am now." */ DO~~ + g-bbD087.conclusionLGa1a
-IF~~THEN REPLY @322 /*"Very well, then. I swear to use this holy weapon only against the forces of evil and chaos, for the purpose of bringing order to the multiverse." */ DO~~ + g-bbD087.conclusionLGa1b
+IF~~THEN REPLY @318 /*"I can't promise you that. Although it is difficult to explain, my nature... is changing. I am not always the same person I am now." */ DO~~ + g-bbD087.conclusionLGa1a
+IF~~THEN REPLY @319 /*"Very well, then. I swear to use this holy weapon only against the forces of evil and chaos, for the purpose of bringing order to the multiverse." */ DO~~ + g-bbD087.conclusionLGa1b
 CHAIN IF~~THEN g-bbD087 g-bbD087.conclusionLGa1a
-@324 /*The celestial looks at you with surprise and disappointment... but also with understanding. "Very well, then. I have already learned today that appearances can be deceiving. However, after your admission of such weakness, I see that my judgment was correct. Your... current personality is indeed noble. May it remain so." */
-=@325 /*"In that case, I can do nothing more than give you all the gold I have... and the supplies I have left from my journey. Take them. May they support you in your own mission." */
-=@326 /*Having taken the Flame of Order and handed you the bag unfastened from his belt, the celestial spreads his wings for flight. "Farewell, mortal. May you not stray from the path you have chosen." */
+@321 /*The celestial looks at you with surprise and disappointment... but also with understanding. "Very well, then. I have already learned today that appearances can be deceiving. However, after your admission of such weakness, I see that my judgment was correct. Your... current personality is indeed noble. May it remain so." */
+=@322 /*"In that case, I can do nothing more than give you all the gold I have... and the supplies I have left from my journey. Take them. May they support you in your own mission." */
+=@323 /*Having taken the Flame of Order and handed you the bag unfastened from his belt, the celestial spreads his wings for flight. "Farewell, mortal. May you not stray from the path you have chosen." */
 END
-IF~~THEN REPLY @328 /*"Farewell. May the winds be favorable to you." */ DO~SetGlobal("G-alviroquest","GLOBAL",6) GiveGoldForce(7777) GiveItemCreate("HEARCHRM",Protagonist,5,0,0) TakePartyItem("g-bbi026") PlaySound("SPIRI05")  StickySinisterPoof("S095CAST",Myself,1) DestroySelf() AddexperienceParty(50000)~ SOLVED_JOURNAL @20172 EXIT
+IF~~THEN REPLY @325 /*"Farewell. May the winds be favorable to you." */ DO~SetGlobal("G-alviroquest","GLOBAL",6) GiveGoldForce(7777) GiveItemCreate("HEARCHRM",Protagonist,5,0,0) TakePartyItem("g-bbi026") PlaySound("SPIRI05")  StickySinisterPoof("S095CAST",Myself,1) DestroySelf() AddexperienceParty(50000)~ SOLVED_JOURNAL @20172 EXIT
 CHAIN IF~~THEN g-bbD087 g-bbD087.conclusionLGa1b
-@330 /*The angel nods with a satisfied smile. "Very well, wield the Flame of Order. May it serve you well, keeping the lesser evils at bay and putting the greater evils down, as was foretold when it was forged." */
-=@331 /*Leaving the Flame of Order at your side, the angel speaks his last words amiably and with a smile. "Farewell, mortal. May you succeed in your own mission, whether alone or with the help from kind souls, as I was able to do." */
+@327 /*The angel nods with a satisfied smile. "Very well, wield the Flame of Order. May it serve you well, keeping the lesser evils at bay and putting the greater evils down, as was foretold when it was forged." */
+=@328 /*Leaving the Flame of Order at your side, the angel speaks his last words amiably and with a smile. "Farewell, mortal. May you succeed in your own mission, whether alone or with the help from kind souls, as I was able to do." */
 END
-IF~~THEN REPLY @333 /*"Farewell. May the winds be favorable to you." */ DO~SetGlobal("G-alviroquest","GLOBAL",7) PlaySound("SPIRI05")  StickySinisterPoof("S095CAST",Myself,1) DestroySelf() AddexperienceParty(80000)~ SOLVED_JOURNAL @20173 EXIT
+IF~~THEN REPLY @330 /*"Farewell. May the winds be favorable to you." */ DO~SetGlobal("G-alviroquest","GLOBAL",7) PlaySound("SPIRI05")  StickySinisterPoof("S095CAST",Myself,1) DestroySelf() AddexperienceParty(80000)~ SOLVED_JOURNAL @20173 EXIT
 CHAIN IF~~THEN g-bbD087 g-bbD087.conclusion
-@335 /*"And so it is done. The Flame of Order returns to the Heavens once more. I know it is disgraceful, but the only reward I can offer you is the money I brought with me..." */
+@332 /*"And so it is done. The Flame of Order returns to the Heavens once more. I know it is disgraceful, but the only reward I can offer you is the money I brought with me..." */
 END
-IF~~THEN REPLY @337 /*"I don't need payment. I have enough money already, and the satisfaction of doing a good deed is much more precious these days." */ DO~~ + g-bbD087.conclusion1
-IF~~THEN REPLY @338 /*"What sounds disgraceful to you may mean *life* in Sigil. I will accept the money, especially in such decent quantity."    */ DO~~ + g-bbD087.conclusion2
-IF~~THEN REPLY @339 /*"Really? I'm sure you will find something more to honor the recovery of this sacred relic, as well as my effort and time." */ DO~IncrementGlobal("LAW","GLOBAL",-1)~ + g-bbD087.conclusion3
+IF~~THEN REPLY @334 /*"I don't need payment. I have enough money already, and the satisfaction of doing a good deed is much more precious these days." */ DO~~ + g-bbD087.conclusion1
+IF~~THEN REPLY @335 /*"What sounds disgraceful to you may mean *life* in Sigil. I will accept the money, especially in such decent quantity."    */ DO~~ + g-bbD087.conclusion2
+IF~~THEN REPLY @336 /*"Really? I'm sure you will find something more to honor the recovery of this sacred relic, as well as my effort and time." */ DO~IncrementGlobal("LAW","GLOBAL",-1)~ + g-bbD087.conclusion3
 CHAIN IF~~THEN g-bbD087 g-bbD087.conclusion1
-@341 /*The angel looks at you with surprise, then nods his head in respect. His movement smoothly transitions into a bow as he divests you of Flame of Order. */
-=@342 /*"Your attitude is very noble. The inhabitants of Sigil could, and *should*, learn from you. Truly, it is a great honor to meet a person who not only selflessly devotes their time to others, but also appreciates the value of such behavior..." */
-=@343 /*"...and I would also add that it is a beautiful moment for me personally. I have missed those since I left the Heavens." He smiles. */
-=@344 /*"Thank you, mortal. My companions in the Heavens will hear of your honesty and kindness. And I am sure that it will be counted in your favor." */
+@338 /*The angel looks at you with surprise, then nods his head in respect. His movement smoothly transitions into a bow as he divests you of Flame of Order. */
+=@339 /*"Your attitude is very noble. The inhabitants of Sigil could, and *should*, learn from you. Truly, it is a great honor to meet a person who not only selflessly devotes their time to others, but also appreciates the value of such behavior..." */
+=@340 /*"...and I would also add that it is a beautiful moment for me personally. I have missed those since I left the Heavens." He smiles. */
+=@341 /*"Thank you, mortal. My companions in the Heavens will hear of your honesty and kindness. And I am sure that it will be counted in your favor." */
 END
-IF~~THEN REPLY @346 /*"Farewell. May the winds be favorable to you." */ DO~SetGlobal("G-alviroquest","GLOBAL",6) TakePartyItem("g-bbi026") IncrementGlobal("GOOD","GLOBAL",3) PlaySound("SPIRI05")  StickySinisterPoof("S095CAST",Myself,1) DestroySelf() AddexperienceParty(50000)~ SOLVED_JOURNAL @20172 EXIT
+IF~~THEN REPLY @343 /*"Farewell. May the winds be favorable to you." */ DO~SetGlobal("G-alviroquest","GLOBAL",6) TakePartyItem("g-bbi026") IncrementGlobal("GOOD","GLOBAL",3) PlaySound("SPIRI05")  StickySinisterPoof("S095CAST",Myself,1) DestroySelf() AddexperienceParty(50000)~ SOLVED_JOURNAL @20172 EXIT
 CHAIN IF~~THEN g-bbD087 g-bbD087.conclusion2
-@348 /*"It is sad that shiny metal determines the quality of life. But I will not question the rules of mortals. Take the money, then." */
-=@349 /*"Farewell, mortal. May you fulfill your mission, whether alone or with those willing to support you in it." */
+@345 /*"It is sad that shiny metal determines the quality of life. But I will not question the rules of mortals. Take the money, then." */
+=@346 /*"Farewell, mortal. May you fulfill your mission, whether alone or with those willing to support you in it." */
 END
-IF~~THEN REPLY @351 /*"Farewell. May the winds be favorable to you." */ DO~SetGlobal("G-alviroquest","GLOBAL",6) GiveGoldForce(7777) TakePartyItem("g-bbi026") PlaySound("SPIRI05")  StickySinisterPoof("S095CAST",Myself,1) DestroySelf()~ SOLVED_JOURNAL @20172 EXIT
+IF~~THEN REPLY @348 /*"Farewell. May the winds be favorable to you." */ DO~SetGlobal("G-alviroquest","GLOBAL",6) GiveGoldForce(7777) TakePartyItem("g-bbi026") PlaySound("SPIRI05")  StickySinisterPoof("S095CAST",Myself,1) DestroySelf()~ SOLVED_JOURNAL @20172 EXIT
 CHAIN IF~~THEN g-bbD087 g-bbD087.conclusion3
-@353 /*The celestial bows his head, frowning. His voice loses its optimism and kindness as he speaks to himself. "This is what I feared while dealing with mortals..." */
-=@354 /*"All right, so be it. I will give you the supplies I took to Sigil. They were supposed to last me longer, but since I chose to rely on mortals, let that be a lesson to me." */
+@350 /*The celestial bows his head, frowning. His voice loses its optimism and kindness as he speaks to himself. "This is what I feared while dealing with mortals..." */
+=@351 /*"All right, so be it. I will give you the supplies I took to Sigil. They were supposed to last me longer, but since I chose to rely on mortals, let that be a lesson to me." */
 END
-IF~~THEN REPLY @356 /*"Oh, that sounds better. I will certainly put them to good use.  You have my blessing for your journey." */ DO~~ + g-bbD087.conclusion3a
-IF~~THEN REPLY @357 /*"You should definitely learn that such things can be obtained in Sigil. I wouldn't have gone to meet a concordant killer without a full backpack. I want something unique... Like that magnificent sword I've recovered." */ DO~~ + g-bbD087.conclusion3b
+IF~~THEN REPLY @353 /*"Oh, that sounds better. I will certainly put them to good use.  You have my blessing for your journey." */ DO~~ + g-bbD087.conclusion3a
+IF~~THEN REPLY @354 /*"You should definitely learn that such things can be obtained in Sigil. I wouldn't have gone to meet a concordant killer without a full backpack. I want something unique... Like that magnificent sword I've recovered." */ DO~~ + g-bbD087.conclusion3b
 CHAIN IF~~THEN g-bbD087 g-bbD087.conclusion3a
-@359 /*"Farewell, mortal. It is time for me to go, especially since I no longer have supplies for my stay here." */
+@356 /*"Farewell, mortal. It is time for me to go, especially since I no longer have supplies for my stay here." */
 END
-IF~~THEN REPLY @361 /*"Farewell."' */ DO~SetGlobal("G-alviroquest","GLOBAL",6) GiveGoldForce(7777) GiveItemCreate("HEARCHRM",Protagonist,5,0,0) TakePartyItem("g-bbi026") PlaySound("SPIRI05")  StickySinisterPoof("S095CAST",Myself,1) DestroySelf()~ SOLVED_JOURNAL @20172 EXIT
+IF~~THEN REPLY @358 /*"Farewell."' */ DO~SetGlobal("G-alviroquest","GLOBAL",6) GiveGoldForce(7777) GiveItemCreate("HEARCHRM",Protagonist,5,0,0) TakePartyItem("g-bbi026") PlaySound("SPIRI05")  StickySinisterPoof("S095CAST",Myself,1) DestroySelf()~ SOLVED_JOURNAL @20172 EXIT
 CHAIN IF~~THEN g-bbD087 g-bbD087.conclusion3b
-@363 /*"You want to lay claim to the Flame of Order?! You must be jesting. Know that I will not let you take it for yourself. You are not worthy of a weapon forged by the gods!" The angel raises his voice. Fighting Kabatum was too risky for him, but mortals are another matter. */
+@360 /*"You want to lay claim to the Flame of Order?! You must be jesting. Know that I will not let you take it for yourself. You are not worthy of a weapon forged by the gods!" The angel raises his voice. Fighting Kabatum was too risky for him, but mortals are another matter. */
 END
-IF~~THEN REPLY @365 /*"Slow down... If you're that serious about it, I'll just take the money." */ DO~~ + g-bbD087.conclusion3b1
-IF~~THEN REPLY @366 /*"Are you threatening me, celestial? I'm not afraid; I've already faced the concordant killer. And if that divine sword was meant to fall into worthy hands, I'll gladly make sure it does... in my own way!" */ DO~IncrementGlobal("GOOD","GLOBAL",-2)~ + g-bbD087.conclusion3b2
+IF~~THEN REPLY @362 /*"Slow down... If you're that serious about it, I'll just take the money." */ DO~~ + g-bbD087.conclusion3b1
+IF~~THEN REPLY @363 /*"Are you threatening me, celestial? I'm not afraid; I've already faced the concordant killer. And if that divine sword was meant to fall into worthy hands, I'll gladly make sure it does... in my own way!" */ DO~IncrementGlobal("GOOD","GLOBAL",-2)~ + g-bbD087.conclusion3b2
 CHAIN IF~~THEN g-bbD087 g-bbD087.conclusion3b1
-@368 /*The angel calms down somewhat. "A wise decision, although I do not know if you have seen the folly of your greed or if you are simply afraid. Here, have your gold." */
-=@369 /*"Now be on your way. Celestia awaits my return as well as the radiance of the Flame of Order." */
+@365 /*The angel calms down somewhat. "A wise decision, although I do not know if you have seen the folly of your greed or if you are simply afraid. Here, have your gold." */
+=@366 /*"Now be on your way. Celestia awaits my return as well as the radiance of the Flame of Order." */
 END
-IF~~THEN REPLY @371 /*"Farewell."' */ DO~SetGlobal("G-alviroquest","GLOBAL",6) GiveGoldForce(7777) TakePartyItem("g-bbi026") PlaySound("SPIRI05")  StickySinisterPoof("S095CAST",Myself,1) DestroySelf()~ SOLVED_JOURNAL @20172 EXIT
+IF~~THEN REPLY @368 /*"Farewell."' */ DO~SetGlobal("G-alviroquest","GLOBAL",6) GiveGoldForce(7777) TakePartyItem("g-bbi026") PlaySound("SPIRI05")  StickySinisterPoof("S095CAST",Myself,1) DestroySelf()~ SOLVED_JOURNAL @20172 EXIT
 CHAIN IF~~THEN g-bbD087 g-bbD087.conclusion3b2
-@373 /*Anger flares in the celestial's eyes, anger you know all too well... this is not the first time you have faced the wrath of an angel. But when you return your thoughts to the present, you see a different angel, one who is terrifying in his light and dignity. */
+@370 /*Anger flares in the celestial's eyes, anger you know all too well... this is not the first time you have faced the wrath of an angel. But when you return your thoughts to the present, you see a different angel, one who is terrifying in his light and dignity. */
 END
-IF~~THEN REPLY @375 /*Defend yourself. */ DO~SetGlobal("G-alviroquest","GLOBAL",8) Enemy() ~ SOLVED_JOURNAL @20174 EXIT
+IF~~THEN REPLY @372 /*Defend yourself. */ DO~SetGlobal("G-alviroquest","GLOBAL",8) Enemy() ~ SOLVED_JOURNAL @20174 EXIT
 CHAIN IF~~THEN g-bbD087 g-bbD087.freekilling
-@377 /*"So you defeated the concordant killer in battle?" the celestial asks with surprise on his face. "In open combat? I have heard much about the power of these beings, and Kabatum was an experienced and battle-hardened opponent!" */
-=@378 /*The celestial bows his head slightly, respect evident in his voice and gaze. "I clearly underestimated the ingenuity and zeal of mortals. You have accomplished a great feat by defeating Kabatum the Summoner." */
-=@379 /*"...Although I am not sure if he was an individual who deserved to die for his deeds. Even if he killed those like me, many a terrible fiend also fell at his hands." */
-=@380 /*"Nevertheless, I thank you, mortal, for returning this sword to me." */
+@374 /*"So you defeated the concordant killer in battle?" the celestial asks with surprise on his face. "In open combat? I have heard much about the power of these beings, and Kabatum was an experienced and battle-hardened opponent!" */
+=@375 /*The celestial bows his head slightly, respect evident in his voice and gaze. "I clearly underestimated the ingenuity and zeal of mortals. You have accomplished a great feat by defeating Kabatum the Summoner." */
+=@376 /*"...Although I am not sure if he was an individual who deserved to die for his deeds. Even if he killed those like me, many a terrible fiend also fell at his hands." */
+=@377 /*"Nevertheless, I thank you, mortal, for returning this sword to me." */
 END
-IF~GlobalGT("LAW","GLOBAL",10) GlobalGT("GOOD","GLOBAL",10)~THEN REPLY @382 /*"And so..." */ DO~~ + g-bbD087.conclusionLG
-IF~OR(2) !GlobalGT("LAW","GLOBAL",10) !GlobalGT("GOOD","GLOBAL",10)~THEN REPLY @383 /*"And so..." */ DO~~ + g-bbD087.conclusion
-IF~~THEN REPLY @384 /*"Wait. I just came to brag. I didn't accept your quest, so the sword is mine." */ DO~~ + g-bbD087.conclusion3b
+IF~GlobalGT("LAW","GLOBAL",10) GlobalGT("GOOD","GLOBAL",10)~THEN REPLY @379 /*"And so..." */ DO~~ + g-bbD087.conclusionLG
+IF~OR(2) !GlobalGT("LAW","GLOBAL",10) !GlobalGT("GOOD","GLOBAL",10)~THEN REPLY @380 /*"And so..." */ DO~~ + g-bbD087.conclusion
+IF~~THEN REPLY @381 /*"Wait. I just came to brag. I didn't accept your quest, so the sword is mine." */ DO~~ + g-bbD087.conclusion3b
 CHAIN IF~~THEN g-bbD087 g-bbD087.rage
-@386 /*He speaks calmly, without emotion, but still hostile. "You assaulted one of my patients. I will not talk to you, unless it is to pass judgement." */
+@383 /*He speaks calmly, without emotion, but still hostile. "You assaulted one of my patients. I will not talk to you, unless it is to pass judgement." */
 END
-IF~~THEN REPLY @388 /*"I will leave you alone, then." */ DO~~ EXIT
-IF~GlobalGT("GOOD","GLOBAL",10) Global("G-alviroredeem","GLOBAL",0)~THEN REPLY @389 /*"I'm not an evil man, look inside me. This was just a big misunderstanding." */ DO~SetGlobal("G-alviroban","GLOBAL",0) SetGlobal("G-alviroredeem","GLOBAL",1)~ + g-bbD087.fixrage
-IF~!GlobalGT("G-alviroquest","GLOBAL",1) ~THEN REPLY @390 /*"I will not let anyone talk to me like this." */ DO~ Enemy() ForceAttack(Protagonist,Myself) SetGlobal("G-alviroprequest","GLOBAL",11) ~ SOLVED_JOURNAL @20184 EXIT
-IF~GlobalGT("G-alviroquest","GLOBAL",1) ~THEN REPLY @391 /*"I will not let anyone talk to me like this." */ DO~ Enemy() ForceAttack(Protagonist,Myself) SetGlobal("G-alviroquest","GLOBAL",9) ~ SOLVED_JOURNAL @20175 EXIT
+IF~~THEN REPLY @385 /*"I will leave you alone, then." */ DO~~ EXIT
+IF~GlobalGT("GOOD","GLOBAL",10) Global("G-alviroredeem","GLOBAL",0)~THEN REPLY @386 /*"I'm not an evil man, look inside me. This was just a big misunderstanding." */ DO~SetGlobal("G-alviroban","GLOBAL",0) SetGlobal("G-alviroredeem","GLOBAL",1)~ + g-bbD087.fixrage
+IF~!GlobalGT("G-alviroquest","GLOBAL",1) ~THEN REPLY @387 /*"I will not let anyone talk to me like this." */ DO~ Enemy() ForceAttack(Protagonist,Myself) SetGlobal("G-alviroprequest","GLOBAL",11) ~ SOLVED_JOURNAL @20184 EXIT
+IF~GlobalGT("G-alviroquest","GLOBAL",1) ~THEN REPLY @388 /*"I will not let anyone talk to me like this." */ DO~ Enemy() ForceAttack(Protagonist,Myself) SetGlobal("G-alviroquest","GLOBAL",9) ~ SOLVED_JOURNAL @20175 EXIT
 CHAIN IF~~THEN g-bbD087 g-bbD087.fixrage
-@393 /*He stares at you for a good quarter of a minute. "Yes. You speak the truth. A single rash decision does not counter good deeds that came before... Fine, it is forgiven. Come back later, though... I have others to attend to." */
+@390 /*He stares at you for a good quarter of a minute. "Yes. You speak the truth. A single rash decision does not counter good deeds that came before... Fine, it is forgiven. Come back later, though... I have others to attend to." */
 EXIT
 CHAIN IF~~THEN g-bbD087 g-bbD087.toobusy
-@396 /*He is too busy with his patients to pay any attention to you.  */
+@393 /*He is too busy with his patients to pay any attention to you.  */
 EXIT
 CHAIN IF~~THEN g-bbD087 g-bbD087.anunnaki
-@399 /*"I do not have much time for a lecture, as I am busy saving lives here. Just know that the Anunnaki are among the oldest of the gods. They do not seem to have many followers, but their power is unquestionable. If you help recover the sword forged by one of them, you may earn a favor that is extremely rare. But now, if you will excuse me, I have patients to attend to." */
+@396 /*"I do not have much time for a lecture, as I am busy saving lives here. Just know that the Anunnaki are among the oldest of the gods. They do not seem to have many followers, but their power is unquestionable. If you help recover the sword forged by one of them, you may earn a favor that is extremely rare. But now, if you will excuse me, I have patients to attend to." */
 EXIT

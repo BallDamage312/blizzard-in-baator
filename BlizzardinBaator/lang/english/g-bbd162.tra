@@ -1,7 +1,7 @@
 @0=~You hold a set of parchments in your hands, destined to call on the factions of Sigil to take action. These are official documents bearing the seals of the Hall of Speakers. Distributing these documents will seal the fate of the conflict in which you have become involved.~
 @1=~Included with them is a separate parchment bearing a symbol depicting a head of a horse, which, according to the accompanying instruction, is meant to summon a messenger.~
 @2=~You have sided with the Doomguard: Haer'Dalis, Raelis Shai, and the entire Beneathmask theater. To prevent the destruction of this temple of the arts, you can call upon your allies to join the Doomguard ambush in a secluded alley behind the Great Foundry.~
-@3=~^NOTE: Use this item to initiate the resolution to the faction conflict.^-~
+@3=~^NNOTE: Use this item to initiate the resolution to the faction conflict.^-~
 @5=~It is time to call on your allies. Think about who you can send a message to.~
 @6=~Do not call on your allies yet.~
 @7=~Do not ride into to battle yet. You are not ready.~
@@ -84,9 +84,9 @@ Sincerely,
 Splinter,
 Son of Isahar and Priest-King of Ur"~
 @77=~Check the other letters.~
-@79=~The letter is short. "AGREED."It must have come from the Anarchists.~
+@79=~The letter is short. "AGREED." It must have come from the Anarchists.~
 @81=~Check the other letters.~
-@83=~The letter is short. "Not possible. You've offended someone. Take care of yourself."  It must have come from the Anarchists.~
+@83=~The letter is short. "Not possible. You've offended someone. Take care of yourself." It must have come from the Anarchists.~
 @85=~Check the other letters.~
 @87=~"We'll help. We can't let this kind of disorder happen on our streets. Hang in there.
 Ebb"~

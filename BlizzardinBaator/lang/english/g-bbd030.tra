@@ -3,7 +3,7 @@
 @2=~"Not another modron... Chief, it's not worth it. Please, let's get out of here!" ~ [MRT102]
 @4=~"Hello."~
 @5=~Leave without a word.~
-@7=~"Do you have a question?" The creature gets to the point.~
+@7=~The creature gets to the point. "Do you have a question?"~
 @9=~"I've got some books for your collection..."~
 @10=~"Yes, I have some questions..."~
 @11=~"I'm here by accident. I'll be on my way. Goodbye."~
@@ -14,7 +14,7 @@
 @18=~"Do you have a list of titles you're looking for?"~
 @19=~"I've got some books for your collection..."~
 @20=~"It seems you already have quite a collection of books. Am I now worthy of communion with this grimoire you guard so carefully?"~
-@21=~"Do you know anything about modrons in Brothel for Slaking Intellectual Lusts?"~
+@21=~"Do you know anything about modrons in the Brothel for Slaking Intellectual Lusts?"~
 @22=~"Do you know anything about the Modron Maze?"~
 @23=~"I have to go. Goodbye."~
 @25=~"I'm a modron. My function is: librarian."~
@@ -28,7 +28,7 @@
 @36=~"I have other questions."~
 @37=~"I have to go. Goodbye."~
 @39=~"We are modron. We are one. The task of the modrons located in location called 'The Brothel for Slaking Intellectual Lusts' is different from this modron's. Due to their position - quadron - we are equal in terms of hierarchy, but since they do not fall under the same pentadron as this modron, their task is beyond the knowledge of this modron."~
-@41=~"Aright, I have other questions."~
+@41=~"Alright, I have other questions."~
 @42=~"I have to go. Goodbye."~
 @44=~"The Rubikon Testing Grounds were an experiment conducted by the modrons in the chaotic plane of Limbo. The goal was to understand what draws adventurers to dungeons. This is a common phenomenon."~
 @46=~"I have other questions."~
@@ -36,7 +36,7 @@
 @49=~The modron is preparing its lenses. "What book would this modron's interlocutor like to share?"~
 @51=~"The Tome o' Cheats. It turns out I don't need it and I want to get rid of it."~
 @52=~"Codex of the Inconceivable. It's better to leave it in responsible hands."~
-@53=~"The Receiving Room Logbook. The last page is missing but I guess it's a small loss."~
+@53=~"The Receiving Room Logbook. The last page is missing, but I guess it's a small loss."~
 @54=~"The Grimoire of Pestilential Thought. I don't think I want to have anything more to do with this."~
 @55=~"The diary of Strahan Runeshadow, the mage that had been harassing the Mausoleum."~
 @56=~"The beautifully illustrated Tome of Bone and Ash written by the Dustmen."~
@@ -134,7 +134,7 @@
 @179=~"I think Pharod might have read me this very book when I was a wee lass. That is, until he sent me searchin' the ditches in the Hive for deaders. And he did that bloody quickly."~
 @180=~ "Ol' stutter crutch be tallyin' his copper 'bout now." She smiles sadly. "Would be." ~ [ANA009]
 @182=~"I've got another book to give you."~
-@183=~"Don't worry, Annah. Sorry but I have other questions for the modron."~
+@183=~"Don't worry, Annah. Sorry, but I have other questions for the modron."~
 @184=~"Let's go."~
 @186=~"Thank you. Your gift will help reduce illiteracy in Sigil."~
 @187=~*Jerak the Mercykiller was not wrong. The punishment was imposed. The guilty have been punished.* You see justice burning in his eyes.~

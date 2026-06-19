@@ -1,8 +1,8 @@
 BEGIN g-bbD232
-CHAIN IF~!Global("g-redwomanquestline","GLOBAL",6) !Global("g-redwomanquestline","GLOBAL",7)  !Global("G-brill_quest","GLOBAL",2)~THEN g-bbD232 g-bbD232.start
+CHAIN IF~!Global("g-redwomanquestline","GLOBAL",4) !Global("g-redwomanquestline","GLOBAL",6) !Global("g-redwomanquestline","GLOBAL",7)  !Global("G-brill_quest","GLOBAL",2)~THEN g-bbD232 g-bbD232.start
 @0 /*"Warm woolen mittens! Textiles and materials! Hats! Get yer clothes here!" */
 EXIT
-CHAIN IF~OR(3) Global("G-brill_quest","GLOBAL",2) Global("g-redwomanquestline","GLOBAL",6) Global("g-redwomanquestline","GLOBAL",7)~THEN g-bbD232 g-bbD232.startalt
+CHAIN IF~OR(4) Global("G-brill_quest","GLOBAL",2) Global("g-redwomanquestline","GLOBAL",6) Global("g-redwomanquestline","GLOBAL",7) Global("g-redwomanquestline","GLOBAL",4)~THEN g-bbD232 g-bbD232.startalt
 @3 /*"Warm woolen mittens! Textiles and materials! Hats! Get yer clothes here!" */
 END
 IF~Global("G-brill_quest","GLOBAL",2)~THEN REPLY @5 /*"Do you know a gith by the name of Ikss'odes? He is said to live nearby." */ DO~~ + g-bbD232.ikks

@@ -1,6 +1,6 @@
 BEGIN g-bbD096
 CHAIN IF~NumTimesTalkedTo(0)~THEN g-bbD096 g-bbD096.start
-@0 /*You see a woman who could be considered beautiful among the other inhabitants of the Ditch. You see a woman who can be seen as beautiful among the other inhabitants of the Ditch. Her long black hair waves down her back and her piercing brown eyes tells you that despite her young age she has been through a lot. A provocative red dress hugs her emaciated body. */
+@0 /*You see a woman who could be considered beautiful among the other inhabitants of the Ditch. Her long black hair waves down her back and her piercing brown eyes tell you that despite her young age she has been through a lot. A provocative red dress hugs her emaciated body. */
 =@1 /*She greedily devours a piece of questionable meat on a stick, as if it were her first proper meal in a long time. When you approach, she gives you an appraising look. "No way, berk. I've already worked hard today. I'm on a break. Pike off." */
 END
 IF~Global("g-redwomanquestline","GLOBAL",2)~THEN REPLY @3 /*"I came to talk about the clothes you stole." */ DO~~ + g-bbD096.D1

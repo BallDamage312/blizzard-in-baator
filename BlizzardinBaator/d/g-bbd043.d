@@ -6,7 +6,7 @@ CHAIN IF~NumTimesTalkedTo(1)~THEN g-bbD043 g-bbD043.start
 @3 /*An older individual stands beside a poorly constructed announcement board, dressed in somewhat elegant but decrepit clothes. He watches every passerby closely, trying to wave them down, only for them to avoid him. When he notices you approaching, he springs to life, carrying the pungent smell of an unwashed body. "Neeed an'ting, boss? Adrean can get his hand on every-thang." */
 END
 IF~~THEN REPLY @5 /*"Who are you?" */ DO~~ + g-bbD043.intr
-IF~~THEN REPLY @6 /*"Why did you call me 'lemon'?" */ DO~~ + g-bbD043.intralt
+IF~~THEN REPLY @6 /*"Why did you call me a 'lemon'?" */ DO~~ + g-bbD043.intralt
 IF~~THEN REPLY @7 /*"I have some questions..." */ DO~~ + g-bbD043.q
 IF~~THEN REPLY @8 /*"I need to go. Farewell." */ DO~~ EXIT
 CHAIN IF~NumTimesTalkedToGT(1)~THEN g-bbD043 g-bbD043.start2

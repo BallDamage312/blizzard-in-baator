@@ -17,8 +17,8 @@ IF~~THEN REPLY @13 /*"I wish to speak about other matters." */ DO~~ + g-bbDMRT.q
 IF~~THEN REPLY @14 /*"Fine. Let's go." */ DO~~ EXIT
 CHAIN IF~~THEN g-bbDMRT g-bbDMRT.q2
 @16 /*"What do *you* have to do, chief?" */
-==g-bbdmrt IF~Global("G-BBmain","GLOBAL",21)~THEN @17 /*"It would probably be best to find that berk arranged by Tergush'tekhn. He's got to be around." */
-==g-bbdmrt IF~Global("G-BBmain","GLOBAL",22)~THEN @18 /*"It would probably be best to find that berk arranged by Tergush'tekhn. He's got to be around. And be quick about it, our location is compromised." */
+==g-bbdmrt IF~Global("G-BBmain","GLOBAL",21)~THEN @17 /*"You should probably find that berk arranged by Tergush'tekhn. He's got to be around." */
+==g-bbdmrt IF~Global("G-BBmain","GLOBAL",22)~THEN @18 /*"You should probably find that berk arranged by Tergush'tekhn. He's got to be around. And be quick about it, our location is compromised." */
 END
 IF~~THEN REPLY @20 /*"I wish to speak about other matters." */ DO~~ + g-bbDMRT.q
 IF~~THEN REPLY @21 /*"Fine. Let's go." */ DO~~ EXIT

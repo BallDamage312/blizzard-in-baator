@@ -50,7 +50,7 @@ IF~~THEN REPLY @46 /*"I'm sorry, but would you believe I walked in here by accid
 CHAIN IF~!Global("G-intro_mov","GLOBAL",2) NumTimesTalkedTo(0)~THEN g-bbD051 g-bbD051.START
 @48 /*In the back room of The Smoldering Corpse Bar, beside two familiar abishai, stands another in dark crimson scales. He is more grizzled and hunched, but his gaze makes it clear that his condition should not be mistaken for weakness. */
 =@49 /*"You came..." he growls at you. "I was starting to think you aren't cut out for this after all, amnesiac." [g-05101] */
-==g-bbdteg @50 /*"I told you he would come, Tergush'tekhn! Blood's word is good.... when he remembers who's who." */
+==g-bbdteg @50 /*"I told you he would come, Tergush'tekhn! Blood's word is good... when he remembers who's who." */
 ==g-bbdaet @51 /*"He could have come *a bit* sooner..." */
 END
 IF~Global("G-BBMain","GLOBAL",1)~THEN REPLY @53 /*"I came as soon as I heard." */ DO~~ + g-bbD051.ini1
@@ -306,7 +306,7 @@ CHAIN IF~~THEN g-bbD051 g-bbD051.portalcomplete
 @303 /*"Great news, Nameless One. As for the devils... well, you know how baatezu can be. Whatever they wanted, they will surely not follow you to Cania." Tergush'tekhn pats your shoulder reassuringly. */
 ==g-bbdteg @304 /*"How about the key?" */
 END
-IF~!PartyHasItem("g-bbi045")~THEN REPLY @306 /*"I am working on it.... I should go work on it some more, right now." */ DO~~ EXIT
+IF~!PartyHasItem("g-bbi045")~THEN REPLY @306 /*"I am working on it... I should go work on it some more, right now." */ DO~~ EXIT
 IF~PartyHasItem("g-bbi045")~THEN REPLY @307 /*"I have that also. It was a whole *other* ordeal..." */ DO~CreateCreatureObject("g-bb006",Protagonist,0,0,0)~ + g-bbD051.hurrythen
 IF~~THEN REPLY @308 /*"I have some questions first." */ DO~~ + g-bbD051.q
 CHAIN IF~~THEN g-bbD051 g-bbD051.hurrythen
@@ -386,7 +386,7 @@ END
 IF~~THEN REPLY @383 /*"How would I get there?" */ DO~~ + g-bbD051.confirm
 IF~CheckStatGT(Protagonist,11,INT)~THEN REPLY @384 /*"That is... pretty deep down in the Hells." */ DO~IncrementGlobal("G-caniaKN","GLOBAL",1) ~ + g-bbD051.location2
 IF~~THEN REPLY @385 /*"Tell me about the financial benefits." */ DO~~ + g-bbD051.ini1prize
-IF~~THEN REPLY @386 /*"So we know each other? Fury can really help me?" */ DO~~ + g-bbD051.ini1pers
+IF~~THEN REPLY @386 /*"So we know each other? Can Fury really help me?" */ DO~~ + g-bbD051.ini1pers
 IF~~THEN REPLY @387 /*"Who is her superior?" */ DO~~ + g-bbD051.ini1zwie
 IF~~THEN REPLY @388 /*"Why me?" */ DO~~ + g-bbD051.ini1whyme
 IF~~THEN REPLY @389 /*"Baator? I'm sorry, I am actually not interested after all." */ DO~SetGlobal("G-drefused","GLOBAL",1)~ EXIT
@@ -396,7 +396,7 @@ CHAIN IF~~THEN g-bbD051 g-bbD051.location2
 END
 IF~~THEN REPLY @394 /*"How would I get there?" */ DO~~ + g-bbD051.confirm
 IF~~THEN REPLY @395 /*"Tell me about the financial benefits." */ DO~~ + g-bbD051.ini1prize
-IF~~THEN REPLY @396 /*"So we know each other? Fury can really help me?" */ DO~~ + g-bbD051.ini1pers
+IF~~THEN REPLY @396 /*"So we know each other? Can Fury really help me?" */ DO~~ + g-bbD051.ini1pers
 IF~~THEN REPLY @397 /*"Who is Fury's superior?" */ DO~~ + g-bbD051.ini1zwie
 IF~~THEN REPLY @398 /*"Why me?" */ DO~~ + g-bbD051.ini1whyme
 IF~~THEN REPLY @399 /*"I'm sorry, I am actually not interested after all." */ DO~SetGlobal("G-drefused","GLOBAL",1)~ EXIT
@@ -418,7 +418,7 @@ CHAIN IF~~THEN g-bbD051 g-bbD051.ini1prize
 END
 IF~Global("G-nearconfirm","GLOBAL",0)~THEN REPLY @416 /*"Where was Fury last seen?" */ DO~SetGlobal("G-nearconfirm","GLOBAL",1) SetGlobal("G-BBMainBegin_Messenger","GLOBAL",3) SetGlobal("G-askedaboutprize","GLOBAL",1)~ + g-bbD051.ini1B
 IF~Global("G-nearconfirm","GLOBAL",1)~THEN REPLY @417 /*"All right, what's next? How would I get to Cania?" */ DO~SetGlobal("G-askedaboutprize","GLOBAL",1)~ + g-bbD051.confirm
-IF~~THEN REPLY @418 /*"So we know each other? Fury can really help me?" */ DO~SetGlobal("G-askedaboutprize","GLOBAL",1)~ + g-bbD051.ini1pers
+IF~~THEN REPLY @418 /*"So we know each other? Can Fury really help me?" */ DO~SetGlobal("G-askedaboutprize","GLOBAL",1)~ + g-bbD051.ini1pers
 IF~~THEN REPLY @419 /*"Who is Fury's superior?" */ DO~SetGlobal("G-askedaboutprize","GLOBAL",1)~ + g-bbD051.ini1zwie
 IF~~THEN REPLY @420 /*"Why me?" */ DO~SetGlobal("G-askedaboutprize","GLOBAL",1)~ + g-bbD051.ini1whyme
 IF~~THEN REPLY @421 /*"I'm sorry, I am actually not interested after all." */ DO~SetGlobal("G-drefused","GLOBAL",1) SetGlobal("G-askedaboutprize","GLOBAL",1)~ EXIT
@@ -428,16 +428,16 @@ END
 IF~Global("G-nearconfirm","GLOBAL",0)~THEN REPLY @425 /*"Where was Fury last seen?" */ DO~SetGlobal("G-nearconfirm","GLOBAL",1) SetGlobal("G-BBMainBegin_Messenger","GLOBAL",3)~ + g-bbD051.ini1B
 IF~Global("G-nearconfirm","GLOBAL",1)~THEN REPLY @426 /*"All right, what next? How would I get to Cania?" */ DO~~ + g-bbD051.confirm
 IF~~THEN REPLY @427 /*"Tell me about the financial benefits." */ DO~~ + g-bbD051.ini1prize
-IF~~THEN REPLY @428 /*"So we know each other? Fury can really help me?" */ DO~~ + g-bbD051.ini1pers
+IF~~THEN REPLY @428 /*"So we know each other? Can Fury really help me?" */ DO~~ + g-bbD051.ini1pers
 IF~~THEN REPLY @430 /*"Why me?" */ DO~~ + g-bbD051.ini1whyme
 IF~~THEN REPLY @432 /*"I'm sorry, I am actually not interested after all." */ DO~SetGlobal("G-drefused","GLOBAL",1)~ EXIT
 CHAIN IF~~THEN g-bbD051 g-bbD051.ini1whyme
-@434 /*The devils exchange knowing glances. "We have seen what you can do. We know you are trustworthy. You will be the right person in the right place, I have no doubt of that. And after all... Fury was your best friend." */
+@434 /*The devils exchange knowing glances. "We have seen what you can do. We know you are trustworthy. You will be the right person in the right place, I have no doubt of that. And after all... Fury was your closest confidant." */
 END
 IF~Global("G-nearconfirm","GLOBAL",0)~THEN REPLY @436 /*"Where was Fury last seen?" */ DO~SetGlobal("G-nearconfirm","GLOBAL",1) SetGlobal("G-BBMainBegin_Messenger","GLOBAL",3)~ + g-bbD051.ini1B
 IF~Global("G-nearconfirm","GLOBAL",1)~THEN REPLY @437 /*"All right, what next? How would I get to Cania?" */ DO~~ + g-bbD051.confirm
 IF~~THEN REPLY @438 /*"Tell me about the financial benefits." */ DO~~ + g-bbD051.ini1prize
-IF~~THEN REPLY @439 /*"So we know each other? Fury can really help me?" */ DO~~ + g-bbD051.ini1pers
+IF~~THEN REPLY @439 /*"So we know each other? Can Fury really help me?" */ DO~~ + g-bbD051.ini1pers
 IF~~THEN REPLY @440 /*"Who is Fury's superior?" */ DO~~ + g-bbD051.ini1zwie
 IF~~THEN REPLY @441 /*"I'm sorry, I am actually not interested after all." */ DO~SetGlobal("G-drefused","GLOBAL",1)~ EXIT
 CHAIN IF~~THEN g-bbD051 g-bbD051.confirm
@@ -570,7 +570,7 @@ CHAIN IF~~THEN g-bbD051 g-bbD051.bssn
 ==g-bbdteg @574 /*"Archons may hate fiends more than other fiends." */
 ==g-bbdaet @575 /*"Well, all right. Nobody hates fiends more than archons and other fiends."
  */
-==g-bbdteg @576 /*"I think eladrin too...." */
+==g-bbdteg @576 /*"I think eladrin too..." */
 ==g-bbD051 @577 /*"Enough! Yes, we have a *lot* of enemies. It is nothing to worry about." */
 END
 IF~~THEN REPLY @579 /*"I certainly hope so. I have other questions." */ DO~~ + g-bbD051.q

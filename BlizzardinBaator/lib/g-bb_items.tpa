@@ -720,3 +720,5 @@ COPY ~%MOD_FOLDER%/itm/g-bbi134.itm~ ~override~ //Gemariel's UI Claws
 COPY ~%MOD_FOLDER%/itm/g-bbi135.itm~ ~override~ SAY NAME1 @500294 SAY IDENTIFIED_DESC @500295 SAY NAME2 @500294 //Haer'Dalis' head
 
 COPY ~%MOD_FOLDER%/itm/g-bbi136.itm~ ~override~ SAY NAME1 @500296 SAY IDENTIFIED_DESC @500297 SAY NAME2 @500296 //Scroll Case
+
+COPY ~%MOD_FOLDER%/itm/g-bbi137.itm~ ~override~ SAY NAME1 @500300 SAY IDENTIFIED_DESC @500301 SAY NAME2 @500300 //Lower Planes Vermin Armor

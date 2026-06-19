@@ -222,11 +222,11 @@
 @320=~Ulfbrand is silent for a moment, weighing your words. He sighs deeply and fixes his gaze on the ceiling, as if avoiding eye contact, while removing the bone earring from his left ear. "I agree. It pains me to part with it, but I feel it will land in trustworthy hands. I will wait here for your return, and the actors have nothing to fear from me. Duke Darkwood will likely find out about this soon and send someone else, so let them make wise use of this moment of peace."~
 @322=~"Thank you for your trust, Ulfbrand. I'll tell them the news and go find your other earring. Farewell."~
 @324=~"Ah, so now you stand in front of a choice. You may work for me instead, or you may die. Give me the location of where the troupe hides, so me and my men can raid it and bathe it in blood."~
-@326=~^0xff8c6b69Side with Doomguard.^-^0xff212eff "I was told to use force if peace was not an option, and I will do so."^-~
-@327=~^0xff8c6b69Side with Doomguard.^-^0xff212eff Lie: "I will do you one better. There is no need to risk an open battle under the Lady's eye. I will bring you the actor's head myself."^-~
-@328=~^0xff39bbe1Side with Fated.^-^0xff212eff Truth: "I will do you one better. There is no need to risk an open battle under the Lady's eye. I will bring you the actor's head myself."^-~
-@329=~^0xff39bbe1Side with Fated.^-^0xff212eff Truth: "They are hiding in the theater by the Vertical Sea. We can raid them easily."^-~
-@330=~^0xff8c6b69Side with Doomguard.^-^0xff212eff Lie: "I guess I have no choice. I do not know where they are now, but they trust me enough to take me there. I will return with the location."^-~
+@326=~^0xff8c6b69Side with the Doomguard.^-^0xff212eff "I was told to use force if peace was not an option, and I will do so."^-~
+@327=~^0xff8c6b69Side with the Doomguard.^-^0xff212eff Lie: "I will do you one better. There is no need to risk an open battle under the Lady's eye. I will bring you the actor's head myself."^-~
+@328=~^0xff39bbe1Side with the Fated.^-^0xff212eff Truth: "I will do you one better. There is no need to risk an open battle under the Lady's eye. I will bring you the actor's head myself."^-~
+@329=~^0xff39bbe1Side with the Fated.^-^0xff212eff Truth: "They are hiding in the theater by the Vertical Sea. We can raid them easily."^-~
+@330=~^0xff8c6b69Side with the Doomguard.^-^0xff212eff Lie: "I guess I have no choice. I do not know where they are now, but they trust me enough to take me there. I will return with the location."^-~
 @332=~"A fine decision. Go now and make me proud of your actions, my new soldier. Disappoint me, and you will feel the wrath of the entire Debt Collection Division and my own," Ulfbrand says in a confident tone. ~ [g-15608]
 @334=~"One thing before I go. If I prove my worth here, will you lend me your earring? I can use it to find the other one and reunite them, then bring them back to you."~
 @335=~"I shall not fail. Farewell."~

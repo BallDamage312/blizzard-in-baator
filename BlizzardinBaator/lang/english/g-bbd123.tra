@@ -32,8 +32,8 @@
 @35=~You see the woman working on a new bracelet, attaching pieces of amber to a silver ring. When you look closer, you notice that the 'amber' is actually the yellowed, sharp-edged teeth of some small creature.~
 @36=~The woman stretches. She must be on a break. Her tools are set to the side and there are crumbs from a meal on the table. She gives you a lazy smile, even friendly for her. ~
 @37=~Since you last spoke to her, the woman has completed her work on the worm necklace. She is now examining it from all sides, full of pride. It is a true masterpiece, worthy of the lords of the Abyss. She lifts her gaze to you as you approach. ~
-@38=~Since you last spoke to her, the woman has made progress on the worm necklace. The first row is already finished, and she is just finishing the second row with deft movements. She seems happy in her own way, humming something under her breath and swaying slightly from side to side. She raises her eyes at you as you approach~
-@39=~Since you last spoke to her, the woman has made progress on the worm necklace. The first row is already finished, and she is just finishing the second row with deft movements. She seems happy in her own way, humming something under her breath and swaying slightly from side to side. She raises her eyes at you as you approach~
+@38=~Since you last spoke to her, the woman has made progress on the worm necklace. The first row is already finished, and she is just finishing the second row with deft movements. She seems happy in her own way, humming something under her breath and swaying slightly from side to side. She raises her eyes at you as you approach.~
+@39=~Since you last spoke to her, the woman has made progress on the worm necklace. The first row is already finished, and she is just finishing the second row with deft movements. She seems happy in her own way, humming something under her breath and swaying slightly from side to side. She raises her eyes at you as you approach.~
 @40=~The tanar'ri tips her head before Fall-from-Grace in a parody of a bow. With a mocking smile, she does not even try to mask her contempt. "Wench."~
 @41=~The tanar'ri tips her head before Fall-from-Grace in a parody of a bow. With a mocking smile, she does not even try to mask her contempt. "Dirty slut."~
 @42=~The tanar'ri tips her head before Fall-from-Grace in a parody of a bow. With a mocking smile, she does not even try to mask her contempt. "Stinky bitch."~
@@ -52,9 +52,7 @@
 @55=~A torrent of gutter words flows from Grace's beautiful mouth. With each successive sentence, Beatha's eyes widen more and more, and at one point her jaw drops slightly. You do not understand half the words, but you can guess from the context that they refer to some physiological activities. The speech lasts a good ten minutes, and Fall-from-Grace does not repeat herself once. Beatha is impressed.~
 @56=~Morte whispers something to himself in admiration. [MRT387]~
 @57=~Grace finally takes a deep breath. "Okay. I'm done. We have nothing more to say to each other."~
-@58=~Beatha simply nods in agreement. She acknowledges her defeat. She grunts and turns to you. 
-
-"What do you want? Are you buying or leaving?"~
+@58=~Beatha simply nods in agreement. She acknowledges her defeat. She grunts and turns to you. "What do you want? Are you buying or leaving?"~
 @59=~Beatha snorts and turns to you. "What do you want again with Jeweler Beatha, berk? I'm busy."~
 @60=~Beatha snorts and glares at you with white eyes. "What's up?"~
 @61=~Beatha smiles maliciously and looks up at you. "What do you want? Are you buying or leaving?"~
@@ -70,14 +68,14 @@
 @72=~"Nice little trinket. Got anything for sale?"~
 @73=~"I do not like how you addressed my friend."~
 @74=~"I shall leave you alone, then. Goodbye."~
-@75=~"Tell me something about yourself. What are you doing in Sigil?~
+@75=~"Tell me something about yourself. What are you doing in Sigil?"~
 @76=~"I see that you know your way around jewelry. I need to create a special necklace. Can you help me?"~
 @77=~"I have the tails you asked for. Here they are."~
 @78=~"I've got a whole collection of tails here. They're rather tangly but I hope you can work with that."~
 @79=~"Nice little trinket. Got anything for sale?"~
 @80=~"I do not like how you addressed my friend."~
 @81=~"I shall leave you alone, then. Goodbye."~
-@82=~"Tell me something about yourself. What are you doing in Sigil?~
+@82=~"Tell me something about yourself. What are you doing in Sigil?"~
 @84=~The woman tilts her head slightly and locks her eyes on you. "Maybe yes, maybe no. I'm bored by trivial tasks. If you're trivial, then pike off."~
 @86=~"Don't worry, I'm not. I need a necklace made of rat tails. Are you able to make one?"~
 @87=~"I've changed my mind, I'd like to see what you have for sale."~
@@ -88,7 +86,7 @@
 @94=~"Before I go, I'd still like to see what you have for sale."~
 @95=~"I don't have them yet, but I'll get them. In the meantime, bye."~
 @97=~The woman takes the tails from you. With a skilful movement, she braids them into a knot around the line, then fixes the whole thing with a precise and highly aesthetic stitch. The finished necklace looks surprisingly good for its material. Disturbingly good. "Done! Make some beautiful lady happy with it." The woman winks at you. "Now leave me alone. Well, unless you want to buy something."~
-@99=~"Wait. Tell me something about yourself. What are you doing in Sigil?~
+@99=~"Wait. Tell me something about yourself. What are you doing in Sigil?"~
 @100=~"Show me your goods."~
 @101=~"Thank you. Be well."~
 @103=~The woman rolls her eyes. It would seem hard to perform such an act for someone who has no pupils, but you still feel the roll and the accompanying disregard deep in your gut. "It's always the same. Chitter-chatter, but only one thing on their mind. Spare yourself. Yes, I am a tanar'ri. Yes, I'm sitting here because I've made trouble at home and prefer to lurk somewhere far away for at least a few centuries. No, I'm not going to go to bed with you, so don't even ask. Now either buy something or get out, berk, while I'm still feeling nice."~
@@ -114,4 +112,4 @@
 @130=~"I've got a whole collection of tails here. They're rather tangly but I hope you can work with that."~
 @131=~"Nice little trinket. Got anything for sale?"~
 @132=~"I shall leave you alone, then. Goodbye."~
-@133=~"Tell me something about yourself. What are you doing in Sigil?~
+@133=~"Tell me something about yourself. What are you doing in Sigil?"~

@@ -2,7 +2,7 @@ BEGIN g-bbD017
 CHAIN IF~ActuallyInCombat() !Global("G-ulfbrandlostraid","GLOBAL",1) !Global("g-trapvictoryloop","GLOBAL",3) ~THEN g-bbD017 g-bbD017.combatdial
 @0 /*"Now? Now you want to talk, phoenix?" */
 EXIT
-CHAIN IF~NumTimesTalkedTo(0) !Global("G-doomvsfatevsKEY","GLOBAL",10) !Global("g-trapvictoryloop","GLOBAL",3) !Global("G-ulfbrandlostraid","GLOBAL",1)~THEN g-bbD017 g-bbD017.start1
+CHAIN IF~NumTimesTalkedTo(0) !Global("G-doomvsfatevsKEY","GLOBAL",10) !Global("g-trapvictoryloop","GLOBAL",3) !Global("G-ulfbrandlostraid","GLOBAL",1) !AreaCheck("arg-d1")~THEN g-bbD017 g-bbD017.start1
 @3 /*You see a long-haired, extravagantly dressed tiefling. He has long ears adorned with numerous earrings. His long, decorated braids cascade over his leather armor. He has marks on his face and two short swords on both the left and right sides of his belt. On his back he has a case with an oblong instrument the length of a butcher's knife. */
 =@4 /*"Ah! Behold! Isn't that my friendly phoenix, the scarred hand of fate? And he's decided to pass through the gates of our wonderful theater! Welcome!" */
 END
@@ -10,7 +10,7 @@ IF~~THEN REPLY @6 /*"Do we know each other?" */ DO~SetGlobal("G-knowhaer","GLOBA
 IF~CheckStatGT(Protagonist,14,CHR)~THEN REPLY @7 /*"Of course it's me. I always come back." */ DO~~ + g-bbD017.know2
 IF~CheckStatLT(Protagonist,12,INT)~THEN REPLY @8 /*"A phoenix? Where?" */ DO~SetGlobal("G-knowhaer","GLOBAL",1)~ + g-bbD017.phoenix
 IF~GlobalLT("Good","GLOBAL",1) CheckStatLT(Protagonist,12,INT)~THEN REPLY @9 /*"You won't distract me. I'd use your swords. Die." */ DO~Enemy() Attack(Protagonist) ForceAttack(Protagonist,Myself) IncrementGlobal("GOOD","GLOBAL",-3) IncrementGlobal("LAW","GLOBAL",-3) SetGlobal("G-knowhaer","GLOBAL",1)~ EXIT
-CHAIN IF~NumTimesTalkedToGT(0) !Global("G-doomvsfatevsKEY","GLOBAL",8) !Global("g-trapvictoryloop","GLOBAL",3) !Global("G-ulfbrandlostraid","GLOBAL",1) Global("G-hitmanD","GLOBAL",0)~THEN g-bbD017 g-bbD017.start2
+CHAIN IF~NumTimesTalkedToGT(0) !Global("G-doomvsfatevsKEY","GLOBAL",8) !Global("g-trapvictoryloop","GLOBAL",3) !Global("G-ulfbrandlostraid","GLOBAL",1) Global("G-hitmanD","GLOBAL",0) !AreaCheck("arg-d1")~THEN g-bbD017 g-bbD017.start2
 @11 /*"Ah, look who has yet again stepped through the gates of our theater! Welcome back, my phoenix. 'Tis a pleasure to see you. I presume you come here for a reason, yes?" */
 END
 IF~Global("G-doomvsfatevsKEY","GLOBAL",15)~THEN REPLY @13 /*Think about how you could get rid of Haer'Dalis without making the people around suspicious. */ DO~~ + g-bbD017.hitman1
@@ -19,10 +19,10 @@ IF~Global("G-doomvsfatevsKEY","GLOBAL",5)~THEN REPLY @15 /*"I faced off against 
 IF~~THEN REPLY @16 /*"I have some questions." */ DO~~ + g-bbD017.questions
 IF~CheckStatLT(Protagonist,12,INT)~THEN REPLY @17 /*"A phoenix? Where?" */ DO~~ + g-bbD017.phoenix
 IF~~THEN REPLY @18 /*"Never mind. Goodbye." */ DO~~ EXIT
-CHAIN IF~NumTimesTalkedToGT(0) Global("G-doomvsfatevsKEY","GLOBAL",8) !Global("g-trapvictoryloop","GLOBAL",3) Global("G-hitmanD","GLOBAL",0)~THEN g-bbD017 g-bbD017.retrap
+CHAIN IF~NumTimesTalkedToGT(0) Global("G-doomvsfatevsKEY","GLOBAL",8) !Global("g-trapvictoryloop","GLOBAL",3) Global("G-hitmanD","GLOBAL",0) !AreaCheck("arg-d1")~THEN g-bbD017 g-bbD017.retrap
 @20 /*"Hmm? What are you doing here, my phoenix? Fly now! Fly to heroic domains, and deliver the 'news' to Ulfbrand." */
 EXIT
-CHAIN IF~Global("g-trapvictoryloop","GLOBAL",3) OR(2) NumTimesTalkedToGT(0) NumTimesTalkedTo(0)~THEN g-bbD017 g-bbD017.trapvictory
+CHAIN IF~AreaCheck("arg-d1")~THEN g-bbD017 g-bbD017.trapvictory
 @23 /*"Yes! Victory! Ulfbrand and his goons are one with oblivion, and you know what that means, don't you? Aye, we can go now and arrange for our passage out of Sigil, before that volatile lunatic Darkwood sends some other tormentor. We need to make haste! Thank you, my friend. As a reward, accept this humble package. It contains a few useful trinkets that may aid you on your own path out of misery." */
 END
 IF~~THEN REPLY @25 /*"You're welcome... and thank you." */ DO~SetGlobal("g-trapvictoryloop","GLOBAL",1) SetGlobal("G-doomvsfatevsKEY","GLOBAL",10)~ SOLVED_JOURNAL @20106 + g-bbD017.reward
@@ -278,7 +278,7 @@ IF~Global("G-haer_kok","GLOBAL",0)~THEN REPLY @277 /*"I am looking for a kocrach
 IF~Global("G-haer_port","GLOBAL",0)~THEN REPLY @278 /*"I am looking for a portal to Cania." */ DO~SetGlobal("G-haer_port","GLOBAL",1)~ + g-bbD017.q3denieda2
 IF~~THEN REPLY @279 /*"I may change my mind, but for now, farewell." */ DO~~ EXIT
 CHAIN IF~~THEN g-bbD017 g-bbD017.q3denieda1
-@281 /*"Elvra... Elvra...." Haer'Dalis seems to be delving deep into his memory. He has surely met a number of interesting characters and the fiend you are looking for may be one of them. */
+@281 /*"Elvra... Elvra..." Haer'Dalis seems to be delving deep into his memory. He has surely met a number of interesting characters and the fiend you are looking for may be one of them. */
 =@282 /*"Elvra... Syne! Yes! He's a shifty fellow, frequents the Styx Oarsman tavern on the other side of the settlement." He bows lightly and smiles playfully. "How about it then, will you help us now?" */
 END
 IF~Global("G-haer_port","GLOBAL",0)~THEN REPLY @284 /*"I am also looking for a portal to Cania." */ DO~SetGlobal("G-haer_port","GLOBAL",1)~ + g-bbD017.q3denieda2

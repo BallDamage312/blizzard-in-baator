@@ -71,7 +71,7 @@ IF~~THEN REPLY @68 /*"Fine. What should I do?" */ DO~SetGlobal("G-ZEreward","GLO
 IF~~THEN REPLY @69 /*"Sorry. I'm not interested." */ DO~SetGlobal("G-ZErefuse","GLOBAL",1)~ + g-bbD031.B1
 CHAIN IF~~THEN g-bbD031 g-bbD031.C1
 @71 /*"Nothing. You just need to stand in one place and I will shoot you with a bo..." */
-==g-bbD032 @72 /*"Zeno...in a public place, just like that?" */
+==g-bbD032 @72 /*"Zeno... in a public place, just like that?" */
 ==g-bbD031 @73 /*The wererat continues, ignoring his colleague. "... with a bow. In this way, I will prove to my friend here that my paradox is real." */
 END
 IF~CheckStatGT(Protagonist,18,INT) InParty("Nordom") !StateCheck("Nordom",CD_STATE_NOTVALID) NearbyDialog("DNordom")~THEN REPLY @75 /*"I have a better idea. If you're so sure of your hypothesis, then my companion, Nordom, will shoot *you* with his crossbow." */ DO~SetGlobal("G-ZErev1","GLOBAL",1)~ + g-bbD031.Nreverse

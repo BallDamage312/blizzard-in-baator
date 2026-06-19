@@ -61,7 +61,7 @@ IF~~THEN REPLY @46 /*"And just like that, you murder every sick person who threa
 IF~~THEN REPLY @47 /*Stir yourself from the experience and put the stone back. */ DO~~ EXIT
 CHAIN IF~True()~THEN g-bbD151 g-bbD151.szef9
 @49 /*"Dear sir, of course not. If that were the case, I would have to remove at least half of my patients. Suffice it to say that I have legitimate concerns for my safety. There have already been three attempts. Last time, I found this at the door." The doctor hands you a sheet of yellowed, torn parchment. */
-=@50 /*You read. "Now I know WHERE you're living, you THIEF. Get ready!" */
+=@50 /*You read. "Now I know WHERE you live, you THIEF. Get ready!" */
 END
 IF~~THEN REPLY @52 /*"Oh, quite suggestive. Why a 'thief', though?" */ DO~~ + g-bbD151.szef10
 IF~~THEN REPLY @53 /*Stir yourself from the experience and put the stone back. */ DO~~ EXIT

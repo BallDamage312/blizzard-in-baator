@@ -10,7 +10,7 @@ CHAIN IF~~THEN g-bbDNRD g-bbDNRD.q1
 END
 IF~~THEN REPLY @8 /*"Fine. Let's go." */ DO~~ EXIT
 CHAIN IF~Global("g-fakenrddialogue","GLOBAL",1)~THEN g-bbDNRD g-bbDNRD.q
-@11 /*Suddenly you hear the larger modron that accompanies you. "Nordom wishes to speak." [NOR169] */
+@11 /*Suddenly you hear the modron that accompanies you. "Nordom wishes to speak." [NOR169] */
 END
 IF~~THEN REPLY @13 /*"Of course, Nordom. You don't have to ask my permission. Is everything alright?" */ DO~~ + g-bbDNRD.A1
 IF~~THEN REPLY @14 /*"I consent. What's the matter?" */ DO~~ + g-bbDNRD.A1
@@ -37,7 +37,7 @@ CHAIN IF~~THEN g-bbDNRD g-bbDNRD.A2
 *Waste* sourced from The Grey Waste.
 *Infinite* sourced from either Infinite Layers of Abyss (30%) /OR Infinite Battlefield of Acheron (50%) /OR The Infinite Staircase (20%).
 *Clockwork* sourced from Clockwork Nirvana of Mechanus.
-*Blessed* sourced from The Blessed Fields of Elysium. */
+*Blessed* sourced from The Blessed Fields of Elysium." */
 ==g-bbd237 @32 /*"Granted! Plane review granted." */
 ==g-bbdnrd @33 /*"Monodrone. Are you rogue, like Nordom?" */
 ==g-bbd237 @34 /*The monodrone whirrs for a moment and then answers with: "No." [MODRO01] */
@@ -46,8 +46,8 @@ CHAIN IF~~THEN g-bbDNRD g-bbDNRD.A2
 ==g-bbd217 @37 /*"It's all nice, but can you stop pestering my navigator? Are you here to buy tickets?" */
 ==g-bbdnrd @38 /*"The monodrone's vocabulary is confusing." */
 END
-IF~~THEN REPLY @40 /*"So is this modron a specialist in the field of the planes. What can you tell me of Cania, monodrone?" */ DO~~ + g-bbDNRD.A3
-IF~~THEN REPLY @41 /*"I'm sorry sir, we'll be with you in a moment." Turn to Nordom. "Come on, Nordom. You two can catch up on the boat." */ DO~DestroySelf() SetGlobal("g-fakenrddialogue","GLOBAL",0)~ EXIT
+IF~~THEN REPLY @40 /*"So this modron is a specialist in the field of the planes? What can you tell me of Cania, monodrone?" */ DO~~ + g-bbDNRD.A3
+IF~~THEN REPLY @41 /*"I'm sorry, sir, we'll be with you in a moment." Turn to Nordom. "Come on, Nordom. You two can catch up on the boat." */ DO~DestroySelf() SetGlobal("g-fakenrddialogue","GLOBAL",0)~ EXIT
 CHAIN IF~~THEN g-bbDNRD g-bbDNRD.A3
 @43 /*"If you need information about Cania. You could ask Nor-" */
 ==g-bbd237 @44 /*"Outer Plane: Nine Hells of Baator. WARNING! Infinite *no*." [MODRO02] */

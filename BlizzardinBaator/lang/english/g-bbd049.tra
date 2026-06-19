@@ -1,7 +1,7 @@
-@0=~The newly sobered up Harmonium officer, Adonis sees you come back and immediately raises his finger in a manner a concerned, polite person would, trying to ask a pressing question. "Citizen, a moment, please? What did you MEAN earlier, what DID you mean?"~
+@0=~The newly sobered up Harmonium officer sees you come back and immediately raises his finger in a manner a concerned, polite person would if tgey wanted to ask a pressing question. "Citizen, a moment, please? What did you MEAN earlier? What DID you mean?"~
 @2=~"I wasn't serious. But you clearly do care about something. Why pretend you don't?"~
 @3=~Leave the man alone.~
-@5=~Adonis leans against the counter, apathetic. Not really in a mood to talk. He mutters something as you approach.~
+@5=~Adonis leans against the counter, looking apathetic. Not really in a mood to talk. He mutters something as you approach.~
 @7=~"Hey, officer. I am back."~
 @8=~Leave the man alone.~
 @10=~A Harmonium guard is leaning against the tavern counter. He is swaying left to right, muttering something to himself, and is engaged with a large mug of something likely alcoholic. He pays no attention to you.~
@@ -12,7 +12,7 @@
 @19=~"Good day again, officer."~
 @20=~"Sorry, Annah, you're right, We're leaving."~
 @21=~Leave the man alone.~
-@23=~Startled by the formality of the expression, the guard straightens up violently, throwing a nearby chair the dirty floor of the tavern, and salutes. "Sergeant Adonis, reporting for... *hic* ...dew-tee."~
+@23=~Startled by the formality of the expression, the guard straightens up violently, throwing a nearby chair on the dirty floor of the tavern, and salutes. "Sergeant Adonis, reporting for... *hic* ...dew-tee."~
 @24=~*He claims to represent JUSTICE. Shameful.* Vhailor's resonant voice carries a note of sad disappointment.~
 @26=~"I have some questions."~
 @27=~"I have a crime to report."~
@@ -28,7 +28,7 @@
 @42=~"I know where the thieves responsible for the robbery of that yugoloth are."~
 @43=~"There is a thief, robbing and conning people by the statue of Athena."~
 @44=~"I accidentally killed a woman on the cliff. I came to turn myself in."~
-@45=~"I tasted human flesh, I'm an abomination. I came to surrender my meaningless life to the law."~
+@45=~"I tasted human flesh. I am an abomination. I came to surrender my meaningless life to the law."~
 @46=~"I am going to destroy all of the planes and everyone who lives here. You are the only person who can stop me, but only if you arrest me right now."~
 @47=~"Actually, I have some questions."~
 @48=~"Actually, I have to go now."~
@@ -73,7 +73,7 @@
 @107=~Bluff: "Report back to your station. There has been a change of schedule."~
 @108=~Bluff: "Then stand down. Continue your duties."~
 @109=~Bluff: "How about the illegal detaining of an imp, over there, by these men?"~
-@110=~"I'm not actually a Hardhead, you should be more careful who you trust."~
+@110=~"I'm not actually a Hardhead. You should be more careful who you trust."~
 @112=~The eyes of sergeant Adonis suddenly increase twice in size and he reaches for his halberd. "Hey! You're not an officer. This is a crime!"~
 @114=~"Oh, so now crime bothers you?"~
 @115=~"Fine. Let's dance."~
@@ -83,7 +83,7 @@
 @121=~Bluff: "This imp is wanted, and I have come to arrest it. Retrieve it for me, this is a direct order."~
 @122=~Bluff: "Report back to your station. There has been a change of schedule."~
 @123=~Bluff: "Then stand down. Continue your duties."~
-@124=~"I'm not actually a Hardhead, you should be more careful who you trust."~
+@124=~"I'm not actually a Hardhead. You should be more careful who you trust."~
 @126=~"Sir, yes, sir!" Adonis moves to approach the men at the far end of the tavern.~
 @128=~Observe.~
 @130=~"Yeaah. No. I don't... wait... what?"~
@@ -132,7 +132,7 @@
 @197=~*Well handled. He deserved discipline.*~
 @199=~"Go and repent, officer Adonis."~
 @201=~"You're... right. I am already gone in all senses but physical. I guess I... just needed a... push."~
-@202=~*"Youuu send him tooo *WATER*? Where... there is soo.... much FIRE..."*~
+@202=~*"Youuu send him tooo *WATER*? While... there is soo... much FIRE..."*~
 @204=~"Farewell, officer Adonis."~
 @206=~"You're... right." Adonis seems saddened and on the verge of crying.~
 @208=~"I said get out of here."~

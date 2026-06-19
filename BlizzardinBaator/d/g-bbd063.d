@@ -152,13 +152,13 @@ CHAIN IF~~THEN g-bbD063 g-bbD063.override2
 @92 /*You dive deeper into the next passage, this time describing a man without conscience - a weaver of words, a diplomat, a grand schemer; a man who, in a single lifetime, grasped more than many could fathom in centuries. */
 =@93 /*This man renounced death, yet became its most faithful servant, bringing suffering and dread upon the multiverse. Armed with unyielding charisma, and talent for swaying others, he gathered loyal companions and bound them with false loyalty, and the phantom of hope. */
 =@94 /*He used them as mere tools. To satisfy his deepest hungers, he paved his road with corpses. If evil were to take human form, it would wear his face. He forged his life into a weapon of desolation, crushing everything, that stood in his way, and betraying everyone, who sacrificed - everyone who bled for his sake.   */
-=@95 /*The passage halts, leaving only one final plea: "Don't... let it end like this" */
+=@95 /*The passage halts, leaving only one final plea: "Don't... let it end like this." */
 END
 IF~~THEN REPLY @97 /*Lay the tome aside. */ DO~~ + g-bbD063.override3
 CHAIN IF~~THEN g-bbD063 g-bbD063.override3
 @99 /*When you attempt to seal the grimoire, the volume stands firm against your intent, fighting your every effort. From its depths, a hiss exhales from the binding, unleashing a spiral of ash. It gathers upon you, weaving a dense mantle that holds you tight in a cold embrace. */
 =@100 /*Voices then begin to stir - a chorus of the low and the high: snarls of fiends, celestial hymns, raw battle cries. You sense the book's desperate intent to be heard.  */
-=@101 /*Amidst the storm of sounds, one voice echoes through: 'Man of a Thousand Deaths, mark our words: your tale shall never be forgotten. Your very existence will be carried by our whispers into the depths of remembrance. */
+=@101 /*Amidst the storm of sounds, one voice echoes through: "Man of a Thousand Deaths, mark our words: your tale shall never be forgotten. Your very existence will be carried by our whispers into the depths of remembrance." */
 =@102 /*At once, the ash that bound you scatters into the air. Your hands, no longer shackled by the dust, force the book to its rest. */
 END
 IF~~THEN REPLY @104 /*Lay the tome aside. */ DO~~ EXIT

@@ -1,7 +1,7 @@
 BEGIN g-bbD059
 CHAIN IF~NumTimesTalkedTo(0)~THEN g-bbD059 g-bbD059.start1
 @0 /*A scarred man stands at the bar. He is unhealthily thin, and his skin has a sickly yellow tinge. One of his arms is strangely crooked, almost claw-like. Perhaps an injury prevents him from moving it normally.  */
-=@1 /*The man doesn't say anything and just watches you intently with his coal-black eyes. */
+=@1 /*The man does not say anything and just watches you intently with his coal-black eyes. */
 END
 IF~!InParty("Dakkon")~THEN REPLY @3 /*"Greetings." */ DO~~ + g-bbD059.questions
 IF~InParty("Dakkon") !StateCheck("Dakkon",CD_STATE_NOTVALID)~THEN REPLY @4 /*"Greetings." */ DO~~ + g-bbD059.dakkon1
@@ -9,7 +9,7 @@ IF~Global("Know_Gith","GLOBAL",1)~THEN REPLY @5 /*"Hail, sword-ringer." */ DO~~ 
 IF~Global("Know_Githyanki","GLOBAL",1)~THEN REPLY @6 /*"Hello there, githyanki." */ DO~~ + g-bbD059.attack
 IF~~THEN REPLY @7 /*Leave. */ DO~~ EXIT
 CHAIN IF~NumTimesTalkedToGT(0)~THEN g-bbD059 g-bbD059.start2
-@9 /*The man with the crooked arm doesn't say anything. He just watches you intently from behind the bar with his coal-black eyes. */
+@9 /*The man with the crooked arm does not say anything. He just watches you intently from behind the bar with his coal-black eyes. */
 END
 IF~~THEN REPLY @11 /*"Greetings. I've got a few questions." */ DO~~ + g-bbD059.questions
 IF~~THEN REPLY @12 /*"Do you have any rooms?" */ DO~StartStore("g-bb#010",LastTalkedToBy())~ EXIT
@@ -20,7 +20,7 @@ CHAIN IF~~THEN g-bbD059 g-bbD059.attack
 END
 IF~~THEN REPLY @18 /*Defend yourself. */ DO~Enemy() Attack(Protagonist) ForceAttack(Protagonist,Myself) SetGlobal("G-styxhostile","GLOBAL",1)~ EXIT
 CHAIN IF~~THEN g-bbD059 g-bbD059.courtesy
-@20 /* "Spare me the pleasantries. Courtesy is Try'ig'or's Gem." */
+@20 /*"Spare me the pleasantries. Courtesy is Try'ig'or's Gem." */
 END
 IF~~THEN REPLY @22 /*"What do you mean?" */ DO~~ + g-bbD059.courtesy1
 IF~InParty("Dakkon") !StateCheck("Dakkon",CD_STATE_NOTVALID)~THEN REPLY @23 /*"Dak'kon, what does that mean?" */ DO~~ + g-bbD059.courtesy2
@@ -61,7 +61,7 @@ IF~InParty("Dakkon") !StateCheck("Dakkon",CD_STATE_NOTVALID) GlobalLT("G-zagdak"
 IF~~THEN REPLY @59 /*"I'll be going." */ DO~~ EXIT
 CHAIN IF~~THEN g-bbD059 g-bbD059.dakkon1
 @61 /*The man seems quite busy and irritated with his workload. He serves drinks and food to the fiends. */
-==DDakkon IF ~InParty("Dakkon") !StateCheck("Dakkon",CD_STATE_NOTVALID) NearbyDialog("DDakkon")~ THEN @62 /*Dak'kon surprisingly doesn't perform his usual githzerai pleasantries, as if he knows it would be pointless.  */
+==DDakkon IF ~InParty("Dakkon") !StateCheck("Dakkon",CD_STATE_NOTVALID) NearbyDialog("DDakkon")~ THEN @62 /*Dak'kon surprisingly does not perform his usual githzerai pleasantries, as if he knows it would be pointless.  */
 END
 IF~~THEN REPLY @64 /*"Dak'kon? Is everything alright?" */ DO~~ + g-bbD059.daki
 IF~~THEN REPLY @65 /*"I've got a few questions, barkeep" */ DO~~ + g-bbD059.questions

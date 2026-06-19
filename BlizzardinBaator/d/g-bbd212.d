@@ -36,7 +36,7 @@ END
 IF~~THEN REPLY @33 /*Leave the statue alone. */ DO~~ EXIT
 CHAIN IF~~THEN g-bbD212 g-bbD212.ignus
 @35 /*You watch as Ignus floats closer, his eyes sparkling with the prospect of using his fire on something that, on an elemental level, is his true nemesis: ICE. */
-==g-bbdigy @36 /**"Aaaah.... Ssssweet..... flammmmess."* [IGN016] */
+==g-bbdigy @36 /**"Aaaah... Ssssweet... flammmmess."* [IGN016] */
 ==g-bbdigy @37 /*Ignus merely touches the ice and the steam explodes all around, temporarily blinding you. When the steam dissipates due to the winds raging on this exposed peak, a sizable hole appears in the icy spire and the granite hand is free. But the ring is still stuck on the finger. [g-sauna] */
 ==g-bbdigy @38 /**"Flamessss... weak."* [IGN042] */
 END

@@ -28,13 +28,12 @@ THEN
 END
 
 IF
-    Global("G-kuotoaspare","GLOBAL",2)
+    GlobalGT("G-kuotoaspare","GLOBAL",1)
+	Global("g-kuotoaangry","GLOBAL",0)
 THEN
     RESPONSE #100
         ChangeEnemyAlly(Myself,NEUTRAL)
-		Wait(3)
-		SetGlobal("G-kuotoaspare","GLOBAL",3)
-		Continue()
+
 END
 
 IF

@@ -44,7 +44,7 @@ IF~~THEN REPLY @40 /*"Not right now." */ DO~~ EXIT
 CHAIN IF~~THEN g-bbD040 g-bbD040.rope2S
 @42 /*"Ugh... I actually have a bit of extra rope," the captain sighs, glancing at the deck of his boat. "I bought a coil of this special kind, for binding snakes. It wasn't cheap... I'll part with it for five hundred copper coins. What do you say?" */
 END
-IF~PartyGoldGT(499)~THEN REPLY @44 /*"All right. Let's trade. five hundred coppers coming your way." */ DO~SetGlobal("g-slimequestline","GLOBAL",6) GiveItemCreate("g-bbi130",Protagonist,1,1,0) TakePartyGold(500) ~ SOLVED_JOURNAL @20300 EXIT
+IF~PartyGoldGT(499)~THEN REPLY @44 /*"All right. Let's trade. Five hundred coppers coming your way." */ DO~SetGlobal("g-slimequestline","GLOBAL",6) GiveItemCreate("g-bbi130",Protagonist,1,1,0) TakePartyGold(500) ~ SOLVED_JOURNAL @20300 EXIT
 IF~InParty("Morte") !StateCheck("Morte",CD_STATE_NOTVALID) ~THEN REPLY @45 /*"Five hundred is very steep. I need to think about it." */ DO~SetGlobal("g-fakemrtdialogue","GLOBAL",2)~ EXIT
 IF~OR(2) !InParty("Morte") StateCheck("Morte",CD_STATE_NOTVALID) ~THEN REPLY @46 /*"Five hundred is very steep. I need to think about it." */ DO~~ EXIT
 CHAIN IF~~THEN g-bbD040 g-bbD040.rope2F

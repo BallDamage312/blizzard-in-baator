@@ -5,7 +5,7 @@
 @5=~"Listen. We both know that cup was worthless. I have serious business to attend to."~
 @6=~Leave the counter.~
 @8=~"Pike oooaf, demon. Go to the Oooarsman, where you're welcome.~
-@14=~Behind the counter of the Rivergate tavern stands a tall, broad, toad-like humanoid. His skin is a wet, deep swamp green, covered with many colorful warts. He is busy wiping a bronze beer mug with a greasy rag. He doesn't seem to be paying you any attention. There is a dirty wooden plaque on the bar.~
+@14=~Behind the counter of the Rivergate tavern stands a tall, broad, toad-like humanoid. His skin is a wet, deep swamp green, covered with many colorful warts. He is busy wiping a bronze beer mug with a greasy rag. He does not seem to be paying you any attention. There is a dirty wooden plaque on the bar.~
 @15=~"I urge you not to interact with this one... The slaadi do not *know* themselves and only bring destruction to the multiverse."~
 @17=~"Hey, can I get some service?"~
 @18=~Inspect the wooden plaque on the counter.~
@@ -16,7 +16,7 @@
 @23=~"Hey, you're a hezrou, aren't you?"~
 @24=~"Hey, you're a hydroloth, aren't you?"~
 @25=~You feel the essence of chaos emanating from the creature. You know it is a slaad. "Brother in chaos, nice to meet you."~
-@27=~Behind the counter of the Rivergate tavern, just as before, stands a tall, broad, toad-like humanoid. His skin is a wet, deep swamp green, covered with many colorful warts. He is busy wiping another beer mug. He doesn't seem to be paying you any attention. There is a dirty wooden plaque on the bar.~
+@27=~Behind the counter of the Rivergate tavern, just as before, stands a tall, broad, toad-like humanoid. His skin is a wet, deep swamp green, covered with many colorful warts. He is busy wiping another beer mug. He does not seem to be paying you any attention. There is a dirty wooden plaque on the bar.~
 @28=~"I urge you not to interact with this one... The slaadi do not *know* themselves and only bring destruction to the multiverse."~
 @30=~"Hey, can I get some service?"~
 @31=~Inspect the wooden plaque on the counter.~
@@ -41,7 +41,7 @@
 @52=~"I have some questions."~
 @54=~"I would like to rest on your couch." ~
 @55=~Leave the counter.~
-@57=~He doesn't answer. Instead, he bumps his elbow against a wooden plaque on the counter.~
+@57=~He does not answer. Instead, he bumps his elbow against a wooden plaque on the counter.~
 @59=~Inspect the wooden plaque on the counter.~
 @60=~Truth: "Hey, you're a slaad, aren't you?"~
 @61=~Joke: "Hey, you're a hezrou, aren't you?"~

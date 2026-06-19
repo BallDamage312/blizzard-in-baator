@@ -1,11 +1,11 @@
 BEGIN g-bbD049
 CHAIN IF~Global("G-adoniswait","GLOBAL",1)~THEN g-bbD049 g-bbD049.override
-@0 /*The newly sobered up Harmonium officer, Adonis sees you come back and immediately raises his finger in a manner a concerned, polite person would, trying to ask a pressing question. "Citizen, a moment, please? What did you MEAN earlier, what DID you mean?" */
+@0 /*The newly sobered up Harmonium officer sees you come back and immediately raises his finger in a manner a concerned, polite person would if tgey wanted to ask a pressing question. "Citizen, a moment, please? What did you MEAN earlier? What DID you mean?" */
 END
 IF~~THEN REPLY @2 /*"I wasn't serious. But you clearly do care about something. Why pretend you don't?" */ DO~~ + g-bbD049.care
 IF~~THEN REPLY @3 /*Leave the man alone. */ DO~~ EXIT
 CHAIN IF~Global("G-adonistherapy","GLOBAL",1)~THEN g-bbD049 g-bbD049.override2
-@5 /*Adonis leans against the counter, apathetic. Not really in a mood to talk. He mutters something as you approach. */
+@5 /*Adonis leans against the counter, looking apathetic. Not really in a mood to talk. He mutters something as you approach. */
 END
 IF~~THEN REPLY @7 /*"Hey, officer. I am back." */ DO~~ + g-bbD049.apathy
 IF~~THEN REPLY @8 /*Leave the man alone. */ DO~~ EXIT
@@ -22,7 +22,7 @@ IF~~THEN REPLY @19 /*"Good day again, officer." */ DO~~ + g-bbD049.talk
 IF~InParty("Annah") !StateCheck("Annah",CD_STATE_NOTVALID)~THEN REPLY @20 /*"Sorry, Annah, you're right, We're leaving." */ DO~~ EXIT
 IF~~THEN REPLY @21 /*Leave the man alone. */ DO~~ EXIT
 CHAIN IF~~THEN g-bbD049 g-bbD049.talk
-@23 /*Startled by the formality of the expression, the guard straightens up violently, throwing a nearby chair the dirty floor of the tavern, and salutes. "Sergeant Adonis, reporting for... *hic* ...dew-tee." */
+@23 /*Startled by the formality of the expression, the guard straightens up violently, throwing a nearby chair on the dirty floor of the tavern, and salutes. "Sergeant Adonis, reporting for... *hic* ...dew-tee." */
 ==DVhail IF ~InParty("Vhail") !StateCheck("Vhail",CD_STATE_NOTVALID) NearbyDialog("DVhail")~ THEN @24 /**He claims to represent JUSTICE. Shameful.* Vhailor's resonant voice carries a note of sad disappointment. */
 END
 IF~~THEN REPLY @26 /*"I have some questions." */ DO~~ + g-bbD049.q
@@ -43,7 +43,7 @@ IF~Global("G-Adonis2","GLOBAL",0) GlobalGT("G-BBMain","GLOBAL",10) GlobalLT("G-B
 IF~Global("G-Adonis3","GLOBAL",0) GlobalGT("G-BBMain","GLOBAL",9) !Dead("g-bb019") !Global("G-YagnoRat","GLOBAL",1)~THEN REPLY @42 /*"I know where the thieves responsible for the robbery of that yugoloth are." */ DO~SetGlobal("G-Adonis3","GLOBAL",1) AddexperienceParty(5000) IncrementGlobal("G-AdonisCombo","GLOBAL",1)~ + g-bbD049.ha
 IF~Global("G-Adonis4","GLOBAL",0) GlobalGT("G-adamquest","GLOBAL",0) GlobalLT("G-adamquest","GLOBAL",4)~THEN REPLY @43 /*"There is a thief, robbing and conning people by the statue of Athena." */ DO~SetGlobal("G-Adonis4","GLOBAL",1) AddexperienceParty(5000) IncrementGlobal("G-AdonisCombo","GLOBAL",1)~ + g-bbD049.ha
 IF~Global("G-Adonis5","GLOBAL",0) Global("G-killedsinker","GLOBAL",1)~THEN REPLY @44 /*"I accidentally killed a woman on the cliff. I came to turn myself in." */ DO~SetGlobal("G-Adonis5","GLOBAL",1) AddexperienceParty(5000) IncrementGlobal("G-AdonisCombo","GLOBAL",1) IncrementGlobal("LAW","GLOBAL",1)~ + g-bbD049.ha
-IF~Global("G-Adonis6","GLOBAL",0) Global("G-ActualCannibal","GLOBAL",1)~THEN REPLY @45 /*"I tasted human flesh, I'm an abomination. I came to surrender my meaningless life to the law." */ DO~SetGlobal("G-Adonis6","GLOBAL",1) AddexperienceParty(5000) IncrementGlobal("G-AdonisCombo","GLOBAL",2) IncrementGlobal("LAW","GLOBAL",3)~ + g-bbD049.ha
+IF~Global("G-Adonis6","GLOBAL",0) Global("G-ActualCannibal","GLOBAL",1)~THEN REPLY @45 /*"I tasted human flesh. I am an abomination. I came to surrender my meaningless life to the law." */ DO~SetGlobal("G-Adonis6","GLOBAL",1) AddexperienceParty(5000) IncrementGlobal("G-AdonisCombo","GLOBAL",2) IncrementGlobal("LAW","GLOBAL",3)~ + g-bbD049.ha
 IF~GlobalGT("G-AdonisCombo","GLOBAL",4)~THEN REPLY @46 /*"I am going to destroy all of the planes and everyone who lives here. You are the only person who can stop me, but only if you arrest me right now." */ DO~AddexperienceParty(10000)~ + g-bbD049.ha1
 IF~~THEN REPLY @47 /*"Actually, I have some questions." */ DO~~ + g-bbD049.q
 IF~~THEN REPLY @48 /*"Actually, I have to go now." */ DO~~ EXIT
@@ -108,7 +108,7 @@ END
 IF~CheckStatGT(Protagonist,15,CHR)~THEN REPLY @107 /*Bluff: "Report back to your station. There has been a change of schedule." */ DO~~ + g-bbD049.bluff2
 IF~CheckStatGT(Protagonist,15,CHR)~THEN REPLY @108 /*Bluff: "Then stand down. Continue your duties." */ DO~~ EXIT
 IF~Global("G-BBmain","GLOBAL",5)~THEN REPLY @109 /*Bluff: "How about the illegal detaining of an imp, over there, by these men?" */ DO~~ + g-bbD049.prod
-IF~Global("G-BBmain","GLOBAL",5)~THEN REPLY @110 /*"I'm not actually a Hardhead, you should be more careful who you trust." */ DO~~ + g-bbD049.reveal
+IF~Global("G-BBmain","GLOBAL",5)~THEN REPLY @110 /*"I'm not actually a Hardhead. You should be more careful who you trust." */ DO~~ + g-bbD049.reveal
 CHAIN IF~~THEN g-bbD049 g-bbD049.reveal
 @112 /*The eyes of sergeant Adonis suddenly increase twice in size and he reaches for his halberd. "Hey! You're not an officer. This is a crime!" */
 END
@@ -121,7 +121,7 @@ IF~CheckStatGT(Protagonist,20,CHR)~THEN REPLY @120 /*Bluff: "This imp is wanted,
 IF~!CheckStatGT(Protagonist,20,CHR)~THEN REPLY @121 /*Bluff: "This imp is wanted, and I have come to arrest it. Retrieve it for me, this is a direct order." */ DO~~ + g-bbD049.bluff3f
 IF~CheckStatGT(Protagonist,15,CHR)~THEN REPLY @122 /*Bluff: "Report back to your station. There has been a change of schedule." */ DO~~ + g-bbD049.bluff2
 IF~CheckStatGT(Protagonist,15,CHR)~THEN REPLY @123 /*Bluff: "Then stand down. Continue your duties." */ DO~~ EXIT
-IF~Global("G-BBmain","GLOBAL",5)~THEN REPLY @124 /*"I'm not actually a Hardhead, you should be more careful who you trust." */ DO~~ + g-bbD049.reveal
+IF~Global("G-BBmain","GLOBAL",5)~THEN REPLY @124 /*"I'm not actually a Hardhead. You should be more careful who you trust." */ DO~~ + g-bbD049.reveal
 CHAIN IF~~THEN g-bbD049 g-bbD049.bluff4s
 @126 /*"Sir, yes, sir!" Adonis moves to approach the men at the far end of the tavern. */
 END
@@ -199,7 +199,7 @@ END
 IF~~THEN REPLY @199 /*"Go and repent, officer Adonis." */ DO~IncrementGlobal("LAW","GLOBAL",2) IncrementGlobal("GOOD","GLOBAL",-2) AddexperienceParty(10000) ActionOverride("g-bb049",EscapeArea()) MoraleInc("Vhail",1)~ EXIT
 CHAIN IF~~THEN g-bbD049 g-bbD049.chaoticevil
 @201 /*"You're... right. I am already gone in all senses but physical. I guess I... just needed a... push." */
-==DIgnus IF ~InParty("Ignus") !StateCheck("Ignus",CD_STATE_NOTVALID) NearbyDialog("DIgnus")~ THEN @202 /**"Youuu send him tooo *WATER*? Where... there is soo.... much FIRE..."* */
+==DIgnus IF ~InParty("Ignus") !StateCheck("Ignus",CD_STATE_NOTVALID) NearbyDialog("DIgnus")~ THEN @202 /**"Youuu send him tooo *WATER*? While... there is soo... much FIRE..."* */
 END
 IF~~THEN REPLY @204 /*"Farewell, officer Adonis." */ DO~IncrementGlobal("LAW","GLOBAL",-2) AddexperienceParty(10000) ActionOverride("g-bb049",EscapeArea()) MoraleDec("Grace",1)~ EXIT
 CHAIN IF~~THEN g-bbD049 g-bbD049.neutralevil

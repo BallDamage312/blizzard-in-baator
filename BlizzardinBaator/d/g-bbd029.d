@@ -47,7 +47,7 @@ CHAIN IF~~THEN g-bbD029 g-bbD029.story
 ==DDakkon IF ~InParty("Dakkon") !StateCheck("Dakkon",CD_STATE_NOTVALID) NearbyDialog("DDakkon")~ THEN @44 /*"The Floating City. A beautiful, shimmering town of religious importance to us, the githzerai." */
 ==g-bbD029 @45 /*"We were on the hunt for a group of assailants who had just raided our outpost. They had slain a lot of our monks and stole some priceless artifacts. It was a group of death slaadi, under orders from Lord Ssendam, and they were fleeing deep into the lower realms of Limbo." */
 ==DDakkon IF ~InParty("Dakkon") !StateCheck("Dakkon",CD_STATE_NOTVALID) NearbyDialog("DDakkon")~ THEN @46 /*"Lord Ssendam." Dak'kon instinctively shivers upon hearing the name. "Slaadi lord of insanity, the manifested madness itself and a truly despicable villain." */
-==g-bbD029 @47 /*"The pursuit took us through Swarga, a vedic realm even less predictable than the common space of Limbo. We were hit by a violent firestorm as if our presence angered the god Agni. Many of my squadron perished in the flames. I myself was engulfed in a fiery vortex and instead of finding oblivion like my friends, I had been transported to a whole other plane. Plane of Fire." */
+==g-bbD029 @47 /*"The pursuit took us through Swarga, a Vedic realm even less predictable than the common space of Limbo. We were hit by a violent firestorm as if our presence angered the god Agni. Many of my squadron perished in the flames. I myself was engulfed in a fiery vortex and instead of finding oblivion like my friends, I had been transported to a whole other plane. Plane of Fire." */
 ==DIgnus IF ~InParty("Ignus") !StateCheck("Ignus",CD_STATE_NOTVALID) NearbyDialog("DIgnus")~ THEN @48 /*Ignus seems emboldened by the sound of that. *"Fire... YESSS. Blessssed being!"* */
 ==g-bbD029 @49 /*"My skin was burning and my soul was in agony but, through sheer perseverance, I soldiered on, looking for a way out. All I needed was a moment of peace to allow myself to form my karach blade into a gate back home. After a long and exhausting trek alongside the Sea of Scorching Waves, I found a single tongue of flame that was black in color. As it formed an inviting arch before me, I stepped in, assuming I was bound to be saved." */
 ==DMorte IF ~InParty("Morte") !StateCheck("Morte",CD_STATE_NOTVALID) NearbyDialog("DMorte")~ THEN @50 /*"Something tells me that it didn't work out." */
@@ -79,7 +79,7 @@ CHAIN IF~~THEN g-bbD029 g-bbD029.intermission4
 END
 IF~~THEN REPLY @77 /*"So what happened?" */ DO~~ + g-bbD029.continue2
 CHAIN IF~~THEN g-bbD029 g-bbD029.continue2
-@79 /*"Brill..." The Githzerai tightens his fists hard enough for you to hear his tired skin crack from stretching beyond its normal limit. "Gave me work at the Rivergate, and even gave me a down payment to find myself this kip. But I had to leave my karach as a deposit, so I could not run off. Of course, he was to return it after a full thirty-cycle of reliable work..." */
+@79 /*"Brill..." The githzerai tightens his fists hard enough for you to hear his tired skin crack from stretching beyond its normal limit. "Gave me work at the Rivergate, and even gave me a down payment to find myself this kip. But I had to leave my karach as a deposit, so I could not run off. Of course, he was to return it after a full thirty-cycle of reliable work..." */
 END
 IF~~THEN REPLY @81 /*"But he did not." */ DO~~ + g-bbD029.choice
 CHAIN IF~~THEN g-bbD029 g-bbD029.choice

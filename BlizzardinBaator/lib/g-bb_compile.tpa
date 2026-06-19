@@ -26,6 +26,7 @@ EXTEND_TOP ~0402DAKN.bcs~ ~%MOD_FOLDER%/baf/extend/0402DAKN.baf~
 EXTEND_TOP ~0402IGNS.bcs~ ~%MOD_FOLDER%/baf/extend/0402IGNS.baf~
 EXTEND_BOTTOM ~ar0605.bcs~ ~%MOD_FOLDER%/baf/extend/ar0605.baf~
 EXTEND_BOTTOM ~baldur.bcs~ ~%MOD_FOLDER%/baf/extend/baldur.baf~
+EXTEND_TOP ~ar0500.bcs~ ~%MOD_FOLDER%/baf/extend/ar0500.baf~
 EXTEND_TOP ~0605ffg.bcs~ ~%MOD_FOLDER%/baf/extend/0605ffg.baf~
 
 /*COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/baf/areas~

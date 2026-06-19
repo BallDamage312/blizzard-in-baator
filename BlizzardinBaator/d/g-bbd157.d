@@ -18,7 +18,7 @@ CHAIN IF~NumTimesTalkedToGT(0) GlobalGT("Join_Sensates","GLOBAL",1) Global("G-va
 =@15 /*"Something's changed... The Sensate badge? Gone? Could it be that the prospect of my sauna finally convinced you to leave them? In such case, a warm welcome to you!" */
 END
 IF~~THEN REPLY @17 /*"Yes, I've left their faction, but I only have a few questions today." */ DO~SetGlobal("G-val_sensatecomment","GLOBAL",1) StartStore("g-bb#008",LastTalkedToBy()) ~ + g-bbD157.questions
-IF~~THEN REPLY @18 /*"Yes, I left their faction, can I rest here?" */ DO~SetGlobal("G-val_sensatecomment","GLOBAL",1) StartStore("g-bb#008",LastTalkedToBy()) ~ EXIT
+IF~~THEN REPLY @18 /*"Yes, I've left their faction. Can I rest here?" */ DO~SetGlobal("G-val_sensatecomment","GLOBAL",1) StartStore("g-bb#008",LastTalkedToBy()) ~ EXIT
 IF~~THEN REPLY @19 /*"Exactly. I'd like to finally book that sauna session." */ DO~SetGlobal("G-val_sensatecomment","GLOBAL",1) StartStore("g-bb#008",LastTalkedToBy()) ~ + g-bbD157.session
 IF~~THEN REPLY @20 /*Leave. */ DO~SetGlobal("G-val_sensatecomment","GLOBAL",1)~ EXIT
 CHAIN IF~NumTimesTalkedToGT(0) Global("g-debtpeoplealert","GLOBAL",0) Global("g-saunamove","GLOBAL",0)~THEN g-bbD157 g-bbD157.start2
@@ -69,7 +69,7 @@ IF~!Dead("g-bb201")~THEN REPLY @66 /*"What can you tell me about Ulfbrand?" */ D
 IF~~THEN REPLY @67 /*"I have some questions." */ DO~~ + g-bbD157.questions
 IF~~THEN REPLY @68 /*"Never mind, goodbye." */ DO~~ EXIT
 CHAIN IF~~THEN g-bbD157 g-bbD157.items3
-@70 /*"These vials contain aromatic oils. They enhance the overall experience, relax, and help clear the respiratory tract." */
+@70 /*"These vials contain aromatic oils. They enhance the overall experience, aid in relaxation, and help clear the respiratory tract." */
 END
 IF~~THEN REPLY @72 /*"What else is on your tray?" */ DO~~ + g-bbD157.items0
 IF~~THEN REPLY @73 /*"I have some questions." */ DO~~ + g-bbD157.questions
@@ -94,7 +94,7 @@ IF~~THEN REPLY @91 /*"What else is on your tray?" */ DO~~ + g-bbD157.items0
 IF~~THEN REPLY @92 /*"I have some questions." */ DO~~ + g-bbD157.questions
 IF~~THEN REPLY @93 /*"Never mind, goodbye." */ DO~~ EXIT
 CHAIN IF~~THEN g-bbD157 g-bbD157.items7
-@95 /*"These birch whisks are for lashing the body." She makes a sharp movement with her hand. "They improve circulation and blood flow to the hit areas. The pain cleanses the body, which makes you feel better. I hope you're not afraid of a little pain? Although, looking at you... I highly doubt it." */
+@95 /*"These birch whisks are for lashing the body." He makes a sharp movement with his hand. "They improve circulation and blood flow to the hit areas. The pain cleanses the body, which makes you feel better. I hope you're not afraid of a little pain? Although, looking at you... I highly doubt it." */
 END
 IF~~THEN REPLY @97 /*"What else is on your tray?" */ DO~~ + g-bbD157.items0
 IF~~THEN REPLY @98 /*"I have some questions." */ DO~~ + g-bbD157.questions
@@ -174,7 +174,7 @@ CHAIN IF~~THEN g-bbD157 g-bbD157.dwarf2
 END
 IF~!Global("G-kiaransaleefollower","GLOBAL",1)~THEN REPLY @177 /*"Gods seem to have forsaken me." */ DO~~ + g-bbD157.god1
 IF~!Global("G-kiaransaleefollower","GLOBAL",1)~THEN REPLY @178 /*"No, I don't." */ DO~~ + g-bbD157.god1
-IF~Global("G-kiaransaleefollower","GLOBAL",1)~THEN REPLY @179 /*"I do in fact... The Lady of the Dead, Kiaransalee." */ DO~~ + g-bbD157.god2
+IF~Global("G-kiaransaleefollower","GLOBAL",1)~THEN REPLY @179 /*"I do, in fact... The Lady of the Dead, Kiaransalee." */ DO~~ + g-bbD157.god2
 IF~~THEN REPLY @180 /*"I have some questions." */ DO~~ + g-bbD157.questions
 IF~~THEN REPLY @181 /*Leave. */ DO~~ EXIT
 CHAIN IF~~THEN g-bbD157 g-bbD157.god1
