@@ -1,0 +1,16 @@
+@0=~De loin, vous entendez un fort bruit de métal frappant une surface dure. En approchant, vous remarquez une créature qui fut autrefois un modrone parfaitement fonctionnel, même s'il reste peu de chose de sa forme originelle. Le pauvre être artificiel n'a plus ni bras ni ailes, et son visage, là où devraient se trouver yeux et bouche, ressemble à une horloge brisée remplie de ressorts tordus et d'engrenages ébréchés. En équilibre précaire sur son unique jambe restante, il sautille sur place en frappant sans cesse du pied contre les débris rouillés sous lui. Vous préférez ne pas imaginer ce qui a pu lui arriver. Entre chaque choc creux, il produit alternativement des sons mécaniques ressemblant à *WURR* et *THURR*. ~ [MODRO02]
+@2=~"Bonjour, vous m'entendez ?"~
+@3=~"Patch ?"~
+@4=~"Hmm, je vais poursuivre mon chemin."~
+@6=~Le modrone privé de ses membres continue de sautiller maladroitement sur sa dernière jambe pour des raisons connues de lui seul. Vous préférez ne pas imaginer ce qui a pu lui arriver. ~ [MODRO03]
+@8=~"Bonjour, vous m'entendez ?"~
+@9=~"Patch ?"~
+@10=~Mettre fin aux souffrances du modrone Wurr-thurr. Le laisser retourner à Méchanus.~
+@11=~"Hmm, je vais poursuivre mon chemin."~
+@13=~Le modrone s'immobilise en plein mouvement puis tourne vers vous son non-visage spectral, comme s'il vous examinait attentivement. Vous ignorez s'il peut encore voir quoi que ce soit, mais il ne semble pas intéressé par vous. Après un moment tendu, il lâche un puissant *WURR* *THURR* puis reprend sans émotion son activité interrompue. Vous ne pensez pas pouvoir faire quoi que ce soit pour lui. Les dégâts sont irréparables. ~ [MODRO07]
+@15=~"Patch ?"~
+@16=~"Très bien, je ne vais pas vous déranger."~
+@18=~Vous répétez encore plusieurs fois son *nom*, mais le modrone ne réagit pas, hormis son caractéristique *WURR* *THURR*. Qui qu'il soit, ce n'est pas Patch, du moins pas à présent. Qu'il l'ait jamais été paraît également douteux. Ses blessures semblent assez anciennes, tandis que Patch n'a disparu que récemment. ~ [MODRO07]
+@19=~"Modrone ? Hypothèse : impossible à déterminer. Qu'est-ce qui constitue la nature d'un modrone ? Objectif : compréhension et catégorisation correcte. Nordom suit."~
+@21=~"J'espère que ce n'est pas toi. Je vais continuer à chercher. Adieu."~
+@22=~Mettre fin aux souffrances du modrone Wurr-thurr. Le laisser retourner à Méchanus.~

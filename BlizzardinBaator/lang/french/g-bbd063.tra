@@ -1,0 +1,89 @@
+@0=~Vous tenez entre vos mains un lourd et épais volume relié de cuir. Ses coins sont renforcés de ferrures couvertes de fines gravures, et son dos est cousu de solides lanières de cuir. Vous sentez le poids des récits qu'il renferme : des histoires capables de terrifier les faibles, mais dont les secrets attireraient irrésistiblement les curieux.~
+@2=~Ouvrir le livre.~
+@3=~Mettre le grimoire de côté.~
+@5=~Lorsque vous ouvrez le volume à la première page, une odeur de vieux parchemin et de poussière rance vous assaille. Des lettres soigneusement tracées et tourbillonnantes composent le titre : Le Grimoire du Arpenteur. Juste en dessous, dans la même écriture ornementale, vous lisez :"Recueil de récits, souvenirs et murmures ayant défié le passage du temps".~
+@7=~Examiner la table des matières.~
+@8=~Mettre le grimoire de côté.~
+@10=~La table des matières révèle des dizaines, peut-être des centaines de chapitres. On dirait que le grimoire murmure d'une multitude de voix, chacune rivalisant pour attirer votre attention. Votre regard s'arrête sur les passages qui semblent crier plus fort que les autres pour être entendus.~
+@12=~Lire"La Nature de la Croyance".~
+@13=~Lire"L'Argot de Sigil".~
+@14=~Lire"Les Voix du Peuple".~
+@15=~Lire"La Guerre Sanglante".~
+@16=~Lire"Les Ombres du Tourment".~
+@17=~Mettre le grimoire de côté.~
+@19=~Ce passage traite de la nature de la croyance : la force la plus puissante du Multivers, capable de façonner l'existence et de plier la réalité. Beaucoup pensent que les divinités ne sont que des incarnations de la foi, soutenues par la volonté collective des peuples. Brisez la croyance dans l'âme d'un fidèle, empoisonnez-la de doute, et vous affaiblirez le dieu qu'il sert.~
+@20=~La croyance maintient en place les cités des Plans Extérieurs et façonne le chaos mouvant des Limbes. Elle crée des dieux et les défait. Elle est l'ancre de l'existence pour nombre d'habitants des Plans. Même chez les modrones, la foi en la hiérarchie est absolue. Lorsqu'une unité vacille et doute de la logique de la Loi, on considère cela comme un simple"dysfonctionnement"dans le grand dessein : un"renégat"rejeté par les siens.~
+@22=~Examiner de nouveau la table des matières.~
+@23=~Mettre le grimoire de côté.~
+@25=~Cette entrée décrit plus en détail l'argot de Sigil. Votre attention est attirée par certaines expressions que vous connaissez et avez déjà entendues maintes fois.
+
+Bibine : vin ou bière bon marché, à peine buvable.
+Passer la corde : expression familière désignant le sort des criminels condamnés qui n'ont pas réussi à échapper à la justice.
+Va aux labyrinthes : autre manière de dire"va te faire voir"; littéralement, souhaiter à un malheureux de subir un destin cruel dans les labyrinthes de la Dame des Douleurs.
+Fiélonnet : terme familier désignant un tieffelin, c'est-à-dire une créature portant une goutte de sang fiélon dans ses veines.
+Cageur : terme local désignant un habitant de Sigil, cité communément appelée la Cage.
+Affranchi : connaisseur ou expert dans son domaine ; appeler quelqu'un ainsi est une marque de grand respect.
+Arpenteur : matois voyageant à travers les Plans en quête d'aventure, de gloire ou de jonc durement gagné ; ce terme reconnaît ses connaissances et son expérience.
+Suppliant : mortel qui, après sa mort, renaît sur un Plan correspondant à son caractère ou à ses croyances, en ayant perdu tout souvenir de sa vie précédente.
+Anti-pic : équivalent sigilien de minuit dans le cycle quotidien.
+Pic : équivalent sigilien de midi ; moment où la cité baigne dans sa lumière la plus vive.
+Ramassé : terme local désignant quelqu'un qui a été arrêté ou appréhendé, souvent par une patrouille de l'Harmonium.~
+@27=~Examiner de nouveau la table des matières.~
+@28=~Mettre le grimoire de côté.~
+@30=~Cette entrée décrit plus en détail les expressions et tournures utilisées par les githzeraïs. Vous reconnaissez certains termes déjà entendus."Une terre ne peut reposer sous deux cieux": référence fondamentale à la scission du peuple gith entre githyankis et githzeraïs, symbolisant l'impossibilité pour deux vérités opposées de coexister."L'Œil de Vilquar": utiliser cette expression comme accusation de trahison correspond aux croyances du Peuple, qui condamne la recherche d'une récompense au prix de la liberté."L'Ach'ali qui se noie": signifie"une question à laquelle répondre n'a aucun sens". C'est généralement une invitation à poser une question plus précise."Écrire le livre des Anarchs": faire preuve d'une sagesse exceptionnelle. Les Anarchs sont des maîtres dans l'art de façonner le chaos, dotés d'une puissante discipline mentale.~
+@32=~Examiner de nouveau la table des matières.~
+@33=~Mettre le grimoire de côté.~
+@35=~Cette entrée concerne l'éternelle boucherie sanglante opposant les baatezus aux tanar'ris. Ce carnage sans fin déchire les Plans Inférieurs, même s'il n'est pas toujours visible à l'œil nu. Il oppose les démons impulsifs et chaotiques aux diables, visage plus discipliné du mal. Dans les ombres rôdent les yugoloths, vils mercenaires vendant leur loyauté au plus offrant.~
+@36=~Malgré toute son horreur, cette guerre n'est rien de moins qu'une bénédiction pour le Multivers entier. Absorbés par leur ancien conflit, démons et diables s'épuisent mutuellement sur des terres gorgées de sang. Si l'un des deux camps venait un jour à faire pencher la balance en sa faveur, il prendrait le contrôle de l'ensemble des Plans Inférieurs. Cela pourrait à son tour briser l'équilibre du Multivers tel que nous le connaissons.~
+@38=~Examiner de nouveau la table des matières.~
+@39=~Mettre le grimoire de côté.~
+@41=~Lorsque vous tournez les pages jusqu'aux"Ombres du Tourment", le parchemin murmure le récit d'âmes qui suivirent autrefois dans le sillage d'un chef à la langue d'argent. Leurs pas se sont effacés et leurs noms se sont dissous dans les brumes de l'histoire, mais leur destin demeure tissé jusque dans l'encre.~
+@43=~Lire"La Fidèle".~
+@44=~Lire"L'Aveugle".~
+@45=~Lire"Le Prisonnier".~
+@46=~Lire"Le Moqueur".~
+@47=~Examiner de nouveau la table des matières.~
+@48=~Mettre le grimoire de côté.~
+@50=~En tête du passage, vous lisez :"Fuis ton destin si tu le dois, mais tu en porteras toujours le poids."Le texte raconte une histoire de dévouement platonique, à la fois belle et amère. Prisonnière de la langue d'argent d'un homme dont la faim consumait tous ceux qui l'aimaient, elle sacrifia sa vie pour qu'il puisse atteindre le terme de son voyage. Son cœur cessa de battre, mais son âme tourmentée continua de murmurer dans les ombres, attendant le jour où son bien-aimé affronterait enfin son véritable désir.~
+@51=~Une douleur soudaine transperce votre épaule, brûlant jusque sous la peau de votre tatouage.~
+@53=~Examiner de nouveau"Les Ombres du Tourment".~
+@54=~Examiner de nouveau la table des matières.~
+@55=~Mettre le grimoire de côté.~
+@56=~Examiner de nouveau"Les Ombres du Tourment".~
+@57=~Mettre le grimoire de côté.~
+@59=~"La vérité attendait dans l'obscurité, cachée à ceux qui se fiaient uniquement à la lumière."Cette entrée raconte l'histoire d'un homme qui passa toute sa vie derrière un voile de ténèbres. Là où les autres percevaient formes, lumières et silhouettes, lui ne connaissait que le silence, le vent et les vibrations de la terre. Avec le temps, il apprit à sentir venir l'orage et à étouffer les dangers avant même qu'ils ne puissent l'atteindre.~
+@60=~L'entrée semble incomplète, apparemment parce que l'encre s'est effacée du parchemin. Vous ne parvenez à lire que la dernière phrase du chapitre :"Celui qui invoque les ombres ne porte aucune lumière en lui."~
+@62=~Examiner de nouveau"Les Ombres du Tourment".~
+@63=~Examiner de nouveau la table des matières.~
+@64=~Mettre le grimoire de côté.~
+@65=~Examiner de nouveau"Les Ombres du Tourment".~
+@66=~Mettre le grimoire de côté.~
+@68=~"Un esprit fracturé ne se reconstitue pas aisément. La pensée devient une arme redoutable lorsque l'esprit est uni, lorsque chaque image qui l'habite agit en harmonie. Privez un être de son but et vous le déchirez de l'intérieur ; brisez sa volonté et la pensée devient esclave."~
+@69=~Ces lignes relatent une lente destruction, la facilité avec laquelle une volonté peut être enchaînée et un esprit soumis par une promesse. Là réside l'origine du mal : des mains qui créaient autrefois des merveilles façonnent désormais des choses étrangères à leur nature. Derrière cette transformation rôde un trompeur à la langue d'argent. Il ne brise aucun os et ne pose aucune chaîne de fer. Une parole donnée lui suffit.~
+@70=~L'entrée s'achève ainsi :"La promesse de liberté suffit pour qu'une volonté entravée accepte elle-même ses chaînes."~
+@72=~Examiner de nouveau"Les Ombres du Tourment".~
+@73=~Examiner de nouveau la table des matières.~
+@74=~Mettre le grimoire de côté.~
+@75=~Examiner de nouveau"Les Ombres du Tourment".~
+@76=~Mettre le grimoire de côté.~
+@78=~"Quand tous s'en vont, il ne reste que le silence... et les quelques pauvres plaisanteries que je raconte à la nuit."~
+@79=~Cette entrée concerne un homme libéré d'un premier jeu de chaînes, qui choisit volontairement d'en accepter un autre. Elle raconte l'histoire d'un captif dont le dévouement envers son sauveur devient une nouvelle prison, parfaite et impossible à fuir. Elle constitue une leçon funeste : celui qu'on arrache à l'esclavage ne devrait pas forger de nouvelles chaînes avec sa gratitude ou sa peur. Remplacer un maître par un autre, ce n'est pas être sauvé ; c'est seulement changer de propriétaire.~
+@81=~Examiner de nouveau"Les Ombres du Tourment".~
+@82=~Examiner de nouveau la table des matières.~
+@83=~Mettre le grimoire de côté.~
+@84=~Examiner de nouveau"Les Ombres du Tourment".~
+@85=~Mettre le grimoire de côté.~
+@87=~En parcourant de nouveau la table des matières, un murmure plus puissant vous appelle. Vous trouvez une page portant un seul mot :"Mort". Vous avez traversé d'innombrables dangers et affronté des ennemis d'une puissance immense, pourtant le simple fait de regarder ce mot glace votre sang.~
+@89=~Poursuivre la lecture.~
+@90=~Mettre le grimoire de côté.~
+@92=~Vous plongez plus profondément dans le passage suivant, qui décrit cette fois un homme dépourvu de conscience : tisseur de mots, diplomate, grand manipulateur ; un homme qui, en une seule vie, comprit davantage que beaucoup n'auraient pu le faire en plusieurs siècles.~
+@93=~Cet homme renia la mort, mais devint pourtant son serviteur le plus fidèle, répandant souffrance et terreur à travers le Multivers. Armé d'un charisme inflexible et d'un talent exceptionnel pour influencer autrui, il rassembla autour de lui des compagnons fidèles et les lia par une loyauté mensongère et le fantôme de l'espoir.~
+@94=~Il ne les utilisait que comme de simples outils. Pour satisfaire ses désirs les plus profonds, il pavait sa route de cadavres. Si le mal devait prendre forme humaine, il porterait son visage. Il transforma sa vie en arme de désolation, écrasant tout ce qui se dressait sur son chemin et trahissant tous ceux qui s'étaient sacrifiés, tous ceux qui avaient saigné pour lui.~
+@95=~Le passage s'interrompt brutalement et ne laisse qu'une dernière supplique :"Ne... laisse pas tout finir ainsi."~
+@97=~Mettre le grimoire de côté.~
+@99=~Lorsque vous tentez de refermer le grimoire, le volume résiste à votre volonté et lutte contre chacun de vos efforts. De ses profondeurs, un sifflement s'échappe de la reliure, libérant une spirale de cendres. Elles se rassemblent autour de vous et forment un manteau dense qui vous étreint dans un froid glacial.~
+@100=~Puis des voix s'élèvent, un chœur de graves et d'aigus : grondements de fiélons, hymnes célestes, cris de guerre bruts. Vous sentez le livre désespérément décidé à être entendu.~
+@101=~Au milieu de cette tempête sonore, une voix résonne clairement :"Homme aux Mille Morts, retiens nos paroles : ton histoire ne sera jamais oubliée. Ton existence même sera portée par nos murmures jusque dans les profondeurs du souvenir."~
+@102=~Soudain, les cendres qui vous retenaient se dispersent dans l'air. Libérées de leur entrave poussiéreuse, vos mains forcent enfin le livre à se refermer.~
+@104=~Mettre le grimoire de côté.~
+@106=~Vous avez décidé de mettre le grimoire de côté. Le murmure entendu un instant plus tôt s'est tu. Vous venez peut-être de perdre à jamais l'occasion d'entendre son dernier récit.~

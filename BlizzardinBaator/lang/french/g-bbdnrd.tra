@@ -1,0 +1,46 @@
+@0=~Nordom fixe attentivement ses arbalètes. Elles produisent divers cliquetis, d'abord l'une puis l'autre, comme si elles conversaient.~
+@2=~"Comment vas-tu ?"~
+@3=~Partir.~
+@5=~"Début du cycle introspectif."Nordom ferme les yeux avec un *clic* et commence à *bourdonner*.~
+@6=~"Évaluation introspective : perceptions devenues (1) plus petites et (B) plus bruyantes. Ailes remplacées par bras : raison inconnue. Soupçon/hypothèse : ailes non appréciées ? Spéculation. Nordom était autrefois -UN- mais est désormais un -UN !- plus petit et plus bruyant. Changement ayant provoqué difficultés de traitement des informations."~
+@8=~"Très bien. Allons-y."~
+@9=~DIALOGUE LANCÉ PAR LE PNJ~
+@11=~Soudain, vous entendez le modrone qui vous accompagne."Nordom souhaite parler."~ [NOR169]
+@13=~"Bien sûr, Nordom. Tu n'as pas besoin de me demander la permission. Tout va bien ?"~
+@14=~"Permission accordée. Qu'y a-t-il ?"~
+@15=~"Pas maintenant, Nordom. Ne me dérange pas."~
+@16=~Continuer.~
+@18=~"Compris. Nordom ne vous dérangera pas maintenant."~ [NOR321B]
+@20=~Continuer.~
+@22=~"Traitement."Nordom change de lentille et commence à réciter une définition."Monodrone. Modrones à fonction unique originaires de Méchanus, où ils constituent la majorité de la population, environ 300 millions d'individus. Rang le plus bas de la hiérarchie modrone. Alignement : toujours Loyal Neutre (sauf modrones renégats ayant subi une !ERREUR!). Armes principales : lances, hallebardes à double tranchant ou arbalètes. Vision véritable permettant de voir à travers les illusions. Sens du devoir inébranlable ; impossible de les convaincre d'abandonner les ordres d'un duodrone supérieur. Résistance à la magie mentale, à la peur, aux énergies négative et positive. Résistance également à l'acide, au froid et au feu. Mémoire capable de stocker 48 mots."~ [NOR067]
+@24=~"Ah, j'imagine que tu me parles de la créature sur le radeau ?"~
+@25=~Continuer.~
+@27=~"Pas créature. Modrone. Probabilité d'utilisation dans service lié aux portails : élevée. Raison de ce service : INCONNUE."Il se tourne vers le monodrone.~
+@28=~"Monodrone. Ressentez-vous une détresse ?"~
+@29=~La petite construction tourne une fois sur son axe et répond :"Avertissement ! Autre demi-Méchanus-demi-Limbes détecté. Joyeuse Désolation. Rouages infinis bénis !"~
+@30=~"Vocabulaire du monodrone programmé avec noms de lieux, limitant programme de communication de base. Détection de l'origine des mots."~ [MODRO02]
+@31=~"*Avertissement* et *détecté* semblent liés aux activités nautiques.
+*Demi* et *autre* potentiellement utilisés pour décrire la cosmologie générale.
+*Méchanus* et *Limbes* sont des désignations directes et courtes de Plans.
+*Joyeuse* provient des Joyeux Terrains de Chasse des Terres des Bêtes.
+*Désolation* provient de la Désolation Grise.
+*Infini* provient soit des Strates Infinies des Abysses (30 %) /OU du Champ de Bataille Infini d'Achéron (50 %) /OU de l'Escalier Infini (20 %).
+*Rouages* provient du Nirvana mécanique de Méchanus.
+*Bénis* provient des Champs Bénis de l'Élysées."~
+@32=~"Accordé ! Examen planaire accordé."~
+@33=~"Monodrone. Êtes-vous renégat, comme Nordom ?"~
+@34=~Le monodrone vrombit un instant puis répond :"Non."~ [MODRO01]
+@35=~"Bon, ça m'a paru plutôt normal, à moi."~
+@36=~Grâce glousse."Nordom, je crois que vous avez un sérieux rival en matière de charme."~
+@37=~"Tout ça est charmant, mais vous pouvez arrêter d'embêter mon navigateur ? Vous êtes ici pour acheter des billets ?"~
+@38=~"Le vocabulaire du monodrone prête à confusion."~
+@40=~"Donc ce modrone est spécialiste des Plans ? Que peux-tu me dire de Cania, monodrone ?"~
+@41=~"Pardonnez-nous, monsieur, nous sommes à vous dans un instant."Se tourner vers Nordom."Allez, Nordom. Vous pourrez continuer à bavarder sur le bateau."~
+@43=~"Si vous avez besoin d'informations sur Cania. Vous pourriez demander à Nor-"~
+@44=~"Plan Extérieur : Neuf Enfers de Baator. AVERTISSEMENT ! Infini *non*."~ [MODRO02]
+@45=~"Encore une fois, ça m'a l'air *plutôt* normal. Assez raisonnable pour moi."~
+@46=~"Étendues gelées de Cania. Strate no 8/9 du Plan Extérieur : Neuf Enfers de Baator. Taille : infinie. Type : froid (extrême). Composition : montagnes de pierre solide, d'os et de glace ; glaciers titanesques se déplaçant à une vitesse anormalement élevée. Conseil de voyage : éviter à tout prix. Probabilité de terminaison : élevée."~
+@48=~"Autrement dit, voyager en Cania serait déconseillé, Nordom ?"~
+@49=~"D'une certaine manière, ce n'est pas très rassurant. Allez, Nordom. Nous avons un bateau à prendre."~
+@51=~"Je n'ai pas d'opinion forte dans un sens ou dans l'autre. C'est dangereux, mais vous aussi êtes dangereux. *Nous* sommes dangereux."~
+@53=~"Oui. Restons-en là. Nous avons un bateau à prendre."~

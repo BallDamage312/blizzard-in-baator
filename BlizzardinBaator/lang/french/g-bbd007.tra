@@ -1,0 +1,284 @@
+@0=~Ceci est un dialogue de l'acte 2 !~
+@2=~"Oh, pardon. J'arrête de tricher maintenant."~
+@4=~"Mon bon monsieur, je vous en conjure, arrêtez ! Je ne suis qu'un pion dans le jeu infâme de ce diable. Épargnez-moi, je ne veux pas mourir ici, dans l'étreinte glacée du royaume des traîtres. Ayez pitié !"~ [g-00708]
+@6=~Préparer votre arme pour le coup de grâce."Aucune pitié ! Tu nous as attaqués et piégés ici. Tu vas mourir pour ça !"~
+@7=~Préparer votre arme pour le coup de grâce."Aucune pitié ! Tu m'as attaqué et piégé ici. Tu vas mourir pour ça !"~
+@8=~"Allez, file d'ici avant que je change d'avis."~
+@9=~"Tu n'iras nulle part avant de me dire qui tu es vraiment et pourquoi tu nous as attaqués."~
+@10=~"Tu n'iras nulle part avant de me dire qui tu es vraiment et pourquoi tu m'as attaqué."~
+@12=~"Ah, l'homme aux tatouages. Bienvenue dans cet enfer glacé. Je regrette que notre seconde rencontre ait lieu dans des circonstances aussi malheureuses. Nous voilà apparemment dans des camps opposés au sein d'un conflit qui, au fond, ne concerne vraiment ni l'un ni l'autre. Quelle vie..."Il marque une pause et observe attentivement le petit diable à vos côtés."Quoi qu'il en soit... petit imp ? Montre-toi, où que tu te caches."~ [g-00709]
+@13=~"Oh, pas bon. Prod connaît certains d'eux. C'est des vieux copains à nous..."~ [g-00610]
+@15=~"Des copains ?"~
+@17=~Le barde se tient toujours nonchalamment au centre de la taverne de Rivergate. Il pince doucement les cordes de son instrument, mais passe surtout son temps à regarder autour de lui, comme s'il espérait trouver l'inspiration dans ce bouge sordide.~
+@18=~"Vous revoilà, l'homme aux tatouages. Auriez-vous besoin d'une petite ritournelle ?"~
+@20=~"Pourquoi pas, faites-moi entendre ça."~
+@21=~"Non, mais j'ai quelques questions."~
+@22=~"Non. En fait, je dois y aller."~
+@24=~Au centre de la taverne, un dandy aux cheveux violets se tient près d'un canapé presque de la même couleur. Il observe les lieux en pinçant doucement les cordes d'un curieux instrument, sorte d'hybride entre le luth et la harpe. Ses vêtements ornés ont des manches bouffantes et son chapeau criard est décoré de trois plumes.~
+@26=~"Salutations."~
+@27=~Laisser le dandy tranquille.~
+@29=~Le barde lève les yeux de son instrument."Bonjour ! Oh, charmants tatouages. Un peu sinistres et hiéroglyphiques à mon goût, mais le travail est admirable. Certains sont sans doute de Fell, mais beaucoup viennent... d'un peu partout dans les Plans, certainement. Enfin bref, peut-être avez-vous envie d'une petite chanson ?"~ [g-00710]
+@31=~"Pourquoi pas, faites-moi entendre ça."~
+@32=~"Non, mais j'ai quelques questions."~
+@33=~"Non. En fait, je dois y aller."~
+@35=~"Je propose actuellement trois chansons :"Le boulot qui tua un dhergoloth","Le Village égaré"et"Le Corbeau et l'Alouette". Quinze pièces de cuivre par chanson. Laquelle souhaitez-vous entendre ?"~
+@37=~"J'adorerais entendre"Le boulot qui tua un dhergoloth"."~
+@38=~"J'adorerais entendre"Le Village égaré"."~
+@39=~"J'adorerais entendre"Le Corbeau et l'Alouette"."~
+@40=~"En fait, je n'ai pas les moyens, mais j'aimerais vous poser quelques questions."~
+@41=~"En fait, je n'ai pas les moyens. Je devrais y aller."~
+@42=~"Je préférerais vous poser quelques questions."~
+@43=~"En fait, je devrais y aller."~
+@45=~Le barde prépare son instrument et tousse bruyamment pour imposer le silence dans la salle. Puis il entame une mélodie douce et mélancolique.~
+@46=~"Ô murmures !
+Murmures de la nuit.
+Comment distinguer la flamme de l'étincelle qui luit,
+le corbeau de l'alouette qui fuit ?"~
+@47=~"Ô secrets !
+Secrets que je retiens.
+Voyez comme la pente descend loin d'ici,
+et sous mes pas le gouffre s'élargit."~
+@48=~"Ô vanité !
+Compagne de mes années.
+Plus tu rampes vers moi, plus mes peurs sont acérées :
+suis-je encore celui que mes rêves ont créé ?"~
+@49=~"Ô lumière éclatante,
+éclaire mes couloirs sans fin.
+À toute votre sagesse je tends enfin la main :
+suis-je corbeau, ou alouette au chant divin ?"~
+@50=~Akershus joue une longue montée mélancolique. La musique passe à une nouvelle tonalité, puis change de rythme."Si la terreur de mon amour ne peut m'emporter dans les cieux,
+l'horreur de ce qui reste hantera mes cris douloureux.
+Hantera mes cris douloureux..."~
+@51=~La mélodie s'évanouit. Des applaudissements se font entendre à l'autre bout de la taverne. Akershus s'incline profondément et vous regarde avec attente.~
+@53=~"C'était très triste et profond. Merci."~
+@54=~"C'était geignard et sans inspiration. Une perte de temps."~
+@55=~"J'aimerais maintenant vous poser quelques questions."~
+@56=~"En fait, je devrais y aller."~
+@58=~Le barde prépare son instrument et tousse bruyamment pour imposer le silence dans la salle. Il commence ensuite. L'air est rapide et dynamique, avec une mélodie simple et entraînante au-dessus des accords. Après une brève introduction, Akershus attaque le premier vers.~
+@59=~"Il était une maison du savoir,
+tenue par de secs bureaucrates.
+Dans leur tour, tout en haut du soir,"Bureau de l'état des surfaces plates".
+
+Là-haut ils n'étaient que quatre,
+mais tous farceurs et acrobates.
+Leurs tours, leurs blagues et leurs savates
+créaient querelles et prises de bec à la hâte."~
+@60=~"Un dhergoloth tout juste engagé
+fut envoyé compter les chauves-souris.
+Dans la Ruche, notes empilées,
+il voulait des faits bien établis.
+
+Mais le pauvre fiélon ignorait
+que la maison grouillait de chats malins ;
+et comme il ressemblait à une grosse boule,
+impossible d'échapper à leurs mains."~
+@61=~"Ils le roulèrent dans le corridor,
+par leurs anciens terrains familiers,
+dans l'escalier, puis dehors,
+petits acrobates sans pitié.
+
+Jusqu'aux rives du Fossé ils l'emmenèrent,
+faisant fuir tous les rats du quartier.
+Sans le temps de miauler ni de braire,
+le 'loth dans l'eau fut précipité."~
+@62=~"Il flotte un peu, saisi d'effroi,
+mais je lui tire mon chapeau.
+Puis il coule, quel bel exploit,
+merci aux chats, héros locaux.
+
+Et si vous l'ignoriez jusque-là,
+les yugoloths ne meurent pas pour de bon :
+noyés, soufflés, réduits en tas,
+ils reviennent dans leurs ziggourats, dit-on.
+
+Mais celui-là, quelle honte à leurs yeux,
+déchiré tel un chiffon sans colonne.
+L'ordre naturel fut bafoué :
+le boulot tua le dhergoloth, en somme."~
+@63=~La chanson s'arrête aussi brusquement qu'elle avait commencé. Des applaudissements se font entendre à l'autre bout de la taverne. Akershus s'incline profondément et vous regarde avec attente.~
+@65=~"C'était très drôle et imagé. Excellent !"~
+@66=~"C'était à la limite de l'insulte et d'une primitivité affligeante. De la vraie bouse."~
+@67=~"J'aimerais maintenant vous poser quelques questions."~
+@68=~"En fait, je devrais y aller."~
+@70=~Le barde prépare son instrument et tousse bruyamment pour imposer le silence dans la salle. La mélodie ressemble beaucoup à une chanson pour enfants, mais avec une pointe d'ironie.~
+@71=~"Si vous bravez l'ombre sous les rues de Sigil."*CLAP CLAP*"Un seul hameau civilisé s'y trouve, dit-on."*CLAP CLAP*"Leurs maisons sont entassées,
+leurs pensées embrouillées,
+mais leur accueil est pourtant fort gentil."*CLAP CLAP*~
+@72=~"Jadis citoyens, tout comme vous et moi."*CLAP CLAP*"Mais l'urbanisme en décida autrement."*CLAP CLAP*"Puis vinrent les chèvres flottantes,
+sans vote ni voix dissidente,
+et leurs maisons devinrent gravats sans émoi."*CLAP CLAP*~
+@73=~"On les empila comme de vieux jouets."*CLAP CLAP*"Leurs vies furent jetées, brisées, balayées."*CLAP CLAP*"Ils vivent maintenant dans les égouts,
+économisent pour nous traîner devant les juges,
+et nous logeons dans les villas qu'on leur a volées."~
+@74=~La chanson se poursuit encore un moment, son"luth"reprenant la mélodie tandis qu'Akershus frappe du pied à la place des claquements de mains. Il ralentit peu à peu avant de conclure. Des applaudissements se font entendre au fond de la taverne. Akershus s'incline profondément et vous regarde avec attente.~
+@76=~"Voilà une excellente critique sociale. Une pièce très ironique !"~
+@77=~"Détourner des comptines pour enfants au service d'un programme politique, c'est vraiment bas, ménestrel."~
+@78=~"J'aimerais maintenant vous poser quelques questions."~
+@79=~"En fait, je devrais y aller."~
+@81=~Le barde s'incline de nouveau avec le sourire."Je suis ravi de constater que vous êtes un homme de goût."~
+@83=~"Puis-je en entendre une autre ?"~
+@84=~"J'aimerais maintenant vous poser quelques questions."~
+@85=~"En fait, je devrais y aller."~
+@87=~Le barde s'incline de nouveau, un immense sourire aux lèvres."J'accueille toujours avec joie les critiques constructives des spectateurs intelligents."~
+@89=~"Puis-je en entendre une autre ?"~
+@90=~"J'aimerais maintenant vous poser quelques questions."~
+@91=~"En fait, je devrais y aller."~
+@93=~"Mes réponses sont généralement métaphoriques et spirituelles plutôt que... directement applicables. Mais allez-y."~
+@95=~"Puis-je entendre l'une de vos chansons ?"~
+@96=~"Que faites-vous ici ?"~
+@97=~"Qui êtes-vous ?"~
+@98=~"Savez-vous quelque chose au sujet du piège-portail derrière vous ?"~
+@99=~"Savez-vous quelque chose au sujet du piège-portail derrière vous ?"~
+@100=~"Vous aimez les tatouages ?"~
+@101=~"En fait, je devrais y aller."~
+@103=~Akershus sourit."Oh, je fais des recherches pour ma nouvelle épopée sur les terrifiantes bandes de la Ruche. Le milieu criminel a tant à nous apprendre. Je passe un moment absolument merveilleux."~
+@105=~"Vous n'avez pas peur qu'ils vous plantent simplement un couteau dans le ventre ?"~
+@106=~"Puis-je entendre un extrait de cette épopée ?"~
+@107=~"J'ai encore quelques questions."~
+@108=~"En fait, je devrais y aller."~
+@110=~"Oh, par les Enfers, non. Les gens des métiers illégaux détestent surtout les représentants de la loi, ainsi que les autres bandes, puisqu'elles sont leurs concurrentes. Mais ils *adorent* les artistes. Les artistes créent les légendes. Nous légitimons leurs vies pittoresques. Je n'ai rien à craindre de gentlemen aussi charmants."~
+@113=~"Puis-je entendre un extrait de cette épopée ?"~
+@114=~"J'ai encore quelques questions."~
+@115=~"En fait, je devrais y aller."~
+@117=~"Oh, certainement pas. Venez assister à la première au théâtre lorsqu'elle sera prête."~
+@119=~"Vous n'avez pas peur qu'ils vous fassent du mal ?"~
+@121=~"J'ai encore quelques questions."~
+@122=~"En fait, je devrais y aller."~
+@124=~"Je suis Akershus, compositeur et interprète extraordinaire, connu dans toute la Cage et dans les Outreterre. Je reviens tout juste d'une tournée dans les villes-portails et me prépare à composer un nouveau chef-d'œuvre."~ [g-00711]
+@125=~"Jamais entendu parler d'toi."~
+@127=~"Et vous préparez votre chef-d'œuvre... ici ?"~
+@128=~"Vous êtes donc un grand voyageur. Êtes-vous déjà allé à Cania ?"~
+@129=~"J'ai encore quelques questions."~
+@130=~"En fait, je devrais y aller."~
+@132=~Le barde vous lance un regard entendu et condescendant."Demandez simplement au patron. Ça paraît logique, non ? Il ne fait pas confiance à n'importe qui ; il faut gagner ses bonnes grâces. Ridiculisez-vous ou commandez l'une de ses boissons favorites, par exemple un Sour de la Pierre de la Génération. Si *tout ça* échoue... essayez donc de fouiller ses poches..."~
+@136=~"J'ai encore quelques questions."~
+@137=~"En fait, je devrais y aller."~
+@139=~Le barde vous adresse un regard entendu et condescendant."Eh bien, je vous dirais de demander au patron, mais il ne vous parlera pas. Vous empestez l'ordre et, à ses yeux, cela vous rend sans intérêt. À moins que vous ne fassiez quelque chose de vraiment... aléatoire."~
+@141=~"Aléatoire... J'ai justement quelques questions au hasard."~
+@142=~"Hmm. Laissez-moi essayer. Je devrais y aller maintenant."~
+@144=~Le barde retrousse la manche bouffante de son bras gauche et dévoile un tatouage complexe de ronce-rasoir. En regardant de plus près, vous distinguez une scène savamment dissimulée dans les ombres et les formes entre les lianes. Des bâtiments sont attaqués par des plantes féroces et des monstres bulbeux évoquant la ronce-rasoir. Des gens sont soulevés dans les airs par des lianes déchaînées tandis que le sol se fissure sous l'ensemble.~
+@145=~"C'est la reproduction d'un tableau d'un artiste local, Caven-quelque-chose. Lui-même n'est qu'un tâcheron, mais une femme lameuse très talentueuse venue de Rigus m'a fait ce tatouage, et j'en suis extrêmement fier."Il sourit largement."J'en ai d'autres, mais je ne peux guère les montrer dans un lieu public."~
+@147=~"Que représente-t-il ?"~
+@148=~Laisser un souvenir refaire surface."Une tatoueuse de Rigus ?"~
+@149=~"J'ai encore quelques questions."~
+@150=~"En fait, je devrais y aller."~
+@152=~"Si ce froid austère semble poétique en théorie, je préférerais éviter que des enfers glacés figurent dans ma biographie... Non, je n'y suis jamais allé."~
+@154=~"J'ai encore quelques questions."~
+@155=~"En fait, je devrais y aller."~
+@157=~"Je pensais que c'était évident. C'est l'effondrement catastrophique de la moitié du quartier bordant le Fossé. Une poussée particulièrement violente de ronce-rasoir a fracassé le sol et fait glisser tout un pâté de maisons dans les profondeurs bourbeuses. Même les dabus refusent de toucher à ce misérable amas, si bien que tous les débris sont encore dans l'eau. Un monument à la puissance de la nature..."~
+@159=~"J'ai encore quelques questions."~
+@160=~"En fait, je devrais y aller."~
+@162=~Vous vous approchez de l'homme qui vous supplie. Il vous regarde, les yeux remplis de peur.~
+@163=~"Je sens les portes du néant
+s'ouvrir devant moi..."~
+@165=~"Puis-je entendre une de vos chansons avant votre départ ?"~
+@166=~Achever Akershus."Et moi, je vais vous y pousser."~
+@167=~Achever Akershus."Et le néant vous engloutit."~
+@168=~Achever Akershus."Et nul ne pleurera ce garçon,
+quand viendra son dernier sommeil."~
+@170=~Le barde respire vite, pris de panique."Je travaille pour un fiélon nommé Anit'bil. Il m'a forcé à venir ici. Je n'avais pas le choix... Je fais seulement un peu de..."Il marque une légère pause, pesant ses mots."...d'"observation", de temps à autre, pour mon protecteur. Je ne fais jamais ce genre de choses. J'ignore pourquoi ils m'ont envoyé, mais je ne veux pas mourir pour cette affaire."~
+@172=~"Que cherchiez-vous lorsque vous m'espionniez ?"~
+@173=~"Qui est votre protecteur ?"~
+@174=~"Que pouvez-vous me dire sur Anit'bil ?"~
+@175=~"Cela ne suffit pas. Il est temps de mourir."~
+@176=~"Allez, partez avant que je change d'avis."~
+@178=~Le barde ferme les yeux. Le vent glacé balaie ses cheveux violets sur son visage. Vous sentez qu'il a peur, mais aussi que l'art est bel et bien sa véritable vocation. Artiste par passion, traître par circonstance.~
+@179=~Après un instant, il se met à chanter d'une voix faible et tremblante. Sans instrument pour l'accompagner, le résultat est assez peu impressionnant. Mais la fatalité qui transparaît dans sa voix confère à la prestation une qualité toute particulière.~
+@180=~"Comme le ruisseau touche à sa fin
+et que l'eau rejoint enfin la mer,
+je vois, je comprends mon destin :
+mon heure arrive sur cette terre. ~ [g-00714]
+@181=~Je voudrais regagner la rive,
+ou remonter le courant si clair.
+Mais tous mes efforts vont à la dérive,
+et dans les profondeurs... je disparais."~ [g-00715]
+@183=~Achever Akershus.~
+@184=~"Très bien... Une dernière chance. Dites-moi qui vous êtes vraiment et pourquoi vous nous avez attaqués."~
+@185=~"Euh... Allez, partez avant que je change d'avis."~
+@186=~"Aussi superficiel et vide que toutes vos autres chansons. Mourez."~
+@188=~"Je devais retrouver Tergush'tekhn à Sigil, mais j'ai d'abord trouvé Prod. J'espérais que l'abishaï viendrait le récupérer, mais vous êtes arrivé à sa place. Et j'ai entendu que vous partiez pour Cania. C'est à peu près tout ce que j'ai appris."~
+@190=~"Qui est votre protecteur ?"~
+@191=~"Que pouvez-vous me dire sur Anit'bil ?"~
+@192=~"Cela ne suffit pas. Il est temps de mourir."~
+@193=~"Allez, partez avant que je change d'avis."~
+@195=~"Prod a déjà prononcé son nom. Mammon. Seigneur de la Troisième. Être le plus riche des Plans. Grand mécène des arts."~
+@197=~"Que cherchiez-vous lorsque vous nous espionniez ?"~
+@198=~"Que pouvez-vous me dire sur Anit'bil ?"~
+@199=~"Cela ne suffit pas. Il est temps de mourir."~
+@200=~"Allez, partez avant que je change d'avis."~
+@202=~"C'est un cornugon infect et ambitieux, enfoncé jusqu'au cou dans le cul de Mammon. J'ai d'ailleurs une chanson particulièrement peu flatteuse à son sujet. C'est lui qui me donne mes ordres."~
+@204=~"Que cherchiez-vous lorsque vous nous espionniez ?"~
+@205=~"Qui est votre protecteur ?"~
+@206=~"Cela ne suffit pas. Il est temps de mourir."~
+@207=~"Allez, partez avant que je change d'avis."~
+@209=~"Te voilà ! Mon petit ami fiélon, nous ne nous sommes jamais réellement rencontrés, mais nous partageons le même employeur. Ou... enfin, c'était le cas."~
+@210=~"C'était ? Quoi maintenant, Prod sert seulement Mammon. Toujours servi."~
+@212=~"Tout va bien, Prod ?"~
+@213=~"Je croyais que nous récupérions quelqu'un pour Levistus."~
+@214=~Ne rien dire.~
+@215=~"Tu parles pas à Prod, c'est à MOI que tu parles ici."~
+@217=~"J'ai entendu une autre version, petit. Il paraît que tes amis abishaïs et toi avez déserté pour entrer au service de quelqu'un d'autre. Je suis ici pour découvrir *qui* est cet autre."~ [g-00712]
+@218=~"Non, non, Prod a des yeux seulement pour le Seigneur de l'Avarice et ses pièces. Prod le jure."~ [g-00609]
+@220=~"Tout va bien, Prod ?"~
+@221=~"Je croyais que nous récupérions quelqu'un pour Levistus."~
+@222=~Ne rien dire.~
+@223=~"Tu parles pas à Prod, c'est à MOI que tu parles ici."~
+@225=~"Tu n'es qu'un petit poisson, Prod. Ce sont surtout tes amis abishaïs qui l'intéressent. Dis-nous qui est ton nouveau maître et je t'épargne. Mammon ignore jusqu'à ton existence."~
+@226=~Prod met manifestement bien plus longtemps que d'habitude à répondre. Il ouvre trois fois sa petite bouche et la referme avant de produire le moindre son."Levistus", finit-il par dire.~
+@227=~"Prod a jamais voulu partir, Prod a été forcé ! Prod vous remercie pour le sauvetage !"~ [g-00608]
+@228=~"Excellent."En un instant, un rayon d'énergie magique traverse le chemin enneigé et frappe le petit imp. ~ [g-00713]
+@230=~"Prod !"~
+@231=~Attaquer.~
+@233=~"Ah. Levistus. Excellent !"~ [g-00713]
+@234=~En un instant, un rayon d'énergie magique traverse le chemin enneigé et frappe le petit imp.~
+@236=~"Prod !"~
+@237=~Attaquer.~
+@239=~"Oh, oui, oui. Prod connaît ces types. Nous sommes vieux amis. On a rien à craindre !"~ [g-00602]
+@240=~"En effet, tu ne risques rien. Tu n'es qu'un petit poisson, Prod. Ce sont surtout tes amis abishaïs qui l'intéressent. Dis-nous qui est ton nouveau maître et je t'épargne. Mammon ignore jusqu'à ton existence."~
+@241=~Prod met manifestement bien plus longtemps que d'habitude à répondre. Il ouvre trois fois sa petite bouche et la referme avant de produire le moindre son."Levistus", finit-il par dire.~
+@242=~"Prod a jamais voulu partir, Prod a été forcé ! Prod vous remercie pour le sauvetage !"~ [g-00608]
+@243=~"Excellent."En un instant, un rayon d'énergie magique traverse le chemin enneigé et frappe le petit imp. ~ [g-00713]
+@245=~"Prod !"~
+@246=~Attaquer.~
+@248=~"Mais bien sûr, l'homme aux tatouages. Peut-être détenez-vous l'information dont j'ai besoin. Donnez-la-moi et vous pourrez partir. C'est simple. Restons-en à la simplicité. Pour qui travaillez-vous ?"~
+@250=~Attaquer.~
+@251=~Vérité :"Levistus. Nous travaillons pour Levistus."~
+@252=~Mentir :"Mammon. Nous travaillons pour le même archifiélon, barde !"~
+@253=~Mentir :"Mammon. Nous travaillons pour le même archifiélon, barde !"~
+@254=~Mentir :"Le baron Molikroth. Nous avons été convoqués et vous lui créez des problèmes. Mauvaise idée."~
+@255=~Mentir :"Le baron Molikroth. Nous avons été convoqués et vous lui créez des problèmes. Mauvaise idée."~
+@256=~"Je ne travaille pour personne. Je vais où je veux et fais ce qui me plaît."~
+@258=~"Imbéciles !"En un instant, un rayon d'énergie magique traverse le chemin enneigé et frappe le petit imp.~
+@260=~"Prod !"~
+@262=~Une ombre de doute passe sur le visage parfait d'Akershus. Serait-ce possible ? Ses informations seraient-elles erronées ? Il cherche confirmation auprès des fiélons qui l'entourent, mais ils semblent aussi désemparés que lui.~
+@263=~Mais non.~
+@264=~"Vous avez failli m'avoir. Mais la ruse reconnaît la ruse. Excellent mensonge. Je vous tire mon chapeau."Il se retourne vers Prod.~
+@265=~"Tu n'es qu'un petit poisson, Prod. Ce sont surtout tes amis abishaïs qui l'intéressent. Dis-nous qui est ton nouveau maître et je t'épargne. Mammon ignore jusqu'à ton existence."~
+@266=~Prod met manifestement bien plus longtemps que d'habitude à répondre. Il ouvre trois fois sa petite bouche et la referme avant de produire le moindre son."Levistus", finit-il par dire.~
+@267=~"Prod a jamais voulu partir, Prod a été forcé ! Prod vous remercie pour le sauvetage !"~ [g-00608]
+@268=~"Excellent."En un instant, un rayon d'énergie magique traverse le chemin enneigé et frappe le petit imp. ~ [g-00713]
+@270=~"Prod !"~
+@271=~Attaquer.~
+@273=~"Un mensonge pitoyable, mais... j'apprécie l'effort."Il se tourne de nouveau vers Prod.~
+@274=~"Tu n'es qu'un petit poisson, Prod. Ce sont surtout tes amis abishaïs qui l'intéressent. Dis-nous qui est ton nouveau maître et je t'épargne. Mammon ignore jusqu'à ton existence."~
+@275=~Prod met manifestement bien plus longtemps que d'habitude à répondre. Il ouvre trois fois sa petite bouche et la referme avant de produire le moindre son."Levistus", finit-il par dire.~
+@276=~"Prod a jamais voulu partir, Prod a été forcé ! Prod vous remercie pour le sauvetage !"~ [g-00608]
+@277=~"Excellent."En un instant, un rayon d'énergie magique traverse le chemin enneigé et frappe le petit imp. ~ [g-00713]
+@279=~"Prod !"~
+@280=~Attaquer.~
+@282=~Akershus applaudit."Vraiment, je vous crois. Vous avez effectivement l'air du genre fort et solitaire."Il s'approche et joint ses mains en faisant face à Prod."Contrairement à toi, petit fiélon."~
+@283=~"Tu n'es qu'un petit poisson, Prod. Ce sont surtout tes amis abishaïs qui l'intéressent. Dis-nous qui est ton nouveau maître et je t'épargne. Mammon ignore jusqu'à ton existence."~
+@284=~Prod met manifestement bien plus longtemps que d'habitude à répondre. Il ouvre trois fois sa petite bouche et la referme avant de produire le moindre son."Levistus", finit-il par dire.~
+@285=~"Prod a jamais voulu partir, Prod a été forcé ! Prod vous remercie pour le sauvetage !"~ [g-00608]
+@286=~"Excellent."En un instant, un rayon d'énergie magique traverse le chemin enneigé et frappe le petit imp. ~ [g-00713]
+@288=~"Prod !"~
+@289=~Attaquer.~
+@291=~Dans l'œil de votre esprit se dessine l'ébauche d'un souvenir. Des murailles concentriques et austères vues depuis les airs. Une plate-forme d'atterrissage sur laquelle votre machine se pose... ~ [SPTR_01]
+@292=~Des troupes de guerriers presque identiques marchent en rangs impeccables. Non. Pas des guerriers : des soldats. La nuance est importante. Ici, chacun possède un grade. Elle aussi.~
+@293=~Elle est belle. Brillante. Propre. Sa peau métallique est ornée de motifs symétriques conçus pour inspirer la peur à ceux qui les voient. D'ordinaire, elle n'aime pas les étrangers dans sa cité, mais vous êtes différent. Elle vous ordonne de vous allonger. Vous vous souvenez des piqûres et de la douleur, mais le résultat est... parfait.~
+@294=~Beaucoup de temps a passé. Bien plus tard, devant un miroir, vous tentez d'examiner le souvenir que vous a laissé la femme de métal de Rigus. Malheureusement, la peau à cet endroit est brûlée. Vous ne vous souvenez plus du motif. Seulement... de sa perfection.~
+@296=~Revenir à vous.~
+@298=~Akershus vous regarde, déconcerté."Vous êtes devenu bien silencieux, matois. Ça va ?"~
+@300=~"Désolé. Que représente-t-il ?"~
+@302=~"J'ai encore quelques questions."~
+@303=~"En fait, je devrais y aller."~

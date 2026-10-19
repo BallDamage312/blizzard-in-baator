@@ -1,0 +1,26 @@
+@0=~Près de l'obélisque devant la Morgue, un homme à l'allure étrange se précipite vers vous. Vous ne parvenez pas vraiment à déterminer ce qui cloche chez lui. Il semble à la fois furieux et terrorisé, son visage passant sans cesse d'un état à l'autre, comme si deux forces s'en disputaient le contrôle."ENFIN, vous voilà ! Ça fait je ne sais combien de temps que j'attends ici. J'étais... certain que j'allais y passer..."~
+@1=~Il vous examine de nouveau, comme pour s'assurer qu'il tient la bonne personne. Il renifle puis poursuit :"Vous êtes bien le pauvre bougre amnésique sans nom, l'ami d'Aethelgrin et Tegar'in ? J'ai un message pour vous."Frissonnant de peur, il se palpe les vêtements à la recherche d'un éventuel billet.~
+@3=~"Vraiment ? Je vous écoute."~
+@4=~"Vous... allez bien ?"~
+@5=~"Je n'ai pas le temps pour ça. Je dois me rendre quelque part."~
+@7=~"Voilà ce foutu message."Il sort un billet froissé, s'éclaircit la gorge, pousse un hurlement de terreur pendant une fraction de seconde, puis commence à réciter."Sans-Nom, j'ai appris que vous cherchiez des réponses à de nombreuses questions troublantes. Je pourrais vous aider à faire la lumière sur certains pans de votre lointain passé. J'ai également une tâche à vous confier qui, avec les informations que vous recherchez, pourrait s'avérer très lucrative. Retrouvez-moi à l'arrière du Bar du Cadavre Fumant.
+
+- Tergush'tekhn"Lorsqu'il range la feuille, vous remarquez qu'elle était vierge.~
+@9=~"Intéressant."~
+@11=~"Vous... êtes revenu... pour le message, finalement, ESPÈCE DE CON !"~
+@13=~"Oui, je suis prêt. Je vous écoute."~
+@14=~"De qui vient ce message ? Des fiélons du Bar du Cadavre Fumant ?"~
+@15=~"Non, je voulais juste vous agacer encore un peu. Bonne journée."~
+@17=~"Je crois que c'est justement de ça que parle le message. C'est ce qu'ils m'ont dit, et vous le SAURIEZ si vous écoutiez seulement une SECONDE, par les dieux... S'il vous plaît, écoutez simplement... Libre à vous de l'ignorer ensuite, mais ne me faites pas *échouer* dans ma tâche... ils me puniront..."~
+@19=~"Très bien. Je vous écoute."~
+@20=~"Qui sont-ils ? Les fiélons du Cadavre Fumant ?"~
+@21=~"Vous... allez bien ?"~
+@22=~"Non, je ne crois pas. Bonne journée."~
+@24=~"Oui..."Le messager s'interrompt, son expression passant de l'irritation à la terreur."Mais depuis quelques cycles, ils en ont un autre avec eux."Vous ignorez si ce changement est lié à ce qu'il dit, mais pour la première fois il semble avoir un sens. À moins que ce ne soit qu'une coïncidence.~
+@26=~"Très bien. Je vous écoute."~
+@27=~"Vous... allez bien ?"~
+@28=~"Non, je ne crois pas. Bonne journée."~
+@30=~"PAR LES ENFERS, NON. JE NE VAIS PAS BIEN... Je vais... parfaitement... bien..."Des larmes coulent sur le visage du messager.~
+@32=~"D'accord, j'écouterai votre message. Calmez-vous."~
+@33=~"De qui vient ce message ? Des fiélons du Cadavre Fumant ?"~
+@34=~"Bon... je ferais mieux d'y aller. Au revoir."~

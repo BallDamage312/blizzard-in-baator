@@ -1,0 +1,124 @@
+@0=~Un homme aux longs cheveux dorés attachés en queue-de-cheval erre autour de la Mer Verticale. Avec ses sandales lacées jusqu'aux genoux, sa jupe d'armure de cuir et ses brassards de bronze, il détonne totalement dans le décor. Son corps musclé et bronzé luit de sueur... ou d'huile. Difficile à dire.~
+@1=~Il tient une épée couverte de sang séché. L'homme ressemble à un barbare d'une tribu du Plan Matériel, mais il est beaucoup trop propre pour cela. Il ne sent pas la chèvre lorsqu'il s'approche, ce qui exclut presque certainement l'appartenance à un clan.~
+@2=~"Guerrier aux cicatrices, entends ma prière !
+Prête-moi ton aide, délivre-moi de cette galère !"Il vous interpelle d'une voix sonore comme s'il vous hélait de loin alors qu'il se tient juste à côté. Il parle le commun, mais son accent très prononcé rend ses paroles difficiles à comprendre.~
+@3=~"Pour changer mon sort, les dieux pleins de sagesse
+T'ont envoyé ici mettre fin à ma détresse.
+Dis-moi donc où Thrassos peut bien se trouver ;
+Des années de recherche sans jamais le retrouver !"~
+@5=~Des souvenirs tentent de refaire surface."Thrassos..."~
+@6=~"Salutations. Qui êtes-vous, voyageur ?"~
+@7=~"Désolé. Je n'ai pas le temps pour ça maintenant."~
+@9=~Le guerrier musclé erre toujours autour de la Mer Verticale, se récitant des phrases grandiloquentes.~
+@10=~"Guerrier aux cicatrices, entends ma prière !
+Prête-moi ton aide, délivre-moi de cette galère !
+Dis-moi donc où Thrassos peut bien se trouver ;
+Des années de recherche sans jamais le retrouver !"~
+@12=~Des souvenirs tentent de refaire surface."Thrassos..."~
+@13=~"Salutations. Qui êtes-vous, voyageur ?"~
+@14=~"Comme je l'ai déjà dit, je n'ai pas le temps maintenant."~
+@15=~"Bonjour de nouveau, Tarsius. Je t'ai déjà dit que j'ignore comment rejoindre Thrassos, mais je croise les doigts pour toi."~
+@19=~Vous vous promenez dans une oliveraie, une amphore à moitié remplie de vin à la main. Vous en buvez une longue gorgée, savourant sur votre langue le goût sucré du raisin et des épices. Une agréable chaleur alcoolisée se répand dans votre corps tandis que le soleil caresse doucement votre peau. Au loin, vous apercevez un amphithéâtre taillé dans le flanc de la montagne. Des chants de chœur et une musique vive en proviennent. Les acteurs doivent jouer une comédie. Peut-être le seigneur Apollon lui-même honorera-t-il la représentation de sa présence ? Vous irez voir plus tard. Pour l'instant, une autre quête vous attend. [SPTR_01]~
+@20=~Vous reprenez une gorgée de vin pour vous donner du courage et laissez vos jambes vous porter vers la place centrale. Cette fois, vous remporterez le débat contre Heliodorus. Vos arguments sont imparables ! Vous allez montrer à cet imbécile ce dont vous êtes capable.~
+@21=~Le souvenir s'estompe et vous vous retrouvez de nouveau face à l'étrange homme, qui attend votre réponse.~
+@23=~"Je suis déjà allé dans ta patrie, mais malheureusement j'ignore comment y retourner depuis ici. Je suis désolé."~
+@24=~"Je comprends. Et qui êtes-vous, voyageur ?"~
+@25=~"Désolé, je ne sais pas. Bonne chance."~
+@27=~L'homme semble attristé, mais redresse rapidement les épaules, comme si la résignation ne convenait pas à quelqu'un de son rang.~
+@28=~"Mon cœur se serre, la tristesse m'envahit,
+Mais telle est la vie, d'aventures remplie.
+Nul de ceux que j'ai interrogés
+N'a pu guider mes pas égarés.
+Mais je n'abandonnerai jamais,
+Mon devoir sacré me sert de bouclier.
+Les dieux eux-mêmes m'ont confié cette mission,
+Et je connaîtrai encore la victoire et ses chansons !
+Je vaincrai les ennemis qui barrent mon chemin,
+Je sauverai les miens qui espèrent leur destin."~
+@30=~"Qui es-tu, étranger, pour que les dieux te confient des missions ?"~
+@31=~"Eh bien, bonne chance."~
+@33=~L'homme bombe fièrement le torse.~
+@34=~"Je suis Tarsius, fils de Tarsius,
+À Thrassos mon nom est connu de tous.
+Les bardes qui parcourent nuits et jours
+Chantent ma gloire dans toute l'Arborée alentour.
+Leurs poèmes célèbrent mes hauts faits
+Quand la terre réclame un héros parfait.
+L'orgueil ne rapporte rien, je le sais,
+Mais sur d'autres Plans, ma valeur on connaît.
+Le destin a tracé devant moi mon chemin,
+Mon serment et ma force guident chacun de mes pas.
+Mon devoir ne souffre aucun délai :
+Je dois repartir sans tarder !"~
+@36=~"Raconte-moi tes glorieux exploits, Tarsius."~
+@37=~"Quelle mission dois-tu accomplir ?"~
+@38=~"Ravi de te connaître. Bonne chance pour rentrer chez toi."~
+@40=~Les yeux de l'homme brillent du reflet de sa gloire passée.~
+@41=~"Mes exploits ? Je vais te conter
+Les mers immenses que j'ai traversées.
+Là-bas, j'ai tué un dragon vert,
+Jamais je n'avais affronté bête aussi sévère.
+Puis vers une vallée battue des vents,
+Je courus abattre un être féerique menaçant.
+Une plume de phénix fut l'un de mes prix,
+Une gorgone se tordit sous mes yeux aussi,
+Titans, lions, harpies et bien davantage,
+Tous rejetons de Typhon tombés sous ma rage !
+Mais je dois maintenant rentrer affronter
+Le plus ignoble monstre de ma destinée."~
+@43=~"Et quel genre de monstre dois-tu détruire ?"~
+@44=~"J'espère que tu pourras vite rentrer chez toi. Porte-toi bien."~
+@46=~"La tâche sera longue et rude,
+Je l'accomplirai malgré blessures et meurtrissures.
+Le destin m'a envoyé ici malgré ma mission,
+Un obstacle imprévu à mon ambition."Il pousse un profond soupir, puis poursuit.~
+@47=~"L'Oracle de Thrassos a prédit
+Une prophétie qui glace les plus hardis.
+Dans un an, notre cité pourrait tomber,
+Sous les pas d'un monstre destiné à tout ravager.
+L'Hydre aux cent têtes doit venir !
+Une coupée, trois autres vont surgir.
+Un simple mortel n'y pourrait rien,
+Il fallait un héros, pas un vaurien.
+Les Dieux m'ont confié cette mission ;
+J'ai franchi monts et vallées sans hésitation.
+J'ai trouvé là-bas un minerai mythique,
+Destructeur du mal dans son essence maléfique.
+Les forgerons d'Arborée ont œuvré sans repos
+Pour créer une épée puissante au fil sans défaut."~
+@48=~Il vous montre fièrement son arme. En l'examinant, vous remarquez les runes complexes et le poli extraordinaire de la lame."Elle change ma force en lumière éclatante,
+Dans les mains d'un autre, elle demeure impuissante.
+Ainsi armé, vers mon foyer je revins
+Pour offrir au monstre sa fin.
+
+Enfin l'Hydre apparut devant moi,
+Nous luttâmes jusqu'au crépuscule suivant, sans émoi.
+
+Ses écailles scintillaient sous le soleil,
+Jamais bataille ne fut pareille.
+Sa colère déferlait comme une inondation,
+Le sol sous mes pieds baignait dans le sang.
+Sur peau cuirassée, nuque et dos,
+La lame vorpale frappait aussitôt ;
+Mon épée brûlante tranchait chaque cou,
+Et chaque tête maudite tombait sous mes coups.
+
+Ma gloire vaillante, véritable et juste,
+Vivra longtemps quand je ne serai plus que poussière."~
+@49=~Tarsius s'éclaircit la gorge, comme s'il comprenait être allé un peu loin."Le goût de la victoire déjà sur ma langue,
+Les têtes de l'Hydre gisaient dans le sang.
+Un dernier coup, et tout aurait été fini,
+Mais soudain mes membres se figèrent ici :
+Un portail tourbillonna sous mes pieds,
+Et je fus aspiré, précipité,
+À travers ténèbres brûlantes, Plan après Plan,
+Jusqu'à tomber ici, dans ce sombre endroit.
+Ainsi, ami balafré, tu connais mon histoire ;
+Je dois trouver un portail pour rentrer et vaincre encore.
+La mort de l'Hydre reste mon dessein,
+Ou la belle Thrassos connaîtra sa fin."~
+@50=~"Aide-moi, je t'en prie, où est le portail vers mon foyer ?
+Dis-moi, mon ami, peut-être parmi ces eaux il est caché ?"~
+@52=~"Si j'apprends quelque chose, je te le dirai, Tarsius. Porte-toi bien et bonne chance."~
+@53=~"Je ne promets rien, mais je garderai ça en tête. Porte-toi bien."~
+@54=~"Pourquoi devrais-je me soucier d'un monstre à l'autre bout des Plans ? J'ai mes propres problèmes. Adieu."~

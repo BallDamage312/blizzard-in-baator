@@ -1,0 +1,105 @@
+@0=~Vous tenez entre vos mains un ensemble de parchemins destinés à appeler les factions de Sigil à agir. Ce sont des documents officiels portant les sceaux de la Salle des Orateurs. Leur distribution scellera le destin du conflit dans lequel vous vous êtes impliqué.~
+@1=~Ils sont accompagnés d'un parchemin séparé portant un symbole représentant une tête de cheval qui, d'après les instructions jointes, doit permettre d'invoquer un messager.~
+@2=~Vous vous êtes rangé du côté de la Garde Fatale : Haer'Dalis, Raelis Shai et toute la troupe du théâtre Sous-le-Masque. Pour empêcher la destruction de ce temple des arts, vous pouvez appeler vos alliés à rejoindre l'embuscade de la Garde Fatale dans une ruelle isolée derrière la Grande Fonderie.~
+@3=~^NNOTE : Utilisez cet objet pour déclencher la résolution du conflit entre factions.^-~
+@5=~Il est temps d'appeler vos alliés. Réfléchissez à ceux auxquels vous pouvez envoyer un message.~
+@6=~Ne pas encore appeler vos alliés.~
+@7=~Ne pas encore partir au combat. Vous n'êtes pas prêt.~
+@8=~Il est temps de conduire Ulfbrand dans un piège. ^0xff8c6b69Que la marche commence.^-~
+@10=~À quels représentants des factions souhaitez-vous demander de l'aide contre les Marqués ? Certaines factions s'entendent mal entre elles, vous devrez donc choisir avec prudence.~
+@12=~Demander à Emoric le soutien des Hommes-Poussière.~
+@13=~Demander à Keldor le soutien des Hommes-Dieux.~
+@14=~Demander à Splinter le soutien des Sensats.~
+@15=~Demander à Ebb Pattes-Cagneuses le soutien des Anarchistes.~
+@16=~Demander à Ebb Pattes-Cagneuses le soutien de l'Harmonium.~
+@17=~Sans grand espoir, demander à Aboyeur-Sauvage le soutien des Xaositectes.~
+@18=~Vous n'avez besoin de personne d'autre. Toucher la tête de cheval.~
+@19=~Vous n'avez besoin de l'aide de personne.~
+@21=~Lorsque vous touchez le symbole de la tête de cheval, rien ne se produit. Vous commencez à vous demander si vous avez bien compris les instructions, ou si ce parchemin n'est qu'une plaisanterie d'un membre de faction particulièrement facétieux.~
+@22=~Mais un instant plus tard, vous entendez au loin ce qui ressemble au martèlement de sabots, de plus en plus fort, comme si un cheval galopait droit sur vous alors qu'aucun animal n'est visible. Soudain, juste devant votre visage, un petit portail semblable à une flamme bleu clair s'ouvre et... une tête de cheval orange en sort. Le cheval manifestement interplanaire renifle et ouvre grand la bouche.~
+@24=~Glisser les lettres dans la bouche du cheval.~
+@25=~"Comment puis-je... vous aider ?"~
+@27=~Le cheval ne répond pas. Il lève les yeux au ciel avec désapprobation et renifle de nouveau, mais cette fois l'impatience du bruit ne fait aucun doute.~
+@29=~Glisser les lettres dans la bouche du cheval.~
+@31=~La tête se retire dans le portail et disparaît sans un mot, emportant vos lettres à destination dans sa bouche. Cela ne devrait pas prendre très longtemps.~
+@33=~Attendre le retour du cheval.~
+@35=~En effet, l'attente est brève. Le bruit des sabots résonne bientôt de nouveau et, un instant plus tard, le portail s'ouvre. Une tête de cheval en sort, bleue cette fois, et recrache les réponses dans vos mains. Le regard que l'animal vous lance avant de disparaître vous donne l'impression que, malgré sa couleur différente, il s'agissait exactement du même cheval.~
+@37=~Examiner les réponses.~
+@39=~Voici les lettres reçues.~
+@41=~Lire la réponse d'Emoric.~
+@42=~Lire la réponse d'Emoric.~
+@43=~Lire la réponse de Keldor.~
+@44=~Lire la réponse de Splinter.~
+@45=~Lire la réponse de Splinter.~
+@46=~Lire la réponse anonyme.~
+@47=~Lire la réponse anonyme.~
+@48=~Lire la réponse d'Ebb.~
+@49=~Lire la réponse d'Ebb.~
+@50=~Lire la réponse d'Ebb.~
+@51=~Lire la réponse d'Aboyeur-Sauvage ?!~
+@52=~Lire la réponse d'Aboyeur-Sauvage ?!~
+@53=~C'est tout. Vous n'en avez oublié aucune.~
+@55=~"Sans-Nom,
+
+Afin d'éviter une escalade du conflit à Sigil, nous acceptons de vous aider, d'autant que la Garde Fatale compte parmi nos proches alliés. Nous mettrons bien entendu nos mages à votre disposition.
+
+Sincèrement,
+Emoric,
+Factor de la faction des Hommes-Poussière"~
+@57=~Examiner les autres lettres.~
+@59=~"Sans-Nom,
+
+Nous ne pouvons pas vous aider. Vous savez ce que vous avez fait.
+
+Sincèrement,
+Emoric,
+Factor de la faction des Hommes-Poussière"~
+@61=~Examiner les autres lettres.~
+@63=~"Bonjour, camarade !
+
+On dirait que la bataille aura lieu juste devant nos murs. Souvenez-vous : c'est une épreuve. Nous la traiterons comme telle. Nous enverrons des renforts armés.
+
+Sincèrement,
+Keldor de Durian"~
+@65=~Examiner les autres lettres.~
+@67=~"Cher monsieur,
+
+Nous sommes malheureusement contraints de décliner votre demande. Notre décision fait suite à la rupture de notre coopération lors de votre départ de notre faction.
+
+Sincèrement,
+Keldor de Durian"~
+@69=~Examiner les autres lettres.~
+@71=~"Cher ami,
+
+Bien que la Garde Fatale ne nous soit pas particulièrement proche, vous et vos compagnons l'êtes. Nous vous aiderons donc dans cette épreuve.
+
+Prenez soin de vous,
+Splinter,
+Fils d'Isahar et Prêtre-Roi d'Ur"~
+@73=~Examiner les autres lettres.~
+@75=~"Cher monsieur,
+
+Nous sommes au regret de décliner votre demande. Notre décision fait suite à la rupture de notre coopération lors de votre départ de notre faction.
+
+Sincèrement,
+
+Splinter,
+Fils d'Isahar et Prêtre-Roi d'Ur"~
+@77=~Examiner les autres lettres.~
+@79=~La lettre est brève :"D'ACCORD."Elle doit venir des Anarchistes.~
+@81=~Examiner les autres lettres.~
+@83=~La lettre est brève :"Impossible. Tu as contrarié quelqu'un. Prends soin de toi."Elle doit venir des Anarchistes.~
+@85=~Examiner les autres lettres.~
+@87=~"On va t'aider. On ne peut pas laisser ce genre de désordre s'installer dans nos rues. Tiens bon.
+Ebb"~
+@89=~Examiner les autres lettres.~
+@91=~"Désolé, mon ami. Je n'ai pas réussi à convaincre ceux d'en haut. Prends soin de toi.
+Ebb"~
+@93=~Examiner les autres lettres.~
+@95=~"Tu sais que tu es recherché, mon ami ? Nous ne pouvons pas nous associer à toi. Estime-toi heureux que nous n'envoyions pas une patrouille t'intercepter.
+Ebb"~
+@97=~Examiner les autres lettres.~
+@99=~La lettre est pliée de manière à pouvoir voler comme un oiseau de papier si on la lance. L'écriture est brouillonne et presque illisible."CLAN ABOIE CHIENS AFFAMÉS AIDE ?! TOI AUSSI QUELQU'UN"~
+@101=~Examiner les autres lettres.~
+@103=~La lettre est pliée de manière à pouvoir voler comme un oiseau de papier si on la lance. L'écriture est brouillonne et presque illisible."CHER MONSIEUR, CHAOS. TROP PEU. NOUVELLE OUVERTURE."~
+@105=~Examiner les autres lettres.~

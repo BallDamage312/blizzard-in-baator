@@ -1,0 +1,125 @@
+@0=~C'est un vieux livre poussiéreux à la couverture grise. Après l'avoir soigneusement examiné et feuilleté, vous comprenez qu'il s'agit d'un bestiaire. Il est en partie rédigé dans un dialecte qui vous est peu familier, mais le texte devrait rester au moins partiellement compréhensible.~
+@1=~Voulez-vous vous plonger dans sa lecture ?~
+@3=~Consulter la table des matières.~
+@4=~Ranger le livre.~
+@6=~Voulez-vous vous plonger dans la lecture du Fiendango ?~
+@8=~Oui. Consulter la table des matières.~
+@9=~Ranger le livre.~
+@11=~Choisissez l'entrée que vous souhaitez lire.~
+@13=~"Des rangs des baatezus."~
+@14=~"Des castes des yugoloths."~
+@15=~"Des variétés connues de tanar'ris."~
+@16=~"Tractatus de Tribus Daemonibus."~
+@17=~"Tractatus de Tribus Daemonibus."~
+@18=~Ranger le livre.~
+@20=~Vous arrivez aux dernières pages, intitulées"Tractatus de Tribus Daemonibus". Vous vous demandez si vous êtes capable de comprendre ce passage...~
+@22=~Essayer de le lire.~
+@23=~Essayer de le lire.~
+@24=~Revenir à la table des matières.~
+@25=~Ranger le livre.~
+@27=~Vous n'êtes manifestement pas assez instruit : trop de mots vous échappent. Qu'est-ce donc qu'un"tractatus", d'ailleurs ? Poursuivre ne ferait que vous donner mal à la tête sans rien vous apprendre.~
+@29=~Revenir à la table des matières.~
+@30=~Ranger le livre.~
+@32=~Après quelques tentatives, vous comprenez enfin. Le titre signifie"Traité des Trois Démons"et semble promettre de nouvelles connaissances passionnantes.~
+@34=~Continuer.~
+@35=~Revenir à la table des matières.~
+@36=~Ranger le livre.~
+@38=~"Note démonologique sur Quatre-Soi
+
+Quatre-Soi est le nom donné à un démon ayant déserté la Guerre Sanglante. Dépouillé de l'essentiel de ses pouvoirs, son ancienne personnalité fut détruite et il fut transformé en un dément doté de quatre personnalités totalement distinctes.
+
+Les différentes facettes de ce renégat avaient chacune leurs dispositions et leurs phobies propres. Chacun des quatre soi du balor maudit penchait respectivement vers le Chaos, le Bien, la Loi ou le Mal. Quatre-Soi était tout simplement en conflit avec le monde comme avec lui-même, incapable de choisir une voie claire et définie.
+
+Chaque aspect de la personnalité de Quatre-Soi prend le dessus sur son comportement pendant un certain temps, environ huit heures, après quoi l'aspect suivant prend sa place. Le cycle est généralement régulier : Bien -> Loi -> Chaos -> Mal -> Bien, etc."~
+@40=~Continuer.~
+@41=~Revenir à la table des matières.~
+@42=~Ranger le livre.~
+@44=~"Note démonologique sur Falsacral
+
+Falsacral était un maître dans l'art de tenter les fidèles et les chevaliers de lumière. Il déformait progressivement leur vision du monde jusqu'à les conduire au mal au nom d'une cause prétendument supérieure. Sa devise, qu'il inculquait à ses victimes, était la célèbre formule :"la fin justifie les moyens".
+
+Falsacral modifiait son apparence pour se présenter comme bon, noble ou digne de secours. Il pouvait prendre l'apparence d'un enfant blessé et en pleurs, d'un paladin en armure étincelante ou même d'un magnifique déva entouré d'une lueur céleste."~
+@46=~Continuer.~
+@47=~Revenir à la table des matières.~
+@48=~Ranger le livre.~
+@50=~"Note démonologique sur Hermafroccubus
+
+Hermafroccubus était une succube de la déviance, de la prostitution et de la promiscuité. Il décida de modifier son apparence, chose courante chez les démons. Cependant, il choisit de conserver l'apparence d'une belle femme tout en possédant des attributs masculins..."Malheureusement, les pages suivantes ont été arrachées. Leur contenu a manifestement suffisamment intéressé quelqu'un pour qu'il décide de les emporter.~
+@52=~Revenir à la table des matières.~
+@53=~Ranger le livre.~
+@55=~"En tant que créatures loyales, les baatezus suivent une hiérarchie stricte, dont les voies de promotion répondent à des conditions précises. Tout baatezu peut également être rétrogradé vers une forme inférieure."~
+@56=~Sur la page opposée, un schéma présente les noms des fiélons reliés par de nombreuses flèches. Le bas de la page porte le titre"baatezus inférieurs"et mentionne deux créatures humanoïdes difformes appelées lémures et nupperibos. Vous avez récemment rencontré les deux en Baator.~
+@57=~Au-dessus figure une section intitulée"baatezus mineurs", qui commence par les spinagons ailés et leurs nombreuses voies d'évolution. Viennent ensuite les abishaïs draconiques, blancs, noirs, verts, bleus et rouges. Puis les barbazu, ou diables barbus, et les kocrachons semblables à des cafards. Plus haut figurent les belles érinyes ailées, dont les possibilités d'évolution semblent prometteuses, ainsi que leurs homologues masculins, les séducteurs appelés falxugons. Viennent ensuite les diables osseux, ou osyluths, puis les diables barbelés, ou hamatulas.~
+@58=~Tout en haut se trouve une section intitulée"baatezus supérieurs", qui débute par deux groupes parallèles : les diables cornus, ou cornugons, et les diables du plaisir, ou brachinas. À partir de là, la hiérarchie devient claire, chaque fiélon suivant occupant un rang supérieur : les diables de l'amnésie, ou amnizus, les gelugons insectoïdes et enfin les gigantesques diantrefosses ailés. Malgré toute sa complexité, le schéma semble simplifié et ignore de nombreuses variétés plus rares de baatezus.~
+@60=~Revenir à la table des matières.~
+@61=~Ranger le livre.~
+@63=~"Les fiélons de Géhenne, les yugoloths, peuvent être divisés très simplement entre les dangereux yugoloths supérieurs, qui dirigent, et les yugoloths inférieurs, utilisés comme instruments pour répandre le mal et accomplir les desseins de leurs maîtres."Une table indique ensuite à quelle catégorie appartient chaque variété.~
+@64=~"Yugoloths inférieurs :
+les battleloths, prenant la forme de diverses armes telles que flèches, haches, arbalètes, masses, chaînes à pointes ou épées ;
+les canoloths, chiens de guerre aveugles ;
+les skeroloths, chair à canon insectoïde ;
+les voors, ou flagellateurs tentaculaires."~
+@65=~"Yugoloths mineurs :
+les mezzoloths et dhergoloths insectoïdes ;
+les piscoloths semblables à des crustacés ;
+les hydroloths batraciens ;
+les gigantesques yagnoloths, dont un bras est nettement plus massif que l'autre ;
+les marraénoloths, bateliers du Styx."~
+@66=~"Yugoloths supérieurs :
+les nycaloths ailés ;
+les arcanaloths à tête de chacal ;
+les redoutables ultroloths sans visage."~
+@67=~"Autres yugoloths occupant une place particulière dans la hiérarchie :
+les baernaloths et oinoloths aux traits caprins ;
+les corrupteurs du destin ;
+les echinoloths semblables à des crustacés ;
+les gacholoths bestiaux ;
+les raavastas à l'apparence de renards."~
+@69=~Revenir à la table des matières.~
+@70=~Ranger le livre.~
+@72=~"Il faut comprendre que les tanar'ris sont chaotiques mauvais. Il est difficile de parler ici de hiérarchie stricte ; tout au plus peut-on comparer les tanar'ris selon leur puissance. De plus, nous n'avons pas encore recensé toutes leurs espèces, pas plus que nous n'avons exploré toutes les strates des Abysses. Michil Kedell disait qu'il pourrait en exister autant que de portails à Sigil ou d'engrenages à Méchanus. Concentrons-nous donc sur ce que nous connaissons."~
+@73=~"Tanar'ris inférieurs :
+les dretches, petites bêtes difformes ;
+les mânes, suppliants humanoïdes corrompus ;
+les rutterkins, aberrations déformées."~
+@74=~"Tanar'ris mineurs :
+les armanites centauroïdes ;
+les barlguras et bogannars, démons bondissants semblables à des singes ;
+les bulezau, hommes-bêtes cornus ;
+les gadacros, humanoïdes ailés ;
+les incubes et succubes, tentateurs charnels ;
+les maurezhi, démons-goules morts-vivants."~
+@75=~"Tanar'ris supérieurs :
+les babaus, squelettiques et humanoïdes ;
+les chasmes, insectoïdes ailés ;
+les énormes goristros semblables à des taureaux ;
+les nabassus aux allures de gargouilles ;
+les monstrueux wastriliths aquatiques."~
+@76=~"Véritables tanar'ris :
+les alkiliths visqueux ;
+les balors, champions et généraux tanar'ris ailés ;
+les gigantesques glabrezus à tête de chien ;
+les hezrous batraciens ;
+les jariliths à gueule de lion ;
+les mariliths, femmes-serpents à six bras ;
+les nalfeshnees, sangliers ailés ;
+les vrocks semblables à des vautours.
+
+Tanar'ris gardiens :
+les molydeuses, chiens-serpents humanoïdes à deux têtes."~
+@77=~"Tanar'ris non classés :
+les adarus semblables à des mille-pattes ;
+les cerebriliths, géants psioniques ;
+les petits jovoks aux mains rouges ;
+les gigantesques kastighurs ;
+les klurichirs ailés ;
+les lilitus, prêtresses tentatrices ;
+les mavawhans, démons de glace ailés ;
+les myrmyxikus aquatiques ;
+les parlethees ailés et enflammés ;
+les solamiths gloutons ;
+les fiélons-araignées ;
+les uridezus semblables à des rats ;
+les étranges yochlols, également appelées Servantes de Lolth."~
+@79=~Revenir à la table des matières.~
+@80=~Ranger le livre.~

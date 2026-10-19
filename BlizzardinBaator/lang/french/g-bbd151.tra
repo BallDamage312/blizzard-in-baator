@@ -1,0 +1,69 @@
+@0=~Vous sentez un picotement familier à l'arrière du crâne lorsque vous touchez la pierre. Que voulez-vous en faire ?~
+@2=~Commencer la sensation.~
+@3=~Partir.~
+@5=~"La réputation, c'est tout."Les vociférations d'un poivrot de la Ruche contre quelque bige désagréable tranchent l'agitation quotidienne du quartier. Ah, encore une rixe sanguinaire : tout le charme de la Ruche, où un coup de couteau dans les reins est une manière polie de dire bonjour.
+
+Aujourd'hui pourtant, vous ignorez les voyous ordinaires qui savent qu'il ne vaut mieux pas risquer leurs politesses avec vous. Ils vous connaissent assez bien. Ou plutôt, ils connaissent votre réputation et, plus important encore, vos compétences. Vous ignorez donc les ivrognes et la puanteur de la Ruche, les baraques et auberges bancales, les créatures et habitants étranges, jusqu'à la courbure même de la cité. En réalité, vous ignorez Sigil tout entière. Ça suffit. Aujourd'hui, vous allez montrer ce dont vous êtes capable.~
+@6=~À Sigil, les factions, organisations, bandes et autres groupements sont innombrables, chacun avec ses coutumes, et la réputation est tout. Vous appartenez à l'une de ces bandes. Vous en êtes le chef. Cela arrive rarement, mais l'incompétence de vos subordonnés vous a forcé à prendre les choses en main et à accomplir vous-même votre tâche favorite.
+
+Oui, vous ne seriez pas devenu le chef de cette meute de chiens si vous n'aviez pas connu et compris ces mots :"On veut quelque chose de bien fait ? On le fait soi-même."Pourtant, malgré votre confiance en vous presque morbide, un mauvais pressentiment vous poursuit depuis ce matin. Peut-être que des années à fréquenter l'Art ont affûté en vous un sens que d'autres ignorent ; peut-être n'est-ce qu'un instant de faiblesse. Quoi qu'il en soit, vous sentez que cette affaire pourrait mal tourner.~
+@7=~Vous entrez dans le Quartier des Clercs. C'est une partie bien entretenue,"meilleure", de Sigil. Pleine d'occasions. Adolescent, il y a très longtemps, dans une autre vie, vous adoriez détrousser ces riches empestés. La vie a changé, mais le plaisir du vol demeure. C'était plus facile quand vous étiez gosse. Vous n'avez plus vraiment l'âge de faire les poches avec insouciance. Et puis il y a trop de gens dans l'ombre qui vous surveillent.
+
+La voilà : la maison du docteur Konrdin. Vos hommes vous en ont décrit l'intérieur. Luxe, débauche et aucune compassion pour les miséreux. Oui, autrefois, vous en connaissiez d'autres : beaucoup de camarades pour qui dépouiller uniquement ce genre de riches, exploitant sans scrupule tout ce qu'ils pouvaient avec le sourire, était presque une mission sacrée. Voler ces gens-là était censé être plus honorable. Pour vous, la victime n'a jamais fait la moindre différence.
+
+On vous ouvre la porte. Le docteur vous attend. Les gars restent dehors.~
+@8=~Oui, le luxe dans toute sa splendeur ostentatoire. Des tableaux aux meubles, jusqu'aux foutus chats."Ah, je vous en prie, asseyez-vous, cher monsieur", commence le docteur lorsque vous entrez dans son antre. Voilà. Vous êtes un"cher monsieur". La conversation commence par un sarcasme venimeux dissimulé sous une mince couche de politesse.~
+@10=~Foutu bige. Vous ne le laissez pas finir."Épargnons-nous les politesses. Où est le jonc ?"~
+@11=~Vous arracher à l'expérience et reposer la pierre.~
+@13=~La transformation du docteur Konrdin, bien qu'attendue, vous surprend parce qu'elle diffère de ce que vous imaginiez. Il affiche d'abord une grimace vulgaire, puis l'expression inspirée qu'arborent certains prêtres lorsqu'ils s'apprêtent à révéler le cœur de leur sermon. On pourrait presque parler d'un ultime rite sacré. Il se lève de derrière son bureau et longe une vitrine contenant des épées et couteaux démodés, toujours avec la même expression.~
+@14=~"Connaissez-vous ma *profession* ?"demande-t-il en se tournant vers vous.~
+@16=~"Par les Puissances, vous essayez de m'apprendre que vous soignez des fous dans un asile ? Je le sais. J'en sais même beaucoup plus sur vous, docteur."~
+@17=~Vous arracher à l'expérience et reposer la pierre.~
+@19=~"Oui, oui, oui. Voyez-vous, j'ai réellement aidé beaucoup de gens. Et je dois vous aider vous aussi."~
+@21=~"Moi ? Il me reste encore un peu de patience, mais bientôt, ce sera vous qui aurez besoin d'aide. Payez ou mourez !"~
+@22=~Vous arracher à l'expérience et reposer la pierre.~
+@24=~"Du calme."Konrdin lève les mains en signe d'apaisement."Je suis prêt à vous payer dix fois le montant du second... appelons cela versement. Mais vous allez avoir besoin d'aide. Vous êtes un homme... intéressant."Konrdin tire la langue et en désigne l'extrémité du doigt."Beaucoup de membres de votre entourage sont passés par cet endroit — l'asile, comme vous dites. Des créatures inintéressantes, banales et souvent répugnantes. Mais vous êtes capable d'une rêverie plus profonde, je crois."~
+@26=~Vous avez de plus en plus l'impression que quelque chose sent mauvais dans cette affaire, mais votre cupidité l'emporte."Dix fois, vous dites ? Et en quoi consiste exactement cette aide ?"~
+@27=~Vous arracher à l'expérience et reposer la pierre.~
+@29=~"Bien sûr. Laissez-moi vous expliquer. Mais avant cela, je dois reconnaître que je n'ai pas été entièrement honnête. Je souhaite vous engager pour tuer quelqu'un qui a provoqué la mort de plusieurs hommes que j'avais recrutés auparavant. Ceux qui ont saigné devant moi parlaient de lui comme de"l'Invincible"."~
+@31=~"J'ai déjà entendu des histoires sur ces soi-disant invincibles. Tous les biges peuvent mourir. À moins d'être immortels, ha ha."~
+@32=~Vous arracher à l'expérience et reposer la pierre.~
+@34=~"Oui, oui, oui."Le docteur prend un air ridicule. Quelqu'un d'autre ne l'aurait peut-être pas remarqué, mais vous voyez son agitation soudaine.~
+@36=~"Je ne pose généralement pas ce genre de question, mais qui est ce bige ? Qu'est-ce qu'il a fait pour mériter une telle vengeance ?"~
+@37=~Vous arracher à l'expérience et reposer la pierre.~
+@39=~"Il y a quelques jours, il était mon patient. Il s'est échappé de l'asile et, dans sa paranoïa, s'est mis en tête que..."Konrdin baisse la voix."Je suis de mèche avec la Dame."~
+@41=~"Quoi ?"~
+@42=~Vous arracher à l'expérience et reposer la pierre.~
+@44=~"Avec la Dame des Douleurs. Je vous assure, monsieur, que ce cas de délire paranoïaque sévère est extrêmement dangereux."~
+@46=~"Et comme ça, vous assassinez tous les malades qui vous menacent de mort sans raison ?"~
+@47=~Vous arracher à l'expérience et reposer la pierre.~
+@49=~"Cher monsieur, bien sûr que non. Sinon, je serais obligé d'éliminer au moins la moitié de mes patients. Disons simplement que j'ai des raisons légitimes de craindre pour ma sécurité. Il y a déjà eu trois tentatives. La dernière fois, j'ai trouvé ceci devant ma porte."Le docteur vous tend un morceau de parchemin jauni et déchiré.~
+@50=~Vous lisez :"Maintenant je sais OÙ tu vis, VOLEUR. Prépare-toi !"~
+@52=~"Oh, voilà qui est évocateur. Mais pourquoi"voleur"?"~
+@53=~Vous arracher à l'expérience et reposer la pierre.~
+@55=~"Ah, il délire, voilà tout."Konrdin détourne les yeux."Mais soyez sérieux. Il a déjà éliminé treize de mes hommes de confiance et sept des vôtres."~
+@57=~"Vingt personnes ?"~
+@58=~Vous arracher à l'expérience et reposer la pierre.~
+@60=~"Invincible."~
+@62=~"Et cette aide ?"~
+@63=~Vous arracher à l'expérience et reposer la pierre.~
+@65=~"J'ai engagé quelques lascars sérieux. Ils devraient arriver d'une minute à l'autre."~
+@66=~L'un de vos gars fait irruption dans le bureau de Konrdin."Chef, il se passe quelque chose dans la rue, un vrai carnage."~ [FAL_03C]
+@68=~"Quel carnage ?"demandez-vous, mais la réponse arrive bien assez vite.~
+@69=~Vous arracher à l'expérience et reposer la pierre.~
+@71=~Un fracas retentit lorsque quelqu'un force l'entrée de la maison du docteur Konrdin. Vous entendez quelques gémissements et le bruit de corps qui tombent. Quelqu'un court vers la pièce. Sur le seuil apparaît un inconnu : un homme puissant vêtu d'un manteau couvert de sang. Vous ignorez si ce sang lui appartient. Il tient deux longs couteaux courbes. Ses avant-bras découverts, couverts de vieilles cicatrices, pendent le long de son corps. Soudain, il pointe le docteur du doigt et tonne :"Espèce de chien, espèce de VOLEUR ! Où est mon JOURNAL ?"~ [FAL_06]
+@72=~Les yeux injectés de sang du docteur se tournent vers vous."C'est lui ! À l'aide !"hurle le respectable Konrdin en bondissant dans un coin de la pièce.~
+@74=~Lancer un sort de protection sur le docteur.~
+@75=~Lancer un sort de protection sur vous-même.~
+@76=~Lancer un sort offensif sur l'assaillant.~
+@77=~Vous arracher à l'expérience et reposer la pierre.~
+@79=~Vous levez les mains pour lancer un sort mais, soudain... la pièce s'illumine d'un éclat bleu. Vous tombez face contre terre et apercevez seulement l'homme puissant et le docteur disparaître dans la lumière d'un portail. ~ [AR_PORT]
+@81=~Fuir cette maudite maison.~
+@82=~Vous arracher à l'expérience et reposer la pierre.~
+@84=~Des cadavres jonchent le sol, dans le hall, dans l'escalier et jusque dans la rue. Vous courez aussi vite que possible, vos chaussures éclaboussant des mares de sang luisantes. Et les deux autres ? La réputation n'a plus aucune importance. Vous savez ce qui leur est arrivé : les Labyrinthes de la Dame. Votre respect pour Sigil revient. Vous espérez en silence qu'elle vous a épargné. Encore une fois, vous ignorez pourquoi — peut-être un nouveau sens plus aiguisé, ou simplement la peur — mais vous êtes certain que ce n'est pas le cas.~
+@85=~Soudain, une lumière bleue jaillit de la ruelle devant vous et éclaire votre visage. Elle apparaît précisément au moment où vous commenciez à espérer pouvoir vous en sortir.~
+@86=~Vous aimiez cet endroit lorsque vous étiez adolescent. Du bon butin, du bon temps... Accroché à ces bons souvenirs, vous jetez un dernier regard à Sigil et disparaissez.
+
+Il ne reste de vous qu'une chanson murmurée et une *réputation mémorable* parmi les ivrognes habitués des nombreuses tavernes de Sigil.~
+@88=~Vous arracher à l'expérience et reposer la pierre.~
+@89=~Vous arracher à l'expérience et reposer la pierre.~
